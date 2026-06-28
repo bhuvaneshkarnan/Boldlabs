@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Black background -->
+  <rect width="16" height="16" fill="#000000" />
+  <!-- White border -->
+  <rect x="0.5" y="0.5" width="15" height="15" fill="none" stroke="#ffffff" stroke-width="1" />
+  <!-- Pixel-brutalist letter B -->
+  <path d="M4 3h5v2H4V3zm0 2h7v4H4V5zm0 4h5v4H4V9zm3-4v2h2V5H7zm0 4v2h1V9H7z" fill="#ffffff" />
+</svg>

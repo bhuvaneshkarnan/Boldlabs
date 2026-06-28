@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boldlabs Studio — Booking-First Websites for Service Businesses</title>
+  <meta name="description" content="We build booking-first websites with automation built in — so your site takes bookings, sends reminders, and follows up on its own. No setup fee, cancel any time.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FAQ JSON-LD Schema for SEO Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services do you provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize in custom-coded landing pages, D2C and wholesale e-commerce websites (Shopify/WooCommerce), automated booking systems, AI operations workflows, Google Sheets/CRM sync, and whitelabel development support for design and marketing agencies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to commit to a long-term contract?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We believe in earning your trust month-to-month. Our monthly care and whitelabel retainer services are on a subscription model. You can pause or cancel at any point without lock-ins or cancellation fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you rebuild my existing website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If your current website is slow, hard to manage, or failing to convert visitors into booked appointments and sales, we can perform a full visual overhaul and rebuild it on WordPress, React, or Shopify."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tech stack do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We choose the best tool for your business outcomes. For e-commerce and marketing-heavy sites, we build on WordPress/WooCommerce or Shopify. For blazing-fast, highly custom web applications, we use modern React frameworks (Next.js/Vite) and Node.js."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do your AI automations work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We connect your website forms and booking calendars directly to your everyday tools (like Google Sheets, Airtable, Notion, Slack, or CRM systems). We also set up automated WhatsApp follow-ups, autoresponder email flows, and SMS client reminders so you stop doing manual administration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a website build take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard websites and landing pages take between 2 to 3 weeks to complete. AI integrations and booking configurations are typically completed within 5 to 7 days once we have your service details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does your whitelabel agency retainer work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We act as your agency's in-house engineering team. You submit design files (Figma, Adobe XD) or change requests, and we code them under your agency's brand name. You communicate with us directly via Slack or WhatsApp with a fast 24-48h task turnaround."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How secure is the custom admin backend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Extremely secure. When we build custom backends (like your /meadadmin portal), we use secure databases (like Firebase Firestore) protected by custom server-side security rules, requiring authentication so only you can access your lead data."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <a href="#home" class="navbar-brand">Boldlabs Studio</a>
+    <span class="navbar-divider" aria-hidden="true">|</span>
+    <a href="#services">Services</a>
+    <span class="navbar-divider" aria-hidden="true">|</span>
+    <a href="#latest-drop">Missions</a>
+    <span class="navbar-divider" aria-hidden="true">|</span>
+    <a href="#timeline">Timeline</a>
+    <span class="navbar-divider" aria-hidden="true">|</span>
+    <a href="#player">Reviews</a>
+    <span class="navbar-divider" aria-hidden="true">|</span>
+    <a href="#plans">Store</a>
+    <span class="navbar-divider" aria-hidden="true">|</span>
+    <a href="#build-together">Book Call</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <span class="section-subtitle hero-reveal" style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; display: block; margin-bottom: var(--space-sm);">Your service business is losing bookings</span>
+        <h1 class="hero-title hero-reveal">YOUR WEBSITE CAN'T DO ITS JOB.</h1>
+        <p class="hero-subtitle hero-reveal-delayed-1">
+          I build booking-first websites with automation built in — so your site takes bookings, sends reminders, and follows up on its own while you do the actual work.
+        </p>
+        <div class="hero-reveal-delayed-1" style="margin-bottom: var(--space-md);">
+          <a href="#build-together" class="hero-cta-btn">Book a Free 30-Min Call</a>
+          <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-xs); font-family: var(--font-mono);">
+            No setup fee. Month-to-month. Cancel any time.
+          </span>
+        </div>
+        <p class="hero-reveal-delayed-1" style="font-size: 0.75rem; color: var(--color-text-muted); font-family: var(--font-mono); margin-bottom: var(--space-lg);">
+          [★] Trusted by 31+ service businesses across the UK, USA, and India
+        </p>
+
+        <!-- Platform with 8-bit characters -->
+        <div class="hero-platform hero-reveal-delayed-2" aria-hidden="true">
+          <!-- Left Sprite (Warrior holding sword) -->
+          <svg class="hero-character hero-character-left" viewBox="0 0 16 16" fill="none">
+            <!-- Ground shadow -->
+            <rect x="2" y="15" width="12" height="1" fill="#222"/>
+            <!-- Body -->
+            <rect x="5" y="4" width="6" height="11" fill="#444"/>
+            <!-- Armor -->
+            <rect x="4" y="6" width="8" height="6" fill="#888"/>
+            <rect x="5" y="7" width="6" height="4" fill="#aaa"/>
+            <!-- Helmet/Head -->
+            <rect x="5" y="2" width="6" height="4" fill="#666"/>
+            <rect x="6" y="3" width="4" height="2" fill="#d4af37"/>
+            <rect x="7" y="4" width="2" height="1" fill="#111"/> <!-- Eyes -->
+            <!-- Sword -->
+            <g class="character-sword">
+              <rect x="11" y="2" width="1" height="10" fill="#bbb"/>
+              <rect x="10" y="10" width="3" height="1" fill="#8b5a2b"/>
+              <rect x="11" y="11" width="1" height="1" fill="#8b5a2b"/>
+            </g>
+          </svg>
+
+          <!-- Right Sprite (Heavy armored giant) -->
+          <svg class="hero-character hero-character-right" viewBox="0 0 16 16" fill="none">
+            <!-- Ground shadow -->
+            <rect x="2" y="15" width="12" height="1" fill="#222"/>
+            <!-- Heavy Armor Body -->
+            <rect x="4" y="3" width="8" height="12" fill="#2c3e50"/>
+            <rect x="5" y="4" width="6" height="10" fill="#34495e"/>
+            <!-- Shoulders -->
+            <rect x="3" y="4" width="2" height="4" fill="#7f8c8d"/>
+            <rect x="11" y="4" width="2" height="4" fill="#7f8c8d"/>
+            <!-- Visor/Helmet -->
+            <rect x="6" y="2" width="4" height="3" fill="#1a252f"/>
+            <rect class="character-visor" x="5" y="3" width="6" height="1" fill="#e74c3c"/> <!-- Glowing red visor line -->
+            <!-- Shield/Weapon silhouette -->
+            <g class="character-shield">
+              <rect x="2" y="7" width="2" height="7" fill="#7f8c8d"/>
+              <rect x="1" y="9" width="4" height="1" fill="#95a5a6"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Scrolling Partner Marquee -->
+    <div style="text-align: center; margin-bottom: var(--space-xs); margin-top: var(--space-lg);">
+      <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+        A few businesses already running on this system
+      </span>
+    </div>
+    <div class="marquee-container" aria-label="Trusted by partner brands">
+      <div class="marquee-content">
+        <span class="marquee-item">ZYROPETS</span>
+        <span class="marquee-item">HIIPOOH</span>
+        <span class="marquee-item">FURORA</span>
+        <span class="marquee-item">SWARNA IMPON</span>
+        <span class="marquee-item">ZEZOW</span>
+        <span class="marquee-item">AMIZHTHINI FOODS</span>
+        <span class="marquee-item">180 TATTOO</span>
+        <span class="marquee-item">DENTAL CARE</span>
+        <span class="marquee-item">SMART PARKNGO</span>
+        <span class="marquee-item">RGHT TAX</span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee-item">ZYROPETS</span>
+        <span class="marquee-item">HIIPOOH</span>
+        <span class="marquee-item">FURORA</span>
+        <span class="marquee-item">SWARNA IMPON</span>
+        <span class="marquee-item">ZEZOW</span>
+        <span class="marquee-item">AMIZHTHINI FOODS</span>
+        <span class="marquee-item">180 TATTOO</span>
+        <span class="marquee-item">DENTAL CARE</span>
+        <span class="marquee-item">SMART PARKNGO</span>
+        <span class="marquee-item">RGHT TAX</span>
+      </div>
+    </div>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>THE PROBLEM.</h2>
+          <span class="section-subtitle">Most service business websites don't actually work.</span>
+        </div>
+
+        <div class="problem-grid">
+          <!-- Card 1 -->
+          <div class="problem-card">
+            <span class="problem-num">01</span>
+            <p class="problem-text">
+              Visitors land on your page, get confused about how to book or contact you, and immediately leave.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="problem-card">
+            <span class="problem-num">02</span>
+            <p class="problem-text">
+              Bookings and scheduling still happen manually over messy WhatsApp threads, calls, and DMs.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="problem-card">
+            <span class="problem-num">03</span>
+            <p class="problem-text">
+              No-shows and late cancellations drain your time because there are no automated reminders going out.
+            </p>
+          </div>
+        </div>
+
+        <div class="problem-callout">
+          "You're doing this manually because your website was built to look pretty, not to run your business operations."
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>THE SOLUTION.</h2>
+          <span class="section-subtitle">Website, booking, and automation — one setup, one monthly plan.</span>
+        </div>
+
+        <div class="solution-grid">
+          <!-- Card 1 -->
+          <div class="solution-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="0" />
+                <path d="M2 7h20M7 2v20"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">Booking-First Website</h3>
+              <p class="service-desc">
+                A high-converting, mobile-first website structured around one core business outcome: converting cold visitors into confirmed bookings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="solution-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">Reminders & Follow-Ups</h3>
+              <p class="service-desc">
+                Appointments confirm automatically. SMS and email reminders go out on schedule. You completely stop chasing clients for confirmations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="solution-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">Monthly Subscription Care</h3>
+              <p class="service-desc">
+                Your hosting, domain, booking systems, and workflows are monitored, maintained, and improved every month. No setup fee, cancel anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: var(--space-xl);">
+          <a href="#plans" class="pill-btn pill-btn-secondary" style="font-size: 0.75rem; padding: 10px 20px;">See Pricing Plans →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers Stats Bar -->
+    <section id="stats" class="section reveal-on-scroll" style="padding-top: 0;">
+      <div class="container">
+        <div class="numbers-grid">
+          <div class="number-card">
+            <div class="number-val" data-target="31" data-suffix="+">0+</div>
+            <div class="number-label">Active Sites</div>
+          </div>
+          <div class="number-card">
+            <div class="number-val" data-target="53" data-suffix="%">0%</div>
+            <div class="number-label">Sales Boost</div>
+          </div>
+          <div class="number-card">
+            <div class="number-val" data-target="3" data-suffix="X">0X</div>
+            <div class="number-label">Less Admin</div>
+          </div>
+          <div class="number-card">
+            <div class="number-val" data-target="0" data-suffix="">0</div>
+            <div class="number-label">Lock-ins</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>SERVICES.</h2>
+          <span class="section-subtitle">Tailored digital engineering to power your business growth.</span>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Website & E-Commerce -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6zM3 6h18M16 10a4 4 0 01-8 0"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">Website & E-Commerce</h3>
+              <p class="service-desc">
+                Ultra-fast custom WordPress, React, or Shopify setups designed around a single outcome: converting paid traffic into booked calls and online storefront transactions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Monthly Care -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">Monthly Care</h3>
+              <p class="service-desc">
+                Your hosting, domain, booking systems, and workflows are monitored, maintained, and improved every month. No setup fee, cancel anytime.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: AI Automations -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">AI Automations</h3>
+              <p class="service-desc">
+                Say goodbye to manual administrative work. Custom AI follow-up flows, automated CRM sync logging, email notification pipelines, and WhatsApp booking alerts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: White Label for Agencies -->
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="service-title">White Label for Agencies</h3>
+              <p class="service-desc">
+                Reliable white-label engineering backup for design, SEO, and marketing agencies. We write clean code, handle edits, and support tasks under your brand flag.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="latest-drop" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>CASE STUDIES.</h2>
+          <span class="section-subtitle">Real projects. Real results.</span>
+        </div>
+
+        <!-- Case Study 1: 180 Tattoo Studio -->
+        <div class="latest-drop-dashboard" style="margin-bottom: var(--space-xl);">
+          <div class="dashboard-main">
+            <div class="browser-header" aria-hidden="true">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">https://www.180tattoostudio.com/</div>
+            </div>
+            <div class="dashboard-visual">
+              <img src="Works/180%20tattoo%20studio.png" alt="180 Tattoo Studio website screenshot">
+            </div>
+            <div class="dashboard-footer">
+              <h3 class="dashboard-title font-display">180 TATTOO STUDIO</h3>
+              <p class="dashboard-desc">
+                Full booking-first website for Chennai's premium custom tattoo studio. Gallery, artist profiles, online booking system, first-timer guide, and courses — all built for conversion.
+              </p>
+            </div>
+          </div>
+          <div class="dashboard-sidebar">
+            <div>
+              <h4 class="sidebar-title font-display">MISSION STATS</h4>
+              <ul class="sidebar-list">
+                <li><span>TYPE:</span> Local Service Business</li>
+                <li><span>STACK:</span> WordPress / Custom</li>
+                <li><span>CLIENTS:</span> 1000+ since 2019</li>
+                <li><span>LOCATION:</span> Chennai, India</li>
+              </ul>
+              <h4 class="sidebar-title font-display" style="margin-top: var(--space-md);">HOW WE HELPED</h4>
+              <ul class="sidebar-list">
+                <li>[✓] Online booking system</li>
+                <li>[✓] Gallery + team pages</li>
+                <li>[✓] Course enrolment flow</li>
+                <li>[✓] Mobile-first responsive</li>
+              </ul>
+            </div>
+            <a href="https://www.180tattoostudio.com/" target="_blank" rel="noopener" class="sidebar-btn">View Live Site</a>
+          </div>
+        </div>
+
+        <!-- Case Study 2: Zyropets -->
+        <div class="latest-drop-dashboard" style="margin-bottom: var(--space-xl);">
+          <div class="dashboard-main">
+            <div class="browser-header" aria-hidden="true">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">https://zyropets.com/</div>
+            </div>
+            <div class="dashboard-visual">
+              <img src="Works/zyropets.png" alt="Zyropets B2B Pet Supply website screenshot">
+            </div>
+            <div class="dashboard-footer">
+              <h3 class="dashboard-title font-display">ZYROPETS — B2B WHOLESALE PLATFORM</h3>
+              <p class="dashboard-desc">
+                WooCommerce wholesale and dropshipping platform for India's trusted B2B pet product supplier. Product catalogue, bulk ordering, and SEO-optimised for distributor searches.
+              </p>
+            </div>
+          </div>
+          <div class="dashboard-sidebar">
+            <div>
+              <h4 class="sidebar-title font-display">MISSION STATS</h4>
+              <ul class="sidebar-list">
+                <li><span>TYPE:</span> B2B E-Commerce</li>
+                <li><span>STACK:</span> WordPress / WooCommerce</li>
+                <li><span>MARKET:</span> India — B2B Pet Trade</li>
+                <li><span>SEO:</span> Yoast + Schema</li>
+              </ul>
+              <h4 class="sidebar-title font-display" style="margin-top: var(--space-md);">HOW WE HELPED</h4>
+              <ul class="sidebar-list">
+                <li>[✓] WooCommerce wholesale</li>
+                <li>[✓] Dropshipping integrations</li>
+                <li>[✓] Product SEO setup</li>
+                <li>[✓] GA4 + analytics</li>
+              </ul>
+            </div>
+            <a href="https://zyropets.com/" target="_blank" rel="noopener" class="sidebar-btn">View Live Site</a>
+          </div>
+        </div>
+
+        <!-- Case Study 3: Ze&Zow -->
+        <div class="latest-drop-dashboard" style="margin-bottom: var(--space-xl);">
+          <div class="dashboard-main">
+            <div class="browser-header" aria-hidden="true">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">https://zezow.in/</div>
+            </div>
+            <div class="dashboard-visual">
+              <img src="Works/zezow.png" alt="Ze&Zow Shopify store website screenshot">
+            </div>
+            <div class="dashboard-footer">
+              <h3 class="dashboard-title font-display">ZE&ZOW — SHOPIFY E-COMMERCE</h3>
+              <p class="dashboard-desc">
+                Full Shopify storefront for an Indian lifestyle brand. Custom theme, product catalog with cart, INR payment gateway, parallax animations, and mobile-optimised checkout.
+              </p>
+            </div>
+          </div>
+          <div class="dashboard-sidebar">
+            <div>
+              <h4 class="sidebar-title font-display">MISSION STATS</h4>
+              <ul class="sidebar-list">
+                <li><span>TYPE:</span> D2C E-Commerce</li>
+                <li><span>STACK:</span> Shopify / Custom Theme</li>
+                <li><span>CURRENCY:</span> INR · India</li>
+                <li><span>FEATURES:</span> Swiper, Parallax</li>
+              </ul>
+              <h4 class="sidebar-title font-display" style="margin-top: var(--space-md);">HOW WE HELPED</h4>
+              <ul class="sidebar-list">
+                <li>[✓] Shopify theme build</li>
+                <li>[✓] Product + cart flows</li>
+                <li>[✓] INR payment gateway</li>
+                <li>[✓] Animation & UX polish</li>
+              </ul>
+            </div>
+            <a href="https://zezow.in/" target="_blank" rel="noopener" class="sidebar-btn">View Live Site</a>
+          </div>
+        </div>
+
+        <!-- Case Study 4: RGHT Tax & Accounting -->
+        <div class="latest-drop-dashboard">
+          <div class="dashboard-main">
+            <div class="browser-header" aria-hidden="true">
+              <div class="browser-dots">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+              </div>
+              <div class="browser-url">https://rght.ca/ — rght-tax-accounting-new.vercel.app</div>
+            </div>
+            <div class="dashboard-visual">
+              <img src="Works/rght%20tax%20and%20accounting.png" alt="RGHT Tax & Accounting website screenshot">
+            </div>
+            <div class="dashboard-footer">
+              <h3 class="dashboard-title font-display">RGHT TAX & ACCOUNTING</h3>
+              <p class="dashboard-desc">
+                Premium React website for a Chartered Professional Accountant firm in Brampton, Ontario. Services include tax planning, bookkeeping, payroll, insurance, and investments.
+              </p>
+            </div>
+          </div>
+          <div class="dashboard-sidebar">
+            <div>
+              <h4 class="sidebar-title font-display">MISSION STATS</h4>
+              <ul class="sidebar-list">
+                <li><span>TYPE:</span> Professional Services</li>
+                <li><span>STACK:</span> React / Vite</li>
+                <li><span>LOCATION:</span> Brampton, Ontario</li>
+                <li><span>SEO:</span> CPA + Local Keywords</li>
+              </ul>
+              <h4 class="sidebar-title font-display" style="margin-top: var(--space-md);">HOW WE HELPED</h4>
+              <ul class="sidebar-list">
+                <li>[✓] React custom build</li>
+                <li>[✓] Service pages + SEO</li>
+                <li>[✓] Lead capture forms</li>
+                <li>[✓] Brampton local targeting</li>
+              </ul>
+            </div>
+            <a href="https://rght-tax-accounting-new.vercel.app/" target="_blank" rel="noopener" class="sidebar-btn">View Live Site</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mission Timeline Section -->
+    <section id="timeline" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>HOW IT WORKS.</h2>
+          <span class="section-subtitle">"Clear steps from call to live system."</span>
+        </div>
+        
+        <div class="timeline-grid">
+          <!-- Stage 1 -->
+          <div class="timeline-stage">
+            <div class="timeline-stage-header">
+              <span class="timeline-stage-num">STAGE 1</span>
+              <span class="timeline-stage-time">30 MIN</span>
+            </div>
+            <div>
+              <h3 class="timeline-stage-title">Discovery Call</h3>
+              <p class="timeline-stage-desc">
+                We talk about your business, identify booking leakages, and determine if this is a good fit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="timeline-stage">
+            <div class="timeline-stage-header">
+              <span class="timeline-stage-num">STAGE 2</span>
+              <span class="timeline-stage-time">1-2 DAYS</span>
+            </div>
+            <div>
+              <h3 class="timeline-stage-title">Proposal & Plan</h3>
+              <p class="timeline-stage-desc">
+                You get a concise, one-page plan laying out the exact deliverables, pricing, and launch targets.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="timeline-stage">
+            <div class="timeline-stage-header">
+              <span class="timeline-stage-num">STAGE 3</span>
+              <span class="timeline-stage-time">3-5 DAYS</span>
+            </div>
+            <div>
+              <h3 class="timeline-stage-title">Content Scoping</h3>
+              <p class="timeline-stage-desc">
+                We collect your services details, photos, and credentials in a shared space. No heavy lifting.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="timeline-stage">
+            <div class="timeline-stage-header">
+              <span class="timeline-stage-num">STAGE 4</span>
+              <span class="timeline-stage-time">2-4 WEEKS</span>
+            </div>
+            <div>
+              <h3 class="timeline-stage-title">The Build</h3>
+              <p class="timeline-stage-desc">
+                We build and test your website, booking system, reminders, and CRM pipelines on staging.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="timeline-stage">
+            <div class="timeline-stage-header">
+              <span class="timeline-stage-num">STAGE 5</span>
+              <span class="timeline-stage-time">ONGOING</span>
+            </div>
+            <div>
+              <h3 class="timeline-stage-title">Launch & Care</h3>
+              <p class="timeline-stage-desc">
+                We launch. Your subscription then monitors and keeps your booking stack fully maintained.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Player Section (Client Reviews) -->
+    <section id="player" class="section reveal-on-scroll" style="overflow: visible;">
+      <div class="container" style="overflow: visible;">
+        <div class="section-header">
+          <h2>CLIENT REVIEWS.</h2>
+          <span class="section-subtitle">"Real names. Real results."</span>
+        </div>
+
+        <div class="player-deck" id="player-deck">
+          <!-- Card 1: Left Testimonial -->
+          <div class="card-wrapper pixel-corners" data-card-index="0" aria-label="Testimonial from Mike O Dell">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="quote-text">
+              Boldlabs Studio did an outstanding job rebuilding our checkout pipeline and website. Bhuvanesh was fast, responsive, and delivered exactly what we envisioned. Our checkout conversion rate increased by 53% within 30 days of launch!
+            </p>
+            <div class="quote-author">
+              <div class="author-name">Mike O Dell</div>
+              <div class="author-title">CEO, Hyalite Media Group</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Center Profile Card (Active) -->
+          <div class="card-wrapper active-card pixel-corners" data-card-index="1" aria-label="Developer Stats for Bhuvanesh">
+            <div class="card-header-stats">
+              <div class="header-left">
+                <span class="stage-tag">STAGE 3</span>
+                <span class="card-header-name">Bhuvanesh</span>
+              </div>
+              <div class="header-right">
+                <span class="age-lbl">Age</span>
+                <span class="age-val">26</span>
+              </div>
+            </div>
+            
+            <div class="portrait-frame">
+              <img src="shakanksh_portrait.png" alt="Bhuvanesh character portrait" class="portrait-img">
+            </div>
+
+            <div class="class-title">FRONTEND DEVELOPER</div>
+
+            <div class="card-ability">
+              <div class="ability-header">
+                <span class="ability-tag">ABILITY</span>
+                <span class="ability-name">Pixel Transfer</span>
+              </div>
+              <p class="ability-desc">
+                Drop a Figma file. Get a website. Every frame, every detail - transferred exact.
+              </p>
+            </div>
+
+            <div class="card-skills">
+              <div class="skill-row">
+                <div class="skill-header">
+                  <span>WordPress</span>
+                  <span>100</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 100%;"></div>
+                </div>
+                <p class="skill-desc">
+                  Deploys custom high-converting business & e-commerce sites.
+                </p>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-header">
+                  <span>React Websites</span>
+                  <span>85</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" style="width: 85%;"></div>
+                </div>
+                <p class="skill-desc">
+                  Renders blazing-fast interfaces with custom code power.
+                </p>
+              </div>
+            </div>
+
+            <div class="card-footer-stats">
+              <div class="footer-stat-group">
+                <span>WEAKNESS</span>
+                <strong>Half-Baked Designs</strong>
+              </div>
+              <div class="footer-stat-group">
+                <span>RESISTANCE</span>
+                <strong>Visual Break</strong>
+              </div>
+              <div class="footer-number">#003</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Right Testimonial -->
+          <div class="card-wrapper pixel-corners" data-card-index="2" aria-label="Testimonial from Sanskar Raj Sinha">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="quote-text">
+              We replaced our messy WhatsApp-based scheduling with Bhuvanesh's booking-first automation system. Bookings moved online within the first month, and manual follow-ups dropped to near zero. A complete lifesaver!
+            </p>
+            <div class="quote-author">
+              <div class="author-name">Sanskar Raj Sinha</div>
+              <div class="author-title">Serial Entrepreneur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pick Your Plan Section -->
+    <section id="plans" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>PRICING.</h2>
+          <span class="section-subtitle">"Clear plans. No lock-in."</span>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Website & E-Commerce Build -->
+          <div class="pricing-card">
+            <div class="pricing-badge" aria-hidden="true"></div>
+            <div class="pricing-header">
+              <span class="plan-name font-display">WEBSITE & E-COMMERCE</span>
+              <div class="plan-price" style="font-size: 1.8rem;">Starts from $799 <span style="font-size: 0.95rem;">· ₹22,000</span></div>
+              <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-xs); line-height: 1.4; font-family: var(--font-mono);">
+                Custom Landing Pages, D2C Shopify/WooCommerce storefronts, and conversion-optimized websites.
+              </p>
+            </div>
+            <ul class="plan-features">
+              <li><span class="feature-check" aria-hidden="true"></span> WP, React, Shopify or Custom Build</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Landing pages & lead capture forms</li>
+              <li><span class="feature-check" aria-hidden="true"></span> E-Commerce & wholesale storefronts</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Payment gateway (INR/USD) setup</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Mobile responsive & fast loading</li>
+              <li><span class="feature-check" aria-hidden="true"></span> On-page SEO optimization</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Domain & hosting configuration</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Done in 2 to 3 weeks</li>
+            </ul>
+            <a href="#build-together" class="pricing-btn">Book a call</a>
+          </div>
+
+          <!-- Monthly Care -->
+          <div class="pricing-card">
+            <div class="pricing-badge" aria-hidden="true"></div>
+            <div class="pricing-header">
+              <span class="plan-name font-display">MONTHLY CARE</span>
+              <div class="plan-price" style="font-size: 1.8rem;">Starts from $99<span style="font-size: 0.95rem;">/mo</span> <span style="font-size: 0.95rem;">· ₹2,500/mo</span></div>
+              <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-xs); line-height: 1.4; font-family: var(--font-mono);">
+                Your hosting, domain, booking systems, and workflows monitored, updated, and optimized.
+              </p>
+            </div>
+            <ul class="plan-features">
+              <li><span class="feature-check" aria-hidden="true"></span> High-speed hosting & SSL setup</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Domain & DNS administration</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Weekly plugin & theme updates</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Automated daily cloud backups</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Security monitoring & threat protection</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Minor design & copy tweaks included</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Cancel anytime, no contracts</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Talk directly to developer</li>
+            </ul>
+            <a href="#build-together" class="pricing-btn">Book a call</a>
+          </div>
+
+          <!-- AI & Automation Setup -->
+          <div class="pricing-card">
+            <div class="pricing-badge" aria-hidden="true"></div>
+            <div class="pricing-header">
+              <span class="plan-name font-display">AI & AUTOMATION</span>
+              <div class="plan-price" style="font-size: 1.8rem;">Contact Us <span style="font-size: 0.95rem;">· Custom Quote</span></div>
+              <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-xs); line-height: 1.4; font-family: var(--font-mono);">
+                Eliminate administrative tasks with custom automated booking flows, databases, and reminders.
+              </p>
+            </div>
+            <ul class="plan-features">
+              <li><span class="feature-check" aria-hidden="true"></span> Custom lead capture & backends</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Google Sheets / Notion / Airtable CRM sync</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Automated customer WhatsApp redirects</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Auto-response email notifications</li>
+              <li><span class="feature-check" aria-hidden="true"></span> SMS / WhatsApp booking reminders</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Webhook integrations & API triggers</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Custom Admin dashboard (/meadadmin)</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Setup completed in 5 to 7 days</li>
+            </ul>
+            <a href="#build-together" class="pricing-btn">Book a call</a>
+          </div>
+
+          <!-- White Label for Agencies -->
+          <div class="pricing-card">
+            <div class="pricing-badge" aria-hidden="true"></div>
+            <div class="pricing-header">
+              <span class="plan-name font-display">WHITE LABEL FOR AGENCIES</span>
+              <div class="plan-price" style="font-size: 1.8rem;">Contact Us <span style="font-size: 0.95rem;">· Custom Quote</span></div>
+              <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: var(--space-xs); line-height: 1.4; font-family: var(--font-mono);">
+                Outsource your agency's web coding, edits, and technical tasks to a dedicated developer partner.
+              </p>
+            </div>
+            <ul class="plan-features">
+              <li><span class="feature-check" aria-hidden="true"></span> Dedicated frontend & backend coder</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Unlimited visual & functional edits</li>
+              <li><span class="feature-check" aria-hidden="true"></span> WordPress, React, Shopify builds</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Delivered under your agency name</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Direct Slack / WhatsApp communication</li>
+              <li><span class="feature-check" aria-hidden="true"></span> No hiring or full-time employee overhead</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Fast 24-48h task turnaround</li>
+              <li><span class="feature-check" aria-hidden="true"></span> Pause or cancel retainer anytime</li>
+            </ul>
+            <a href="#build-together" class="pricing-btn">Book a call</a>
+          </div>
+        </div>
+
+        <!-- Custom Comparison Table (One-time build vs Boldlabs) -->
+        <div class="custom-banner" style="display: flex; flex-direction: column; align-items: stretch; padding: var(--space-xl); border: var(--border-width) solid var(--color-border); margin-top: var(--space-xl);">
+          <h3 class="custom-banner-title font-display" style="text-align: center; margin-bottom: var(--space-md); text-transform: uppercase;">One-time Build vs. Boldlabs Subscription</h3>
+          <div style="overflow-x: auto;">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>One-time build (most agencies)</th>
+                  <th>Boldlabs Subscription</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="cross-icon">✕</span> Built once, handed over to you</td>
+                  <td><span class="check-icon">✓</span> Managed and updated every single month</td>
+                </tr>
+                <tr>
+                  <td><span class="cross-icon">✕</span> No booking system or automations included</td>
+                  <td><span class="check-icon">✓</span> Booking system + SMS/Email reminders + CRM included</td>
+                </tr>
+                <tr>
+                  <td><span class="cross-icon">✕</span> You manage theme and plugin updates yourself</td>
+                  <td><span class="check-icon">✓</span> All updates, security, and changes handled for you</td>
+                </tr>
+                <tr>
+                  <td><span class="cross-icon">✕</span> Breaks after 3 months, no support team</td>
+                  <td><span class="check-icon">✓</span> Ongoing monitoring, speed audits, and quick fixes</td>
+                </tr>
+                <tr>
+                  <td><span class="cross-icon">✕</span> Pay a massive upfront project fee</td>
+                  <td><span class="check-icon">✓</span> Manageable monthly retainer options</td>
+                </tr>
+                <tr>
+                  <td><span class="cross-icon">✕</span> Agency moves on to the next customer</td>
+                  <td><span class="check-icon">✓</span> One dedicated engineer accountable to you</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <h2>GOT QUESTIONS?</h2>
+          <span class="section-subtitle">Read our FAQs</span>
+        </div>
+
+        <div class="faq-list">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>WHAT SERVICES DO YOU PROVIDE?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We specialize in custom-coded landing pages, conversion-oriented D2C & wholesale e-commerce websites (Shopify/WooCommerce), automated booking systems, CRM log pipelines, email/SMS auto-notifications, and whitelabel development retainer support for design & marketing agencies.
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>DO I HAVE TO COMMIT TO A LONG-TERM CONTRACT?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              No. We run on a flexible month-to-month subscription care and whitelabel retainer model. You are in full control and can pause, downgrade, or cancel at any point without lock-in periods or cancellation fees.
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>CAN YOU REBUILD OR OVERHAUL MY EXISTING WEBSITE?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes. If your current website is slow, failing to convert visitors, or relies on messy manual follow-up chains, we will overhaul it entirely. We carry over your brand elements and rebuild the front and backend for optimal speed and high bookings.
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>WHAT TECH STACK DO YOU WORK WITH?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We select technology that matches your specific business goals. For marketing, blogging, and traditional e-commerce stores, we build custom structures on WordPress or Shopify. For custom web apps requiring heavy database workflows, we code in React (Next.js/Vite) and Node.js.
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>HOW DO YOUR AI AUTOMATIONS WORK?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We connect your website forms and booking calendars directly to everyday applications (like Google Sheets, Airtable, Notion, Slack, or CRMs). We also configure automated WhatsApp follow-ups, autoresponder email flows, and SMS client reminders so your admin runs automatically in the background.
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>HOW LONG DOES A WEBSITE BUILD TAKE?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Full landing pages and website builds typically take between 2 to 3 weeks. Standalone AI integrations and automated workflow syncs are completed within 5 to 7 days once we gather your service requirements and API credentials.
+            </div>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>HOW DOES YOUR WHITELABEL AGENCY Retainer WORK?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We act as your agency's dedicated coding partner. You share design links (Figma, Adobe XD) or visual edits, and we code them under your brand flag. We connect directly to your agency Slack or WhatsApp channel with a fast 24-48h task turnaround.
+            </div>
+          </div>
+
+          <!-- Question 8 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>HOW SECURE IS MY CUSTOM LEAD CAPTURE DATABASE?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Extremely secure. When we set up custom databases (like Firebase Firestore or Google Sheets API logs), we write strict backend security rules requiring authentication. Only your secure login credential can pull lead databases, ensuring customer data privacy.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Build Together Section (Contrast Section Swap) -->
+    <section id="build-together" class="section build-together reveal-on-scroll">
+      <div class="container">
+        <div class="build-together-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-3xl); align-items: start;">
+          <div>
+            <h2 class="build-title" style="margin-bottom: var(--space-md); font-family: var(--font-display); text-transform: uppercase;">LET'S FIT YOUR BUSINESS.</h2>
+            <p class="build-desc" style="margin-bottom: var(--space-md); color: var(--color-muted-light); font-size: 1rem; line-height: 1.6;">
+              30-minute discovery call. No pitch. Just a look at what is broken and whether I can build the system to fix it. Fill in your details and I'll reach out on WhatsApp.
+            </p>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-muted-light); margin-bottom: var(--space-lg);">
+              Usually responds within 24 hours.
+            </p>
+          </div>
+          
+          <div class="lead-form-container" style="border: 2px solid var(--color-text-dark); padding: var(--space-lg); background-color: var(--color-bg-light); color: var(--color-text-dark); position: relative;">
+            <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: var(--space-md);">
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-name" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Name</label>
+                <input type="text" id="lead-name" required placeholder="Your Name" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0;">
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-email" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Email</label>
+                <input type="email" id="lead-email" required placeholder="you@domain.com" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0;">
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-whatsapp" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">WhatsApp Number</label>
+                <div style="display: flex; gap: var(--space-xs);">
+                  <!-- Country Code Dropdown -->
+                  <select id="lead-country-code" required style="width: 110px; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%226 9 12 15 18 9%22></polyline></svg>'); background-repeat: no-repeat; background-position: right 8px center; background-size: 14px; box-sizing: border-box;">
+                    <option value="91">IN (+91)</option>
+                    <option value="1">CA (+1)</option>
+                    <option value="1">US (+1)</option>
+                    <option value="44">UK (+44)</option>
+                    <option value="61">AU (+61)</option>
+                    <option value="971">AE (+971)</option>
+                    <option value="65">SG (+65)</option>
+                  </select>
+                  <!-- Phone Number Input -->
+                  <input type="tel" id="lead-whatsapp" required placeholder="99999 99999" pattern="[0-9\s-]{7,15}" style="flex: 1; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; box-sizing: border-box;">
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-contact-method" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">How should we contact you?</label>
+                <select id="lead-contact-method" required style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%226 9 12 15 18 9%22></polyline></svg>'); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;">
+                  <option value="WhatsApp">Contact me via WhatsApp</option>
+                  <option value="Email">Contact me via Email</option>
+                </select>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What do you need help with?</label>
+                <textarea id="lead-question" required rows="3" placeholder="e.g. Need a booking website for my clinic + automated WhatsApp reminders." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
+              </div>
+              
+              <button type="submit" class="pill-btn pill-btn-primary" style="margin-top: 8px; width: 100%; text-align: center; border-radius: 0; border: 2px solid var(--color-text-dark); cursor: pointer; display: block;">
+                SUBMIT REQUEST
+              </button>
+            </form>
+            <div id="lead-form-status" style="display: none; text-align: center; padding: var(--space-lg); font-family: var(--font-mono);">
+              <span style="font-family: var(--font-display); font-size: 1.1rem; color: #008000; display: block; margin-bottom: 8px;">REQUEST SUBMITTED.</span>
+              <p id="lead-status-msg" style="font-size: 0.8rem; color: var(--color-muted-light); line-height: 1.5;"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">Boldlabs Studio</div>
+          <p class="footer-tagline">Booking-first websites for service businesses.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#latest-drop">Case Studies</a></li>
+            <li><a href="#timeline">Process</a></li>
+            <li><a href="#player">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Trust -->
+        <div>
+          <h4 class="footer-col-title">Trust</h4>
+          <ul class="footer-links">
+            <li><a href="#player">Wall of Love</a></li>
+            <li><a href="#latest-drop">Blog</a></li>
+            <li><a href="#build-together">Contact</a></li>
+            <li><a href="#build-together">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.6); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="container" style="padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <span>© 2026 Boldlabs Studio — Bhuvanesh. All rights reserved.</span>
+          <span style="font-family: var(--font-display); font-size: 0.7rem;">PROTAGONIST LOADED</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs & Config -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Interactivity Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. Interactive Card Deck Swapping
+      const deck = document.getElementById('player-deck');
+      const cards = Array.from(deck.children);
+      
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          if (card.classList.contains('active-card')) return;
+          
+          // Remove active state from all cards
+          cards.forEach(c => {
+            c.classList.remove('active-card');
+          });
+          
+          // Make the clicked card active
+          card.classList.add('active-card');
+        });
+      });
+
+      // 2. FAQ Accordion Trigger
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+          const faqContent = trigger.nextElementSibling;
+          
+          // Collapse all others
+          document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) {
+              item.classList.remove('active');
+              item.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+              item.querySelector('.faq-content').style.maxHeight = '0px';
+            }
+          });
+          
+          // Toggle active
+          faqItem.classList.toggle('active');
+          trigger.setAttribute('aria-expanded', !isExpanded);
+          
+          if (!isExpanded) {
+            faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
+          } else {
+            faqContent.style.maxHeight = '0px';
+          }
+        });
+      });
+
+      // 3. Smooth Scrolling for Navigation Links
+      const navLinks = document.querySelectorAll('.navbar a[href^="#"], .hero-cta-btn, .pricing-btn, .sidebar-btn, .pill-btn, [href="#plans"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (!targetId || !targetId.startsWith('#')) return;
+          if (targetId === '#') return;
+          
+          e.preventDefault();
+          const targetEl = document.querySelector(targetId);
+          
+          if (targetEl) {
+            targetEl.scrollIntoView({
+              behavior: 'smooth'
+            });
+            
+            // Manage accessibility and focus
+            targetEl.setAttribute('tabindex', '-1');
+            targetEl.focus({ preventScroll: true });
+          }
+        });
+      });
+
+      // 4. Scroll Reveal IntersectionObserver
+      document.documentElement.classList.add('js-active');
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            
+            // Trigger stats count-up animation
+            if (entry.target.id === 'stats') {
+              const numberVals = entry.target.querySelectorAll('.number-val');
+              numberVals.forEach(numEl => {
+                const target = parseInt(numEl.getAttribute('data-target') || '0');
+                const suffix = numEl.getAttribute('data-suffix') || '';
+                const duration = 1500; // 1.5 seconds animation duration
+                const startTime = performance.now();
+                
+                const countAnimation = (currentTime) => {
+                  const elapsed = currentTime - startTime;
+                  const progress = Math.min(elapsed / duration, 1);
+                  const easeOutQuad = progress * (2 - progress);
+                  const currentValue = Math.floor(easeOutQuad * target);
+                  
+                  numEl.textContent = currentValue + suffix;
+                  
+                  if (progress < 1) {
+                    requestAnimationFrame(countAnimation);
+                  } else {
+                    numEl.textContent = target + suffix;
+                  }
+                };
+                
+                if (target > 0) {
+                  requestAnimationFrame(countAnimation);
+                } else {
+                  numEl.textContent = target + suffix;
+                }
+              });
+            }
+            
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -40px 0px'
+      });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // Populate Country Codes Dropdown dynamically (IN, CA, US first, followed by global codes)
+      const countrySelect = document.getElementById('lead-country-code');
+      if (countrySelect) {
+        countrySelect.innerHTML = ''; // Clear default static options
+        const rawCountries = "91:IN:India,1:CA:Canada,1:US:United States,44:UK:United Kingdom,61:AU:Australia,971:AE:UAE,65:SG:Singapore,93:AF:Afghanistan,355:AL:Albania,213:DZ:Algeria,376:AD:Andorra,244:AO:Angola,54:AR:Argentina,374:AM:Armenia,43:AT:Austria,994:AZ:Azerbaijan,973:BH:Bahrain,880:BD:Bangladesh,32:BE:Belgium,975:BT:Bhutan,55:BR:Brazil,673:BN:Brunei,359:BG:Bulgaria,855:KH:Cambodia,237:CM:Cameroon,56:CL:Chile,86:CN:China,57:CO:Colombia,506:CR:Costa Rica,385:HR:Croatia,53:CU:Cuba,357:CY:Cyprus,420:CZ:Czechia,45:DK:Denmark,20:EG:Egypt,372:EE:Estonia,251:ET:Ethiopia,679:FJ:Fiji,358:FI:Finland,33:FR:France,995:GE:Georgia,49:DE:Germany,233:GH:Ghana,30:GR:Greece,852:HK:Hong Kong,36:HU:Hungary,354:IS:Iceland,62:ID:Indonesia,98:IR:Iran,964:IQ:Iraq,353:IE:Ireland,972:IL:Israel,39:IT:Italy,81:JP:Japan,962:JO:Jordan,254:KE:Kenya,965:KW:Kuwait,856:LA:Laos,371:LV:Latvia,961:LB:Lebanon,370:LT:Lithuania,352:LU:Luxembourg,60:MY:Malaysia,960:MV:Maldives,356:MT:Malta,52:MX:Mexico,373:MD:Moldova,377:MC:Monaco,976:MN:Mongolia,212:MA:Morocco,258:MZ:Mozambique,95:MM:Myanmar,977:NP:Nepal,31:NL:Netherlands,64:NZ:New Zealand,234:NG:Nigeria,47:NO:Norway,968:OM:Oman,92:PK:Pakistan,507:PA:Panama,51:PE:Peru,63:PH:Philippines,48:PL:Poland,351:PT:Portugal,974:QA:Qatar,40:RO:Romania,7:RU:Russia,250:RW:Rwanda,966:SA:Saudi Arabia,221:SN:Senegal,381:RS:Serbia,27:ZA:South Africa,34:ES:Spain,94:LK:Sri Lanka,46:SE:Sweden,41:CH:Switzerland,886:TW:Taiwan,66:TH:Thailand,216:TN:Tunisia,90:TR:Turkey,256:UG:Uganda,380:UA:Ukraine,598:UY:Uruguay,998:UZ:Uzbekistan,58:VE:Venezuela,84:VN:Vietnam,260:ZM:Zambia,263:ZW:Zimbabwe";
+        
+        rawCountries.split(',').forEach(c => {
+          const [code, iso, name] = c.split(':');
+          const opt = document.createElement('option');
+          opt.value = code;
+          opt.textContent = `${iso} (+${code}) — ${name}`;
+          countrySelect.appendChild(opt);
+        });
+      }
+
+      // 5. Lead Capture Form Submission Handler
+      const leadForm = document.getElementById('lead-capture-form');
+      const leadFormStatus = document.getElementById('lead-form-status');
+      
+      if (leadForm) {
+        // Initialize EmailJS if configured
+        if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
+          emailjs.init(emailjsConfig.publicKey);
+        }
+
+        leadForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const name = document.getElementById('lead-name').value.trim();
+          const email = document.getElementById('lead-email').value.trim();
+          const countryCode = document.getElementById('lead-country-code').value;
+          const rawWhatsapp = document.getElementById('lead-whatsapp').value.trim();
+          const question = document.getElementById('lead-question').value.trim();
+          const contactMethod = document.getElementById('lead-contact-method').value;
+          const timestamp = new Date().toISOString();
+          
+          // Format WhatsApp number to only contain digits for link purposes
+          const cleanPhone = rawWhatsapp.replace(/[^0-9]/g, '');
+          const cleanWhatsappNumber = `${countryCode}${cleanPhone}`;
+          const leadWhatsappLink = `https://wa.me/${cleanWhatsappNumber}`;
+          
+          // Readable format for database log: +91 99999 99999
+          const formattedWhatsapp = `+${countryCode} ${rawWhatsapp}`;
+
+          const leadData = {
+            name,
+            email,
+            whatsapp: formattedWhatsapp,
+            contactMethod,
+            question,
+            timestamp
+          };
+          
+          try {
+            if (isFirebaseConfigured && db) {
+              // Save to Firebase Firestore
+              await db.collection('leads').add({
+                ...leadData,
+                serverTimestamp: firebase.firestore.FieldValue.serverTimestamp()
+              });
+              console.log("Lead successfully written to Firebase Firestore.");
+            } else {
+              // Fallback to localStorage mock storage
+              const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
+              mockLeads.push(leadData);
+              localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
+              console.log("Saved lead locally to localStorage fallback.");
+            }
+
+            // Save to Google Sheets if configured
+            if (isGoogleSheetConfigured) {
+              const formData = new URLSearchParams();
+              formData.append('name', name);
+              formData.append('email', email);
+              formData.append('whatsapp', formattedWhatsapp);
+              formData.append('contactMethod', contactMethod);
+              formData.append('question', question);
+              
+              fetch(googleSheetUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: formData.toString()
+              }).then(() => {
+                console.log("Lead successfully dispatched to Google Sheets Apps Script.");
+              }).catch(err => {
+                console.error("Error dispatching to Google Sheets:", err);
+              });
+            }
+
+            // Fire email alerts if configured
+            if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
+              // Always send notification to Bhuvanesh
+              await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdNotification, {
+                lead_name: name,
+                lead_email: email,
+                lead_whatsapp: whatsapp,
+                lead_contact_method: contactMethod,
+                lead_question: question,
+                lead_whatsapp_link: leadWhatsappLink
+              });
+              console.log("Notification email dispatched to admin.");
+
+              // Only send follow-up autoresponder if client prefers Email
+              if (contactMethod === 'Email') {
+                await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdAutoresponder, {
+                  to_name: name,
+                  to_email: email,
+                  my_whatsapp_link: `https://wa.me/${emailjsConfig.yourWhatsappNumber}`
+                });
+                console.log("Autoresponder follow-up email dispatched to lead.");
+              }
+            } else {
+              console.warn("EmailJS is not configured. Mock Emails variables logged below:");
+              console.log("Admin Notification:", {
+                lead_name: name,
+                lead_email: email,
+                lead_whatsapp: whatsapp,
+                lead_contact_method: contactMethod,
+                lead_question: question,
+                lead_whatsapp_link: leadWhatsappLink
+              });
+              if (contactMethod === 'Email') {
+                console.log("Lead Autoresponder:", {
+                  to_name: name,
+                  to_email: email,
+                  my_whatsapp_link: `https://wa.me/${emailjsConfig.yourWhatsappNumber}`
+                });
+              }
+            }
+            
+            const statusMsg = document.getElementById('lead-status-msg');
+            
+            if (contactMethod === 'WhatsApp') {
+              // Construct the WhatsApp URL with pre-filled lead details
+              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call.
+
+*Name*: ${name}
+*Email*: ${email}
+*WhatsApp*: ${whatsapp}
+*What I need help with*: ${question}`;
+
+              const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
+              
+              // Open WhatsApp directly (original behavior)
+              window.open(whatsappUrl, '_blank');
+              
+              if (statusMsg) {
+                statusMsg.textContent = "We've opened a new window to chat directly on WhatsApp. Please send the pre-filled message to connect with us instantly.";
+              }
+            } else {
+              // Email follow-up route
+              if (statusMsg) {
+                statusMsg.textContent = `A confirmation follow-up email has been sent to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
+              }
+            }
+            
+            // Show success status
+            leadForm.style.display = 'none';
+            leadFormStatus.style.display = 'block';
+          } catch (error) {
+            console.error("Error capturing lead or sending email:", error);
+            alert("Error sending request. Please email directly to hello@boldlabs.studio");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
