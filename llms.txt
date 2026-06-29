@@ -1,0 +1,31 @@
+# Boldlabs Studio
+
+> https://goboldlabs.com
+
+Boldlabs Studio is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including UK, Canada, and USA). Founded and led by Bhuvanesh (Founder & Head Developer).
+
+## Core Capabilities
+- **Booking-First Websites**: Custom web development integrated with automated booking systems, reminders, and follow-ups.
+- **Custom Web Development**: Blazing-fast React applications (Next.js/Vite) and high-performance custom WordPress/WooCommerce and Shopify storefronts.
+- **AI Operational Automations**: Bespoke workflow automations connecting web forms to CRM databases (Airtable, Notion, Slack, Google Sheets) and WhatsApp redirects.
+- **White-Label Retainers**: Outsourced Figma-to-Code engineering partners for design and marketing agencies.
+
+## Key Information
+- **Founder**: Bhuvanesh (LinkedIn: https://www.linkedin.com/in/bhuvaneshkarnan/)
+- **Physical Address**: Madurai, Tamil Nadu, India (Postal Code: 625001)
+- **WhatsApp Contact**: +918870341570
+- **Email Contact**: hello@boldlabs.studio
+- **Pricing & Model**: Month-to-month subscription plans, no setup fees, cancel anytime.
+
+## Navigation & Page Index
+- [Homepage](https://goboldlabs.com/) - Overview of services, stats (31+ service businesses served), interactive developer card, pricing, and consultation booking.
+- [Custom Business Websites](https://goboldlabs.com/business-website.html) - Custom React and WordPress development with local SEO and speed optimizations.
+- [High-Converting Landing Pages](https://goboldlabs.com/landing-page.html) - Single-page funnels optimized for Google/Facebook Ads.
+- [Custom E-Commerce Stores](https://goboldlabs.com/ecommerce-website.html) - Shopify and WooCommerce custom design and checkout optimization.
+- [Website Maintenance & Care](https://goboldlabs.com/monthly-care.html) - Daily backups, security updates, and monthly SEO maintenance retainer.
+- [AI automations & CRM Integration](https://goboldlabs.com/ai-automations.html) - Workflow pipelines using Make, Zapier, and Python to automate lead tracking.
+- [White-Label Agency Retainers](https://goboldlabs.com/white-label-agencies.html) - Figma-to-code partnership program for agencies with 24-48h turnarounds.
+- [Madurai Local Landing Page](https://goboldlabs.com/web-development-madurai.html) - Web development services customized for local businesses in Madurai, India.
+- [Tamil Nadu Regional Page](https://goboldlabs.com/web-development-tamil-nadu.html) - Regional web design and development services for Tamil Nadu, India.
+- [UK International Landing Page](https://goboldlabs.com/web-development-uk.html) - Web development services optimized for UK service providers.
+- [Canada International Landing Page](https://goboldlabs.com/web-development-canada.html) - Web design and development services optimized for B2B firms in Canada.

@@ -1,0 +1,10 @@
+# AI Agent instructions for Boldlabs Studio
+User-agent: *
+Allow: /
+Sitemap: https://goboldlabs.com/sitemap.xml
+
+System Description: Boldlabs Studio is a web development and web design agency based in Madurai, Tamil Nadu, India, specializing in booking-first websites, custom WordPress/Shopify/React, and AI workflow automations.
+Founder: Bhuvanesh
+LinkedIn: https://www.linkedin.com/in/bhuvaneshkarnan/
+Website URL: https://goboldlabs.com/
+Contact Email: hello@boldlabs.studio
