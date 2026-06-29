@@ -1337,15 +1337,13 @@
           const cleanWhatsappNumber = `${countryCode}${cleanPhone}`;
           const leadWhatsappLink = `https://wa.me/${cleanWhatsappNumber}`;
           
-          // Readable format for database log: +91 99999 99999
-          const formattedWhatsapp = `+${countryCode} ${rawWhatsapp}`;
-
           const leadData = {
             name,
             email,
             whatsapp: formattedWhatsapp,
             contactMethod,
             question,
+            sourcePage: 'Homepage',
             timestamp
           };
           
@@ -1364,19 +1362,21 @@
               formData.append('whatsapp', formattedWhatsapp);
               formData.append('contactMethod', contactMethod);
               formData.append('question', question);
+              formData.append('sourcePage', 'Homepage');
               
-              fetch(googleSheetUrl, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: formData.toString()
-              }).then(() => {
+              try {
+                await fetch(googleSheetUrl, {
+                  method: 'POST',
+                  mode: 'no-cors',
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  body: formData.toString()
+                });
                 console.log("Lead successfully dispatched to Google Sheets Apps Script.");
-              }).catch(err => {
+              } catch (err) {
                 console.error("Error dispatching to Google Sheets:", err);
-              });
+              }
             }
 
             // Fire email alerts if configured
@@ -1437,12 +1437,12 @@
               window.open(whatsappUrl, '_blank');
               
               if (statusMsg) {
-                statusMsg.textContent = "We've opened a new window to chat directly on WhatsApp. Please send the pre-filled message to connect with us instantly.";
+                statusMsg.textContent = "Thank you! We've opened a new window to chat on WhatsApp. Please send the pre-filled message to connect with us instantly.";
               }
             } else {
               // Email follow-up route
               if (statusMsg) {
-                statusMsg.textContent = `A confirmation follow-up email has been sent to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
+                statusMsg.textContent = `Thank you! Your request has been sent, and a confirmation email has been dispatched to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
               }
             }
             

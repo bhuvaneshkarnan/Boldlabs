@@ -598,6 +598,7 @@
             whatsapp: formattedWhatsapp,
             contactMethod,
             question,
+            sourcePage: 'E-commerce Website',
             timestamp
           };
 
@@ -613,13 +614,19 @@
               formData.append('whatsapp', formattedWhatsapp);
               formData.append('contactMethod', contactMethod);
               formData.append('question', question);
+              formData.append('sourcePage', 'E-commerce Website');
               
-              fetch(firebaseConfig.googleSheetUrl, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: formData
-              });
+              try {
+                await fetch(firebaseConfig.googleSheetUrl, {
+                  method: 'POST',
+                  mode: 'no-cors',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: formData.toString()
+                });
+                console.log("Lead successfully dispatched to Google Sheets Apps Script.");
+              } catch (err) {
+                console.error("Error dispatching to Google Sheets:", err);
+              }
             }
 
             if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
@@ -639,11 +646,11 @@
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber || '918870341570'}?text=${encodeURIComponent(whatsappText)}`;
               window.open(whatsappUrl, '_blank');
               if (statusMsg) {
-                statusMsg.textContent = "We've opened a new window to chat directly on WhatsApp. Please send the pre-filled message to connect with us instantly.";
+                statusMsg.textContent = "Thank you! We've opened a new window to chat on WhatsApp. Please send the pre-filled message to connect with us instantly.";
               }
             } else {
               if (statusMsg) {
-                statusMsg.textContent = `A confirmation follow-up email has been sent to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
+                statusMsg.textContent = `Thank you! Your request has been sent, and a confirmation email has been dispatched to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
               }
             }
 

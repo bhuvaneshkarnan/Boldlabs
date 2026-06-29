@@ -23,30 +23,40 @@ const isGoogleSheetConfigured = googleSheetUrl && googleSheetUrl !== "YOUR_GOOGL
 =============================================================================
 GOOGLE SHEETS APPS SCRIPT SETUP INSTRUCTIONS:
 1. Create a new Google Sheet.
-2. Add these headers in row 1: Date | Name | Email | WhatsApp | Preference | Message
-3. In Google Sheets menu: Go to Extensions -> Apps Script.
-4. Delete any code inside Code.gs and paste the following script:
+2. In Google Sheets menu: Go to Extensions -> Apps Script.
+3. Delete any code inside Code.gs and paste the following script:
 
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
   var p = e.parameter;
+  var method = p.contactMethod || "General";
+  var sheetName = method === "WhatsApp" ? "WhatsApp Leads" : "Email Leads";
+  var sheet = ss.getSheetByName(sheetName);
+  
+  if (!sheet) {
+    sheet = ss.insertSheet(sheetName);
+    sheet.appendRow(["Date", "Name", "Email", "WhatsApp", "Preference", "Message", "Source Page"]);
+  }
+  
   sheet.appendRow([
     new Date().toLocaleString(),
     p.name,
     p.email,
     p.whatsapp,
-    p.contactMethod,
-    p.question
+    method,
+    p.question,
+    p.sourcePage || "Unknown"
   ]);
+  
   return ContentService.createTextOutput("SUCCESS");
 }
 
-5. Click "Deploy" button (top right) -> "New deployment".
-6. Select Type: "Web app".
-7. Description: "Boldlabs Leads Web App".
-8. Execute as: "Me" (your email).
-9. Who has access: "Anyone".
-10. Click "Deploy". Authorize permissions if prompted.
-11. Copy the "Web app URL" and paste it in the "googleSheetUrl" config variable above.
+4. Click "Deploy" button (top right) -> "New deployment".
+5. Select Type: "Web app".
+6. Description: "Boldlabs Leads Web App".
+7. Execute as: "Me" (your email).
+8. Who has access: "Anyone".
+9. Click "Deploy". Authorize permissions if prompted.
+10. Copy the "Web app URL" and paste it in the "googleSheetUrl" config variable above.
 =============================================================================
 */
