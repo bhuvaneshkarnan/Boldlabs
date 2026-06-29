@@ -27,7 +27,7 @@ GOOGLE SHEETS APPS SCRIPT SETUP INSTRUCTIONS:
 3. Delete any code inside Code.gs and paste the following script:
 
 function doPost(e) {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = SpreadsheetApp.openById("12k_dr7h6hP0ptjhaPKdcwVuuwSWiZPvdHL94VxonEf4");
   var p = e.parameter;
   var method = p.contactMethod || "General";
   var sheetName = method === "WhatsApp" ? "WhatsApp Leads" : "Email Leads";
