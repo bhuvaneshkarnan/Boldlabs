@@ -87,18 +87,26 @@
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
     <a href="#home" class="navbar-brand">Boldlabs Studio</a>
-    <span class="navbar-divider" aria-hidden="true">|</span>
-    <a href="#services">Services</a>
-    <span class="navbar-divider" aria-hidden="true">|</span>
-    <a href="#latest-drop">Missions</a>
-    <span class="navbar-divider" aria-hidden="true">|</span>
-    <a href="#timeline">Timeline</a>
-    <span class="navbar-divider" aria-hidden="true">|</span>
-    <a href="#player">Reviews</a>
-    <span class="navbar-divider" aria-hidden="true">|</span>
-    <a href="#plans">Store</a>
-    <span class="navbar-divider" aria-hidden="true">|</span>
-    <a href="#build-together">Book Call</a>
+    
+    <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
+      <span>MENU</span>
+      <span class="menu-icon">☰</span>
+    </button>
+    
+    <div class="nav-links" id="navbar-links-container">
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#services">Services</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#latest-drop">Missions</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#timeline">Timeline</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#player">Reviews</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#plans">Store</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#build-together">Book Call</a>
+    </div>
   </nav>
 
   <!-- Main Content -->
@@ -1436,6 +1444,37 @@
             console.error("Error capturing lead or sending email:", error);
             alert("Error sending request. Please email directly to hello@boldlabs.studio");
           }
+        });
+      }
+
+      // Mobile Navbar Toggle Logic
+      const menuToggleBtn = document.getElementById('menu-toggle-btn');
+      const navbarLinksContainer = document.getElementById('navbar-links-container');
+      const navbarEl = document.querySelector('.navbar');
+
+      if (menuToggleBtn && navbarLinksContainer) {
+        menuToggleBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+          menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+          navbarEl.classList.toggle('nav-open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!navbarEl.contains(e.target)) {
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            navbarEl.classList.remove('nav-open');
+          }
+        });
+
+        // Close menu when clicking on any link inside the menu
+        const navLinks = navbarLinksContainer.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            navbarEl.classList.remove('nav-open');
+          });
         });
       }
     });
