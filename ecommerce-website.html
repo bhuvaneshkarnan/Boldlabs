@@ -39,6 +39,56 @@
   }
   </script>
 
+  <!-- FAQ JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Shopify or WooCommerce better for a custom e-commerce store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shopify is a fully managed platform offering reliable hosting, secure payment gateways, and lower initial maintenance. WooCommerce operates on WordPress, offering unlimited design flexibility, full code ownership, and zero monthly subscription licensing fees. We build on both based on your catalog size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you optimize checkout speed on custom e-commerce sites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We optimize checkout by reducing HTTP requests, stripping out heavy tracking scripts, utilizing CDN caching for assets, compressing product images, and setting up one-page checkouts with Google Pay / Apple Pay integrations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you migrate my existing store from WordPress to Shopify?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we handle complete migration missions. We securely move product files, customer details, database histories, and map your old URLs to prevent broken link errors and preserve your organic Google search rankings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you integrate local payment gateways like Stripe or Razorpay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We integrate all standard global and local payment APIs including Stripe, PayPal, Razorpay, Apple Pay, Google Pay, and localized bank transfers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle e-commerce product SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We write structured Product Schemas directly into the code. Your prices, stock statuses, and reviews show up directly in search engine matches."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     .subpage-hero {
       padding: var(--space-4xl) 0 var(--space-2xl);
@@ -65,9 +115,54 @@
       gap: var(--space-lg);
       margin-top: var(--space-xl);
     }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+    }
+    .faq-item {
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .faq-trigger {
+      width: 100%;
+      padding: var(--space-md) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      padding-bottom: var(--space-md);
+    }
+    .faq-icon {
+      font-size: 0.7rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
     @media (max-width: 768px) {
-      .features-grid {
+      .features-grid, .grid-3col {
         grid-template-columns: 1fr;
+      }
+      .grid-4col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -107,7 +202,7 @@
         <a href="index.html" class="back-home">← Back to Home</a>
         <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: var(--space-sm);">E-COMMERCE STORES</h1>
         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
-          Custom-coded storefronts and theme modifications designed to accelerate checkout speed and convert traffic into sales.
+          Fast, secure WooCommerce and Shopify online storefronts built with simplified checkouts to turn visitors into buyers.
         </p>
       </div>
     </section>
@@ -115,38 +210,149 @@
     <!-- Details Section -->
     <section class="section">
       <div class="container">
-        <h2 style="margin-bottom: var(--space-md);">MAXIMUM SPEED FOR DIGITAL TRANSACTIONS</h2>
+        <h2 style="margin-bottom: var(--space-md);">MAXIMUM CHECKOUT SPEED & SECURITY</h2>
         <p style="color: var(--color-text-muted); line-height: 1.6; max-width: 800px;">
-          For every 1-second delay in page load times, e-commerce conversion rates drop by 7%. We bypass clunky, default templates to construct streamlined shopping channels that focus on quick loading, fast checkouts, and trust cues.
+          An e-commerce store loading delay of 1 second can drop conversion rates by 20%. We code bespoke layouts that strip away heavy plugins and streamline checkout fields, ensuring high speed on mobile networks.
         </p>
 
         <div class="features-grid">
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. Shopify & WooCommerce Customization</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. Shopify & WooCommerce Engineering</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We write custom Liquid templates for Shopify and optimized PHP for WooCommerce, giving you bespoke visual layouts while retaining powerful admin dashboards.
+              We develop on Shopify Liquid engines or clean WooCommerce templates, matching your tech architecture to your catalog size.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. Mobile Cart Optimization</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. Single-Page Checkout Flows</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              Our layouts feature sliding side-carts, sticky "Add to Cart" bars, and automated Apple Pay / Google Pay triggers that reduce checkout friction.
+              We eliminate multi-step checkouts, keeping shopping carts fast with dynamic inputs and one-tap payment options (Apple/Google Pay).
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Advanced Product Filters</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Schema Markup & Rich Snippets</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We deploy custom AJAX-based instant search and attribute filters, letting shoppers locate products instantly without page reloads.
+              We write structured Product Schemas directly into the code. Your prices, stock statuses, and reviews show up directly in search engine matches.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. Product Schema Integration</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. Custom Inventory & API Integrations</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We embed full structured metadata (price, review stars, stock availability) so your products render with rich visual cards on Google Search results.
+              We integrate your store with shipping providers, accounting databases, automated inventory platforms, and marketing emails.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>DELIVERY PROCESS</h2>
+        <span class="section-subtitle">How we build and launch your custom e-commerce store.</span>
+        <div class="grid-3col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">01 / TAXONOMY & PRODUCT WIREFRAME</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">UX & Filtering Layout</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We wireframe category pages, search filtering structures, and single product layouts to make navigation intuitive.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">02 / SECURE DEVELOPMENT & PAYMENT GATEWAY</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">API & Cart Coding</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We code the backend interfaces, set up SSL security, integrate payment gateways, and configure automatic tax calculations.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">03 / INVENTORY SYNC & QUALITY CHECK</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Live Order Testing</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We run test purchases, verify invoice triggers, check shipping calculations on various addresses, and check schema indexing before launch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>OUR TECH STACK</h2>
+        <span class="section-subtitle">We code using clean, stable, and fast technologies.</span>
+        <div class="grid-4col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Shopify API</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">WooCommerce</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">HTML5 / Semantic CSS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Stripe / PayPal APIs</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Cloudflare CDN</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">JSON-LD Product Schema</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Firebase Realtime DB</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Google Analytics 4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <span class="section-subtitle">Real answers to common questions about custom e-commerce stores.</span>
+        
+        <div class="faq-list" style="margin-top: var(--space-xl);">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Is Shopify or WooCommerce better for a custom e-commerce store?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Shopify is a fully managed platform offering reliable hosting, secure payment gateways, and lower initial maintenance. WooCommerce operates on WordPress, offering unlimited design flexibility, full code ownership, and zero monthly subscription licensing fees. We build on both based on your catalog size.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How do you optimize checkout speed on custom e-commerce sites?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We optimize checkout by reducing HTTP requests, stripping out heavy tracking scripts, utilizing CDN caching for assets, compressing product images, and setting up one-page checkouts with Google Pay / Apple Pay integrations.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Can you migrate my existing store from WordPress to Shopify?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes, we handle complete migration missions. We securely move product files, customer details, database histories, and map your old URLs to prevent broken link errors and preserve your organic Google search rankings.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Do you integrate local payment gateways like Stripe or Razorpay?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes. We integrate all standard global and local payment APIs including Stripe, PayPal, Razorpay, Apple Pay, Google Pay, and localized bank transfers.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How do you handle e-commerce product SEO?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We write structured Product Schemas directly into the code. Your prices, stock statuses, and reviews show up directly in search engine matches.
+            </div>
           </div>
         </div>
       </div>
@@ -157,9 +363,9 @@
       <div class="container">
         <div class="build-together-grid">
           <div>
-            <h2 class="build-title">BUILD YOUR STORE.</h2>
+            <h2 class="build-title">SCALE SALES.</h2>
             <p class="build-desc">
-              Ready to launch a new D2C store or migrate a slow WooCommerce setup to a fast custom template? Let's discuss your catalogs and product structures.
+              Want to launch a new product range or move away from a slow e-commerce platform? Let's design a secure, fast storefront aligned with your business goals.
             </p>
             <p class="build-response-time">
               Usually responds within 24 hours.
@@ -203,8 +409,8 @@
               </div>
               
               <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
-                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What kind of online store/catalog do you have?</label>
-                <textarea id="lead-question" required rows="3" placeholder="e.g. I have 50 clothing products and want to build a clean custom Shopify template." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
+                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What is your approximate product count and platform?</label>
+                <textarea id="lead-question" required rows="3" placeholder="e.g. We have 50 products and want to build a custom Shopify store." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
               </div>
               
               <button type="submit" class="pill-btn pill-btn-primary" style="margin-top: 8px; width: 100%; text-align: center; border-radius: 0; border: 2px solid var(--color-text-dark); cursor: pointer; display: block;">
@@ -318,6 +524,30 @@
         });
       }
 
+      // FAQ Accordion Logic
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.faq-content');
+            if (content) content.style.maxHeight = null;
+            const trig = item.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+            const content = faqItem.querySelector('.faq-content');
+            if (content) content.style.maxHeight = content.scrollHeight + "px";
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
       // Country Code loader
       const countryCodeSelect = document.getElementById('lead-country-code');
       if (countryCodeSelect) {
@@ -425,7 +655,7 @@
 
             const statusMsg = document.getElementById('lead-status-msg');
             if (contactMethod === 'WhatsApp') {
-              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call for an E-Commerce Store.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
+              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call for a Custom E-Commerce Store.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber || '918870341570'}?text=${encodeURIComponent(whatsappText)}`;
               window.open(whatsappUrl, '_blank');
               if (statusMsg) {

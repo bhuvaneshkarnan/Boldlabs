@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Workflow Automations & CRM Integration Services — Boldlabs Studio</title>
-  <meta name="description" content="We design and build AI-driven workflow automations, WhatsApp booking alerts, and secure CRM integrations to streamline operations for service businesses.">
+  <title>Bespoke AI Automations & CRM Integration — Boldlabs Studio</title>
+  <meta name="description" content="We build custom AI automation pipelines, webhook bridges, and CRM data sync logs using Make, Zapier, and Python. Streamline business workflows.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 
@@ -13,8 +13,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "AI Workflow & Database Automations",
-    "description": "Custom API integrations, automatic lead follow-up emails, WhatsApp notification syncs, and custom admin log panels to streamline business operations.",
+    "name": "Bespoke AI Workflows & Automations",
+    "description": "Automated workflow design connecting lead sources, CRM databases, Slack notifications, and automated follow-ups.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Boldlabs Studio",
@@ -24,10 +24,10 @@
     "offers": {
       "@type": "Offer",
       "priceCurrency": "USD",
-      "price": "699.00",
+      "price": "999.00",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "price": "699.00",
+        "price": "999.00",
         "priceCurrency": "USD",
         "referenceQuantity": {
           "@type": "QuantitativeValue",
@@ -36,6 +36,56 @@
         }
       }
     }
+  }
+  </script>
+
+  <!-- FAQ JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can AI workflow automations save my business time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By automating manual data entry, customer follow-ups, and notifications. For example, when a user fills a form, our integrations instantly update your CRM, generate a customized contract, send a Slack ping, and dispatch a WhatsApp confirmation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you integrate forms with Google Sheets and WhatsApp alerts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We code custom webhook routers that write lead data to Google Sheets in real-time and send custom WhatsApp notifications using official Meta APIs or Twilio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are custom database connections secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We utilize standard SSL/TLS encryptions, secure environment variables (`.env`) for API keys, restrict database privileges to specific IPs, and implement rate limiters to secure connection sockets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What systems can you automate (CRMs, email, notifications)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We automate connection pipelines between CRMs (HubSpot, Salesforce, Pipedrive), messaging tools (Slack, Teams, WhatsApp, Telegram), email servers (Gmail, SendGrid), and databases (SQL, Firebase, Airtable)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we monitor database logs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We build custom logging dashboards in Firestore or display log feeds on a protected dashboard page, letting you monitor API request statuses and track webhook performance."
+        }
+      }
+    ]
   }
   </script>
 
@@ -65,9 +115,54 @@
       gap: var(--space-lg);
       margin-top: var(--space-xl);
     }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+    }
+    .faq-item {
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .faq-trigger {
+      width: 100%;
+      padding: var(--space-md) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      padding-bottom: var(--space-md);
+    }
+    .faq-icon {
+      font-size: 0.7rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
     @media (max-width: 768px) {
-      .features-grid {
+      .features-grid, .grid-3col {
         grid-template-columns: 1fr;
+      }
+      .grid-4col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -107,7 +202,7 @@
         <a href="index.html" class="back-home">← Back to Home</a>
         <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: var(--space-sm);">AI AUTOMATIONS</h1>
         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
-          Streamline your back-office work. We design smart databases and notification loops that auto-respond to leads and sync calendars while you sleep.
+          Eliminate manual administrative drag. We connect your lead sources, CRM databases, Slack alerts, and automated follow-ups.
         </p>
       </div>
     </section>
@@ -115,38 +210,149 @@
     <!-- Details Section -->
     <section class="section">
       <div class="container">
-        <h2 style="margin-bottom: var(--space-md);">AUTOMATE DATA FLOWS & REMINDERS</h2>
+        <h2 style="margin-bottom: var(--space-md);">SYNC YOUR SYSTEMS & REMOVE CLERICAL TASK DRAG</h2>
         <p style="color: var(--color-text-muted); line-height: 1.6; max-width: 800px;">
-          Manually copying lead data, logging sheets, sending WhatsApp follow-ups, and updating databases takes hours every week. We build integrated automation pipelines that connect your website directly to your business databases and notification systems.
+          Manually copying lead data, writing emails, and logging CRM updates drains productive hours. We develop webhook bridges and automated pipelines that link inputs with database targets instantly, triggering actions automatically.
         </p>
 
         <div class="features-grid">
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. CRM & Database Integrations</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. Custom Webhook Routers</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We link forms securely to databases (like Google Sheets API or Firebase Firestore). Lead data logs instantly, keeping your client roster synchronized.
+              We code secure webhook bridges that parse payload data from any lead source, formatting inputs for fast database updates.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. WhatsApp Booking Triggers</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. WhatsApp & Slack Triggers</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              Configure automatic text alerts. When a customer submits a request, your system pre-fills and structures details to start chats instantly.
+              Never miss a lead. Our automations dispatch SMS notifications, WhatsApp messages, and Slack team pings the second a customer interacts.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Autoresponder Sequences</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Two-Way Database Syncs</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We deploy clean email triggers (like EmailJS or custom SMTP mailer relays) that send instant, branded receipt confirmation emails to clients.
+              We build synchronization paths between Google Sheets, Firestore collections, Airtable bases, and HubSpot records. No double entry.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. Custom Admin Log Dashboards</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. AI-Powered Autoresponders</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              Manage and view all incoming leads, form completions, and alert logs in a unified, private dashboard structured specifically for quick lookup.
+              We connect OpenAI and Anthropic APIs to read client queries, classify urgency, draft custom replies, and queue them for staff approval.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>DELIVERY PROCESS</h2>
+        <span class="section-subtitle">How we build and launch your custom AI automations.</span>
+        <div class="grid-3col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">01 / WORKFLOW MAPPING & API AUDIT</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Logic Flow Diagram</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We map your operational touchpoints, check API documentations for your current software, and wireframe the automation routes.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">02 / PIPELINE INTEGRATION & CODING</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Webhook & Script Config</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We write webhook connectors, format JSON packages, configure API keys, and link your databases securely.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">03 / LIVE SIMULATION & QA CHECK</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Payload Testing</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We run simulated payloads, check failure handling routines, optimize trigger speed, and activate live pipelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>OUR INTEGRATION STACK</h2>
+        <span class="section-subtitle">We code using clean, stable, and fast technologies.</span>
+        <div class="grid-4col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Make.com API</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Zapier Connect</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">NodeJS / Python</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Firebase Firestore</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">OpenAI/Claude API</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Twilio / Meta API</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">HubSpot Webhooks</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Airtable API</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <span class="section-subtitle">Real answers to common questions about custom AI workflow automations.</span>
+        
+        <div class="faq-list" style="margin-top: var(--space-xl);">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How can AI workflow automations save my business time?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              By automating manual data entry, customer follow-ups, and notifications. For example, when a user fills a form, our integrations instantly update your CRM, generate a customized contract, send a Slack ping, and dispatch a WhatsApp confirmation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Do you integrate forms with Google Sheets and WhatsApp alerts?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes. We code custom webhook routers that write lead data to Google Sheets in real-time and send custom WhatsApp notifications using official Meta APIs or Twilio.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Are custom database connections secure?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes. We utilize standard SSL/TLS encryptions, secure environment variables (`.env`) for API keys, restrict database privileges to specific IPs, and implement rate limiters to secure connection sockets.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What systems can you automate (CRMs, email, notifications)?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We automate connection pipelines between CRMs (HubSpot, Salesforce, Pipedrive), messaging tools (Slack, Teams, WhatsApp, Telegram), email servers (Gmail, SendGrid), and databases (SQL, Firebase, Airtable).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How do we monitor database logs?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We build custom logging dashboards in Firestore or display log feeds on a protected dashboard page, letting you monitor API request statuses and track webhook performance.
+            </div>
           </div>
         </div>
       </div>
@@ -159,7 +365,7 @@
           <div>
             <h2 class="build-title">AUTOMATE WORK.</h2>
             <p class="build-desc">
-              Ready to stop copying lead numbers manually or set up automatic reminders? Let's design a custom database connection to streamline your operations.
+              Tired of copying data between Google Sheets, CRMs, and email? Let's build a clean, custom AI automation system to save your team 15+ hours every week.
             </p>
             <p class="build-response-time">
               Usually responds within 24 hours.
@@ -203,8 +409,8 @@
               </div>
               
               <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
-                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What is your target database or task to automate?</label>
-                <textarea id="lead-question" required rows="3" placeholder="e.g. When a lead is captured, save it to Google Sheets and open WhatsApp with formatted info." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
+                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Which systems do you need connected?</label>
+                <textarea id="lead-question" required rows="3" placeholder="e.g. Sync our contact form leads to HubSpot and send a notification to our team Slack." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
               </div>
               
               <button type="submit" class="pill-btn pill-btn-primary" style="margin-top: 8px; width: 100%; text-align: center; border-radius: 0; border: 2px solid var(--color-text-dark); cursor: pointer; display: block;">
@@ -317,6 +523,30 @@
           });
         });
       }
+
+      // FAQ Accordion Logic
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.faq-content');
+            if (content) content.style.maxHeight = null;
+            const trig = item.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+            const content = faqItem.querySelector('.faq-content');
+            if (content) content.style.maxHeight = content.scrollHeight + "px";
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
 
       // Country Code loader
       const countryCodeSelect = document.getElementById('lead-country-code');

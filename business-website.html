@@ -39,6 +39,56 @@
   }
   </script>
 
+  <!-- FAQ JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a custom business website cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our custom business website development packages start at $799. This covers custom design, multi-page layout configurations, lead capture integrations, on-page SEO, speed optimization, and responsive design wrapping."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between WordPress and custom React websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WordPress provides an easy-to-use content management system (CMS) that allows you to easily edit blog posts and page text. Custom React websites are built as static web apps that offer maximum loading speed, custom animations, and serverless database integration, but require coding to modify structural templates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a multi-page business website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On average, a standard 5-to-10 page custom business website takes 2 to 3 weeks to complete. This timeline includes layout design approval, clean front-end coding, mobile responsive adaptations, database integrations, and final quality checks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my new business website be search engine optimized (SEO)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. We implement on-page SEO foundations during coding: clean HTML5 semantic structure, optimised titles and meta descriptions, image compressions, fast caching, dynamic XML sitemaps, and structured JSON-LD schema."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I own my business website after it's built?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Unlike many agencies that lease sites or keep hosting keys hostage, you own 100% of the code, domain registrations, assets, database, and accounts. We set up all accounts directly under your name."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     .subpage-hero {
       padding: var(--space-4xl) 0 var(--space-2xl);
@@ -65,9 +115,54 @@
       gap: var(--space-lg);
       margin-top: var(--space-xl);
     }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+    }
+    .faq-item {
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .faq-trigger {
+      width: 100%;
+      padding: var(--space-md) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      padding-bottom: var(--space-md);
+    }
+    .faq-icon {
+      font-size: 0.7rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
     @media (max-width: 768px) {
-      .features-grid {
+      .features-grid, .grid-3col {
         grid-template-columns: 1fr;
+      }
+      .grid-4col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -147,6 +242,117 @@
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
               We structure headlines and section layouts around standard copywriting formulas that address visitor pain points, build trust, and drive conversions.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>DELIVERY PROCESS</h2>
+        <span class="section-subtitle">How we build your custom corporate website in 3 steps.</span>
+        <div class="grid-3col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">01 / ARCHITECTURE & WIREFRAME</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Visual Blueprint</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We outline your sitemap structure, conversion goals, and lead flow pipelines, presenting Figma wireframes for your approval before writing code.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">02 / PIXEL-PERFECT ENGINEERING</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Custom Code Build</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We hand-code your pages on a clean WordPress setup or React template. No heavy visual page builders. Just clean code for loading speed.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">03 / SEO SYNC & HANDOVER</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Launch & Indexing</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We optimize metadata tags, connect Google Search Console, compile XML sitemaps, and submit pages for indexing to launch on search results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>OUR TECH STACK</h2>
+        <span class="section-subtitle">We code using clean, stable, and fast technologies.</span>
+        <div class="grid-4col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">WordPress (Bespoke)</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">ReactJS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">HTML5 / Semantic CSS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Firebase Firestore</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Google Workspace APIs</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">EmailJS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Cloudflare CDN</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">JSON-LD Schema</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <span class="section-subtitle">Real answers to common questions about custom business websites.</span>
+        
+        <div class="faq-list" style="margin-top: var(--space-xl);">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How much does a custom business website cost?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Our custom business website development packages start at $799. This covers custom design, multi-page layout configurations, lead capture integrations, on-page SEO, speed optimization, and responsive design wrapping.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What is the difference between WordPress and custom React websites?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              WordPress provides an easy-to-use content management system (CMS) that allows you to easily edit blog posts and page text. Custom React websites are built as static web apps that offer maximum loading speed, custom animations, and serverless database integration, but require coding to modify structural templates.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How long does it take to build a multi-page business website?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              On average, a standard 5-to-10 page custom business website takes 2 to 3 weeks to complete. This timeline includes layout design approval, clean front-end coding, mobile responsive adaptations, database integrations, and final quality checks.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Will my new business website be search engine optimized (SEO)?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes, absolutely. We implement on-page SEO foundations during coding: clean HTML5 semantic structure, optimised titles and meta descriptions, image compressions, fast caching, dynamic XML sitemaps, and structured JSON-LD schema.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Do I own my business website after it's built?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes. Unlike many agencies that lease sites or keep hosting keys hostage, you own 100% of the code, domain registrations, assets, database, and accounts. We set up all accounts directly under your name.
+            </div>
           </div>
         </div>
       </div>
@@ -318,30 +524,42 @@
         });
       }
 
-      // Dynamic Country Code populator (major targets first)
+      // FAQ Accordion Logic
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.faq-content');
+            if (content) content.style.maxHeight = null;
+            const trig = item.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+            const content = faqItem.querySelector('.faq-content');
+            if (content) content.style.maxHeight = content.scrollHeight + "px";
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Country Code loader
       const countryCodeSelect = document.getElementById('lead-country-code');
       if (countryCodeSelect) {
         const countries = [
-          { code: '91', name: 'IN', label: 'India (+91)' },
-          { code: '1', name: 'US', label: 'United States (+1)' },
-          { code: '1', name: 'CA', label: 'Canada (+1)' },
-          { code: '44', name: 'GB', label: 'United Kingdom (+44)' },
-          { code: '61', name: 'AU', label: 'Australia (+61)' },
-          { code: '971', name: 'AE', label: 'UAE (+971)' },
-          { code: '65', name: 'SG', label: 'Singapore (+65)' },
-          { code: '33', name: 'FR', label: 'France (+33)' },
-          { code: '49', name: 'DE', label: 'Germany (+49)' },
-          { code: '81', name: 'JP', label: 'Japan (+81)' },
-          { code: '64', name: 'NZ', label: 'New Zealand (+64)' },
-          { code: '31', name: 'NL', label: 'Netherlands (+31)' },
-          { code: '39', name: 'IT', label: 'Italy (+39)' },
-          { code: '34', name: 'ES', label: 'Spain (+34)' },
-          { code: '41', name: 'CH', label: 'Switzerland (+41)' },
-          { code: '46', name: 'SE', label: 'Sweden (+46)' },
-          { code: '47', name: 'NO', label: 'Norway (+47)' },
-          { code: '353', name: 'IE', label: 'Ireland (+353)' }
+          { code: '91', name: 'IN' },
+          { code: '1', name: 'US' },
+          { code: '1', name: 'CA' },
+          { code: '44', name: 'GB' },
+          { code: '61', name: 'AU' },
+          { code: '971', name: 'AE' },
+          { code: '65', name: 'SG' }
         ];
-
         countryCodeSelect.innerHTML = '';
         countries.forEach(country => {
           const opt = document.createElement('option');

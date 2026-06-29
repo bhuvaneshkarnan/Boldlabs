@@ -39,6 +39,56 @@
   }
   </script>
 
+  <!-- FAQ JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is white-label web development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "White-label web development means we write the code, build the websites, and configure the systems for your clients, but we operate silently under your agency brand name. Your clients never see our name."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does your agency outsourcing retainer work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We operate on flexible weekly sprints or monthly hour blocks. You pass us Figma design handoffs or edit tickets, and our developers complete them within fixed turnaround times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you translate Figma files directly into WordPress or React code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in pixel-perfect conversions. We translate Figma layers, fonts, spacing, grids, and responsiveness specifications into lightweight, structured code."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you sign Non-Disclosure Agreements (NDAs)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, 100%. We sign standard company NDAs before receiving any project specifications, designs, or client credentials to guarantee complete confidentiality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we communicate during white-label development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We join your agency's Slack workspace, Teams workspace, or setup direct WhatsApp group channels to communicate directly with your project managers."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     .subpage-hero {
       padding: var(--space-4xl) 0 var(--space-2xl);
@@ -65,9 +115,54 @@
       gap: var(--space-lg);
       margin-top: var(--space-xl);
     }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+    }
+    .faq-item {
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .faq-trigger {
+      width: 100%;
+      padding: var(--space-md) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      padding-bottom: var(--space-md);
+    }
+    .faq-icon {
+      font-size: 0.7rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
     @media (max-width: 768px) {
-      .features-grid {
+      .features-grid, .grid-3col {
         grid-template-columns: 1fr;
+      }
+      .grid-4col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -147,6 +242,117 @@
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
               Whether you need one landing page coded this week or support for 5 business websites next month, our retainers adapt to your agency project pipeline.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>DELIVERY PROCESS</h2>
+        <span class="section-subtitle">How we partner with your team on development sprints.</span>
+        <div class="grid-3col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">01 / DESIGN HANDOVER & SCOPING</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Figma File Audit</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              You share the Figma mockups and asset folders. We audit the specs, layout parameters, and confirm delivery sprint timelines.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">02 / PIXEL-PERFECT CODING</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Visual Fidelity Build</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We code the pages on staging servers using your naming conventions. Every button state, typography choice, and hover effect is pixel matched.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">03 / QA SIGN-OFF & LAUNCH</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">White-Label Delivery</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We run speed checks, cross-browser tests, push the code to your repository, and transfer hosting configurations under your brand.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>OUR CODING EXPERTISE</h2>
+        <span class="section-subtitle">We build pixel-perfect interfaces using clean standards.</span>
+        <div class="grid-4col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">WordPress (Custom)</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">ReactJS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">HTML5 / Semantic CSS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Shopify Liquid</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Tailwind CSS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Git / GitHub</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Firebase / serverless</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">REST APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <span class="section-subtitle">Real answers to common questions about white-label web development services.</span>
+        
+        <div class="faq-list" style="margin-top: var(--space-xl);">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What is white-label web development?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              White-label web development means we write the code, build the websites, and configure the systems for your clients, but we operate silently under your agency brand name. Your clients never see our name.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How does your agency outsourcing retainer work?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We operate on flexible weekly sprints or monthly hour blocks. You pass us Figma design handoffs or edit tickets, and our developers complete them within fixed turnaround times.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Can you translate Figma files directly into WordPress or React code?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes, we specialize in pixel-perfect conversions. We translate Figma layers, fonts, spacing, grids, and responsiveness specifications into lightweight, structured code.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Do you sign Non-Disclosure Agreements (NDAs)?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes, 100%. We sign standard company NDAs before receiving any project specifications, designs, or client credentials to guarantee complete confidentiality.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How do we communicate during white-label development?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We join your agency's Slack workspace, Teams workspace, or setup direct WhatsApp group channels to communicate directly with your project managers.
+            </div>
           </div>
         </div>
       </div>
@@ -317,6 +523,30 @@
           });
         });
       }
+
+      // FAQ Accordion Logic
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.faq-content');
+            if (content) content.style.maxHeight = null;
+            const trig = item.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+            const content = faqItem.querySelector('.faq-content');
+            if (content) content.style.maxHeight = content.scrollHeight + "px";
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
 
       // Country Code loader
       const countryCodeSelect = document.getElementById('lead-country-code');

@@ -39,6 +39,56 @@
   }
   </script>
 
+  <!-- FAQ JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good conversion rate for a PPC landing page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A good conversion rate for a pay-per-click (PPC) landing page averages between 5% and 10%. However, our custom-engineered landing pages regularly achieve conversion rates of 12% to 20% by focusing on sub-second loading speeds, strong copywriting hierarchies, and clear call-to-actions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I use a custom landing page instead of my homepage for ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Homepages are designed for discovery and feature multiple links, which distracts paid traffic. Custom landing pages are built around a single conversion goal (e.g. book a call), removing unnecessary navigation links to keep the visitor focused on taking action."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a high-converting landing page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A high-converting custom landing page takes approximately 5 to 7 business days to design, code, connect to your CRM/databases, and launch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you integrate landing pages with CRMs (HubSpot, Mailchimp)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. We write custom integrations that push form submissions instantly to CRMs (like HubSpot, ActiveCampaign, or Mailchimp), databases (Google Sheets, Firestore), and trigger email notifications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes a landing page high-converting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "High conversion relies on sub-second loading times (preventing user bounce), clear headline layouts addressing the search query, strong visual trust symbols (reviews, testimonials), and simplified touch-optimized input forms."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     .subpage-hero {
       padding: var(--space-4xl) 0 var(--space-2xl);
@@ -65,9 +115,54 @@
       gap: var(--space-lg);
       margin-top: var(--space-xl);
     }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+    }
+    .faq-item {
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .faq-trigger {
+      width: 100%;
+      padding: var(--space-md) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      padding-bottom: var(--space-md);
+    }
+    .faq-icon {
+      font-size: 0.7rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
     @media (max-width: 768px) {
-      .features-grid {
+      .features-grid, .grid-3col {
         grid-template-columns: 1fr;
+      }
+      .grid-4col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -136,7 +231,7 @@
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Dynamic Text Insertion</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Dynamic Text Insertion</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
               We support landing page triggers that dynamically change the main headline based on the user's search query, matching search intent 100%.
             </p>
@@ -147,6 +242,117 @@
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
               Over 70% of paid ad clicks come from mobile. Our landing page code sets oversized inputs, simple drop-downs, and one-tap WhatsApp links.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>DELIVERY PROCESS</h2>
+        <span class="section-subtitle">How we build and launch your high-converting landing page.</span>
+        <div class="grid-3col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">01 / VALUE PROP & WIREFRAME</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Psychology Structure</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We study your ad angles and copy, creating a wireframe that handles consumer objections, places CTAs strategically, and builds authority.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">02 / LIGHTWEIGHT FRONT-END BUILD</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Sub-Second Coding</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We code the page using optimized markup (Tailwind, React, or custom HTML). Zero heavy scripts. Just blazing fast loading speeds.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">03 / INTEGRATIONS & PIXEL SYNC</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">CRM & Pixel Routing</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We connect your inputs to your CRM system, configure Meta/Google tracking pixels, and run form validation checks before launch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>OUR TECH STACK</h2>
+        <span class="section-subtitle">We code using clean, stable, and fast technologies.</span>
+        <div class="grid-4col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">ReactJS (NextJS)</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Tailwind CSS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">HTML5 / Semantic CSS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Firebase Firestore</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Google Workspace APIs</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">EmailJS</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Cloudflare CDN</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">JSON-LD Schema</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <span class="section-subtitle">Real answers to common questions about conversion-optimized landing pages.</span>
+        
+        <div class="faq-list" style="margin-top: var(--space-xl);">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What is a good conversion rate for a PPC landing page?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              A good conversion rate for a pay-per-click (PPC) landing page averages between 5% and 10%. However, our custom-engineered landing pages regularly achieve conversion rates of 12% to 20% by focusing on sub-second loading speeds, strong copywriting hierarchies, and clear call-to-actions.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Why should I use a custom landing page instead of my homepage for ads?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Homepages are designed for discovery and feature multiple links, which distracts paid traffic. Custom landing pages are built around a single conversion goal (e.g. book a call), removing unnecessary navigation links to keep the visitor focused on taking action.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How long does it take to build a high-converting landing page?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              A high-converting custom landing page takes approximately 5 to 7 business days to design, code, connect to your CRM/databases, and launch.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Do you integrate landing pages with CRMs (HubSpot, Mailchimp)?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes, absolutely. We write custom integrations that push form submissions instantly to CRMs (like HubSpot, ActiveCampaign, or Mailchimp), databases (Google Sheets, Firestore), and trigger email notifications.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What makes a landing page high-converting?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              High conversion relies on sub-second loading times (preventing user bounce), clear headline layouts addressing the search query, strong visual trust symbols (reviews, testimonials), and simplified touch-optimized input forms.
+            </div>
           </div>
         </div>
       </div>
@@ -317,6 +523,30 @@
           });
         });
       }
+
+      // FAQ Accordion Logic
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.faq-content');
+            if (content) content.style.maxHeight = null;
+            const trig = item.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+            const content = faqItem.querySelector('.faq-content');
+            if (content) content.style.maxHeight = content.scrollHeight + "px";
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
 
       // Country Code loader
       const countryCodeSelect = document.getElementById('lead-country-code');

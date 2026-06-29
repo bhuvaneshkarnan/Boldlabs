@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Maintenance & Monthly SEO Retainer Services — Boldlabs Studio</title>
-  <meta name="description" content="We provide WordPress care plans, monthly website maintenance, page speed monitoring, and active on-page local SEO optimization to keep your rankings growing.">
+  <title>Website Maintenance & Monthly Local SEO Support Plans — Boldlabs Studio</title>
+  <meta name="description" content="We maintain, monitor, and optimize your website monthly. Includes daily backups, server security updates, and local SEO optimizations. Cancel anytime.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 
@@ -13,8 +13,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Website Maintenance & Ongoing SEO Retainer",
-    "description": "Comprehensive monthly maintenance plans covering daily cloud backups, core software updates, speed optimization checks, and local search visibility upkeep.",
+    "name": "Website Maintenance & Local SEO Retainer",
+    "description": "Monthly website upkeep care plans covering cloud hosting, database backups, uptime monitoring, and search engine optimization updates.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Boldlabs Studio",
@@ -36,6 +36,56 @@
         }
       }
     }
+  }
+  </script>
+
+  <!-- FAQ JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is included in a monthly website maintenance care plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our monthly care package includes secure cloud hosting support, daily database backups, server firewall updates, uptime monitoring, minor content edits, and local search authority optimizations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do I need a website maintenance package?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Outdated platforms are vulnerable to malware attacks and database crashes. Regular updates prevent server glitches, security vulnerabilities, and ensure search engines trust your domain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What local SEO services are included in monthly retainers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each month we track local keyword rankings, optimize meta-data for new services, check for broken link errors, audit core web vitals, and update local schema structures to maintain search positions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do daily backups and recovery works?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We configure automated daily backups to cloud servers. If your website experiences database issues or server failures, we can restore your site files to a healthy state in under 30 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cancel my website support retainer anytime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Our monthly website retainer operates on a monthly rolling contract. There are no lock-in fees or cancel charges; you can cancel anytime."
+        }
+      }
+    ]
   }
   </script>
 
@@ -65,9 +115,54 @@
       gap: var(--space-lg);
       margin-top: var(--space-xl);
     }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+    }
+    .faq-item {
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .faq-trigger {
+      width: 100%;
+      padding: var(--space-md) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      padding-bottom: var(--space-md);
+    }
+    .faq-icon {
+      font-size: 0.7rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
     @media (max-width: 768px) {
-      .features-grid {
+      .features-grid, .grid-3col {
         grid-template-columns: 1fr;
+      }
+      .grid-4col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -107,7 +202,7 @@
         <a href="index.html" class="back-home">← Back to Home</a>
         <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: var(--space-sm);">MONTHLY CARE & SEO</h1>
         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
-          Your tech support and search ranking partner. We maintain your site speed, update core modules, perform cloud backups, and actively optimize local search rankings.
+          Continuous hosting upkeep, security updates, local authority building, keyword optimizations, and minor changes.
         </p>
       </div>
     </section>
@@ -115,38 +210,149 @@
     <!-- Details Section -->
     <section class="section">
       <div class="container">
-        <h2 style="margin-bottom: var(--space-md);">TECH UPKEEP + ACTIVE RANKINGS CARE</h2>
+        <h2 style="margin-bottom: var(--space-md);">UPKEEP, SECURITY & ORGANIC GROWTH Retainers</h2>
         <p style="color: var(--color-text-muted); line-height: 1.6; max-width: 800px;">
-          Launching a website is only the first step. Over time, code gets outdated, security holes emerge, and search relevance declines. Our monthly care retainer combines critical technical maintenance with ongoing, proactive SEO audits to drive organic bookings.
+          Launching a website is only the first step. To keep generating business, your site must remain secure, fast, and optimized for local search terms. We take care of hosting, database optimization, and SEO health auditing so you can focus on operations.
         </p>
 
         <div class="features-grid">
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. Proactive SEO Optimization</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. Daily Backups & Recovery</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We run monthly search audits, index validation checks, local schema tracking, and on-page content alignment to ensure your business stays at the top of Google searches.
+              We run automated daily backups stored in external cloud databases. If a crash or server failure happens, we restore operations immediately.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. Daily Backups & Cloud Sync</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. Active SEO Keyword Tracking</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              If your database gets corrupted or an edit breaks the layout, our automated daily restore points let us roll back to a fully operational state in seconds.
+              We audit your local organic search keyword rankings monthly, updating title tags and description tags to make sure you capture local search intent.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Core Security & Patch Monitoring</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Core Web Vitals Audits</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              We deploy automated vulnerability scanning, SSL management, database sanitization checks, and immediate patch deployment for WordPress files.
+              Search engines prioritize fast sites. We test and optimize database caches, images, and server response times to maintain green PageSpeed scores.
             </p>
           </div>
 
           <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
-            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. Content & Text Updates</h3>
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. Content Edits & Support</h3>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
-              Need to add a team portrait, modify prices, publish a blog entry, or update your calendar settings? Send a text and it gets updated within 24 hours.
+              Need a team photo changed, a price list updated, or a new location page added? Send a Slack message or email, and we make changes in 24 hours.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>DELIVERY PROCESS</h2>
+        <span class="section-subtitle">How we manage your website and SEO health month-to-month.</span>
+        <div class="grid-3col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">WEEK 1 / SECURITY & PLUGINS UPDATE</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Upkeep & Vulnerability Scan</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We run complete security updates, patch frameworks, optimize database tables, and clean redundant files to prevent site drag.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">WEEK 2 / LOCAL SEO AUDIT</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Metadata & Authority Track</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We analyze Search Console metrics, search ranking trends, audit local business schemas, and update local metadata tags.
+            </p>
+          </div>
+
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-lg); background: var(--color-bg-card);">
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-bottom: var(--space-sm);">WEEK 4 / HEALTH REPORT</div>
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; margin-bottom: var(--space-xs);">Uptime & Speed Audit</h4>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We verify server response times, audit mobile viewport stability, compile keyword ranking files, and send you the health log.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>OUR UPKEEP TOOLS</h2>
+        <span class="section-subtitle">We monitor and optimize using clean, stable, and fast technologies.</span>
+        <div class="grid-4col">
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Google Search Console</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">UptimeRobot</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Lighthouse Auditing</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Cloudflare CDN</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Ahrefs/Semrush APIs</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">AWS Backups</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Screaming Frog</div>
+          <div style="border: var(--border-width) solid var(--color-border); padding: var(--space-md); text-align: center; font-family: var(--font-mono); font-size: 0.75rem; background: var(--color-bg-card); text-transform: uppercase; font-weight: 700;">Google PageSpeed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="border-top: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <span class="section-subtitle">Real answers to common questions about monthly website maintenance and local SEO.</span>
+        
+        <div class="faq-list" style="margin-top: var(--space-xl);">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What is included in a monthly website maintenance care plan?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Our monthly care package includes secure cloud hosting support, daily database backups, server firewall updates, uptime monitoring, minor content edits, and local search authority optimizations.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Why do I need a website maintenance package?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Outdated platforms are vulnerable to malware attacks and database crashes. Regular updates prevent server glitches, security vulnerabilities, and ensure search engines trust your domain.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What local SEO services are included in monthly retainers?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Each month we track local keyword rankings, optimize meta-data for new services, check for broken link errors, audit core web vitals, and update local schema structures to maintain search positions.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How do daily backups and recovery works?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              We configure automated daily backups to cloud servers. If your website experiences database issues or server failures, we can restore your site files to a healthy state in under 30 minutes.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Can I cancel my website support retainer anytime?</span>
+              <span class="faq-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="faq-content">
+              Yes, absolutely. Our monthly website retainer operates on a monthly rolling contract. There are no lock-in fees or cancel charges; you can cancel anytime.
+            </div>
           </div>
         </div>
       </div>
@@ -157,9 +363,9 @@
       <div class="container">
         <div class="build-together-grid">
           <div>
-            <h2 class="build-title">PROTECT YOUR SITE.</h2>
+            <h2 class="build-title">PROTECT & GROW.</h2>
             <p class="build-desc">
-              Looking for a developer to manage updates, take daily cloud backups, and grow your local search engine rankings? Let's discuss your current site framework.
+              Have a website but no time to manage updates, security patches, backups, or search engine improvements? Let us handle maintenance retainers.
             </p>
             <p class="build-response-time">
               Usually responds within 24 hours.
@@ -203,8 +409,8 @@
               </div>
               
               <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
-                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What is your website platform and current issue?</label>
-                <textarea id="lead-question" required rows="3" placeholder="e.g. I have a WordPress website, and I need regular backup management, speed fixes, and SEO help." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
+                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What is your website domain and platform?</label>
+                <textarea id="lead-question" required rows="3" placeholder="e.g. My site is accountingfirm.com built on WordPress, and we want to monitor rankings." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
               </div>
               
               <button type="submit" class="pill-btn pill-btn-primary" style="margin-top: 8px; width: 100%; text-align: center; border-radius: 0; border: 2px solid var(--color-text-dark); cursor: pointer; display: block;">
@@ -318,6 +524,30 @@
         });
       }
 
+      // FAQ Accordion Logic
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const faqItem = trigger.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const content = item.querySelector('.faq-content');
+            if (content) content.style.maxHeight = null;
+            const trig = item.querySelector('.faq-trigger');
+            if (trig) trig.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            faqItem.classList.add('active');
+            const content = faqItem.querySelector('.faq-content');
+            if (content) content.style.maxHeight = content.scrollHeight + "px";
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
       // Country Code loader
       const countryCodeSelect = document.getElementById('lead-country-code');
       if (countryCodeSelect) {
@@ -425,7 +655,7 @@
 
             const statusMsg = document.getElementById('lead-status-msg');
             if (contactMethod === 'WhatsApp') {
-              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call for Website Maintenance & SEO.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
+              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call for Website Care and SEO Retainer.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber || '918870341570'}?text=${encodeURIComponent(whatsappText)}`;
               window.open(whatsappUrl, '_blank');
               if (statusMsg) {
