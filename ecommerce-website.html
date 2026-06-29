@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom E-Commerce Store Design & Dev (Shopify, WooCommerce) — Boldlabs Studio</title>
+  <meta name="description" content="We design and build fast, custom Shopify and WooCommerce e-commerce stores. Optimized for cart conversion, mobile shopping, and seamless checkout integrations.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Service JSON-LD Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom E-Commerce Store Development",
+    "description": "High-conversion Shopify and WooCommerce storefront designs, integrated payment gateways, product feeds, and speed-optimized checkout funnels.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Boldlabs Studio",
+      "image": "https://github.com/bhuvaneshkarnan/Boldlabs/raw/main/favicon.svg"
+    },
+    "areaServed": ["IN", "US", "GB", "CA"],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "999.00",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "999.00",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": "1",
+          "unitCode": "E84"
+        }
+      }
+    }
+  }
+  </script>
+
+  <style>
+    .subpage-hero {
+      padding: var(--space-4xl) 0 var(--space-2xl);
+      text-align: center;
+      position: relative;
+    }
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      transition: color var(--transition-normal);
+    }
+    .back-home:hover {
+      color: var(--color-text);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <a href="index.html#home" class="navbar-brand">Boldlabs Studio</a>
+    
+    <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
+      <span>MENU</span>
+      <span class="menu-icon">☰</span>
+    </button>
+    
+    <div class="nav-links" id="navbar-links-container">
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#services">Services</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#latest-drop">Missions</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#timeline">Timeline</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#player">Reviews</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#plans">Store</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#build-together">Book Call</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="container">
+        <a href="index.html" class="back-home">← Back to Home</a>
+        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: var(--space-sm);">E-COMMERCE STORES</h1>
+        <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
+          Custom-coded storefronts and theme modifications designed to accelerate checkout speed and convert traffic into sales.
+        </p>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="section">
+      <div class="container">
+        <h2 style="margin-bottom: var(--space-md);">MAXIMUM SPEED FOR DIGITAL TRANSACTIONS</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.6; max-width: 800px;">
+          For every 1-second delay in page load times, e-commerce conversion rates drop by 7%. We bypass clunky, default templates to construct streamlined shopping channels that focus on quick loading, fast checkouts, and trust cues.
+        </p>
+
+        <div class="features-grid">
+          <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">1. Shopify & WooCommerce Customization</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We write custom Liquid templates for Shopify and optimized PHP for WooCommerce, giving you bespoke visual layouts while retaining powerful admin dashboards.
+            </p>
+          </div>
+
+          <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">2. Mobile Cart Optimization</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              Our layouts feature sliding side-carts, sticky "Add to Cart" bars, and automated Apple Pay / Google Pay triggers that reduce checkout friction.
+            </p>
+          </div>
+
+          <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">3. Advanced Product Filters</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We deploy custom AJAX-based instant search and attribute filters, letting shoppers locate products instantly without page reloads.
+            </p>
+          </div>
+
+          <div class="service-card" style="min-height: auto; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card);">
+            <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">4. Product Schema Integration</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+              We embed full structured metadata (price, review stars, stock availability) so your products render with rich visual cards on Google Search results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Build Together Section -->
+    <section id="build-together" class="section build-together">
+      <div class="container">
+        <div class="build-together-grid">
+          <div>
+            <h2 class="build-title">BUILD YOUR STORE.</h2>
+            <p class="build-desc">
+              Ready to launch a new D2C store or migrate a slow WooCommerce setup to a fast custom template? Let's discuss your catalogs and product structures.
+            </p>
+            <p class="build-response-time">
+              Usually responds within 24 hours.
+            </p>
+          </div>
+          
+          <div class="lead-form-container">
+            <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: var(--space-md);">
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-name" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Name</label>
+                <input type="text" id="lead-name" required placeholder="Your Name" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0;">
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-email" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Email</label>
+                <input type="email" id="lead-email" required placeholder="you@domain.com" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0;">
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-whatsapp" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">WhatsApp Number</label>
+                <div style="display: flex; gap: var(--space-xs);">
+                  <select id="lead-country-code" required style="width: 110px; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%226 9 12 15 18 9%22></polyline></svg>'); background-repeat: no-repeat; background-position: right 8px center; background-size: 14px; box-sizing: border-box;">
+                    <option value="91">IN (+91)</option>
+                    <option value="1">CA (+1)</option>
+                    <option value="1">US (+1)</option>
+                    <option value="44">UK (+44)</option>
+                    <option value="61">AU (+61)</option>
+                    <option value="971">AE (+971)</option>
+                    <option value="65">SG (+65)</option>
+                  </select>
+                  <input type="tel" id="lead-whatsapp" required placeholder="99999 99999" pattern="[0-9\s-]{7,15}" style="flex: 1; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; box-sizing: border-box;">
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-contact-method" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">How should we contact you?</label>
+                <select id="lead-contact-method" required style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%226 9 12 15 18 9%22></polyline></svg>'); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;">
+                  <option value="WhatsApp">Contact me via WhatsApp</option>
+                  <option value="Email">Contact me via Email</option>
+                </select>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+                <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">What kind of online store/catalog do you have?</label>
+                <textarea id="lead-question" required rows="3" placeholder="e.g. I have 50 clothing products and want to build a clean custom Shopify template." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical;"></textarea>
+              </div>
+              
+              <button type="submit" class="pill-btn pill-btn-primary" style="margin-top: 8px; width: 100%; text-align: center; border-radius: 0; border: 2px solid var(--color-text-dark); cursor: pointer; display: block;">
+                SUBMIT REQUEST
+              </button>
+            </form>
+            <div id="lead-form-status" style="display: none; text-align: center; padding: var(--space-lg); font-family: var(--font-mono);">
+              <span style="font-family: var(--font-display); font-size: 1.1rem; color: #008000; display: block; margin-bottom: 8px;">REQUEST SUBMITTED.</span>
+              <p id="lead-status-msg" style="font-size: 0.8rem; color: var(--color-muted-light); line-height: 1.5;"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">Boldlabs Studio</div>
+          <p class="footer-tagline">Booking-first websites for service businesses.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#latest-drop">Case Studies</a></li>
+            <li><a href="index.html#timeline">Process</a></li>
+            <li><a href="index.html#player">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Trust -->
+        <div>
+          <h4 class="footer-col-title">Trust</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#player">Wall of Love</a></li>
+            <li><a href="index.html#latest-drop">Blog</a></li>
+            <li><a href="index.html#build-together">Contact</a></li>
+            <li><a href="index.html#build-together">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.6); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="container" style="padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <span>© 2026 Boldlabs Studio — Bhuvanesh. All rights reserved.</span>
+          <span style="font-family: var(--font-display); font-size: 0.7rem;">PROTAGONIST LOADED</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs & Config -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Navbar Toggle Logic
+      const menuToggleBtn = document.getElementById('menu-toggle-btn');
+      const navbarLinksContainer = document.getElementById('navbar-links-container');
+      const navbarEl = document.querySelector('.navbar');
+
+      if (menuToggleBtn && navbarLinksContainer) {
+        menuToggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+          menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+          navbarEl.classList.toggle('nav-open');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!navbarEl.contains(e.target)) {
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            navbarEl.classList.remove('nav-open');
+          }
+        });
+
+        const navLinks = navbarLinksContainer.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            navbarEl.classList.remove('nav-open');
+          });
+        });
+      }
+
+      // Country Code loader
+      const countryCodeSelect = document.getElementById('lead-country-code');
+      if (countryCodeSelect) {
+        const countries = [
+          { code: '91', name: 'IN' },
+          { code: '1', name: 'US' },
+          { code: '1', name: 'CA' },
+          { code: '44', name: 'GB' },
+          { code: '61', name: 'AU' },
+          { code: '971', name: 'AE' },
+          { code: '65', name: 'SG' }
+        ];
+        countryCodeSelect.innerHTML = '';
+        countries.forEach(country => {
+          const opt = document.createElement('option');
+          opt.value = country.code;
+          opt.textContent = `${country.name} (+${country.code})`;
+          countryCodeSelect.appendChild(opt);
+        });
+      }
+
+      // Lead Capture Form logic
+      const leadForm = document.getElementById('lead-capture-form');
+      const leadFormStatus = document.getElementById('lead-form-status');
+      
+      const isFirebaseConfigured = typeof firebaseConfig !== 'undefined' && firebaseConfig.apiKey !== "YOUR_API_KEY";
+      const isGoogleSheetConfigured = typeof firebaseConfig !== 'undefined' && firebaseConfig.googleSheetUrl;
+      const isEmailjsConfigured = typeof emailjsConfig !== 'undefined' && emailjsConfig.publicKey !== "YOUR_PUBLIC_KEY";
+
+      let db = null;
+      if (isFirebaseConfigured) {
+        if (!firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+        }
+        db = firebase.firestore();
+      }
+
+      if (leadForm && leadFormStatus) {
+        if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
+          emailjs.init(emailjsConfig.publicKey);
+        }
+
+        leadForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const name = document.getElementById('lead-name').value.trim();
+          const email = document.getElementById('lead-email').value.trim();
+          const countryCode = document.getElementById('lead-country-code').value;
+          const rawWhatsapp = document.getElementById('lead-whatsapp').value.trim();
+          const question = document.getElementById('lead-question').value.trim();
+          const contactMethod = document.getElementById('lead-contact-method').value;
+          const timestamp = new Date().toISOString();
+          
+          const cleanPhone = rawWhatsapp.replace(/[^0-9]/g, '');
+          const cleanWhatsappNumber = `${countryCode}${cleanPhone}`;
+          const leadWhatsappLink = `https://wa.me/${cleanWhatsappNumber}`;
+          const formattedWhatsapp = `+${countryCode} ${rawWhatsapp}`;
+
+          const leadData = {
+            name,
+            email,
+            whatsapp: formattedWhatsapp,
+            contactMethod,
+            question,
+            timestamp
+          };
+
+          try {
+            if (isFirebaseConfigured && db) {
+              await db.collection('leads').add({
+                ...leadData,
+                serverTimestamp: firebase.firestore.FieldValue.serverTimestamp()
+              });
+            } else {
+              const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
+              mockLeads.push(leadData);
+              localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
+            }
+
+            if (isGoogleSheetConfigured) {
+              const formData = new URLSearchParams();
+              formData.append('name', name);
+              formData.append('email', email);
+              formData.append('whatsapp', formattedWhatsapp);
+              formData.append('contactMethod', contactMethod);
+              formData.append('question', question);
+              
+              fetch(firebaseConfig.googleSheetUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData
+              });
+            }
+
+            if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
+              emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, {
+                lead_name: name,
+                lead_email: email,
+                lead_whatsapp: formattedWhatsapp,
+                lead_contact_method: contactMethod,
+                lead_question: question,
+                lead_whatsapp_link: leadWhatsappLink
+              });
+            }
+
+            const statusMsg = document.getElementById('lead-status-msg');
+            if (contactMethod === 'WhatsApp') {
+              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call for an E-Commerce Store.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
+              const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber || '918870341570'}?text=${encodeURIComponent(whatsappText)}`;
+              window.open(whatsappUrl, '_blank');
+              if (statusMsg) {
+                statusMsg.textContent = "We've opened a new window to chat directly on WhatsApp. Please send the pre-filled message to connect with us instantly.";
+              }
+            } else {
+              if (statusMsg) {
+                statusMsg.textContent = `A confirmation follow-up email has been sent to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
+              }
+            }
+
+            leadForm.style.display = 'none';
+            leadFormStatus.style.display = 'block';
+          } catch (error) {
+            console.error("Error capturing lead:", error);
+            alert("Error sending request. Please email directly to hello@boldlabs.studio");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
