@@ -11,7 +11,7 @@ const isEmailjsConfigured = emailjsConfig.publicKey && emailjsConfig.publicKey !
 
 // Backward compatibility configuration wrapper for subpages
 const firebaseConfig = {
-  googleSheetUrl: "https://script.google.com/macros/s/AKfycbxKjMNtXAiBRuvexb0FZBLry4Bp8BBIQluqb0Nqva0GTr4VbHikkEgfxrsYghVMRFfD/exec"
+  googleSheetUrl: "https://script.google.com/macros/s/AKfycbwcydc0H8I5mMe4tArzen3aISdo3cy85HRFoRKH790SMB86YaL6gEiqdByepQU4sLSc/exec"
 };
 
 // Google Sheets Web App URL (for index.html compatibility)
