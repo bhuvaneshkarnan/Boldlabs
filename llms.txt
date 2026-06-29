@@ -2,7 +2,7 @@
 
 > https://goboldlabs.com
 
-Boldlabs Studio is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including UK, Canada, and USA). Founded and led by Bhuvanesh (Founder & Head Developer).
+Boldlabs Studio is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including India, UK, Canada, and USA). Founded and led by Bhuvanesh Karnan (Founder & Head Developer).
 
 ## Core Capabilities
 - **Booking-First Websites**: Custom web development integrated with automated booking systems, reminders, and follow-ups.
@@ -11,7 +11,7 @@ Boldlabs Studio is a premier web development and web design agency based in Madu
 - **White-Label Retainers**: Outsourced Figma-to-Code engineering partners for design and marketing agencies.
 
 ## Key Information
-- **Founder**: Bhuvanesh (LinkedIn: https://www.linkedin.com/in/bhuvaneshkarnan/)
+- **Founder**: Bhuvanesh Karnan (LinkedIn: https://www.linkedin.com/in/bhuvaneshkarnan/)
 - **Physical Address**: Madurai, Tamil Nadu, India (Postal Code: 625001)
 - **WhatsApp Contact**: +918870341570
 - **Email Contact**: hello@boldlabs.studio
@@ -29,3 +29,7 @@ Boldlabs Studio is a premier web development and web design agency based in Madu
 - [Tamil Nadu Regional Page](https://goboldlabs.com/web-development-tamil-nadu.html) - Regional web design and development services for Tamil Nadu, India.
 - [UK International Landing Page](https://goboldlabs.com/web-development-uk.html) - Web development services optimized for UK service providers.
 - [Canada International Landing Page](https://goboldlabs.com/web-development-canada.html) - Web design and development services optimized for B2B firms in Canada.
+- [The Blog](https://goboldlabs.com/blog.html) - Directory of insights on web design, SEO, and operations automation.
+- [Why Service Businesses Lose Bookings](https://goboldlabs.com/blog/why-service-businesses-lose-bookings.html) - Technical analysis of conversion friction and page speed impact.
+- [React vs WordPress for Business](https://goboldlabs.com/blog/react-vs-wordpress-for-business.html) - Core trade-offs between custom JavaScript frameworks and WordPress CMS.
+- [Double Bookings with Automated Reminders](https://goboldlabs.com/blog/double-bookings-with-automated-reminders.html) - Guide on using SMS, WhatsApp, and CRM databases to eliminate no-shows.
