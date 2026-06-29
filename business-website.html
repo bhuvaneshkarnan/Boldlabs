@@ -437,9 +437,7 @@
           <div class="footer-logo">Boldlabs Studio</div>
           <p class="footer-tagline">Booking-first websites for service businesses.</p>
           <div class="footer-socials">
-            <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+            <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
@@ -486,9 +484,7 @@
     </div>
   </footer>
 
-  <!-- Firebase SDKs & Config -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <!-- Global Configurations -->
   <script src="firebase-config.js"></script>
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -573,17 +569,8 @@
       const leadForm = document.getElementById('lead-capture-form');
       const leadFormStatus = document.getElementById('lead-form-status');
       
-      const isFirebaseConfigured = typeof firebaseConfig !== 'undefined' && firebaseConfig.apiKey !== "YOUR_API_KEY";
       const isGoogleSheetConfigured = typeof firebaseConfig !== 'undefined' && firebaseConfig.googleSheetUrl;
       const isEmailjsConfigured = typeof emailjsConfig !== 'undefined' && emailjsConfig.publicKey !== "YOUR_PUBLIC_KEY";
-
-      let db = null;
-      if (isFirebaseConfigured) {
-        if (!firebase.apps.length) {
-          firebase.initializeApp(firebaseConfig);
-        }
-        db = firebase.firestore();
-      }
 
       if (leadForm && leadFormStatus) {
         if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
@@ -615,16 +602,9 @@
           };
 
           try {
-            if (isFirebaseConfigured && db) {
-              await db.collection('leads').add({
-                ...leadData,
-                serverTimestamp: firebase.firestore.FieldValue.serverTimestamp()
-              });
-            } else {
-              const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
-              mockLeads.push(leadData);
-              localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
-            }
+            const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
+            mockLeads.push(leadData);
+            localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
 
             if (isGoogleSheetConfigured) {
               const formData = new URLSearchParams();

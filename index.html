@@ -1120,9 +1120,7 @@
           <div class="footer-logo">Boldlabs Studio</div>
           <p class="footer-tagline">Booking-first websites for service businesses.</p>
           <div class="footer-socials">
-            <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+            <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
@@ -1169,9 +1167,7 @@
     </div>
   </footer>
 
-  <!-- Firebase SDKs & Config -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <!-- Global Configurations -->
   <script src="firebase-config.js"></script>
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -1354,20 +1350,11 @@
           };
           
           try {
-            if (isFirebaseConfigured && db) {
-              // Save to Firebase Firestore
-              await db.collection('leads').add({
-                ...leadData,
-                serverTimestamp: firebase.firestore.FieldValue.serverTimestamp()
-              });
-              console.log("Lead successfully written to Firebase Firestore.");
-            } else {
-              // Fallback to localStorage mock storage
-              const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
-              mockLeads.push(leadData);
-              localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
-              console.log("Saved lead locally to localStorage fallback.");
-            }
+            // Save lead locally to localStorage
+            const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
+            mockLeads.push(leadData);
+            localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
+            console.log("Saved lead locally to localStorage.");
 
             // Save to Google Sheets if configured
             if (isGoogleSheetConfigured) {
@@ -1398,7 +1385,7 @@
               await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdNotification, {
                 lead_name: name,
                 lead_email: email,
-                lead_whatsapp: whatsapp,
+                lead_whatsapp: formattedWhatsapp,
                 lead_contact_method: contactMethod,
                 lead_question: question,
                 lead_whatsapp_link: leadWhatsappLink
@@ -1419,7 +1406,7 @@
               console.log("Admin Notification:", {
                 lead_name: name,
                 lead_email: email,
-                lead_whatsapp: whatsapp,
+                lead_whatsapp: formattedWhatsapp,
                 lead_contact_method: contactMethod,
                 lead_question: question,
                 lead_whatsapp_link: leadWhatsappLink
@@ -1441,7 +1428,7 @@
 
 *Name*: ${name}
 *Email*: ${email}
-*WhatsApp*: ${whatsapp}
+*WhatsApp*: ${formattedWhatsapp}
 *What I need help with*: ${question}`;
 
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber}?text=${encodeURIComponent(whatsappText)}`;

@@ -1,32 +1,3 @@
-// Firebase configuration keys (Replace with your actual Firebase Project config)
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
-
-// Check if configuration has been updated from placeholders
-const isFirebaseConfigured = firebaseConfig.apiKey && firebaseConfig.apiKey !== "YOUR_API_KEY";
-
-let db = null;
-let auth = null;
-
-if (isFirebaseConfigured) {
-  try {
-    firebase.initializeApp(firebaseConfig);
-    db = firebase.firestore();
-    auth = firebase.auth();
-    console.log("Firebase initialized successfully.");
-  } catch (error) {
-    console.error("Firebase initialization failed:", error);
-  }
-} else {
-  console.warn("Firebase credentials are not set. Running in Local Mock Storage mode.");
-}
-
 // EmailJS configuration keys (Replace with your actual EmailJS credentials)
 const emailjsConfig = {
   publicKey: "YOUR_EMAILJS_PUBLIC_KEY",
@@ -38,8 +9,13 @@ const emailjsConfig = {
 
 const isEmailjsConfigured = emailjsConfig.publicKey && emailjsConfig.publicKey !== "YOUR_EMAILJS_PUBLIC_KEY";
 
-// Google Sheets Web App URL (Replace with your actual Google Apps Script URL)
-const googleSheetUrl = "https://script.google.com/macros/s/AKfycbxKjMNtXAiBRuvexb0FZBLry4Bp8BBIQluqb0Nqva0GTr4VbHikkEgfxrsYghVMRFfD/exec";
+// Backward compatibility configuration wrapper for subpages
+const firebaseConfig = {
+  googleSheetUrl: "https://script.google.com/macros/s/AKfycbxKjMNtXAiBRuvexb0FZBLry4Bp8BBIQluqb0Nqva0GTr4VbHikkEgfxrsYghVMRFfD/exec"
+};
+
+// Google Sheets Web App URL (for index.html compatibility)
+const googleSheetUrl = firebaseConfig.googleSheetUrl;
 
 const isGoogleSheetConfigured = googleSheetUrl && googleSheetUrl !== "YOUR_GOOGLE_SCRIPT_URL";
 
