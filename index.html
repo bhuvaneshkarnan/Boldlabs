@@ -1336,6 +1336,7 @@
           const cleanPhone = rawWhatsapp.replace(/[^0-9]/g, '');
           const cleanWhatsappNumber = `${countryCode}${cleanPhone}`;
           const leadWhatsappLink = `https://wa.me/${cleanWhatsappNumber}`;
+          const formattedWhatsapp = `+${countryCode} ${rawWhatsapp}`;
           
           const leadData = {
             name,
