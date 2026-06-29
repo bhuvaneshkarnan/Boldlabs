@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /meadadmin.html
+
+Sitemap: https://goboldlabs.com/sitemap.xml
