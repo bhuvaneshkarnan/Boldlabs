@@ -998,27 +998,32 @@ h3 {
 
 .build-together-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: var(--space-3xl);
-  align-items: center;
+  align-items: start;
 }
 
 .build-title {
   color: var(--color-text-dark);
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1;
-}
-
-.build-right {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-display);
+  text-transform: uppercase;
 }
 
 .build-desc {
   font-size: 1rem;
   color: var(--color-muted-light);
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.build-response-time {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-muted-light);
+  margin-bottom: var(--space-lg);
 }
 
 .build-buttons {
