@@ -988,6 +988,14 @@ h3 {
   border-top: none;
 }
 
+.lead-form-container {
+  border: 2px solid var(--color-text-dark);
+  padding: var(--space-lg);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  position: relative;
+}
+
 .build-together-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1391,6 +1399,49 @@ h3 {
 
   .numbers-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Lead form container padding optimization on mobile */
+  .lead-form-container {
+    padding: var(--space-md) var(--space-sm) !important;
+  }
+
+  /* Comparison table stacked layout on mobile screens */
+  .comparison-table,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tr {
+    padding: var(--space-md) 0;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .comparison-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .comparison-table td {
+    padding: var(--space-xs) 0 !important;
+    border-bottom: none;
+  }
+
+  .comparison-table td:first-child {
+    color: var(--color-text-muted);
+    font-size: 0.72rem;
+  }
+
+  .comparison-table td:last-child {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 0.75rem;
   }
 }
 
