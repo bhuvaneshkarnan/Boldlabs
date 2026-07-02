@@ -1524,6 +1524,22 @@
           opt.textContent = `${iso} (+${code}) — ${name}`;
           countrySelect.appendChild(opt);
         });
+        
+        // Auto-detect user's country code based on their IP
+        fetch('https://ipapi.co/json/')
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.country_code) {
+              const userIso = data.country_code;
+              for (let i = 0; i < countrySelect.options.length; i++) {
+                if (countrySelect.options[i].text.startsWith(userIso + " ")) {
+                  countrySelect.selectedIndex = i;
+                  break;
+                }
+              }
+            }
+          })
+          .catch(err => console.log('Location detection failed:', err));
       }
 
       // 5. Lead Capture Form Submission Handler
