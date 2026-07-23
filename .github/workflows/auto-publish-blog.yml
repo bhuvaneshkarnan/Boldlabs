@@ -1,0 +1,37 @@
+name: Auto Publish Scheduled Blogs
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  publish-blogs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run blog manager auto-publisher
+        run: python blog_manager.py
+
+      - name: Commit and push updated blog pages and sitemap
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog.html blog/ sitemap.xml llms.txt
+          if git diff --staged --quiet; then
+            echo "No new blog posts scheduled for release today."
+          else
+            git commit -m "chore(blog): auto-publish scheduled blog posts for $(date +'%Y-%m-%d')"
+            git push
+          fi
