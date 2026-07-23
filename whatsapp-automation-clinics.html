@@ -390,18 +390,42 @@
           </a>
         </div>
 
-        <!-- Terminal Chat Preview (Live Animated) -->
-        <div class="wa-terminal-card" id="wa-terminal-container" style="max-width: 650px; margin: var(--space-xl) auto 0; text-align: left; box-shadow: 4px 4px 0px #000000; overflow: hidden; contain: layout style;">
-          <div style="font-size: 0.75rem; color: #A7F3D0; text-transform: uppercase; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+        <!-- Terminal Chat Preview (Live Animated - 0 Reflow GPU Layer) -->
+        <div class="wa-terminal-card" id="wa-terminal-container" style="max-width: 650px; margin: var(--space-xl) auto 0; text-align: left; box-shadow: 4px 4px 0px #000000; overflow: hidden; contain: layout size style; transform: translateZ(0); will-change: transform; height: 320px; box-sizing: border-box; display: flex; flex-direction: column;">
+          <div style="font-size: 0.75rem; color: #A7F3D0; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 6px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; height: 26px; box-sizing: border-box; flex-shrink: 0;">
             <div style="display: flex; align-items: center; gap: 6px;">
               <span class="live-dot" style="width: 8px; height: 8px; background: #25D366; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #25D366; animation: pulse-green 1.5s infinite;"></span>
-              <span id="wa-status-header" style="font-weight: 700; letter-spacing: 0.05em; font-size: 0.7rem;">CLINIC WHATSAPP ENGINE ACTIVE · 24/7</span>
+              <span id="wa-status-header" style="font-weight: 700; letter-spacing: 0.05em; font-size: 0.7rem; color: #A7F3D0;">CLINIC WHATSAPP ENGINE ACTIVE · 24/7</span>
             </div>
             <span style="font-size: 0.6rem; background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px; color: #25D366; border: 1px solid #25D366; font-family: var(--font-mono); font-weight: 700;">● LIVE DEMO</span>
           </div>
           
-          <div id="wa-animated-chat-box" style="height: 275px; max-height: 275px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start; gap: 8px; box-sizing: border-box;">
-            <!-- Live interactive bubbles injected via JS -->
+          <div id="wa-animated-chat-box" style="height: 260px; max-height: 260px; min-height: 260px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; gap: 6px; box-sizing: border-box; flex-grow: 1;">
+            
+            <!-- Pre-rendered Static Bubble 1 -->
+            <div id="wa-bubble-1" class="wa-chat-bubble-patient" style="visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(4px); margin-bottom: 0;">
+              <span class="bubble-typing" style="display: none;"><strong>Patient:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></span>
+              <span class="bubble-text" style="display: none;"><strong>Patient:</strong> Hi, do you have an open slot for Dr. Sharma tomorrow afternoon? <span style="font-size: 0.65rem; color: #000000; opacity: 0.55; float: right; margin-left: 8px; font-weight: 500;">10:42 AM <span style="color: #34B7F1;">✓✓</span></span></span>
+            </div>
+
+            <!-- Pre-rendered Static Bubble 2 -->
+            <div id="wa-bubble-2" class="wa-chat-bubble-ai" style="visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(4px); margin-bottom: 0;">
+              <span class="bubble-typing" style="display: none;"><strong>Clinic AI:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></span>
+              <span class="bubble-text" style="display: none;"><strong>Clinic AI:</strong> Hello! 👋 Yes, Dr. Sharma has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Which time works best? <span style="font-size: 0.65rem; color: #000000; opacity: 0.55; float: right; margin-left: 8px; font-weight: 500;">10:42 AM <span style="color: #34B7F1;">✓✓</span></span></span>
+            </div>
+
+            <!-- Pre-rendered Static Bubble 3 -->
+            <div id="wa-bubble-3" class="wa-chat-bubble-patient" style="visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(4px); margin-bottom: 0;">
+              <span class="bubble-typing" style="display: none;"><strong>Patient:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></span>
+              <span class="bubble-text" style="display: none;"><strong>Patient:</strong> 2:30 PM please! <span style="font-size: 0.65rem; color: #000000; opacity: 0.55; float: right; margin-left: 8px; font-weight: 500;">10:43 AM <span style="color: #34B7F1;">✓✓</span></span></span>
+            </div>
+
+            <!-- Pre-rendered Static Bubble 4 -->
+            <div id="wa-bubble-4" class="wa-chat-bubble-ai" style="visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(4px); margin-bottom: 0;">
+              <span class="bubble-typing" style="display: none;"><strong>Clinic AI:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></span>
+              <span class="bubble-text" style="display: none;"><strong>Clinic AI:</strong> You're confirmed for <strong>Tomorrow at 2:30 PM</strong>! We've sent a location link & reminder. See you soon! 🎉 <span style="font-size: 0.65rem; color: #000000; opacity: 0.55; float: right; margin-left: 8px; font-weight: 500;">10:43 AM <span style="color: #34B7F1;">✓✓</span></span></span>
+            </div>
+
           </div>
         </div>
 
@@ -973,58 +997,64 @@
         });
       });
 
-      // Live Animated WhatsApp Chat Simulator
+      // Live Animated WhatsApp Chat Simulator (0 Reflow - Pre-rendered GPU Nodes)
       function initLiveWhatsAppChat() {
-        const container = document.getElementById('wa-animated-chat-box');
         const statusHeader = document.getElementById('wa-status-header');
-        if (!container) return;
+        const b1 = document.getElementById('wa-bubble-1');
+        const b2 = document.getElementById('wa-bubble-2');
+        const b3 = document.getElementById('wa-bubble-3');
+        const b4 = document.getElementById('wa-bubble-4');
 
-        const chatMessages = [
-          { sender: 'patient', label: 'Patient', text: 'Hi, do you have an open slot for Dr. Sharma tomorrow afternoon?', time: '10:42 AM', delay: 900 },
-          { sender: 'ai', label: 'Clinic AI', text: 'Hello! 👋 Yes, Dr. Sharma has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Which time works best for you?', time: '10:42 AM', delay: 1500 },
-          { sender: 'patient', label: 'Patient', text: '2:30 PM please!', time: '10:43 AM', delay: 900 },
-          { sender: 'ai', label: 'Clinic AI', text: "You're confirmed for <strong>Tomorrow at 2:30 PM</strong>! We've sent a location link & reminder. See you soon! 🎉", time: '10:43 AM', delay: 1800 }
+        if (!b1 || !b2 || !b3 || !b4) return;
+
+        const bubbles = [
+          { el: b1, label: 'PATIENT', typingDelay: 600, textDelay: 1000 },
+          { el: b2, label: 'CLINIC AI', typingDelay: 600, textDelay: 1500 },
+          { el: b3, label: 'PATIENT', typingDelay: 600, textDelay: 1000 },
+          { el: b4, label: 'CLINIC AI', typingDelay: 600, textDelay: 1800 }
         ];
 
+        function resetAll() {
+          bubbles.forEach(b => {
+            b.el.style.visibility = 'hidden';
+            b.el.style.opacity = '0';
+            b.el.style.transform = 'translateY(4px)';
+            const typingEl = b.el.querySelector('.bubble-typing');
+            const textEl = b.el.querySelector('.bubble-text');
+            if (typingEl) typingEl.style.display = 'none';
+            if (textEl) textEl.style.display = 'none';
+          });
+        }
+
         async function playSequence() {
-          container.innerHTML = '';
+          resetAll();
           if (statusHeader) statusHeader.textContent = 'CLINIC WHATSAPP ENGINE ACTIVE · 24/7';
 
-          for (let i = 0; i < chatMessages.length; i++) {
-            const msg = chatMessages[i];
-            
-            // 1. Render typing indicator
-            const typingBubble = document.createElement('div');
-            typingBubble.className = msg.sender === 'patient' ? 'wa-chat-bubble-patient' : 'wa-chat-bubble-ai';
-            typingBubble.style.opacity = '0';
-            typingBubble.style.transform = 'translateY(8px)';
-            typingBubble.style.transition = 'all 0.35s ease';
-            typingBubble.innerHTML = `<strong>${msg.label}:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>`;
-            container.appendChild(typingBubble);
-            
-            // Trigger smooth fade-in
-            requestAnimationFrame(() => {
-              typingBubble.style.opacity = '1';
-              typingBubble.style.transform = 'translateY(0)';
-            });
+          for (let i = 0; i < bubbles.length; i++) {
+            const item = bubbles[i];
+            const typingEl = item.el.querySelector('.bubble-typing');
+            const textEl = item.el.querySelector('.bubble-text');
 
-            if (statusHeader) {
-              statusHeader.textContent = `${msg.label.toUpperCase()} IS TYPING...`;
-            }
+            // 1. Reveal row & show typing indicator
+            item.el.style.visibility = 'visible';
+            item.el.style.opacity = '1';
+            item.el.style.transform = 'translateY(0)';
+            if (typingEl) typingEl.style.display = 'inline-block';
 
-            await new Promise(r => setTimeout(r, 700));
+            if (statusHeader) statusHeader.textContent = `${item.label} IS TYPING...`;
 
-            // 2. Update to message content
-            typingBubble.innerHTML = `<strong>${msg.label}:</strong> ${msg.text} <span style="font-size: 0.65rem; color: #000000; opacity: 0.55; float: right; margin-left: 10px; font-weight: 500;">${msg.time} <span style="color: #34B7F1;">✓✓</span></span>`;
+            await new Promise(r => setTimeout(r, item.typingDelay));
 
-            if (statusHeader) {
-              statusHeader.textContent = 'CLINIC WHATSAPP ENGINE ACTIVE · 24/7';
-            }
+            // 2. Hide typing & reveal message text
+            if (typingEl) typingEl.style.display = 'none';
+            if (textEl) textEl.style.display = 'inline-block';
 
-            await new Promise(r => setTimeout(r, msg.delay));
+            if (statusHeader) statusHeader.textContent = 'CLINIC WHATSAPP ENGINE ACTIVE · 24/7';
+
+            await new Promise(r => setTimeout(r, item.textDelay));
           }
 
-          // Pause for 5 seconds at the end of the conversation before looping
+          // Hold for 5 seconds at the end then restart
           await new Promise(r => setTimeout(r, 5000));
           playSequence();
         }
