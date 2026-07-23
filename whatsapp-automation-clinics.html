@@ -180,20 +180,35 @@
     }
 
     .service-card {
+      min-height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      gap: 12px !important;
       background: #FFFFFF !important;
       border: 1.5px solid var(--color-text-dark) !important;
       color: var(--color-text-dark) !important;
       box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.06);
+      padding: 24px !important;
+    }
+
+    .service-card > div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .service-card h3 {
       color: var(--color-text-dark) !important;
       font-family: 'Space Grotesk', 'Outfit', sans-serif !important;
       font-weight: 700 !important;
+      margin-top: 6px !important;
+      margin-bottom: 6px !important;
     }
 
     .service-card p {
       color: #334155 !important;
+      margin: 0 !important;
     }
 
     /* Dark Section Overrides */
