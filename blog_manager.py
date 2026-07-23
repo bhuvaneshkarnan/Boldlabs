@@ -1040,6 +1040,12 @@ sitemap_base = """<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://goboldlabs.com/whatsapp-automation-clinics.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://goboldlabs.com/white-label-agencies.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -1131,6 +1137,7 @@ Boldlabs Studio is a premier web development and web design agency based in Madu
 - [Custom E-Commerce Stores](https://goboldlabs.com/ecommerce-website.html) - Shopify and WooCommerce custom design and checkout optimization.
 - [Website Maintenance & Care](https://goboldlabs.com/monthly-care.html) - Daily backups, security updates, and monthly SEO maintenance retainer.
 - [AI automations & CRM Integration](https://goboldlabs.com/ai-automations.html) - Workflow pipelines using Make, Zapier, and Python to automate lead tracking.
+- [Clinic WhatsApp Automation](https://goboldlabs.com/whatsapp-automation-clinics.html) - 24/7 AI WhatsApp receptionist for medical clinics: instant replies, AI booking flow, auto confirmations, reminders, and 5-star Google review collection.
 - [White-Label Agency Retainers](https://goboldlabs.com/white-label-agencies.html) - Figma-to-code partnership program for agencies with 24-48h turnarounds.
 - [Madurai Local Landing Page](https://goboldlabs.com/web-development-madurai.html) - Web development services customized for local businesses in Madurai, India.
 - [Tamil Nadu Regional Page](https://goboldlabs.com/web-development-tamil-nadu.html) - Regional web design and development services for Tamil Nadu, India.
@@ -1161,6 +1168,7 @@ submit_urls = [
     "https://goboldlabs.com/ecommerce-website.html",
     "https://goboldlabs.com/monthly-care.html",
     "https://goboldlabs.com/ai-automations.html",
+    "https://goboldlabs.com/whatsapp-automation-clinics.html",
     "https://goboldlabs.com/white-label-agencies.html",
     "https://goboldlabs.com/web-development-madurai.html",
     "https://goboldlabs.com/web-development-tamil-nadu.html",

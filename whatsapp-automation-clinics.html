@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R792DJ9GDG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R792DJ9GDG');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinic WhatsApp Automation — Never Miss A Patient Again | Boldlabs Studio</title>
+  <meta name="description" content="WhatsApp automation offer for clinics: 24/7 AI booking flow, instant replies, 24h & 2h appointment reminders, missed call recovery, and automated Google review requests.">
+  <link rel="canonical" href="https://goboldlabs.com/whatsapp-automation-clinics.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Google Fonts Preconnect and Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goboldlabs.com/whatsapp-automation-clinics.html">
+  <meta property="og:title" content="Clinic WhatsApp Automation — Never Miss A Patient Again | Boldlabs Studio">
+  <meta property="og:description" content="24/7 AI WhatsApp receptionist for medical clinics: instant replies, AI booking flow, auto reminders, and 5-star Google review collection.">
+  <meta property="og:image" content="https://goboldlabs.com/shakanksh_portrait.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://goboldlabs.com/whatsapp-automation-clinics.html">
+  <meta property="twitter:title" content="Clinic WhatsApp Automation — Never Miss A Patient Again | Boldlabs Studio">
+  <meta property="twitter:description" content="24/7 AI WhatsApp receptionist for medical clinics: instant replies, AI booking flow, auto reminders, and 5-star Google review collection.">
+  <meta property="twitter:image" content="https://goboldlabs.com/shakanksh_portrait.png">
+
+  <!-- Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Clinic WhatsApp Automation System",
+    "serviceType": "Medical Clinic Booking & Patient Retention Automation",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Boldlabs Studio",
+      "url": "https://goboldlabs.com"
+    },
+    "description": "WhatsApp automation offer for medical clinics: 24/7 AI booking flow, instant replies, 24h & 2h appointment reminders, missed call recovery, and automated Google review requests.",
+    "areaServed": ["India", "United States", "United Kingdom", "Canada", "Australia"]
+  }
+  </script>
+
+  <style>
+    .subpage-hero {
+      padding: var(--space-4xl) 0 var(--space-2xl);
+      text-align: center;
+      position: relative;
+    }
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      transition: color var(--transition-normal);
+    }
+    .back-home:hover {
+      color: var(--color-text);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    /* WhatsApp Accent Styles inside Site Design System */
+    .wa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border: 1.5px solid var(--color-text-dark);
+      background-color: #DCF8C6;
+      color: #075E54;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+    }
+
+    .wa-tag-pill {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #25D366;
+      background: #075E54;
+      padding: 2px 8px;
+      display: inline-block;
+      text-transform: uppercase;
+      margin-top: var(--space-xs);
+    }
+
+    .wa-terminal-card {
+      border: 2px solid var(--color-text-dark);
+      background: #075E54;
+      color: #FFFFFF;
+      padding: var(--space-md);
+      font-family: var(--font-mono);
+      max-width: 520px;
+      margin: var(--space-xl) auto 0;
+      text-align: left;
+      box-shadow: 4px 4px 0px #000000;
+    }
+
+    .wa-chat-bubble-patient {
+      background: #DCF8C6;
+      color: #000000;
+      padding: 8px 12px;
+      border-radius: 0;
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      border: 1px solid #000000;
+      max-width: 85%;
+      margin-left: auto;
+    }
+
+    .wa-chat-bubble-ai {
+      background: #FFFFFF;
+      color: #000000;
+      padding: 8px 12px;
+      border-radius: 0;
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      border: 1px solid #000000;
+      max-width: 85%;
+    }
+
+    /* Price Frame Comparison Table */
+    .price-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      margin-top: var(--space-lg);
+      border: 2px solid var(--color-text-dark);
+    }
+
+    .price-matrix th, .price-matrix td {
+      padding: 12px 16px;
+      border: 1.5px solid var(--color-text-dark);
+      text-align: left;
+    }
+
+    .price-matrix th {
+      background: var(--color-text-dark);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    .price-matrix tr:nth-child(even) {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .price-matrix .highlight-col {
+      background: #F0FDF4;
+      font-weight: 700;
+      color: #075E54;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid, .grid-3col, .grid-2col {
+        grid-template-columns: 1fr;
+      }
+      .price-matrix {
+        font-size: 0.75rem;
+      }
+      .price-matrix th, .price-matrix td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <a href="index.html#home" class="navbar-brand">Boldlabs Studio</a>
+    
+    <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
+      <span>MENU</span>
+      <span class="menu-icon">☰</span>
+    </button>
+    
+    <div class="nav-links" id="navbar-links-container">
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#services">Services</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#latest-drop">Missions</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="index.html#plans">Package</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="blog.html">Blog</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#build-together" class="pill-btn pill-btn-primary" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 0; background: #25D366; color: #000000; border: 1.5px solid #000000;">DEMO CLINIC AI</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="container">
+        <a href="index.html" class="back-home">← Back to Home</a>
+        <div>
+          <span class="wa-badge">💬 WhatsApp Automation Offer for Clinics — Boldlabs</span>
+        </div>
+        
+        <h1 style="font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: var(--space-xs); text-transform: uppercase;">
+          NEVER MISS A PATIENT AGAIN
+        </h1>
+        <p style="color: var(--color-text-muted); max-width: 680px; margin: 0 auto; font-size: 0.95rem; font-family: var(--font-mono); line-height: 1.6;">
+          Stop losing patients to slow replies. Replace missed phone calls and delayed responses with a 24/7 AI WhatsApp receptionist.
+        </p>
+
+        <div style="margin-top: var(--space-lg); display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <a href="#build-together" class="pill-btn pill-btn-primary" style="border-radius: 0; background: #25D366; color: #000000; border: 2px solid #000000; font-weight: 700;">
+            CLAIM CLINIC DEMO →
+          </a>
+          <a href="https://wa.me/918870341570?text=Hi%20Boldlabs%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20Demo." target="_blank" class="pill-btn" style="border-radius: 0; border: 2px solid var(--color-text-dark);">
+            TEST CHAT DEMO
+          </a>
+        </div>
+
+        <!-- Terminal Chat Preview -->
+        <div class="wa-terminal-card">
+          <div style="font-size: 0.7rem; color: #A7F3D0; text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 6px;">
+            ● CLINIC WHATSAPP ENGINE ACTIVE · 24/7 RESPONSE
+          </div>
+          
+          <div class="wa-chat-bubble-patient">
+            <strong>Patient:</strong> Hi, do you have an open slot for Dr. Sharma tomorrow afternoon?
+          </div>
+          
+          <div class="wa-chat-bubble-ai">
+            <strong>Clinic AI:</strong> Hello! 👋 Yes, Dr. Sharma has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Which time works best for you?
+          </div>
+
+          <div class="wa-chat-bubble-patient">
+            <strong>Patient:</strong> 2:30 PM please!
+          </div>
+
+          <div class="wa-chat-bubble-ai">
+            <strong>Clinic AI:</strong> You're confirmed for <strong>Tomorrow at 2:30 PM</strong>! We've sent a location link & reminder. See you soon! 🎉
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Positioning Line Banner -->
+    <section class="section" style="background-color: #075E54; color: #FFFFFF; border-top: var(--border-width) solid var(--color-border); border-bottom: var(--border-width) solid var(--color-border); text-align: center; padding: var(--space-lg) 0;">
+      <div class="container">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #25D366; display: block; margin-bottom: 4px;">Positioning Line</span>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin: 0; text-transform: uppercase; color: #FFFFFF;">
+          STOP LOSING PATIENTS TO SLOW REPLIES.
+        </h2>
+      </div>
+    </section>
+
+    <!-- Core Stack Section -->
+    <section class="section">
+      <div class="container">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 4px;">The Offer</span>
+        <h2 style="font-size: 1.6rem; text-transform: uppercase; margin-bottom: var(--space-xs);">CORE STACK</h2>
+        <p style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.85rem; max-width: 700px;">
+          5 automated patient booking and retention systems built directly into your clinic's WhatsApp account.
+        </p>
+
+        <div class="features-grid">
+          
+          <!-- Core 1 -->
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.8rem; display: block; margin-bottom: var(--space-xs);">⚡</span>
+              <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Instant 24/7 Reply</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+                Instant reply to every WhatsApp message, day or night, so no patient goes cold or leaves for a competing clinic.
+              </p>
+            </div>
+            <span class="wa-tag-pill">● 24/7 ACTIVE</span>
+          </div>
+
+          <!-- Core 2 -->
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.8rem; display: block; margin-bottom: var(--space-xs);">🤖</span>
+              <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Friendly AI Booking Flow</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+                Natural AI dialogue that feels like texting a real clinic receptionist—not a rigid or frustrating keyword bot.
+              </p>
+            </div>
+            <span class="wa-tag-pill">● RECEPTIONIST FLOW</span>
+          </div>
+
+          <!-- Core 3 -->
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.8rem; display: block; margin-bottom: var(--space-xs);">✅</span>
+              <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Auto Confirmation</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+                Instant WhatsApp confirmation dispatch the moment a patient books, complete with clinic location and preparation notes.
+              </p>
+            </div>
+            <span class="wa-tag-pill">● INSTANT DISPATCH</span>
+          </div>
+
+          <!-- Core 4 -->
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.8rem; display: block; margin-bottom: var(--space-xs);">⏰</span>
+              <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">24h & 2h Reminders</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+                Dual automated reminders sent 24 hours and 2 hours before the appointment to kill clinic no-shows completely.
+              </p>
+            </div>
+            <span class="wa-tag-pill">● NO-SHOW KILLER</span>
+          </div>
+
+          <!-- Core 5 -->
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.8rem; display: block; margin-bottom: var(--space-xs);">⭐</span>
+              <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Automated Review Requests</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+                Post visit review request sent automatically after check-out to consistently build your 5-star Google Reviews.
+              </p>
+            </div>
+            <span class="wa-tag-pill">● GOOGLE REPUTATION</span>
+          </div>
+
+          <!-- Summary Card -->
+          <div class="service-card" style="padding: var(--space-lg); border: 2px solid #000000; background: #075E54; color: #FFFFFF; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.8rem; display: block; margin-bottom: var(--space-xs);">🏥</span>
+              <h3 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: var(--space-xs); text-transform: uppercase; color: #FFFFFF;">Setup In 48 Hours</h3>
+              <p style="font-size: 0.8rem; color: #E2E8F0; line-height: 1.6;">
+                We configure your entire clinic flow, connect your WhatsApp Business account, and train your AI assistant.
+              </p>
+            </div>
+            <a href="#build-together" class="pill-btn" style="background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; text-align: center; margin-top: 8px;">GET STARTED →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus Stack Section -->
+    <section class="section" style="background-color: var(--color-bg-light); border-top: var(--border-width) solid var(--color-border); border-bottom: var(--border-width) solid var(--color-border);">
+      <div class="container">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 4px;">Included Free</span>
+        <h2 style="font-size: 1.6rem; text-transform: uppercase; margin-bottom: var(--space-xs);">BONUS STACK</h2>
+        <p style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.85rem;">
+          Extra automation modules included with your clinic package.
+        </p>
+
+        <div class="grid-3col">
+          
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: #FFFFFF;">
+            <span style="font-size: 1.6rem; display: block; margin-bottom: var(--space-xs);">🔄</span>
+            <h3 style="font-family: var(--font-display); font-size: 0.9rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Reschedule Handling</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+              Reschedule handling built in. Patients can just reply directly to their reminder to change time without staff intervention.
+            </p>
+          </div>
+
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: #FFFFFF;">
+            <span style="font-size: 1.6rem; display: block; margin-bottom: var(--space-xs);">📞</span>
+            <h3 style="font-family: var(--font-display); font-size: 0.9rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Missed Call Follow-Up</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+              Missed call to WhatsApp follow up, so old leads and missed phone calls get pulled right back into your booking calendar.
+            </p>
+          </div>
+
+          <div class="service-card" style="padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: #FFFFFF;">
+            <span style="font-size: 1.6rem; display: block; margin-bottom: var(--space-xs);">📊</span>
+            <h3 style="font-family: var(--font-display); font-size: 0.9rem; margin-bottom: var(--space-xs); text-transform: uppercase;">Monthly Intelligence Report</h3>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6;">
+              Monthly report showing messages answered, bookings made, and no-shows saved so you track your ROI down to the exact dollar.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Frame Section -->
+    <section class="section">
+      <div class="container">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 4px;">Price Frame</span>
+        <h2 style="font-size: 1.6rem; text-transform: uppercase; margin-bottom: var(--space-xs);">SAY THE MATH OUT LOUD</h2>
+        <p style="color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.85rem; max-width: 750px;">
+          Anchor against the cost of a receptionist. One receptionist costs far more per month and only works office hours. This system works 24/7 for a fraction of that.
+        </p>
+
+        <table class="price-matrix">
+          <thead>
+            <tr>
+              <th>Comparison Metric</th>
+              <th>Human Receptionist</th>
+              <th style="background: #075E54; color: #25D366;">Boldlabs WhatsApp AI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monthly Cost</strong></td>
+              <td style="color: #DC2626;">$2,500 – $3,500 / month</td>
+              <td class="highlight-col">Fraction of receptionist salary</td>
+            </tr>
+            <tr>
+              <td><strong>Operating Hours</strong></td>
+              <td>Office hours only (8 hrs/day)</td>
+              <td class="highlight-col">24/7/365 (Day & Night)</td>
+            </tr>
+            <tr>
+              <td><strong>Response Latency</strong></td>
+              <td>10 – 60 minutes</td>
+              <td class="highlight-col">Instant (under 3 seconds)</td>
+            </tr>
+            <tr>
+              <td><strong>After-Hours Inquiries</strong></td>
+              <td>Missed until next morning</td>
+              <td class="highlight-col">Booked automatically</td>
+            </tr>
+            <tr>
+              <td><strong>Reminders & Follow-Ups</strong></td>
+              <td>Manual (often forgotten)</td>
+              <td class="highlight-col">Automated 24h & 2h reminders</td>
+            </tr>
+            <tr>
+              <td><strong>Google Review Pipeline</strong></td>
+              <td>Inconsistent oral requests</td>
+              <td class="highlight-col">100% automated post-visit</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="section" style="background-color: var(--color-bg-light); border-top: var(--border-width) solid var(--color-border); border-bottom: var(--border-width) solid var(--color-border); text-align: center;">
+      <div class="container" style="max-width: 650px;">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 4px;">Risk-Free Policy</span>
+        <h2 style="font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin-bottom: var(--space-sm);">
+          THE GUARANTEE
+        </h2>
+        <p style="font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.7; color: var(--color-text-dark);">
+          Month to month, no contract, cancel anytime. No lock-in fear, you only stay because it works.
+        </p>
+      </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="build-together" class="section section-light" style="background-color: var(--color-bg-light); color: var(--color-text-dark); border-top: 1px dashed rgba(0,0,0,0.15);">
+      <div class="container" style="max-width: 600px;">
+        <span class="section-subtitle" style="color: var(--color-muted-light); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: var(--space-xs); font-family: var(--font-mono); text-align: center;">Ready to stop losing patients?</span>
+        <h2 class="build-title" style="text-align: center; margin-bottom: var(--space-xs); font-size: 2rem; font-family: var(--font-display);">CLAIM CLINIC DEMO</h2>
+        <p class="build-desc" style="text-align: center; color: var(--color-muted-light); margin-bottom: var(--space-lg); font-size: 0.85rem; font-family: var(--font-mono);">
+          Tell Bhuvanesh about your clinic practice. We'll set up your customized WhatsApp AI receptionist flow.
+        </p>
+
+        <!-- Capture Form -->
+        <form id="lead-capture-form" style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <label for="lead-name" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Doctor / Manager Name</label>
+            <input type="text" id="lead-name" required placeholder="e.g. Dr. Rajesh Sharma" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; box-sizing: border-box;">
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <label for="lead-email" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Clinic Email Address</label>
+            <input type="email" id="lead-email" required placeholder="e.g. clinic@example.com" style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; box-sizing: border-box;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <label for="lead-whatsapp" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">WhatsApp Number</label>
+            <div style="display: flex; gap: var(--space-xs);">
+              <select id="lead-country-code" aria-label="Country Code" required style="width: 110px; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; cursor: pointer; box-sizing: border-box;">
+                <!-- Initialized in JS -->
+              </select>
+              <input type="tel" id="lead-whatsapp" required placeholder="99999 99999" pattern="[0-9\s-]{7,15}" style="flex: 1; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; box-sizing: border-box;">
+            </div>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <label for="lead-contact-method" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Preferred Contact Method</label>
+            <select id="lead-contact-method" aria-label="Contact Method" required style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; cursor: pointer;">
+              <option value="WhatsApp">Contact me via WhatsApp</option>
+              <option value="Email">Contact me via Email</option>
+            </select>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: var(--space-xs);">
+            <label for="lead-question" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Clinic Specialty & Daily Patient Volume</label>
+            <textarea id="lead-question" required rows="3" placeholder="e.g. Dental Clinic in Madurai, 15-20 patients daily." style="width: 100%; padding: 12px; border: 1.5px solid var(--color-text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #ffffff; color: #000000; outline: none; border-radius: 0; resize: vertical; box-sizing: border-box;"></textarea>
+          </div>
+          
+          <button type="submit" class="pill-btn pill-btn-primary" style="margin-top: 8px; width: 100%; text-align: center; border-radius: 0; border: 2px solid var(--color-text-dark); background: #25D366; color: #000000; cursor: pointer; display: block; font-weight: 700;">
+            REQUEST CLINIC DEMO NOW
+          </button>
+        </form>
+        <div id="lead-form-status" style="display: none; text-align: center; padding: var(--space-lg); font-family: var(--font-mono);">
+          <span style="font-family: var(--font-display); font-size: 1.1rem; color: #008000; display: block; margin-bottom: 8px;">REQUEST SUBMITTED.</span>
+          <p id="lead-status-msg" style="font-size: 0.8rem; line-height: 1.5; color: var(--color-text-dark); max-width: 500px; margin: 0 auto;">
+            Thank you! Your request has been sent. Bhuvanesh will get back to you shortly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">Boldlabs Studio</div>
+          <p class="footer-tagline">Booking-first websites & WhatsApp automation for clinics.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" title="Bhuvanesh Karnan on LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="whatsapp-automation-clinics.html">Clinic WhatsApp</a></li>
+            <li><a href="index.html#latest-drop">Case Studies</a></li>
+            <li><a href="index.html#timeline">Process</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Trust -->
+        <div>
+          <h3 class="footer-col-title">Trust</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#player">Wall of Love</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#build-together">Contact</a></li>
+            <li><a href="#build-together">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h3 class="footer-col-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="container" style="padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <span>© 2026 Boldlabs Studio — Bhuvanesh. All rights reserved.</span>
+          <span style="font-family: var(--font-display); font-size: 0.7rem; color: #075E54;">CLINIC WHATSAPP ENGINE ACTIVE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Configurations -->
+  <script src="firebase-config.js" defer></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+
+  <!-- Interactive Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile navigation menu toggle
+      const toggleBtn = document.getElementById('menu-toggle-btn');
+      const linksContainer = document.getElementById('navbar-links-container');
+      
+      if (toggleBtn && linksContainer) {
+        toggleBtn.addEventListener('click', () => {
+          const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', !expanded);
+          linksContainer.classList.toggle('active');
+        });
+      }
+
+      // Initialize country codes in select element
+      const countryCodeSelect = document.getElementById('lead-country-code');
+      if (countryCodeSelect) {
+        const rawCountries = "91:IN:India,1:US:USA,1:CA:Canada,44:GB:UK,61:AU:Australia,971:AE:UAE,65:SG:Singapore";
+        countryCodeSelect.innerHTML = '';
+        rawCountries.split(',').forEach(c => {
+          const [code, iso, name] = c.split(':');
+          const opt = document.createElement('option');
+          opt.value = code;
+          opt.textContent = `${iso} (+${code})`;
+          countryCodeSelect.appendChild(opt);
+        });
+
+        // IP location auto-select
+        fetch('https://ipapi.co/json/')
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.country_calling_code) {
+              const userCode = data.country_calling_code.replace('+', '');
+              const matchedOpt = Array.from(countryCodeSelect.options).find(opt => opt.value === userCode);
+              if (matchedOpt) {
+                countryCodeSelect.value = userCode;
+              }
+            }
+          })
+          .catch(err => console.log('IP location fallback active'));
+      }
+
+      // Contact form submit logic
+      const leadForm = document.getElementById('lead-capture-form');
+      const leadFormStatus = document.getElementById('lead-form-status');
+      
+      const isGoogleSheetConfigured = typeof firebaseConfig !== 'undefined' && firebaseConfig.googleSheetUrl;
+
+      if (leadForm && leadFormStatus) {
+        leadForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const name = document.getElementById('lead-name').value.trim();
+          const email = document.getElementById('lead-email').value.trim();
+          const countryCode = document.getElementById('lead-country-code').value;
+          const rawWhatsapp = document.getElementById('lead-whatsapp').value.trim();
+          const question = document.getElementById('lead-question').value.trim();
+          const contactMethod = document.getElementById('lead-contact-method').value;
+          const timestamp = new Date().toISOString();
+          
+          const cleanPhone = rawWhatsapp.replace(/[^0-9]/g, '');
+          const formattedWhatsapp = `'+${countryCode} ${rawWhatsapp}`;
+
+          const leadData = {
+            name,
+            email,
+            whatsapp: formattedWhatsapp,
+            contactMethod,
+            question,
+            sourcePage: 'Clinic WhatsApp Automation Offer',
+            timestamp
+          };
+
+          try {
+            // Save lead locally to localStorage
+            const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
+            mockLeads.push(leadData);
+            localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
+
+            // Save to Google Sheets
+            if (isGoogleSheetConfigured) {
+              const formData = new URLSearchParams();
+              formData.append('name', name);
+              formData.append('email', email);
+              formData.append('whatsapp', formattedWhatsapp);
+              formData.append('contactMethod', contactMethod);
+              formData.append('question', question);
+              formData.append('sourcePage', 'Clinic WhatsApp Automation Offer');
+              
+              try {
+                await fetch(firebaseConfig.googleSheetUrl, {
+                  method: 'POST',
+                  mode: 'no-cors',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: formData.toString()
+                });
+                console.log("Lead successfully dispatched to Google Sheets Apps Script.");
+              } catch (err) {
+                console.error("Error dispatching to Google Sheets:", err);
+              }
+            }
+
+            const statusMsg = document.getElementById('lead-status-msg');
+            if (contactMethod === 'WhatsApp') {
+              const whatsappText = `Hi Boldlabs Studio, I would like to request a demo for the Clinic WhatsApp Automation offer.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: +${countryCode} ${rawWhatsapp}\n*Clinic Details*: ${question}`;
+              const whatsappUrl = `https://wa.me/918870341570?text=${encodeURIComponent(whatsappText)}`;
+              window.open(whatsappUrl, '_blank');
+              if (statusMsg) {
+                statusMsg.textContent = "Thank you! We've opened a new window to chat on WhatsApp. Please send the pre-filled message!";
+              }
+            } else {
+              if (statusMsg) {
+                statusMsg.textContent = `Thank you! Your request has been sent, and a confirmation email has been dispatched to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
+              }
+            }
+
+            leadForm.style.display = 'none';
+            leadFormStatus.style.display = 'block';
+          } catch (error) {
+            console.error("Error capturing lead:", error);
+            alert("Error sending request. Please email directly to bhuvanesh@goboldlabs.com");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
