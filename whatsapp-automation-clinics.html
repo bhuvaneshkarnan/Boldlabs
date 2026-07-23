@@ -55,7 +55,7 @@
 
   <style>
     .subpage-hero {
-      padding: var(--space-4xl) 0 var(--space-2xl);
+      padding: 24px 0 var(--space-xl) !important;
       text-align: center;
       position: relative;
     }
@@ -502,7 +502,7 @@
           <tbody>
             <tr>
               <td><strong>Monthly Cost</strong></td>
-              <td style="color: #DC2626;">$2,500 – $3,500 / month</td>
+              <td id="receptionist-cost-cell" style="color: #DC2626; font-weight: 700;">$2,500 – $3,500 / month</td>
               <td class="highlight-col">Fraction of receptionist salary</td>
             </tr>
             <tr>
@@ -697,7 +697,7 @@
           countryCodeSelect.appendChild(opt);
         });
 
-        // IP location auto-select
+        // IP location auto-select & dynamic INR/USD currency updater
         fetch('https://ipapi.co/json/')
           .then(res => res.json())
           .then(data => {
@@ -706,6 +706,16 @@
               const matchedOpt = Array.from(countryCodeSelect.options).find(opt => opt.value === userCode);
               if (matchedOpt) {
                 countryCodeSelect.value = userCode;
+              }
+            }
+
+            // Dynamic Currency Switch: INR for India, USD for International
+            const receptionistCostEl = document.getElementById('receptionist-cost-cell');
+            if (receptionistCostEl) {
+              if (data && (data.country_code === 'IN' || data.country_name === 'India')) {
+                receptionistCostEl.textContent = '₹25,000 – ₹35,000 / month';
+              } else {
+                receptionistCostEl.textContent = '$2,500 – $3,500 / month';
               }
             }
           })
