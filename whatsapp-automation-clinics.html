@@ -269,10 +269,13 @@
       .wa-terminal-card {
         padding: 14px 10px !important;
         margin-top: 16px !important;
+        height: 385px !important;
+        min-height: 385px !important;
       }
       #wa-animated-chat-box {
-        height: 290px !important;
-        max-height: 290px !important;
+        height: 330px !important;
+        max-height: 330px !important;
+        min-height: 330px !important;
         gap: 6px !important;
       }
       .wa-chat-bubble-patient, .wa-chat-bubble-ai {
@@ -391,7 +394,7 @@
         </div>
 
         <!-- Terminal Chat Preview (Live Animated - 0 Reflow GPU Layer) -->
-        <div class="wa-terminal-card" id="wa-terminal-container" style="max-width: 650px; margin: var(--space-xl) auto 0; text-align: left; box-shadow: 4px 4px 0px #000000; overflow: hidden; contain: layout size style; transform: translateZ(0); will-change: transform; min-height: 330px; box-sizing: border-box; display: flex; flex-direction: column;">
+        <div class="wa-terminal-card" id="wa-terminal-container" style="max-width: 650px; margin: var(--space-xl) auto 0; text-align: left; box-shadow: 4px 4px 0px #000000; overflow: hidden; contain: layout size style; transform: translateZ(0); will-change: transform; min-height: 380px; height: 380px; box-sizing: border-box; display: flex; flex-direction: column;">
           <div style="font-size: 0.75rem; color: #A7F3D0; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 8px; width: 100%; box-sizing: border-box; flex-shrink: 0;">
             <div style="display: flex; align-items: center; gap: 6px; flex: 1; min-width: 0; overflow: hidden;">
               <span class="live-dot" style="width: 8px; height: 8px; background: #25D366; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #25D366; animation: pulse-green 1.5s infinite; flex-shrink: 0;"></span>
@@ -400,7 +403,7 @@
             <span style="font-size: 0.6rem; background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px; color: #25D366; border: 1px solid #25D366; font-family: var(--font-mono); font-weight: 700; flex-shrink: 0; white-space: nowrap;">● LIVE DEMO</span>
           </div>
           
-          <div id="wa-animated-chat-box" style="height: 260px; max-height: 260px; min-height: 260px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; gap: 6px; box-sizing: border-box; flex-grow: 1;">
+          <div id="wa-animated-chat-box" style="height: 320px; max-height: 320px; min-height: 320px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; gap: 6px; box-sizing: border-box; flex-grow: 1;">
             
             <!-- Pre-rendered Static Bubble 1 -->
             <div id="wa-bubble-1" class="wa-chat-bubble-patient" style="visibility: hidden; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(4px); margin-bottom: 0;">
