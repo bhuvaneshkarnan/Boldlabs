@@ -89,19 +89,29 @@
   }
   </script>
 
+  <!-- Regional Geo-Targeting (hreflang) -->
+  <link rel="alternate" hreflang="x-default" href="https://goboldlabs.com/">
+  <link rel="alternate" hreflang="en-IN" href="https://goboldlabs.com/web-development-madurai.html">
+  <link rel="alternate" hreflang="en-GB" href="https://goboldlabs.com/web-development-uk.html">
+  <link rel="alternate" hreflang="en-CA" href="https://goboldlabs.com/web-development-canada.html">
+
   <!-- Organization & Person Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://goboldlabs.com/#organization",
     "name": "Boldlabs Studio",
     "url": "https://goboldlabs.com",
     "logo": "https://goboldlabs.com/favicon.svg",
     "founder": {
       "@type": "Person",
+      "@id": "https://goboldlabs.com/#founder",
       "name": "Bhuvanesh Karnan",
       "jobTitle": "Founder & Head Developer",
-      "sameAs": "https://www.linkedin.com/in/bhuvaneshkarnan/"
+      "sameAs": [
+        "https://www.linkedin.com/in/bhuvaneshkarnan/"
+      ]
     },
     "sameAs": [
       "https://www.linkedin.com/in/bhuvaneshkarnan/"
