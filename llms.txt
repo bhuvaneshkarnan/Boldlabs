@@ -19,17 +19,17 @@ Boldlabs Studio is a premier web development and web design agency based in Madu
 
 ## Navigation & Page Index
 - [Homepage](https://goboldlabs.com/) - Overview of services, stats (31+ service businesses served), interactive developer card, pricing, and consultation booking.
-- [Custom Business Websites](https://goboldlabs.com/business-website/) - Custom React and WordPress development with local SEO and speed optimizations.
-- [High-Converting Landing Pages](https://goboldlabs.com/landing-page/) - Single-page funnels optimized for Google/Facebook Ads.
-- [Custom E-Commerce Stores](https://goboldlabs.com/ecommerce-website/) - Shopify and WooCommerce custom design and checkout optimization.
-- [Website Maintenance & Care](https://goboldlabs.com/monthly-care/) - Daily backups, security updates, and monthly SEO maintenance retainer.
-- [AI automations & CRM Integration](https://goboldlabs.com/ai-automations/) - Workflow pipelines using Make, Zapier, and Python to automate lead tracking.
-- [Clinic WhatsApp Appointment Booking Automation](https://goboldlabs.com/whatsapp-automation-clinics/) - Complete 24/7 AI WhatsApp receptionist system for medical clinics, dental practices, and healthcare providers: instant automated patient replies, interactive booking flows, 24h & 2h no-show reminders, missed-call recovery, and automated 5-star Google review collection.
-- [White-Label Agency Retainers](https://goboldlabs.com/white-label-agencies/) - Figma-to-code partnership program for agencies with 24-48h turnarounds.
-- [Madurai Local Landing Page](https://goboldlabs.com/web-development-madurai/) - Web development services customized for local businesses in Madurai, India.
-- [Tamil Nadu Regional Page](https://goboldlabs.com/web-development-tamil-nadu/) - Regional web design and development services for Tamil Nadu, India.
-- [UK International Landing Page](https://goboldlabs.com/web-development-uk/) - Web development services optimized for UK service providers.
-- [Canada International Landing Page](https://goboldlabs.com/web-development-canada/) - Web design and development services optimized for B2B firms in Canada.
+- [Custom Business Websites](https://goboldlabs.com/business-website.html) - Custom React and WordPress development with local SEO and speed optimizations.
+- [High-Converting Landing Pages](https://goboldlabs.com/landing-page.html) - Single-page funnels optimized for Google/Facebook Ads.
+- [Custom E-Commerce Stores](https://goboldlabs.com/ecommerce-website.html) - Shopify and WooCommerce custom design and checkout optimization.
+- [Website Maintenance & Care](https://goboldlabs.com/monthly-care.html) - Daily backups, security updates, and monthly SEO maintenance retainer.
+- [AI automations & CRM Integration](https://goboldlabs.com/ai-automations.html) - Workflow pipelines using Make, Zapier, and Python to automate lead tracking.
+- [Clinic WhatsApp Automation](https://goboldlabs.com/whatsapp-automation-clinics.html) - 24/7 AI WhatsApp receptionist for medical clinics: instant replies, AI booking flow, auto confirmations, reminders, and 5-star Google review collection.
+- [White-Label Agency Retainers](https://goboldlabs.com/white-label-agencies.html) - Figma-to-code partnership program for agencies with 24-48h turnarounds.
+- [Madurai Local Landing Page](https://goboldlabs.com/web-development-madurai.html) - Web development services customized for local businesses in Madurai, India.
+- [Tamil Nadu Regional Page](https://goboldlabs.com/web-development-tamil-nadu.html) - Regional web design and development services for Tamil Nadu, India.
+- [UK International Landing Page](https://goboldlabs.com/web-development-uk.html) - Web development services optimized for UK service providers.
+- [Canada International Landing Page](https://goboldlabs.com/web-development-canada.html) - Web design and development services optimized for B2B firms in Canada.
 - [The Blog](https://goboldlabs.com/blog.html) - Directory of insights on web design, SEO, and operations automation.
 - [How to Handle Negative Google Reviews Professionally](https://goboldlabs.com/blog/handling-negative-google-reviews.html) - I received a 1-star review from a difficult client. How does this affect my ranking?...
 - [Should I Create Separate Pages for Different Cities?](https://goboldlabs.com/blog/service-area-pages-vs-local-seo.html) - I service 5 surrounding cities. Should I make 5 different pages?...
