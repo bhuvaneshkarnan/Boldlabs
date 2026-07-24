@@ -341,6 +341,25 @@
       0%, 80%, 100% { transform: translateY(0); }
       40% { transform: translateY(-4px); }
     }
+
+    /* Scroll Reveal Animations */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+    .delay-4 { transition-delay: 0.32s; }
+    .delay-5 { transition-delay: 0.40s; }
   </style>
 </head>
 <body>
@@ -1066,6 +1085,30 @@
       }
 
       initLiveWhatsAppChat();
+
+      // IntersectionObserver for Smooth Scroll Reveal Animations
+      const scrollObserverOptions = {
+        root: null,
+        rootMargin: '0px 0px -30px 0px',
+        threshold: 0.05
+      };
+
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, scrollObserverOptions);
+
+      document.querySelectorAll('.reveal-on-scroll, .service-card, .faq-item, .price-matrix').forEach((el, index) => {
+        el.classList.add('reveal-on-scroll');
+        if (!el.style.transitionDelay) {
+          el.style.transitionDelay = `${(index % 4) * 0.09}s`;
+        }
+        scrollObserver.observe(el);
+      });
 
       // Contact form submit logic
       const leadForm = document.getElementById('lead-capture-form');
