@@ -206,7 +206,43 @@ h3 {
   font-size: 0.9rem;
   border: var(--border-width) solid var(--color-text);
   transition: transform var(--transition-normal), background-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: 0;
+}
+
+.hero-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  .hero-cta-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-cta-wrapper .hero-cta-btn {
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-wa-float {
+    bottom: 12px !important;
+    right: 12px !important;
+    padding: 8px 12px !important;
+    font-size: 0.72rem !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+  }
 }
 
 .hero-cta-btn:hover {
