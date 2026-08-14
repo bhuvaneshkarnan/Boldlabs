@@ -767,13 +767,13 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(100%) contrast(110%);
-  transition: filter var(--transition-normal), transform var(--transition-slow);
+  filter: none !important;
+  transition: transform var(--transition-normal);
 }
 
 .latest-drop-dashboard:hover .dashboard-visual img {
-  filter: grayscale(0%) contrast(100%);
-  transform: scale(1.04);
+  filter: none !important;
+  transform: scale(1.02);
 }
 
 .case-study-placeholder {
