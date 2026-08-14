@@ -78,16 +78,16 @@ a {
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.96);
-  border: 1.5px solid rgba(0, 0, 0, 0.15);
-  border-radius: 50px;
-  padding: 14px 34px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 40px;
+  padding: 10px 26px;
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   z-index: 1000;
   color: var(--color-text-dark);
-  font-size: 0.85rem;
-  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.35);
+  font-size: 0.78rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   width: max-content;
   max-width: 95%;
@@ -100,14 +100,14 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .navbar a {
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  font-size: 0.78rem;
   transition: opacity var(--transition-normal);
   white-space: nowrap;
 }
@@ -118,7 +118,7 @@ a {
 
 .navbar-brand {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -127,7 +127,7 @@ a {
 }
 
 .navbar-brand img {
-  height: 46px !important;
+  height: 36px !important;
   width: auto !important;
   display: block;
 }
