@@ -933,9 +933,12 @@ h3 {
 }
 
 .feature-check {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-text);
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  color: #25D366;
+  font-weight: 800;
+  font-family: var(--font-mono);
 }
 
 .pricing-btn {
