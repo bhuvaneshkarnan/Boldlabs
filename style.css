@@ -137,11 +137,31 @@ a {
   user-select: none;
 }
 
-/* --- Typography & Headings --- */
-h1, h2, h3, h4, .font-display {
+/* --- Typography & Headings System --- */
+body, button, input, select, textarea {
   font-family: var(--font-display);
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-display, .hero-title, .section-header h2, .subpage-hero h1,
+.footer-logo, .footer-col-title, .navbar-brand,
+.plan-name, .service-title, .dashboard-title, .sidebar-title,
+.timeline-stage-title, .build-title, .faq-question {
+  font-family: var(--font-display) !important;
+  font-weight: 800 !important;
   text-transform: uppercase;
-  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.navbar a, .nav-links a, .nav-toggle {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+.pill-btn, .btn, .hero-cta-btn, .service-cta-btn, .pricing-btn, .sidebar-btn, .footer-links a {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
 }
 
 h1 {
@@ -159,7 +179,7 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* --- Layout Container & Sections --- */
