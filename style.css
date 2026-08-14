@@ -897,8 +897,10 @@ h3 {
 }
 
 .plan-name {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
 }
 
 .plan-price {
