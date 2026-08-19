@@ -1344,21 +1344,23 @@
       
       // 1. Interactive Card Deck Swapping
       const deck = document.getElementById('player-deck');
-      const cards = Array.from(deck.children);
-      
-      cards.forEach(card => {
-        card.addEventListener('click', () => {
-          if (card.classList.contains('active-card')) return;
-          
-          // Remove active state from all cards
-          cards.forEach(c => {
-            c.classList.remove('active-card');
+      if (deck) {
+        const cards = Array.from(deck.children);
+        
+        cards.forEach(card => {
+          card.addEventListener('click', () => {
+            if (card.classList.contains('active-card')) return;
+            
+            // Remove active state from all cards
+            cards.forEach(c => {
+              c.classList.remove('active-card');
+            });
+            
+            // Make the clicked card active
+            card.classList.add('active-card');
           });
-          
-          // Make the clicked card active
-          card.classList.add('active-card');
         });
-      });
+      }
 
       // 2. FAQ Accordion Trigger
       const faqTriggers = document.querySelectorAll('.faq-trigger');
