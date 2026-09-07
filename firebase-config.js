@@ -4,7 +4,7 @@ const emailjsConfig = {
   serviceId: "YOUR_EMAILJS_SERVICE_ID",
   templateIdNotification: "YOUR_NOTIFICATION_TEMPLATE_ID", // Notification sent to you
   templateIdAutoresponder: "YOUR_AUTORESPONDER_TEMPLATE_ID", // Confirmation sent to client
-  yourWhatsappNumber: "918870341570" // Your business WhatsApp number (with country code, no spaces/plus)
+  yourWhatsappNumber: "919514925790" // Your business WhatsApp demo number (with country code, no spaces/plus)
 };
 
 const isEmailjsConfigured = emailjsConfig.publicKey && emailjsConfig.publicKey !== "YOUR_EMAILJS_PUBLIC_KEY";
