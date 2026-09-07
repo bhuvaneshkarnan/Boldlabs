@@ -2188,18 +2188,19 @@ h3 {
 
 .growth-card {
   border: var(--border-width) solid var(--color-border);
-  padding: var(--space-xl);
+  padding: 32px;
   background: var(--color-bg-card);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .growth-card:hover {
   transform: translateY(-4px);
   border-color: #25D366;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.08);
 }
 
 .grid-2col {
@@ -2208,9 +2209,677 @@ h3 {
   gap: var(--space-lg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .grid-2col {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   VISUAL PRODUCT SHOWCASE & UI MOCKUPS (NO TEXT-HEAVY BOXES)
+   ========================================================================== */
+
+/* --- UI Mockup Frame (Mac/App Style) --- */
+.ui-mockup-frame {
+  background: #090D0B;
+  border: 1px solid #1E2923;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(37, 211, 102, 0.1);
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  box-sizing: border-box;
+}
+
+.ui-mockup-header {
+  background: #111814;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1E2923;
+}
+
+.ui-mockup-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.ui-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.ui-dot-red { background: #EF4444; }
+.ui-dot-yellow { background: #F59E0B; }
+.ui-dot-green { background: #10B981; }
+
+.ui-mockup-title {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ui-mockup-status {
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  font-weight: 700;
+}
+
+.ui-mockup-body {
+  padding: 16px;
+  background: #060907;
+}
+
+/* --- Engine 01: Mini WhatsApp Dialogue Mockup --- */
+.wa-snippet-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wa-msg {
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  border-radius: 6px;
+  position: relative;
+  max-width: 90%;
+}
+
+.wa-msg-in {
+  background: #1E2923;
+  color: #E2E8F0;
+  align-self: flex-start;
+  border-left: 3px solid #64748B;
+}
+
+.wa-msg-out {
+  background: #064E3B;
+  color: #ECFDF5;
+  align-self: flex-end;
+  border-right: 3px solid #25D366;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.wa-msg-time {
+  font-size: 0.62rem;
+  opacity: 0.6;
+  float: right;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.wa-quick-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.wa-action-pill {
+  font-size: 0.7rem;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid #25D366;
+  color: #25D366;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.wa-speed-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* --- Engine 02: Google Calendar Mockup --- */
+.calendar-preview-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.calendar-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #1E2923;
+  color: #94A3B8;
+  font-size: 0.7rem;
+}
+
+.calendar-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed #1E2923;
+}
+
+.calendar-slot-row.active-slot {
+  background: rgba(37, 211, 102, 0.08);
+  border: 1px solid #25D366;
+}
+
+.calendar-time {
+  font-size: 0.72rem;
+  color: #64748B;
+  min-width: 55px;
+  font-weight: 600;
+}
+
+.calendar-event-card {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-event-title {
+  color: #F8FAFC;
+  font-weight: 700;
+  font-size: 0.76rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.calendar-badge-locked {
+  font-size: 0.62rem;
+  background: #25D366;
+  color: #000000;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.calendar-sync-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  color: #25D366;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #1E2923;
+}
+
+/* --- Engine 03: Smartphone Lockscreen & Reminder Mockup --- */
+.phone-notif-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone-notif-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #26332B;
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.74rem;
+}
+
+.phone-notif-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.notif-phone { background: rgba(239, 68, 68, 0.2); color: #EF4444; }
+.notif-wa { background: rgba(37, 211, 102, 0.2); color: #25D366; }
+.notif-remind { background: rgba(59, 130, 246, 0.2); color: #60A5FA; }
+
+.phone-notif-text {
+  flex: 1;
+}
+
+.phone-notif-title {
+  color: #F8FAFC;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone-notif-sub {
+  color: #94A3B8;
+  font-size: 0.7rem;
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.phone-action-btns {
+  display: flex;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.phone-pill-btn {
+  font-size: 0.65rem;
+  background: rgba(37, 211, 102, 0.12);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* --- Engine 04: Google Review Card & Maps Mockup --- */
+.gmaps-card-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gmaps-clinic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gmaps-rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #FBBF24;
+  font-weight: 700;
+}
+
+.gmaps-review-snippet {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1E2923;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: #CBD5E1;
+}
+
+.gmaps-patient-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+.gmaps-recall-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(37, 211, 102, 0.25);
+}
+
+/* ==========================================================================
+   INTERACTIVE PLATFORM COMMAND CENTER (#interactive-demo)
+   ========================================================================== */
+.platform-showcase-section {
+  padding: 72px 0;
+  background: #040605;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.platform-tabs-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.platform-tab-btn {
+  background: #0E1410;
+  border: 1.5px solid #233028;
+  color: #94A3B8;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.platform-tab-btn:hover {
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.platform-tab-btn.active {
+  background: #25D366;
+  color: #000000;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.platform-window-frame {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: #0B100D;
+  border: 2px solid #1E2923;
+  box-shadow: 8px 8px 0px #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.platform-top-bar {
+  background: #131A15;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1E2923;
+}
+
+.platform-tab-panel {
+  display: none;
+  padding: 24px;
+}
+
+.platform-tab-panel.active {
+  display: block;
+}
+
+/* CRM Interface Mockup */
+.crm-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 240px;
+  gap: 16px;
+  background: #060907;
+  border: 1px solid #1E2923;
+  min-height: 420px;
+}
+
+@media (max-width: 900px) {
+  .crm-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.crm-sidebar-list {
+  border-right: 1px solid #1E2923;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.crm-patient-item {
+  padding: 10px;
+  border-radius: 4px;
+  background: #0B100D;
+  border: 1px solid #1A241E;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.crm-patient-item.selected {
+  border-color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+.crm-chat-center {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.crm-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1E2923;
+}
+
+.crm-takeover-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111814;
+  border: 1px solid #25D366;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  color: #25D366;
+  cursor: pointer;
+}
+
+.crm-patient-meta-pane {
+  border-left: 1px solid #1E2923;
+  padding: 14px;
+  font-size: 0.75rem;
+  background: #080C0A;
+}
+
+/* ==========================================================================
+   VISUAL METRIC BARS & LEAK GAUGES (#stats & #leaks)
+   ========================================================================== */
+.metric-vs-bar {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #1E2923;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+}
+
+.bar-label {
+  width: 75px;
+  color: #94A3B8;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background: #1E2923;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.fill-red { background: #EF4444; }
+.fill-green { background: #25D366; box-shadow: 0 0 8px rgba(37, 211, 102, 0.4); }
+
+.bar-val {
+  font-size: 0.68rem;
+  font-weight: 700;
+  min-width: 45px;
+}
+.text-red { color: #EF4444; }
+.text-green { color: #25D366; }
+
+/* Leak Visual Drop-off Card */
+.leak-visual-meter {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   VISUAL PATIENT JOURNEY FLOW ROADMAP (#journey)
+   ========================================================================== */
+.journey-roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .journey-roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.journey-node-card {
+  background: #090E0B;
+  border: 1.5px solid #1E2923;
+  padding: 24px;
+  position: relative;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.journey-node-card:hover {
+  border-color: #25D366;
+  transform: translateY(-3px);
+}
+
+.journey-node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.journey-step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.15);
+  border: 1.5px solid #25D366;
+  color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.journey-system-pill {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: #131A15;
+  border: 1px solid #253329;
+  color: #A7F3D0;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.journey-visual-snippet {
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: #060907;
+  border: 1px dashed #1E2923;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #94A3B8;
+}
+
+/* ==========================================================================
+   HERO TRUST CHIPS & CLINIC BADGES
+   ========================================================================== */
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.clinic-avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.clinic-avatar-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1E2923;
+  border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-left: -8px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.clinic-avatar-item:first-child {
+  margin-left: 0;
+}
+
+.hero-treatment-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.treatment-chip {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #CBD5E1;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 

@@ -306,6 +306,8 @@
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="#growth">Why It Works</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#interactive-demo">Platform Demo</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="#leaks">Revenue Leaks</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="#stats">ROI Numbers</a>
@@ -344,14 +346,32 @@
               <a href="https://wa.me/919514925790?text=Hi%20Boldlabs%2C%20I%20want%20to%20test%20the%20WhatsApp%20AI%20Demo%20for%20my%20clinic." target="_blank" rel="noopener" class="hero-cta-btn" style="background: #25D366; color: #000000; border: 2px solid #000000; font-weight: 800; box-shadow: 4px 4px 0px #000000; font-size: 0.9rem; padding: 14px 24px; font-family: var(--font-display); text-transform: uppercase;">
                 💬 TEST LIVE CLINIC AI (+91 9514925790) →
               </a>
-              <a href="#growth" class="hero-cta-btn" style="background: #FFFFFF; color: #000000; border: 2px solid #000000; font-weight: 800; box-shadow: 4px 4px 0px #000000; font-size: 0.9rem; padding: 14px 24px; font-family: var(--font-display); text-transform: uppercase;">
-                ⚡ SEE HOW IT GROWS YOUR CLINIC ↓
+              <a href="#interactive-demo" class="hero-cta-btn" style="background: #FFFFFF; color: #000000; border: 2px solid #000000; font-weight: 800; box-shadow: 4px 4px 0px #000000; font-size: 0.9rem; padding: 14px 24px; font-family: var(--font-display); text-transform: uppercase;">
+                ⚡ EXPLORE PLATFORM DEMO ↓
               </a>
             </div>
-            
-            <p class="hero-reveal-delayed-1" style="font-size: 0.78rem; color: #94a3b8; font-family: var(--font-mono); text-align: left; margin: 0;">
-              [★] Trusted by 30+ clinics &amp; practices · Live production: <strong style="color: #25D366;">crm.goboldlabs.com</strong> · 48-Hour Turnkey Deployment
-            </p>
+
+            <!-- Trust Bar with Doctor Avatars -->
+            <div class="hero-trust-bar hero-reveal-delayed-1">
+              <div class="clinic-avatar-group">
+                <div class="clinic-avatar-item" style="background: #064E3B; color: #34D399;">👨‍⚕️</div>
+                <div class="clinic-avatar-item" style="background: #1E3A8A; color: #93C5FD;">👩‍⚕️</div>
+                <div class="clinic-avatar-item" style="background: #701A75; color: #F472B6;">🩺</div>
+                <div class="clinic-avatar-item" style="background: #7C2D12; color: #FDBA74;">🦷</div>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.74rem; color: #94A3B8;">
+                <strong style="color: #FFFFFF;">30+ Practices Live</strong> · Production at <span style="color: #25D366;">crm.goboldlabs.com</span>
+              </div>
+            </div>
+
+            <!-- Interactive Treatment Chips -->
+            <div class="hero-treatment-chips hero-reveal-delayed-1">
+              <span class="treatment-chip">🦷 Dental Clinics</span>
+              <span class="treatment-chip">✨ Aesthetics &amp; Skin</span>
+              <span class="treatment-chip">👁️ Ophthalmology</span>
+              <span class="treatment-chip">🦴 Orthopedic Care</span>
+              <span class="treatment-chip">🌿 Physio &amp; Wellness</span>
+            </div>
           </div>
 
           <!-- Right: Live Animated WhatsApp Chat Simulator -->
@@ -442,36 +462,83 @@
         </div>
 
         <div class="numbers-grid">
+          <!-- Stat 1: Speed -->
           <div class="number-card">
-            <div class="number-val" data-target="3" data-suffix="s">&lt; 3s</div>
+            <div class="number-val" data-target="3" data-prefix="&lt; " data-suffix="s">&lt; 3s</div>
             <div class="number-label">Instant Response Time</div>
             <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 8px; line-height: 1.5; font-family: var(--font-mono);">
               Captures leads at peak intent before they search for another clinic.
             </p>
+            <div class="metric-vs-bar">
+              <div class="bar-row">
+                <span class="bar-label">Desk Staff</span>
+                <div class="bar-track"><div class="bar-fill fill-red" style="width: 85%;"></div></div>
+                <span class="bar-val text-red">45m</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Boldlabs</span>
+                <div class="bar-track"><div class="bar-fill fill-green" style="width: 8%;"></div></div>
+                <span class="bar-val text-green">&lt;3s</span>
+              </div>
+            </div>
           </div>
           
+          <!-- Stat 2: Conversion -->
           <div class="number-card">
             <div class="number-val" data-target="53" data-suffix="%">53%</div>
             <div class="number-label">Booking Conversion Lift</div>
             <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 8px; line-height: 1.5; font-family: var(--font-mono);">
               Converts casual fee inquiries into confirmed calendar appointments.
             </p>
+            <div class="metric-vs-bar">
+              <div class="bar-row">
+                <span class="bar-label">Form/Call</span>
+                <div class="bar-track"><div class="bar-fill fill-red" style="width: 25%;"></div></div>
+                <span class="bar-val text-red">18%</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">WA AI</span>
+                <div class="bar-track"><div class="bar-fill fill-green" style="width: 71%;"></div></div>
+                <span class="bar-val text-green">71%</span>
+              </div>
+            </div>
           </div>
           
+          <!-- Stat 3: No-Show Drop -->
           <div class="number-card">
             <div class="number-val" data-target="70" data-suffix="%">70%</div>
             <div class="number-label">No-Show Reduction</div>
             <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 8px; line-height: 1.5; font-family: var(--font-mono);">
               Automated 24h &amp; 2h WhatsApp reminders with 1-click reschedule nudges.
             </p>
+            <div class="metric-vs-bar">
+              <div class="bar-row">
+                <span class="bar-label">No Nudges</span>
+                <div class="bar-track"><div class="bar-fill fill-red" style="width: 32%;"></div></div>
+                <span class="bar-val text-red">32%</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Boldlabs</span>
+                <div class="bar-track"><div class="bar-fill fill-green" style="width: 7%;"></div></div>
+                <span class="bar-val text-green">7%</span>
+              </div>
+            </div>
           </div>
           
+          <!-- Stat 4: Staff Time -->
           <div class="number-card">
             <div class="number-val" data-target="25" data-suffix="h">25h</div>
             <div class="number-label">Staff Time Saved / Week</div>
             <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 8px; line-height: 1.5; font-family: var(--font-mono);">
               Eliminates repetitive fee answering, phone tag, and manual calendar logging.
             </p>
+            <div class="metric-vs-bar">
+              <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px;">
+                <span style="font-size: 0.65rem; background: rgba(37,211,102,0.1); padding: 2px 5px; border: 1px solid rgba(37,211,102,0.3); color: #25D366; font-family: var(--font-mono);">-10h Calls</span>
+                <span style="font-size: 0.65rem; background: rgba(37,211,102,0.1); padding: 2px 5px; border: 1px solid rgba(37,211,102,0.3); color: #25D366; font-family: var(--font-mono);">-8h Calendar</span>
+                <span style="font-size: 0.65rem; background: rgba(37,211,102,0.1); padding: 2px 5px; border: 1px solid rgba(37,211,102,0.3); color: #25D366; font-family: var(--font-mono);">-7h Nudges</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -497,6 +564,22 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 78% of prospective patients book with whoever replies first. When an inquiry comes in at 8:30 PM or while your receptionist is occupied, a 30-minute delay guarantees they've already messaged the clinic down the street.
               </p>
+              
+              <!-- Visual Leak Drop-off Meter -->
+              <div class="leak-visual-meter">
+                <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: #EF4444; font-weight: 700; margin-bottom: 4px; font-family: var(--font-mono);">
+                  <span>PATIENT INTENT DROP-OFF</span>
+                  <span>-78% LOST</span>
+                </div>
+                <div class="bar-track" style="height: 6px; background: #261717;">
+                  <div class="bar-fill fill-red" style="width: 22%;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.62rem; color: #94A3B8; margin-top: 4px; font-family: var(--font-mono);">
+                  <span>1 min (Peak Intent)</span>
+                  <span>5 mins (-78%)</span>
+                  <span>30 mins (Gone)</span>
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #EF4444; font-family: var(--font-mono); font-weight: 700;">
               ✕ LOST: High-value consultations abandoned to competitors
@@ -513,6 +596,17 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 An empty appointment chair can never be resold tomorrow. When patients forget their booking, your doctor's time and clinical overhead are lost permanently. Staff forgets to make manual reminder calls during busy days.
               </p>
+              
+              <!-- Visual Vacant Chair Loss Box -->
+              <div class="leak-visual-meter">
+                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.68rem; color: #EF4444; font-weight: 700; font-family: var(--font-mono);">
+                  <span>⚠️ 2:30 PM VACANT APPOINTMENT CHAIR</span>
+                  <span>-₹4,500 REVENUE</span>
+                </div>
+                <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 4px; font-family: var(--font-mono);">
+                  Patient forgot visit · Zero automated 24h &amp; 2h WhatsApp reminders sent
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #EF4444; font-family: var(--font-mono); font-weight: 700;">
               ✕ LOST: Thousands in empty doctor slots and chair downtime
@@ -529,6 +623,17 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 During rush hours, the front desk can't answer 3 phone lines while checking in walk-ins. Over 62% of missed callers never dial back. Without an instant text-back, those patients vanish forever.
               </p>
+              
+              <!-- Visual Missed Call Alert Box -->
+              <div class="leak-visual-meter">
+                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.68rem; color: #EF4444; font-weight: 700; font-family: var(--font-mono);">
+                  <span>📞 10:14 AM MISSED INQUIRY CALL</span>
+                  <span>62% VANISHED</span>
+                </div>
+                <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 4px; font-family: var(--font-mono);">
+                  Caller encounters busy tone and immediately dials competitor clinic
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #EF4444; font-family: var(--font-mono); font-weight: 700;">
               ✕ LOST: 5 to 12 potential patient bookings every single week
@@ -545,6 +650,17 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 Thousands of past patient contacts sit dormant in spreadsheets or WhatsApp chats. Without automated wellness check-ins, 30-day recall triggers, and automated Google Review requests, you lose massive repeat appointment revenue.
               </p>
+              
+              <!-- Visual Dormant Patient Recall Meter -->
+              <div class="leak-visual-meter">
+                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.68rem; color: #EF4444; font-weight: 700; font-family: var(--font-mono);">
+                  <span>📁 2,500+ DORMANT PATIENT CONTACTS</span>
+                  <span>0% RECALL</span>
+                </div>
+                <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 4px; font-family: var(--font-mono);">
+                  Zero automated 30-day wellness check-ins or 5-star Google review triggers
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #EF4444; font-family: var(--font-mono); font-weight: 700;">
               ✕ LOST: Recurring checkup visits and top Google Maps ranking
@@ -579,6 +695,35 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 Over 40% of inquiries happen after 7:00 PM and on weekends. While competitors are closed, your AI responds in under 3 seconds with a warm, consultative tone. It accurately explains treatments, fees, doctor credentials, and clinic directions.
               </p>
+
+              <!-- Embedded WhatsApp UI Mockup -->
+              <div class="ui-mockup-frame">
+                <div class="ui-mockup-header">
+                  <div class="ui-mockup-dots">
+                    <span class="ui-dot ui-dot-red"></span>
+                    <span class="ui-dot ui-dot-yellow"></span>
+                    <span class="ui-dot ui-dot-green"></span>
+                  </div>
+                  <span class="ui-mockup-title">💬 WhatsApp Patient Flow · Meta Cloud API</span>
+                  <span class="ui-mockup-status">⚡ 2.4s RESPONSE</span>
+                </div>
+                <div class="ui-mockup-body">
+                  <div class="wa-snippet-container">
+                    <div class="wa-msg wa-msg-in">
+                      <strong>Patient:</strong> Hi, how much does dental scaling cost and can I come today at 6 PM?
+                      <span class="wa-msg-time">6:12 PM</span>
+                    </div>
+                    <div class="wa-msg wa-msg-out">
+                      <strong>Boldlabs AI:</strong> Hello! 👋 Scaling starts at ₹1,200 including consultation. Dr. Ananya has an opening today at <strong>6:15 PM</strong> or tomorrow at <strong>11:00 AM</strong>.
+                      <div class="wa-quick-actions">
+                        <span class="wa-action-pill">📅 Book Today 6:15 PM</span>
+                        <span class="wa-action-pill">📋 View Doctor Profile</span>
+                      </div>
+                      <span class="wa-msg-time">6:12 PM · ✓✓</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #25D366; font-family: var(--font-mono); font-weight: 700;">
               ✓ BUSINESS IMPACT: 24/7 inquiry capture with zero extra payroll
@@ -595,6 +740,53 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 No clunky booking links or confused patients. The AI evaluates real-time doctor availability against your operating hours, proposes open slots, and locks the appointment directly into Google Calendar with patient name, phone, and clinical notes.
               </p>
+
+              <!-- Embedded Google Calendar Mockup -->
+              <div class="ui-mockup-frame">
+                <div class="ui-mockup-header">
+                  <div class="ui-mockup-dots">
+                    <span class="ui-dot ui-dot-red"></span>
+                    <span class="ui-dot ui-dot-yellow"></span>
+                    <span class="ui-dot ui-dot-green"></span>
+                  </div>
+                  <span class="ui-mockup-title">📅 Google Calendar · Dr. Sharma (Dentistry)</span>
+                  <span class="ui-mockup-status">● 2-WAY SYNC OK</span>
+                </div>
+                <div class="ui-mockup-body">
+                  <div class="calendar-preview-grid">
+                    <div class="calendar-header-bar">
+                      <span>TODAY'S APPOINTMENT SCHEDULE</span>
+                      <span style="color: #25D366;">● Real-time Slot Locking</span>
+                    </div>
+                    <div class="calendar-slot-row">
+                      <span class="calendar-time">1:30 PM</span>
+                      <div class="calendar-event-card">
+                        <span class="calendar-event-title" style="color: #94A3B8;">Vikram K. · Ortho Follow-up</span>
+                        <span style="color: #64748B; font-size: 0.65rem;">Completed</span>
+                      </div>
+                    </div>
+                    <div class="calendar-slot-row active-slot">
+                      <span class="calendar-time" style="color: #25D366; font-weight: 700;">2:30 PM</span>
+                      <div class="calendar-event-card">
+                        <span class="calendar-event-title">
+                          <span>Priya M. (+91 98401...) · Consultation</span>
+                        </span>
+                        <span class="calendar-badge-locked">LOCKED BY AI</span>
+                      </div>
+                    </div>
+                    <div class="calendar-slot-row">
+                      <span class="calendar-time">3:30 PM</span>
+                      <div class="calendar-event-card">
+                        <span class="calendar-event-title" style="color: #64748B;">— Open Slot Available for AI Booking —</span>
+                        <span style="color: #25D366; font-size: 0.65rem;">Free</span>
+                      </div>
+                    </div>
+                    <div class="calendar-sync-indicator">
+                      <span>✓ Automatically synced to Doctor's Phone, Front Desk &amp; Google Calendar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #25D366; font-family: var(--font-mono); font-weight: 700;">
               ✓ BUSINESS IMPACT: Zero double-bookings; schedules update live on phones &amp; desktops
@@ -611,6 +803,57 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 Missed a phone call? An automated WhatsApp fires in 5 seconds to capture the patient. Automated 24h &amp; 2h WhatsApp reminders cut no-shows by 70%. If a patient needs to reschedule, the AI frees the slot immediately for new walk-ins.
               </p>
+
+              <!-- Embedded Lockscreen Notification Mockup -->
+              <div class="ui-mockup-frame">
+                <div class="ui-mockup-header">
+                  <div class="ui-mockup-dots">
+                    <span class="ui-dot ui-dot-red"></span>
+                    <span class="ui-dot ui-dot-yellow"></span>
+                    <span class="ui-dot ui-dot-green"></span>
+                  </div>
+                  <span class="ui-mockup-title">📱 Lockscreen &amp; Notification Engine</span>
+                  <span class="ui-mockup-status">⚡ 4s TEXTBACK</span>
+                </div>
+                <div class="ui-mockup-body">
+                  <div class="phone-notif-preview">
+                    <div class="phone-notif-item">
+                      <div class="phone-notif-icon notif-phone">📞</div>
+                      <div class="phone-notif-text">
+                        <div class="phone-notif-title">
+                          <span>Missed Call from +91 95149...</span>
+                          <span style="color: #94A3B8; font-size: 0.62rem;">10:14 AM</span>
+                        </div>
+                        <div class="phone-notif-sub">Rush hour: Front desk was on another call.</div>
+                      </div>
+                    </div>
+                    <div class="phone-notif-item" style="border-color: rgba(37, 211, 102, 0.4); background: rgba(37, 211, 102, 0.05);">
+                      <div class="phone-notif-icon notif-wa">💬</div>
+                      <div class="phone-notif-text">
+                        <div class="phone-notif-title">
+                          <span style="color: #25D366;">WhatsApp · Boldlabs AI Text-Back</span>
+                          <span style="color: #25D366; font-size: 0.62rem;">10:14 AM (4s later)</span>
+                        </div>
+                        <div class="phone-notif-sub">"Hi! We just missed your call at Smile Clinic. Would you like to book an appointment or ask a question?"</div>
+                        <div class="phone-action-btns">
+                          <span class="phone-pill-btn">📅 Book Doctor</span>
+                          <span class="phone-pill-btn">❓ Treatment Fee</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone-notif-item">
+                      <div class="phone-notif-icon notif-remind">⏰</div>
+                      <div class="phone-notif-text">
+                        <div class="phone-notif-title">
+                          <span>2h WhatsApp Reminder Dispatched</span>
+                          <span style="color: #94A3B8; font-size: 0.62rem;">12:30 PM</span>
+                        </div>
+                        <div class="phone-notif-sub">"Your visit with Dr. Sharma is in 2 hours! [1-Click Reschedule]" · Cuts no-shows by 70%.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #25D366; font-family: var(--font-mono); font-weight: 700;">
               ✓ BUSINESS IMPACT: Protects doctor chair time and recovers 100% of missed calls
@@ -627,6 +870,44 @@
               <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; font-family: var(--font-mono);">
                 2 hours post-appointment, satisfied patients automatically receive a link to leave a 5-star Google Review. At 7 and 30 days, automated health check-in triggers encourage follow-up consultations, turning one-time visitors into loyal patients.
               </p>
+
+              <!-- Embedded Google Review Mockup -->
+              <div class="ui-mockup-frame">
+                <div class="ui-mockup-header">
+                  <div class="ui-mockup-dots">
+                    <span class="ui-dot ui-dot-red"></span>
+                    <span class="ui-dot ui-dot-yellow"></span>
+                    <span class="ui-dot ui-dot-green"></span>
+                  </div>
+                  <span class="ui-mockup-title">⭐ Google Maps Reputation &amp; Recall Engine</span>
+                  <span class="ui-mockup-status">4.9 ★★★★★</span>
+                </div>
+                <div class="ui-mockup-body">
+                  <div class="gmaps-card-preview">
+                    <div class="gmaps-clinic-header">
+                      <div>
+                        <strong style="color: #FFFFFF; font-size: 0.8rem; display: block;">Smile Dental &amp; Aesthetics MD</strong>
+                        <span style="color: #94A3B8; font-size: 0.65rem;">Healthcare Clinic · Verified Profile</span>
+                      </div>
+                      <div class="gmaps-rating-badge">
+                        <span>4.9</span>
+                        <span style="color: #FBBF24;">★★★★★</span>
+                        <span style="color: #94A3B8; font-size: 0.65rem;">(418)</span>
+                      </div>
+                    </div>
+                    <div class="gmaps-review-snippet">
+                      <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <strong style="color: #F8FAFC;">Rohit Mehta</strong>
+                        <span style="color: #25D366; font-size: 0.62rem;">✓ Verified Patient</span>
+                      </div>
+                      "Sent a WhatsApp inquiry at 11 PM expecting to wait till morning, but the AI booked me with Dr. Sharma in 30 seconds! Incredibly seamless."
+                    </div>
+                    <div class="gmaps-recall-badge">
+                      <span>🔄 <strong>T+30 Days Trigger:</strong> Automated check-in sent for scaling follow-up (+32% rebook rate).</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); font-size: 0.75rem; color: #25D366; font-family: var(--font-mono); font-weight: 700;">
               ✓ BUSINESS IMPACT: Ranks #1 on Google Maps &amp; boosts repeat booking revenue by 30%+
@@ -640,6 +921,295 @@
             💬 TEST THE LIVE AI SYSTEM ON WHATSAPP (+91 9514925790) →
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- Interactive Platform Showcase (#interactive-demo) -->
+    <section id="interactive-demo" class="platform-showcase-section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <h2 style="color: #FFFFFF !important;">THE COMPLETE CLINIC PLATFORM.</h2>
+          <span class="section-subtitle">A high-fidelity look inside the Boldlabs Multi-User Web CRM, Google Calendar Engine, and WhatsApp Automation.</span>
+        </div>
+
+        <!-- Interactive Platform Tab Selector Buttons -->
+        <div class="platform-tabs-nav" role="tablist">
+          <button class="platform-tab-btn active" data-tab="tab-crm" role="tab" aria-selected="true">
+            <span>🖥️ Multi-User Web CRM</span>
+          </button>
+          <button class="platform-tab-btn" data-tab="tab-calendar" role="tab" aria-selected="false">
+            <span>📅 Google Calendar 2-Way Lock</span>
+          </button>
+          <button class="platform-tab-btn" data-tab="tab-patient" role="tab" aria-selected="false">
+            <span>💬 Patient Experience Flow</span>
+          </button>
+          <button class="platform-tab-btn" data-tab="tab-reviews" role="tab" aria-selected="false">
+            <span>⭐ Automated Review Engine</span>
+          </button>
+        </div>
+
+        <!-- Window Mockup Frame -->
+        <div class="platform-window-frame">
+          <!-- Top Bar -->
+          <div class="platform-top-bar">
+            <div class="ui-mockup-dots">
+              <span class="ui-dot ui-dot-red"></span>
+              <span class="ui-dot ui-dot-yellow"></span>
+              <span class="ui-dot ui-dot-green"></span>
+            </div>
+            <div id="platform-current-url" style="font-family: var(--font-mono); font-size: 0.72rem; color: #94A3B8; display: flex; align-items: center; gap: 8px;">
+              <span style="color: #25D366;">🔒</span> https://crm.goboldlabs.com/practice/inbox
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: #25D366; background: rgba(37, 211, 102, 0.1); border: 1px solid rgba(37, 211, 102, 0.3); padding: 3px 8px; font-weight: 700;">
+              ● PRODUCTION ACTIVE
+            </div>
+          </div>
+
+          <!-- Tab 1: Web CRM (crm.goboldlabs.com) -->
+          <div id="tab-crm" class="platform-tab-panel active">
+            <div class="crm-layout">
+              <!-- Sidebar Inbox List -->
+              <div class="crm-sidebar-list">
+                <div style="font-family: var(--font-mono); font-size: 0.68rem; color: #94A3B8; text-transform: uppercase; margin-bottom: 4px; display: flex; justify-content: space-between;">
+                  <span>PATIENT QUEUE (14)</span>
+                  <span style="color: #25D366;">● 3 LIVE</span>
+                </div>
+                
+                <div class="crm-patient-item selected">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #FFFFFF; font-size: 0.78rem;">Priya Mohan</strong>
+                    <span style="font-size: 0.62rem; color: #94A3B8;">10:43 AM</span>
+                  </div>
+                  <div style="font-size: 0.68rem; color: #25D366; margin-top: 2px;">● Slot Confirmed (2:30 PM)</div>
+                  <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 2px;">Dr. Sharma · Root Canal</div>
+                </div>
+
+                <div class="crm-patient-item">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #FFFFFF; font-size: 0.78rem;">Vikram Anand</strong>
+                    <span style="font-size: 0.62rem; color: #94A3B8;">10:41 AM</span>
+                  </div>
+                  <div style="font-size: 0.68rem; color: #F59E0B;">● Answering Pricing FAQ</div>
+                  <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 2px;">Dental Implants Menu</div>
+                </div>
+
+                <div class="crm-patient-item">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #FFFFFF; font-size: 0.78rem;">Ananya Deshmukh</strong>
+                    <span style="font-size: 0.62rem; color: #94A3B8;">10:38 AM</span>
+                  </div>
+                  <div style="font-size: 0.68rem; color: #60A5FA;">● 24h Reminder Sent</div>
+                  <div style="font-size: 0.65rem; color: #94A3B8; margin-top: 2px;">Appointment Tomorrow</div>
+                </div>
+
+                <div class="crm-patient-item">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #FFFFFF; font-size: 0.78rem;">Karthik S.</strong>
+                    <span style="font-size: 0.62rem; color: #94A3B8;">09:55 AM</span>
+                  </div>
+                  <div style="font-size: 0.68rem; color: #94A3B8;">Missed Call Text-Back Sent</div>
+                  <div style="font-size: 0.65rem; color: #64748B; margin-top: 2px;">Awaiting Reply</div>
+                </div>
+              </div>
+
+              <!-- Main Chat Transcript Pane -->
+              <div class="crm-chat-center">
+                <div class="crm-chat-header">
+                  <div>
+                    <strong style="color: #FFFFFF; font-size: 0.85rem; display: block;">Priya Mohan (+91 98401 23456)</strong>
+                    <span style="font-size: 0.68rem; color: #94A3B8; font-family: var(--font-mono);">Lead Channel: WhatsApp Inbound via Google Maps</span>
+                  </div>
+                  
+                  <!-- Human Takeover Button -->
+                  <div class="crm-takeover-toggle" id="crm-takeover-btn">
+                    <span style="width: 8px; height: 8px; background: #25D366; border-radius: 50%; display: inline-block;"></span>
+                    <span id="takeover-status-text" style="font-weight: 700; font-family: var(--font-mono);">AI MANAGING (1-CLICK TAKEOVER)</span>
+                  </div>
+                </div>
+
+                <!-- Chat Bubbles inside CRM -->
+                <div style="display: flex; flex-direction: column; gap: 10px; margin: 16px 0; max-height: 280px; overflow-y: auto;">
+                  <div class="wa-msg wa-msg-in" style="max-width: 80%;">
+                    <strong>Priya Mohan:</strong> Hi Dr. Sharma clinic, do you have an open consultation slot tomorrow afternoon for tooth ache?
+                    <span class="wa-msg-time">10:42 AM</span>
+                  </div>
+                  <div class="wa-msg wa-msg-out" style="max-width: 80%;">
+                    <strong>Boldlabs AI:</strong> Hello Priya! 👋 Yes, Dr. Sharma has open appointments tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would either time suit you?
+                    <span class="wa-msg-time">10:42 AM (2s)</span>
+                  </div>
+                  <div class="wa-msg wa-msg-in" style="max-width: 80%;">
+                    <strong>Priya Mohan:</strong> 2:30 PM works great!
+                    <span class="wa-msg-time">10:43 AM</span>
+                  </div>
+                  <div class="wa-msg wa-msg-out" style="max-width: 80%;">
+                    <strong>Boldlabs AI:</strong> Confirmed! 📅 Locked tomorrow at 2:30 PM on Dr. Sharma's Google Calendar. We sent directions and 24h reminders. See you soon! 🎉
+                    <span class="wa-msg-time">10:43 AM (2s)</span>
+                  </div>
+                </div>
+
+                <!-- Front Desk Quick Input Bar -->
+                <div style="border-top: 1px solid #1E2923; padding-top: 12px; display: flex; gap: 8px;">
+                  <input type="text" placeholder="Type a manual reply as Front Desk (AI will pause automatically)..." readonly style="flex: 1; background: #0B100D; border: 1px solid #1E2923; color: #94A3B8; font-family: var(--font-mono); font-size: 0.75rem; padding: 8px 12px;" />
+                  <button style="background: #25D366; color: #000000; border: none; font-weight: 800; font-family: var(--font-mono); font-size: 0.75rem; padding: 8px 14px; cursor: pointer;">SEND</button>
+                </div>
+              </div>
+
+              <!-- Right Patient Details Pane -->
+              <div class="crm-patient-meta-pane">
+                <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #94A3B8; text-transform: uppercase; margin-bottom: 12px; font-weight: 700;">PATIENT PROFILE</div>
+                
+                <div style="margin-bottom: 12px;">
+                  <span style="color: #64748B; font-size: 0.65rem; display: block;">BOOKING STATUS</span>
+                  <span style="color: #25D366; font-weight: 700; font-size: 0.78rem;">✓ Confirmed in Calendar</span>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <span style="color: #64748B; font-size: 0.65rem; display: block;">APPOINTMENT TIME</span>
+                  <span style="color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">Tomorrow, 2:30 PM - 3:15 PM</span>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <span style="color: #64748B; font-size: 0.65rem; display: block;">ASSIGNED CLINICIAN</span>
+                  <span style="color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">Dr. R. Sharma (Dental Suite 1)</span>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <span style="color: #64748B; font-size: 0.65rem; display: block;">AUTOMATED REMINDERS</span>
+                  <span style="color: #38BDF8; font-size: 0.72rem;">● 24h Nudge: Scheduled</span><br>
+                  <span style="color: #38BDF8; font-size: 0.72rem;">● 2h Nudge: Scheduled</span>
+                </div>
+
+                <div style="margin-top: 18px; padding-top: 12px; border-top: 1px solid #1E2923;">
+                  <span style="color: #64748B; font-size: 0.65rem; display: block;">GOOGLE CALENDAR SYNC</span>
+                  <span style="color: #10B981; font-size: 0.7rem; font-weight: 600;">✓ Synced (Event #88412)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Calendar 2-Way Lock -->
+          <div id="tab-calendar" class="platform-tab-panel">
+            <div style="background: #060907; border: 1px solid #1E2923; padding: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #1E2923; padding-bottom: 12px;">
+                <div>
+                  <h4 style="color: #FFFFFF; font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: 4px;">Google Calendar Real-Time 2-Way Sync</h4>
+                  <span style="color: #94A3B8; font-family: var(--font-mono); font-size: 0.74rem;">Checks doctor free/busy status live before proposing slots to WhatsApp patients</span>
+                </div>
+                <div style="background: rgba(37, 211, 102, 0.1); border: 1px solid #25D366; color: #25D366; padding: 4px 10px; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;">
+                  ● LIVE FREE/BUSY POLLING: ACTIVE
+                </div>
+              </div>
+
+              <!-- Calendar Timeline Display -->
+              <div style="display: flex; flex-direction: column; gap: 10px; font-family: var(--font-mono);">
+                <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: center; padding: 8px; background: rgba(255, 255, 255, 0.02); border-left: 3px solid #64748B;">
+                  <span style="color: #94A3B8; font-size: 0.75rem;">01:00 PM</span>
+                  <span style="color: #CBD5E1; font-size: 0.78rem;">Dr. Sharma · Lunch Break &amp; Case Reviews (Blocked in Google Calendar)</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: center; padding: 8px; background: rgba(255, 255, 255, 0.02); border-left: 3px solid #64748B;">
+                  <span style="color: #94A3B8; font-size: 0.75rem;">01:45 PM</span>
+                  <span style="color: #CBD5E1; font-size: 0.78rem;">Vikram K. · Clear Aligners Checkup (Confirmed)</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: center; padding: 12px; background: rgba(37, 211, 102, 0.1); border-left: 3px solid #25D366; border: 1px solid rgba(37, 211, 102, 0.3);">
+                  <span style="color: #25D366; font-size: 0.8rem; font-weight: 700;">02:30 PM</span>
+                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                    <div>
+                      <strong style="color: #FFFFFF; font-size: 0.85rem; display: block;">Priya Mohan · Root Canal Consultation (New Patient)</strong>
+                      <span style="color: #94A3B8; font-size: 0.7rem;">Booked via WhatsApp AI in 34 seconds · Phone: +91 98401 23456</span>
+                    </div>
+                    <span style="background: #25D366; color: #000000; font-weight: 800; font-size: 0.65rem; padding: 3px 8px;">CONFIRMED &amp; LOCKED</span>
+                  </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: center; padding: 8px; background: rgba(255, 255, 255, 0.02); border-left: 3px dashed #25D366;">
+                  <span style="color: #94A3B8; font-size: 0.75rem;">03:30 PM</span>
+                  <span style="color: #25D366; font-size: 0.78rem;">🟢 Open Slot Available · AI will offer this to next patient inquiry</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; align-items: center; padding: 8px; background: rgba(255, 255, 255, 0.02); border-left: 3px solid #64748B;">
+                  <span style="color: #94A3B8; font-size: 0.75rem;">04:15 PM</span>
+                  <span style="color: #25D366; font-size: 0.78rem;">🟢 Open Slot Available · AI will offer this to next patient inquiry</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Patient Experience Flow -->
+          <div id="tab-patient" class="platform-tab-panel">
+            <div style="max-width: 580px; margin: 0 auto; background: #064E3B; padding: 20px; border: 2px solid #1f2937; box-shadow: 4px 4px 0px #000000;">
+              <div style="border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="live-dot" style="width: 8px; height: 8px; background: #25D366; border-radius: 50%; display: inline-block;"></span>
+                  <strong style="color: #FFFFFF; font-size: 0.8rem; font-family: var(--font-display);">Smile Care Clinic · Verified Business</strong>
+                </div>
+                <span style="font-size: 0.65rem; color: #A7F3D0; font-family: var(--font-mono);">● Meta Cloud API</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="wa-chat-bubble-patient">
+                  Hi, what are your clinic hours and do you treat severe tooth pain today?
+                  <span style="font-size: 0.62rem; color: #000000; opacity: 0.6; float: right; margin-left: 8px;">8:45 PM ✓✓</span>
+                </div>
+
+                <div class="wa-chat-bubble-ai">
+                  Hello! 👋 We are open 9:00 AM - 8:30 PM Monday to Saturday. Yes, Dr. Sharma treats acute tooth pain immediately. We have an emergency slot tomorrow at <strong>10:00 AM</strong> or <strong>2:30 PM</strong>.
+                  <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
+                    <span style="background: rgba(37,211,102,0.15); border: 1px solid #25D366; color: #064E3B; font-weight: 700; font-size: 0.7rem; padding: 3px 8px;">Book 10:00 AM</span>
+                    <span style="background: rgba(37,211,102,0.15); border: 1px solid #25D366; color: #064E3B; font-weight: 700; font-size: 0.7rem; padding: 3px 8px;">Book 2:30 PM</span>
+                  </div>
+                  <span style="font-size: 0.62rem; color: #000000; opacity: 0.6; float: right; margin-left: 8px;">8:45 PM (2s) ✓✓</span>
+                </div>
+
+                <div class="wa-chat-bubble-patient">
+                  10:00 AM please. My name is Rajesh.
+                  <span style="font-size: 0.62rem; color: #000000; opacity: 0.6; float: right; margin-left: 8px;">8:46 PM ✓✓</span>
+                </div>
+
+                <div class="wa-chat-bubble-ai">
+                  Locked! 📅 Rajesh, your visit with Dr. Sharma is confirmed for <strong>Tomorrow at 10:00 AM</strong>. Location: 142 Medical Enclave. 24h &amp; 2h reminders will be sent here. See you soon! 🎉
+                  <span style="font-size: 0.62rem; color: #000000; opacity: 0.6; float: right; margin-left: 8px;">8:46 PM (2s) ✓✓</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Automated Review Engine -->
+          <div id="tab-reviews" class="platform-tab-panel">
+            <div style="background: #060907; border: 1px solid #1E2923; padding: 24px;">
+              <h4 style="color: #FFFFFF; font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: 6px;">Automated 3-Stage Patient Retention &amp; Review Sequence</h4>
+              <p style="color: #94A3B8; font-family: var(--font-mono); font-size: 0.78rem; margin-bottom: 20px;">Turns every treated patient into a verified 5-star Google review and triggers re-bookings on autopilot.</p>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; font-family: var(--font-mono);">
+                <!-- Step 1 -->
+                <div style="border: 1px solid #1E2923; background: #0B100D; padding: 16px;">
+                  <div style="font-size: 0.7rem; color: #FBBF24; font-weight: 700; margin-bottom: 6px;">STEP 01 · T+2 HOURS POST-VISIT</div>
+                  <strong style="color: #FFFFFF; font-size: 0.85rem; display: block; margin-bottom: 8px;">Google Review Request</strong>
+                  <p style="color: #94A3B8; font-size: 0.72rem; line-height: 1.5;">"Hi Rajesh, thank you for visiting Dr. Sharma today! Would you mind sharing a quick 30-second review on Google? [Link]"</p>
+                  <span style="font-size: 0.65rem; color: #25D366; font-weight: 700; margin-top: 8px; display: block;">✓ Generates 25-40 reviews / mo</span>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="border: 1px solid #1E2923; background: #0B100D; padding: 16px;">
+                  <div style="font-size: 0.7rem; color: #38BDF8; font-weight: 700; margin-bottom: 6px;">STEP 02 · T+7 DAYS POST-VISIT</div>
+                  <strong style="color: #FFFFFF; font-size: 0.85rem; display: block; margin-bottom: 8px;">Post-Care Check-In</strong>
+                  <p style="color: #94A3B8; font-size: 0.72rem; line-height: 1.5;">"Hi Rajesh, checking in on your recovery following yesterday's procedure. Any pain or questions for the doctor?"</p>
+                  <span style="font-size: 0.65rem; color: #38BDF8; font-weight: 700; margin-top: 8px; display: block;">✓ Builds extreme patient trust</span>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="border: 1px solid #1E2923; background: #0B100D; padding: 16px;">
+                  <div style="font-size: 0.7rem; color: #25D366; font-weight: 700; margin-bottom: 6px;">STEP 03 · T+30 DAYS POST-VISIT</div>
+                  <strong style="color: #FFFFFF; font-size: 0.85rem; display: block; margin-bottom: 8px;">Preventive Health Recall</strong>
+                  <p style="color: #94A3B8; font-size: 0.72rem; line-height: 1.5;">"Hi Rajesh, it's time for your follow-up checkup! Dr. Sharma has open slots this Thursday at 3 PM. [1-Click Rebook]"</p>
+                  <span style="font-size: 0.65rem; color: #25D366; font-weight: 700; margin-top: 8px; display: block;">✓ +30% repeat patient revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -705,83 +1275,119 @@
           <span class="section-subtitle">How an inquiry converts into a confirmed appointment and generates 5-star reviews on autopilot.</span>
         </div>
 
-        <div class="journey-timeline-grid">
+        <div class="journey-roadmap">
           
-          <!-- Step 1 -->
-          <div class="journey-card">
+          <!-- Stage 1 -->
+          <div class="journey-node-card">
             <div>
-              <span class="journey-step-badge">STAGE 01 · &lt; 3 SECONDS</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-xs);">
+              <div class="journey-node-header">
+                <div class="journey-step-circle">01</div>
+                <span class="journey-system-pill">META WEBHOOK &lt;50MS</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 8px;">
                 Inbound WhatsApp Inquiry
               </h3>
               <p style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.6; font-family: var(--font-mono);">
-                Patient messages your business number from Google Maps, Instagram, or your website. Meta webhook triggers instant AI context processing.
+                Patient clicks your WhatsApp link from Google Maps, Instagram, or clinic website. Official Meta Cloud API triggers instant webhook to Boldlabs engine.
               </p>
+            </div>
+            <div class="journey-visual-snippet">
+              <span style="color: #25D366;">● Inbound Event:</span> { patient: "+91 98***", source: "Google Maps", intent: "Appointment" }
             </div>
           </div>
 
-          <!-- Step 2 -->
-          <div class="journey-card">
+          <!-- Stage 2 -->
+          <div class="journey-node-card">
             <div>
-              <span class="journey-step-badge">STAGE 02 · REAL-TIME</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-xs);">
+              <div class="journey-node-header">
+                <div class="journey-step-circle">02</div>
+                <span class="journey-system-pill">AI KNOWLEDGE BASE &lt;3S</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 8px;">
                 Consultative AI Answer &amp; Slots
               </h3>
               <p style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.6; font-family: var(--font-mono);">
-                AI answers clinical inquiries accurately using your custom knowledge base and checks real-time doctor availability in Google Calendar.
+                AI answers clinical inquiries accurately using your custom knowledge base and evaluates live doctor free/busy availability against Google Calendar.
               </p>
+            </div>
+            <div class="journey-visual-snippet">
+              <span style="color: #25D366;">● AI Action:</span> Proposed verified slots [2:30 PM, 4:15 PM] with consultation fee breakdown
             </div>
           </div>
 
-          <!-- Step 3 -->
-          <div class="journey-card">
+          <!-- Stage 3 -->
+          <div class="journey-node-card">
             <div>
-              <span class="journey-step-badge">STAGE 03 · INSTANT LOCK</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-xs);">
+              <div class="journey-node-header">
+                <div class="journey-step-circle">03</div>
+                <span class="journey-system-pill">CALENDAR API 200 OK</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 8px;">
                 Calendar Locked &amp; Confirmed
               </h3>
               <p style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.6; font-family: var(--font-mono);">
-                Patient confirms preferred slot. System locks the Google Calendar event, updates CRM pipeline to 'Converted', and sends location directions.
+                Patient selects preferred slot. System locks the Google Calendar event in real time, marks CRM pipeline as 'Converted', and sends location directions.
               </p>
+            </div>
+            <div class="journey-visual-snippet">
+              <span style="color: #25D366;">● Google Lock:</span> Event #88412 created on Dr. Sharma's Calendar with patient phone
             </div>
           </div>
 
-          <!-- Step 4 -->
-          <div class="journey-card">
+          <!-- Stage 4 -->
+          <div class="journey-node-card">
             <div>
-              <span class="journey-step-badge">STAGE 04 · MULTI-CHANNEL</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-xs);">
+              <div class="journey-node-header">
+                <div class="journey-step-circle">04</div>
+                <span class="journey-system-pill">STAFF DISPATCH &lt;2S</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 8px;">
                 Instant Staff Alerts
               </h3>
               <p style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.6; font-family: var(--font-mono);">
-                Doctor and front desk phone receive an instant WhatsApp alert + HTML email receipt with patient name, contact, selected service, and time.
+                Doctor and front desk phones receive instant WhatsApp notifications + HTML email receipt with patient name, treatment, and slot details.
               </p>
+            </div>
+            <div class="journey-visual-snippet">
+              <span style="color: #25D366;">● Multi-Alert:</span> WhatsApp message sent to Front Desk + Doctor iOS calendar updated
             </div>
           </div>
 
-          <!-- Step 5 -->
-          <div class="journey-card">
+          <!-- Stage 5 -->
+          <div class="journey-node-card">
             <div>
-              <span class="journey-step-badge">STAGE 05 · 24H &amp; 2H PRIOR</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-xs);">
+              <div class="journey-node-header">
+                <div class="journey-step-circle">05</div>
+                <span class="journey-system-pill">CRON T-24H &amp; T-2H</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 8px;">
                 Automated Reminders &amp; Reschedule
               </h3>
               <p style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.6; font-family: var(--font-mono);">
-                Scheduled reminders prompt patient on WhatsApp. If they need to reschedule, the AI changes the time automatically, preventing an empty chair.
+                Automated WhatsApp sequence prompts patient. If they request to reschedule, the AI automatically shifts the event, reopening the slot for walk-ins.
               </p>
+            </div>
+            <div class="journey-visual-snippet">
+              <span style="color: #25D366;">● No-Show Drop:</span> Automated 2h nudge cuts no-show rate from 30% down to 7%
             </div>
           </div>
 
-          <!-- Step 6 -->
-          <div class="journey-card">
+          <!-- Stage 6 -->
+          <div class="journey-node-card">
             <div>
-              <span class="journey-step-badge">STAGE 06 · POST-VISIT</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-xs);">
+              <div class="journey-node-header">
+                <div class="journey-step-circle">06</div>
+                <span class="journey-system-pill">GOOGLE MAPS &amp; RECALL</span>
+              </div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 8px;">
                 5-Star Review &amp; Health Recall
               </h3>
               <p style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.6; font-family: var(--font-mono);">
-                2 hours post-visit, an automated review template requests feedback on Google Maps. At 30 days, a check-in reminder triggers re-booking.
+                2 hours post-visit, an automated review link is delivered on WhatsApp. At 30 days, an automated wellness check-in triggers re-booking.
               </p>
+            </div>
+            <div class="journey-visual-snippet">
+              <span style="color: #25D366;">● Flywheel:</span> 25-40 verified Google reviews / mo + 30-day recall engine active
             </div>
           </div>
 
@@ -975,8 +1581,33 @@
 
           </div>
 
+          <!-- Visual 48-Hour Deployment Roadmap -->
+          <div style="margin-top: 32px; padding: 20px; background: #060907; border: 1px solid #1E2923; border-radius: 4px;">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #25D366; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <span>● TURNKEY 48-HOUR ONBOARDING ROADMAP</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; font-family: var(--font-mono); font-size: 0.74rem;">
+              <div style="border-left: 2px solid #25D366; padding-left: 10px;">
+                <strong style="color: #FFFFFF; display: block; margin-bottom: 3px;">HOURS 0 - 12</strong>
+                <span style="color: #94A3B8; font-size: 0.7rem; line-height: 1.4; display: block;">Knowledge base ingestion (treatments, fees, doctor credentials &amp; clinic FAQs).</span>
+              </div>
+              <div style="border-left: 2px solid #25D366; padding-left: 10px;">
+                <strong style="color: #FFFFFF; display: block; margin-bottom: 3px;">HOURS 12 - 24</strong>
+                <span style="color: #94A3B8; font-size: 0.7rem; line-height: 1.4; display: block;">Meta Cloud API connection &amp; Google Calendar 2-way auth lock.</span>
+              </div>
+              <div style="border-left: 2px solid #25D366; padding-left: 10px;">
+                <strong style="color: #FFFFFF; display: block; margin-bottom: 3px;">HOURS 24 - 36</strong>
+                <span style="color: #94A3B8; font-size: 0.7rem; line-height: 1.4; display: block;">End-to-end sandbox booking tests &amp; staff takeover dashboard training.</span>
+              </div>
+              <div style="border-left: 2px solid #25D366; padding-left: 10px;">
+                <strong style="color: #FFFFFF; display: block; margin-bottom: 3px;">HOUR 48 · LIVE</strong>
+                <span style="color: #25D366; font-size: 0.7rem; line-height: 1.4; display: block;">Autonomous AI receptionist goes live 24/7 capturing new patient bookings.</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Bottom CTA -->
-          <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.12); text-align: center;">
+          <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.12); text-align: center;">
             <a href="https://wa.me/919514925790?text=Hi%20Boldlabs%2C%20I%20want%20to%20deploy%20the%20Complete%20Clinic%20Growth%20Engine%20at%203499/month." target="_blank" rel="noopener" class="pill-btn" style="background: #25D366; color: #000000; border: 2px solid #000000; font-weight: 800; font-size: 0.95rem; padding: 16px 36px; box-shadow: 4px 4px 0px #000000; text-transform: uppercase; display: inline-block;">
               💬 START YOUR 48-HOUR CLINIC DEPLOYMENT (+91 9514925790) →
             </a>
@@ -1429,8 +2060,9 @@
               const numberVals = entry.target.querySelectorAll('.number-val');
               numberVals.forEach(numEl => {
                 const target = parseInt(numEl.getAttribute('data-target') || '0');
+                const prefix = numEl.getAttribute('data-prefix') || '';
                 const suffix = numEl.getAttribute('data-suffix') || '';
-                const duration = 1500;
+                const duration = 1200;
                 let startTime = null;
                 
                 const countAnimation = (currentTime) => {
@@ -1440,19 +2072,19 @@
                   const easeOutQuad = progress * (2 - progress);
                   const currentValue = Math.floor(easeOutQuad * target);
                   
-                  numEl.textContent = currentValue + suffix;
+                  numEl.textContent = prefix + currentValue + suffix;
                   
                   if (progress < 1) {
                     requestAnimationFrame(countAnimation);
                   } else {
-                    numEl.textContent = target + suffix;
+                    numEl.textContent = prefix + target + suffix;
                   }
                 };
                 
                 if (target > 0) {
                   requestAnimationFrame(countAnimation);
                 } else {
-                  numEl.textContent = target + suffix;
+                  numEl.textContent = prefix + target + suffix;
                 }
               });
             }
@@ -1607,6 +2239,60 @@
           } catch (error) {
             console.error("Error capturing lead:", error);
             alert("Error sending request. Please WhatsApp directly to +91 9514925790 or email bhuvanesh@goboldlabs.com");
+          }
+        });
+      }
+
+      // 6b. Interactive Platform Command Center Tab Logic
+      const tabBtns = document.querySelectorAll('.platform-tab-btn');
+      const tabPanels = document.querySelectorAll('.platform-tab-panel');
+      const platformUrl = document.getElementById('platform-current-url');
+
+      const urlMap = {
+        'tab-crm': '<span style="color: #25D366;">🔒</span> https://crm.goboldlabs.com/practice/inbox',
+        'tab-calendar': '<span style="color: #25D366;">🔒</span> https://crm.goboldlabs.com/integrations/google-calendar',
+        'tab-patient': '<span style="color: #25D366;">🔒</span> https://api.whatsapp.com/send?phone=919514925790',
+        'tab-reviews': '<span style="color: #25D366;">🔒</span> https://crm.goboldlabs.com/automations/google-reviews'
+      };
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          const targetId = btn.getAttribute('data-tab');
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) {
+            targetPanel.classList.add('active');
+          }
+          if (platformUrl && urlMap[targetId]) {
+            platformUrl.innerHTML = urlMap[targetId];
+          }
+        });
+      });
+
+      // Human Takeover Interactive Switch in Demo
+      const takeoverBtn = document.getElementById('crm-takeover-btn');
+      const takeoverText = document.getElementById('takeover-status-text');
+      if (takeoverBtn && takeoverText) {
+        let isHuman = false;
+        takeoverBtn.addEventListener('click', () => {
+          isHuman = !isHuman;
+          if (isHuman) {
+            takeoverBtn.style.borderColor = '#EF4444';
+            takeoverBtn.style.color = '#EF4444';
+            takeoverBtn.querySelector('span:first-child').style.background = '#EF4444';
+            takeoverText.textContent = 'STAFF ACTIVE (AI PAUSED)';
+          } else {
+            takeoverBtn.style.borderColor = '#25D366';
+            takeoverBtn.style.color = '#25D366';
+            takeoverBtn.querySelector('span:first-child').style.background = '#25D366';
+            takeoverText.textContent = 'AI MANAGING (1-CLICK TAKEOVER)';
           }
         });
       }
