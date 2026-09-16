@@ -1,0 +1,1098 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serenity Sanctuary | Spiritual Center & Sacred Healing</title>
+  <meta name="description" content="Illuminate your spiritual journey with Serenity Sanctuary. Explore transformative meditation, Reiki, sound healing retreats, upcoming sacred events, and membership plans." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-symbol">✧</div>
+      <div class="preloader-title">SERENITY</div>
+      <div class="preloader-subtitle">Spiritual Wellness Sanctuary</div>
+      <div class="preloader-track">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-flex">
+      <span class="announcement-tag">✦ Autumn Equinox</span>
+      <p class="announcement-text">Registration is now open for our 3-Day Sound Healing & Meditation Immersion. <a href="#events">Reserve Your Space &rarr;</a></p>
+      <div class="announcement-time">
+        <i data-lucide="clock" class="icon-sm"></i> Daily Sanctuary Hours: 7:00 AM – 8:30 PM
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-emblem">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+            <circle cx="50" cy="50" r="32" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M50 15 L50 85 M15 50 L85 50" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+            <polygon points="50,22 58,42 78,50 58,58 50,78 42,58 22,50 42,42" fill="currentColor" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SERENITY</span>
+          <span class="brand-sub">Spiritual Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#offerings" class="nav-link">Offerings</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#journal" class="nav-link">Journal</a>
+        <a href="#pricing" class="nav-link">Memberships</a>
+        <a href="#contact" class="nav-link">Visit Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-sound-toggle" id="soundPlayerToggle" title="Ambient Music Player">
+          <i data-lucide="music-2" class="icon-sm"></i>
+          <span class="sound-label">Serenity Radio</span>
+        </button>
+        <a href="#pricing" class="btn-nav-cta" onclick="openBookingModal('General Inquiry')">Book Session</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-text">
+        <span class="brand-name">SERENITY</span>
+        <span class="brand-sub">Spiritual Center</span>
+      </div>
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" class="drawer-link">About Sanctuary</a>
+      <a href="#offerings" class="drawer-link">Sacred Offerings</a>
+      <a href="#experience" class="drawer-link">Audio Experience</a>
+      <a href="#events" class="drawer-link">Gatherings & Events</a>
+      <a href="#journal" class="drawer-link">Wisdom Journal</a>
+      <a href="#pricing" class="drawer-link">Pricing & Plans</a>
+      <a href="#testimonials" class="drawer-link">Community Voices</a>
+      <a href="#contact" class="drawer-link">Visit & Contact</a>
+    </div>
+    <div class="drawer-footer">
+      <button class="btn-primary full-width" onclick="openBookingModal('Mobile Menu Booking')">Book a Private Session</button>
+      <p class="drawer-note">✦ 42 Sacred Grove Way, Sedona, AZ 86336</p>
+    </div>
+  </div>
+
+  <!-- Ambient Audio Floating Player Bar -->
+  <div class="floating-audio-bar" id="floatingAudioBar">
+    <div class="audio-bar-inner">
+      <div class="audio-meta">
+        <div class="audio-wave-anim" id="audioWaveAnim">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <div class="audio-title">432Hz Solfeggio Meditation Flow</div>
+          <div class="audio-author">Deep Inner Healing Frequency</div>
+        </div>
+      </div>
+      <div class="audio-controls">
+        <button class="audio-btn" id="playAudioBtn"><i data-lucide="play" id="playIcon"></i></button>
+        <button class="audio-btn" id="muteAudioBtn"><i data-lucide="volume-2" id="volumeIcon"></i></button>
+        <button class="audio-btn close-audio" id="closeAudioBar">&times;</button>
+      </div>
+    </div>
+  </div>﻿  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-parallax-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+
+    <div class="container hero-container">
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+        <span class="badge-dot">✦</span>
+        <span>A Sacred Sanctuary for Awakening & Renewal</span>
+        <span class="badge-dot">✦</span>
+      </div>
+
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+        Illuminate<br>
+        <span class="hero-title-italic">Your Inner</span><br>
+        Sacred Path
+      </h1>
+
+      <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        Step beyond the noise of daily life. Awaken tranquility, cultivate deep presence, and connect with a conscious community through mindful meditation, sound therapy, and ancient holistic wisdom.
+      </p>
+
+      <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
+        <a href="#offerings" class="btn-gold">
+          <span>Explore Offerings</span>
+          <i data-lucide="arrow-right" class="icon-sm"></i>
+        </a>
+        <a href="#about" class="btn-translucent">
+          <i data-lucide="sparkles" class="icon-sm"></i>
+          <span>Our Sacred Story</span>
+        </a>
+      </div>
+
+      <!-- Quick Trust Indicators -->
+      <div class="hero-stats-ribbon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <div class="ribbon-item">
+          <span class="ribbon-num">15+</span>
+          <span class="ribbon-lbl">Years of Healing</span>
+        </div>
+        <div class="ribbon-sep">✧</div>
+        <div class="ribbon-item">
+          <span class="ribbon-num">4,800+</span>
+          <span class="ribbon-lbl">Souls Guided</span>
+        </div>
+        <div class="ribbon-sep">✧</div>
+        <div class="ribbon-item">
+          <span class="ribbon-num">60+</span>
+          <span class="ribbon-lbl">Monthly Sessions</span>
+        </div>
+        <div class="ribbon-sep">✧</div>
+        <div class="ribbon-item">
+          <span class="ribbon-num">100%</span>
+          <span class="ribbon-lbl">Heart-Centered</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Scroll Beacon -->
+    <a href="#intro" class="hero-scroll-indicator">
+      <span class="scroll-text">DISCOVER</span>
+      <div class="scroll-beacon-line">
+        <div class="beacon-pulse"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Sacred Welcome Mantra Strip -->
+  <section id="intro" class="mantra-strip">
+    <div class="container mantra-inner">
+      <div class="mantra-symbol" data-aos="zoom-in">✧ 𓇬 ✧</div>
+      <blockquote class="mantra-quote" data-aos="fade-up">
+        "You do not need to become someone new. You need only return to the peace that has always lived within you."
+      </blockquote>
+      <p class="mantra-author" data-aos="fade-up" data-aos-delay="150">— The Sanctuary Teaching Collection</p>
+    </div>
+  </section>
+
+  <!-- About Us / Philosophy Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left: Layered Imagery with Floating Badge -->
+        <div class="about-visual" data-aos="fade-right" data-aos-duration="900">
+          <div class="about-frame-main">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80" alt="Spiritual Meditation Hall" class="about-img img-main" />
+          </div>
+          <div class="about-frame-accent">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Yoga and Inner Peace" class="about-img img-accent" />
+          </div>
+          <div class="about-floating-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="floating-card-icon">✨</div>
+            <div class="floating-card-val">Sedona, AZ</div>
+            <div class="floating-card-sub">Vortex Energy Sanctuary</div>
+          </div>
+        </div>
+
+        <!-- Right: Narrative Content -->
+        <div class="about-content" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <div class="section-header">
+            <span class="eyebrow">WHO WE ARE</span>
+            <h2 class="section-title">A Sanctuary Designed for <em>Spiritual Reconnection</em></h2>
+            <div class="gold-divider"></div>
+          </div>
+
+          <p class="lead-text">
+            Serenity Sanctuary was established as a physical and spiritual haven where ancient wisdom, vibrational healing, and modern mindfulness harmonize to restore balance to human life.
+          </p>
+
+          <p class="body-text">
+            Nestled amid tranquil natural surroundings, our center welcomes seekers of all backgrounds. Whether you are navigating life transitions, seeking emotional release, or simply craving peaceful respite, our master practitioners walk beside you with warmth and unconditional acceptance.
+          </p>
+
+          <div class="pillar-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon-box"><i data-lucide="feather" class="pillar-icon"></i></div>
+              <div>
+                <h4 class="pillar-title">Holistic Healing</h4>
+                <p class="pillar-desc">Integrative therapies addressing body, mind, energetic flow, and spirit.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box"><i data-lucide="heart-handshake" class="pillar-icon"></i></div>
+              <div>
+                <h4 class="pillar-title">Sacred Community</h4>
+                <p class="pillar-desc">An uplifting circle fostering genuine belonging without dogma or judgment.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box"><i data-lucide="sun" class="pillar-icon"></i></div>
+              <div>
+                <h4 class="pillar-title">Daily Awakening</h4>
+                <p class="pillar-desc">Practical mindfulness tools that integrate effortlessly into modern life.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box"><i data-lucide="sparkle" class="pillar-icon"></i></div>
+              <div>
+                <h4 class="pillar-title">Master Guides</h4>
+                <p class="pillar-desc">Certified practitioners with decades of deep spiritual study and mentorship.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-action">
+            <a href="#offerings" class="btn-gold">Discover Our Practices</a>
+            <div class="founder-signature">
+              <span class="sig-text">Eleanor Vance</span>
+              <span class="sig-title">Founder & Spiritual Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>﻿  <!-- Sacred Offerings / Services Section -->
+  <section id="offerings" class="offerings-section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="eyebrow">HOLISTIC PATHWAYS</span>
+        <h2 class="section-title">Our Sacred <em>Offerings</em></h2>
+        <div class="gold-divider center"></div>
+        <p class="section-subtitle">Every experience is carefully curated to align energy, soothe the nervous system, and awaken profound clarity.</p>
+      </div>
+
+      <!-- Offering Category Filters -->
+      <div class="offering-filter-bar" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All Pathways</button>
+        <button class="filter-btn" data-filter="meditation">Meditation & Sound</button>
+        <button class="filter-btn" data-filter="energy">Energy Healing</button>
+        <button class="filter-btn" data-filter="movement">Sacred Movement</button>
+        <button class="filter-btn" data-filter="guidance">1-on-1 Guidance</button>
+      </div>
+
+      <!-- Offerings Grid -->
+      <div class="offerings-grid">
+        
+        <!-- Card 1 -->
+        <div class="offering-card" data-category="meditation" data-aos="fade-up" data-aos-delay="100">
+          <div class="offering-media">
+            <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=600&q=80" alt="Sound Bath Healing" class="offering-img" />
+            <span class="offering-tag">Sound Therapy</span>
+          </div>
+          <div class="offering-body">
+            <div class="offering-glyph">✦</div>
+            <h3 class="offering-title">Tibetan & Alchemy Crystal Sound Bath</h3>
+            <p class="offering-excerpt">Immerse yourself in harmonic frequencies produced by 432Hz crystal bowls and Tibetan gongs to dissolve mental fog and restore cellular equilibrium.</p>
+            <div class="offering-meta">
+              <span><i data-lucide="clock" class="icon-xs"></i> 75 Mins</span>
+              <span><i data-lucide="users" class="icon-xs"></i> Group or Private</span>
+            </div>
+            <div class="offering-footer">
+              <span class="offering-price">From $45</span>
+              <button class="btn-card-link" onclick="openBookingModal('Crystal Sound Bath')">Reserve Session &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="offering-card" data-category="energy" data-aos="fade-up" data-aos-delay="200">
+          <div class="offering-media">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Reiki & Energy Alignment" class="offering-img" />
+            <span class="offering-tag">Energy Balancing</span>
+          </div>
+          <div class="offering-body">
+            <div class="offering-glyph">🌿</div>
+            <h3 class="offering-title">Usui Reiki & Chakra Clearing</h3>
+            <p class="offering-excerpt">A gentle yet profound hands-on energetic therapy that releases blocked meridians, eases physical fatigue, and realigns your spiritual vitality.</p>
+            <div class="offering-meta">
+              <span><i data-lucide="clock" class="icon-xs"></i> 60 / 90 Mins</span>
+              <span><i data-lucide="user" class="icon-xs"></i> One-on-One</span>
+            </div>
+            <div class="offering-footer">
+              <span class="offering-price">From $110</span>
+              <button class="btn-card-link" onclick="openBookingModal('Usui Reiki Session')">Reserve Session &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="offering-card" data-category="movement" data-aos="fade-up" data-aos-delay="300">
+          <div class="offering-media">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Kundalini & Hatha Yoga" class="offering-img" />
+            <span class="offering-tag">Mindful Yoga</span>
+          </div>
+          <div class="offering-body">
+            <div class="offering-glyph">🧘</div>
+            <h3 class="offering-title">Kundalini & Somatic Breathwork</h3>
+            <p class="offering-excerpt">Dynamic kriyas, pranayama breath cycles, and mantra chanting crafted to awaken dormant vitality and expand conscious awareness.</p>
+            <div class="offering-meta">
+              <span><i data-lucide="clock" class="icon-xs"></i> 90 Mins</span>
+              <span><i data-lucide="users" class="icon-xs"></i> Daily Studio Classes</span>
+            </div>
+            <div class="offering-footer">
+              <span class="offering-price">$28 / Drop-In</span>
+              <button class="btn-card-link" onclick="openBookingModal('Kundalini Yoga Class')">Reserve Session &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="offering-card" data-category="guidance" data-aos="fade-up" data-aos-delay="100">
+          <div class="offering-media">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Spiritual Counseling" class="offering-img" />
+            <span class="offering-tag">Intuitive Guidance</span>
+          </div>
+          <div class="offering-body">
+            <div class="offering-glyph">🌙</div>
+            <h3 class="offering-title">Intuitive Soul Mentorship</h3>
+            <p class="offering-excerpt">Personalized spiritual counseling sessions combining archetypal insight, meditation guidance, and compassionate inquiry for life crossroads.</p>
+            <div class="offering-meta">
+              <span><i data-lucide="clock" class="icon-xs"></i> 60 Mins</span>
+              <span><i data-lucide="user" class="icon-xs"></i> Private In-Person / Zoom</span>
+            </div>
+            <div class="offering-footer">
+              <span class="offering-price">From $135</span>
+              <button class="btn-card-link" onclick="openBookingModal('Soul Mentorship Session')">Reserve Session &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="offering-card" data-category="meditation" data-aos="fade-up" data-aos-delay="200">
+          <div class="offering-media">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" alt="Vipassana Meditation" class="offering-img" />
+            <span class="offering-tag">Silent Practice</span>
+          </div>
+          <div class="offering-body">
+            <div class="offering-glyph">🏔️</div>
+            <h3 class="offering-title">Vipassana & Mindfulness Meditation</h3>
+            <p class="offering-excerpt">Systematic cultivation of mindful observation, breath grounding, and tranquil inner awareness in our temperature-controlled cedar hall.</p>
+            <div class="offering-meta">
+              <span><i data-lucide="clock" class="icon-xs"></i> 60 Mins</span>
+              <span><i data-lucide="users" class="icon-xs"></i> Morning & Sunset</span>
+            </div>
+            <div class="offering-footer">
+              <span class="offering-price">$22 / Drop-In</span>
+              <button class="btn-card-link" onclick="openBookingModal('Vipassana Meditation')">Reserve Session &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="offering-card" data-category="energy" data-aos="fade-up" data-aos-delay="300">
+          <div class="offering-media">
+            <img src="https://images.unsplash.com/photo-1532798369041-b33eb577ef1a?auto=format&fit=crop&w=600&q=80" alt="Aromatherapy & Herbal Healing" class="offering-img" />
+            <span class="offering-tag">Herbal Alchemy</span>
+          </div>
+          <div class="offering-body">
+            <div class="offering-glyph">🌸</div>
+            <h3 class="offering-title">Aromatic Botanicals & Energy Cleanse</h3>
+            <p class="offering-excerpt">Organic botanical essence infusions, sacred cedar smudging, and aura purification rites that leave you deeply rooted and luminous.</p>
+            <div class="offering-meta">
+              <span><i data-lucide="clock" class="icon-xs"></i> 75 Mins</span>
+              <span><i data-lucide="user" class="icon-xs"></i> Customized Care</span>
+            </div>
+            <div class="offering-footer">
+              <span class="offering-price">From $95</span>
+              <button class="btn-card-link" onclick="openBookingModal('Botanical Cleanse')">Reserve Session &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>﻿  <!-- Interactive Sound Meditation Teaser -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="experience-box" data-aos="zoom-in" data-aos-duration="900">
+        <div class="experience-grid">
+          <div class="experience-content">
+            <span class="eyebrow gold">IMMERSIVE FREQUENCY</span>
+            <h2 class="section-title light">Experience <em>Deep Presence</em> Right Now</h2>
+            <p class="lead-text light">Pause for three intentional minutes. Put on headphones, close your eyes, and let this 432Hz tuning fork frequency wash through your nervous system.</p>
+            
+            <div class="interactive-player-ui">
+              <div class="player-time-row">
+                <span id="timerCurrent">00:00</span>
+                <div class="player-progress-bar" id="playerProgressBar">
+                  <div class="player-progress-fill" id="playerProgressFill"></div>
+                </div>
+                <span id="timerDuration">03:00</span>
+              </div>
+              <div class="player-action-row">
+                <button class="btn-play-hero" id="heroPlayBtn">
+                  <i data-lucide="play" id="heroPlayIcon"></i>
+                  <span id="heroPlayText">Play Frequency Sample</span>
+                </button>
+                <div class="frequency-tag"><i data-lucide="activity" class="icon-xs"></i> Pure 432Hz Sine Wave</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-visual">
+            <div class="mandala-wrapper">
+              <div class="mandala-ring ring-1"></div>
+              <div class="mandala-ring ring-2"></div>
+              <div class="mandala-ring ring-3"></div>
+              <div class="mandala-center">
+                <span class="mandala-icon">𓇬</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Stats Counter Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-figure" data-target="4800">0</div>
+          <div class="stat-label">Souls Awakened & Guided</div>
+          <div class="stat-decor">✦</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-figure" data-target="650">0</div>
+          <div class="stat-label">Ceremonies & Workshops</div>
+          <div class="stat-decor">✦</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-figure" data-target="15">0</div>
+          <div class="stat-label">Years Serving Community</div>
+          <div class="stat-decor">✦</div>
+        </div>
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-figure" data-target="99">0</div>
+          <div class="stat-label">% Deep Peace Reported</div>
+          <div class="stat-decor">✦</div>
+        </div>
+      </div>
+    </div>
+  </section>﻿  <!-- Wix Events Section Clone -->
+  <section id="events" class="events-section">
+    <div class="container">
+      <div class="events-header-row">
+        <div data-aos="fade-right">
+          <span class="eyebrow">COMMUNITY GATHERINGS</span>
+          <h2 class="section-title">Upcoming <em>Workshops & Gatherings</em></h2>
+          <div class="gold-divider"></div>
+        </div>
+        <div class="events-header-action" data-aos="fade-left">
+          <button class="btn-outline-dark" onclick="openBookingModal('General Event Schedule')">View Full Calendar</button>
+        </div>
+      </div>
+
+      <!-- Events List -->
+      <div class="events-container-list">
+        
+        <!-- Event 1 -->
+        <div class="event-card-row" data-aos="fade-up" data-aos-delay="100">
+          <div class="event-calendar-badge">
+            <span class="cal-month">SEP</span>
+            <span class="cal-day">18</span>
+            <span class="cal-year">2026</span>
+          </div>
+          <div class="event-main-details">
+            <div class="event-category-pill">Sound Healing · Full Moon</div>
+            <h3 class="event-headline">Autumn Harvest Full Moon Gong Bath & Fire Circle</h3>
+            <p class="event-summary">Gather under the open desert sky for an intentional fire ceremony followed by 90 minutes of symphonic gong vibration and sacred tea sharing.</p>
+            <div class="event-specs">
+              <span><i data-lucide="clock" class="icon-xs"></i> 7:00 PM – 9:30 PM MST</span>
+              <span><i data-lucide="map-pin" class="icon-xs"></i> Outdoor Starlight Amphitheater</span>
+              <span><i data-lucide="ticket" class="icon-xs"></i> 14 Spots Remaining</span>
+            </div>
+          </div>
+          <div class="event-action-col">
+            <div class="event-ticket-price">$45 <small>/ person</small></div>
+            <button class="btn-gold full-width" onclick="openBookingModal('Autumn Harvest Full Moon Gong Bath ($45)')">RSVP & Register</button>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card-row" data-aos="fade-up" data-aos-delay="200">
+          <div class="event-calendar-badge">
+            <span class="cal-month">OCT</span>
+            <span class="cal-day">02</span>
+            <span class="cal-year">2026</span>
+          </div>
+          <div class="event-main-details">
+            <div class="event-category-pill">Weekend Retreat · Immersive</div>
+            <h3 class="event-headline">3-Day Silence, Somatics & Soul Renewal Retreat</h3>
+            <p class="event-summary">A transformative 3-day silent weekend encompassing restorative yoga, organic plant-based nourishment, breathwork, and meditative vortex walks.</p>
+            <div class="event-specs">
+              <span><i data-lucide="clock" class="icon-xs"></i> Fri 4:00 PM – Sun 3:00 PM</span>
+              <span><i data-lucide="map-pin" class="icon-xs"></i> Sanctuary Guest Cottages</span>
+              <span><i data-lucide="ticket" class="icon-xs"></i> 6 Rooms Remaining</span>
+            </div>
+          </div>
+          <div class="event-action-col">
+            <div class="event-ticket-price">$480 <small>/ all-inclusive</small></div>
+            <button class="btn-gold full-width" onclick="openBookingModal('3-Day Silence & Soul Renewal Retreat ($480)')">RSVP & Register</button>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card-row" data-aos="fade-up" data-aos-delay="300">
+          <div class="event-calendar-badge">
+            <span class="cal-month">OCT</span>
+            <span class="cal-day">14</span>
+            <span class="cal-year">2026</span>
+          </div>
+          <div class="event-main-details">
+            <div class="event-category-pill">Certification · Energy Healing</div>
+            <h3 class="event-headline">Usui Reiki Level I & II Practitioner Attunement</h3>
+            <p class="event-summary">Comprehensive two-day intensive training in traditional Japanese energy healing techniques, hand placements, sacred symbols, and hands-on client practice.</p>
+            <div class="event-specs">
+              <span><i data-lucide="clock" class="icon-xs"></i> Sat & Sun 9:00 AM – 5:00 PM</span>
+              <span><i data-lucide="map-pin" class="icon-xs"></i> Lotus Meditation Hall</span>
+              <span><i data-lucide="ticket" class="icon-xs"></i> 8 Spots Max</span>
+            </div>
+          </div>
+          <div class="event-action-col">
+            <div class="event-ticket-price">$350 <small>/ materials included</small></div>
+            <button class="btn-gold full-width" onclick="openBookingModal('Usui Reiki Level I & II Attunement ($350)')">RSVP & Register</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wix Blog / Sacred Journal Section Clone -->
+  <section id="journal" class="journal-section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="eyebrow">WISDOM & INSIGHTS</span>
+        <h2 class="section-title">From Our <em>Sacred Journal</em></h2>
+        <div class="gold-divider center"></div>
+        <p class="section-subtitle">Nourish your daily awareness with articles, teachings, and mindful reflections from our resident guides.</p>
+      </div>
+
+      <div class="journal-grid">
+        
+        <!-- Article 1 -->
+        <article class="journal-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="journal-cover">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" alt="Mountain Meditation" class="journal-img" />
+            <span class="journal-tag">Meditation Practice</span>
+          </div>
+          <div class="journal-content">
+            <div class="journal-meta">
+              <span>Aug 24, 2026</span>
+              <span>•</span>
+              <span>5 Min Read</span>
+            </div>
+            <h3 class="journal-title">The Architecture of Stillness: Cultivating Silence in a Busy World</h3>
+            <p class="journal-snippet">Discover five gentle micro-practices that create pockets of sanctuary within your workday without requiring hours of secluded meditation.</p>
+            <div class="journal-author-row">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Eleanor Vance" class="author-thumb" />
+              <div>
+                <div class="author-name">Eleanor Vance</div>
+                <div class="author-role">Spiritual Teacher</div>
+              </div>
+            </div>
+            <button class="btn-read-article" onclick="openBookingModal('Article: The Architecture of Stillness')">Read Full Journal Entry &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="journal-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="journal-cover">
+            <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80" alt="Chakras and Sound Therapy" class="journal-img" />
+            <span class="journal-tag">Sound & Energy</span>
+          </div>
+          <div class="journal-content">
+            <div class="journal-meta">
+              <span>Aug 16, 2026</span>
+              <span>•</span>
+              <span>7 Min Read</span>
+            </div>
+            <h3 class="journal-title">Demystifying Sound Healing: How Frequencies Reset the Nervous System</h3>
+            <p class="journal-snippet">An exploration of brainwave entrainment, binaural resonance, and why sound therapy provides fast relief for chronic stress and mental fatigue.</p>
+            <div class="journal-author-row">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Devin Thorne" class="author-thumb" />
+              <div>
+                <div class="author-name">Devin Thorne</div>
+                <div class="author-role">Sound Alchemist</div>
+              </div>
+            </div>
+            <button class="btn-read-article" onclick="openBookingModal('Article: Demystifying Sound Healing')">Read Full Journal Entry &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="journal-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="journal-cover">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=80" alt="Morning Sacred Rituals" class="journal-img" />
+            <span class="journal-tag">Ritual & Lifestyle</span>
+          </div>
+          <div class="journal-content">
+            <div class="journal-meta">
+              <span>Aug 08, 2026</span>
+              <span>•</span>
+              <span>4 Min Read</span>
+            </div>
+            <h3 class="journal-title">Creating a Sacred Morning Altar: Setting Daily Intentional Space</h3>
+            <p class="journal-snippet">Step-by-step guidance on creating a dedicated home corner with crystals, botanical incense, and mindful reminders to anchor your morning state.</p>
+            <div class="journal-author-row">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Aria Stone" class="author-thumb" />
+              <div>
+                <div class="author-name">Aria Stone</div>
+                <div class="author-role">Holistic Herbalist</div>
+              </div>
+            </div>
+            <button class="btn-read-article" onclick="openBookingModal('Article: Sacred Morning Altar')">Read Full Journal Entry &rarr;</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>﻿  <!-- Wix Pricing Plans Clone Section -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="eyebrow">MEMBERSHIP PATHWAYS</span>
+        <h2 class="section-title">Deepen Your <em>Journey</em></h2>
+        <div class="gold-divider center"></div>
+        <p class="section-subtitle">Invest in ongoing nourishment with flexible monthly and annual sanctuary passes designed for every phase of growth.</p>
+        
+        <!-- Monthly / Annual Toggle -->
+        <div class="pricing-toggle-wrap">
+          <span class="toggle-lbl active" id="monthlyToggleLabel">Billed Monthly</span>
+          <label class="pricing-switch">
+            <input type="checkbox" id="pricingBillingToggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-lbl" id="annualToggleLabel">Billed Annually <span class="discount-badge">SAVE 20%</span></span>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Tier 1: Seeker -->
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card-header">
+            <div class="tier-glyph">🌱</div>
+            <h3 class="tier-name">Seeker Pass</h3>
+            <p class="tier-target">For individuals beginning their regular meditation and wellness practice.</p>
+          </div>
+          <div class="tier-price-row">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="49" data-annual="39">49</span>
+            <span class="period">/ month</span>
+          </div>
+          <div class="pricing-card-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check" class="icon-check"></i> 4 Studio Classes or Meditations per month</li>
+            <li><i data-lucide="check" class="icon-check"></i> Access to On-Demand Audio Meditations</li>
+            <li><i data-lucide="check" class="icon-check"></i> 10% Discount on Sacred Events & Workshops</li>
+            <li><i data-lucide="check" class="icon-check"></i> Community Journal & Discussion Access</li>
+            <li class="inactive"><i data-lucide="x" class="icon-cross"></i> Private 1-on-1 Healing Sessions</li>
+          </ul>
+          <button class="btn-pricing-outline full-width" onclick="openBookingModal('Seeker Membership ($49/mo)')">Begin Seeker Path</button>
+        </div>
+
+        <!-- Tier 2: Devotee (Featured) -->
+        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="featured-badge">✦ MOST BELOVED CHOICE ✦</div>
+          <div class="pricing-card-header">
+            <div class="tier-glyph">✨</div>
+            <h3 class="tier-name">Devotee Pass</h3>
+            <p class="tier-target">For dedicated practitioners seeking unlimited weekly immersion.</p>
+          </div>
+          <div class="tier-price-row">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="119" data-annual="95">119</span>
+            <span class="period">/ month</span>
+          </div>
+          <div class="pricing-card-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check" class="icon-check"></i> <strong>Unlimited</strong> Studio & Meditation Classes</li>
+            <li><i data-lucide="check" class="icon-check"></i> 1 Complimentary 60-min Sound Bath / Mo</li>
+            <li><i data-lucide="check" class="icon-check"></i> 20% Discount on Full Moon & Special Events</li>
+            <li><i data-lucide="check" class="icon-check"></i> Priority Weekend Retreat Registration</li>
+            <li><i data-lucide="check" class="icon-check"></i> Monthly Members-Only Circle Gathering</li>
+          </ul>
+          <button class="btn-gold full-width" onclick="openBookingModal('Devotee Membership ($119/mo)')">Join Devotee Circle</button>
+        </div>
+
+        <!-- Tier 3: Luminary -->
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-card-header">
+            <div class="tier-glyph">👑</div>
+            <h3 class="tier-name">Luminary VIP</h3>
+            <p class="tier-target">Comprehensive master mentorship with personalized one-on-one sessions.</p>
+          </div>
+          <div class="tier-price-row">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="249" data-annual="199">249</span>
+            <span class="period">/ month</span>
+          </div>
+          <div class="pricing-card-divider"></div>
+          <ul class="tier-features">
+            <li><i data-lucide="check" class="icon-check"></i> Unlimited Studio & Meditation Access</li>
+            <li><i data-lucide="check" class="icon-check"></i> <strong>2 Private 90-min Healing Sessions / Mo</strong></li>
+            <li><i data-lucide="check" class="icon-check"></i> Free Entry to All Monthly Full Moon Events</li>
+            <li><i data-lucide="check" class="icon-check"></i> 1-on-1 Direct Spiritual Mentor Access</li>
+            <li><i data-lucide="check" class="icon-check"></i> Exclusive Annual Retreat VIP Discount (35%)</li>
+          </ul>
+          <button class="btn-pricing-outline full-width" onclick="openBookingModal('Luminary VIP Membership ($249/mo)')">Awaken Luminary</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Testimonials Slider -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="eyebrow">TRANSFORMATION STORIES</span>
+        <h2 class="section-title">Voices from Our <em>Sanctuary Circle</em></h2>
+        <div class="gold-divider center"></div>
+      </div>
+
+      <div class="testimonials-carousel-wrap" data-aos="fade-up" data-aos-delay="150">
+        <div class="testimonials-track" id="testimonialsTrack">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-inner-card">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"Walking into Serenity Center felt like exhaling a breath I had been holding for ten years. The sound bath and Reiki sessions unlocked a profound emotional clarity that therapy alone couldn't reach."</p>
+              <div class="t-profile">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Maya Lin" class="t-avatar" />
+                <div>
+                  <div class="t-name">Maya Lin</div>
+                  <div class="t-loc">Sedona Resident · 2-Year Member</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-inner-card">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"The 3-Day Silence & Somatics Retreat was the turning point in my life. The teachers hold space with unmatched grace and zero judgment. My mind has never felt this uncluttered."</p>
+              <div class="t-profile">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Julian Vance" class="t-avatar" />
+                <div>
+                  <div class="t-name">Julian Vance</div>
+                  <div class="t-loc">Phoenix, AZ · Retreat Attendee</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-inner-card">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"I came as a complete skeptic, simply looking for stress relief. The grounding practices, welcoming community, and beautiful sanctuary grounds made Serenity my absolute favorite place on earth."</p>
+              <div class="t-profile">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Dr. Sarah Jenkins" class="t-avatar" />
+                <div>
+                  <div class="t-name">Dr. Sarah Jenkins</div>
+                  <div class="t-loc">Integrative Physician · Luminary Member</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Navigation -->
+        <div class="carousel-controls">
+          <button class="carousel-btn prev" id="tPrevBtn" aria-label="Previous">&larr;</button>
+          <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+          <button class="carousel-btn next" id="tNextBtn" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>﻿  <!-- Location & Visit Section -->
+  <section id="contact" class="visit-section">
+    <div class="container">
+      <div class="visit-grid">
+        <div class="visit-info-card" data-aos="fade-right">
+          <span class="eyebrow">COME VISIT</span>
+          <h2 class="section-title">Our Sacred <em>Sanctuary Grounds</em></h2>
+          <div class="gold-divider"></div>
+          <p class="body-text">Our tranquil 6-acre grounds feature outdoor meditation labyrinths, crystal gardens, tea pavilions, and climate-controlled cedar meditation halls.</p>
+          
+          <div class="visit-details-list">
+            <div class="visit-item">
+              <div class="visit-icon-box"><i data-lucide="map-pin" class="icon-sm"></i></div>
+              <div>
+                <strong>Physical Address:</strong><br>
+                42 Sacred Grove Way, Sedona, AZ 86336
+              </div>
+            </div>
+            <div class="visit-item">
+              <div class="visit-icon-box"><i data-lucide="clock" class="icon-sm"></i></div>
+              <div>
+                <strong>Sanctuary Hours:</strong><br>
+                Monday – Saturday: 7:00 AM – 8:30 PM<br>
+                Sunday: 8:00 AM – 6:00 PM (Silent Hours 8–10 AM)
+              </div>
+            </div>
+            <div class="visit-item">
+              <div class="visit-icon-box"><i data-lucide="phone" class="icon-sm"></i></div>
+              <div>
+                <strong>Telephone:</strong><br>
+                (928) 555-0198
+              </div>
+            </div>
+            <div class="visit-item">
+              <div class="visit-icon-box"><i data-lucide="mail" class="icon-sm"></i></div>
+              <div>
+                <strong>Inquiries & Bookings:</strong><br>
+                welcome@serenitysanctuary.org
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-form-card" data-aos="fade-left">
+          <h3 class="form-title">Send a Sacred Message</h3>
+          <p class="form-sub">Whether you have questions about retreats or wish to schedule a private consultation, we warmly await your note.</p>
+          
+          <form id="sanctuaryContactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>Your Full Name *</label>
+                <input type="text" placeholder="e.g. Elena Ramos" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="e.g. elena@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Interest / Area of Inward Focus</label>
+              <select>
+                <option>General Sanctuary Visit</option>
+                <option>Private Reiki & Energy Healing</option>
+                <option>Sound Bath & Meditation</option>
+                <option>Upcoming Retreat Inquiries</option>
+                <option>Membership Plans</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Note / Heartfelt Message *</label>
+              <textarea rows="4" placeholder="Tell us about what you are seeking or questions you may have..." required></textarea>
+            </div>
+            <button type="submit" class="btn-gold full-width">Send Message with Grace &rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Gratitude Circle Banner -->
+  <section class="newsletter-strip">
+    <div class="container">
+      <div class="newsletter-box" data-aos="zoom-in">
+        <div class="newsletter-symbol">✧ 𓇬 ✧</div>
+        <h2 class="newsletter-title">Join Our <em>Weekly Wisdom Circle</em></h2>
+        <p class="newsletter-lead">Receive soothing guided meditations, moon cycle rituals, event releases, and exclusive community discounts delivered to your inbox every Sunday morning.</p>
+        
+        <form class="newsletter-form-ui" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" placeholder="Enter your sacred email address..." required />
+          <button type="submit" class="btn-gold">Subscribe to Wisdom</button>
+        </form>
+        <p class="newsletter-privacy">✦ Zero spam. Unconditional respect for your privacy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand & Ethos -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand-header">
+            <div class="brand-emblem small">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/>
+                <circle cx="50" cy="50" r="32" stroke="currentColor" stroke-width="2"/>
+                <polygon points="50,22 58,42 78,50 58,58 50,78 42,58 22,50 42,42" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <div class="footer-brand-name">SERENITY</div>
+              <div class="footer-brand-sub">Spiritual Center</div>
+            </div>
+          </div>
+          <p class="footer-about-text">
+            A dedicated sanctuary where modern seekers reunite with inner tranquility, ancient healing arts, vibrational music, and conscious community.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Podcast"><i data-lucide="podcast"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Pathways -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Sacred Offerings</h4>
+          <ul class="footer-links-list">
+            <li><a href="#offerings">Crystal Sound Baths</a></li>
+            <li><a href="#offerings">Usui Reiki Attunements</a></li>
+            <li><a href="#offerings">Kundalini & Somatic Yoga</a></li>
+            <li><a href="#offerings">Vipassana Meditation</a></li>
+            <li><a href="#offerings">1-on-1 Soul Guidance</a></li>
+            <li><a href="#offerings">Botanical Cleanse</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Community & Events -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Sanctuary Life</h4>
+          <ul class="footer-links-list">
+            <li><a href="#events">Upcoming Full Moon Gatherings</a></li>
+            <li><a href="#events">Weekend Silent Retreats</a></li>
+            <li><a href="#pricing">Membership Passes</a></li>
+            <li><a href="#journal">Wisdom Journal</a></li>
+            <li><a href="#about">Our Core Philosophy</a></li>
+            <li><a href="#testimonials">Seeker Testimonials</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hours -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Sanctuary Hours</h4>
+          <p class="footer-hours-row"><strong>Mon – Sat:</strong> 7:00 AM – 8:30 PM</p>
+          <p class="footer-hours-row"><strong>Sunday:</strong> 8:00 AM – 6:00 PM</p>
+          <p class="footer-hours-row"><strong>Quiet Hours:</strong> Daily 7:00 – 8:30 AM</p>
+          <div class="footer-contact-badge">
+            <i data-lucide="map-pin" class="icon-xs"></i> Sedona Red Rock Sanctuary
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">© 2026 Serenity Spiritual Center Inc. All rights reserved. Created with mindfulness & purpose.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Code of Ethics</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Return to top of page">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Interactive Modal: Universal Booking / RSVP -->
+  <div class="modal-backdrop" id="universalModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      <div class="modal-header">
+        <span class="modal-eyebrow">SANCTUARY RESERVATION</span>
+        <h3 class="modal-title" id="modalTitle">Reserve Your Sacred Space</h3>
+        <p class="modal-subtitle" id="modalSubtitle">Fill in your details below to confirm your session or workshop registration.</p>
+      </div>
+      <form class="modal-form" onsubmit="handleBookingSubmit(event)">
+        <input type="hidden" id="modalSelectionInput" value="General" />
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" required placeholder="e.g. Maya" />
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" required placeholder="e.g. Lin" />
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" required placeholder="e.g. maya@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" required placeholder="e.g. (555) 019-2834" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Preferred Date / Time Window</label>
+          <input type="text" placeholder="e.g. Next Saturday Morning or Sep 18 Full Moon" />
+        </div>
+        <div class="form-group">
+          <label>Special Intentions or Physical Needs</label>
+          <textarea rows="3" placeholder="Let us know any injuries, intentions, or questions you have..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold full-width">Complete Sacred Reservation &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon">✨</div>
+    <div class="toast-content">
+      <div class="toast-title" id="toastTitle">Reservation Received</div>
+      <div class="toast-msg" id="toastMsg">May peace and light accompany your journey. We will be in touch shortly.</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

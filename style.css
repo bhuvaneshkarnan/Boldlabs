@@ -2092,3 +2092,80 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   UNIFIED GLOBAL BUTTON SYSTEM (SIGNATURE BOLDLABS BUTTON STYLE)
+   ========================================================================== */
+
+.pill-btn, .btn, .hero-cta-btn, .service-cta-btn, .pricing-btn, .sidebar-btn, 
+.pill-btn-primary, .pill-btn-secondary, .service-card .service-cta-btn, 
+.pricing-card .pill-btn, .sticky-wa-float, button[type="submit"] {
+  font-family: var(--font-display) !important;
+  font-weight: 800 !important;
+  font-size: 0.88rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+  border-radius: 8px !important;
+  padding: 12px 22px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease !important;
+  border: 1.5px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  line-height: 1.2 !important;
+}
+
+/* Primary Green / WhatsApp AI CTA */
+.pill-btn-primary, .btn-primary, .btn-whatsapp, .hero-cta-btn-green, .service-cta-green, 
+.pricing-card-featured .pill-btn, .sticky-wa-float, button[type="submit"] {
+  background-color: #25D366 !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+}
+
+.pill-btn-primary:hover, .btn-primary:hover, .btn-whatsapp:hover, .hero-cta-btn-green:hover, 
+.service-cta-green:hover, .sticky-wa-float:hover, button[type="submit"]:hover {
+  background-color: #20BD5A !important;
+  color: #000000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+}
+
+/* Secondary White CTA */
+.pill-btn-secondary, .btn-secondary, .btn-white, .hero-cta-btn-white, .service-cta-white,
+.service-card .service-cta-btn, .pricing-card .pill-btn, .sidebar-btn {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+}
+
+.pill-btn-secondary:hover, .btn-secondary:hover, .btn-white:hover, .hero-cta-btn-white:hover, 
+.service-cta-white:hover, .pricing-card .pill-btn:hover, .sidebar-btn:hover {
+  background-color: #F8FAFC !important;
+  color: #000000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+}
+
+/* Responsive adjustments for mobile buttons */
+@media (max-width: 768px) {
+  .hero-cta-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .hero-cta-wrapper .hero-cta-btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 !important;
+    padding: 12px 20px !important;
+    font-size: 0.85rem !important;
+  }
+}
