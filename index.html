@@ -1391,28 +1391,7 @@
         });
       });
 
-      // 3. Smooth Scrolling for Navigation Links
-      const navLinks = document.querySelectorAll('.navbar a[href^="#"], .hero-cta-btn, .pricing-btn, .sidebar-btn, .pill-btn, [href="#plans"]');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (!targetId || !targetId.startsWith('#')) return;
-          if (targetId === '#') return;
-          
-          e.preventDefault();
-          const targetEl = document.querySelector(targetId);
-          
-          if (targetEl) {
-            targetEl.scrollIntoView({
-              behavior: 'smooth'
-            });
-            
-            // Manage accessibility and focus
-            targetEl.setAttribute('tabindex', '-1');
-            targetEl.focus({ preventScroll: true });
-          }
-        });
-      });
+      // 3. Anchor Link Navigation Handled via Lenis Engine
 
       // 4. Scroll Reveal IntersectionObserver
       document.documentElement.classList.add('js-active');
@@ -1678,12 +1657,12 @@
     document.addEventListener('DOMContentLoaded', () => {
       if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis({
-          duration: 1.2,
+          duration: 1.0,
           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           orientation: 'vertical',
           smoothWheel: true,
-          wheelMultiplier: 1.1,
-          touchMultiplier: 1.5,
+          smoothTouch: false,
+          wheelMultiplier: 1.0,
         });
 
         function raf(time) {
@@ -1700,7 +1679,7 @@
               const targetElem = document.querySelector(targetId);
               if (targetElem) {
                 e.preventDefault();
-                lenis.scrollTo(targetElem, { offset: -80 });
+                lenis.scrollTo(targetElem, { offset: -90 });
               }
             }
           });
