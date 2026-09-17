@@ -1152,10 +1152,10 @@ h3 {
 
 /* --- Premium Footer --- */
 .main-footer {
-  background-color: var(--color-bg-light);
-  color: var(--color-text-dark);
-  border-top: var(--border-width) solid var(--color-border-light);
-  padding: var(--space-2xl) 0 var(--space-md);
+  background-color: #000000;
+  color: #CBD5E1;
+  border-top: 2px solid #1E293B;
+  padding: var(--space-2xl) 0 0;
   font-family: var(--font-mono);
 }
 
@@ -1175,14 +1175,15 @@ h3 {
 .footer-logo {
   font-family: var(--font-display);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .footer-tagline {
-  font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.82rem;
+  color: #94A3B8;
   line-height: 1.5;
   max-width: 280px;
 }
@@ -1197,25 +1198,27 @@ h3 {
   font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: 700;
-  border: var(--border-width) solid var(--color-border-light);
+  border: 1px solid #1E293B;
   padding: 4px 8px;
   background-color: transparent;
+  color: #94A3B8;
   transition: all var(--transition-normal);
 }
 
 .footer-socials a:hover {
-  background-color: var(--color-text-dark);
-  color: var(--color-bg-light);
+  background-color: #25D366;
+  color: #000000;
+  border-color: #25D366;
 }
 
 .footer-col-title {
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
   text-transform: uppercase;
   margin-bottom: var(--space-md);
   letter-spacing: 0.05em;
-  color: var(--color-text-dark);
+  color: #FFFFFF;
 }
 
 .footer-links {
@@ -1228,28 +1231,41 @@ h3 {
 }
 
 .footer-links a {
-  font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.85);
+  font-size: 0.82rem;
+  color: #94A3B8;
+  text-decoration: none;
   transition: color var(--transition-normal);
 }
 
 .footer-links a:hover {
-  color: var(--color-text-dark);
-  text-decoration: underline;
+  color: #25D366;
 }
 
 .footer-bottom {
-  border-top: 1px dashed rgba(0, 0, 0, 0.1);
-  padding: var(--space-md) 0;
-  font-size: 0.7rem;
-  color: rgba(0, 0, 0, 0.80);
-  background-color: var(--color-bg-light);
+  border-top: 1px solid #1E293B;
+  padding: var(--space-lg) 0 65px 0;
+  font-size: 0.75rem;
+  color: #64748B;
+  background-color: #000000;
+  width: 100%;
 }
 
 .footer-bottom .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom a {
+  color: #64748B;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+.footer-bottom a:hover {
+  color: #25D366;
 }
 
 /* --- Responsive Adaptations --- */
