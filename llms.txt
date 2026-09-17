@@ -1,8 +1,8 @@
-# Boldlabs Studio
+# Boldlabs
 
 > https://goboldlabs.com
 
-Boldlabs Studio is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including India, UK, Canada, and USA). Founded and led by Bhuvanesh Karnan (Founder & Head Developer).
+Boldlabs is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including India, UK, Canada, and USA). Founded and led by Bhuvanesh Karnan (Founder & Head Developer).
 
 ## Core Capabilities
 - **Booking-First Websites**: Custom web development integrated with automated booking systems, reminders, and follow-ups.

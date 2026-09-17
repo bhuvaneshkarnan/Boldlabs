@@ -393,7 +393,7 @@
     "date": "2026-10-08",
     "date_display": "08 OCT 2026",
     "question": "How do I teach Google's AI that I am the owner of my company?",
-    "answer": "You must use interconnected Schema Markup. Define a 'Person' schema for yourself, and an 'Organization' schema for your agency. Link them using the 'founder' or 'employee' property. This explicitly writes the relationship into the semantic web, allowing AI models to confidently answer questions like 'Who founded Boldlabs Studio?'"
+    "answer": "You must use interconnected Schema Markup. Define a 'Person' schema for yourself, and an 'Organization' schema for your agency. Link them using the 'founder' or 'employee' property. This explicitly writes the relationship into the semantic web, allowing AI models to confidently answer questions like 'Who founded Boldlabs?'"
   },
   {
     "slug": "zero-click-searches-ai",

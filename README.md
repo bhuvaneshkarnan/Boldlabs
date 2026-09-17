@@ -1,6 +1,6 @@
-# Boldlabs Studio — Pixel-Brutalist Dark Homepage
+# Boldlabs — Pixel-Brutalist Dark Homepage
 
-A premium, pixel-brutalist, and responsive single-page homepage for **Boldlabs Studio** (Bhuvanesh), a booking-first website design and automation service. Built using semantic, accessible HTML5, responsive vanilla CSS, and clean interaction scripts.
+A premium, pixel-brutalist, and responsive single-page homepage for **Boldlabs** (Bhuvanesh), a booking-first website design and automation service. Built using semantic, accessible HTML5, responsive vanilla CSS, and clean interaction scripts.
 
 This visual design is derived directly from custom grid layouts, game-like stats cards, pixelated borders, and stark monochromatic contrasts.
 
@@ -57,7 +57,7 @@ This site loads local assets situated in the root folder:
 
 Adapted from analyzing top B2B web agency competitors to maximize business trust and authority:
 1. **Infinite Partner Marquee**: An auto-scrolling ticker below the hero section displaying partner brands (`ZYROPETS`, `HIIPOOH`, `FURORA`, `SWARNA IMPON`, `ZEZOW`, `AMIZHTHINI FOODS`, `180 TATTOO`, `DENTAL CARE`, `SMART PARKNGO`, `RGHT TAX`) rendered in high-contrast pixel typography, with a trust signal label above.
-2. **Mission Timeline Section**: A dedicated 5-stage chronological grid layout representing the Boldlabs Studio project cycle.
+2. **Mission Timeline Section**: A dedicated 5-stage chronological grid layout representing the Boldlabs project cycle.
 3. **Value Delivered Checklist**: A dedicated objectives box inside the Case Studies detail panel outlining the solutions delivered (funnel tracking, simplified checkout, SMS reminders, CRM setups).
 4. **The Solution Grid**: A 3-column pixel-brutalist grid outlining the core package: Booking-First Website, Reminders & Follow-Ups, and Monthly Subscription Care.
 5. **Services Grid**: A separate 2x2 capabilities grid showcasing additional tailored offerings: Landing Pages, E-Commerce, AI Automations, and Whitelabel Partnerships.
