@@ -127,14 +127,17 @@ post_template = """<!DOCTYPE html>
   <meta property="og:url" content="https://goboldlabs.com/blog/{{SLUG}}.html">
   <meta property="og:title" content="{{TITLE}} — Boldlabs Blog">
   <meta property="og:description" content="{{DESCRIPTION}}">
-  <meta property="og:image" content="https://goboldlabs.com/shakanksh_portrait.png">
+  <meta property="og:image" content="https://goboldlabs.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://goboldlabs.com/blog/{{SLUG}}.html">
   <meta property="twitter:title" content="{{TITLE}} — Boldlabs Blog">
   <meta property="twitter:description" content="{{DESCRIPTION}}">
-  <meta property="twitter:image" content="https://goboldlabs.com/shakanksh_portrait.png">
+  <meta property="twitter:image" content="https://goboldlabs.com/og-image.png">
 
   <!-- Blog Schema -->
   <script type="application/ld+json">
@@ -613,14 +616,17 @@ blog_home_template = """<!DOCTYPE html>
   <meta property="og:url" content="https://goboldlabs.com/blog.html">
   <meta property="og:title" content="Boldlabs Blog — Web Design, SEO & Automation Insights">
   <meta property="og:description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks, local SEO, and AI automations.">
-  <meta property="og:image" content="https://goboldlabs.com/shakanksh_portrait.png">
+  <meta property="og:image" content="https://goboldlabs.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://goboldlabs.com/blog.html">
   <meta property="twitter:title" content="Boldlabs Blog — Web Design, SEO & Automation Insights">
   <meta property="twitter:description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks, local SEO, and AI automations.">
-  <meta property="twitter:image" content="https://goboldlabs.com/shakanksh_portrait.png">
+  <meta property="twitter:image" content="https://goboldlabs.com/og-image.png">
 
   <style>
     .subpage-hero {
