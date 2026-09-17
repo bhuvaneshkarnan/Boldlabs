@@ -1199,74 +1199,85 @@
     
     <!-- Recent Blog Articles Section -->
         <!-- About Me / Founder Section -->
-    <section id="about" class="section reveal-on-scroll" style="background: #0A0A0C; border-top: 1px solid #1E293B; border-bottom: 1px solid #1E293B;">
+    <section id="about" class="section about-section reveal-on-scroll">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header about-section-header">
           <h2>ABOUT THE ENGINEER.</h2>
           <span class="section-subtitle">Zero agency overhead. One engineer who builds, deploys, and stays accountable.</span>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); align-items: center;">
+        <div class="about-grid">
           <!-- Profile Card -->
-          <div style="border: 2px solid #25D366; background: #061910; padding: var(--space-xl); border-radius: 8px; position: relative;">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: var(--space-md);">
-              <div style="width: 64px; height: 64px; border-radius: 50%; background: #25D366; color: #000000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 1.5rem;">
-                BK
+          <div class="about-profile-card">
+            <div class="about-profile-header">
+              <div class="about-avatar-wrapper">
+                <picture>
+                  <source srcset="bhuvanesh_profile.webp" type="image/webp">
+                  <img src="bhuvanesh_profile.png" alt="Bhuvanesh Karnan - Founder & Systems Engineer at Boldlabs" width="150" height="150" class="about-avatar-img" loading="lazy">
+                </picture>
+                <span class="about-status-dot" title="Online & Ready to Build"></span>
               </div>
               <div>
-                <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #FFFFFF; margin: 0; text-transform: uppercase;">Bhuvanesh Karnan</h3>
-                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #25D366; font-weight: 700;">Founder & Lead Systems Engineer</span>
+                <h3 class="about-founder-name">Bhuvanesh Karnan</h3>
+                <span class="about-founder-title">Founder & Lead Systems Engineer</span>
               </div>
             </div>
 
-            <p style="font-family: var(--font-mono); font-size: 0.85rem; color: #CBD5E1; line-height: 1.6; margin-bottom: var(--space-md);">
+            <p class="about-quote">
               "I don't pass your project off to junior devs or account managers. I personally architect your website, build your 24/7 AI WhatsApp receptionists, and monitor your infrastructure every month."
             </p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">
-              <span style="background: #0F172A; padding: 4px 10px; border-radius: 4px; border: 1px solid #334155;">📍 Madurai, Tamil Nadu, India</span>
-              <span style="background: #0F172A; padding: 4px 10px; border-radius: 4px; border: 1px solid #334155;">⚡ 31+ Live Client Sites</span>
-              <span style="background: #0F172A; padding: 4px 10px; border-radius: 4px; border: 1px solid #334155;">💬 WhatsApp AI Specialist</span>
+            <div class="about-badges">
+              <span class="about-badge">📍 Madurai, Tamil Nadu, India</span>
+              <span class="about-badge">⚡ 31+ Live Client Sites</span>
+              <span class="about-badge">💬 WhatsApp AI Specialist</span>
             </div>
 
             <!-- Social Links inside About Card -->
-            <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid #1E293B; display: flex; gap: 16px; font-family: var(--font-mono); font-size: 0.8rem;">
-              <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" style="color: #25D366; text-decoration: none; font-weight: 700;">LinkedIn ↗</a>
-              <a href="https://github.com/bhuvaneshkarnan" target="_blank" rel="noopener" style="color: #25D366; text-decoration: none; font-weight: 700;">GitHub ↗</a>
-              <a href="https://www.instagram.com/goboldlabs" target="_blank" rel="noopener" style="color: #25D366; text-decoration: none; font-weight: 700;">Instagram ↗</a>
+            <div class="about-socials">
+              <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" class="about-social-link">LinkedIn ↗</a>
+              <a href="https://github.com/bhuvaneshkarnan" target="_blank" rel="noopener" class="about-social-link">GitHub ↗</a>
+              <a href="https://www.instagram.com/goboldlabs" target="_blank" rel="noopener" class="about-social-link">Instagram ↗</a>
             </div>
           </div>
 
           <!-- Trust Principles & Location Info -->
-          <div>
-            <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: #FFFFFF; margin-bottom: var(--space-md); text-transform: uppercase;">
+          <div class="about-trust-content">
+            <h3 class="about-trust-heading">
               Why Work Directly With Me?
             </h3>
             
-            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-              <div style="display: flex; gap: 12px;">
-                <span style="color: #25D366; font-weight: 800;">✓</span>
+            <div class="about-trust-list">
+              <div class="about-trust-item">
+                <span class="about-trust-check">✓</span>
                 <div>
-                  <h4 style="font-family: var(--font-display); font-size: 0.95rem; color: #FFFFFF; margin: 0;">Direct WhatsApp Access</h4>
-                  <p style="font-size: 0.82rem; color: #94A3B8; margin-top: 2px;">No support tickets or multi-day email chains. You talk directly to me on WhatsApp for quick edits and questions.</p>
+                  <h4 class="about-trust-title">Direct WhatsApp Access</h4>
+                  <p class="about-trust-desc">No support tickets or multi-day email chains. You talk directly to me on WhatsApp for quick edits and questions.</p>
                 </div>
               </div>
 
-              <div style="display: flex; gap: 12px;">
-                <span style="color: #25D366; font-weight: 800;">✓</span>
+              <div class="about-trust-item">
+                <span class="about-trust-check">✓</span>
                 <div>
-                  <h4 style="font-family: var(--font-display); font-size: 0.95rem; color: #FFFFFF; margin: 0;">Battle-Tested Stack</h4>
-                  <p style="font-size: 0.82rem; color: #94A3B8; margin-top: 2px;">Custom WordPress, React, Shopify, and official WhatsApp Business API integrations — built for 99.9% uptime.</p>
+                  <h4 class="about-trust-title">Battle-Tested Stack</h4>
+                  <p class="about-trust-desc">Custom WordPress, React, Shopify, and official WhatsApp Business API integrations — built for 99.9% uptime.</p>
                 </div>
               </div>
 
-              <div style="display: flex; gap: 12px;">
-                <span style="color: #25D366; font-weight: 800;">✓</span>
+              <div class="about-trust-item">
+                <span class="about-trust-check">✓</span>
                 <div>
-                  <h4 style="font-family: var(--font-display); font-size: 0.95rem; color: #FFFFFF; margin: 0;">Registered Local Business</h4>
-                  <p style="font-size: 0.82rem; color: #94A3B8; margin-top: 2px;">Operating from Madurai, India, serving service businesses and healthcare clinics across India, USA, and UK.</p>
+                  <h4 class="about-trust-title">Registered Local Business</h4>
+                  <p class="about-trust-desc">Operating from Madurai, India, serving service businesses and healthcare clinics across India, USA, and UK.</p>
                 </div>
               </div>
+            </div>
+
+            <div class="about-direct-cta">
+              <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20would%20like%20to%20discuss%20a%20website%20%2F%20WhatsApp%20AI%20system." target="_blank" rel="noopener" class="hero-cta-btn" style="background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 800; border-radius: 8px; box-shadow: 4px 4px 0px #000000; font-size: 0.82rem; padding: 12px 20px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; width: 100%; max-width: 320px; justify-content: center;">
+                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                CHAT WITH BHUVANESH →
+              </a>
             </div>
           </div>
         </div>

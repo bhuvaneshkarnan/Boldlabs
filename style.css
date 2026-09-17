@@ -2169,3 +2169,258 @@ h3 {
     font-size: 0.85rem !important;
   }
 }
+
+
+/* ==========================================================================
+   ABOUT THE ENGINEER SECTION (MOBILE & DESKTOP OPTIMIZED)
+   ========================================================================== */
+.about-section {
+  background: #0A0A0C !important;
+  border-top: 1px solid #1E293B !important;
+  border-bottom: 1px solid #1E293B !important;
+  padding: var(--space-2xl) 0 !important;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-profile-card {
+  border: 2px solid #25D366;
+  background: #061910;
+  padding: 28px 32px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.12);
+}
+
+.about-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.about-avatar-wrapper {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2.5px solid #25D366;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(37, 211, 102, 0.35);
+}
+
+.about-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.about-status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #25D366;
+  border: 2.5px solid #061910;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  box-shadow: 0 0 8px #25D366;
+}
+
+.about-founder-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.about-founder-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #25D366;
+  font-weight: 700;
+  display: block;
+}
+
+.about-quote {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.about-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.about-badge {
+  background: #0F172A;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: #94A3B8;
+  display: inline-flex;
+  align-items: center;
+}
+
+.about-socials {
+  border-top: 1px solid #1E293B;
+  padding-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.about-social-link {
+  color: #25D366;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 5px 10px;
+  background: rgba(37, 211, 102, 0.08);
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.about-social-link:hover {
+  background: #25D366;
+  color: #000000;
+  border-color: #25D366;
+}
+
+.about-trust-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-trust-heading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.about-trust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-trust-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.about-trust-check {
+  color: #25D366;
+  font-weight: 800;
+  font-size: 1rem;
+  background: rgba(37, 211, 102, 0.12);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.about-trust-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  margin: 0 0 4px;
+}
+
+.about-trust-desc {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-direct-cta {
+  margin-top: 8px;
+}
+
+/* Mobile Specific Breakpoints for About Section */
+@media (max-width: 768px) {
+  .about-section {
+    padding: var(--space-xl) 0 !important;
+  }
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .about-profile-card {
+    padding: 20px 18px !important;
+    border-radius: 10px !important;
+  }
+  .about-avatar-wrapper {
+    width: 68px !important;
+    height: 68px !important;
+  }
+  .about-founder-name {
+    font-size: 1.15rem !important;
+  }
+  .about-founder-title {
+    font-size: 0.75rem !important;
+  }
+  .about-quote {
+    font-size: 0.84rem !important;
+    line-height: 1.55 !important;
+  }
+  .about-badges {
+    gap: 6px !important;
+  }
+  .about-badge {
+    font-size: 0.7rem !important;
+    padding: 5px 9px !important;
+  }
+  .about-trust-heading {
+    font-size: 1.2rem !important;
+  }
+  .about-direct-cta .hero-cta-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-profile-header {
+    gap: 12px !important;
+  }
+  .about-avatar-wrapper {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .about-founder-name {
+    font-size: 1.05rem !important;
+  }
+  .about-founder-title {
+    font-size: 0.72rem !important;
+  }
+}
