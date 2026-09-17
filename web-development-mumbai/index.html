@@ -12,7 +12,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 
   <!-- Open Graph -->
@@ -115,245 +115,53 @@
   </script>
 
   <style>
-    :root {
-      --font-display: 'Space Grotesk', -apple-system, sans-serif;
-      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --color-primary: #25D366;
-      --color-dark: #000000;
-      --color-card: #0B0F19;
-      --color-border: #1E293B;
-      --color-text-main: #F8FAFC;
-      --color-text-dim: #94A3B8;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background-color: var(--color-dark);
-      color: var(--color-text-main);
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: var(--font-display);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-    }
-
-    /* Global Signature Button Styling */
-    .pill-btn, .pill-btn-primary, .pill-btn-secondary, .hero-cta-btn, .service-cta-btn {
-      font-family: var(--font-display) !important;
-      font-weight: 700 !important;
-      font-size: 0.88rem !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.02em !important;
-      border-radius: 8px !important;
-      padding: 12px 24px !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      gap: 8px !important;
-      text-decoration: none !important;
-      cursor: pointer !important;
-      box-sizing: border-box !important;
-      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease !important;
-      border: 1.5px solid #000000 !important;
-      box-shadow: 4px 4px 0px #000000 !important;
-      line-height: 1.2 !important;
-    }
-
-    .pill-btn-primary {
-      background-color: #25D366 !important;
-      color: #000000 !important;
-    }
-    .pill-btn-primary:hover {
-      background-color: #20BD5A !important;
-      transform: translateY(-2px) !important;
-      box-shadow: 6px 6px 0px #000000 !important;
-    }
-
-    .pill-btn-secondary {
-      background-color: #FFFFFF !important;
-      color: #000000 !important;
-    }
-    .pill-btn-secondary:hover {
-      background-color: #F1F5F9 !important;
-      transform: translateY(-2px) !important;
-      box-shadow: 6px 6px 0px #000000 !important;
-    }
-
-    .subpage-hero {
-      padding: 120px 0 60px;
-      text-align: center;
-      background: radial-gradient(circle at 50% 20%, rgba(37, 211, 102, 0.08) 0%, transparent 70%);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .back-home-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--color-primary);
-      text-decoration: none;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .back-home-link:hover {
-      text-decoration: underline;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-primary);
-      display: block;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .hero-headline {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      max-width: 920px;
-      margin: 0 auto 18px;
-      color: #FFFFFF;
-    }
-
-    .hero-subhead {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: var(--color-text-dim);
-      max-width: 740px;
-      margin: 0 auto 32px;
-      line-height: 1.6;
-    }
-
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .trust-strip {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: #64748B;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .section-wrap {
-      padding: 80px 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .container-wide {
-      width: 90%;
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      color: #FFFFFF;
-      margin-bottom: 12px;
-    }
-
-    .section-header p {
-      color: var(--color-text-dim);
-      font-size: 1rem;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .feature-card {
-      background: var(--color-card);
+    /* Clean layout alignment matching index.html */
+    .city-feature-item {
+      background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 32px;
-      position: relative;
+      border-radius: 8px;
+      padding: var(--space-lg);
       transition: border-color 0.2s ease, transform 0.2s ease;
     }
-    .feature-card:hover {
-      border-color: var(--color-primary);
-      transform: translateY(-3px);
+    .city-feature-item:hover {
+      border-color: #25D366;
+      transform: translateY(-2px);
     }
-
-    .feature-card h3 {
-      font-size: 1.2rem;
+    .city-feature-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
       color: #FFFFFF;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
     }
-
-    .feature-card p {
-      font-size: 0.9rem;
-      color: var(--color-text-dim);
-      margin: 0;
+    .city-feature-item p {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
       line-height: 1.6;
+      margin: 0;
     }
 
-    .founder-card {
-      background: #0B0F19;
-      border: 1.5px solid #1E293B;
-      border-radius: 16px;
-      padding: 36px;
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 32px;
-      align-items: center;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      .founder-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    .faq-accordion {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .faq-item {
-      background: var(--color-card);
+    /* FAQ accordion matching index.html */
+    .faq-accordion-box {
       border: 1px solid var(--color-border);
       border-radius: 8px;
       overflow: hidden;
+      background: var(--color-bg-card);
     }
-
-    .faq-question {
+    .faq-row {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-row:last-child {
+      border-bottom: none;
+    }
+    .faq-btn {
       width: 100%;
-      padding: 20px 24px;
+      padding: var(--space-md) var(--space-lg);
       background: none;
       border: none;
       color: #FFFFFF;
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
       text-align: left;
       cursor: pointer;
@@ -361,41 +169,14 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .faq-answer {
-      padding: 0 24px 20px;
-      color: var(--color-text-dim);
-      font-size: 0.92rem;
-      line-height: 1.6;
+    .faq-btn:hover {
+      color: #25D366;
     }
-
-    .hub-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .hub-link {
-      background: #0B0F19;
-      border: 1px solid #1E293B;
-      border-radius: 8px;
-      padding: 16px 20px;
-      color: #CBD5E1;
-      text-decoration: none;
-      font-family: var(--font-display);
+    .faq-body {
+      padding: 0 var(--space-lg) var(--space-md);
+      color: var(--color-text-muted);
       font-size: 0.9rem;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all 0.2s ease;
-    }
-    .hub-link:hover {
-      border-color: var(--color-primary);
-      color: #FFFFFF;
-      background: #111827;
-      transform: translateX(3px);
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -422,74 +203,81 @@
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="/blog/">Blog</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="/whatsapp-automation-clinics/" class="pill-btn-primary" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; color: #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <a href="/whatsapp-automation-clinics/" class="pill-btn" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+        <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         WHATSAPP AI
       </a>
     </div>
   </nav>
 
-  <main>
-    <!-- Subpage Hero -->
-    <section class="subpage-hero">
-      <div class="container-wide">
-        <a href="/" class="back-home-link">← Back to Boldlabs Home</a>
-        <span class="hero-eyebrow">BOLDLABS — MUMBAI COMMERCIAL CENTER</span>
-        <h1 class="hero-headline">Elite Web Development for Mumbai's High-Stakes Businesses.</h1>
-        <p class="hero-subhead">In India's financial capital, first impressions are measured in milliseconds. I build ultra-fast, booking-first websites and 24/7 WhatsApp AI systems for Mumbai's private clinics, luxury services, and corporate practices.</p>
+  <!-- Main Content Container -->
+  <main id="main-content">
+
+    <!-- Hero Section (Harmonized with index.html) -->
+    <section id="home" class="hero">
+      <div class="container">
+        <a href="/" style="display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: #25D366; text-decoration: none; margin-bottom: var(--space-sm); text-transform: uppercase;">
+          ← Back to Boldlabs Home
+        </a>
+        <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: var(--space-xs);">BOLDLABS — MUMBAI COMMERCIAL CENTER</span>
+        <h1 class="hero-title">Elite Web Development for Mumbai's High-Stakes Businesses.</h1>
+        <p class="hero-subtitle">In India's financial capital, first impressions are measured in milliseconds. I build ultra-fast, booking-first websites and 24/7 WhatsApp AI systems for Mumbai's private clinics, luxury services, and corporate practices.</p>
         
-        <div class="hero-actions">
-          <a href="/whatsapp-automation-clinics/" class="pill-btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <div class="hero-cta-wrapper">
+          <a href="/whatsapp-automation-clinics/" class="hero-cta-btn" style="background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; border-radius: 8px; box-shadow: 4px 4px 0px #000000; font-size: 0.88rem; padding: 12px 22px; font-family: var(--font-display); display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+            <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
             TEST WHATSAPP AI DEMO →
           </a>
-          <a href="#contact" class="pill-btn-secondary">
+          <a href="#contact" class="hero-cta-btn" style="background: #FFFFFF; color: #000000; border: 1.5px solid #000000; font-weight: 700; border-radius: 8px; box-shadow: 4px 4px 0px #000000; font-size: 0.88rem; padding: 12px 22px; font-family: var(--font-display); display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
             START YOUR PROJECT →
           </a>
         </div>
 
-        <div class="trust-strip">
-          <span>🟢 Starting at ₹49,000 / $799</span>
-          <span>•</span>
-          <span>Serving Mumbai with 100% Founder Accountability</span>
-        </div>
+        <p style="font-size: 0.75rem; color: var(--color-text-muted); font-family: var(--font-mono); margin-bottom: var(--space-lg);">
+          🟢 Starting at ₹49,000 / $799 • Serving Mumbai with 100% Founder Accountability.
+        </p>
       </div>
     </section>
 
     <!-- Local Challenge & Market Insight -->
-    <section class="section-wrap" style="background: #05080F;">
-      <div class="container-wide">
+    <section id="problem" class="section reveal-on-scroll">
+      <div class="container">
         <div class="section-header">
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #EF4444; letter-spacing: 0.1em; text-transform: uppercase;">LOCAL MARKET ANALYSIS</span>
-          <h2 style="margin-top: 8px;">WINNING HIGH-VALUE CLIENTS IN MUMBAI'S COMPETITIVE MARKET</h2>
-          <p>Mumbai clients expect seamless luxury, rapid responses, and flawless mobile experiences. When high-net-worth prospects visit your website from Bandra, BKC, or South Mumbai, any friction or delay sends them straight to your competitors.</p>
+          <div>
+            <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #EF4444; display: block; margin-bottom: var(--space-xs);">LOCAL MARKET ANALYSIS</span>
+            <h2>WINNING HIGH-VALUE CLIENTS IN MUMBAI'S COMPETITIVE MARKET</h2>
+          </div>
         </div>
+        <p style="color: var(--color-text-muted); max-width: 760px; font-size: 0.98rem; line-height: 1.6; margin-bottom: var(--space-xl);">
+          Mumbai clients expect seamless luxury, rapid responses, and flawless mobile experiences. When high-net-worth prospects visit your website from Bandra, BKC, or South Mumbai, any friction or delay sends them straight to your competitors.
+        </p>
       </div>
     </section>
 
-    <!-- Local Advantages & Solutions -->
-    <section class="section-wrap">
-      <div class="container-wide">
+    <!-- Local Advantages -->
+    <section id="advantages" class="section reveal-on-scroll">
+      <div class="container">
         <div class="section-header">
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary); letter-spacing: 0.1em; text-transform: uppercase;">LOCAL SEO & CONVERSION ADVANTAGE</span>
-          <h2 style="margin-top: 8px;">HOW BOLDLABS DELIVERS MEASURABLE RESULTS IN Mumbai</h2>
-          <p>Hand-crafted web systems engineered specifically for local conversion dominance.</p>
+          <div>
+            <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #25D366; display: block; margin-bottom: var(--space-xs);">PROVEN ADVANTAGE</span>
+            <h2>HOW BOLDLABS DELIVERS FOR Mumbai BUSINESSES</h2>
+          </div>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-md);">
+          <div class="city-feature-item">
             <h3>Pixel-Perfect, High-Authority Aesthetic</h3>
             <p>Modern pixel-brutalist and minimalist visual architecture that commands authority and establishes instant trust with premium clientele.</p>
           </div>
-          <div class="feature-card">
+          <div class="city-feature-item">
             <h3>Instant VIP WhatsApp Lead Qualification</h3>
             <p>Automated conversational flows that pre-qualify high-ticket inquiries and route priority prospects straight to your phone.</p>
           </div>
-          <div class="feature-card">
+          <div class="city-feature-item">
             <h3>Flawless Performance on All Devices</h3>
             <p>Hand-coded for maximum speed, security, and responsive elegance on iPhone, iPad, and high-resolution desktop displays.</p>
           </div>
-          <div class="feature-card">
+          <div class="city-feature-item">
             <h3>Direct Senior Developer Collaboration</h3>
             <p>No sales reps or junior subcontractors. You collaborate directly with Bhuvanesh Karnan for strategic clarity and impeccable technical execution.</p>
           </div>
@@ -497,70 +285,72 @@
       </div>
     </section>
 
-    <!-- Services Offered Locally -->
-    <section class="section-wrap" style="background: #05080F;">
-      <div class="container-wide">
+    <!-- Core Services for City -->
+    <section id="services" class="section reveal-on-scroll">
+      <div class="container">
         <div class="section-header">
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary); letter-spacing: 0.1em; text-transform: uppercase;">WHAT WE BUILD</span>
-          <h2 style="margin-top: 8px;">DIGITAL SYSTEMS FOR Mumbai BUSINESSES</h2>
-          <p>Choose the specialized system your business needs to scale.</p>
+          <div>
+            <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #25D366; display: block; margin-bottom: var(--space-xs);">CORE OFFERINGS</span>
+            <h2>SYSTEMS AVAILABLE IN Mumbai</h2>
+          </div>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-md);">
+          <div class="city-feature-item">
             <h3>🏥 Clinic WhatsApp AI Receptionists</h3>
             <p>Automate patient inquiries, calendar bookings, and 24h/2h appointment reminders 24/7 on WhatsApp. Cuts no-shows by over 60%.</p>
-            <div style="margin-top: 16px;"><a href="/whatsapp-automation-clinics/" style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore Clinic System →</a></div>
+            <div style="margin-top: 14px;"><a href="/whatsapp-automation-clinics/" style="color: #25D366; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore Clinic System →</a></div>
           </div>
-          <div class="feature-card">
+          <div class="city-feature-item">
             <h3>💼 High-Performance Business Websites</h3>
             <p>Clean, custom-coded multi-page websites that score 95+ on Google PageSpeed with built-in lead capture and local SEO.</p>
-            <div style="margin-top: 16px;"><a href="/business-website/" style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore Business Websites →</a></div>
+            <div style="margin-top: 14px;"><a href="/business-website/" style="color: #25D366; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore Business Websites →</a></div>
           </div>
-          <div class="feature-card">
+          <div class="city-feature-item">
             <h3>🛒 High-Converting E-Commerce Stores</h3>
             <p>Sub-second product browsing, 1-page checkout pipelines, and automated WhatsApp order tracking.</p>
-            <div style="margin-top: 16px;"><a href="/ecommerce-website/" style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore E-Commerce →</a></div>
+            <div style="margin-top: 14px;"><a href="/ecommerce-website/" style="color: #25D366; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore E-Commerce →</a></div>
           </div>
-          <div class="feature-card">
+          <div class="city-feature-item">
             <h3>🎯 High-ROAS Paid Ad Landing Pages</h3>
             <p>Laser-targeted landing pages engineered for Meta and Google Ads campaigns, delivered and tested in 5 business days.</p>
-            <div style="margin-top: 16px;"><a href="/landing-page/" style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore Landing Pages →</a></div>
+            <div style="margin-top: 14px;"><a href="/landing-page/" style="color: #25D366; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Explore Landing Pages →</a></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Founder Trust & E-E-A-T Section -->
-    <section class="section-wrap">
-      <div class="container-wide">
+    <section id="about" class="section reveal-on-scroll">
+      <div class="container">
         <div class="section-header">
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary); letter-spacing: 0.1em; text-transform: uppercase;">100% ACCOUNTABILITY</span>
-          <h2 style="margin-top: 8px;">MEET YOUR LEAD ENGINEER</h2>
-          <p>Direct communication, no sales reps, no junior developer handoffs.</p>
+          <div>
+            <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #25D366; display: block; margin-bottom: var(--space-xs);">100% ACCOUNTABILITY</span>
+            <h2>MEET YOUR LEAD ENGINEER</h2>
+          </div>
         </div>
 
-        <div class="founder-card">
+        <div style="background: var(--color-bg-card); border: 1.5px solid var(--color-border); border-radius: 12px; padding: var(--space-xl); display: grid; grid-template-columns: 180px 1fr; gap: var(--space-xl); align-items: center;">
           <div style="text-align: center;">
             <div style="position: relative; display: inline-block;">
-              <img src="/bhuvanesh_profile.webp" alt="Bhuvanesh Karnan - Founder of Boldlabs" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #25D366; display: block; margin: 0 auto;" />
-              <span style="position: absolute; bottom: 8px; right: 8px; width: 14px; height: 14px; background: #25D366; border-radius: 50%; border: 2px solid #0B0F19;" title="Available for projects"></span>
+              <img src="/bhuvanesh_profile.webp" alt="Bhuvanesh Karnan - Founder of Boldlabs" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #25D366; display: block; margin: 0 auto;" />
+              <span style="position: absolute; bottom: 6px; right: 6px; width: 14px; height: 14px; background: #25D366; border-radius: 50%; border: 2px solid #0c0c0c;" title="Available for projects"></span>
             </div>
-            <div style="margin-top: 12px; font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: #FFFFFF;">Bhuvanesh Karnan</div>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">Founder & Lead Developer</div>
+            <div style="margin-top: 10px; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: #FFFFFF;">Bhuvanesh Karnan</div>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #94A3B8;">Founder & Lead Engineer</div>
           </div>
           <div>
-            <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.7; margin-bottom: 16px;">
+            <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.7; margin-bottom: var(--space-md);">
               "I build Boldlabs websites and AI booking systems for businesses in Mumbai and across the globe. You deal directly with me from the first call to the final deployment. I write clean, maintainable code, test across devices, and keep your business running smoothly without the high retainers or bureaucracy of traditional agencies."
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-              <a href="tel:+918870341570" class="pill-btn-secondary" style="padding: 8px 16px !important; font-size: 0.8rem !important;">
-                📞 +91 88703 41570
+              <a href="tel:+918870341570" class="hero-cta-btn" style="background: #FFFFFF; color: #000000; border: 1.5px solid #000000; font-weight: 700; border-radius: 8px; box-shadow: 3px 3px 0px #000000; padding: 10px 18px; font-size: 0.82rem; text-decoration: none;">
+                📞 Call: +91 88703 41570
               </a>
-              <a href="https://wa.me/919514925790" target="_blank" rel="noopener" class="pill-btn-primary" style="padding: 8px 16px !important; font-size: 0.8rem !important;">
+              <a href="https://wa.me/919514925790" target="_blank" rel="noopener" class="hero-cta-btn" style="background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; border-radius: 8px; box-shadow: 3px 3px 0px #000000; padding: 10px 18px; font-size: 0.82rem; text-decoration: none;">
                 💬 WhatsApp AI Demo
               </a>
-              <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" style="color: #94A3B8; font-size: 0.82rem; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+              <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" style="color: #94A3B8; font-size: 0.82rem; text-decoration: none; font-family: var(--font-mono); margin-left: 8px;">
                 LinkedIn ↗
               </a>
             </div>
@@ -570,48 +360,49 @@
     </section>
 
     <!-- Local FAQ Accordion -->
-    <section class="section-wrap" style="background: #05080F;">
-      <div class="container-wide">
+    <section id="faq" class="section reveal-on-scroll">
+      <div class="container">
         <div class="section-header">
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary); letter-spacing: 0.1em; text-transform: uppercase;">FREQUENTLY ASKED QUESTIONS</span>
-          <h2 style="margin-top: 8px;">FAQS FOR Mumbai BUSINESSES</h2>
-          <p>Direct answers regarding timelines, local SEO, pricing, and communication.</p>
+          <div>
+            <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #25D366; display: block; margin-bottom: var(--space-xs);">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>FAQS FOR Mumbai BUSINESSES</h2>
+          </div>
         </div>
 
-        <div class="faq-accordion">
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+        <div class="faq-accordion-box">
+          <div class="faq-row">
+            <button class="faq-btn" type="button" onclick="var b = this.nextElementSibling; b.style.display = (b.style.display === 'none' ? 'block' : 'none');">
               <span>Do you work with high-ticket clinics and aesthetic practices in Mumbai?</span>
-              <span>+</span>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: #25D366;">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-body" style="display: block;">
               <p style="margin: 0;">Yes. I specialize in booking-first web architecture for dental practices, cosmetic clinics, wellness centers, and high-ticket service consultants.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          <div class="faq-row">
+            <button class="faq-btn" type="button" onclick="var b = this.nextElementSibling; b.style.display = (b.style.display === 'none' ? 'block' : 'none');">
               <span>How does the WhatsApp VIP lead qualification work?</span>
-              <span>+</span>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: #25D366;">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-body" style="display: none;">
               <p style="margin: 0;">When a prospect clicks your WhatsApp button, an automated conversational assistant asks 2-3 qualifying questions (e.g. required procedure, preferred date, budget) before scheduling the consultation.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          <div class="faq-row">
+            <button class="faq-btn" type="button" onclick="var b = this.nextElementSibling; b.style.display = (b.style.display === 'none' ? 'block' : 'none');">
               <span>Can you accept international payments for foreign clients visiting Mumbai?</span>
-              <span>+</span>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: #25D366;">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-body" style="display: none;">
               <p style="margin: 0;">Yes. Multi-currency checkout and Stripe/PayPal/Razorpay integration are standard, allowing patients from the US, UK, and Middle East to pay seamlessly.</p>
             </div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          <div class="faq-row">
+            <button class="faq-btn" type="button" onclick="var b = this.nextElementSibling; b.style.display = (b.style.display === 'none' ? 'block' : 'none');">
               <span>What is the delivery timeline for a Mumbai business website?</span>
-              <span>+</span>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: #25D366;">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-body" style="display: none;">
               <p style="margin: 0;">Projects are delivered in 10 to 14 business days, complete with staging reviews and comprehensive quality assurance.</p>
             </div>
           </div>
@@ -619,90 +410,57 @@
       </div>
     </section>
 
-    <!-- Direct Contact & Lead Form -->
-    <section id="contact" class="section-wrap">
-      <div class="container-wide" style="max-width: 650px;">
-        <div class="section-header">
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary); letter-spacing: 0.1em; text-transform: uppercase;">GET IN TOUCH</span>
-          <h2 style="margin-top: 8px;">START YOUR Mumbai PROJECT</h2>
-          <p>Submit your details below or message me directly on WhatsApp. I will reply within 4 hours.</p>
-        </div>
+    <!-- Contact & Lead Form Section -->
+    <section id="contact" class="section reveal-on-scroll" style="background: var(--color-bg-light); color: var(--color-text-dark);">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h2 style="color: var(--color-text-dark); margin-bottom: 8px;">START YOUR Mumbai PROJECT</h2>
+          <p style="color: var(--color-muted-light); font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-xl);">
+            Submit your details below or message me directly on WhatsApp. I will reply within 4 hours.
+          </p>
 
-        <div style="background: var(--color-card); border: 1.5px solid var(--color-border); border-radius: 12px; padding: 32px;">
-          <form id="city-lead-form" onsubmit="handleCityLeadSubmit(event)">
-            <div style="margin-bottom: 16px;">
-              <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: #CBD5E1; text-transform: uppercase; margin-bottom: 6px;">Your Name / Clinic Name</label>
-              <input type="text" id="city-lead-name" required placeholder="e.g. Dr. Rajesh / Priya Sharma" style="width: 100%; box-sizing: border-box; background: #000000; border: 1px solid #334155; border-radius: 6px; padding: 12px; color: #FFFFFF; font-family: var(--font-body); font-size: 0.9rem;" />
-            </div>
+          <div style="background: #FFFFFF; border: 2px solid var(--color-text-dark); border-radius: 8px; padding: var(--space-xl); box-shadow: 6px 6px 0px #000000; text-align: left;">
+            <form id="city-lead-form" onsubmit="handleCityLeadSubmit(event)">
+              <div style="margin-bottom: var(--space-sm);">
+                <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #000000; text-transform: uppercase; margin-bottom: 6px;">Your Name / Clinic Name</label>
+                <input type="text" id="city-lead-name" required placeholder="e.g. Dr. Rajesh / Priya Sharma" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 1.5px solid #000000; border-radius: 4px; padding: 12px; color: #000000; font-family: var(--font-display); font-size: 0.9rem;" />
+              </div>
 
-            <div style="margin-bottom: 16px;">
-              <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: #CBD5E1; text-transform: uppercase; margin-bottom: 6px;">WhatsApp Phone Number</label>
-              <input type="tel" id="city-lead-phone" required placeholder="+91 98765 43210 or +44 / +1" style="width: 100%; box-sizing: border-box; background: #000000; border: 1px solid #334155; border-radius: 6px; padding: 12px; color: #FFFFFF; font-family: var(--font-body); font-size: 0.9rem;" />
-            </div>
+              <div style="margin-bottom: var(--space-sm);">
+                <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #000000; text-transform: uppercase; margin-bottom: 6px;">WhatsApp Phone Number</label>
+                <input type="tel" id="city-lead-phone" required placeholder="+91 98765 43210 or +44 / +1" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 1.5px solid #000000; border-radius: 4px; padding: 12px; color: #000000; font-family: var(--font-display); font-size: 0.9rem;" />
+              </div>
 
-            <div style="margin-bottom: 24px;">
-              <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; color: #CBD5E1; text-transform: uppercase; margin-bottom: 6px;">Project Goals in Mumbai</label>
-              <textarea id="city-lead-details" rows="3" placeholder="Tell me what you need (new website, WhatsApp booking bot, redesign)..." style="width: 100%; box-sizing: border-box; background: #000000; border: 1px solid #334155; border-radius: 6px; padding: 12px; color: #FFFFFF; font-family: var(--font-body); font-size: 0.9rem; resize: vertical;"></textarea>
-            </div>
+              <div style="margin-bottom: var(--space-md);">
+                <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #000000; text-transform: uppercase; margin-bottom: 6px;">Project Goals in Mumbai</label>
+                <textarea id="city-lead-details" rows="3" placeholder="Tell me what you need (new website, WhatsApp booking bot, redesign)..." style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 1.5px solid #000000; border-radius: 4px; padding: 12px; color: #000000; font-family: var(--font-display); font-size: 0.9rem; resize: vertical;"></textarea>
+              </div>
 
-            <button type="submit" class="pill-btn-primary" style="width: 100%; border: none; font-size: 0.95rem !important;">
-              CONNECT WITH BHUVANESH →
-            </button>
-          </form>
+              <button type="submit" class="hero-cta-btn" style="width: 100%; background: #25D366; color: #000000; border: 2px solid #000000; font-weight: 800; border-radius: 8px; box-shadow: 4px 4px 0px #000000; font-size: 0.95rem; padding: 14px; cursor: pointer; text-align: center;">
+                CONNECT WITH BHUVANESH →
+              </button>
+            </form>
 
-          <div id="city-form-success" style="display: none; text-align: center; padding: 24px 0;">
-            <div style="font-size: 2rem; margin-bottom: 8px;">✅</div>
-            <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: #25D366; margin-bottom: 8px;">Message Received!</div>
-            <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 16px;">Opening WhatsApp conversation directly with Bhuvanesh...</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interlinking Hub: Cities & Sub-Services -->
-    <section class="section-wrap" style="background: #05080F;">
-      <div class="container-wide">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
-          <!-- Sub-Services Hub -->
-          <div>
-            <h3 style="font-size: 1.1rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 16px; border-bottom: 2px solid var(--color-primary); padding-bottom: 8px; display: inline-block;">All Engineering Services</h3>
-            <div class="hub-grid" style="grid-template-columns: 1fr;">
-              <a href="/whatsapp-automation-clinics/" class="hub-link"><span>🏥 WhatsApp AI for Clinics</span><span>→</span></a>
-              <a href="/business-website/" class="hub-link"><span>💼 High-Performance Business Websites</span><span>→</span></a>
-              <a href="/ecommerce-website/" class="hub-link"><span>🛒 Custom E-Commerce Systems</span><span>→</span></a>
-              <a href="/landing-page/" class="hub-link"><span>🎯 High-ROAS Paid Ad Landing Pages</span><span>→</span></a>
-              <a href="/ai-automations/" class="hub-link"><span>⚡ Bespoke AI & CRM Automations</span><span>→</span></a>
-              <a href="/monthly-care/" class="hub-link"><span>🛡️ Zero-Downtime Monthly Care & SEO</span><span>→</span></a>
-              <a href="/white-label-agencies/" class="hub-link"><span>🤝 White-Label Agency Partnership</span><span>→</span></a>
-            </div>
-          </div>
-
-          <!-- Target Cities Hub -->
-          <div>
-            <h3 style="font-size: 1.1rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 16px; border-bottom: 2px solid var(--color-primary); padding-bottom: 8px; display: inline-block;">Target Locations</h3>
-            <div class="hub-grid" style="grid-template-columns: 1fr;">
-              <a href="/web-development-madurai/" class="hub-link"><span>📍 Madurai Headquarters (Primary)</span><span>→</span></a>
-              <a href="/web-development-tamil-nadu/" class="hub-link"><span>📍 Chennai & Tamil Nadu</span><span>→</span></a>
-              <a href="/web-development-bangalore/" class="hub-link"><span>📍 Bangalore Startup Corridor</span><span>→</span></a>
-              <a href="/web-development-mumbai/" class="hub-link"><span>📍 Mumbai Commercial Center</span><span>→</span></a>
-              <a href="/web-development-uk/" class="hub-link"><span>🇬🇧 United Kingdom (London, UK)</span><span>→</span></a>
-              <a href="/web-development-canada/" class="hub-link"><span>🇨🇦 Canada (Toronto, Vancouver)</span><span>→</span></a>
-              <a href="/web-development-usa/" class="hub-link"><span>🇺🇸 United States (Nationwide)</span><span>→</span></a>
+            <div id="city-form-success" style="display: none; text-align: center; padding: 24px 0;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">✅</div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: #008000; margin-bottom: 8px;">Message Received!</div>
+              <p style="color: #64748B; font-size: 0.85rem;">Opening WhatsApp conversation directly with Bhuvanesh...</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Standardized Main Footer -->
-  <footer class="main-footer" style="background: #000000; border-top: 2px solid #1E293B; padding-top: 60px;">
-    <div class="container-wide">
-      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 48px;">
+  <footer class="main-footer" style="background: #000000; border-top: 2px solid #1E293B; padding-top: var(--space-2xl);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl);">
         <!-- Column 1: Brand & Verified NAP -->
         <div class="footer-brand-col">
           <div class="footer-logo" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">BOLDLABS</div>
-          <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.5; margin-bottom: 16px;">
+          <p class="footer-tagline" style="font-size: 0.82rem; color: #94A3B8; line-height: 1.5; margin-bottom: var(--space-md);">
             Booking-first websites & 24/7 AI WhatsApp receptionists for service businesses.
           </p>
 
@@ -718,8 +476,8 @@
 
         <!-- Column 2: Navigation -->
         <div>
-          <h4 style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Navigation</h4>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Navigation</h3>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
             <li><a href="/#services" style="color: #94A3B8; text-decoration: none;">Services & Automation</a></li>
             <li><a href="/#latest-drop" style="color: #94A3B8; text-decoration: none;">Case Studies</a></li>
             <li><a href="/#timeline" style="color: #94A3B8; text-decoration: none;">5-Step Process</a></li>
@@ -730,8 +488,8 @@
 
         <!-- Column 3: Trust & Direct -->
         <div>
-          <h4 style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Direct Trust</h4>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Trust & Direct</h3>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
             <li><a href="/blog/" style="color: #94A3B8; text-decoration: none;">Engineering Blog</a></li>
             <li><a href="/whatsapp-automation-clinics/" style="color: #25D366; text-decoration: none; font-weight: 700;">WhatsApp AI Demo →</a></li>
             <li><a href="tel:+918870341570" style="color: #94A3B8; text-decoration: none;">Call +91 88703 41570</a></li>
@@ -739,9 +497,9 @@
           </ul>
         </div>
 
-        <!-- Column 4: Connect & Socials -->
+        <!-- Column 4: Social Connect & Legal -->
         <div>
-          <h4 style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Connect</h4>
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Connect</h3>
           <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem; font-family: var(--font-mono);">
             <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" style="color: #94A3B8; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
               LinkedIn Profile
@@ -761,7 +519,7 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div style="border-top: 1px solid #1E293B; padding: 24px 0; font-family: var(--font-mono); font-size: 0.75rem; color: #64748B; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div class="footer-bottom" style="border-top: 1px solid #1E293B; padding: var(--space-md) 0; font-family: var(--font-mono); font-size: 0.75rem; color: #64748B; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <span>© 2026 Boldlabs — Bhuvanesh Karnan. All rights reserved.</span>
         <div style="display: flex; gap: 16px;">
           <a href="/terms/" style="color: #64748B; text-decoration: none;">Terms of Service</a>
