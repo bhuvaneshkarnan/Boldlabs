@@ -64,7 +64,7 @@ def build_extended_answer(post, index):
     <p>{b2b_text}</p>
     
     <p>
-      If you need help auditing your website, setting up automated reminders, or configuring your AI indexes, Bhuvanesh Karnan and the Boldlabs Studio engineering team can build a custom, booking-first solution tailored to your service business goals.
+      If you need help auditing your website, setting up automated reminders, or configuring your AI indexes, Bhuvanesh Karnan and the Boldlabs engineering team can build a custom, booking-first solution tailored to your service business goals.
     </p>
     
     {related_html}
@@ -111,7 +111,7 @@ post_template = """<!DOCTYPE html>
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{TITLE}} — Boldlabs Studio Blog</title>
+  <title>{{TITLE}} — Boldlabs Blog</title>
   <meta name="description" content="{{DESCRIPTION}}">
   <link rel="canonical" href="https://goboldlabs.com/blog/{{SLUG}}.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -125,14 +125,14 @@ post_template = """<!DOCTYPE html>
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://goboldlabs.com/blog/{{SLUG}}.html">
-  <meta property="og:title" content="{{TITLE}} — Boldlabs Studio Blog">
+  <meta property="og:title" content="{{TITLE}} — Boldlabs Blog">
   <meta property="og:description" content="{{DESCRIPTION}}">
   <meta property="og:image" content="https://goboldlabs.com/shakanksh_portrait.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://goboldlabs.com/blog/{{SLUG}}.html">
-  <meta property="twitter:title" content="{{TITLE}} — Boldlabs Studio Blog">
+  <meta property="twitter:title" content="{{TITLE}} — Boldlabs Blog">
   <meta property="twitter:description" content="{{DESCRIPTION}}">
   <meta property="twitter:image" content="https://goboldlabs.com/shakanksh_portrait.png">
 
@@ -153,7 +153,7 @@ post_template = """<!DOCTYPE html>
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Boldlabs Studio",
+      "name": "Boldlabs",
       "logo": {
         "@type": "ImageObject",
         "url": "https://goboldlabs.com/favicon.svg"
@@ -230,7 +230,7 @@ post_template = """<!DOCTYPE html>
 
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
-    <a href="../index.html#home" class="navbar-brand">Boldlabs Studio</a>
+    <a href="../index.html#home" class="navbar-brand">Boldlabs</a>
     
     <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
       <span>MENU</span>
@@ -349,7 +349,7 @@ post_template = """<!DOCTYPE html>
       <div class="footer-grid">
         <!-- Column 1: Brand -->
         <div class="footer-brand-col">
-          <div class="footer-logo">Boldlabs Studio</div>
+          <div class="footer-logo">Boldlabs</div>
           <p class="footer-tagline">Booking-first websites for service businesses.</p>
           <div class="footer-socials">
             <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" title="Bhuvanesh Karnan on LinkedIn">LinkedIn</a>
@@ -392,7 +392,7 @@ post_template = """<!DOCTYPE html>
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <div class="container" style="padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;">
-          <span>© 2026 Boldlabs Studio — Bhuvanesh. All rights reserved.</span>
+          <span>© 2026 Boldlabs — Bhuvanesh. All rights reserved.</span>
           <span style="font-family: var(--font-display); font-size: 0.7rem;">PROTAGONIST LOADED</span>
         </div>
       </div>
@@ -520,7 +520,7 @@ post_template = """<!DOCTYPE html>
 
             const statusMsg = document.getElementById('lead-status-msg');
             if (contactMethod === 'WhatsApp') {
-              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call from your Blog post page.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
+              const whatsappText = `Hi Boldlabs, I would like to request a discovery call from your Blog post page.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber || '918870341570'}?text=${encodeURIComponent(whatsappText)}`;
               window.open(whatsappUrl, '_blank');
               if (statusMsg) {
@@ -597,7 +597,7 @@ blog_home_template = """<!DOCTYPE html>
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boldlabs Studio Blog — Web Design, SEO & Operations Automation Insights</title>
+  <title>Boldlabs Blog — Web Design, SEO & Operations Automation Insights</title>
   <meta name="description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks (React & WordPress), local SEO, and AI automations.">
   <link rel="canonical" href="https://goboldlabs.com/blog.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -611,14 +611,14 @@ blog_home_template = """<!DOCTYPE html>
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://goboldlabs.com/blog.html">
-  <meta property="og:title" content="Boldlabs Studio Blog — Web Design, SEO & Automation Insights">
+  <meta property="og:title" content="Boldlabs Blog — Web Design, SEO & Automation Insights">
   <meta property="og:description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks, local SEO, and AI automations.">
   <meta property="og:image" content="https://goboldlabs.com/shakanksh_portrait.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://goboldlabs.com/blog.html">
-  <meta property="twitter:title" content="Boldlabs Studio Blog — Web Design, SEO & Automation Insights">
+  <meta property="twitter:title" content="Boldlabs Blog — Web Design, SEO & Automation Insights">
   <meta property="twitter:description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks, local SEO, and AI automations.">
   <meta property="twitter:image" content="https://goboldlabs.com/shakanksh_portrait.png">
 
@@ -664,7 +664,7 @@ blog_home_template = """<!DOCTYPE html>
 
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
-    <a href="index.html#home" class="navbar-brand">Boldlabs Studio</a>
+    <a href="index.html#home" class="navbar-brand">Boldlabs</a>
     
     <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
       <span>MENU</span>
@@ -777,7 +777,7 @@ blog_home_template = """<!DOCTYPE html>
       <div class="footer-grid">
         <!-- Column 1: Brand -->
         <div class="footer-brand-col">
-          <div class="footer-logo">Boldlabs Studio</div>
+          <div class="footer-logo">Boldlabs</div>
           <p class="footer-tagline">Booking-first websites for service businesses.</p>
           <div class="footer-socials">
             <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" title="Bhuvanesh Karnan on LinkedIn">LinkedIn</a>
@@ -820,7 +820,7 @@ blog_home_template = """<!DOCTYPE html>
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <div class="container" style="padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;">
-          <span>© 2026 Boldlabs Studio — Bhuvanesh. All rights reserved.</span>
+          <span>© 2026 Boldlabs — Bhuvanesh. All rights reserved.</span>
           <span style="font-family: var(--font-display); font-size: 0.7rem;">PROTAGONIST LOADED</span>
         </div>
       </div>
@@ -948,7 +948,7 @@ blog_home_template = """<!DOCTYPE html>
 
             const statusMsg = document.getElementById('lead-status-msg');
             if (contactMethod === 'WhatsApp') {
-              const whatsappText = `Hi Boldlabs Studio, I would like to request a discovery call from your Blog page.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
+              const whatsappText = `Hi Boldlabs, I would like to request a discovery call from your Blog page.\n\n*Name*: ${name}\n*Email*: ${email}\n*WhatsApp*: ${formattedWhatsapp}\n*Details*: ${question}`;
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber || '918870341570'}?text=${encodeURIComponent(whatsappText)}`;
               window.open(whatsappUrl, '_blank');
               if (statusMsg) {
@@ -1111,11 +1111,11 @@ print("Regenerated sitemap.xml with active scheduled URLs.")
 
 
 # 3. Regenerate llms.txt to include active posts
-llms_txt_base = """# Boldlabs Studio
+llms_txt_base = """# Boldlabs
 
 > https://goboldlabs.com
 
-Boldlabs Studio is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including India, UK, Canada, and USA). Founded and led by Bhuvanesh Karnan (Founder & Head Developer).
+Boldlabs is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including India, UK, Canada, and USA). Founded and led by Bhuvanesh Karnan (Founder & Head Developer).
 
 ## Core Capabilities
 - **Booking-First Websites**: Custom web development integrated with automated booking systems, reminders, and follow-ups.

@@ -39,7 +39,7 @@ def generate_outreach_campaign(csv_file, output_html):
             
             body = f"""Hi {name},
 
-I loved your recent piece on {topic}. It's a topic we've been heavily researching at Boldlabs Studio.
+I loved your recent piece on {topic}. It's a topic we've been heavily researching at Boldlabs.
 
 I am Bhuvanesh Karnan, founder of a custom web development agency serving India and Canada. We recently published a deeply technical, 200-post engineering library on B2B conversion architectures and web performance.
 
@@ -49,7 +49,7 @@ Would you be open to a quick draft?
 
 Best,
 Bhuvanesh Karnan
-Founder, Boldlabs Studio
+Founder, Boldlabs
 https://goboldlabs.com"""
 
             encoded_subject = urllib.parse.quote(subject)
