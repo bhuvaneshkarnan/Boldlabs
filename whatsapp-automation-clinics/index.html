@@ -2864,6 +2864,33 @@
         return "https://wa.me/919514925790?text=" + encodeURIComponent(text);
       }
 
+      // Fire Meta Pixel CompleteRegistration & Google Analytics strictly on valid form submission
+      function firePixelCompleteRegistration(clinicName, inquiries, situation) {
+        // 1. Meta Pixel Standard Event (fires only on successful form submission)
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'CompleteRegistration', {
+            content_name: 'Clinic WhatsApp AI Demo Qualification',
+            status: 'submitted',
+            clinic_name: clinicName,
+            inquiries_per_day: inquiries,
+            current_situation: situation,
+            currency: 'INR',
+            value: 2499.00
+          });
+        }
+
+        // 2. Google Analytics 4 event
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'complete_registration', {
+            event_category: 'Lead',
+            event_label: clinicName,
+            inquiries: inquiries,
+            situation: situation,
+            value: 2499
+          });
+        }
+      }
+
       // Handle Modal Form Submit
       if (modalForm) {
         modalForm.addEventListener('submit', function(e) {
@@ -2895,6 +2922,9 @@
           if (pricingClinicInput) pricingClinicInput.value = clinicVal;
           if (pricingInquiriesSelect) pricingInquiriesSelect.value = inquiriesVal;
           if (pricingSituationSelect) pricingSituationSelect.value = situationVal;
+
+          // Fire CompleteRegistration pixel event specifically on form submission
+          firePixelCompleteRegistration(clinicVal, inquiriesVal, situationVal);
 
           closeQualModal();
           const url = buildWhatsAppUrl(clinicVal, inquiriesVal, situationVal);
@@ -2936,6 +2966,9 @@
           // Clear error
           if (pricingClinicInput) pricingClinicInput.classList.remove('has-error');
           if (pricingClinicError) pricingClinicError.style.display = 'none';
+
+          // Fire CompleteRegistration pixel event specifically on form submission
+          firePixelCompleteRegistration(clinicVal, inquiriesVal, situationVal);
 
           const url = buildWhatsAppUrl(clinicVal, inquiriesVal, situationVal);
           window.open(url, '_blank');
