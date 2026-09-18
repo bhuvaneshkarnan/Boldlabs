@@ -1090,7 +1090,7 @@
       line-height: 1.4;
     }
 
-    /* Verified Testimonials & Founder Note */
+    /* Verified Testimonials & Mind Body Recovery Case Study */
     .proof-section {
       background: #F8FAFC;
     }
@@ -1101,38 +1101,191 @@
       border-radius: var(--radius-lg);
       padding: 32px;
       box-shadow: var(--shadow-md);
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto;
       position: relative;
     }
 
-    .metric-callout-badge {
-      background: #075E54;
-      color: #FFFFFF;
-      font-size: 0.85rem;
+    .testimonial-clinic-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1.5px solid #E2E8F0;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .clinic-brand-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .clinic-logo-frame {
+      background: #0B1120;
+      border: 1.5px solid #1E293B;
+      border-radius: 10px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 0px #000000;
+    }
+
+    .clinic-logo-img {
+      height: 38px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .clinic-meta-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .clinic-name-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .clinic-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
       font-weight: 800;
-      padding: 6px 14px;
-      border-radius: 6px;
+      color: #0F172A;
+      line-height: 1.2;
+    }
+
+    .verified-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #065F46;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      padding: 2px 7px;
+      border-radius: 4px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 16px;
+      gap: 4px;
+    }
+
+    .clinic-url-pill {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #075E54;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s ease;
+      width: fit-content;
+    }
+
+    .clinic-url-pill:hover {
+      color: #128C7E;
+      text-decoration: underline;
+    }
+
+    .clinic-metrics-badge {
+      background: #F0FDF4;
+      border: 1.5px solid #86EFAC;
+      border-radius: 8px;
+      padding: 8px 14px;
+      text-align: right;
+    }
+
+    .metric-highlight {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #15803D;
+      line-height: 1.2;
+    }
+
+    .metric-caption {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #166534;
+    }
+
+    .star-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .star-rating-row .stars {
+      color: #F59E0B;
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .star-rating-row .rating-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .quote-statement {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--clinic-navy);
-      line-height: 1.4;
-      margin-bottom: 16px;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.35;
+      margin-bottom: 14px;
     }
 
     .quote-body {
-      font-size: 0.98rem;
-      color: #475569;
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 24px;
+      font-size: 0.94rem;
+      color: #334155;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .testimonial-stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .t-stat-num {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+    }
+
+    .t-stat-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #64748B;
+      margin-top: 2px;
     }
 
     .author-info {
@@ -1142,22 +1295,23 @@
     }
 
     .author-avatar-img {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       border: 2px solid #075E54;
       object-fit: cover;
     }
 
     .author-name {
-      font-size: 1rem;
+      font-size: 0.96rem;
       font-weight: 800;
       color: var(--clinic-navy);
     }
 
     .author-title {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--clinic-muted);
+      font-family: var(--font-mono);
     }
 
     /* FAQ Section */
@@ -1639,13 +1793,57 @@
         width: 100% !important;
         box-sizing: border-box !important;
       }
+      .testimonial-clinic-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding-bottom: 16px !important;
+        margin-bottom: 16px !important;
+      }
+      .clinic-brand-info {
+        width: 100% !important;
+        gap: 12px !important;
+      }
+      .clinic-logo-frame {
+        padding: 6px 10px !important;
+      }
+      .clinic-logo-img {
+        height: 32px !important;
+        max-width: 115px !important;
+      }
+      .clinic-title {
+        font-size: 0.95rem !important;
+      }
+      .clinic-metrics-badge {
+        width: 100% !important;
+        text-align: left !important;
+        padding: 6px 12px !important;
+        box-sizing: border-box !important;
+      }
       .quote-statement {
-        font-size: 1rem !important;
-        margin-bottom: 8px !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
       }
       .quote-body {
         font-size: 0.86rem !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 14px !important;
+      }
+      .testimonial-stats-strip {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        text-align: left !important;
+        padding: 10px 12px !important;
+      }
+      .t-stat-item {
+        display: flex !important;
+        align-items: baseline !important;
+        gap: 8px !important;
+      }
+      .t-stat-num {
+        font-size: 1.05rem !important;
+      }
+      .t-stat-label {
+        margin-top: 0 !important;
       }
 
       /* Footer Grid Compact on mobile */
@@ -2235,31 +2433,81 @@
       </div>
     </section>
 
-    <!-- Testimonials & Founder Trust Note -->
+    <!-- Testimonials & Mind Body Recovery Verified Case Study -->
     <section class="section-padding proof-section">
       <div class="container">
         
         <div class="testimonial-card-box reveal-blur hover-lift">
-          <span class="metric-callout-badge">
-            <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
-            VERIFIED CLINIC CASE METRIC
-          </span>
+          
+          <!-- Clinic Business Header Bar -->
+          <div class="testimonial-clinic-header">
+            <div class="clinic-brand-info">
+              <div class="clinic-logo-frame">
+                <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img">
+              </div>
+              <div class="clinic-meta-text">
+                <div class="clinic-name-row">
+                  <span class="clinic-title">Mind Body Recovery</span>
+                  <span class="verified-badge">
+                    <svg class="svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Verified Clinic Client
+                  </span>
+                </div>
+                <a href="https://mindbodyrecovery.in" target="_blank" rel="noopener noreferrer" class="clinic-url-pill">
+                  <svg class="svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  <span>mindbodyrecovery.in</span>
+                  <svg class="svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
 
-          <h3 class="quote-statement">
-            "Getting constant 20+ extra bookings for Mind Body Recovery Clinic per month."
-          </h3>
+            <div class="clinic-metrics-badge">
+              <span class="metric-highlight">+20 Bookings</span>
+              <span class="metric-caption">per month via WhatsApp AI</span>
+            </div>
+          </div>
 
-          <p class="quote-body">
-            "Medical clinics in Tamil Nadu and across India lose 15 to 20 patient consultations every single month simply because receptionists are occupied with walk-in patients while WhatsApp inquiries sit unread. We engineered this system to run 24/7 so your clinic captures every single patient inquiry effortlessly."
-          </p>
+          <!-- Testimonial Quote & Case Study -->
+          <div class="testimonial-content-area">
+            <div class="star-rating-row">
+              <span class="stars">★★★★★</span>
+              <span class="rating-label">5.0 Clinic Case Study</span>
+            </div>
 
-          <div class="author-info">
+            <h3 class="quote-statement">
+              "Getting constant 20+ extra bookings for Mind Body Recovery per month."
+            </h3>
+
+            <p class="quote-body">
+              "Before automating WhatsApp, after-hours inquiries and busy reception desk hours meant delayed responses and lost patient consultations. With Boldlabs' 24/7 AI Receptionist, patient inquiries on <a href="https://mindbodyrecovery.in" target="_blank" rel="noopener noreferrer" style="color: #075E54; font-weight: 700; text-decoration: underline;">mindbodyrecovery.in</a> are answered in 3 seconds, consultation slots are confirmed automatically, and automated reminders have eliminated appointment no-shows."
+            </p>
+          </div>
+
+          <!-- 3-Column Key Metrics Strip -->
+          <div class="testimonial-stats-strip">
+            <div class="t-stat-item">
+              <span class="t-stat-num">+20</span>
+              <span class="t-stat-label">Extra Monthly Bookings</span>
+            </div>
+            <div class="t-stat-item">
+              <span class="t-stat-num">3 Sec</span>
+              <span class="t-stat-label">Instant WhatsApp Reply</span>
+            </div>
+            <div class="t-stat-item">
+              <span class="t-stat-num">100%</span>
+              <span class="t-stat-label">Zero After-Hours Drop</span>
+            </div>
+          </div>
+
+          <!-- Founder Implementation Signature -->
+          <div class="author-info" style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #E2E8F0;">
             <img src="/shakanksh_portrait.png" alt="Bhuvanesh Karnan" class="author-avatar-img">
             <div>
               <div class="author-name">Bhuvanesh Karnan</div>
-              <div class="author-title">Founder, Boldlabs • Tamil Nadu, India</div>
+              <div class="author-title">Founder, Boldlabs • AI Receptionist Deployed for Mind Body Recovery (<a href="https://mindbodyrecovery.in" target="_blank" rel="noopener noreferrer" style="color: #075E54; text-decoration: underline; font-weight: 600;">mindbodyrecovery.in</a>)</div>
             </div>
           </div>
+
         </div>
 
       </div>
