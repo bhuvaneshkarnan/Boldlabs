@@ -142,7 +142,7 @@ a {
 }
 
 .navbar-brand img {
-  height: 36px !important;
+  height: 32px !important;
   width: auto !important;
   display: block;
 }
@@ -1400,9 +1400,13 @@ h3 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .container {
     padding: 0 var(--space-sm);
+  }
+
+  body {
+    padding-top: 75px !important;
   }
 
   /* Compact responsive floating navbar */
@@ -1433,6 +1437,12 @@ h3 {
   .navbar-brand {
     font-size: 0.72rem;
     letter-spacing: -0.03em;
+  }
+
+  .navbar-brand img {
+    height: 26px !important;
+    width: auto !important;
+    display: block;
   }
 
   .nav-toggle {
