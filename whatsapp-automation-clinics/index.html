@@ -2418,16 +2418,16 @@
           <!-- Qualifying Flow (Filter Browsers from Real Buyers) -->
           <form id="pricing-qual-form" class="qualifying-form-box">
             <div class="qual-form-title">
-              <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-              <span>Quick Clinic Fit Check</span>
+              <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Live WhatsApp Demo Setup</span>
             </div>
             <div class="qual-input-group">
-              <label for="qual-clinic-name">What's your clinic name and city? <span style="color: #EF4444;">*</span></label>
-              <input type="text" id="qual-clinic-name" placeholder="e.g. City Dental Care, Madurai" class="qual-input" autocomplete="organization">
+              <label for="qual-clinic-name">Clinic Name &amp; City <span style="color: #EF4444;">*</span></label>
+              <input type="text" id="qual-clinic-name" placeholder="e.g. Mind Body Recovery, Chennai" class="qual-input" autocomplete="organization">
               <div class="qual-error-text" id="qual-clinic-error">Please enter your clinic name and city</div>
             </div>
             <div class="qual-input-group">
-              <label for="qual-inquiries-count">How many patient WhatsApp inquiries roughly per day?</label>
+              <label for="qual-inquiries-count">Daily patient WhatsApp inquiries roughly:</label>
               <select id="qual-inquiries-count" class="qual-select">
                 <option value="Under 10 inquiries/day">Under 10 inquiries / day</option>
                 <option value="10 to 30 inquiries/day" selected>10 – 30 inquiries / day</option>
@@ -2436,19 +2436,20 @@
               </select>
             </div>
             <div class="qual-input-group">
-              <label for="qual-current-situation">Missing messages, dealing with no-shows, or exploring?</label>
+              <label for="qual-current-situation">What would you like the AI receptionist to handle?</label>
               <select id="qual-current-situation" class="qual-select">
-                <option value="Missing messages & slow replies" selected>Missing patient messages & delayed replies</option>
-                <option value="Dealing with patient no-shows">Dealing with patient no-shows</option>
-                <option value="Both missing messages and no-shows">Both missed messages & no-shows</option>
-                <option value="Just exploring options">Just exploring options</option>
+                <option value="Instant 24/7 replies after clinic hours" selected>Instant 24/7 replies after clinic hours</option>
+                <option value="Automated doctor appointment booking">Automated doctor appointment booking</option>
+                <option value="Patient visit reminders to stop no-shows">Patient visit reminders (stop no-shows)</option>
+                <option value="Full clinic automation (all of the above)">All of the above (Full clinic system)</option>
               </select>
             </div>
 
             <button type="submit" class="btn-pricing-cta" id="pricing-wa-btn" style="cursor: pointer; border: 1.5px solid #000000; width: 100%; margin-top: 14px;">
-              <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              Proceed To WhatsApp With Details →
+              <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              Try The Live AI Demo On WhatsApp →
             </button>
+            <p style="margin: 8px 0 0 0; font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens directly in your WhatsApp app · No spam · Instant reply</p>
           </form>
 
           <!-- Risk Reversal & Value Proof Block -->
@@ -2948,16 +2949,16 @@
         }
       });
 
-      function buildWhatsAppUrl(clinicName, inquiries, situation) {
+      function buildWhatsAppUrl(clinicName, inquiries, goal) {
         const text = "Hi Bhuvanesh, I'd like to test the Clinic WhatsApp AI demo.\n\n" +
-                     "• Clinic Name & City: " + clinicName + "\n" +
-                     "• Daily WhatsApp Inquiries: " + inquiries + "\n" +
-                     "• Current Situation: " + situation;
+                     "• Clinic & City: " + clinicName + "\n" +
+                     "• Daily Patient Inquiries: " + inquiries + "\n" +
+                     "• Priority Focus: " + goal;
         return "https://wa.me/919514925790?text=" + encodeURIComponent(text);
       }
 
       // Fire Meta Pixel CompleteRegistration & Google Analytics strictly on valid form submission
-      function firePixelCompleteRegistration(clinicName, inquiries, situation) {
+      function firePixelCompleteRegistration(clinicName, inquiries, goal) {
         // 1. Meta Pixel Standard Event (fires only on successful form submission)
         if (typeof window.fbq === 'function') {
           window.fbq('track', 'CompleteRegistration', {
@@ -2965,7 +2966,7 @@
             status: 'submitted',
             clinic_name: clinicName,
             inquiries_per_day: inquiries,
-            current_situation: situation,
+            priority_focus: goal,
             currency: 'INR',
             value: 2499.00
           });
@@ -2977,7 +2978,7 @@
             event_category: 'Lead',
             event_label: clinicName,
             inquiries: inquiries,
-            situation: situation,
+            priority_focus: goal,
             value: 2499
           });
         }
@@ -2989,7 +2990,7 @@
           e.preventDefault();
           const clinicVal = modalClinicInput ? modalClinicInput.value.trim() : '';
           const inquiriesVal = modalInquiriesSelect ? modalInquiriesSelect.value : '10 to 30 inquiries/day';
-          const situationVal = modalSituationSelect ? modalSituationSelect.value : 'Missing messages & slow replies';
+          const situationVal = modalSituationSelect ? modalSituationSelect.value : 'Instant 24/7 replies after clinic hours';
 
           if (!clinicVal) {
             if (modalClinicInput) {
@@ -3032,7 +3033,7 @@
             closeQualModal();
             if (modalSubmitBtn) {
               modalSubmitBtn.disabled = false;
-              modalSubmitBtn.innerHTML = '<svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Proceed To WhatsApp With Details →';
+              modalSubmitBtn.innerHTML = '<svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Try The Live AI Demo On WhatsApp →';
             }
             window.location.href = url;
           }, 350);
@@ -3055,7 +3056,7 @@
           e.preventDefault();
           const clinicVal = pricingClinicInput ? pricingClinicInput.value.trim() : '';
           const inquiriesVal = pricingInquiriesSelect ? pricingInquiriesSelect.value : '10 to 30 inquiries/day';
-          const situationVal = pricingSituationSelect ? pricingSituationSelect.value : 'Missing messages & slow replies';
+          const situationVal = pricingSituationSelect ? pricingSituationSelect.value : 'Instant 24/7 replies after clinic hours';
 
           if (!clinicVal) {
             if (pricingClinicInput) {
@@ -3088,7 +3089,7 @@
           setTimeout(function() {
             if (pricingWaBtn) {
               pricingWaBtn.disabled = false;
-              pricingWaBtn.innerHTML = '<svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Proceed To WhatsApp With Details →';
+              pricingWaBtn.innerHTML = '<svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Try The Live AI Demo On WhatsApp →';
             }
             window.location.href = url;
           }, 350);
@@ -3114,21 +3115,21 @@
       </button>
 
       <div style="margin-bottom: 10px;">
-        <span class="pricing-badge-top" style="font-size: 0.68rem; padding: 4px 10px; display: inline-block;">QUICK CLINIC FIT CHECK</span>
+        <span class="pricing-badge-top" style="font-size: 0.68rem; padding: 4px 10px; display: inline-block;">LIVE WHATSAPP DEMO</span>
       </div>
 
-      <h3 id="modal-qual-title" class="modal-heading">Test Clinic WhatsApp AI Demo</h3>
-      <p class="modal-subtext">Fill in your clinic details below to launch your interactive WhatsApp demo.</p>
+      <h3 id="modal-qual-title" class="modal-heading">Test The AI Receptionist On WhatsApp</h3>
+      <p class="modal-subtext">Enter your clinic info to see how the AI answers patient inquiries and confirms appointment slots in real time.</p>
 
       <form id="modal-qual-form">
         <div class="qual-input-group">
-          <label for="modal-clinic-name">What's your clinic name and city? <span style="color: #EF4444;">*</span></label>
-          <input type="text" id="modal-clinic-name" placeholder="e.g. City Dental Care, Madurai" class="qual-input" autocomplete="organization">
+          <label for="modal-clinic-name">Clinic Name &amp; City <span style="color: #EF4444;">*</span></label>
+          <input type="text" id="modal-clinic-name" placeholder="e.g. Mind Body Recovery, Chennai" class="qual-input" autocomplete="organization">
           <div class="qual-error-text" id="modal-clinic-error">Please enter your clinic name and city</div>
         </div>
 
         <div class="qual-input-group">
-          <label for="modal-inquiries-count">How many patient WhatsApp inquiries roughly per day?</label>
+          <label for="modal-inquiries-count">Daily patient WhatsApp inquiries roughly:</label>
           <select id="modal-inquiries-count" class="qual-select">
             <option value="Under 10 inquiries/day">Under 10 inquiries / day</option>
             <option value="10 to 30 inquiries/day" selected>10 – 30 inquiries / day</option>
@@ -3138,20 +3139,20 @@
         </div>
 
         <div class="qual-input-group">
-          <label for="modal-current-situation">Missing messages, dealing with no-shows, or exploring?</label>
+          <label for="modal-current-situation">What would you like the AI receptionist to handle?</label>
           <select id="modal-current-situation" class="qual-select">
-            <option value="Missing messages & slow replies" selected>Missing patient messages & delayed replies</option>
-            <option value="Dealing with patient no-shows">Dealing with patient no-shows</option>
-            <option value="Both missing messages and no-shows">Both missed messages & no-shows</option>
-            <option value="Just exploring options">Just exploring options</option>
+            <option value="Instant 24/7 replies after clinic hours" selected>Instant 24/7 replies after clinic hours</option>
+            <option value="Automated doctor appointment booking">Automated doctor appointment booking</option>
+            <option value="Patient visit reminders to stop no-shows">Patient visit reminders (stop no-shows)</option>
+            <option value="Full clinic automation (all of the above)">All of the above (Full clinic system)</option>
           </select>
         </div>
 
         <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 14px; width: 100%; cursor: pointer; border: 1.5px solid #000000;">
           <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          Proceed To WhatsApp With Details →
+          Try The Live AI Demo On WhatsApp →
         </button>
-        <p style="margin: 8px 0 0 0; font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); text-align: center;">All details are pre-filled in your WhatsApp chat automatically.</p>
+        <p style="margin: 8px 0 0 0; font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens directly in your WhatsApp app · No spam · Instant reply</p>
       </form>
     </div>
   </div>
