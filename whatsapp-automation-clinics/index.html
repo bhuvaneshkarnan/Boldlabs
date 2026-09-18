@@ -56,10 +56,18 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Google Fonts -->
+  <!-- Resource Hints for Lightning Load Speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Non-blocking Optimized Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  </noscript>
+  <link rel="preload" href="/style.css" as="style">
   <link rel="stylesheet" href="/style.css">
   
   <style>
@@ -1617,9 +1625,10 @@
         box-sizing: border-box !important;
       }
       .hero-headline {
-        font-size: 1.65rem !important;
-        margin-bottom: 10px !important;
-        line-height: 1.18 !important;
+        font-size: clamp(2.05rem, 7.2vw, 2.5rem) !important;
+        margin-bottom: 12px !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.035em !important;
       }
       .hero-description {
         font-size: 0.92rem !important;
@@ -1958,7 +1967,10 @@
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
     <a href="/#home" class="navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
-      <img src="/logo-transparent.png" alt="Boldlabs" style="height: 36px; width: auto; display: block;" />
+      <picture>
+        <source srcset="/logo-transparent.webp" type="image/webp">
+        <img src="/logo-transparent.png" alt="Boldlabs" style="height: 36px; width: auto; display: block;" width="55" height="36" />
+      </picture>
     </a>
     
     <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
@@ -1992,16 +2004,11 @@
           
           <!-- Hero Text -->
           <div>
-            <div class="hero-eyebrow reveal-blur">
-              <span class="live-dot"></span>
-              24/7 CLINIC WHATSAPP RECEPTIONIST · Built by a founder who answers his own phone
-            </div>
-
-            <h1 class="hero-headline reveal-blur delay-100">
+            <h1 class="hero-headline reveal-blur">
               Never Miss A <span class="hero-headline-accent">Patient Message</span> Again.
             </h1>
 
-            <p class="hero-description reveal-blur delay-200">
+            <p class="hero-description reveal-blur delay-100">
               Turn WhatsApp inquiries into confirmed doctor appointments, 24 hours a day. Built for Indian clinics, running on the official Meta WhatsApp API — not a script that gets your number banned.
             </p>
 
@@ -2243,8 +2250,10 @@
           </div>
 
           <picture>
+            <source media="(max-width: 640px)" srcset="/whatsapp-automation-clinics/assets/crm_dashboard_mobile.webp" type="image/webp">
             <source media="(max-width: 640px)" srcset="/whatsapp-automation-clinics/assets/crm_dashboard_mobile.png">
-            <img src="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.png" alt="Boldlabs Clinic CRM Live View for Mind Body Recovery" class="crm-img-element" loading="lazy">
+            <source srcset="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.webp" type="image/webp">
+            <img src="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.png" alt="Boldlabs Clinic CRM Live View for Dr. Sameer at Mind Body Recovery" class="crm-img-element" loading="lazy" decoding="async" width="1200" height="675">
           </picture>
         </div>
 
@@ -2488,7 +2497,10 @@
           <div class="testimonial-clinic-header">
             <div class="clinic-brand-info">
               <div class="clinic-logo-frame">
-                <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img">
+                <picture>
+                  <source srcset="/assets/mind-body-recovery-logo.webp" type="image/webp">
+                  <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img" loading="lazy" decoding="async" width="120" height="46">
+                </picture>
               </div>
               <div class="clinic-meta-text">
                 <div class="clinic-name-row">
@@ -2567,7 +2579,10 @@
 
           <!-- Founder Implementation Signature -->
           <div class="author-info" style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #E2E8F0;">
-            <img src="/shakanksh_portrait.png" alt="Bhuvanesh Karnan" class="author-avatar-img">
+            <picture>
+              <source srcset="/shakanksh_portrait.webp" type="image/webp">
+              <img src="/shakanksh_portrait.png" alt="Bhuvanesh Karnan" class="author-avatar-img" width="44" height="44" loading="lazy" decoding="async">
+            </picture>
             <div>
               <div class="author-name">Bhuvanesh Karnan</div>
               <div class="author-title" style="color: #0F172A; font-weight: 700;">Founder, Boldlabs · Based in Madurai, Tamil Nadu</div>
@@ -2704,7 +2719,10 @@
         
         <!-- Col 1: Brand & Overview -->
         <div class="footer-col reveal-blur delay-100">
-          <img src="/logo-transparent.png" alt="Boldlabs" style="height: 44px; margin-bottom: 14px; filter: brightness(0) invert(1);">
+          <picture>
+            <source srcset="/logo-transparent.webp" type="image/webp">
+            <img src="/logo-transparent.png" alt="Boldlabs" style="height: 44px; width: auto; margin-bottom: 14px; filter: brightness(0) invert(1);" width="68" height="44" loading="lazy" decoding="async">
+          </picture>
           <p style="margin-bottom: 14px; font-size: 0.86rem; color: #94A3B8;">
             Booking-first websites & WhatsApp automation systems built by Bhuvanesh Karnan for medical clinics & doctors across India.
           </p>
@@ -2767,8 +2785,8 @@
     </div>
   </footer>
 
-  <!-- Lenis Smooth Scroll Library CDN -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <!-- Lenis Smooth Scroll Library (Locally Hosted for Lightning Fast Zero CDN Latency) -->
+  <script src="/assets/lenis.min.js" defer></script>
 
   <!-- FAQ Accordion, Lenis Smooth Scroll & Reveal Animations JS -->
   <script>
