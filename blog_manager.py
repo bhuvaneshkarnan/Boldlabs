@@ -234,7 +234,7 @@ post_template = """<!DOCTYPE html>
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
     <a href="/#home" class="navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
-      <img src="/logo-transparent.png" alt="Boldlabs" style="height: 44px; width: auto; display: block;" />
+      <img src="/logo-transparent.png" alt="Boldlabs" style="height: 36px; width: auto; display: block;" />
     </a>
     
     <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">

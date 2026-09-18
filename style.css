@@ -142,7 +142,7 @@ a {
 }
 
 .navbar-brand img {
-  height: 44px !important;
+  height: 36px !important;
   width: auto !important;
   display: block;
 }
@@ -1440,7 +1440,7 @@ h3 {
   }
 
   .navbar-brand img {
-    height: 36px !important;
+    height: 30px !important;
     width: auto !important;
     display: block;
   }
