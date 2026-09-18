@@ -981,6 +981,115 @@
       font-size: 0.8rem;
     }
 
+    /* Input Error State */
+    .qual-input.has-error {
+      border-color: #EF4444 !important;
+      background-color: #FEF2F2 !important;
+    }
+
+    .qual-error-text {
+      display: none;
+      color: #EF4444;
+      font-size: 0.72rem;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    @keyframes qualShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .shake-animate {
+      animation: qualShake 0.35s ease-in-out;
+    }
+
+    /* Qualifying Modal */
+    .qual-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      box-sizing: border-box;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, visibility 0.22s ease;
+    }
+
+    .qual-modal-overlay.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .qual-modal-dialog {
+      background: #FFFFFF;
+      border: 2px solid #000000;
+      border-radius: 16px;
+      box-shadow: 6px 6px 0px #000000;
+      max-width: 460px;
+      width: 100%;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      position: relative;
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: left;
+    }
+
+    .qual-modal-overlay.is-active .qual-modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .qual-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #F1F5F9;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.15s ease;
+      padding: 0;
+    }
+
+    .qual-modal-close:hover {
+      background: #E2E8F0;
+      transform: scale(1.08);
+    }
+
+    .modal-heading {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+
+    .modal-subtext {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #64748B;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
     /* Verified Testimonials & Founder Note */
     .proof-section {
       background: #F8FAFC;
@@ -1515,6 +1624,14 @@
         font-size: 0.78rem !important;
         padding: 7px 9px !important;
       }
+      .qual-modal-dialog {
+        padding: 20px 16px !important;
+        border-radius: 14px !important;
+        max-width: 100% !important;
+      }
+      .modal-heading {
+        font-size: 1.1rem !important;
+      }
 
       /* Testimonial & FAQ Compact */
       .testimonial-card-box {
@@ -1635,7 +1752,7 @@
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="/blog/">Blog</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'd%20like%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo.%0A%0A1.%20Clinic%20Name%20%26%20City%3A%20%0A2.%20Daily%20WhatsApp%20Inquiries%3A%20%0A3.%20Current%20Situation%20(Missing%20messages%20%2F%20No-shows%20%2F%20Exploring)%3A%20" target="_blank" class="pill-btn" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+      <a href="#qual-modal" class="pill-btn trigger-qual-modal" id="nav-demo-btn" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
         <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         TEST AI DEMO
       </a>
@@ -1692,7 +1809,7 @@
             </div>
 
             <div class="hero-cta-group reveal-blur delay-400">
-              <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'd%20like%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo.%0A%0A1.%20Clinic%20Name%20%26%20City%3A%20%0A2.%20Daily%20WhatsApp%20Inquiries%3A%20%0A3.%20Current%20Situation%20(Missing%20messages%20%2F%20No-shows%20%2F%20Exploring)%3A%20" target="_blank" class="btn-hero-wa">
+              <a href="#qual-modal" class="btn-hero-wa trigger-qual-modal" id="hero-wa-btn">
                 <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 Test WhatsApp AI Demo →
               </a>
@@ -2081,8 +2198,9 @@
               <span>Quick Clinic Fit Check</span>
             </div>
             <div class="qual-input-group">
-              <label for="qual-clinic-name">What's your clinic name and city?</label>
+              <label for="qual-clinic-name">What's your clinic name and city? <span style="color: #EF4444;">*</span></label>
               <input type="text" id="qual-clinic-name" placeholder="e.g. City Dental Care, Madurai" class="qual-input" autocomplete="organization">
+              <div class="qual-error-text" id="qual-clinic-error">Please enter your clinic name and city</div>
             </div>
             <div class="qual-input-group">
               <label for="qual-inquiries-count">How many patient WhatsApp inquiries roughly per day?</label>
@@ -2104,10 +2222,10 @@
             </div>
           </div>
 
-          <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'd%20like%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo.%0A%0A1.%20Clinic%20Name%20%26%20City%3A%20%0A2.%20Daily%20WhatsApp%20Inquiries%3A%2010%20to%2030%20inquiries%2Fday%0A3.%20Current%20Situation%3A%20Missing%20messages%20%26%20slow%20replies" target="_blank" class="btn-pricing-cta" id="pricing-wa-btn">
+          <button type="button" class="btn-pricing-cta" id="pricing-wa-btn" style="cursor: pointer; border: 1.5px solid #000000; width: 100%;">
             <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            Chat With Us On WhatsApp →
-          </a>
+            Proceed To WhatsApp With Details →
+          </button>
 
           <div class="pricing-contact-links">
             <span><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <a href="tel:+918870341570" style="color: #0F172A; font-weight: 700; text-decoration: underline;">Or Call Us Directly: +91 8870341570</a></span>
@@ -2232,7 +2350,7 @@
       <span>₹2,499/mo · Zero Setup</span>
       Clinic WhatsApp System
     </div>
-    <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'd%20like%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo.%0A%0A1.%20Clinic%20Name%20%26%20City%3A%20%0A2.%20Daily%20WhatsApp%20Inquiries%3A%20%0A3.%20Current%20Situation%20(Missing%20messages%20%2F%20No-shows%20%2F%20Exploring)%3A%20" target="_blank" class="btn-sticky-wa">
+    <a href="#qual-modal" class="btn-sticky-wa trigger-qual-modal" id="sticky-wa-btn" style="cursor: pointer;">
       <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
       Chat On WhatsApp
     </a>
@@ -2420,35 +2538,222 @@
         });
       }
 
-      // Dynamic WhatsApp prefill with Qualifying Flow answers
+      // Qualifying Flow Logic (Collects in form itself, then proceeds to WhatsApp)
+      const modalOverlay = document.getElementById('qual-modal');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+      const modalForm = document.getElementById('modal-qual-form');
+      const modalClinicInput = document.getElementById('modal-clinic-name');
+      const modalInquiriesSelect = document.getElementById('modal-inquiries-count');
+      const modalSituationSelect = document.getElementById('modal-current-situation');
+      const modalClinicError = document.getElementById('modal-clinic-error');
+
+      const pricingClinicInput = document.getElementById('qual-clinic-name');
+      const pricingInquiriesSelect = document.getElementById('qual-inquiries-count');
+      const pricingSituationSelect = document.getElementById('qual-current-situation');
+      const pricingClinicError = document.getElementById('qual-clinic-error');
       const pricingWaBtn = document.getElementById('pricing-wa-btn');
-      const clinicNameInput = document.getElementById('qual-clinic-name');
-      const inquiriesSelect = document.getElementById('qual-inquiries-count');
-      const situationSelect = document.getElementById('qual-current-situation');
+      const pricingFlowCard = document.getElementById('qual-flow-card');
 
-      function updatePricingWaLink() {
-        if (!pricingWaBtn) return;
-        const clinicVal = clinicNameInput && clinicNameInput.value.trim() ? clinicNameInput.value.trim() : '';
-        const inquiriesVal = inquiriesSelect ? inquiriesSelect.value : '10 to 30 inquiries/day';
-        const situationVal = situationSelect ? situationSelect.value : 'Missing messages & slow replies';
+      function openQualModal() {
+        if (!modalOverlay) return;
+        // Sync from pricing form if user already filled anything
+        if (pricingClinicInput && pricingClinicInput.value && modalClinicInput) {
+          modalClinicInput.value = pricingClinicInput.value;
+        }
+        if (pricingInquiriesSelect && modalInquiriesSelect) {
+          modalInquiriesSelect.value = pricingInquiriesSelect.value;
+        }
+        if (pricingSituationSelect && modalSituationSelect) {
+          modalSituationSelect.value = pricingSituationSelect.value;
+        }
 
-        let text = "Hi Bhuvanesh, I'd like to test the Clinic WhatsApp AI demo.\n\n";
-        text += "1. Clinic Name & City: " + (clinicVal || "(Please specify)") + "\n";
-        text += "2. Daily WhatsApp Inquiries: " + inquiriesVal + "\n";
-        text += "3. Current Situation: " + situationVal;
-
-        pricingWaBtn.href = "https://wa.me/919514925790?text=" + encodeURIComponent(text);
+        modalOverlay.classList.add('is-active');
+        modalOverlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          if (modalClinicInput) modalClinicInput.focus();
+        }, 150);
       }
 
+      function closeQualModal() {
+        if (!modalOverlay) return;
+        modalOverlay.classList.remove('is-active');
+        modalOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Attach open modal handler to all trigger buttons (Hero, Navbar, Sticky Mobile Bar)
+      document.querySelectorAll('.trigger-qual-modal').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openQualModal();
+        });
+      });
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeQualModal);
+      }
+
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', function(e) {
+          if (e.target === modalOverlay) {
+            closeQualModal();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('is-active')) {
+          closeQualModal();
+        }
+      });
+
+      function buildWhatsAppUrl(clinicName, inquiries, situation) {
+        const text = "Hi Bhuvanesh, I'd like to test the Clinic WhatsApp AI demo.\n\n" +
+                     "• Clinic Name & City: " + clinicName + "\n" +
+                     "• Daily WhatsApp Inquiries: " + inquiries + "\n" +
+                     "• Current Situation: " + situation;
+        return "https://wa.me/919514925790?text=" + encodeURIComponent(text);
+      }
+
+      // Handle Modal Form Submit
+      if (modalForm) {
+        modalForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const clinicVal = modalClinicInput ? modalClinicInput.value.trim() : '';
+          const inquiriesVal = modalInquiriesSelect ? modalInquiriesSelect.value : '10 to 30 inquiries/day';
+          const situationVal = modalSituationSelect ? modalSituationSelect.value : 'Missing messages & slow replies';
+
+          if (!clinicVal) {
+            if (modalClinicInput) {
+              modalClinicInput.classList.add('has-error');
+              modalClinicInput.focus();
+            }
+            if (modalClinicError) modalClinicError.style.display = 'block';
+            const dialog = modalOverlay.querySelector('.qual-modal-dialog');
+            if (dialog) {
+              dialog.classList.remove('shake-animate');
+              void dialog.offsetWidth; // trigger reflow
+              dialog.classList.add('shake-animate');
+            }
+            return;
+          }
+
+          // Clear error
+          if (modalClinicInput) modalClinicInput.classList.remove('has-error');
+          if (modalClinicError) modalClinicError.style.display = 'none';
+
+          // Sync back to pricing inputs
+          if (pricingClinicInput) pricingClinicInput.value = clinicVal;
+          if (pricingInquiriesSelect) pricingInquiriesSelect.value = inquiriesVal;
+          if (pricingSituationSelect) pricingSituationSelect.value = situationVal;
+
+          closeQualModal();
+          const url = buildWhatsAppUrl(clinicVal, inquiriesVal, situationVal);
+          window.open(url, '_blank');
+        });
+
+        if (modalClinicInput) {
+          modalClinicInput.addEventListener('input', function() {
+            if (this.value.trim() && modalClinicError) {
+              this.classList.remove('has-error');
+              modalClinicError.style.display = 'none';
+            }
+          });
+        }
+      }
+
+      // Handle Pricing Card Form Submit
       if (pricingWaBtn) {
-        if (clinicNameInput) clinicNameInput.addEventListener('input', updatePricingWaLink);
-        if (inquiriesSelect) inquiriesSelect.addEventListener('change', updatePricingWaLink);
-        if (situationSelect) situationSelect.addEventListener('change', updatePricingWaLink);
-        pricingWaBtn.addEventListener('click', updatePricingWaLink);
-        updatePricingWaLink();
+        pricingWaBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const clinicVal = pricingClinicInput ? pricingClinicInput.value.trim() : '';
+          const inquiriesVal = pricingInquiriesSelect ? pricingInquiriesSelect.value : '10 to 30 inquiries/day';
+          const situationVal = pricingSituationSelect ? pricingSituationSelect.value : 'Missing messages & slow replies';
+
+          if (!clinicVal) {
+            if (pricingClinicInput) {
+              pricingClinicInput.classList.add('has-error');
+              pricingClinicInput.focus();
+            }
+            if (pricingClinicError) pricingClinicError.style.display = 'block';
+            if (pricingFlowCard) {
+              pricingFlowCard.classList.remove('shake-animate');
+              void pricingFlowCard.offsetWidth; // trigger reflow
+              pricingFlowCard.classList.add('shake-animate');
+            }
+            return;
+          }
+
+          // Clear error
+          if (pricingClinicInput) pricingClinicInput.classList.remove('has-error');
+          if (pricingClinicError) pricingClinicError.style.display = 'none';
+
+          const url = buildWhatsAppUrl(clinicVal, inquiriesVal, situationVal);
+          window.open(url, '_blank');
+        });
+
+        if (pricingClinicInput) {
+          pricingClinicInput.addEventListener('input', function() {
+            if (this.value.trim() && pricingClinicError) {
+              this.classList.remove('has-error');
+              pricingClinicError.style.display = 'none';
+            }
+          });
+        }
       }
     });
   </script>
+
+  <!-- Qualifying Flow Modal (Collects Details Before WhatsApp) -->
+  <div class="qual-modal-overlay" id="qual-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-qual-title">
+    <div class="qual-modal-dialog">
+      <button type="button" class="qual-modal-close" id="modal-close-btn" aria-label="Close modal">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div style="margin-bottom: 10px;">
+        <span class="pricing-badge-top" style="font-size: 0.68rem; padding: 4px 10px; display: inline-block;">QUICK CLINIC FIT CHECK</span>
+      </div>
+
+      <h3 id="modal-qual-title" class="modal-heading">Test Clinic WhatsApp AI Demo</h3>
+      <p class="modal-subtext">Fill in your clinic details below to launch your interactive WhatsApp demo.</p>
+
+      <form id="modal-qual-form">
+        <div class="qual-input-group">
+          <label for="modal-clinic-name">What's your clinic name and city? <span style="color: #EF4444;">*</span></label>
+          <input type="text" id="modal-clinic-name" placeholder="e.g. City Dental Care, Madurai" class="qual-input" autocomplete="organization">
+          <div class="qual-error-text" id="modal-clinic-error">Please enter your clinic name and city</div>
+        </div>
+
+        <div class="qual-input-group">
+          <label for="modal-inquiries-count">How many patient WhatsApp inquiries roughly per day?</label>
+          <select id="modal-inquiries-count" class="qual-select">
+            <option value="Under 10 inquiries/day">Under 10 inquiries / day</option>
+            <option value="10 to 30 inquiries/day" selected>10 – 30 inquiries / day</option>
+            <option value="30 to 50 inquiries/day">30 – 50 inquiries / day</option>
+            <option value="50+ inquiries/day">50+ inquiries / day</option>
+          </select>
+        </div>
+
+        <div class="qual-input-group">
+          <label for="modal-current-situation">Missing messages, dealing with no-shows, or exploring?</label>
+          <select id="modal-current-situation" class="qual-select">
+            <option value="Missing messages & slow replies" selected>Missing patient messages & delayed replies</option>
+            <option value="Dealing with patient no-shows">Dealing with patient no-shows</option>
+            <option value="Both missing messages and no-shows">Both missed messages & no-shows</option>
+            <option value="Just exploring options">Just exploring options</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 14px; width: 100%; cursor: pointer; border: 1.5px solid #000000;">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          Proceed To WhatsApp With Details →
+        </button>
+        <p style="margin: 8px 0 0 0; font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); text-align: center;">All details are pre-filled in your WhatsApp chat automatically.</p>
+      </form>
+    </div>
+  </div>
 
 </body>
 </html>
