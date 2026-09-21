@@ -446,7 +446,6 @@
       padding-bottom: 14px;
       border-bottom: 1.5px solid #E2E8F0;
       margin-bottom: 14px;
-      flex-wrap: wrap;
     }
 
     .clinic-brand-info {
@@ -463,6 +462,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .clinic-logo-img {
@@ -472,16 +472,24 @@
       display: block;
     }
 
+    .clinic-meta-text {
+      flex: 1;
+      min-width: 0;
+    }
+
     .clinic-name-row {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: nowrap;
     }
 
     .clinic-title {
       font-size: 1.05rem;
       font-weight: 800;
       color: #0F172A;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .verified-badge {
@@ -491,19 +499,33 @@
       color: #065F46;
       background: #ECFDF5;
       border: 1px solid #A7F3D0;
-      padding: 2px 6px;
+      padding: 2px 7px;
       border-radius: 4px;
       display: inline-flex;
       align-items: center;
-      gap: 3px;
+      gap: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .desktop-badge-client {
+      display: inline;
+    }
+
+    .clinic-subtitle {
+      font-size: 0.74rem;
+      color: #475569;
+      font-weight: 600;
+      margin-top: 2px;
     }
 
     .clinic-metrics-badge {
       background: #F0FDF4;
       border: 1.5px solid #86EFAC;
       border-radius: 8px;
-      padding: 6px 12px;
+      padding: 6px 14px;
       text-align: right;
+      flex-shrink: 0;
     }
 
     .metric-highlight {
@@ -2352,21 +2374,98 @@
         border-radius: 12px;
       }
       .testimonial-clinic-header {
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1.5px solid #E2E8F0;
+      }
+      .clinic-brand-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
       }
       .clinic-logo-frame {
-        padding: 5px 10px;
+        padding: 3px 6px;
+        border-radius: 6px;
+        flex-shrink: 0;
       }
       .clinic-logo-img {
         height: 22px;
+        width: auto;
+        max-width: 74px;
+      }
+      .clinic-meta-text {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1px;
+      }
+      .clinic-name-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: nowrap;
       }
       .clinic-title {
         font-size: 0.95rem;
+        font-weight: 800;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .verified-badge {
+        font-size: 0.58rem;
+        padding: 2px 5px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        letter-spacing: 0.02em;
+      }
+      .desktop-badge-client {
+        display: none;
+      }
+      .clinic-subtitle {
+        font-size: 0.69rem;
+        color: #475569;
+        font-weight: 600;
+        white-space: nowrap;
+        letter-spacing: -0.01em;
+      }
+      .clinic-metrics-badge {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 7px 10px;
+        background: #F0FDF4;
+        border: 1.5px solid #86EFAC;
+        border-radius: 8px;
+        text-align: left;
       }
       .metric-highlight {
-        font-size: 0.85rem;
+        font-size: 0.84rem;
+        font-weight: 800;
+        color: #15803D;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .metric-caption {
+        font-size: 0.65rem;
+        color: #166534;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        text-align: right;
+        white-space: nowrap;
+        flex-shrink: 0;
       }
       .video-review-box {
         padding: 10px;
@@ -2990,17 +3089,20 @@
               <div class="clinic-meta-text">
                 <div class="clinic-name-row">
                   <span class="clinic-title">Dr. Sameer</span>
-                  <span class="verified-badge">&#10003; VERIFIED DOCTOR CLIENT</span>
+                  <span class="verified-badge">&#10003; VERIFIED DOCTOR<span class="desktop-badge-client"> CLIENT</span></span>
                 </div>
-                <div style="font-size: 0.74rem; color: #475569; font-weight: 600;">
+                <div class="clinic-subtitle">
                   Mind Body Recovery &middot; mindbodyrecovery.in
                 </div>
               </div>
             </div>
 
             <div class="clinic-metrics-badge">
-              <span class="metric-highlight">+20 Bookings / Mo</span>
-              <span class="metric-caption">via WhatsApp Automation</span>
+              <span class="metric-highlight">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:3px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                +20 Bookings / Mo
+              </span>
+              <span class="metric-caption">via WhatsApp AI</span>
             </div>
           </div>
 
