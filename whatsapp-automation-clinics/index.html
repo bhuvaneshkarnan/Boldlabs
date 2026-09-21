@@ -1255,25 +1255,116 @@
       gap: 5px;
     }
 
-    /* Footer */
+    /* Clean High-Trust Footer */
     .site-footer {
-      background: #0B141A;
+      background: #080E14;
       color: #94A3B8;
-      padding: 36px 0 20px;
-      border-top: 1px solid #1E293B;
+      padding: 44px 0 24px;
+      border-top: 2px solid #1E293B;
+    }
+
+    .footer-proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #1E293B;
+    }
+
+    .f-proof-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.74rem;
+      color: #CBD5E1;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .f-proof-badge svg {
+      flex-shrink: 0;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 30px;
-      margin-bottom: 24px;
+      grid-template-columns: 1.3fr 1fr 1.1fr;
+      gap: 36px;
+      margin-bottom: 32px;
     }
 
-    .footer-col h4 {
+    .footer-brand-desc {
+      font-size: 0.82rem;
+      color: #94A3B8;
+      line-height: 1.55;
+      margin: 0 0 16px 0;
+      max-width: 360px;
+    }
+
+    .footer-founder-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 14px;
+      border-radius: 10px;
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .f-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #059669;
       color: #FFFFFF;
-      font-size: 0.9rem;
-      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      border: 1.5px solid #34D399;
+      flex-shrink: 0;
+    }
+
+    .f-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .f-contact-line {
+      font-size: 0.74rem;
+      color: #94A3B8;
+    }
+
+    .f-contact-line a {
+      color: #25D366;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .f-location-line {
+      font-size: 0.68rem;
+      color: #64748B;
+      font-family: var(--font-mono);
+    }
+
+    .footer-heading {
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin: 0 0 14px 0;
+      text-transform: uppercase;
     }
 
     .footer-links-list {
@@ -1282,21 +1373,43 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
       font-size: 0.8rem;
+      color: #CBD5E1;
+    }
+
+    .f-check {
+      color: #22C55E;
+      font-weight: 800;
+      margin-right: 6px;
+    }
+
+    .f-shield {
+      color: #059669;
+      font-size: 0.65rem;
+      margin-right: 6px;
+      vertical-align: middle;
     }
 
     .footer-bottom-bar {
       border-top: 1px solid #1E293B;
-      padding-top: 16px;
+      padding-top: 20px;
       display: flex;
       justify-content: space-between;
-      font-size: 0.75rem;
+      align-items: center;
+      font-size: 0.74rem;
       color: #64748B;
       font-family: var(--font-mono);
       flex-wrap: wrap;
       gap: 10px;
     }
+
+    .f-privacy-note {
+      color: #86EFAC;
+      font-weight: 600;
+    }
+
+    
 
     /* Modal Overlay */
     .qual-modal-overlay {
@@ -2663,12 +2776,38 @@
         font-size: 0.82rem;
         padding: 0 14px 12px;
       }
+      /* Clean Footer Mobile Overrides */
+      .site-footer {
+        padding: 36px 0 115px !important;
+      }
+      .footer-proof-strip {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+      }
+      .f-proof-badge {
+        font-size: 0.7rem;
+        padding: 7px 10px;
+      }
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
+        margin-bottom: 24px;
       }
-      .site-footer {
-        padding: 24px 0 70px;
+      .footer-brand-desc {
+        max-width: 100%;
+        font-size: 0.8rem;
+      }
+      .footer-founder-card {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 0.7rem;
       }
       .sticky-whatsapp-bar {
         display: flex;
@@ -3595,38 +3734,91 @@
     </a>
   </div>
 
-  <!-- Minimal Footer -->
+  <!-- High-Trust Optimized Footer -->
   <footer class="site-footer">
     <div class="container">
+      
+      <!-- Top Institutional Proof Strip -->
+      <div class="footer-proof-strip">
+        <div class="f-proof-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <span>Official Meta Cloud API Provider</span>
+        </div>
+        <div class="f-proof-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>256-Bit SSL &amp; DPDP Act Compliant</span>
+        </div>
+        <div class="f-proof-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Verified Client: Dr. Sameer (Mind Body Recovery)</span>
+        </div>
+        <div class="f-proof-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>48-Hour Live Clinic Delivery</span>
+        </div>
+      </div>
+
+      <!-- Main Footer Grid (3 Balanced Columns) -->
       <div class="footer-grid">
-        <div class="footer-col">
+        
+        <!-- Column 1: Brand, Founder & Direct Contact -->
+        <div class="footer-col footer-col-brand">
           <picture>
             <source srcset="/logo-transparent.webp" type="image/webp">
-            <img src="/logo-transparent.png" alt="Boldlabs" style="height: 32px; width: auto; margin-bottom: 8px; filter: brightness(0) invert(1);" width="50" height="32" loading="lazy" decoding="async">
+            <img src="/logo-transparent.png" alt="Boldlabs" style="height: 32px; width: auto; margin-bottom: 12px; filter: brightness(0) invert(1);" width="50" height="32" loading="lazy" decoding="async">
           </picture>
-          <p style="font-size: 0.8rem; color: #94A3B8; margin: 0 0 8px 0; line-height: 1.45;">
-            WhatsApp automation &amp; booking systems built by Bhuvanesh Karnan for Indian clinics.
+          <p class="footer-brand-desc">
+            Official Meta WhatsApp Business Cloud API automation and patient booking systems purpose-built for Indian healthcare clinics.
           </p>
-          <div style="font-size: 0.76rem; color: #25D366; font-weight: 600;">
-            Official Meta WhatsApp API Partner &middot; Madurai, Tamil Nadu
+          
+          <div class="footer-founder-card">
+            <div class="f-avatar">BK</div>
+            <div>
+              <div class="f-name">Bhuvanesh Karnan &middot; Founder</div>
+              <div class="f-contact-line">
+                Call / WhatsApp: 
+                <a href="https://wa.me/918870341570?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20the%20Clinic%20WhatsApp%20Automation%20system." target="_blank" rel="noopener noreferrer">+91 8870341570</a>
+              </div>
+              <div class="f-location-line">Madurai, Tamil Nadu, India</div>
+            </div>
           </div>
         </div>
 
+        <!-- Column 2: Clinic Workflow System -->
         <div class="footer-col">
-          <h4>Clinic Package</h4>
+          <h4 class="footer-heading">Clinic Workflow System</h4>
           <ul class="footer-links-list">
-            <li>24/7 AI Receptionist &amp; Booking</li>
-            <li>24h &amp; 2h Patient Reminders</li>
-            <li>Clinic CRM &amp; Multi-Staff Inbox</li>
-            <li>₹2,499/mo &middot; Zero Setup Fee</li>
+            <li><span class="f-check">&#10003;</span> 24/7 AI Receptionist &amp; OPD Triage</li>
+            <li><span class="f-check">&#10003;</span> 5-Second Missed-Call Recovery</li>
+            <li><span class="f-check">&#10003;</span> Google Calendar &amp; Tasks Sync</li>
+            <li><span class="f-check">&#10003;</span> 24h &amp; 2h Patient WhatsApp Reminders</li>
+            <li><span class="f-check">&#10003;</span> Automated 5-Star Google Maps Reviews</li>
+            <li><span class="f-check">&#10003;</span> Live Multi-Staff Web CRM Inbox</li>
           </ul>
         </div>
+
+        <!-- Column 3: Proofs & Guarantees -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Compliance &amp; Proofs</h4>
+          <ul class="footer-links-list">
+            <li><span class="f-shield">&#9679;</span> Official Meta Cloud API (Zero Ban Risk)</li>
+            <li><span class="f-shield">&#9679;</span> Keep Existing Number (No New SIM)</li>
+            <li><span class="f-shield">&#9679;</span> Strict Clinical Guardrail Protocol</li>
+            <li><span class="f-shield">&#9679;</span> 30-Day Positive ROI Guarantee</li>
+            <li><span class="f-shield">&#9679;</span> Month-to-Month &middot; Cancel Anytime</li>
+            <li><span class="f-shield">&#9679;</span> &#8377;2,499/mo &middot; Zero Setup Fee</li>
+          </ul>
+        </div>
+
       </div>
 
+      <!-- Footer Bottom Bar -->
       <div class="footer-bottom-bar">
-        <div>© 2026 Boldlabs. Madurai, Tamil Nadu, India.</div>
-        <div>100% Patient Privacy Guaranteed</div>
+        <div class="f-copy">&copy; 2026 Boldlabs Studio. All rights reserved.</div>
+        <div class="f-tagline">Engineered in Tamil Nadu, India for Indian Healthcare Providers.</div>
+        <div class="f-privacy-note">100% Patient Health Data Privacy &middot; DPDP Act Compliant</div>
       </div>
+
     </div>
   </footer>
 
