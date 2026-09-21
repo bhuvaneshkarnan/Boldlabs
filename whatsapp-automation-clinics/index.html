@@ -2027,6 +2027,142 @@
     .desktop-text { display: inline; }
     .mobile-text { display: none; }
 
+    /* Hero Institutional Trust Bar */
+    .hero-trust-bar {
+      margin-top: 36px;
+      padding: 14px 20px;
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      align-items: center;
+    }
+
+    .trust-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .trust-bar-item svg {
+      flex-shrink: 0;
+    }
+
+    .trust-bar-item strong {
+      font-size: 0.8rem;
+      color: #0F172A;
+      display: block;
+      line-height: 1.25;
+    }
+
+    .trust-bar-item span {
+      font-size: 0.7rem;
+      color: #64748B;
+      font-family: var(--font-mono);
+      display: block;
+      line-height: 1.3;
+    }
+
+    /* Medical Safeguard & Clinical Guardrail Card */
+    .medical-guardrail-card {
+      background: #FFFFFF;
+      border: 2px solid #0F172A;
+      border-radius: 12px;
+      box-shadow: 4px 4px 0px #0F172A;
+      padding: 22px 24px;
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    .guardrail-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .guardrail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ECFDF5;
+      border: 1px solid #10B981;
+      color: #065F46;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.03em;
+    }
+
+    .guardrail-doctor-tag {
+      font-size: 0.74rem;
+      color: #64748B;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .guardrail-heading {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 0 0 10px 0;
+      line-height: 1.3;
+    }
+
+    .guardrail-desc {
+      font-size: 0.88rem;
+      color: #334155;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+    }
+
+    .guardrail-chips-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-top: 1px solid #F1F5F9;
+      padding-top: 12px;
+    }
+
+    .guardrail-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    /* Privacy Micro-Seal */
+    .privacy-micro-seal {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.68rem;
+      color: #64748B;
+      font-family: var(--font-mono);
+      margin-top: 6px;
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    .privacy-micro-seal svg {
+      flex-shrink: 0;
+    }
+
     /* ============================================================
        MOBILE MASTER OPTIMIZATIONS (Cuts scroll from 10k to ~3.5k)
        ============================================================ */
@@ -2313,6 +2449,46 @@
       }
 
       /* Comparison Mobile Stack */
+
+      /* Trust Bar Mobile */
+      .hero-trust-bar {
+        margin-top: 20px;
+        padding: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 10px;
+      }
+      .trust-bar-item {
+        gap: 8px;
+      }
+      .trust-bar-item strong {
+        font-size: 0.74rem;
+      }
+      .trust-bar-item span {
+        font-size: 0.64rem;
+      }
+
+      /* Medical Safeguard Mobile */
+      .medical-guardrail-card {
+        padding: 16px;
+        margin-top: 16px;
+      }
+      .guardrail-heading {
+        font-size: 1.05rem;
+      }
+      .guardrail-desc {
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      .guardrail-chips-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .guardrail-chip {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
       .desktop-only { display: none !important; }
 
       .desktop-text { display: none !important; }
@@ -2614,6 +2790,39 @@
           </div>
 
         </div>
+
+        <!-- Institutional Trust & Security Bar (Minimalist SVG Icons, Zero Emojis) -->
+        <div class="hero-trust-bar">
+          <div class="trust-bar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div>
+              <strong>Official Meta Cloud API</strong>
+              <span>Zero Ban Risk</span>
+            </div>
+          </div>
+          <div class="trust-bar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <div>
+              <strong>DPDP Act &amp; 256-Bit SSL</strong>
+              <span>Encrypted Patient Data</span>
+            </div>
+          </div>
+          <div class="trust-bar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <div>
+              <strong>Keep Existing Number</strong>
+              <span>Zero New SIMs Needed</span>
+            </div>
+          </div>
+          <div class="trust-bar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <div>
+              <strong>48-Hour Live Delivery</strong>
+              <span>Done-For-You Setup</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -2794,6 +3003,40 @@
           </div>
 
         </div>
+
+        <!-- Medical Safeguard & Clinical Guardrail Card (Zero Emojis, Minimalist SVG Icons) -->
+        <div class="medical-guardrail-card">
+          <div class="guardrail-top-row">
+            <div class="guardrail-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>CLINICAL BOUNDARY &amp; SAFETY PROTOCOL</span>
+            </div>
+            <div class="guardrail-doctor-tag">Built for Doctor Peace of Mind</div>
+          </div>
+          
+          <h3 class="guardrail-heading">Zero Medical Hallucination. 100% Administrative Focus.</h3>
+          
+          <p class="guardrail-desc">
+            Boldlabs is engineered solely for clinic front-desk logistics: consultation fees, doctor availability, appointment booking, clinic directions, and reminder schedules. 
+            <strong>The AI never prescribes medication or provides clinical diagnoses.</strong> Any medical or clinical inquiry triggers an immediate polite handoff that alerts your doctor and receptionist on their priority dashboard.
+          </p>
+
+          <div class="guardrail-chips-row">
+            <div class="guardrail-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Logistics &amp; OPD Triage Only</span>
+            </div>
+            <div class="guardrail-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Never Prescribes or Diagnoses</span>
+            </div>
+            <div class="guardrail-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instant Alert &amp; Staff Takeover</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -2917,6 +3160,10 @@
                 <input type="tel" id="qual-whatsapp-phone" placeholder="98765 43210" class="phone-input-clean" autocomplete="tel" maxlength="15" required>
               </div>
               <div class="qual-error-text" id="qual-phone-error">Please enter a valid 10-digit WhatsApp number</div>
+              <div class="privacy-micro-seal">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>100% Data Confidentiality: Used solely to send your interactive demo. Zero sales spam or unsolicited phone calls.</span>
+              </div>
             </div>
 
             <button type="submit" class="btn-pricing-cta" id="pricing-wa-btn" style="margin-top: 6px;">
@@ -3247,7 +3494,29 @@
         </div>
 
         <div class="faq-list-box">
-          
+
+          <!-- FAQ: Existing Phone Number & SIM Migration -->
+          <div class="faq-accordion-item">
+            <button class="faq-btn" type="button">
+              <span>Can we use our clinic's existing phone number, or do we need a new SIM card?</span>
+              <span class="faq-icon-arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer-content">
+              You can use your clinic's existing mobile or landline number — no new SIM card is needed. Because Boldlabs operates on the official Meta WhatsApp Business Cloud API (which protects your clinic from account bans and unlocks unlimited messaging), the number is transitioned from the standard WhatsApp consumer app to Meta's verified API infrastructure. We guide you through this 3-minute process, and your staff gain access to our multi-user clinic dashboard to view chats, reply manually, and manage patients on both PC and mobile.
+            </div>
+          </div>
+
+          <!-- FAQ: Medical Advice & Prescriptions Safeguard -->
+          <div class="faq-accordion-item">
+            <button class="faq-btn" type="button">
+              <span>Does the AI receptionist attempt to provide medical diagnoses or prescriptions?</span>
+              <span class="faq-icon-arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer-content">
+              Strictly no. Boldlabs operates under rigorous clinical boundary protocols. The AI is trained solely to handle operational and administrative logistics: doctor consultation timings, appointment slot booking, fee inquiries, clinic directions, and reminder schedules. It is hardcoded to never diagnose symptoms or recommend medications. When a patient asks a clinical or medical question, the AI politely informs them that only the doctor can provide medical counsel, and instantly alerts your staff for a direct response.
+            </div>
+          </div>
+
           <div class="faq-accordion-item">
             <button class="faq-btn" type="button">
               <span>How does missed call recovery work if our clinic phone is busy?</span>
@@ -3391,6 +3660,10 @@
               <input type="tel" id="modal-whatsapp-phone" placeholder="98765 43210" class="phone-input-clean" autocomplete="tel" maxlength="15" required>
             </div>
             <div class="qual-error-text" id="modal-phone-error">Please enter a valid 10-digit WhatsApp number</div>
+              <div class="privacy-micro-seal">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>100% Data Confidentiality: Used solely to send your interactive demo. Zero sales spam or unsolicited phone calls.</span>
+              </div>
           </div>
 
           <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 10px;">
