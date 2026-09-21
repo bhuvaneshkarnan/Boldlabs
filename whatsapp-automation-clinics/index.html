@@ -236,9 +236,11 @@
       font-family: var(--font-display);
       font-size: 1.02rem;
       font-weight: 800;
-      padding: 15px 26px;
-      border-radius: var(--radius-md);
+      min-height: 52px;
+      padding: 14px 28px;
+      border-radius: 10px;
       border: 2px solid #000000;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -246,7 +248,8 @@
       text-decoration: none;
       cursor: pointer;
       width: fit-content;
-      transition: transform 0.15s ease;
+      box-sizing: border-box;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .btn-hero-wa:hover {
@@ -1058,11 +1061,13 @@
       background: var(--wa-green);
       color: #000000;
       font-family: var(--font-display);
-      font-size: 0.98rem;
+      font-size: 1.02rem;
       font-weight: 800;
-      padding: 13px 20px;
-      border-radius: 8px;
-      border: 1.5px solid #000000;
+      min-height: 52px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 2px solid #000000;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1071,6 +1076,7 @@
       width: 100%;
       box-sizing: border-box;
       cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     /* 2-Field Form */
@@ -1714,16 +1720,17 @@
       background: var(--wa-green);
       color: #000000;
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1.02rem;
       font-weight: 800;
-      padding: 17px 34px;
-      border-radius: var(--radius-md);
-      border: 2.5px solid #000000;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      min-height: 52px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 2px solid #000000;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       text-decoration: none;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1774,6 +1781,251 @@
       border: 1.5px solid #34D399;
       flex-shrink: 0;
     }
+
+    /* Comparison Section: Why Clinics Pick Boldlabs */
+    .comparison-section {
+      background: #F8FAFC;
+      border-top: 1.5px solid #E2E8F0;
+      scroll-margin-top: 85px;
+      padding: 100px 0 64px;
+    }
+
+    .comparison-table-wrapper {
+      max-width: 960px;
+      margin: 0 auto 24px;
+      background: #FFFFFF;
+      border: 2px solid #000000;
+      border-radius: var(--radius-md);
+      box-shadow: 4px 4px 0px #000000;
+      overflow: hidden;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .comparison-table th {
+      padding: 16px 20px;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      border-bottom: 2px solid #000000;
+    }
+
+    .col-criteria {
+      width: 22%;
+      background: #F1F5F9;
+      color: #334155;
+      font-weight: 800;
+    }
+
+    .col-generic {
+      width: 38%;
+      background: #F8FAFC;
+      color: #64748B;
+      font-weight: 700;
+      border-right: 1px solid #E2E8F0;
+    }
+
+    .col-boldlabs {
+      width: 40%;
+      background: #052E16;
+      color: #FFFFFF;
+      position: relative;
+      border-left: 2.5px solid #22C55E;
+    }
+
+    .boldlabs-col-badge {
+      display: inline-block;
+      background: #22C55E;
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .comparison-table td {
+      padding: 15px 20px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: middle;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cell-criteria {
+      background: #F8FAFC;
+      color: #0F172A;
+      font-size: 0.88rem;
+      border-right: 1px solid #E2E8F0;
+    }
+
+    .cell-generic {
+      background: #FFFFFF;
+      color: #475569;
+      border-right: 1px solid #E2E8F0;
+    }
+
+    .generic-val-tag {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .cross-icon {
+      color: #EF4444;
+      font-weight: 900;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .comparison-table tbody td.cell-boldlabs {
+      background: #F0FDF4 !important;
+      color: #064E3B !important;
+      font-family: var(--font-display) !important;
+      border-left: 2.5px solid #22C55E !important;
+    }
+
+    .comparison-table tbody td.cell-boldlabs * {
+      color: #064E3B !important;
+      font-family: var(--font-display) !important;
+    }
+
+    .comparison-table tbody td.cell-criteria,
+    .comparison-table tbody td.cell-criteria * {
+      color: #0F172A !important;
+      font-family: var(--font-display) !important;
+    }
+
+    .comparison-table tbody td.cell-generic,
+    .comparison-table tbody td.cell-generic * {
+      color: #475569 !important;
+      font-family: var(--font-display) !important;
+    }
+
+    .boldlabs-val-tag {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .cell-boldlabs .check-icon {
+      color: #16A34A !important;
+      font-weight: 900;
+      font-size: 1.05rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    /* Context Callout Box */
+    .comparison-context-box {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #EFF6FF;
+      border: 1.5px solid #93C5FD;
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #1E3A8A;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    .cmp-context-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
+
+
+    /* ============================================================
+       STANDARDIZED BUTTON SYSTEM (Consistent across Desktop & Mobile)
+       ============================================================ */
+    .btn-hero-wa,
+    .btn-pricing-cta,
+    .btn-big-final-cta {
+      background: var(--wa-green);
+      color: #000000;
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 800;
+      line-height: 1.2;
+      min-height: 52px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 2px solid #000000;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-hero-wa:hover,
+    .btn-pricing-cta:hover,
+    .btn-big-final-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .pill-btn {
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      border-radius: 8px;
+      background: var(--wa-green);
+      color: #000000;
+      border: 1.5px solid #000000;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease;
+    }
+
+    .pill-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-sticky-wa {
+      background: var(--wa-green);
+      color: #000000;
+      min-height: 42px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-decoration: none;
+      border: 1.5px solid #000000;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+
+    .desktop-text { display: inline; }
+    .mobile-text { display: none; }
 
     /* ============================================================
        MOBILE MASTER OPTIMIZATIONS (Cuts scroll from 10k to ~3.5k)
@@ -2059,6 +2311,124 @@
         font-size: 0.8rem;
         gap: 6px;
       }
+
+      /* Comparison Mobile Stack */
+      .desktop-only { display: none !important; }
+
+      .desktop-text { display: none !important; }
+      .mobile-text { display: inline !important; }
+
+      .mobile-only { display: flex !important; flex-direction: column; }
+
+      .comparison-mobile-list {
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .cmp-mobile-card {
+        background: #FFFFFF;
+        border: 1.5px solid #000000;
+        border-radius: 10px;
+        box-shadow: 3px 3px 0px #000000;
+        overflow: hidden;
+      }
+
+      .cmp-card-header {
+        background: #F1F5F9;
+        padding: 9px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1.5px solid #000000;
+      }
+
+      .cmp-num {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        font-weight: 800;
+        color: #64748B;
+      }
+
+      .cmp-title {
+        font-family: var(--font-display);
+        font-size: 0.92rem;
+        color: #0F172A;
+      }
+
+      .cmp-card-comparison {
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .cmp-row {
+        padding: 9px 11px;
+        border-radius: 8px;
+        font-size: 0.82rem;
+        line-height: 1.45;
+      }
+
+      .cmp-row p {
+        margin: 0;
+      }
+
+      .cmp-row-generic {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        color: #475569;
+      }
+
+      .cmp-badge-tool {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: #DC2626;
+        margin-bottom: 3px;
+      }
+
+      .cmp-row-boldlabs {
+        background: #F0FDF4;
+        border: 1.5px solid #22C55E;
+        color: #064E3B;
+      }
+
+      .cmp-badge-boldlabs {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 800;
+        color: #16A34A;
+        margin-bottom: 3px;
+      }
+
+      .comparison-context-box {
+        padding: 12px 14px;
+        font-size: 0.78rem;
+        gap: 10px;
+      }
+
+
+      /* Standardized Mobile Buttons */
+      .btn-hero-wa,
+      .btn-pricing-cta,
+      .btn-big-final-cta {
+        width: 100% !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        padding: 0 16px !important;
+        font-size: 0.92rem !important;
+        line-height: 1 !important;
+        border-radius: 10px !important;
+        border: 2px solid #000000 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        white-space: nowrap !important;
+      }
+
 
       /* Big Final CTA Mobile Overrides */
       .final-cta-section {
@@ -2582,6 +2952,213 @@
       </div>
     </section>
 
+    <!-- Comparison Section: Why clinics pick Boldlabs over generic WhatsApp tools -->
+    <section class="section-padding comparison-section" id="comparison">
+      <div class="container">
+        
+        <div class="section-title-box">
+          <div class="section-eyebrow">CLINIC-READY VS GENERIC APIS</div>
+          <h2 class="section-heading">Why Clinics Pick This Over A Generic WhatsApp Tool</h2>
+          <p class="section-subheading">
+            Most WhatsApp platforms sell you the software and leave the clinic workflow to you. This one arrives ready to run.
+          </p>
+        </div>
+
+        <!-- Desktop Comparison Table (Visible on screens > 768px) -->
+        <div class="comparison-table-wrapper desktop-only">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="col-criteria">What you compare</th>
+                <th class="col-generic">Typical WhatsApp API platform</th>
+                <th class="col-boldlabs">
+                  <div class="boldlabs-col-badge">BUILT FOR CLINICS</div>
+                  <div style="font-weight: 800; font-size: 1.05rem;">Our clinic system</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-criteria"><strong>What you pay</strong></td>
+                <td class="cell-generic">
+                  <div class="generic-val-tag">
+                    <span class="cross-icon">&#10005;</span>
+                    <span>A monthly subscription, plus WhatsApp message charges, with add-ons on higher plans</span>
+                  </div>
+                </td>
+                <td class="cell-boldlabs">
+                  <div class="boldlabs-val-tag">
+                    <span class="check-icon">&#10003;</span>
+                    <div><strong>&#8377;2,499 per month</strong> for the complete system</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-criteria"><strong>Clinic workflow</strong></td>
+                <td class="cell-generic">
+                  <div class="generic-val-tag">
+                    <span class="cross-icon">&#10005;</span>
+                    <span>A blank canvas. You design the flows yourself</span>
+                  </div>
+                </td>
+                <td class="cell-boldlabs">
+                  <div class="boldlabs-val-tag">
+                    <span class="check-icon">&#10003;</span>
+                    <span><strong>Instant replies, booking, confirmations, reminders and review requests</strong>, ready from day one</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-criteria"><strong>Setup</strong></td>
+                <td class="cell-generic">
+                  <div class="generic-val-tag">
+                    <span class="cross-icon">&#10005;</span>
+                    <span>Self-serve. You connect the number, Meta Business account and verification yourself</span>
+                  </div>
+                </td>
+                <td class="cell-boldlabs">
+                  <div class="boldlabs-val-tag">
+                    <span class="check-icon">&#10003;</span>
+                    <span><strong>We set it up with you.</strong> You share access and documents, we do the rest</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-criteria"><strong>Patient records</strong></td>
+                <td class="cell-generic">
+                  <div class="generic-val-tag">
+                    <span class="cross-icon">&#10005;</span>
+                    <span>Often a separate CRM, or a higher plan</span>
+                  </div>
+                </td>
+                <td class="cell-boldlabs">
+                  <div class="boldlabs-val-tag">
+                    <span class="check-icon">&#10003;</span>
+                    <span><strong>A dedicated clinic CRM is included</strong></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-criteria"><strong>Support</strong></td>
+                <td class="cell-generic">
+                  <div class="generic-val-tag">
+                    <span class="cross-icon">&#10005;</span>
+                    <span>Ticket-based, with a dedicated manager only on larger plans</span>
+                  </div>
+                </td>
+                <td class="cell-boldlabs">
+                  <div class="boldlabs-val-tag">
+                    <span class="check-icon">&#10003;</span>
+                    <span><strong>Direct help from the team that built it</strong></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Comparison Cards (Visible on screens <= 768px) -->
+        <div class="comparison-mobile-list mobile-only">
+          
+          <div class="cmp-mobile-card">
+            <div class="cmp-card-header">
+              <span class="cmp-num">01</span>
+              <strong class="cmp-title">What you pay</strong>
+            </div>
+            <div class="cmp-card-comparison">
+              <div class="cmp-row cmp-row-generic">
+                <div class="cmp-badge-tool">&#10005; Typical WhatsApp API platform</div>
+                <p>A monthly subscription, plus WhatsApp message charges, with add-ons on higher plans</p>
+              </div>
+              <div class="cmp-row cmp-row-boldlabs">
+                <div class="cmp-badge-boldlabs">&#10003; Our clinic system</div>
+                <p><strong>&#8377;2,499 per month</strong> for the complete system</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmp-mobile-card">
+            <div class="cmp-card-header">
+              <span class="cmp-num">02</span>
+              <strong class="cmp-title">Clinic workflow</strong>
+            </div>
+            <div class="cmp-card-comparison">
+              <div class="cmp-row cmp-row-generic">
+                <div class="cmp-badge-tool">&#10005; Typical WhatsApp API platform</div>
+                <p>A blank canvas. You design the flows yourself</p>
+              </div>
+              <div class="cmp-row cmp-row-boldlabs">
+                <div class="cmp-badge-boldlabs">&#10003; Our clinic system</div>
+                <p><strong>Instant replies, booking, confirmations, reminders and review requests</strong>, ready from day one</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmp-mobile-card">
+            <div class="cmp-card-header">
+              <span class="cmp-num">03</span>
+              <strong class="cmp-title">Setup</strong>
+            </div>
+            <div class="cmp-card-comparison">
+              <div class="cmp-row cmp-row-generic">
+                <div class="cmp-badge-tool">&#10005; Typical WhatsApp API platform</div>
+                <p>Self-serve. You connect the number, Meta Business account and verification yourself</p>
+              </div>
+              <div class="cmp-row cmp-row-boldlabs">
+                <div class="cmp-badge-boldlabs">&#10003; Our clinic system</div>
+                <p><strong>We set it up with you.</strong> You share access and documents, we do the rest</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmp-mobile-card">
+            <div class="cmp-card-header">
+              <span class="cmp-num">04</span>
+              <strong class="cmp-title">Patient records</strong>
+            </div>
+            <div class="cmp-card-comparison">
+              <div class="cmp-row cmp-row-generic">
+                <div class="cmp-badge-tool">&#10005; Typical WhatsApp API platform</div>
+                <p>Often a separate CRM, or a higher plan</p>
+              </div>
+              <div class="cmp-row cmp-row-boldlabs">
+                <div class="cmp-badge-boldlabs">&#10003; Our clinic system</div>
+                <p><strong>A dedicated clinic CRM is included</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmp-mobile-card">
+            <div class="cmp-card-header">
+              <span class="cmp-num">05</span>
+              <strong class="cmp-title">Support</strong>
+            </div>
+            <div class="cmp-card-comparison">
+              <div class="cmp-row cmp-row-generic">
+                <div class="cmp-badge-tool">&#10005; Typical WhatsApp API platform</div>
+                <p>Ticket-based, with a dedicated manager only on larger plans</p>
+              </div>
+              <div class="cmp-row cmp-row-boldlabs">
+                <div class="cmp-badge-boldlabs">&#10003; Our clinic system</div>
+                <p><strong>Direct help from the team that built it</strong></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Context Callout Box -->
+        <div class="comparison-context-box">
+          <div class="cmp-context-icon">&#128161;</div>
+          <div class="cmp-context-text">
+            <strong>For context:</strong> Entry plans on popular WhatsApp API platforms start at roughly <strong>&#8377;1,000 to &#8377;5,000 a month</strong> for the software alone, before message charges. You would still have to build the clinic workflow yourself.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
     <!-- Big Closing CTA Section: High-Converting Closing Push -->
     <section class="section-padding final-cta-section" id="start-demo">
       <div class="container">
@@ -2630,8 +3207,9 @@
           <!-- Big Action Button -->
           <div class="final-cta-action-box">
             <a href="#qual-modal" class="btn-big-final-cta trigger-qual-modal" data-cta-location="Big Post-Pricing CTA" id="big-final-cta-btn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              Test The AI Receptionist On Your Own Phone &#8594;
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span class="desktop-text">Test The AI Receptionist On Your Own Phone &#8594;</span>
+              <span class="mobile-text">Test AI Receptionist On WhatsApp &#8594;</span>
             </a>
             
             <div class="final-cta-guarantee-line">
