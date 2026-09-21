@@ -418,6 +418,8 @@
     }
 
     /* Proof Section */
+    
+    /* Proof Section (Doctor Proof Card) */
     .proof-section-high {
       background: #F8FAFC;
       border-top: 1px solid #E2E8F0;
@@ -428,7 +430,7 @@
       background: #FFFFFF;
       border: 1.5px solid var(--clinic-border);
       border-radius: var(--radius-lg);
-      padding: 26px;
+      padding: 24px;
       max-width: 820px;
       margin: 0 auto;
     }
@@ -438,9 +440,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      padding-bottom: 16px;
+      padding-bottom: 14px;
       border-bottom: 1.5px solid #E2E8F0;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       flex-wrap: wrap;
     }
 
@@ -461,14 +463,20 @@
     }
 
     .clinic-logo-img {
-      height: 32px;
+      height: 30px;
       width: auto;
       max-width: 120px;
       display: block;
     }
 
+    .clinic-name-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .clinic-title {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: #0F172A;
     }
@@ -497,7 +505,7 @@
 
     .metric-highlight {
       display: block;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 800;
       color: #15803D;
     }
@@ -505,24 +513,16 @@
     .metric-caption {
       display: block;
       font-family: var(--font-mono);
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       font-weight: 600;
       color: #166534;
-    }
-
-    .quote-statement {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #0F172A;
-      line-height: 1.35;
-      margin: 0 0 10px 0;
     }
 
     .quote-body {
       font-size: 0.9rem;
       color: #334155;
-      line-height: 1.6;
-      margin: 0 0 16px 0;
+      line-height: 1.55;
+      margin: 0 0 14px 0;
     }
 
     .testimonial-stats-strip {
@@ -532,13 +532,13 @@
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
       border-radius: 8px;
-      padding: 12px;
+      padding: 10px;
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .t-stat-num {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 800;
       color: #0F172A;
       display: block;
@@ -551,157 +551,185 @@
       color: #64748B;
     }
 
-    /* Trust Badges Strip */
-    .trust-badges-section {
-      padding: 30px 0;
-      background: #FFFFFF;
-      border-bottom: 1px solid #E2E8F0;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .trust-card {
-      background: #F8FAFC;
-      border: 1px solid #E2E8F0;
-      border-radius: 10px;
+    /* Video Case Study Container */
+    .video-review-box {
+      background: #0B1120;
+      border: 1.5px solid #1E293B;
+      border-radius: var(--radius-md);
       padding: 14px;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+      box-sizing: border-box;
     }
 
-    .trust-card-icon { color: #075E54; margin-bottom: 6px; }
-    .trust-card-title { font-size: 0.88rem; font-weight: 800; color: #0F172A; margin-bottom: 3px; }
-    .trust-card-desc { font-size: 0.78rem; color: #64748B; line-height: 1.4; }
-
-    /* Problem Section */
-    .ps-wrapper { background: #FFFFFF; }
-    .ps-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
+    .video-player-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: radial-gradient(circle at center, #1E293B 0%, #0B1120 100%);
+      border: 1.5px solid #334155;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
-    .ps-box {
-      border-radius: 14px;
-      padding: 22px;
-      border: 1.5px solid;
+    .video-play-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--wa-green);
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #000000;
+      box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .ps-box-bad { background: #FEF2F2; border-color: #FECACA; }
-    .ps-box-good { background: #F0FDF4; border-color: #BBF7D0; }
 
-    .ps-tag {
+    .video-player-frame:hover .video-play-btn {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0.35);
+    }
+
+    .video-tag-pill {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #F8FAFC;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 9999px;
       display: inline-flex;
       align-items: center;
       gap: 5px;
+    }
+
+    .video-duration-pill {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #94A3B8;
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 5px;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-    }
-    .ps-tag-bad { background: #FEE2E2; color: #991B1B; }
-    .ps-tag-good { background: #DCFCE7; color: #065F46; }
-
-    .ps-item-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
     }
 
-    .ps-item {
+    .video-meta-caption {
+      margin-top: 10px;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 8px;
-      font-size: 0.88rem;
-      color: #1E293B;
-      line-height: 1.45;
+      font-size: 0.78rem;
+      color: #94A3B8;
     }
 
-    /* 3-Step How It Works */
-    .how-section {
-      background: #F8FAFC;
+    /* Revenue Growth Engine Section (Desktop) */
+    .growth-section {
+      background: #FFFFFF;
       border-top: 1px solid #E2E8F0;
       border-bottom: 1px solid #E2E8F0;
     }
 
-    .how-grid-3col {
+    .growth-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
-    .how-step-card {
-      background: #FFFFFF;
-      border: 1.5px solid var(--clinic-border);
+    .growth-card {
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
       border-radius: 12px;
-      padding: 20px 18px;
+      padding: 18px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, border-color 0.15s ease;
     }
 
-    .how-step-number {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 800;
-      color: #075E54;
-      background: #E8F5E9;
-      border: 1px solid #A5D6A7;
-      padding: 2px 7px;
-      border-radius: 5px;
-      display: inline-block;
-      margin-bottom: 10px;
+    .growth-card:hover {
+      border-color: #075E54;
+      transform: translateY(-2px);
     }
 
-    .how-step-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin: 0 0 6px 0;
-    }
-
-    .how-step-desc {
-      font-size: 0.84rem;
-      color: #475569;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    /* Live CRM Showcase */
-    .crm-section { background: #FFFFFF; }
-    .crm-browser-frame {
-      background: #0F172A;
-      border: 2px solid #1E293B;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .crm-top-bar {
-      background: #1E293B;
-      padding: 8px 14px;
+    .growth-card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 8px;
     }
 
-    .crm-dots { display: flex; gap: 5px; }
-    .dot { width: 9px; height: 9px; border-radius: 50%; }
-    .dot-red { background: #EF4444; }
-    .dot-yellow { background: #F59E0B; }
-    .dot-green { background: #10B981; }
-
-    .crm-img-element {
-      width: 100%;
-      height: auto;
-      display: block;
+    .growth-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 2px 7px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
-    /* Pricing Section */
-    .pricing-section { background: #F8FAFC; }
+    .growth-badge-red { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
+    .growth-badge-blue { background: #DBEAFE; color: #1E40AF; border: 1px solid #BFDBFE; }
+    .growth-badge-amber { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+    .growth-badge-emerald { background: #DCFCE7; color: #065F46; border: 1px solid #BBF7D0; }
+
+    .growth-timer-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: #64748B;
+      font-weight: 600;
+    }
+
+    .growth-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin: 0 0 5px 0;
+      line-height: 1.3;
+    }
+
+    .growth-card-desc {
+      font-size: 0.84rem;
+      color: #475569;
+      line-height: 1.5;
+      margin: 0 0 10px 0;
+    }
+
+    .growth-card-impact {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+
     .pricing-container-card {
       background: #FFFFFF;
       border: 2px solid #000000;
@@ -1324,7 +1352,7 @@
        ============================================================ */
     @media (max-width: 768px) {
       .section-padding {
-        padding: 32px 0; /* Huge scroll reduction */
+        padding: 28px 0;
       }
       .container {
         padding: 0 16px;
@@ -1336,11 +1364,11 @@
       }
       .hero-wrapper {
         padding-top: 72px;
-        padding-bottom: 24px;
+        padding-bottom: 20px;
       }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
       }
       .hero-headline {
         font-size: 1.95rem;
@@ -1350,12 +1378,12 @@
       .hero-description {
         font-size: 0.92rem;
         line-height: 1.5;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
       }
       .hero-outcomes-list {
         grid-template-columns: 1fr 1fr;
         gap: 8px;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
       .outcome-item {
         font-size: 0.75rem;
@@ -1364,10 +1392,6 @@
       .outcome-icon {
         width: 20px;
         height: 20px;
-      }
-      .outcome-icon svg {
-        width: 14px;
-        height: 14px;
       }
       .btn-hero-wa {
         width: 100%;
@@ -1380,89 +1404,113 @@
         padding: 10px;
         box-shadow: 5px 8px 0px #0F172A;
       }
-      .wa-body {
-        gap: 6px;
-        padding: 8px 6px;
-      }
-      .wa-msg {
-        font-size: 0.72rem;
-        padding: 6px 8px;
-      }
       .section-title-box {
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
       .section-heading {
-        font-size: 1.45rem;
+        font-size: 1.42rem;
         line-height: 1.22;
       }
       .section-subheading {
         font-size: 0.86rem;
         line-height: 1.45;
       }
+      .proof-section-high {
+        padding: 22px 0;
+      }
       .testimonial-card-box {
-        padding: 16px 14px;
+        padding: 14px 12px;
         border-radius: 12px;
       }
-      .quote-statement {
-        font-size: 1.05rem;
-        line-height: 1.35;
+      .testimonial-clinic-header {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        gap: 8px;
+      }
+      .clinic-logo-frame {
+        padding: 5px 10px;
+      }
+      .clinic-logo-img {
+        height: 22px;
+      }
+      .clinic-title {
+        font-size: 0.95rem;
+      }
+      .metric-highlight {
+        font-size: 0.85rem;
+      }
+      .video-review-box {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+      .video-play-btn {
+        width: 44px;
+        height: 44px;
       }
       .quote-body {
-        font-size: 0.84rem;
-        line-height: 1.5;
-        margin-bottom: 12px;
+        font-size: 0.82rem;
+        line-height: 1.45;
+        margin-bottom: 10px;
       }
       .testimonial-stats-strip {
-        padding: 8px;
-        gap: 6px;
+        padding: 6px 4px;
+        gap: 4px;
+        margin-bottom: 10px;
       }
       .t-stat-num {
-        font-size: 1rem;
+        font-size: 0.95rem;
       }
       .t-stat-label {
-        font-size: 0.62rem;
+        font-size: 0.6rem;
       }
-      .trust-badges-section {
-        padding: 20px 0;
+      .growth-section {
+        padding: 22px 0;
       }
-      .trust-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+      .growth-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
       }
-      .trust-card {
-        padding: 10px;
+      .growth-card {
+        padding: 12px 12px;
+        border-radius: 10px;
       }
-      .trust-card-title {
-        font-size: 0.82rem;
+      .growth-card-header {
+        margin-bottom: 5px;
       }
-      .trust-card-desc {
+      .growth-badge {
+        font-size: 0.64rem;
+        padding: 2px 6px;
+      }
+      .growth-timer-tag {
+        font-size: 0.65rem;
+      }
+      .growth-card-title {
+        font-size: 0.94rem;
+        margin-bottom: 3px;
+      }
+      .growth-card-desc {
+        font-size: 0.78rem;
+        line-height: 1.4;
+        margin-bottom: 6px;
+      }
+      .growth-card-impact {
         font-size: 0.72rem;
+        padding: 5px 8px;
       }
-      .ps-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+      .roi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
       }
-      .ps-box {
-        padding: 16px 14px;
+      .roi-card {
+        padding: 12px 8px;
         border-radius: 10px;
       }
-      .ps-item {
-        font-size: 0.82rem;
-        gap: 6px;
+      .roi-card-value {
+        font-size: 1.25rem;
       }
-      .how-grid-3col {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .how-step-card {
-        padding: 14px 12px;
-        border-radius: 10px;
-      }
-      .how-step-title {
-        font-size: 0.98rem;
-      }
-      .how-step-desc {
-        font-size: 0.8rem;
+      .roi-card-detail {
+        font-size: 0.68rem;
       }
       .pricing-container-card {
         padding: 20px 16px;
@@ -1492,7 +1540,7 @@
         gap: 20px;
       }
       .site-footer {
-        padding: 24px 0 70px; /* room for bottom sticky bar */
+        padding: 24px 0 70px;
       }
       .sticky-whatsapp-bar {
         display: flex;
@@ -1500,49 +1548,7 @@
       body {
         padding-bottom: 50px;
       }
-
-      .growth-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-      .growth-card {
-        padding: 14px 12px;
-        border-radius: 10px;
-      }
-      .growth-card-title {
-        font-size: 0.98rem;
-      }
-      .growth-card-desc {
-        font-size: 0.8rem;
-        margin-bottom: 8px;
-      }
-      .growth-card-impact {
-        font-size: 0.72rem;
-        padding: 5px 8px;
-      }
-      .roi-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-      }
-      .roi-card {
-        padding: 12px 8px;
-        border-radius: 10px;
-      }
-      .roi-card-value {
-        font-size: 1.25rem;
-      }
-      .roi-card-detail {
-        font-size: 0.68rem;
-      }
-      .video-review-box {
-        padding: 12px;
-      }
-      .video-play-btn {
-        width: 44px;
-        height: 44px;
-      }
-    }
-  </style>
+    }</style>
 </head>
 <body>
 
@@ -1611,9 +1617,9 @@
                 Try It On Your Own Number &#8594;
               </a>
               <div class="hero-subtext">
-                <span>&#10003; 3s Instant Reply</span>
+                <span>&#10003; Official Meta API</span>
                 <span>&#10003; Zero Setup Fee</span>
-                <span>&#10003; 48h Setup</span>
+                <span>&#10003; Cancel Anytime</span>
               </div>
             </div>
           </div>
@@ -1659,8 +1665,8 @@
       </div>
     </section>
 
-    <!-- Proof: Real Clinic Result (Right Below Hero, Ultra Compact) -->
-    <section class="section-padding proof-section-high">
+        <!-- Proof: Real Doctor Case Study (Ultra-Optimized & Unified) -->
+    <section class="section-padding proof-section-high" id="doctor-proof">
       <div class="container">
         
         <div class="section-title-box">
@@ -1672,74 +1678,33 @@
         </div>
 
         <div class="testimonial-card-box">
+          <!-- Doctor & Clinic Header -->
           <div class="testimonial-clinic-header">
             <div class="clinic-brand-info">
               <div class="clinic-logo-frame">
                 <picture>
                   <source srcset="/assets/mind-body-recovery-logo.webp" type="image/webp">
-                  <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img" loading="lazy" decoding="async" width="100" height="32">
+                  <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img" loading="lazy" decoding="async" width="100" height="30">
                 </picture>
               </div>
               <div class="clinic-meta-text">
                 <div class="clinic-name-row">
-                  <span class="clinic-title">Mind Body Recovery</span>
-                  <span class="verified-badge">&#10003; VERIFIED CLIENT</span>
+                  <span class="clinic-title">Dr. Sameer</span>
+                  <span class="verified-badge">&#10003; VERIFIED DOCTOR CLIENT</span>
                 </div>
-                <div style="font-size: 0.76rem; color: #475569; font-weight: 600;">
-                  Dr. Sameer &middot; Specialist Doctor (mindbodyrecovery.in)
+                <div style="font-size: 0.74rem; color: #475569; font-weight: 600;">
+                  Mind Body Recovery &middot; mindbodyrecovery.in
                 </div>
               </div>
             </div>
 
             <div class="clinic-metrics-badge">
-              <span class="metric-highlight">+20 Bookings</span>
-              <span class="metric-caption">per month via WhatsApp</span>
+              <span class="metric-highlight">+20 Bookings / Mo</span>
+              <span class="metric-caption">via WhatsApp Automation</span>
             </div>
           </div>
 
-          <div class="star-rating-row" style="margin-bottom: 8px;">
-            <span style="color: #F59E0B; font-size: 0.95rem;">★★★★★</span>
-            <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: #64748B;">5.0 VERIFIED RESULT</span>
-          </div>
-
-          <h3 class="quote-statement">
-            "Getting constant 20+ extra bookings a month since we switched."
-          </h3>
-
-          <p class="quote-body">
-            "Before automating WhatsApp, inquiries after hours or during busy clinic times sat unread for hours. With Boldlabs, every inquiry is answered in 3 seconds, consultation slots are confirmed automatically, and automated reminders keep our chairs full."
-          </p>
-
-          <div class="testimonial-stats-strip">
-            <div class="t-stat-item">
-              <span class="t-stat-num">+20</span>
-              <span class="t-stat-label">Monthly Bookings</span>
-            </div>
-            <div class="t-stat-item">
-              <span class="t-stat-num">3 Sec</span>
-              <span class="t-stat-label">Reply Speed</span>
-            </div>
-            <div class="t-stat-item">
-              <span class="t-stat-num">100%</span>
-              <span class="t-stat-label">After-Hours Capture</span>
-            </div>
-          </div>
-
-          <!-- Doctor Spec & Niche Banner -->
-          <div style="background: #F1F5F9; border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #334155; margin-bottom: 14px;">
-            🦷 <strong>Configured for:</strong> Dental Clinics, Physiotherapy, Derma &amp; Multi-Specialty Clinics. Custom doctor timings included.
-          </div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <span style="font-size: 0.76rem; color: #64748B; font-family: var(--font-mono);">
-              Founder-led setup by Bhuvanesh Karnan (Madurai)
-            </span>
-            <a href="#qual-modal" class="pill-btn trigger-qual-modal" data-cta-location="Testimonial CTA" style="font-size: 0.78rem; padding: 7px 14px;">
-              Try It On Your Number &#8594;
-            </a>
-          </div>
-
-          <!-- Dr. Sameer Video Review Case Study Container -->
+          <!-- Video Case Study Container (Unified directly into proof card) -->
           <div class="video-review-box" id="dr-sameer-video-case-study">
             <div class="video-player-frame" id="video-frame-container" title="Watch Dr. Sameer Video Case Study">
               <span class="video-tag-pill">
@@ -1749,100 +1714,56 @@
               <div class="video-play-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#000000" stroke="#000000" stroke-width="2" style="margin-left: 2px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
               </div>
-              <span class="video-duration-pill">Dr. Sameer &middot; Video Review</span>
+              <span class="video-duration-pill">Watch Video (1:45 min)</span>
             </div>
             <div class="video-meta-caption">
               <div>
-                <strong style="color: #F8FAFC;">Watch: Dr. Sameer (Mind Body Recovery)</strong>
-                <div style="font-size: 0.72rem; color: #94A3B8;">Explains how automated WhatsApp captured 20+ monthly patients &amp; stopped missed calls</div>
+                <strong style="color: #F8FAFC; font-size: 0.82rem;">Dr. Sameer &middot; Mind Body Recovery</strong>
+                <div style="font-size: 0.72rem; color: #94A3B8;">How WhatsApp automation stopped missed calls and added 20+ monthly patients</div>
               </div>
               <span style="background: #1E293B; border: 1px solid #334155; padding: 2px 7px; border-radius: 4px; font-size: 0.68rem; font-family: var(--font-mono); color: #25D366;">
-                ★ VERIFIED DOCTOR REVIEW
+                ★ 5.0 VERIFIED
               </span>
             </div>
           </div>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Trust Badges (Compact 4-Item Grid) -->
-    <section class="trust-badges-section">
-      <div class="container">
-        <div class="trust-grid">
-          <div class="trust-card">
-            <div class="trust-card-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <div class="trust-card-title">Official Meta API</div>
-            <div class="trust-card-desc">100% compliant. Zero ban risk for your clinic number.</div>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-card-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-            </div>
-            <div class="trust-card-title">3s Instant Reply</div>
-            <div class="trust-card-desc">Answers 24/7 when staff are busy with walk-in patients.</div>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-card-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </div>
-            <div class="trust-card-title">48h Live Setup</div>
-            <div class="trust-card-desc">We configure doctor hours, fees, and location for you.</div>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-card-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2"></rect></svg>
-            </div>
-            <div class="trust-card-title">Cancel Anytime</div>
-            <div class="trust-card-desc">₹2,499/mo &middot; Zero setup fee &middot; No lock-in contract.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Clinic Bottleneck: Manual vs Boldlabs -->
-    <section class="section-padding ps-wrapper">
-      <div class="container">
-        
-        <div class="section-title-box">
-          <span class="section-eyebrow">The Clinic Problem</span>
-          <h2 class="section-heading">Unanswered Messages Choose Competitors</h2>
-          <p class="section-subheading">
-            Your staff are busy with walk-ins. Inquiries wait 15 minutes, get frustrated, and book elsewhere.
+          <!-- Doctor Statement (Concise, single clear takeaway) -->
+          <p class="quote-body">
+            &ldquo;Before automating WhatsApp, inquiries during busy clinic hours or after-hours sat unread for hours. With Boldlabs, every inquiry is answered in 3 seconds, consultation slots are confirmed automatically, and reminders keep our chairs full.&rdquo;
           </p>
-        </div>
 
-        <div class="ps-grid">
-          <div class="ps-box ps-box-bad">
-            <span class="ps-tag ps-tag-bad">&#10007; Manual Front Desk</span>
-            <ul class="ps-item-list">
-              <li class="ps-item"><span style="color:#EF4444;">&#10007;</span> Messages sit unread while staff attend to walk-ins</li>
-              <li class="ps-item"><span style="color:#EF4444;">&#10007;</span> Evening &amp; Sunday patient inquiries completely lost</li>
-              <li class="ps-item"><span style="color:#EF4444;">&#10007;</span> No-shows occur because staff forgot to send reminders</li>
-            </ul>
+          <!-- 3-Chip Outcome Row -->
+          <div class="testimonial-stats-strip">
+            <div class="t-stat-item">
+              <span class="t-stat-num">3 Sec</span>
+              <span class="t-stat-label">Reply Speed</span>
+            </div>
+            <div class="t-stat-item">
+              <span class="t-stat-num">100%</span>
+              <span class="t-stat-label">Inquiries Captured</span>
+            </div>
+            <div class="t-stat-item">
+              <span class="t-stat-num">&lt; 3%</span>
+              <span class="t-stat-label">Patient No-Shows</span>
+            </div>
           </div>
 
-          <div class="ps-box ps-box-good">
-            <span class="ps-tag ps-tag-good">&#10003; Boldlabs WhatsApp AI</span>
-            <ul class="ps-item-list">
-              <li class="ps-item"><span style="color:#059669;">&#10003;</span> Answers in 3 seconds with doctor consultation slots</li>
-              <li class="ps-item"><span style="color:#059669;">&#10003;</span> Confirms bookings automatically, even at midnight</li>
-              <li class="ps-item"><span style="color:#059669;">&#10003;</span> 24h &amp; 2h automated reminders eliminate no-shows</li>
-            </ul>
+          <!-- Footer Row with Specialty Badges & CTA -->
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <span style="font-size: 0.72rem; color: #475569; font-family: var(--font-mono);">
+              🦷 Dental, Physiotherapy, Derma &amp; Multi-Specialty
+            </span>
+            <a href="#qual-modal" class="pill-btn trigger-qual-modal" data-cta-location="Testimonial CTA" style="font-size: 0.74rem; padding: 6px 12px;">
+              Try It On Your Number &#8594;
+            </a>
           </div>
+
         </div>
 
       </div>
     </section>
 
-    
-    <!-- 4 Revenue Growth Pillars: How Boldlabs Actually Grows Your Clinic -->
+    <!-- 4 Revenue Growth Pillars (Optimized, Scannable & High Density) -->
     <section class="section-padding growth-section" id="growth-engine">
       <div class="container">
         
@@ -1854,123 +1775,73 @@
           </p>
         </div>
 
-        <div class="growth-grid">
+                <div class="growth-grid">
           
           <!-- Pillar 1: Missed Call Recovery -->
           <div class="growth-card">
-            <div>
-              <div class="growth-card-header">
-                <span class="growth-badge growth-badge-red">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path><line x1="23" y1="1" x2="17" y2="7"></line><line x1="17" y1="1" x2="23" y2="7"></line></svg>
-                  MISSED CALL RECOVERY
-                </span>
-                <span style="font-size: 0.72rem; color: #64748B; font-family: var(--font-mono);">Within 5 Seconds</span>
-              </div>
-              <h3 class="growth-card-title">Instant Apology &amp; Booking on Missed Phone Calls</h3>
-              <p class="growth-card-desc">
-                When staff miss a call while attending to walk-ins or after hours, Boldlabs instantly sends a polite WhatsApp apology: <em>"Sorry we missed your call! Would you like to book a consultation slot right now?"</em> with one-tap booking buttons.
-              </p>
+            <div class="growth-card-header">
+              <span class="growth-badge growth-badge-red">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path><line x1="23" y1="1" x2="17" y2="7"></line><line x1="17" y1="1" x2="23" y2="7"></line></svg>
+                MISSED CALL RECOVERY
+              </span>
+              <span class="growth-timer-tag">Within 5 Seconds</span>
             </div>
+            <h3 class="growth-card-title">Auto-WhatsApp Apology &amp; Slot Booking</h3>
+            <p class="growth-card-desc">When a patient call is missed, Boldlabs instantly sends a polite WhatsApp apology with direct booking buttons.</p>
             <div class="growth-card-impact">
-              <span style="color: #16A34A;">●</span> Turns 100% of missed calls into booked patients instead of lost revenue.
+              <span style="color: #16A34A;">●</span> Rescues 100% of missed callers from booking competitors.
             </div>
           </div>
 
           <!-- Pillar 2: Calendar Sync & Dual Confirmations -->
           <div class="growth-card">
-            <div>
-              <div class="growth-card-header">
-                <span class="growth-badge growth-badge-blue">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  GOOGLE CALENDAR &amp; DUAL ALERTS
-                </span>
-                <span style="font-size: 0.72rem; color: #64748B; font-family: var(--font-mono);">Instant Auto-Sync</span>
-              </div>
-              <h3 class="growth-card-title">Google Calendar, Tasks &amp; 2-Way WhatsApp Alerts</h3>
-              <p class="growth-card-desc">
-                Booked slots instantly sync into your Google Calendar &amp; Tasks. WhatsApp confirmations fire immediately to <strong>both</strong> the patient (with clinic location pin &amp; instructions) and the clinic admin/doctor (with patient complaint &amp; slot time).
-              </p>
+            <div class="growth-card-header">
+              <span class="growth-badge growth-badge-blue">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                CALENDAR &amp; DUAL ALERTS
+              </span>
+              <span class="growth-timer-tag">Instant Sync</span>
             </div>
+            <h3 class="growth-card-title">Google Calendar, Tasks &amp; 2-Way Alerts</h3>
+            <p class="growth-card-desc">Auto-syncs appointments to Google Calendar. Both patient and doctor receive instant confirmation cards.</p>
             <div class="growth-card-impact">
-              <span style="color: #2563EB;">●</span> Zero manual spreadsheet entry &amp; zero overlapping appointments.
+              <span style="color: #2563EB;">●</span> Zero double-bookings &amp; zero manual register entry.
             </div>
           </div>
 
           <!-- Pillar 3: 3-Way Timed Reminders -->
           <div class="growth-card">
-            <div>
-              <div class="growth-card-header">
-                <span class="growth-badge growth-badge-amber">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  3-WAY TIMED REMINDERS
-                </span>
-                <span style="font-size: 0.72rem; color: #64748B; font-family: var(--font-mono);">24h, 2h &amp; 30m</span>
-              </div>
-              <h3 class="growth-card-title">Patient Alerts (24h &amp; 2h) + 30m Admin Advance Notice</h3>
-              <p class="growth-card-desc">
-                Patients receive automated WhatsApp reminders 24 hours and 2 hours prior to their visit with a one-tap confirmation button. Additionally, the clinic admin receives a 30-minute advance notification so doctor consultation rooms are prepped.
-              </p>
+            <div class="growth-card-header">
+              <span class="growth-badge growth-badge-amber">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                3-WAY TIMED REMINDERS
+              </span>
+              <span class="growth-timer-tag">24h, 2h &amp; 30m</span>
             </div>
+            <h3 class="growth-card-title">Patient Alerts + 30m Staff Advance Notice</h3>
+            <p class="growth-card-desc">Patients confirm via 24h &amp; 2h WhatsApp reminders. Staff get a 30-min advance notice to prep consultation rooms.</p>
             <div class="growth-card-impact">
-              <span style="color: #D97706;">●</span> Drops clinic no-show rates from 28% to under 3% consistently.
+              <span style="color: #D97706;">●</span> Drops clinic no-show rates from 28% to under 3%.
             </div>
           </div>
 
           <!-- Pillar 4: Google Maps 5-Star Reviews -->
           <div class="growth-card">
-            <div>
-              <div class="growth-card-header">
-                <span class="growth-badge growth-badge-emerald">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  GOOGLE MAPS (GMB) GROWTH
-                </span>
-                <span style="font-size: 0.72rem; color: #64748B; font-family: var(--font-mono);">Rank #1 Locally</span>
-              </div>
-              <h3 class="growth-card-title">Automated 5-Star Google Reviews on Autopilot</h3>
-              <p class="growth-card-desc">
-                2 hours after a patient's consultation, Boldlabs sends a polite WhatsApp message asking for feedback with a direct link to your Google Maps review page. Fills your profile with verified 5-star reviews to dominate local search.
-              </p>
+            <div class="growth-card-header">
+              <span class="growth-badge growth-badge-emerald">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                GOOGLE MAPS REVIEWS
+              </span>
+              <span class="growth-timer-tag">Rank #1 Locally</span>
             </div>
+            <h3 class="growth-card-title">Automated 5-Star Google Reviews on Autopilot</h3>
+            <p class="growth-card-desc">Sends a polite WhatsApp message 2 hours post-visit with a direct 1-tap Google Maps review link.</p>
             <div class="growth-card-impact">
-              <span style="color: #059669;">●</span> Turns treated patients into your #1 local organic referral engine.
+              <span style="color: #059669;">●</span> Outranks local competitors on Google Maps search.
             </div>
           </div>
 
         </div>
-
-      </div>
-    </section>
-
-<!-- How It Works in 3 Compact Steps -->
-    <section class="section-padding how-section">
-      <div class="container">
-        
-        <div class="section-title-box">
-          <span class="section-eyebrow">How It Works</span>
-          <h2 class="section-heading">3 Frictionless Steps</h2>
-          <p class="section-subheading">Zero complicated software. Everything happens right inside WhatsApp.</p>
-        </div>
-
-        <div class="how-grid-3col">
-          <div class="how-step-card">
-            <span class="how-step-number">Step 1</span>
-            <h3 class="how-step-title">Patient Messages on WhatsApp</h3>
-            <p class="how-step-desc">AI replies in 3 seconds answering fees, doctor timings, and clinic location.</p>
-          </div>
-
-          <div class="how-step-card">
-            <span class="how-step-number">Step 2</span>
-            <h3 class="how-step-title">Automated Slot Booking</h3>
-            <p class="how-step-desc">Patient selects available date &amp; slot. Appointment confirmed on the spot.</p>
-          </div>
-
-          <div class="how-step-card">
-            <span class="how-step-number">Step 3</span>
-            <h3 class="how-step-title">Reminders &amp; Shared CRM</h3>
-            <p class="how-step-desc">24h and 2h reminders sent automatically. Staff can view or chat in live CRM anytime.</p>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -2057,16 +1928,6 @@
     <section id="pricing" class="section-padding pricing-section">
       <div class="container">
         
-        <!-- ROI Math Line Banner -->
-        <div style="max-width: 540px; margin: 0 auto 16px; background: #FFF7ED; border: 1.5px solid #FED7AA; border-radius: 10px; padding: 14px 16px; text-align: left;">
-          <div style="font-weight: 800; color: #9A3412; font-size: 0.88rem; margin-bottom: 3px;">
-            💰 The Cost of Missed Inquiries:
-          </div>
-          <p style="font-size: 0.82rem; color: #7C2D12; margin: 0; line-height: 1.5;">
-            10 missed inquiries/week &times; &#8377;500 avg. consultation = <strong>&#8377;20,000/month lost.</strong> Boldlabs stops that leak completely for <strong>&#8377;2,499/month.</strong> One recovered appointment covers it.
-          </p>
-        </div>
-
         <div class="pricing-container-card">
           <span class="pricing-badge-top">ZERO SETUP FEE &middot; CANCEL ANYTIME</span>
 
