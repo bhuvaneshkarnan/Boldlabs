@@ -19,14 +19,6 @@
   <meta property="og:image" content="https://goboldlabs.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://goboldlabs.com/whatsapp-automation-clinics/">
-  <meta property="twitter:title" content="WhatsApp Automation Built for Clinics | ₹2,499/mo | Boldlabs">
-  <meta property="twitter:description" content="WhatsApp automation system built exclusively for medical clinics & doctors. Instant replies, automated appointment booking, 24h & 2h reminders, and live Clinic CRM.">
-  <meta property="twitter:image" content="https://goboldlabs.com/og-image.png">
 
   <!-- Google Tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R792DJ9GDG"></script>
@@ -54,7 +46,6 @@
     <img height="1" width="1" style="display:none" 
          src="https://www.facebook.com/tr?id=1041283338810010&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <!-- Resource Hints for Lightning Load Speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +53,7 @@
   <link rel="dns-prefetch" href="https://connect.facebook.net">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-  <!-- Non-blocking Optimized Google Fonts -->
+  <!-- Non-blocking Fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -78,8 +69,6 @@
       --wa-emerald: #075E54;
       --wa-dark-bg: #0B141A;
       --wa-light-bg: #EFEAE2;
-      --wa-bubble-patient: #DCF8C6;
-      --wa-bubble-ai: #FFFFFF;
       --clinic-navy: #0F172A;
       --clinic-blue: #2563EB;
       --clinic-bg: #F8FAFC;
@@ -89,9 +78,6 @@
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
-      --shadow-sm: none;
-      --shadow-md: none;
-      --shadow-lg: none;
     }
 
     html {
@@ -99,23 +85,6 @@
       overflow-x: hidden;
       max-width: 100vw;
       width: 100%;
-    }
-
-    html.lenis, html.lenis body {
-      height: auto;
-    }
-    .lenis.lenis-smooth {
-      scroll-behavior: auto !important;
-    }
-    .lenis.lenis-smooth [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
-    .lenis.lenis-stopped {
-      overflow: hidden;
-    }
-
-    section[id], [id] {
-      scroll-margin-top: 80px;
     }
 
     body {
@@ -132,36 +101,35 @@
     /* Container Utility */
     .container {
       width: 100%;
-      max-width: 1120px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
       box-sizing: border-box;
     }
 
     .section-padding {
-      padding: 80px 0;
+      padding: 64px 0;
     }
 
-    /* Floating Top Nav (Clean Ad-Landing Style: Logo + Single Direct CTA) */
+    /* Floating Header Nav */
     .navbar {
       position: fixed;
-      top: 16px;
+      top: 14px;
       left: 50%;
       transform: translateX(-50%);
-      width: calc(100% - 32px);
-      max-width: 980px;
-      background: rgba(255, 255, 255, 0.94);
+      width: calc(100% - 28px);
+      max-width: 960px;
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1.5px solid #000000;
       border-radius: 9999px;
-      padding: 8px 16px 8px 20px;
+      padding: 7px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       z-index: 9999;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
       box-sizing: border-box;
     }
 
@@ -171,15 +139,9 @@
       text-decoration: none;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     .pill-btn {
-      padding: 8px 16px;
-      font-size: 0.8rem;
+      padding: 7px 14px;
+      font-size: 0.78rem;
       border-radius: 9999px;
       background: var(--wa-green);
       color: #000000;
@@ -190,73 +152,70 @@
       gap: 6px;
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.15s ease, background-color 0.15s ease;
+      transition: transform 0.15s ease;
     }
 
     .pill-btn:hover {
       transform: translateY(-1px);
-      background: #20BD5A;
     }
 
     /* Hero Section */
     .hero-wrapper {
-      padding-top: 120px;
-      padding-bottom: 60px;
-      background: radial-gradient(circle at top right, #F0FDF4 0%, #FFFFFF 60%);
-      position: relative;
+      padding-top: 110px;
+      padding-bottom: 50px;
+      background: radial-gradient(circle at top right, #F0FDF4 0%, #FFFFFF 65%);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
     }
 
     .hero-headline {
-      font-size: clamp(2.35rem, 4.8vw, 3.75rem);
+      font-size: clamp(2.3rem, 4.4vw, 3.6rem);
       font-weight: 800;
       letter-spacing: -0.035em;
-      line-height: 1.1;
+      line-height: 1.12;
       color: #0F172A;
-      margin-bottom: 20px;
+      margin: 0 0 16px 0;
     }
 
     .hero-headline-accent {
       color: #059669;
-      position: relative;
       display: inline-block;
     }
 
     .hero-description {
-      font-size: 1.08rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.55;
       color: #475569;
-      margin-bottom: 28px;
-      max-width: 540px;
+      margin-bottom: 22px;
+      max-width: 520px;
     }
 
     .hero-outcomes-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 32px;
+      gap: 12px;
+      margin-bottom: 26px;
     }
 
     .outcome-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.86rem;
+      gap: 8px;
+      font-size: 0.84rem;
       font-weight: 700;
       color: #1E293B;
       font-family: var(--font-mono);
     }
 
     .outcome-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
       background: #DCFCE7;
       display: flex;
       align-items: center;
@@ -268,38 +227,37 @@
     .hero-cta-group {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .btn-hero-wa {
       background: var(--wa-green);
       color: #000000;
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
-      padding: 16px 28px;
+      padding: 15px 26px;
       border-radius: var(--radius-md);
       border: 2px solid #000000;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       text-decoration: none;
       cursor: pointer;
-      transition: transform 0.15s ease, background 0.15s ease;
       width: fit-content;
+      transition: transform 0.15s ease;
     }
 
     .btn-hero-wa:hover {
       transform: translateY(-2px);
-      background: #20BD5A;
     }
 
     .hero-subtext {
       display: flex;
       align-items: center;
-      gap: 16px;
-      font-size: 0.82rem;
+      gap: 14px;
+      font-size: 0.8rem;
       color: #64748B;
       font-family: var(--font-mono);
       font-weight: 600;
@@ -309,33 +267,32 @@
     .hero-subtext span {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
-    /* iPhone Phone Mockup Simulator */
+    /* Simulator Phone */
     .phone-mockup-card {
       background: #FFFFFF;
-      border: 3px solid #0F172A;
-      border-radius: 36px;
-      box-shadow: 12px 16px 0px #0F172A;
-      padding: 14px;
-      max-width: 340px;
+      border: 2.5px solid #0F172A;
+      border-radius: 30px;
+      box-shadow: 8px 12px 0px #0F172A;
+      padding: 12px;
+      max-width: 320px;
       margin: 0 auto;
       box-sizing: border-box;
-      position: relative;
     }
 
     .phone-notch {
-      width: 110px;
-      height: 18px;
+      width: 100px;
+      height: 16px;
       background: #0F172A;
-      border-radius: 0 0 12px 12px;
-      margin: 0 auto 12px;
+      border-radius: 0 0 10px 10px;
+      margin: 0 auto 10px;
     }
 
     .phone-screen {
       background: #EFEAE2;
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
       border: 1.5px solid #CBD5E1;
     }
@@ -343,15 +300,15 @@
     .wa-header {
       background: #075E54;
       color: #FFFFFF;
-      padding: 10px 14px;
+      padding: 8px 12px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .wa-avatar {
-      width: 34px;
-      height: 34px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       background: #25D366;
       display: flex;
@@ -361,13 +318,12 @@
     }
 
     .wa-title {
-      font-size: 0.84rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      line-height: 1.2;
     }
 
     .wa-status {
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       opacity: 0.9;
       display: flex;
       align-items: center;
@@ -384,89 +340,84 @@
     }
 
     .wa-body {
-      padding: 14px 10px;
+      padding: 12px 8px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      min-height: 320px;
+      gap: 8px;
     }
 
     .wa-msg {
-      max-width: 82%;
-      padding: 8px 12px;
-      border-radius: 12px;
-      font-size: 0.78rem;
-      line-height: 1.4;
-      position: relative;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+      max-width: 84%;
+      padding: 7px 10px;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      line-height: 1.38;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
     }
 
     .wa-msg-patient {
       background: #FFFFFF;
       align-self: flex-start;
-      border-bottom-left-radius: 3px;
+      border-bottom-left-radius: 2px;
       color: #0F172A;
     }
 
     .wa-msg-ai {
       background: #DCF8C6;
       align-self: flex-end;
-      border-bottom-right-radius: 3px;
+      border-bottom-right-radius: 2px;
       color: #0F172A;
     }
 
     .wa-time {
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       color: #64748B;
       text-align: right;
-      margin-top: 4px;
+      margin-top: 3px;
       font-family: var(--font-mono);
     }
 
-    .ticks {
-      color: #34B7F1;
-      font-weight: bold;
-    }
+    .ticks { color: #34B7F1; font-weight: bold; }
 
     /* Section Headings */
     .section-title-box {
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 48px;
+      max-width: 720px;
+      margin: 0 auto 36px;
     }
 
     .section-eyebrow {
       font-family: var(--font-mono);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: #059669;
       background: #DCFCE7;
       border: 1px solid #86EFAC;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 9999px;
       display: inline-block;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
     .section-heading {
-      font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+      font-size: clamp(1.75rem, 3vw, 2.3rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.18;
+      line-height: 1.2;
       color: #0F172A;
-      margin-bottom: 14px;
+      margin: 0 0 10px 0;
     }
 
     .section-subheading {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.55;
       color: #475569;
       margin: 0 auto;
     }
 
-    /* Proof Section - Prominently Placed Right Under Hero */
+    /* Proof Section */
     .proof-section-high {
       background: #F8FAFC;
       border-top: 1px solid #E2E8F0;
@@ -477,219 +428,132 @@
       background: #FFFFFF;
       border: 1.5px solid var(--clinic-border);
       border-radius: var(--radius-lg);
-      padding: 32px;
-      max-width: 860px;
+      padding: 26px;
+      max-width: 820px;
       margin: 0 auto;
-      position: relative;
     }
 
     .testimonial-clinic-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding-bottom: 20px;
+      gap: 14px;
+      padding-bottom: 16px;
       border-bottom: 1.5px solid #E2E8F0;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
     }
 
     .clinic-brand-info {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
     .clinic-logo-frame {
       background: #0B1120;
       border: 1.5px solid #1E293B;
-      border-radius: 10px;
-      padding: 8px 14px;
+      border-radius: 8px;
+      padding: 6px 12px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .clinic-logo-img {
-      height: 38px;
+      height: 32px;
       width: auto;
-      max-width: 140px;
-      object-fit: contain;
+      max-width: 120px;
       display: block;
     }
 
-    .clinic-meta-text {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .clinic-name-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
     .clinic-title {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 800;
       color: #0F172A;
-      line-height: 1.2;
     }
 
     .verified-badge {
       font-family: var(--font-mono);
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 700;
       color: #065F46;
       background: #ECFDF5;
       border: 1px solid #A7F3D0;
-      padding: 2px 7px;
+      padding: 2px 6px;
       border-radius: 4px;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-    }
-
-    .clinic-url-pill {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: #075E54;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      width: fit-content;
-    }
-
-    .clinic-url-pill:hover {
-      text-decoration: underline;
+      gap: 3px;
     }
 
     .clinic-metrics-badge {
       background: #F0FDF4;
       border: 1.5px solid #86EFAC;
       border-radius: 8px;
-      padding: 8px 14px;
+      padding: 6px 12px;
       text-align: right;
     }
 
     .metric-highlight {
       display: block;
-      font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 800;
       color: #15803D;
-      line-height: 1.2;
     }
 
     .metric-caption {
       display: block;
       font-family: var(--font-mono);
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 600;
       color: #166534;
     }
 
-    .star-rating-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .star-rating-row .stars {
-      color: #F59E0B;
-      font-size: 1rem;
-      letter-spacing: 2px;
-    }
-
-    .star-rating-row .rating-label {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #64748B;
-      text-transform: uppercase;
-    }
-
     .quote-statement {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: #0F172A;
       line-height: 1.35;
-      margin-bottom: 14px;
+      margin: 0 0 10px 0;
     }
 
     .quote-body {
-      font-size: 0.94rem;
+      font-size: 0.9rem;
       color: #334155;
-      line-height: 1.65;
-      margin-bottom: 20px;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
     }
 
     .testimonial-stats-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 10px;
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 20px;
+      border-radius: 8px;
+      padding: 12px;
       text-align: center;
+      margin-bottom: 16px;
     }
 
     .t-stat-num {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: #0F172A;
-      line-height: 1.2;
+      display: block;
     }
 
     .t-stat-label {
-      display: block;
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
       color: #64748B;
-      margin-top: 2px;
     }
 
-    .author-info {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .author-avatar-img {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 2px solid #000000;
-    }
-
-    .author-name {
-      font-family: var(--font-display);
-      font-weight: 800;
-      color: #0F172A;
-      font-size: 0.96rem;
-    }
-
-    .author-title {
-      font-size: 0.8rem;
-      font-family: var(--font-mono);
-      color: #64748B;
-    }
-
-    /* Trust Badges Grid */
+    /* Trust Badges Strip */
     .trust-badges-section {
-      padding: 36px 0;
+      padding: 30px 0;
       background: #FFFFFF;
       border-bottom: 1px solid #E2E8F0;
     }
@@ -697,83 +561,50 @@
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 16px;
     }
 
     .trust-card {
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 18px 16px;
+      border-radius: 10px;
+      padding: 14px;
     }
 
-    .trust-card-icon {
-      color: #075E54;
-      margin-bottom: 10px;
-    }
+    .trust-card-icon { color: #075E54; margin-bottom: 6px; }
+    .trust-card-title { font-size: 0.88rem; font-weight: 800; color: #0F172A; margin-bottom: 3px; }
+    .trust-card-desc { font-size: 0.78rem; color: #64748B; line-height: 1.4; }
 
-    .trust-card-title {
-      font-size: 0.92rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 4px;
-    }
-
-    .trust-card-desc {
-      font-size: 0.8rem;
-      color: #64748B;
-      line-height: 1.45;
-    }
-
-    /* Problem vs Solution */
-    .ps-wrapper {
-      background: #FFFFFF;
-    }
-
+    /* Problem Section */
+    .ps-wrapper { background: #FFFFFF; }
     .ps-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 22px;
     }
 
     .ps-box {
-      border-radius: 16px;
-      padding: 28px;
+      border-radius: 14px;
+      padding: 22px;
       border: 1.5px solid;
     }
-
-    .ps-box-bad {
-      background: #FEF2F2;
-      border-color: #FECACA;
-    }
-
-    .ps-box-good {
-      background: #F0FDF4;
-      border-color: #BBF7D0;
-    }
+    .ps-box-bad { background: #FEF2F2; border-color: #FECACA; }
+    .ps-box-good { background: #F0FDF4; border-color: #BBF7D0; }
 
     .ps-tag {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       font-family: var(--font-mono);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 6px;
-      margin-bottom: 18px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      margin-bottom: 14px;
       text-transform: uppercase;
     }
-
-    .ps-tag-bad {
-      background: #FEE2E2;
-      color: #991B1B;
-    }
-
-    .ps-tag-good {
-      background: #DCFCE7;
-      color: #065F46;
-    }
+    .ps-tag-bad { background: #FEE2E2; color: #991B1B; }
+    .ps-tag-good { background: #DCFCE7; color: #065F46; }
 
     .ps-item-list {
       list-style: none;
@@ -781,31 +612,19 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
     }
 
     .ps-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      font-size: 0.94rem;
+      gap: 8px;
+      font-size: 0.88rem;
       color: #1E293B;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
-    .ps-item-icon-bad {
-      color: #EF4444;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .ps-item-icon-good {
-      color: #059669;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* How It Works (3 Clear Steps) */
+    /* 3-Step How It Works */
     .how-section {
       background: #F8FAFC;
       border-top: 1px solid #E2E8F0;
@@ -815,80 +634,62 @@
     .how-grid-3col {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
     }
 
     .how-step-card {
       background: #FFFFFF;
       border: 1.5px solid var(--clinic-border);
-      border-radius: 14px;
-      padding: 24px 20px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
+      border-radius: 12px;
+      padding: 20px 18px;
     }
 
     .how-step-number {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 800;
       color: #075E54;
       background: #E8F5E9;
       border: 1px solid #A5D6A7;
-      padding: 3px 8px;
-      border-radius: 6px;
+      padding: 2px 7px;
+      border-radius: 5px;
       display: inline-block;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      margin-bottom: 10px;
     }
 
     .how-step-title {
-      font-family: var(--font-display);
-      font-size: 1.12rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: #0F172A;
-      margin-bottom: 8px;
-      line-height: 1.3;
+      margin: 0 0 6px 0;
     }
 
     .how-step-desc {
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       color: #475569;
-      line-height: 1.55;
+      line-height: 1.5;
       margin: 0;
     }
 
-    /* CRM Showcase */
-    .crm-section {
-      background: #FFFFFF;
-    }
-
+    /* Live CRM Showcase */
+    .crm-section { background: #FFFFFF; }
     .crm-browser-frame {
       background: #0F172A;
       border: 2px solid #1E293B;
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
     }
 
     .crm-top-bar {
       background: #1E293B;
-      padding: 10px 16px;
+      padding: 8px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .crm-dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
+    .crm-dots { display: flex; gap: 5px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; }
     .dot-red { background: #EF4444; }
     .dot-yellow { background: #F59E0B; }
     .dot-green { background: #10B981; }
@@ -900,38 +701,34 @@
     }
 
     /* Pricing Section */
-    .pricing-section {
-      background: #F8FAFC;
-    }
-
+    .pricing-section { background: #F8FAFC; }
     .pricing-container-card {
       background: #FFFFFF;
       border: 2px solid #000000;
-      border-radius: 20px;
-      padding: 36px 32px;
-      max-width: 580px;
+      border-radius: 18px;
+      padding: 30px 28px;
+      max-width: 540px;
       margin: 0 auto;
-      box-shadow: 8px 8px 0px #000000;
+      box-shadow: 6px 6px 0px #000000;
       box-sizing: border-box;
       text-align: center;
     }
 
     .pricing-badge-top {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 800;
       color: #065F46;
       background: #DCFCE7;
       border: 1px solid #86EFAC;
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 9999px;
       display: inline-block;
-      margin-bottom: 16px;
-      letter-spacing: 0.05em;
+      margin-bottom: 12px;
     }
 
     .pricing-price-header {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 800;
       color: #0F172A;
       line-height: 1;
@@ -939,48 +736,34 @@
       display: flex;
       align-items: baseline;
       justify-content: center;
-      gap: 4px;
+      gap: 3px;
     }
 
-    .price-symbol {
-      font-size: 1.8rem;
-      color: #059669;
-    }
-
-    .price-term {
-      font-size: 0.95rem;
-      color: #64748B;
-      font-family: var(--font-mono);
-    }
-
-    .pricing-sub-note {
-      font-size: 0.84rem;
-      color: #64748B;
-      margin-bottom: 24px;
-    }
+    .price-symbol { font-size: 1.6rem; color: #059669; }
+    .price-term { font-size: 0.9rem; color: #64748B; font-family: var(--font-mono); }
 
     .pricing-checklist {
       list-style: none;
       padding: 0;
-      margin: 0 0 24px 0;
+      margin: 0 0 20px 0;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       text-align: left;
     }
 
     .pricing-checklist li {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.88rem;
+      gap: 8px;
+      font-size: 0.86rem;
       color: #1E293B;
       font-weight: 600;
     }
 
     .check-icon-circle {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: #DCFCE7;
       color: #059669;
@@ -994,10 +777,10 @@
       background: var(--wa-green);
       color: #000000;
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 800;
-      padding: 14px 24px;
-      border-radius: 10px;
+      padding: 13px 20px;
+      border-radius: 8px;
       border: 1.5px solid #000000;
       display: inline-flex;
       align-items: center;
@@ -1007,83 +790,52 @@
       width: 100%;
       box-sizing: border-box;
       cursor: pointer;
-      transition: background 0.15s ease, transform 0.15s ease;
     }
 
-    .btn-pricing-cta:hover {
-      background: #20BD5A;
-      transform: translateY(-1px);
-    }
-
-    /* Qualifying Form (Clean 2-Field Lead Collection) */
+    /* 2-Field Form */
     .qualifying-form-box {
       background: #F8FAFC;
       border: 1.5px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 18px 16px;
-      margin-bottom: 16px;
+      border-radius: 10px;
+      padding: 16px 14px;
+      margin-bottom: 14px;
       text-align: left;
     }
 
     .qual-form-title {
-      font-family: var(--font-display);
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: var(--clinic-navy);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 6px;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
     }
 
-    .qual-input-group {
-      margin-bottom: 12px;
-    }
-
+    .qual-input-group { margin-bottom: 10px; }
     .qual-input-group label {
       display: block;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: #334155;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       font-family: var(--font-mono);
     }
 
     .qual-input {
       width: 100%;
       box-sizing: border-box;
-      padding: 10px 12px;
-      font-size: 0.84rem;
+      padding: 9px 10px;
+      font-size: 0.82rem;
       font-family: var(--font-mono);
       background: #FFFFFF;
       border: 1.5px solid #CBD5E1;
       border-radius: 6px;
       color: #0F172A;
       outline: none;
-      transition: border-color 0.2s ease;
     }
 
-    .qual-input:focus {
-      border-color: #25D366;
-    }
-
-    .qual-input.has-error {
-      border-color: #EF4444 !important;
-      background-color: #FEF2F2 !important;
-    }
-
-    .qual-error-text {
-      display: none;
-      color: #EF4444;
-      font-size: 0.72rem;
-      margin-top: 4px;
-      font-family: var(--font-mono);
-      font-weight: 600;
-    }
-
-    /* Clean Phone Input Group with +91 Tag */
     .phone-input-container {
       display: flex;
       align-items: center;
@@ -1091,78 +843,67 @@
       border-radius: 6px;
       background: #FFFFFF;
       overflow: hidden;
-      transition: border-color 0.2s ease;
     }
 
-    .phone-input-container:focus-within {
-      border-color: #25D366;
-    }
-
-    .phone-input-container.has-error {
-      border-color: #EF4444 !important;
-      background-color: #FEF2F2 !important;
-    }
-
+    .phone-input-container:focus-within { border-color: #25D366; }
     .phone-prefix-tag {
       background: #F1F5F9;
-      padding: 10px 12px;
+      padding: 9px 10px;
       font-family: var(--font-mono);
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: #334155;
       border-right: 1.5px solid #E2E8F0;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      user-select: none;
     }
 
     .phone-input-clean {
       flex: 1;
       border: none !important;
       outline: none !important;
-      padding: 10px 12px !important;
+      padding: 9px 10px !important;
       font-family: var(--font-mono) !important;
-      font-size: 0.84rem !important;
+      font-size: 0.82rem !important;
       color: #0F172A !important;
       background: transparent !important;
       width: 100%;
       box-sizing: border-box;
     }
 
-    /* FAQ Section */
-    .faq-section {
-      background: #FFFFFF;
+    .qual-error-text {
+      display: none;
+      color: #EF4444;
+      font-size: 0.7rem;
+      margin-top: 3px;
+      font-family: var(--font-mono);
+      font-weight: 600;
     }
 
+    /* FAQ */
+    .faq-section { background: #FFFFFF; }
     .faq-list-box {
-      max-width: 780px;
+      max-width: 720px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .faq-accordion-item {
       border: 1.5px solid #E2E8F0;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
       background: #FFFFFF;
-      transition: border-color 0.2s ease;
     }
 
-    .faq-accordion-item.active {
-      border-color: #075E54;
-    }
+    .faq-accordion-item.active { border-color: #075E54; }
 
     .faq-btn {
       width: 100%;
-      padding: 18px 20px;
+      padding: 15px 18px;
       background: none;
       border: none;
       text-align: left;
-      font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: #0F172A;
       display: flex;
@@ -1171,25 +912,17 @@
       cursor: pointer;
     }
 
-    .faq-icon-arrow {
-      transition: transform 0.2s ease;
-    }
-
-    .faq-accordion-item.active .faq-icon-arrow {
-      transform: rotate(180deg);
-    }
+    .faq-icon-arrow { transition: transform 0.2s ease; }
+    .faq-accordion-item.active .faq-icon-arrow { transform: rotate(180deg); }
 
     .faq-answer-content {
       display: none;
-      padding: 0 20px 18px;
-      font-size: 0.9rem;
+      padding: 0 18px 14px;
+      font-size: 0.86rem;
       color: #475569;
-      line-height: 1.6;
+      line-height: 1.55;
     }
-
-    .faq-accordion-item.active .faq-answer-content {
-      display: block;
-    }
+    .faq-accordion-item.active .faq-answer-content { display: block; }
 
     /* Sticky Mobile Bar */
     .sticky-whatsapp-bar {
@@ -1198,10 +931,10 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(8px);
       border-top: 1.5px solid #E2E8F0;
-      padding: 10px 16px;
+      padding: 8px 14px;
       z-index: 9998;
       align-items: center;
       justify-content: space-between;
@@ -1209,15 +942,14 @@
     }
 
     .sticky-text-info {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       color: #0F172A;
-      line-height: 1.25;
+      line-height: 1.2;
     }
-
     .sticky-text-info span {
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: #059669;
       font-family: var(--font-mono);
     }
@@ -1225,37 +957,36 @@
     .btn-sticky-wa {
       background: var(--wa-green);
       color: #000000;
-      padding: 10px 18px;
-      border-radius: 8px;
+      padding: 9px 15px;
+      border-radius: 7px;
       font-weight: 800;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       text-decoration: none;
       border: 1.5px solid #000000;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     /* Footer */
     .site-footer {
       background: #0B141A;
       color: #94A3B8;
-      padding: 48px 0 24px;
+      padding: 36px 0 20px;
       border-top: 1px solid #1E293B;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr;
-      gap: 40px;
-      margin-bottom: 36px;
+      gap: 30px;
+      margin-bottom: 24px;
     }
 
     .footer-col h4 {
       color: #FFFFFF;
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 14px;
+      font-size: 0.9rem;
+      margin: 0 0 10px 0;
     }
 
     .footer-links-list {
@@ -1264,21 +995,20 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      font-size: 0.84rem;
+      gap: 6px;
+      font-size: 0.8rem;
     }
 
     .footer-bottom-bar {
       border-top: 1px solid #1E293B;
-      padding-top: 20px;
+      padding-top: 16px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: #64748B;
       font-family: var(--font-mono);
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     /* Modal Overlay */
@@ -1295,46 +1025,37 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 16px;
+      padding: 14px;
       box-sizing: border-box;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.22s ease, visibility 0.22s ease;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
     }
 
-    .qual-modal-overlay.is-active {
-      opacity: 1;
-      visibility: visible;
-    }
+    .qual-modal-overlay.is-active { opacity: 1; visibility: visible; }
 
     .qual-modal-dialog {
       background: #FFFFFF;
       border: 2px solid #000000;
       border-radius: 16px;
-      box-shadow: 6px 6px 0px #000000;
-      max-width: 460px;
+      box-shadow: 5px 5px 0px #000000;
+      max-width: 440px;
       width: 100%;
-      padding: 24px 22px;
+      padding: 22px 18px;
       box-sizing: border-box;
       position: relative;
-      transform: translateY(20px) scale(0.97);
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
       text-align: left;
-    }
-
-    .qual-modal-overlay.is-active .qual-modal-dialog {
-      transform: translateY(0) scale(1);
     }
 
     .qual-modal-close {
       position: absolute;
-      top: 14px;
-      right: 14px;
+      top: 12px;
+      right: 12px;
       background: #F1F5F9;
       border: 1.5px solid #CBD5E1;
       border-radius: 50%;
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1342,217 +1063,304 @@
       padding: 0;
     }
 
-    .modal-heading {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 4px;
-      line-height: 1.25;
-    }
-
-    .modal-subtext {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: #64748B;
-      margin-bottom: 16px;
-      line-height: 1.4;
-    }
-
-    .pulse-ring {
-      animation: pulseGreen 1.8s infinite;
-    }
+    .pulse-ring { animation: pulseGreen 1.8s infinite; }
     @keyframes pulseGreen {
       0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    @keyframes qualShake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-6px); }
-      40%, 80% { transform: translateX(6px); }
-    }
-    .shake-animate {
-      animation: qualShake 0.35s ease-in-out;
-    }
-
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .spinner { animation: spin 0.8s linear infinite; }
-
-    /* Reveal Animation Utilities */
-    .reveal-blur {
-      opacity: 0;
-      filter: blur(8px);
-      transform: translateY(16px);
-      transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
-    }
-    .reveal-blur.is-revealed {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0);
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 840px) {
+    /* ============================================================
+       MOBILE MASTER OPTIMIZATIONS (Cuts scroll from 10k to ~3.5k)
+       ============================================================ */
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 32px 0; /* Huge scroll reduction */
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .navbar {
+        top: 8px;
+        padding: 6px 12px;
+        width: calc(100% - 20px);
+      }
+      .hero-wrapper {
+        padding-top: 72px;
+        padding-bottom: 24px;
+      }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 20px;
+      }
+      .hero-headline {
+        font-size: 1.95rem;
+        line-height: 1.15;
+        margin-bottom: 12px;
+      }
+      .hero-description {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .hero-outcomes-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .outcome-item {
+        font-size: 0.75rem;
+        gap: 6px;
+      }
+      .outcome-icon {
+        width: 20px;
+        height: 20px;
+      }
+      .outcome-icon svg {
+        width: 14px;
+        height: 14px;
+      }
+      .btn-hero-wa {
+        width: 100%;
+        padding: 13px 18px;
+        font-size: 0.94rem;
+        box-sizing: border-box;
+      }
+      .phone-mockup-card {
+        max-width: 280px;
+        padding: 10px;
+        box-shadow: 5px 8px 0px #0F172A;
+      }
+      .wa-body {
+        gap: 6px;
+        padding: 8px 6px;
+      }
+      .wa-msg {
+        font-size: 0.72rem;
+        padding: 6px 8px;
+      }
+      .section-title-box {
+        margin-bottom: 18px;
+      }
+      .section-heading {
+        font-size: 1.45rem;
+        line-height: 1.22;
+      }
+      .section-subheading {
+        font-size: 0.86rem;
+        line-height: 1.45;
+      }
+      .testimonial-card-box {
+        padding: 16px 14px;
+        border-radius: 12px;
+      }
+      .quote-statement {
+        font-size: 1.05rem;
+        line-height: 1.35;
+      }
+      .quote-body {
+        font-size: 0.84rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      .testimonial-stats-strip {
+        padding: 8px;
+        gap: 6px;
+      }
+      .t-stat-num {
+        font-size: 1rem;
+      }
+      .t-stat-label {
+        font-size: 0.62rem;
+      }
+      .trust-badges-section {
+        padding: 20px 0;
       }
       .trust-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .trust-card {
+        padding: 10px;
+      }
+      .trust-card-title {
+        font-size: 0.82rem;
+      }
+      .trust-card-desc {
+        font-size: 0.72rem;
       }
       .ps-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .ps-box {
+        padding: 16px 14px;
+        border-radius: 10px;
+      }
+      .ps-item {
+        font-size: 0.82rem;
+        gap: 6px;
       }
       .how-grid-3col {
         grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .how-step-card {
+        padding: 14px 12px;
+        border-radius: 10px;
+      }
+      .how-step-title {
+        font-size: 0.98rem;
+      }
+      .how-step-desc {
+        font-size: 0.8rem;
+      }
+      .pricing-container-card {
+        padding: 20px 16px;
+        border-radius: 14px;
+        box-shadow: 5px 5px 0px #000000;
+      }
+      .pricing-price-header {
+        font-size: 2.3rem;
+      }
+      .pricing-checklist li {
+        font-size: 0.8rem;
+        gap: 6px;
+      }
+      .faq-list-box {
+        gap: 8px;
+      }
+      .faq-btn {
+        padding: 12px 14px;
+        font-size: 0.88rem;
+      }
+      .faq-answer-content {
+        font-size: 0.82rem;
+        padding: 0 14px 12px;
       }
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .site-footer {
+        padding: 24px 0 70px; /* room for bottom sticky bar */
       }
       .sticky-whatsapp-bar {
         display: flex;
       }
-      .hero-headline {
-        font-size: clamp(2.05rem, 7.2vw, 2.5rem);
-        line-height: 1.12;
-        letter-spacing: -0.035em;
-      }
-      .hero-wrapper {
-        padding-top: 100px;
-        padding-bottom: 40px;
-      }
       body {
-        padding-bottom: 60px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .trust-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero-outcomes-list {
-        grid-template-columns: 1fr;
-      }
-      .testimonial-stats-strip {
-        grid-template-columns: 1fr;
+        padding-bottom: 50px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Navigation Bar (Logo + Single Direct CTA) -->
+  <!-- Floating Nav (Logo + Single Direct CTA) -->
   <nav class="navbar" aria-label="Main Navigation">
-    <a href="/#home" class="navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
+    <a href="/#home" class="navbar-brand">
       <picture>
         <source srcset="/logo-transparent.webp" type="image/webp">
-        <img src="/logo-transparent.png" alt="Boldlabs" style="height: 36px; width: auto; display: block;" width="55" height="36" />
+        <img src="/logo-transparent.png" alt="Boldlabs" style="height: 32px; width: auto; display: block;" width="50" height="32" />
       </picture>
     </a>
-    <div class="nav-links" id="navbar-links-container">
-      <a href="#qual-modal" class="pill-btn trigger-qual-modal" data-cta-location="Navbar CTA" id="nav-demo-btn">
-        <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-        Try It On Your Own Number &#8594;
+    <div class="navbar-action" style="display: flex; align-items: center;">
+      <a href="#qual-modal" class="pill-btn trigger-qual-modal" data-cta-location="Nav Bar CTA" id="nav-demo-btn" style="padding: 6px 12px; font-size: 0.72rem;">
+        <svg class="svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        Try On Your Number &#8594;
       </a>
     </div>
   </nav>
 
   <main id="main-content">
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Laser Focused Above the Fold) -->
     <section class="hero-wrapper">
       <div class="container">
         <div class="hero-grid">
           
-          <!-- Hero Text -->
           <div>
-            <h1 class="hero-headline reveal-blur">
+            <h1 class="hero-headline">
               Never Miss A <span class="hero-headline-accent">Patient Message</span> Again.
             </h1>
 
-            <p class="hero-description reveal-blur">
-              Turn WhatsApp inquiries into confirmed doctor appointments, 24 hours a day. Built for Indian clinics, running on the official Meta WhatsApp API — not a script that gets your number banned.
+            <p class="hero-description">
+              Turn WhatsApp inquiries into confirmed doctor appointments 24/7. Built for Indian clinics on the official Meta WhatsApp API — zero ban risk.
             </p>
 
-            <div class="hero-outcomes-list reveal-blur">
+            <div class="hero-outcomes-list">
               <div class="outcome-item">
                 <span class="outcome-icon">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                 </span>
-                3-Second Instant Reply
+                3s Instant Reply
               </div>
               <div class="outcome-item">
                 <span class="outcome-icon">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                 </span>
-                Automated Slot Booking
+                Slot Booking Flow
               </div>
               <div class="outcome-item">
                 <span class="outcome-icon">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </span>
-                24h &amp; 2h Patient Reminders
+                24h &amp; 2h Reminders
               </div>
               <div class="outcome-item">
                 <span class="outcome-icon">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                 </span>
-                Clinic CRM &amp; Portal Included
+                Clinic CRM Portal
               </div>
             </div>
 
-            <div class="hero-cta-group reveal-blur">
+            <div class="hero-cta-group">
               <a href="#qual-modal" class="btn-hero-wa trigger-qual-modal" data-cta-location="Hero CTA" id="hero-wa-btn">
-                <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 Try It On Your Own Number &#8594;
               </a>
               <div class="hero-subtext">
-                <span><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 3-Second Instant Reply</span>
-                <span><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero Setup Fee &middot; 48h Setup</span>
+                <span>&#10003; 3s Instant Reply</span>
+                <span>&#10003; Zero Setup Fee</span>
+                <span>&#10003; 48h Setup</span>
               </div>
             </div>
           </div>
 
-          <!-- Hero iPhone WhatsApp Simulator -->
+          <!-- Phone Simulator (Tightly Scaled on Mobile) -->
           <div>
-            <div class="phone-mockup-card reveal-blur">
+            <div class="phone-mockup-card">
               <div class="phone-notch"></div>
               <div class="phone-screen">
-                
                 <div class="wa-header">
                   <div class="wa-avatar">
-                    <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
                   </div>
                   <div>
                     <div class="wa-title">Boldlabs AI Receptionist</div>
-                    <div class="wa-status"><span class="status-dot"></span> 24/7 Receptionist Active</div>
+                    <div class="wa-status"><span class="status-dot"></span> 24/7 Active</div>
                   </div>
                 </div>
 
                 <div class="wa-body">
                   <div class="wa-msg wa-msg-patient">
-                    Hi! Do you have an available appointment slot for Dr. Sameer tomorrow afternoon?
+                    Hi! Available slot for Dr. Sameer tomorrow afternoon?
                     <div class="wa-time">10:42 AM <span class="ticks">✓✓</span></div>
                   </div>
-
                   <div class="wa-msg wa-msg-ai">
-                    Hello! 👋 Yes, Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Which time works best for you?
+                    Hello! 👋 Yes, Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Which works best?
                     <div class="wa-time">10:42 AM <span class="ticks">✓✓</span></div>
                   </div>
-
                   <div class="wa-msg wa-msg-patient">
                     2:30 PM please!
                     <div class="wa-time">10:43 AM <span class="ticks">✓✓</span></div>
                   </div>
-
                   <div class="wa-msg wa-msg-ai">
-                    You're confirmed for <strong>Tomorrow at 2:30 PM</strong>! 📍 Location: maps.google.com/clinic... We will send a reminder 2 hours before your visit! 🎉
+                    Confirmed for <strong>Tomorrow 2:30 PM</strong>! 📍 We will send a reminder 2 hours prior! 🎉
                     <div class="wa-time">10:43 AM <span class="ticks">✓✓</span></div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -1561,341 +1369,243 @@
       </div>
     </section>
 
-    <!-- Social Proof Section (Moved Higher: Right Below Hero) -->
+    <!-- Proof: Real Clinic Result (Right Below Hero, Ultra Compact) -->
     <section class="section-padding proof-section-high">
       <div class="container">
         
-        <div class="section-title-box reveal-blur" style="margin-bottom: 28px;">
-          <span class="section-eyebrow">Real Clinic Result</span>
-          <h2 class="section-heading">Active With Indian Doctors &amp; Clinics</h2>
+        <div class="section-title-box">
+          <span class="section-eyebrow">Real Clinic Proof</span>
+          <h2 class="section-heading">Active With Indian Doctors</h2>
           <p class="section-subheading">
-            See how Dr. Sameer at Mind Body Recovery added 20+ confirmed appointments every month with automated WhatsApp replies.
+            See how Dr. Sameer at Mind Body Recovery added 20+ monthly appointments with WhatsApp AI.
           </p>
         </div>
 
-        <div class="testimonial-card-box reveal-blur">
-          
+        <div class="testimonial-card-box">
           <div class="testimonial-clinic-header">
             <div class="clinic-brand-info">
               <div class="clinic-logo-frame">
                 <picture>
                   <source srcset="/assets/mind-body-recovery-logo.webp" type="image/webp">
-                  <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img" loading="lazy" decoding="async" width="120" height="46">
+                  <img src="/assets/mind-body-recovery-logo.png" alt="Mind Body Recovery Logo" class="clinic-logo-img" loading="lazy" decoding="async" width="100" height="32">
                 </picture>
               </div>
               <div class="clinic-meta-text">
                 <div class="clinic-name-row">
                   <span class="clinic-title">Mind Body Recovery</span>
-                  <span class="verified-badge">
-                    <svg class="svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    VERIFIED CLINIC PARTNER
-                  </span>
+                  <span class="verified-badge">&#10003; VERIFIED CLIENT</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 2px;">
-                  <a href="https://mindbodyrecovery.in" target="_blank" rel="noopener noreferrer" class="clinic-url-pill">
-                    <span>mindbodyrecovery.in</span>
-                    <svg class="svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                  </a>
-                  <span style="font-size: 0.78rem; font-weight: 600; color: #475569; background: #F1F5F9; padding: 2px 9px; border-radius: 9999px; display: inline-flex; align-items: center;">
-                    Dr. Sameer &middot; Lead Specialist Doctor
-                  </span>
+                <div style="font-size: 0.76rem; color: #475569; font-weight: 600;">
+                  Dr. Sameer &middot; Specialist Doctor (mindbodyrecovery.in)
                 </div>
               </div>
             </div>
 
             <div class="clinic-metrics-badge">
               <span class="metric-highlight">+20 Bookings</span>
-              <span class="metric-caption">per month via WhatsApp AI</span>
+              <span class="metric-caption">per month via WhatsApp</span>
             </div>
           </div>
 
-          <div class="testimonial-content-area">
-            <div class="star-rating-row">
-              <span class="stars">★★★★★</span>
-              <span class="rating-label">5.0 Verified Client Result</span>
-            </div>
-
-            <h3 class="quote-statement">
-              "Getting constant 20+ extra bookings a month since we switched."
-            </h3>
-
-            <p class="quote-body">
-              "Before automating WhatsApp, patients inquiring about pain relief, reflexology, and mind-body recovery after hours or during busy clinic hours would wait hours for a reply — and many never booked. With Boldlabs' 24/7 AI Receptionist, every patient inquiry on mindbodyrecovery.in is answered in 3 seconds, consultation slots are confirmed automatically, and automated reminders keep our schedule full without front-desk chaos."
-            </p>
-
-            <div class="doctor-spec-box" style="margin-top: 14px; padding: 14px 16px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; padding-bottom: 8px; border-bottom: 1px solid #EEF2F6;">
-                <div>
-                  <span style="font-size: 0.95rem; font-weight: 700; color: #0F172A;">Dr. Sameer</span>
-                  <span style="font-size: 0.82rem; font-weight: 600; color: #075E54; margin-left: 6px;">&middot; Lead Specialist Doctor, Mind Body Recovery</span>
-                </div>
-              </div>
-              <p style="font-size: 0.82rem; color: #475569; margin-top: 6px; line-height: 1.55; margin-bottom: 0;">
-                Dr. Sameer combines therapeutic reflexology and mind-body healing. His patient inquiries require thoughtful, empathetic responses that guide patients into confirmed consultation slots.
-              </p>
-            </div>
+          <div class="star-rating-row" style="margin-bottom: 8px;">
+            <span style="color: #F59E0B; font-size: 0.95rem;">★★★★★</span>
+            <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: #64748B;">5.0 VERIFIED RESULT</span>
           </div>
 
-          <div class="testimonial-stats-strip" style="margin-top: 18px;">
+          <h3 class="quote-statement">
+            "Getting constant 20+ extra bookings a month since we switched."
+          </h3>
+
+          <p class="quote-body">
+            "Before automating WhatsApp, inquiries after hours or during busy clinic times sat unread for hours. With Boldlabs, every inquiry is answered in 3 seconds, consultation slots are confirmed automatically, and automated reminders keep our chairs full."
+          </p>
+
+          <div class="testimonial-stats-strip">
             <div class="t-stat-item">
               <span class="t-stat-num">+20</span>
-              <span class="t-stat-label">Extra Monthly Bookings</span>
+              <span class="t-stat-label">Monthly Bookings</span>
             </div>
             <div class="t-stat-item">
               <span class="t-stat-num">3 Sec</span>
-              <span class="t-stat-label">Instant WhatsApp Reply</span>
+              <span class="t-stat-label">Reply Speed</span>
             </div>
             <div class="t-stat-item">
               <span class="t-stat-num">100%</span>
-              <span class="t-stat-label">Zero After-Hours Drop</span>
+              <span class="t-stat-label">After-Hours Capture</span>
             </div>
           </div>
 
-          <!-- Niche Specific Callout Banner -->
-          <div style="background: #F1F5F9; border: 1px dashed #CBD5E1; border-radius: 10px; padding: 12px 16px; margin-top: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <span style="font-size: 0.82rem; font-weight: 700; color: #334155;">
-              🦷 Also configured for Dental Clinics, Physiotherapy, Derma &amp; Multi-Specialty Practices
-            </span>
-            <span style="font-size: 0.76rem; color: #059669; font-weight: 700; font-family: var(--font-mono);">
-              Custom Doctor Slot Workflows Included
-            </span>
+          <!-- Doctor Spec & Niche Banner -->
+          <div style="background: #F1F5F9; border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #334155; margin-bottom: 14px;">
+            🦷 <strong>Configured for:</strong> Dental Clinics, Physiotherapy, Derma &amp; Multi-Specialty Clinics. Custom doctor timings included.
           </div>
 
-          <div class="author-info" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <picture>
-                <source srcset="/shakanksh_portrait.webp" type="image/webp">
-                <img src="/shakanksh_portrait.png" alt="Bhuvanesh Karnan" class="author-avatar-img" width="44" height="44" loading="lazy" decoding="async">
-              </picture>
-              <div>
-                <div class="author-name">Bhuvanesh Karnan</div>
-                <div class="author-title">Founder, Boldlabs &middot; Madurai, Tamil Nadu (Direct 1-on-1 Onboarding)</div>
-              </div>
-            </div>
-            <a href="#qual-modal" class="btn-pricing-cta trigger-qual-modal" data-cta-location="Testimonial Card CTA" style="width: auto; padding: 10px 20px; font-size: 0.86rem;">
-              Try It On Your Own Number &#8594;
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+            <span style="font-size: 0.76rem; color: #64748B; font-family: var(--font-mono);">
+              Founder-led setup by Bhuvanesh Karnan (Madurai)
+            </span>
+            <a href="#qual-modal" class="pill-btn trigger-qual-modal" data-cta-location="Testimonial CTA" style="font-size: 0.78rem; padding: 7px 14px;">
+              Try It On Your Number &#8594;
             </a>
           </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- Trust Badges Strip -->
+    <!-- Trust Badges (Compact 4-Item Grid) -->
     <section class="trust-badges-section">
       <div class="container">
         <div class="trust-grid">
-          
-          <div class="trust-card reveal-blur">
+          <div class="trust-card">
             <div class="trust-card-icon">
-              <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
-            <div class="trust-card-title">Official Meta Cloud API</div>
-            <div class="trust-card-desc">100% compliant with Meta WhatsApp API terms. Zero ban risk for your clinic number.</div>
+            <div class="trust-card-title">Official Meta API</div>
+            <div class="trust-card-desc">100% compliant. Zero ban risk for your clinic number.</div>
           </div>
 
-          <div class="trust-card reveal-blur">
+          <div class="trust-card">
             <div class="trust-card-icon">
-              <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
-            <div class="trust-card-title">3-Second Response</div>
-            <div class="trust-card-desc">Answers patient inquiries 24/7 instantly, even when front desk staff are busy.</div>
+            <div class="trust-card-title">3s Instant Reply</div>
+            <div class="trust-card-desc">Answers 24/7 when staff are busy with walk-in patients.</div>
           </div>
 
-          <div class="trust-card reveal-blur">
+          <div class="trust-card">
             <div class="trust-card-icon">
-              <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </div>
-            <div class="trust-card-title">Founder-Led Setup</div>
-            <div class="trust-card-desc">Direct onboarding with Bhuvanesh Karnan. We customize it to your clinic in 48 hours.</div>
+            <div class="trust-card-title">48h Live Setup</div>
+            <div class="trust-card-desc">We configure doctor hours, fees, and location for you.</div>
           </div>
 
-          <div class="trust-card reveal-blur">
+          <div class="trust-card">
             <div class="trust-card-icon">
-              <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2"></rect></svg>
             </div>
             <div class="trust-card-title">Cancel Anytime</div>
-            <div class="trust-card-desc">₹2,499/mo with zero setup fee and zero contract lock-in. 48h setup or first month free.</div>
+            <div class="trust-card-desc">₹2,499/mo &middot; Zero setup fee &middot; No lock-in contract.</div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- Problem vs Solution Section -->
+    <!-- The Clinic Bottleneck: Manual vs Boldlabs -->
     <section class="section-padding ps-wrapper">
       <div class="container">
         
-        <div class="section-title-box reveal-blur">
-          <span class="section-eyebrow">The Clinic Bottleneck</span>
-          <h2 class="section-heading">Every Unanswered WhatsApp Message Is A Patient Choosing Someone Else</h2>
+        <div class="section-title-box">
+          <span class="section-eyebrow">The Clinic Problem</span>
+          <h2 class="section-heading">Unanswered Messages Choose Competitors</h2>
           <p class="section-subheading">
-            Your front desk is busy with patients standing right in front of them. Meanwhile, a prospective patient messages your clinic on WhatsApp, waits 10 minutes without a response, and books with the competing clinic next door.
+            Your staff are busy with walk-ins. Inquiries wait 15 minutes, get frustrated, and book elsewhere.
           </p>
         </div>
 
         <div class="ps-grid">
-          
-          <div class="ps-box ps-box-bad reveal-blur">
-            <span class="ps-tag ps-tag-bad">
-              <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-              Manual Front Desk
-            </span>
+          <div class="ps-box ps-box-bad">
+            <span class="ps-tag ps-tag-bad">&#10007; Manual Front Desk</span>
             <ul class="ps-item-list">
-              <li class="ps-item">
-                <span class="ps-item-icon-bad">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                </span>
-                <div>Patient messages sit unread while staff handle walk-ins and phone calls</div>
-              </li>
-              <li class="ps-item">
-                <span class="ps-item-icon-bad">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                </span>
-                <div>Evening and weekend inquiries are completely missed until next morning</div>
-              </li>
-              <li class="ps-item">
-                <span class="ps-item-icon-bad">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                </span>
-                <div>Patients forget booked slots — leading to empty chairs and lost doctor revenue</div>
-              </li>
+              <li class="ps-item"><span style="color:#EF4444;">&#10007;</span> Messages sit unread while staff attend to walk-ins</li>
+              <li class="ps-item"><span style="color:#EF4444;">&#10007;</span> Evening &amp; Sunday patient inquiries completely lost</li>
+              <li class="ps-item"><span style="color:#EF4444;">&#10007;</span> No-shows occur because staff forgot to send reminders</li>
             </ul>
           </div>
 
-          <div class="ps-box ps-box-good reveal-blur">
-            <span class="ps-tag ps-tag-good">
-              <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              Boldlabs WhatsApp AI System
-            </span>
+          <div class="ps-box ps-box-good">
+            <span class="ps-tag ps-tag-good">&#10003; Boldlabs WhatsApp AI</span>
             <ul class="ps-item-list">
-              <li class="ps-item">
-                <span class="ps-item-icon-good">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </span>
-                <div>Replies in under 3 seconds with doctor consultation slots and fee details</div>
-              </li>
-              <li class="ps-item">
-                <span class="ps-item-icon-good">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </span>
-                <div>24/7 appointment bookings captured automatically, even at midnight</div>
-              </li>
-              <li class="ps-item">
-                <span class="ps-item-icon-good">
-                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </span>
-                <div>Automated 24h &amp; 2h reminders with map directions to drastically reduce no-shows</div>
-              </li>
+              <li class="ps-item"><span style="color:#059669;">&#10003;</span> Answers in 3 seconds with doctor consultation slots</li>
+              <li class="ps-item"><span style="color:#059669;">&#10003;</span> Confirms bookings automatically, even at midnight</li>
+              <li class="ps-item"><span style="color:#059669;">&#10003;</span> 24h &amp; 2h automated reminders eliminate no-shows</li>
             </ul>
           </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- How It Works in 3 Streamlined Steps (Replaces Cluttered Features Grid) -->
+    <!-- How It Works in 3 Compact Steps -->
     <section class="section-padding how-section">
       <div class="container">
         
-        <div class="section-title-box reveal-blur">
+        <div class="section-title-box">
           <span class="section-eyebrow">How It Works</span>
-          <h2 class="section-heading">How Your Clinic AI Receptionist Works In 3 Steps</h2>
-          <p class="section-subheading">
-            Zero complicated software for your patients or staff. Everything happens right inside WhatsApp.
-          </p>
+          <h2 class="section-heading">3 Frictionless Steps</h2>
+          <p class="section-subheading">Zero complicated software. Everything happens right inside WhatsApp.</p>
         </div>
 
         <div class="how-grid-3col">
-          
-          <div class="how-step-card reveal-blur">
+          <div class="how-step-card">
             <span class="how-step-number">Step 1</span>
             <h3 class="how-step-title">Patient Messages on WhatsApp</h3>
-            <p class="how-step-desc">
-              Whether it's 2 PM or 11 PM, the AI receptionist replies in 3 seconds. It politely answers questions on consultation charges, doctor availability, clinic timings, and directions.
-            </p>
+            <p class="how-step-desc">AI replies in 3 seconds answering fees, doctor timings, and clinic location.</p>
           </div>
 
-          <div class="how-step-card reveal-blur">
+          <div class="how-step-card">
             <span class="how-step-number">Step 2</span>
-            <h3 class="how-step-title">Automated Doctor Slot Booking</h3>
-            <p class="how-step-desc">
-              The AI presents open consultation slots and confirms the patient's appointment on the spot. No endless back-and-forth phone tag, no delays.
-            </p>
+            <h3 class="how-step-title">Automated Slot Booking</h3>
+            <p class="how-step-desc">Patient selects available date &amp; slot. Appointment confirmed on the spot.</p>
           </div>
 
-          <div class="how-step-card reveal-blur">
+          <div class="how-step-card">
             <span class="how-step-number">Step 3</span>
-            <h3 class="how-step-title">24h &amp; 2h Reminders + Clinic CRM</h3>
-            <p class="how-step-desc">
-              Patients receive automatic reminders before their visit to eliminate no-shows. All appointments and chat histories appear in your front desk's shared CRM inbox.
-            </p>
+            <h3 class="how-step-title">Reminders &amp; Shared CRM</h3>
+            <p class="how-step-desc">24h and 2h reminders sent automatically. Staff can view or chat in live CRM anytime.</p>
           </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- Real Clinic CRM Showcase -->
+    <!-- Real Clinic CRM Snapshot -->
     <section class="section-padding crm-section">
       <div class="container">
         
-        <div class="section-title-box reveal-blur">
-          <span class="section-eyebrow">Live Dashboard Included</span>
-          <h2 class="section-heading">This Is What Mind Body Recovery's Dashboard Looks Like</h2>
-          <p class="section-subheading">
-            No mockups. This is the live CRM we built for Dr. Sameer at Mind Body Recovery in Tamil Nadu, managing real patient inquiries, appointment scheduling, and automated confirmations.
-          </p>
+        <div class="section-title-box">
+          <span class="section-eyebrow">Real System</span>
+          <h2 class="section-heading">Live Clinic Dashboard Included</h2>
+          <p class="section-subheading">No mockups. Live CRM built for Dr. Sameer at Mind Body Recovery.</p>
         </div>
 
-        <div class="crm-browser-frame reveal-blur">
+        <div class="crm-browser-frame">
           <div class="crm-top-bar">
             <div class="crm-dots">
               <span class="dot dot-red"></span>
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
             </div>
-            <span style="color: #10B981; font-size: 0.75rem; font-weight: 700; font-family: var(--font-mono);">● LIVE CLINIC DASHBOARD</span>
+            <span style="color: #10B981; font-size: 0.72rem; font-weight: 700; font-family: var(--font-mono);">● LIVE CLINIC CRM</span>
           </div>
 
           <picture>
             <source media="(max-width: 640px)" srcset="/whatsapp-automation-clinics/assets/crm_dashboard_mobile.webp" type="image/webp">
             <source media="(max-width: 640px)" srcset="/whatsapp-automation-clinics/assets/crm_dashboard_mobile.png">
             <source srcset="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.webp" type="image/webp">
-            <img src="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.png" alt="Boldlabs Clinic CRM Live View for Dr. Sameer at Mind Body Recovery" class="crm-img-element" loading="lazy" decoding="async" width="1200" height="675">
+            <img src="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.png" alt="Boldlabs Clinic CRM Live View for Dr. Sameer" class="crm-img-element" loading="lazy" decoding="async" width="1000" height="560">
           </picture>
         </div>
 
       </div>
     </section>
 
-    <!-- Transparent Pricing Section with Concrete ROI Calculation -->
+    <!-- Pricing Section with Concrete ROI Calculation -->
     <section id="pricing" class="section-padding pricing-section">
       <div class="container">
         
-        <div class="section-title-box reveal-blur" style="margin-bottom: 24px;">
-          <span class="section-eyebrow">Clear ROI</span>
-          <h2 class="section-heading">Transparent Pricing For Clinics</h2>
-          <p class="section-subheading">
-            No hidden costs, no setup fees, no long-term lock-in.
-          </p>
-        </div>
-
-        <!-- Concrete ROI Math Banner -->
-        <div class="reveal-blur" style="max-width: 580px; margin: 0 auto 24px; background: #FFF7ED; border: 1.5px solid #FED7AA; border-radius: 12px; padding: 18px 20px; text-align: left;">
-          <div style="font-weight: 800; color: #9A3412; font-size: 0.92rem; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-            <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            The Math on Missed Consultations:
+        <!-- ROI Math Line Banner -->
+        <div style="max-width: 540px; margin: 0 auto 16px; background: #FFF7ED; border: 1.5px solid #FED7AA; border-radius: 10px; padding: 14px 16px; text-align: left;">
+          <div style="font-weight: 800; color: #9A3412; font-size: 0.88rem; margin-bottom: 3px;">
+            💰 The Cost of Missed Inquiries:
           </div>
-          <p style="font-size: 0.88rem; color: #7C2D12; margin: 0; line-height: 1.55;">
-            10 missed WhatsApp inquiries a week &times; &#8377;500 avg. consultation = <strong>&#8377;20,000/month walking out the door.</strong> Boldlabs fixes that completely for <strong>&#8377;2,499/month.</strong> One recovered appointment covers the cost.
+          <p style="font-size: 0.82rem; color: #7C2D12; margin: 0; line-height: 1.5;">
+            10 missed inquiries/week &times; &#8377;500 avg. consultation = <strong>&#8377;20,000/month lost.</strong> Boldlabs stops that leak completely for <strong>&#8377;2,499/month.</strong> One recovered appointment covers it.
           </p>
         </div>
 
-        <div class="pricing-container-card reveal-blur">
+        <div class="pricing-container-card">
           <span class="pricing-badge-top">ZERO SETUP FEE &middot; CANCEL ANYTIME</span>
 
           <div class="pricing-price-header">
@@ -1904,56 +1614,32 @@
             <span class="price-term">/ MONTH</span>
           </div>
 
-          <!-- Guarantee Placed Next to Price -->
-          <div style="margin: 6px 0 16px; padding: 8px 12px; background: #F0FDF4; border: 1px solid #86EFAC; border-radius: 8px; font-size: 0.8rem; color: #166534; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-            <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-            48-Hour Setup or First Month Free &middot; Cancel Anytime
+          <div style="margin: 4px 0 14px; padding: 6px 10px; background: #F0FDF4; border: 1px solid #86EFAC; border-radius: 6px; font-size: 0.78rem; color: #166534; font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">
+            &#10003; 48-Hour Setup or First Month Free &middot; Cancel Anytime
           </div>
 
-          <p class="pricing-sub-note">All-inclusive clinic package. Zero setup fee or hidden charges.</p>
-
           <ul class="pricing-checklist">
-            <li>
-              <span class="check-icon-circle"><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-              24/7 Automated AI WhatsApp Receptionist
-            </li>
-            <li>
-              <span class="check-icon-circle"><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-              Automated Doctor Appointment Booking System
-            </li>
-            <li>
-              <span class="check-icon-circle"><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-              24h &amp; 2h Automated Patient Reminders (Stops No-Shows)
-            </li>
-            <li>
-              <span class="check-icon-circle"><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-              Automated 5-Star Google Review Collection System
-            </li>
-            <li>
-              <span class="check-icon-circle"><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-              Full Access to Clinic CRM &amp; Inbox Dashboard
-            </li>
-            <li>
-              <span class="check-icon-circle"><svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-              48-Hour Setup by Boldlabs Team Directly
-            </li>
+            <li><span class="check-icon-circle">&#10003;</span> 24/7 Automated AI WhatsApp Receptionist</li>
+            <li><span class="check-icon-circle">&#10003;</span> Doctor Slot Booking &amp; Confirmation System</li>
+            <li><span class="check-icon-circle">&#10003;</span> 24h &amp; 2h Patient Reminders (Stops No-Shows)</li>
+            <li><span class="check-icon-circle">&#10003;</span> Clinic CRM Dashboard &amp; Multi-Staff Inbox</li>
+            <li><span class="check-icon-circle">&#10003;</span> 48-Hour Setup by Boldlabs Team Directly</li>
           </ul>
 
-          <!-- Clean 2-Field Qualifying Form in Pricing Card -->
+          <!-- Clean 2-Field Form in Pricing Card -->
           <form id="pricing-qual-form" class="qualifying-form-box">
             <div class="qual-form-title">
-              <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
               <span>Test The Live AI Demo On WhatsApp</span>
             </div>
 
             <div class="qual-input-group">
-              <label for="qual-clinic-name">Clinic Name &amp; City <span style="color: #EF4444;">*</span></label>
+              <label for="qual-clinic-name">Clinic Name &amp; City *</label>
               <input type="text" id="qual-clinic-name" placeholder="e.g. City Dental Care, Chennai" class="qual-input" autocomplete="organization" required>
               <div class="qual-error-text" id="qual-clinic-error">Please enter your clinic name and city</div>
             </div>
 
             <div class="qual-input-group">
-              <label for="qual-whatsapp-phone">Doctor / Clinic WhatsApp Number <span style="color: #EF4444;">*</span></label>
+              <label for="qual-whatsapp-phone">Doctor / Clinic WhatsApp Number *</label>
               <div class="phone-input-container" id="qual-phone-container">
                 <span class="phone-prefix-tag">🇮🇳 +91</span>
                 <input type="tel" id="qual-whatsapp-phone" placeholder="98765 43210" class="phone-input-clean" autocomplete="tel" maxlength="15" required>
@@ -1961,126 +1647,84 @@
               <div class="qual-error-text" id="qual-phone-error">Please enter a valid 10-digit WhatsApp number</div>
             </div>
 
-            <button type="submit" class="btn-pricing-cta" id="pricing-wa-btn" style="cursor: pointer; border: 1.5px solid #000000; width: 100%; margin-top: 8px;">
-              <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <button type="submit" class="btn-pricing-cta" id="pricing-wa-btn" style="margin-top: 6px;">
               Try It On Your Own Number &#8594;
             </button>
-            <p style="margin: 8px 0 0 0; font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens directly in WhatsApp &middot; No spam &middot; Instant reply</p>
+            <p style="margin: 6px 0 0 0; font-size: 0.7rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens in WhatsApp &middot; Zero spam &middot; Instant reply</p>
           </form>
 
-          <!-- Pricing Card Transition State (Shows Upon Submit) -->
-          <div id="pricing-transition-state" style="display: none; padding: 14px 4px; text-align: center;">
-            <div style="width: 48px; height: 48px; background: #DCFCE7; border: 2px solid #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;" class="pulse-ring">
-              <svg class="svg-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <!-- Pricing Transition State -->
+          <div id="pricing-transition-state" style="display: none; padding: 12px 4px; text-align: center;">
+            <div style="width: 44px; height: 44px; background: #DCFCE7; border: 2px solid #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;" class="pulse-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
             </div>
-            <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-              Opening WhatsApp...
+            <div style="font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Opening WhatsApp...</div>
+            <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; text-align: left;">
+              <div style="font-weight: 800; font-size: 0.84rem; color: #92400E;">👉 Step 2: Tap "SEND" in WhatsApp!</div>
+              <p style="font-size: 0.76rem; color: #78350F; margin: 2px 0 0 0;">Inquiry pre-filled. Just tap Send so the AI receptionist replies live.</p>
             </div>
-            <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; text-align: left;">
-              <div style="font-weight: 800; font-size: 0.86rem; color: #92400E; display: flex; align-items: center; gap: 6px;">
-                👉 Step 2 of 2: Tap "SEND" in WhatsApp!
-              </div>
-              <p style="font-size: 0.78rem; color: #78350F; margin: 4px 0 0 0; line-height: 1.4;">
-                Your message is pre-filled. Just tap <strong>Send</strong> in WhatsApp so the AI receptionist replies to you live.
-              </p>
-            </div>
-            <a id="pricing-wa-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-pricing-cta" style="text-decoration: none;">
+            <a id="pricing-wa-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-pricing-cta">
               Tap Here If WhatsApp Didn't Open &#8594;
             </a>
           </div>
 
-          <div class="pricing-contact-links" style="margin-top: 16px; font-size: 0.8rem; color: #64748B;">
-            <span><a href="tel:+918870341570" style="color: #0F172A; font-weight: 700; text-decoration: underline;">Or Call Founder Bhuvanesh Directly: +91 8870341570</a></span>
+          <div style="margin-top: 12px; font-size: 0.78rem; color: #64748B;">
+            <a href="tel:+918870341570" style="color: #0F172A; font-weight: 700; text-decoration: underline;">Or Call Founder Bhuvanesh Directly: +91 8870341570</a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section (Top 4 Clinic Inquiries) -->
     <section id="faq" class="section-padding faq-section">
       <div class="container">
         
-        <div class="section-title-box reveal-blur">
-          <span class="section-eyebrow">Clear Answers</span>
+        <div class="section-title-box">
+          <span class="section-eyebrow">FAQ</span>
           <h2 class="section-heading">Frequently Asked Questions</h2>
-          <p class="section-subheading">Everything clinic owners and doctors ask before getting started.</p>
         </div>
 
         <div class="faq-list-box">
-          
-          <div class="faq-accordion-item reveal-blur">
+          <div class="faq-accordion-item">
             <button class="faq-btn" type="button">
-              <span>What do I need from my side to get started?</span>
-              <span class="faq-icon-arrow">
-                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
+              <span>What do I need from my side to start?</span>
+              <span class="faq-icon-arrow">&#9662;</span>
             </button>
             <div class="faq-answer-content">
-              Just your clinic name, doctor consultation hours, and phone number. Our team handles 100% of the Meta Cloud API setup, AI prompt engineering, and CRM dashboard configuration. Your complete system is deployed within 48 hours.
+              Just your clinic name, doctor consultation hours, and phone number. Boldlabs handles 100% of Meta API setup, prompt engineering, and CRM configuration in 48 hours.
             </div>
           </div>
 
-          <div class="faq-accordion-item reveal-blur">
+          <div class="faq-accordion-item">
             <button class="faq-btn" type="button">
-              <span>Will the WhatsApp AI sound robotic to our patients?</span>
-              <span class="faq-icon-arrow">
-                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
+              <span>Will the WhatsApp AI sound robotic?</span>
+              <span class="faq-icon-arrow">&#9662;</span>
             </button>
             <div class="faq-answer-content">
-              No. The AI uses natural, empathetic conversational phrasing specifically trained on medical clinic receptionist standards. It answers patient questions politely and feels like texting a caring front desk team member.
+              No. It uses empathetic, conversational phrasing trained on clinic front-desk receptionist standards. It feels like texting a caring team member.
             </div>
           </div>
 
-          <div class="faq-accordion-item reveal-blur">
+          <div class="faq-accordion-item">
             <button class="faq-btn" type="button">
-              <span>Can our front desk staff take over chats manually?</span>
-              <span class="faq-icon-arrow">
-                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
+              <span>Can our front desk staff take over chats?</span>
+              <span class="faq-icon-arrow">&#9662;</span>
             </button>
             <div class="faq-answer-content">
-              100% Yes. Your front desk staff has access to a shared WhatsApp inbox dashboard where they can observe AI chats in real-time, pause the AI on any thread, and type manual replies whenever needed.
+              100% Yes. Staff have access to a live shared inbox to view chats in real time, pause the AI on any conversation, and send manual replies anytime.
             </div>
           </div>
 
-          <div class="faq-accordion-item reveal-blur">
-            <button class="faq-btn" type="button">
-              <span>Will this replace my front desk staff?</span>
-              <span class="faq-icon-arrow">
-                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer-content">
-              No. It supports your staff so they are not tied down answering routine questions all day. They still manage walk-ins, phone consultations, and any patient requiring human care.
-            </div>
-          </div>
-
-          <div class="faq-accordion-item reveal-blur">
+          <div class="faq-accordion-item">
             <button class="faq-btn" type="button">
               <span>What if I want to cancel?</span>
-              <span class="faq-icon-arrow">
-                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
+              <span class="faq-icon-arrow">&#9662;</span>
             </button>
             <div class="faq-answer-content">
-              Message us anytime — no lock-in, no cancellation fee, and no hassle. You are billed month-to-month and can pause or cancel whenever you choose.
+              Message us anytime — no lock-in, zero cancellation fee, billed month-to-month. Cancel or pause whenever you choose.
             </div>
           </div>
-
-          <div class="faq-accordion-item reveal-blur">
-            <button class="faq-btn" type="button">
-              <span>Is patient data private and secure?</span>
-              <span class="faq-icon-arrow">
-                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#075E54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer-content">
-              Yes. All messages are transmitted through Meta's secure, end-to-end encrypted official WhatsApp API infrastructure. Your patient data is 100% private and never shared with third parties.
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -2095,73 +1739,71 @@
       Clinic WhatsApp System
     </div>
     <a href="#qual-modal" class="btn-sticky-wa trigger-qual-modal" data-cta-location="Sticky Mobile Bar" id="sticky-wa-btn">
-      <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
       Try On Your Number &#8594;
     </a>
   </div>
 
-  <!-- Footer -->
+  <!-- Minimal Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
           <picture>
             <source srcset="/logo-transparent.webp" type="image/webp">
-            <img src="/logo-transparent.png" alt="Boldlabs" style="height: 40px; width: auto; margin-bottom: 12px; filter: brightness(0) invert(1);" width="62" height="40" loading="lazy" decoding="async">
+            <img src="/logo-transparent.png" alt="Boldlabs" style="height: 32px; width: auto; margin-bottom: 8px; filter: brightness(0) invert(1);" width="50" height="32" loading="lazy" decoding="async">
           </picture>
-          <p style="margin-bottom: 12px; font-size: 0.86rem; color: #94A3B8; max-width: 480px; line-height: 1.55;">
-            WhatsApp automation systems and booking solutions built by Bhuvanesh Karnan for medical clinics &amp; doctors across India.
+          <p style="font-size: 0.8rem; color: #94A3B8; margin: 0 0 8px 0; line-height: 1.45;">
+            WhatsApp automation &amp; booking systems built by Bhuvanesh Karnan for Indian clinics.
           </p>
-          <div style="font-size: 0.8rem; color: #25D366; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-            <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div style="font-size: 0.76rem; color: #25D366; font-weight: 600;">
             Official Meta WhatsApp API Partner &middot; Madurai, Tamil Nadu
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Clinic Solution</h4>
+          <h4>Clinic Package</h4>
           <ul class="footer-links-list">
-            <li>24/7 AI Receptionist &amp; Slot Booking</li>
-            <li>Automated 24h &amp; 2h Reminders</li>
-            <li>Clinic CRM &amp; Shared Inbox</li>
-            <li>5-Star Google Review Growth System</li>
+            <li>24/7 AI Receptionist &amp; Booking</li>
+            <li>24h &amp; 2h Patient Reminders</li>
+            <li>Clinic CRM &amp; Multi-Staff Inbox</li>
             <li>₹2,499/mo &middot; Zero Setup Fee</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
-        <div>© 2026 Boldlabs. All rights reserved. Tamil Nadu, India.</div>
-        <div>Meta Official WhatsApp API Partner &middot; 100% Patient Privacy Guaranteed</div>
+        <div>© 2026 Boldlabs. Madurai, Tamil Nadu, India.</div>
+        <div>100% Patient Privacy Guaranteed</div>
       </div>
     </div>
   </footer>
 
-  <!-- Qualifying Flow Modal (Clean 2-Field Lead Collection + Transition Screen) -->
+  <!-- Modal Dialog (2-Field Lead Capture + Instant Transition) -->
   <div class="qual-modal-overlay" id="qual-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-qual-title">
     <div class="qual-modal-dialog">
       <button type="button" class="qual-modal-close" id="modal-close-btn" aria-label="Close modal">
-        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
       <!-- Modal Form State -->
       <div id="modal-form-state">
-        <div style="margin-bottom: 10px;">
-          <span class="pricing-badge-top" style="font-size: 0.68rem; padding: 4px 10px; display: inline-block;">LIVE WHATSAPP DEMO</span>
+        <div style="margin-bottom: 8px;">
+          <span class="pricing-badge-top" style="font-size: 0.65rem; padding: 3px 8px;">LIVE WHATSAPP DEMO</span>
         </div>
 
-        <h3 id="modal-qual-title" class="modal-heading">Test The AI Receptionist On WhatsApp</h3>
-        <p class="modal-subtext">Enter your clinic details to see how the AI answers patient inquiries and confirms appointments on your phone in real time.</p>
+        <h3 id="modal-qual-title" class="modal-heading" style="font-size: 1.15rem; margin: 0 0 4px 0;">Test The AI Receptionist On WhatsApp</h3>
+        <p class="modal-subtext" style="font-size: 0.76rem; margin-bottom: 12px;">See how the AI answers patient queries and confirms slots on your phone in real time.</p>
 
         <form id="modal-qual-form">
           <div class="qual-input-group">
-            <label for="modal-clinic-name">Clinic Name &amp; City <span style="color: #EF4444;">*</span></label>
+            <label for="modal-clinic-name">Clinic Name &amp; City *</label>
             <input type="text" id="modal-clinic-name" placeholder="e.g. City Dental Care, Chennai" class="qual-input" autocomplete="organization" required>
             <div class="qual-error-text" id="modal-clinic-error">Please enter your clinic name and city</div>
           </div>
 
           <div class="qual-input-group">
-            <label for="modal-whatsapp-phone">Doctor / Clinic WhatsApp Number <span style="color: #EF4444;">*</span></label>
+            <label for="modal-whatsapp-phone">Doctor / Clinic WhatsApp Number *</label>
             <div class="phone-input-container" id="modal-phone-container">
               <span class="phone-prefix-tag">🇮🇳 +91</span>
               <input type="tel" id="modal-whatsapp-phone" placeholder="98765 43210" class="phone-input-clean" autocomplete="tel" maxlength="15" required>
@@ -2169,67 +1811,46 @@
             <div class="qual-error-text" id="modal-phone-error">Please enter a valid 10-digit WhatsApp number</div>
           </div>
 
-          <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 14px; width: 100%; cursor: pointer; border: 1.5px solid #000000;">
-            <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 10px;">
             Try It On Your Own Number &#8594;
           </button>
-          <p style="margin: 8px 0 0 0; font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens directly in your WhatsApp app &middot; Zero spam &middot; Instant reply</p>
+          <p style="margin: 6px 0 0 0; font-size: 0.68rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens in WhatsApp &middot; Zero spam &middot; Instant reply</p>
         </form>
       </div>
 
-      <!-- Modal Transition State ("Opening WhatsApp... Tap Send to start demo") -->
-      <div id="modal-transition-state" style="display: none; text-align: center; padding: 10px 4px;">
-        <div style="width: 54px; height: 54px; background: #DCFCE7; border: 2px solid #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px;" class="pulse-ring">
-          <svg class="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <!-- Modal Transition State -->
+      <div id="modal-transition-state" style="display: none; text-align: center; padding: 8px 2px;">
+        <div style="width: 48px; height: 48px; background: #DCFCE7; border: 2px solid #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;" class="pulse-ring">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         </div>
-        <div style="font-family: var(--font-display); font-size: 1.22rem; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-          Opening WhatsApp...
+        <div style="font-size: 1.15rem; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Opening WhatsApp...</div>
+        <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; text-align: left;">
+          <div style="font-weight: 800; font-size: 0.84rem; color: #92400E;">👉 Step 2 of 2: Tap "SEND" in WhatsApp!</div>
+          <p style="font-size: 0.76rem; color: #78350F; margin: 3px 0 0 0; line-height: 1.4;">Inquiry is pre-filled. Just tap <strong>Send</strong> in WhatsApp so the AI replies live in 3 seconds.</p>
         </div>
-        <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 10px; padding: 12px 14px; margin-bottom: 16px; text-align: left;">
-          <div style="font-weight: 800; font-size: 0.88rem; color: #92400E; display: flex; align-items: center; gap: 6px;">
-            👉 Step 2 of 2: Tap "SEND" in WhatsApp!
-          </div>
-          <p style="font-size: 0.78rem; color: #78350F; margin: 4px 0 0 0; line-height: 1.45;">
-            Your inquiry is pre-filled. Just tap <strong>Send</strong> in WhatsApp so the AI receptionist replies to your number live in 3 seconds.
-          </p>
-        </div>
-        <a id="modal-wa-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-pricing-cta" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; padding: 12px 16px; box-sizing: border-box; cursor: pointer; border: 1.5px solid #000000;">
-          <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          Tap Here If WhatsApp Didn't Open Automatically &#8594;
+        <a id="modal-wa-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-pricing-cta">
+          Tap Here If WhatsApp Didn't Open &#8594;
         </a>
-        <p style="font-size: 0.72rem; color: #64748B; font-family: var(--font-mono); margin-top: 10px;">Works on iPhone, Android &amp; Instagram In-App Browsers</p>
+        <p style="font-size: 0.68rem; color: #64748B; font-family: var(--font-mono); margin-top: 8px;">Works on iPhone, Android &amp; In-App Browsers</p>
       </div>
 
     </div>
   </div>
 
-  <!-- Lenis Smooth Scroll Engine -->
   <script src="/assets/lenis.min.js" defer></script>
 
-  <!-- Funnel Tracking & Interaction Logic -->
+  <!-- Funnel Tracking & Alert Logic -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Initialize Lenis Smooth Scroll
+      // 1. Lenis Scroll
       let lenis;
       if (typeof Lenis !== 'undefined') {
-        lenis = new Lenis({
-          duration: 1.2,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          orientation: 'vertical',
-          smoothWheel: true,
-          wheelMultiplier: 1.1,
-          touchMultiplier: 1.5,
-          infinite: false,
-        });
-
-        function raf(time) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
+        lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+        function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
       }
 
-      // Smooth scroll for anchor tags
+      // Smooth anchor scroll
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const targetId = this.getAttribute('href');
@@ -2237,45 +1858,44 @@
             const targetElem = document.querySelector(targetId);
             if (targetElem) {
               e.preventDefault();
-              if (lenis) {
-                lenis.scrollTo(targetElem, { offset: -80 });
-              } else {
-                targetElem.scrollIntoView({ behavior: 'smooth' });
-              }
+              if (lenis) lenis.scrollTo(targetElem, { offset: -70 });
+              else targetElem.scrollIntoView({ behavior: 'smooth' });
             }
           }
         });
       });
 
       // 2. FAQ Accordion
-      const faqItems = document.querySelectorAll('.faq-accordion-item');
-      faqItems.forEach(item => {
+      document.querySelectorAll('.faq-accordion-item').forEach(item => {
         const btn = item.querySelector('.faq-btn');
         if (btn) {
           btn.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            faqItems.forEach(i => i.classList.remove('active'));
-            if (!isActive) {
-              item.classList.add('active');
-            }
+            document.querySelectorAll('.faq-accordion-item').forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
           });
         }
       });
 
-      // 3. Reveal Animations
-      const revealElements = document.querySelectorAll('.reveal-blur');
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target);
+      // Smart Mobile Navbar: Slide up on scroll down to avoid crowding screen with bottom bar
+      let lastScroll = window.scrollY;
+      const navBarEl = document.querySelector('.navbar');
+      if (navBarEl) {
+        window.addEventListener('scroll', () => {
+          if (window.innerWidth <= 768) {
+            if (window.scrollY > 140 && window.scrollY > lastScroll) {
+              navBarEl.style.transform = 'translate(-50%, -140%)';
+            } else {
+              navBarEl.style.transform = 'translateX(-50%)';
+            }
+            lastScroll = window.scrollY;
+          } else {
+            navBarEl.style.transform = 'translateX(-50%)';
           }
-        });
-      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.06 });
+        }, { passive: true });
+      }
 
-      revealElements.forEach(el => revealObserver.observe(el));
-
-      // 4. Modal Element References
+      // 3. Modal Elements
       const modalOverlay = document.getElementById('qual-modal');
       const modalCloseBtn = document.getElementById('modal-close-btn');
       const modalForm = document.getElementById('modal-qual-form');
@@ -2288,7 +1908,7 @@
       const modalTransitionState = document.getElementById('modal-transition-state');
       const modalWaRedirectBtn = document.getElementById('modal-wa-redirect-btn');
 
-      // Pricing Form Element References
+      // Pricing Form Elements
       const pricingQualForm = document.getElementById('pricing-qual-form');
       const pricingClinicInput = document.getElementById('qual-clinic-name');
       const pricingPhoneInput = document.getElementById('qual-whatsapp-phone');
@@ -2298,13 +1918,10 @@
       const pricingTransitionState = document.getElementById('pricing-transition-state');
       const pricingWaRedirectBtn = document.getElementById('pricing-wa-redirect-btn');
 
-      function openQualModal(sourceLocation) {
+      function openQualModal(loc) {
         if (!modalOverlay) return;
+        trackCtaClick(loc || 'Modal Trigger');
 
-        // Track Step 2: CTA Click Event
-        trackCtaClick(sourceLocation || 'Unknown CTA');
-
-        // Sync from pricing inputs if already entered
         if (pricingClinicInput && pricingClinicInput.value && modalClinicInput) {
           modalClinicInput.value = pricingClinicInput.value;
         }
@@ -2312,7 +1929,6 @@
           modalPhoneInput.value = pricingPhoneInput.value;
         }
 
-        // Reset view to form state
         if (modalFormState) modalFormState.style.display = 'block';
         if (modalTransitionState) modalTransitionState.style.display = 'none';
 
@@ -2321,12 +1937,9 @@
         document.body.style.overflow = 'hidden';
 
         setTimeout(() => {
-          if (modalClinicInput && !modalClinicInput.value) {
-            modalClinicInput.focus();
-          } else if (modalPhoneInput) {
-            modalPhoneInput.focus();
-          }
-        }, 150);
+          if (modalClinicInput && !modalClinicInput.value) modalClinicInput.focus();
+          else if (modalPhoneInput) modalPhoneInput.focus();
+        }, 120);
       }
 
       function closeQualModal() {
@@ -2336,19 +1949,15 @@
         document.body.style.overflow = '';
       }
 
-      // Attach open modal handler to all CTAs
       document.querySelectorAll('.trigger-qual-modal').forEach(btn => {
         btn.addEventListener('click', function(e) {
           e.preventDefault();
-          const location = this.getAttribute('data-cta-location') || this.innerText.trim();
-          openQualModal(location);
+          const loc = this.getAttribute('data-cta-location') || this.innerText.trim();
+          openQualModal(loc);
         });
       });
 
-      if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', closeQualModal);
-      }
-
+      if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeQualModal);
       if (modalOverlay) {
         modalOverlay.addEventListener('click', function(e) {
           if (e.target === modalOverlay) closeQualModal();
@@ -2361,37 +1970,28 @@
         }
       });
 
-      // 5. Tracking Step 2: CTA Click
-      function trackCtaClick(location) {
+      function trackCtaClick(loc) {
         if (typeof window.fbq === 'function') {
-          window.fbq('track', 'Contact', {
-            content_name: 'Try Demo CTA',
-            button_location: location
-          });
-          window.fbq('trackCustom', 'CTAClick', {
-            button_location: location
-          });
+          window.fbq('track', 'Contact', { content_name: 'Try Demo CTA', button_location: loc });
+          window.fbq('trackCustom', 'CTAClick', { button_location: loc });
         }
         if (typeof window.gtag === 'function') {
-          window.gtag('event', 'cta_click', {
-            button_location: location
-          });
+          window.gtag('event', 'cta_click', { button_location: loc });
         }
       }
 
-      // 6. WhatsApp URL Generator
       function buildWhatsAppUrl(clinicName, phoneNum) {
         const cleanPhone = phoneNum.replace(/[^\d]/g, '');
-        const message = "Hi Bhuvanesh, I'm from " + clinicName + " (" + cleanPhone + "). I want to see the Clinic WhatsApp AI receptionist demo.";
-        return "https://wa.me/919514925790?text=" + encodeURIComponent(message);
+        const text = "Hi Bhuvanesh, I'm from " + clinicName + " (" + cleanPhone + "). I want to see the Clinic WhatsApp AI receptionist demo.";
+        return "https://wa.me/919514925790?text=" + encodeURIComponent(text);
       }
 
-      // 7. Tracking Step 3: Form Submit (Lead Event)
-      function trackLeadSubmit(clinicName, phoneNum) {
+      // Automated Alert & Lead Logger
+      function dispatchLeadAndAlert(clinicName, phoneNum) {
         const cleanPhone = phoneNum.replace(/[^\d]/g, '');
         
-        // Save lead locally in browser so leads are never lost even if WhatsApp doesn't open
-        const leadRecord = {
+        // 1. Save locally in browser
+        const record = {
           clinic: clinicName,
           phone: cleanPhone,
           timestamp: new Date().toISOString(),
@@ -2399,12 +1999,32 @@
         };
         try {
           const list = JSON.parse(localStorage.getItem('boldlabs_clinic_leads') || '[]');
-          list.push(leadRecord);
+          list.push(record);
           localStorage.setItem('boldlabs_clinic_leads', JSON.stringify(list));
-          localStorage.setItem('boldlabs_latest_lead', JSON.stringify(leadRecord));
+          localStorage.setItem('boldlabs_latest_lead', JSON.stringify(record));
         } catch(e) {}
 
-        // Meta Pixel Lead event
+        // 2. Automated Webhook Alert to Google Sheet & Personal Alert for 8870341570
+        const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwcydc0H8I5mMe4tArzen3aISdo3cy85HRFoRKH790SMB86YaL6gEiqdByepQU4sLSc/exec";
+        try {
+          fetch(WEBHOOK_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({
+              name: clinicName,
+              whatsapp: cleanPhone,
+              contactMethod: "WhatsApp Lead",
+              sourcePage: "whatsapp-automation-clinics",
+              question: "New Lead from Landing Page -> Alert for Founder Bhuvanesh: +91 8870341570",
+              alertPhone: "8870341570"
+            })
+          });
+        } catch(err) {
+          console.warn("Background alert webhook failed:", err);
+        }
+
+        // 3. Meta Pixel Lead event
         if (typeof window.fbq === 'function') {
           window.fbq('track', 'Lead', {
             content_name: 'Clinic Demo Request',
@@ -2413,7 +2033,6 @@
             currency: 'INR',
             value: 2499.00
           });
-          // Also fire CompleteRegistration for existing ad optimization
           window.fbq('track', 'CompleteRegistration', {
             content_name: 'Clinic WhatsApp Qualifying Form',
             clinic_name: clinicName,
@@ -2423,7 +2042,7 @@
           });
         }
 
-        // Google Analytics 4 Lead event
+        // 4. GA4 Lead event
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'generate_lead', {
             clinic_name: clinicName,
@@ -2434,25 +2053,22 @@
         }
       }
 
-      function validatePhone(phoneStr) {
-        const digits = phoneStr.replace(/[^\d]/g, '');
-        // Require at least 10 digits
-        return digits.length >= 10;
+      function validatePhone(s) {
+        return s.replace(/[^\d]/g, '').length >= 10;
       }
 
-      // 8. Handle Modal Form Submit
+      // Modal Submit Handler
       if (modalForm) {
         modalForm.addEventListener('submit', function(e) {
           e.preventDefault();
           const clinicVal = modalClinicInput ? modalClinicInput.value.trim() : '';
           const phoneVal = modalPhoneInput ? modalPhoneInput.value.trim() : '';
 
-          let hasError = false;
-
+          let hasErr = false;
           if (!clinicVal) {
             if (modalClinicInput) modalClinicInput.classList.add('has-error');
             if (modalClinicError) modalClinicError.style.display = 'block';
-            hasError = true;
+            hasErr = true;
           } else {
             if (modalClinicInput) modalClinicInput.classList.remove('has-error');
             if (modalClinicError) modalClinicError.style.display = 'none';
@@ -2461,40 +2077,25 @@
           if (!validatePhone(phoneVal)) {
             if (modalPhoneContainer) modalPhoneContainer.classList.add('has-error');
             if (modalPhoneError) modalPhoneError.style.display = 'block';
-            hasError = true;
+            hasErr = true;
           } else {
             if (modalPhoneContainer) modalPhoneContainer.classList.remove('has-error');
             if (modalPhoneError) modalPhoneError.style.display = 'none';
           }
 
-          if (hasError) {
-            const dialog = modalOverlay.querySelector('.qual-modal-dialog');
-            if (dialog) {
-              dialog.classList.remove('shake-animate');
-              void dialog.offsetWidth;
-              dialog.classList.add('shake-animate');
-            }
-            return;
-          }
+          if (hasErr) return;
 
-          // 1. Fire Lead Event
-          trackLeadSubmit(clinicVal, phoneVal);
+          // Dispatch Lead & Alert
+          dispatchLeadAndAlert(clinicVal, phoneVal);
 
-          // 2. Generate WhatsApp link
           const waUrl = buildWhatsAppUrl(clinicVal, phoneVal);
-
-          // 3. Show intermediate screen: "Opening WhatsApp... Tap Send"
           if (modalFormState) modalFormState.style.display = 'none';
           if (modalTransitionState) modalTransitionState.style.display = 'block';
           if (modalWaRedirectBtn) modalWaRedirectBtn.href = waUrl;
 
-          // 4. Trigger WhatsApp navigation with fallback buffer
-          setTimeout(function() {
-            window.location.href = waUrl;
-          }, 450);
+          setTimeout(() => { window.location.href = waUrl; }, 420);
         });
 
-        // Real-time error removal
         if (modalClinicInput) {
           modalClinicInput.addEventListener('input', function() {
             if (this.value.trim() && modalClinicError) {
@@ -2513,19 +2114,18 @@
         }
       }
 
-      // 9. Handle Pricing Card Form Submit
+      // Pricing Card Submit Handler
       if (pricingQualForm) {
         pricingQualForm.addEventListener('submit', function(e) {
           e.preventDefault();
           const clinicVal = pricingClinicInput ? pricingClinicInput.value.trim() : '';
           const phoneVal = pricingPhoneInput ? pricingPhoneInput.value.trim() : '';
 
-          let hasError = false;
-
+          let hasErr = false;
           if (!clinicVal) {
             if (pricingClinicInput) pricingClinicInput.classList.add('has-error');
             if (pricingClinicError) pricingClinicError.style.display = 'block';
-            hasError = true;
+            hasErr = true;
           } else {
             if (pricingClinicInput) pricingClinicInput.classList.remove('has-error');
             if (pricingClinicError) pricingClinicError.style.display = 'none';
@@ -2534,34 +2134,23 @@
           if (!validatePhone(phoneVal)) {
             if (pricingPhoneContainer) pricingPhoneContainer.classList.add('has-error');
             if (pricingPhoneError) pricingPhoneError.style.display = 'block';
-            hasError = true;
+            hasErr = true;
           } else {
             if (pricingPhoneContainer) pricingPhoneContainer.classList.remove('has-error');
             if (pricingPhoneError) pricingPhoneError.style.display = 'none';
           }
 
-          if (hasError) {
-            pricingQualForm.classList.remove('shake-animate');
-            void pricingQualForm.offsetWidth;
-            pricingQualForm.classList.add('shake-animate');
-            return;
-          }
+          if (hasErr) return;
 
-          // 1. Fire Lead Event
-          trackLeadSubmit(clinicVal, phoneVal);
+          // Dispatch Lead & Alert
+          dispatchLeadAndAlert(clinicVal, phoneVal);
 
-          // 2. Generate WhatsApp link
           const waUrl = buildWhatsAppUrl(clinicVal, phoneVal);
-
-          // 3. Show intermediate screen
           pricingQualForm.style.display = 'none';
           if (pricingTransitionState) pricingTransitionState.style.display = 'block';
           if (pricingWaRedirectBtn) pricingWaRedirectBtn.href = waUrl;
 
-          // 4. Trigger WhatsApp navigation
-          setTimeout(function() {
-            window.location.href = waUrl;
-          }, 450);
+          setTimeout(() => { window.location.href = waUrl; }, 420);
         });
 
         if (pricingClinicInput) {
