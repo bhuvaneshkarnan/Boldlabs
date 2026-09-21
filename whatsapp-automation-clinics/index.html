@@ -1600,6 +1600,181 @@
       font-weight: 700;
     }
 
+    /* Big Closing CTA Section (Directly After Pricing) */
+    .final-cta-section {
+      background: radial-gradient(circle at 50% 0%, #064E3B 0%, #061A14 55%, #030A08 100%);
+      color: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+      border-top: 2.5px solid #059669;
+      border-bottom: 2.5px solid #059669;
+    }
+
+    .final-cta-card {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1.5px solid #22C55E;
+      color: #4ADE80;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      margin-bottom: 18px;
+      letter-spacing: 0.04em;
+    }
+
+    .live-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #25D366;
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      animation: pulseGreen 1.8s infinite;
+    }
+
+    .final-cta-heading {
+      font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin: 0 0 16px 0;
+    }
+
+    .cta-accent-text {
+      color: #34D399;
+      text-decoration: underline decoration-wavy #059669;
+      text-underline-offset: 6px;
+    }
+
+    .final-cta-subtext {
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: #CBD5E1;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+
+    .final-cta-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .cta-pillar-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cta-pillar-icon {
+      font-size: 1.3rem;
+    }
+
+    .cta-pillar-item strong {
+      font-size: 0.92rem;
+      color: #FFFFFF;
+      display: block;
+      line-height: 1.25;
+    }
+
+    .cta-pillar-item p {
+      font-size: 0.76rem;
+      color: #94A3B8;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .final-cta-action-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn-big-final-cta {
+      background: var(--wa-green);
+      color: #000000;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 17px 34px;
+      border-radius: var(--radius-md);
+      border: 2.5px solid #000000;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .btn-big-final-cta:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+    }
+
+    .final-cta-guarantee-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #86EFAC;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .final-cta-founder-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 10px 18px;
+      border-radius: 9999px;
+      text-align: left;
+    }
+
+    .founder-avatar-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #059669;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      border: 1.5px solid #34D399;
+      flex-shrink: 0;
+    }
+
     /* ============================================================
        MOBILE MASTER OPTIMIZATIONS (Cuts scroll from 10k to ~3.5k)
        ============================================================ */
@@ -1884,6 +2059,53 @@
         font-size: 0.8rem;
         gap: 6px;
       }
+
+      /* Big Final CTA Mobile Overrides */
+      .final-cta-section {
+        padding: 34px 0 75px 0;
+      }
+      .final-cta-heading {
+        font-size: 1.62rem;
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .final-cta-subtext {
+        font-size: 0.86rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+      }
+      .final-cta-pillars {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .cta-pillar-item {
+        padding: 12px 14px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .cta-pillar-icon {
+        font-size: 1.2rem;
+        margin-top: 2px;
+      }
+      .btn-big-final-cta {
+        width: 100%;
+        padding: 15px 18px;
+        font-size: 0.94rem;
+        box-sizing: border-box;
+      }
+      .final-cta-guarantee-line {
+        font-size: 0.7rem;
+        gap: 10px;
+      }
+      .final-cta-founder-row {
+        border-radius: 12px;
+        padding: 10px 12px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
       .faq-list-box {
         gap: 8px;
       }
@@ -2357,6 +2579,83 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Big Closing CTA Section: High-Converting Closing Push -->
+    <section class="section-padding final-cta-section" id="start-demo">
+      <div class="container">
+        <div class="final-cta-card">
+          
+          <div class="cta-badge-pill">
+            <span class="live-pulse-dot"></span>
+            <span>48-HOUR LIVE SETUP &middot; ZERO SETUP FEE &middot; CANCEL ANYTIME</span>
+          </div>
+
+          <h2 class="final-cta-heading">
+            Every Hour Your Clinic Waits, Another Patient <span class="cta-accent-text">Books With A Competitor.</span>
+          </h2>
+
+          <p class="final-cta-subtext">
+            While your staff attend to walk-in patients or sleep at midnight, prospective patients are texting on WhatsApp right now. In just 48 hours, Boldlabs turns every incoming message and missed phone call into a confirmed doctor appointment.
+          </p>
+
+          <!-- 3 Value Pillars -->
+          <div class="final-cta-pillars">
+            <div class="cta-pillar-item">
+              <span class="cta-pillar-icon">⚡</span>
+              <div>
+                <strong>3-Second Replies 24/7</strong>
+                <p>Answers fees, doctor timings &amp; location even at 11:30 PM on Sunday.</p>
+              </div>
+            </div>
+
+            <div class="cta-pillar-item">
+              <span class="cta-pillar-icon">📞</span>
+              <div>
+                <strong>100% Missed-Call Recovery</strong>
+                <p>Auto-fires an apology WhatsApp with booking buttons within 5 seconds.</p>
+              </div>
+            </div>
+
+            <div class="cta-pillar-item">
+              <span class="cta-pillar-icon">💰</span>
+              <div>
+                <strong>Guaranteed Positive ROI</strong>
+                <p>Just 1 recovered appointment pays your entire &#8377;2,499/mo fee.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Big Action Button -->
+          <div class="final-cta-action-box">
+            <a href="#qual-modal" class="btn-big-final-cta trigger-qual-modal" data-cta-location="Big Post-Pricing CTA" id="big-final-cta-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              Test The AI Receptionist On Your Own Phone &#8594;
+            </a>
+            
+            <div class="final-cta-guarantee-line">
+              <span>&#10003; 100% Free Live Trial</span>
+              <span>&#10003; No Credit Card Required</span>
+              <span>&#10003; Live in 30 Seconds</span>
+            </div>
+          </div>
+
+          <!-- Direct Founder Contact -->
+          <div class="final-cta-founder-row">
+            <div class="founder-avatar-badge">BK</div>
+            <div>
+              <div style="font-size: 0.8rem; font-weight: 700; color: #FFFFFF;">
+                Have questions before starting?
+              </div>
+              <div style="font-size: 0.74rem; color: #94A3B8;">
+                Call or WhatsApp Founder Bhuvanesh directly: 
+                <a href="https://wa.me/918870341570?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20the%20Clinic%20WhatsApp%20Automation%20system." target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 800; text-decoration: underline;">+91 8870341570</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
