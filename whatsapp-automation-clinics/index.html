@@ -20,6 +20,118 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://goboldlabs.com/whatsapp-automation-clinics/">
+  <meta name="twitter:title" content="WhatsApp Automation Built for Clinics | ₹2,499/mo | Boldlabs">
+  <meta name="twitter:description" content="WhatsApp automation system built exclusively for medical clinics & doctors. Instant replies, appointment booking, 24h & 2h reminders, and patient dashboard.">
+  <meta name="twitter:image" content="https://goboldlabs.com/og-image.png">
+
+  <!-- JSON-LD Structured Data: SoftwareApplication & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Boldlabs Clinic WhatsApp Automation",
+        "applicationCategory": "HealthApplication, BusinessApplication",
+        "operatingSystem": "Web, WhatsApp, iOS, Android",
+        "description": "WhatsApp automation system purpose-built for Indian healthcare clinics. Instant fee replies, automatic doctor calendar booking, 24h and 2h patient reminders, and missed-call recovery.",
+        "url": "https://goboldlabs.com/whatsapp-automation-clinics/",
+        "offers": {
+          "@type": "Offer",
+          "price": "2499.00",
+          "priceCurrency": "INR",
+          "priceValidUntil": "2027-12-31",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "ratingCount": "24",
+          "bestRating": "5"
+        },
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Boldlabs Studio",
+          "telephone": "+918870341570",
+          "url": "https://goboldlabs.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can we use our clinic's existing phone number, or do we need a new SIM card?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can use your clinic's existing mobile or landline number — no new SIM card is needed. We connect your number to WhatsApp's official verified business system, which protects your account from bans and allows unlimited patient messaging. We guide you through the quick 3-minute connection, and your staff gets access to our clinic dashboard to view patient chats, reply manually, and manage bookings on computer or mobile."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the AI receptionist attempt to provide medical diagnoses or prescriptions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Strictly no. Boldlabs is built solely for front-desk coordination: doctor consultation timings, booking appointment slots, fee inquiries, clinic directions, and reminder schedules. It never diagnoses symptoms or recommends medications. When a patient asks a medical question, the system politely clarifies that only the doctor can provide medical advice, and immediately alerts your clinic team so a doctor or staff member can respond."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does missed call recovery work if our clinic phone is busy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When an incoming call goes unanswered because your front-desk is attending to a patient or the clinic is closed, our system instantly triggers an automated WhatsApp message to that caller within 5 seconds with an apology and a direct appointment booking link."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this sync with our doctor's Google Calendar and collect Google reviews?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Confirmed appointments automatically appear in your Google Calendar & Google Tasks with instant WhatsApp notifications sent to both the patient and doctor. 2 hours post-consultation, an automated WhatsApp message invites the patient to leave a 5-star review on your Google Maps listing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need from my side to start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Just your clinic name, doctor consultation hours, and phone number. Boldlabs handles 100% of the WhatsApp setup, customized message replies, and clinic dashboard configuration within 48 hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the WhatsApp AI sound robotic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It uses empathetic, conversational phrasing trained on clinic front-desk receptionist standards. It feels like texting a caring team member."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can our front desk staff take over chats?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "100% Yes. Staff have access to a live shared inbox to view chats in real time, pause the AI on any conversation, and send manual replies anytime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I want to cancel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Message us anytime — no lock-in, zero cancellation fee, billed month-to-month. Cancel or pause whenever you choose."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R792DJ9GDG"></script>
   <script>
@@ -576,259 +688,350 @@
       color: #64748B;
     }
 
-    /* Video Case Study Container */
-    .video-review-box {
+    /* Verified Clinic Deployment Showcase */
+    .clinic-deployment-box {
       background: #0B1120;
       border: 1.5px solid #1E293B;
       border-radius: var(--radius-md);
-      padding: 14px;
+      padding: 16px;
       color: #FFFFFF;
       margin-bottom: 14px;
       box-sizing: border-box;
     }
 
-    .video-player-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: radial-gradient(circle at center, #1E293B 0%, #0B1120 100%);
-      border: 1.5px solid #334155;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-    }
-
-    .video-play-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--wa-green);
-      color: #000000;
+    .deployment-top-bar {
       display: flex;
       align-items: center;
-      justify-content: center;
-      border: 2px solid #000000;
-      box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
-    .video-player-frame:hover .video-play-btn {
-      transform: scale(1.08);
-      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0.35);
-    }
-
-    .video-tag-pill {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.78);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #F8FAFC;
+    .deployment-status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      color: #4ADE80;
       font-family: var(--font-mono);
       font-size: 0.68rem;
       font-weight: 700;
       padding: 3px 8px;
       border-radius: 9999px;
-      display: inline-flex;
+      letter-spacing: 0.03em;
+    }
+
+    .status-dot-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22C55E;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      animation: pulseGreen 1.8s infinite;
+    }
+
+    .deployment-rating-badge {
+      background: #1E293B;
+      border: 1px solid #334155;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      color: #25D366;
+      font-weight: 700;
+    }
+
+    .deployment-media-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .deployment-photo-frame {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      background: #000000;
+      min-height: 180px;
+    }
+
+    .deployment-clinic-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .deployment-photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      padding: 16px 10px 8px;
+      font-size: 0.7rem;
+      color: #E2E8F0;
+      font-family: var(--font-mono);
+      display: flex;
       align-items: center;
       gap: 5px;
     }
 
-    .video-duration-pill {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #94A3B8;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 600;
-      padding: 2px 7px;
-      border-radius: 4px;
-    }
-
-    .video-meta-caption {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 0.78rem;
-      color: #94A3B8;
-    }
-
-    
-    /* Clean ROI Breakdown Calculator */
-    .roi-calc-container {
-      background: #FFFFFF;
-      border: 2px solid #0F172A;
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      max-width: 780px;
-      margin: 0 auto 16px;
-      box-shadow: 6px 6px 0px #0F172A;
-      box-sizing: border-box;
-    }
-
-    .roi-calc-steps {
+    .deployment-summary-col {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .roi-step-row {
-      display: flex;
-      align-items: center;
       justify-content: space-between;
-      background: #F8FAFC;
-      border: 1.5px solid #E2E8F0;
-      border-radius: 10px;
-      padding: 12px 16px;
-      gap: 12px;
-      box-sizing: border-box;
+      gap: 10px;
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 12px;
     }
 
-    .roi-step-info {
+    .deployment-doctor-header {
       display: flex;
       align-items: center;
       gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1E293B;
     }
 
-    .roi-step-num {
-      width: 24px;
-      height: 24px;
+    .deployment-doctor-thumb {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: #0F172A;
-      color: #FFFFFF;
-      font-size: 0.72rem;
-      font-weight: 800;
+      border: 1.5px solid #22C55E;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .deployment-impact-list {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .dep-impact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 0.74rem;
+      line-height: 1.35;
+      color: #CBD5E1;
+    }
+
+    .dep-impact-check {
+      color: #22C55E;
+      font-weight: 800;
       font-family: var(--font-mono);
       flex-shrink: 0;
     }
 
-    .roi-step-title {
+    .dep-impact-item strong {
+      color: #F8FAFC;
+    }
+
+    @media (max-width: 640px) {
+      .deployment-media-grid {
+        grid-template-columns: 1fr;
+      }
+      .deployment-photo-frame {
+        max-height: 180px;
+      }
+    }
+
+    /* Vernacular Support Pill */
+    .hero-vernacular-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      color: #065F46;
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin-top: 10px;
+      margin-bottom: 14px;
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    /* Specialty Coverage Grid */
+    .specialty-grid-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .specialty-card-mini {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 14px;
+      box-sizing: border-box;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .specialty-card-mini:hover {
+      border-color: #059669;
+      transform: translateY(-2px);
+    }
+
+    .specialty-icon-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-size: 0.88rem;
       font-weight: 800;
       color: #0F172A;
+      margin-bottom: 6px;
     }
 
-    .roi-step-desc {
-      font-size: 0.72rem;
-      color: #64748B;
-      font-family: var(--font-mono);
+    .specialty-card-mini p {
+      font-size: 0.74rem;
+      color: #475569;
+      line-height: 1.4;
+      margin: 0;
     }
 
-    .roi-step-val {
-      font-size: 1.1rem;
-      font-weight: 800;
-      font-family: var(--font-mono);
-      text-align: right;
-      white-space: nowrap;
+    /* Scannable Growth Bullet List */
+    .growth-bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 8px 0 10px;
+    }
+
+    .growth-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .growth-bullet-item strong {
+      color: #0F172A;
+    }
+
+    .g-bullet-dot {
+      color: #059669;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .specialty-grid-row {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        gap: 8px;
+        margin-top: 12px;
+        margin-bottom: 14px;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+      }
+      .specialty-grid-row::-webkit-scrollbar {
+        display: none;
+      }
+      .specialty-card-mini {
+        flex: 0 0 215px;
+        scroll-snap-align: start;
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+      .specialty-icon-title {
+        font-size: 0.78rem;
+        margin-bottom: 3px;
+      }
+      .specialty-card-mini p {
+        font-size: 0.69rem;
+        line-height: 1.35;
+      }
+      .growth-bullet-item {
+        font-size: 0.76rem;
+        line-height: 1.35;
+        gap: 6px;
+      }
+    }
+
+    /* Pricing Daily Anchor & Ledger Utilities */
+    .pricing-daily-framing {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #065F46;
+      margin: 2px 0 12px;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
     }
 
     .val-red { color: #DC2626; }
     .val-green { color: #16A34A; }
     .val-slate { color: #475569; }
 
-    .roi-total-banner {
-      background: #052E16;
-      border: 2px solid #22C55E;
-      border-radius: 12px;
-      padding: 16px 18px;
-      color: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 16px;
-      box-sizing: border-box;
+    /* Desktop Modal Split with QR Code */
+    @media (min-width: 680px) {
+      .qual-modal-dialog {
+        max-width: 640px !important;
+        width: 90% !important;
+      }
+      .modal-desktop-split {
+        display: grid;
+        grid-template-columns: 1.15fr auto 1fr;
+        gap: 16px;
+        align-items: center;
+      }
+      .modal-divider-v {
+        width: 1px;
+        height: 85%;
+        background: #E2E8F0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-divider-pill {
+        background: #F1F5F9;
+        border: 1px solid #CBD5E1;
+        color: #64748B;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 9999px;
+      }
+      .modal-qr-col {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+      }
     }
 
-    .roi-total-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #86EFAC;
-      font-family: var(--font-mono);
-      margin-bottom: 2px;
-    }
-
-    .roi-total-title {
-      font-size: 1.02rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin: 0;
-    }
-
-    .roi-total-amount-box {
-      text-align: right;
-    }
-
-    .roi-total-number {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: #4ADE80;
-      line-height: 1;
-      font-family: var(--font-mono);
-    }
-
-    .roi-total-badge {
-      display: inline-block;
-      background: #15803D;
-      color: #FFFFFF;
-      font-size: 0.68rem;
-      font-weight: 800;
-      font-family: var(--font-mono);
-      padding: 2px 8px;
-      border-radius: 9999px;
-      margin-top: 4px;
-    }
-
-    /* Breakeven Comparison Row */
-    .roi-be-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .roi-be-card {
-      background: #F0FDF4;
-      border: 1.5px solid #BBF7D0;
-      border-radius: 8px;
-      padding: 10px 14px;
-    }
-
-    .roi-be-tag {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 800;
-      color: #166534;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .roi-be-headline {
-      font-size: 0.86rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 2px;
-    }
-
-    .roi-be-detail {
-      font-size: 0.72rem;
-      color: #475569;
+    @media (max-width: 679px) {
+      .modal-desktop-split {
+        display: block;
+      }
+      .modal-divider-v {
+        display: none;
+      }
+      .modal-qr-col {
+        display: none !important;
+      }
     }
 
     /* Revenue Growth Engine Section (Desktop) */
@@ -1547,6 +1750,91 @@
       box-sizing: border-box;
       position: relative;
       text-align: left;
+      transition: max-width 0.2s ease;
+    }
+
+    /* Modal Desktop Split & Instant Phone QR Column */
+    @media (min-width: 769px) {
+      .qual-modal-dialog {
+        max-width: 720px;
+        padding: 24px 22px;
+      }
+      .modal-desktop-split {
+        display: grid;
+        grid-template-columns: 1.35fr 0.95fr;
+        gap: 20px;
+        align-items: stretch;
+      }
+      .modal-form-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .modal-qr-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #F8FAFC;
+        border: 1.5px dashed #CBD5E1;
+        border-radius: 12px;
+        padding: 16px 14px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .modal-desktop-split {
+        display: block;
+      }
+      .modal-qr-col {
+        display: none !important;
+      }
+    }
+
+    .modal-qr-badge {
+      display: inline-block;
+      background: #DCFCE7;
+      border: 1px solid #86EFAC;
+      color: #166534;
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .modal-qr-frame {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .modal-qr-frame img {
+      width: 136px;
+      height: 136px;
+      border-radius: 10px;
+      border: 1.5px solid #E2E8F0;
+      background: #FFFFFF;
+      padding: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      display: block;
+    }
+
+    .modal-qr-info strong {
+      display: block;
+      font-size: 0.84rem;
+      color: #0F172A;
+      margin-bottom: 4px;
+    }
+
+    .modal-qr-info p {
+      font-size: 0.72rem;
+      color: #64748B;
+      line-height: 1.4;
+      margin: 0;
     }
 
     .qual-modal-close {
@@ -1573,254 +1861,6 @@
     }
 
     
-    /* Video Case Study Container */
-    .video-review-box {
-      background: #0B1120;
-      border: 1.5px solid #1E293B;
-      border-radius: var(--radius-md);
-      padding: 16px;
-      color: #FFFFFF;
-      margin-top: 18px;
-      box-sizing: border-box;
-    }
-
-    .video-player-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: radial-gradient(circle at center, #1E293B 0%, #0B1120 100%);
-      border: 1.5px solid #334155;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-    }
-
-    .video-play-btn {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: var(--wa-green);
-      color: #000000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid #000000;
-      box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .video-player-frame:hover .video-play-btn {
-      transform: scale(1.08);
-      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0.35);
-    }
-
-    .video-tag-pill {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.78);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #F8FAFC;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 9999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .video-duration-pill {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #94A3B8;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 600;
-      padding: 2px 7px;
-      border-radius: 4px;
-    }
-
-    .video-meta-caption {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 0.78rem;
-      color: #94A3B8;
-    }
-
-    /* Revenue Growth Engine Section */
-    .growth-section { scroll-margin-top: 75px; 
-      background: #FFFFFF;
-      border-top: 1px solid #E2E8F0;
-      border-bottom: 1px solid #E2E8F0;
-    }
-
-    .growth-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .growth-card {
-      background: #F8FAFC;
-      border: 1.5px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 20px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.15s ease, border-color 0.15s ease;
-    }
-
-    .growth-card:hover {
-      border-color: #075E54;
-      transform: translateY(-2px);
-    }
-
-    .growth-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
-    .growth-badge {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      padding: 3px 8px;
-      border-radius: 5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .growth-badge-red { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
-    .growth-badge-blue { background: #DBEAFE; color: #1E40AF; border: 1px solid #BFDBFE; }
-    .growth-badge-amber { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
-    .growth-badge-emerald { background: #DCFCE7; color: #065F46; border: 1px solid #BBF7D0; }
-
-    .growth-card-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin: 0 0 6px 0;
-      line-height: 1.3;
-    }
-
-    .growth-card-desc {
-      font-size: 0.86rem;
-      color: #475569;
-      line-height: 1.55;
-      margin: 0 0 12px 0;
-    }
-
-    .growth-card-impact {
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      border-radius: 6px;
-      padding: 6px 10px;
-      font-size: 0.76rem;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      color: #0F172A;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* ROI Section */
-    .roi-section { scroll-margin-top: 75px; 
-      background: #F8FAFC;
-      border-top: 1px solid #E2E8F0;
-      border-bottom: 1px solid #E2E8F0;
-    }
-
-    .roi-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-
-    .roi-card {
-      background: #FFFFFF;
-      border: 1.5px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 16px 14px;
-      text-align: center;
-      box-sizing: border-box;
-    }
-
-    .roi-card-highlight {
-      border: 2px solid #059669;
-      background: #F0FDF4;
-    }
-
-    .roi-card-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: #64748B;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .roi-card-highlight .roi-card-eyebrow {
-      color: #065F46;
-    }
-
-    .roi-card-value {
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: #0F172A;
-      line-height: 1.1;
-      margin-bottom: 4px;
-    }
-
-    .roi-card-highlight .roi-card-value {
-      color: #059669;
-    }
-
-    .roi-card-detail {
-      font-size: 0.75rem;
-      color: #64748B;
-      line-height: 1.4;
-    }
-
-    .roi-card-highlight .roi-card-detail {
-      color: #166534;
-      font-weight: 600;
-    }
-
-    .roi-banner-box {
-      background: #FFFFFF;
-      border: 1.5px dashed #059669;
-      border-radius: 10px;
-      padding: 14px 18px;
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto;
-      font-size: 0.84rem;
-      color: #065F46;
-      font-weight: 700;
-    }
-
     /* Big Closing CTA Section (Directly After Pricing) */
     .final-cta-section {
       background: radial-gradient(circle at 50% 0%, #064E3B 0%, #061A14 55%, #030A08 100%);
@@ -1906,7 +1946,16 @@
     }
 
     .cta-pillar-icon {
-      font-size: 1.3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      border-radius: 8px;
+      margin-bottom: 2px;
+      flex-shrink: 0;
     }
 
     .cta-pillar-item strong {
@@ -2179,8 +2228,10 @@
       font-size: 1.02rem;
       font-weight: 800;
       line-height: 1.2;
-      min-height: 52px;
-      padding: 14px 28px;
+      height: 52px !important;
+      min-height: 52px !important;
+      max-height: 52px !important;
+      padding: 0 28px !important;
       border-radius: 10px;
       border: 2px solid #000000;
       box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
@@ -2606,42 +2657,7 @@
         font-size: 0.72rem;
         padding: 5px 8px;
       }
-      .roi-calc-container {
-        padding: 14px 12px;
-        border-radius: 12px;
-        box-shadow: 4px 4px 0px #0F172A;
-      }
-      .roi-step-row {
-        padding: 10px 10px;
-        gap: 8px;
-      }
-      .roi-step-title {
-        font-size: 0.82rem;
-      }
-      .roi-step-desc {
-        font-size: 0.66rem;
-      }
-      .roi-step-val {
-        font-size: 0.92rem;
-      }
-      .roi-total-banner {
-        padding: 12px 14px;
-        gap: 8px;
-      }
-      .roi-total-title {
-        font-size: 0.92rem;
-      }
-      .roi-total-number {
-        font-size: 1.45rem;
-      }
-      .roi-be-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-      .roi-be-card {
-        padding: 8px 10px;
-      }
-      
+
     /* Integrated ROI Ledger Box */
     .roi-ledger-box {
       background: #0F172A;
@@ -2761,23 +2777,30 @@
 
       /* Medical Safeguard Mobile */
       .medical-guardrail-card {
-        padding: 16px;
-        margin-top: 16px;
+        padding: 12px 14px;
+        margin-top: 14px;
+        border-radius: 10px;
       }
       .guardrail-heading {
-        font-size: 1.05rem;
+        font-size: 0.98rem;
+        margin-bottom: 4px;
       }
       .guardrail-desc {
-        font-size: 0.82rem;
-        line-height: 1.5;
+        font-size: 0.74rem;
+        line-height: 1.4;
+        margin-bottom: 8px;
       }
       .guardrail-chips-row {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 6px;
+        padding-top: 8px;
       }
       .guardrail-chip {
-        width: 100%;
+        width: auto;
+        padding: 4px 8px;
+        font-size: 0.68rem;
         box-sizing: border-box;
       }
 
@@ -2789,52 +2812,52 @@
       .mobile-only { display: flex !important; flex-direction: column; }
 
       .comparison-mobile-list {
-        gap: 12px;
-        margin-bottom: 16px;
+        gap: 8px;
+        margin-bottom: 12px;
       }
 
       .cmp-mobile-card {
         background: #FFFFFF;
         border: 1.5px solid #000000;
-        border-radius: 10px;
-        box-shadow: 3px 3px 0px #000000;
+        border-radius: 8px;
+        box-shadow: 2px 2px 0px #000000;
         overflow: hidden;
       }
 
       .cmp-card-header {
         background: #F1F5F9;
-        padding: 9px 12px;
+        padding: 6px 10px;
         display: flex;
         align-items: center;
-        gap: 8px;
-        border-bottom: 1.5px solid #000000;
+        gap: 6px;
+        border-bottom: 1px solid #E2E8F0;
       }
 
       .cmp-num {
         font-family: var(--font-mono);
-        font-size: 0.72rem;
+        font-size: 0.68rem;
         font-weight: 800;
         color: #64748B;
       }
 
       .cmp-title {
         font-family: var(--font-display);
-        font-size: 0.92rem;
+        font-size: 0.84rem;
         color: #0F172A;
       }
 
       .cmp-card-comparison {
-        padding: 10px 12px;
+        padding: 6px 8px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
       }
 
       .cmp-row {
-        padding: 9px 11px;
-        border-radius: 8px;
-        font-size: 0.82rem;
-        line-height: 1.45;
+        padding: 5px 8px;
+        border-radius: 6px;
+        font-size: 0.73rem;
+        line-height: 1.35;
       }
 
       .cmp-row p {
@@ -2849,10 +2872,10 @@
 
       .cmp-badge-tool {
         font-family: var(--font-mono);
-        font-size: 0.68rem;
+        font-size: 0.62rem;
         font-weight: 700;
         color: #DC2626;
-        margin-bottom: 3px;
+        margin-bottom: 1px;
       }
 
       .cmp-row-boldlabs {
@@ -2863,16 +2886,16 @@
 
       .cmp-badge-boldlabs {
         font-family: var(--font-mono);
-        font-size: 0.68rem;
+        font-size: 0.62rem;
         font-weight: 800;
         color: #16A34A;
-        margin-bottom: 3px;
+        margin-bottom: 1px;
       }
 
       .comparison-context-box {
-        padding: 12px 14px;
-        font-size: 0.78rem;
-        gap: 10px;
+        padding: 10px 12px;
+        font-size: 0.74rem;
+        gap: 8px;
       }
 
 
@@ -2900,38 +2923,41 @@
 
       /* Big Final CTA Mobile Overrides */
       .final-cta-section {
-        padding: 34px 0 75px 0;
+        padding: 26px 0 65px 0;
       }
       .final-cta-heading {
-        font-size: 1.62rem;
+        font-size: 1.45rem;
         line-height: 1.2;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
       .final-cta-subtext {
-        font-size: 0.86rem;
-        line-height: 1.5;
-        margin-bottom: 18px;
+        font-size: 0.82rem;
+        line-height: 1.4;
+        margin-bottom: 14px;
       }
       .final-cta-pillars {
         grid-template-columns: 1fr;
-        gap: 10px;
-        margin-bottom: 22px;
+        gap: 8px;
+        margin-bottom: 18px;
       }
       .cta-pillar-item {
-        padding: 12px 14px;
+        padding: 8px 10px;
         flex-direction: row;
-        align-items: flex-start;
-        gap: 12px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
       }
       .cta-pillar-icon {
-        font-size: 1.2rem;
-        margin-top: 2px;
+        width: 32px;
+        height: 32px;
+        margin-top: 0;
+        margin-bottom: 0;
       }
-      .btn-big-final-cta {
-        width: 100%;
-        padding: 15px 18px;
-        font-size: 0.94rem;
-        box-sizing: border-box;
+      .cta-pillar-item strong {
+        font-size: 0.8rem;
+      }
+      .cta-pillar-item p {
+        font-size: 0.69rem;
       }
       .final-cta-guarantee-line {
         font-size: 0.7rem;
@@ -3057,6 +3083,12 @@
               </div>
             </div>
 
+            <!-- Vernacular Comprehension Pill -->
+            <div class="hero-vernacular-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span><strong>Understands English, Tanglish &amp; Hinglish:</strong> Patients text naturally like <em>&ldquo;Dr eppo irupaanga?&rdquo;</em> or <em>&ldquo;Fees kitna hai?&rdquo;</em></span>
+            </div>
+
             <div class="hero-cta-group">
               <a href="#qual-modal" class="btn-hero-wa trigger-qual-modal" data-cta-location="Hero CTA" id="hero-wa-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
@@ -3087,19 +3119,19 @@
 
                 <div class="wa-body">
                   <div class="wa-msg wa-msg-patient">
-                    Hi! Available slot for Dr. Sameer tomorrow afternoon?
+                    Hi doctor, consultation fee evvalavu? Any slot tomorrow afternoon?
                     <div class="wa-time">10:42 AM <span class="ticks">✓✓</span></div>
                   </div>
                   <div class="wa-msg wa-msg-ai">
-                    Hello! 👋 Yes, Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Which works best?
+                    Hello! 👋 Consultation is ₹500 (includes assessment). Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would 2:30 PM suit you?
                     <div class="wa-time">10:42 AM <span class="ticks">✓✓</span></div>
                   </div>
                   <div class="wa-msg wa-msg-patient">
-                    2:30 PM please!
+                    2:30 PM works!
                     <div class="wa-time">10:43 AM <span class="ticks">✓✓</span></div>
                   </div>
                   <div class="wa-msg wa-msg-ai">
-                    Confirmed for <strong>Tomorrow 2:30 PM</strong>! 📍 We will send a reminder 2 hours prior! 🎉
+                    Confirmed for <strong>Tomorrow 2:30 PM</strong>! 📍 Location &amp; Google Calendar invite sent. We will text a reminder 2 hours prior!
                     <div class="wa-time">10:43 AM <span class="ticks">✓✓</span></div>
                   </div>
                 </div>
@@ -3186,26 +3218,63 @@
             </div>
           </div>
 
-          <!-- Video Case Study Container (Unified directly into proof card) -->
-          <div class="video-review-box" id="dr-sameer-video-case-study">
-            <div class="video-player-frame" id="video-frame-container" title="Watch Dr. Sameer Video Case Study">
-              <span class="video-tag-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-                DOCTOR VIDEO CASE STUDY
-              </span>
-              <div class="video-play-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#000000" stroke="#000000" stroke-width="2" style="margin-left: 2px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          <!-- Verified Clinic Deployment Showcase -->
+          <div class="clinic-deployment-box" id="dr-sameer-clinic-deployment">
+            <div class="deployment-top-bar">
+              <div class="deployment-status-tag">
+                <span class="status-dot-pulse"></span>
+                <span>VERIFIED LIVE CLINIC DEPLOYMENT</span>
               </div>
-              <span class="video-duration-pill">Watch Video (1:45 min)</span>
+              <span class="deployment-rating-badge">
+                ★ 5.0 VERIFIED CLIENT
+              </span>
             </div>
-            <div class="video-meta-caption">
-              <div>
-                <strong style="color: #F8FAFC; font-size: 0.82rem;">Dr. Sameer &middot; Mind Body Recovery</strong>
-                <div style="font-size: 0.72rem; color: #94A3B8;">How WhatsApp automation stopped missed calls and added 20+ monthly patients</div>
+
+            <div class="deployment-media-grid">
+              <div class="deployment-photo-frame">
+                <picture>
+                  <source srcset="/assets/center-consultation.webp" type="image/webp">
+                  <img src="/assets/center-consultation.webp" alt="Mind Body Recovery Clinic Treatment Room" class="deployment-clinic-img" loading="lazy" decoding="async" width="540" height="300">
+                </picture>
+                <div class="deployment-photo-caption">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Mind Body Recovery &middot; Chennai Clinic Center
+                </div>
               </div>
-              <span style="background: #1E293B; border: 1px solid #334155; padding: 2px 7px; border-radius: 4px; font-size: 0.68rem; font-family: var(--font-mono); color: #25D366;">
-                ★ 5.0 VERIFIED
-              </span>
+
+              <div class="deployment-summary-col">
+                <div class="deployment-doctor-header">
+                  <img src="/assets/dr-sameer-portrait.png" alt="Dr. Sameer" class="deployment-doctor-thumb" loading="lazy" decoding="async" width="44" height="44">
+                  <div>
+                    <strong style="color: #F8FAFC; font-size: 0.88rem; display: block;">Dr. Sameer</strong>
+                    <span style="font-size: 0.72rem; color: #94A3B8;">Mind Body Recovery &middot; Verified Partner</span>
+                  </div>
+                </div>
+
+                <div class="deployment-impact-list">
+                  <div class="dep-impact-item">
+                    <span class="dep-impact-check">&#10003;</span>
+                    <div>
+                      <strong>Zero Lost Inquiries:</strong>
+                      <span>All patient messages answered in 3s during busy consultations.</span>
+                    </div>
+                  </div>
+                  <div class="dep-impact-item">
+                    <span class="dep-impact-check">&#10003;</span>
+                    <div>
+                      <strong>Automated Booking:</strong>
+                      <span>Patients pick slots directly without front-desk phone tag.</span>
+                    </div>
+                  </div>
+                  <div class="dep-impact-item">
+                    <span class="dep-impact-check">&#10003;</span>
+                    <div>
+                      <strong>Calendar Sync:</strong>
+                      <span>Confirmed visits appear live in Google Calendar with alerts.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -3257,6 +3326,41 @@
           </p>
         </div>
 
+        <!-- Multi-Specialty Practice Coverage -->
+        <div class="specialty-grid-row">
+          <div class="specialty-card-mini">
+            <div class="specialty-icon-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><path d="M12 2a4 4 0 0 0-4 4v12a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path></svg>
+              <span>Dental Practices</span>
+            </div>
+            <p>Answers root canal &amp; cleaning fees, reserves evening slots after work hours, and texts pre-treatment instructions.</p>
+          </div>
+
+          <div class="specialty-card-mini">
+            <div class="specialty-icon-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              <span>Dermatology &amp; Skin</span>
+            </div>
+            <p>Quotes consultation fees, handles aesthetic package inquiries, and shares Google Maps location pins automatically.</p>
+          </div>
+
+          <div class="specialty-card-mini">
+            <div class="specialty-icon-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              <span>Physiotherapy &amp; Ortho</span>
+            </div>
+            <p>Books multi-session therapy packages, schedules home visits, and keeps chairs full with automated reminders.</p>
+          </div>
+
+          <div class="specialty-card-mini">
+            <div class="specialty-icon-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>General OPD &amp; Pediatrics</span>
+            </div>
+            <p>Provides current doctor consultation hours, token wait estimates, and routine pediatric vaccination schedules.</p>
+          </div>
+        </div>
+
         <div class="growth-grid">
           
           <!-- Pillar 1: In-Chat Appointment Booking -->
@@ -3269,11 +3373,18 @@
               <span class="growth-timer-tag">Instant In-Chat</span>
             </div>
             <h3 class="growth-card-title">Answers Fees &amp; Guides Patients to Choose a Slot</h3>
-            <p class="growth-card-desc">
-              Instead of stiff, robotic paragraphs or dead-end answers, the system immediately answers questions about doctor fees, timings, or treatments, and offers two convenient choices (<em>&ldquo;Would tomorrow morning at 11:30 AM or evening at 5:00 PM suit you better?&rdquo;</em>). Holds a tentative 2-hour slot if they need time to decide.
-            </p>
+            <div class="growth-bullet-list">
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>Natural Tanglish &amp; Hinglish:</strong> Answers fees, doctor timings &amp; treatments in 3 seconds.</span>
+              </div>
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>Presents 2 Definite Slots:</strong> Guides patients to choose a time instead of dropping off.</span>
+              </div>
+            </div>
             <div class="growth-card-impact">
-              <span style="color: #059669;">●</span> Turns casual chat inquiries into confirmed doctor visits without receptionist delays.
+              <span style="color: #059669;">●</span> Turns casual inquiries into confirmed doctor visits without phone tag.
             </div>
           </div>
 
@@ -3287,11 +3398,18 @@
               <span class="growth-timer-tag">2h &amp; Next Morning</span>
             </div>
             <h3 class="growth-card-title">Gentle Check-Ins When Patients Stop Replying</h3>
-            <p class="growth-card-desc">
-              Patients often get busy or distracted while texting. If a patient stops replying after asking about fees or treatments, the system sends a courteous check-in after 2 hours based on what they asked, plus a final reminder next morning before open slots fill up.
-            </p>
+            <div class="growth-bullet-list">
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>2-Hour Smart Follow-up:</strong> Gentle check-in based specifically on what they asked.</span>
+              </div>
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>Morning Slot Urgency:</strong> Offers remaining calendar spots before doctor's OPD starts.</span>
+              </div>
+            </div>
             <div class="growth-card-impact">
-              <span style="color: #D97706;">●</span> Recovers up to 38% of patients who get distracted and would otherwise visit another clinic.
+              <span style="color: #D97706;">●</span> Recovers up to 38% of distracted patients who would otherwise visit another clinic.
             </div>
           </div>
 
@@ -3305,11 +3423,18 @@
               <span class="growth-timer-tag">Within 5 Seconds</span>
             </div>
             <h3 class="growth-card-title">Instant Missed-Call Recovery &amp; Priority Alerts</h3>
-            <p class="growth-card-desc">
-              When your clinic phone is busy or unanswered, callers immediately receive a polite WhatsApp message within 5 seconds with an instant booking link. For high-priority inquiries, your staff receives an immediate alert to call the patient right away.
-            </p>
+            <div class="growth-bullet-list">
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>5-Second WhatsApp Recovery:</strong> Auto-texts busy or missed callers with instant booking options.</span>
+              </div>
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>Staff Priority Notification:</strong> Alerts front desk to call back high-value inquiries in 2 minutes.</span>
+              </div>
+            </div>
             <div class="growth-card-impact">
-              <span style="color: #DC2626;">●</span> Zero lost callers + instant alerts so your team can attend to high-intent patients quickly.
+              <span style="color: #DC2626;">●</span> Zero lost callers — staff can attend to high-intent patients immediately.
             </div>
           </div>
 
@@ -3323,9 +3448,16 @@
               <span class="growth-timer-tag">Automated Sync</span>
             </div>
             <h3 class="growth-card-title">Google Calendar Sync, Timed Reminders &amp; 5-Star Reviews</h3>
-            <p class="growth-card-desc">
-              Every confirmed visit is instantly placed onto your clinic's Google Calendar with clear alerts for both doctor and patient. Timely WhatsApp reminders (24 hours and 2 hours prior) drop no-shows below 3%, and a polite post-visit message collects 5-star Google reviews.
-            </p>
+            <div class="growth-bullet-list">
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>Direct Google Calendar Sync:</strong> Places confirmed visits on doctor's calendar with instant alerts.</span>
+              </div>
+              <div class="growth-bullet-item">
+                <span class="g-bullet-dot">✦</span>
+                <span><strong>24h &amp; 2h WhatsApp Reminders:</strong> Drops no-shows below 3% and collects 5-star Google reviews.</span>
+              </div>
+            </div>
             <div class="growth-card-impact">
               <span style="color: #2563EB;">●</span> Eliminates double-bookings, stops empty doctor chairs, and builds top Google ratings.
             </div>
@@ -3346,8 +3478,7 @@
           <h3 class="guardrail-heading">Strictly Front-Desk Logistics. Never Gives Medical Advice.</h3>
           
           <p class="guardrail-desc">
-            Boldlabs handles front-desk coordination only: consultation fees, doctor availability, appointment booking, clinic directions, and reminder schedules. 
-            <strong>It never prescribes medicine or diagnoses symptoms.</strong> Any clinical or medical inquiry triggers an immediate polite handoff that alerts your doctor and front desk on their priority dashboard.
+            Boldlabs coordinates appointment bookings, fees, timings, and location only. <strong>It never prescribes medicine or diagnoses symptoms</strong> — any clinical inquiry is immediately transferred to clinic staff.
           </p>
 
           <div class="guardrail-chips-row">
@@ -3425,7 +3556,11 @@
             <span class="price-term">/ MONTH</span>
           </div>
 
-          <div style="margin: 4px 0 14px; padding: 6px 10px; background: #F0FDF4; border: 1px solid #86EFAC; border-radius: 6px; font-size: 0.76rem; color: #166534; font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">
+          <div class="pricing-daily-framing">
+            Just &#8377;83/day &mdash; less than the cost of a single cup of tea for your front desk
+          </div>
+
+          <div style="margin: 0 0 14px; padding: 6px 10px; background: #F0FDF4; border: 1px solid #86EFAC; border-radius: 6px; font-size: 0.76rem; color: #166534; font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">
             &#10003; 48-Hour Setup or First Month Free &middot; Cancel Anytime
           </div>
 
@@ -3436,12 +3571,17 @@
             <li><span class="check-icon-circle">&#10003;</span> 3-Way Timed Reminders (24h, 2h &amp; 30m Staff Notice)</li>
             <li><span class="check-icon-circle">&#10003;</span> Automated 5-Star Google Maps Review Collection</li>
             <li><span class="check-icon-circle">&#10003;</span> Live Clinic CRM Dashboard &amp; Multi-Staff Inbox</li>
+            <li><span class="check-icon-circle">&#10003;</span> <strong>Works Alongside Existing Practice:</strong> Compatible with Practo, Clinicea, Google Calendar, or paper registers (Zero migration required)</li>
+            <li><span class="check-icon-circle">&#10003;</span> <strong>Optional UPI Booking Token:</strong> Collect a &#8377;100&ndash;&#8377;500 consultation advance via UPI to eliminate patient no-shows</li>
           </ul>
 
           <!-- The Exact ROI Math Ledger Box -->
           <div class="roi-ledger-box">
             <div class="roi-ledger-header">
-              <span>💰 THE CLINIC ROI MATH</span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.3" style="display:inline-block; vertical-align:middle; margin-right:4px;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                THE CLINIC ROI MATH
+              </span>
               <span class="roi-ledger-pill">8.9x ROI</span>
             </div>
 
@@ -3511,7 +3651,10 @@
             </div>
             <div style="font-size: 1.1rem; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Opening WhatsApp...</div>
             <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; text-align: left;">
-              <div style="font-weight: 800; font-size: 0.84rem; color: #92400E;">👉 Step 2: Tap "SEND" in WhatsApp!</div>
+              <div style="font-weight: 800; font-size: 0.84rem; color: #92400E;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2.5" style="display:inline-block; vertical-align:middle; margin-right:3px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                Step 2: Tap "SEND" in WhatsApp!
+              </div>
               <p style="font-size: 0.76rem; color: #78350F; margin: 2px 0 0 0;">Inquiry pre-filled. Just tap Send so the AI receptionist replies live.</p>
             </div>
             <a id="pricing-wa-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-pricing-cta">
@@ -3520,7 +3663,8 @@
           </div>
 
           <div style="margin-top: 12px; padding: 10px 12px; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 8px; font-size: 0.74rem; color: #475569; text-align: left;">
-            🛡️ <strong>30-Day Positive ROI Guarantee:</strong> If Boldlabs does not help you recover and book appointments in your first 30 days, cancel anytime with zero lock-in contracts or penalties.
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <strong>30-Day Positive ROI Guarantee:</strong> If Boldlabs does not help you recover and book appointments in your first 30 days, cancel anytime with zero lock-in contracts or penalties.
           </div>
 
           <div style="margin-top: 12px; font-size: 0.78rem; color: #64748B;">
@@ -3647,11 +3791,11 @@
             <div class="cmp-card-comparison">
               <div class="cmp-row cmp-row-generic">
                 <div class="cmp-badge-tool">&#10005; Generic WhatsApp software</div>
-                <p>A monthly subscription, plus WhatsApp message charges, with add-ons on higher plans</p>
+                <p>&#8377;1,000&ndash;&#8377;5,000/mo + separate add-on charges</p>
               </div>
               <div class="cmp-row cmp-row-boldlabs">
                 <div class="cmp-badge-boldlabs">&#10003; Boldlabs Clinic System</div>
-                <p><strong>&#8377;2,499 per month</strong> for the complete system</p>
+                <p><strong>&#8377;2,499/month</strong> all-inclusive &middot; Zero setup fee</p>
               </div>
             </div>
           </div>
@@ -3664,11 +3808,11 @@
             <div class="cmp-card-comparison">
               <div class="cmp-row cmp-row-generic">
                 <div class="cmp-badge-tool">&#10005; Generic WhatsApp software</div>
-                <p>A blank screen. You design all messages and flows yourself</p>
+                <p>A blank screen. You design and build all flows yourself</p>
               </div>
               <div class="cmp-row cmp-row-boldlabs">
                 <div class="cmp-badge-boldlabs">&#10003; Boldlabs Clinic System</div>
-                <p><strong>Instant replies, booking, confirmations, reminders and review requests</strong>, ready from day one</p>
+                <p><strong>Instant booking, reminders &amp; review collection</strong> ready from Day 1</p>
               </div>
             </div>
           </div>
@@ -3681,11 +3825,11 @@
             <div class="cmp-card-comparison">
               <div class="cmp-row cmp-row-generic">
                 <div class="cmp-badge-tool">&#10005; Generic WhatsApp software</div>
-                <p>Do-it-yourself. You connect the number and handle technical verifications alone</p>
+                <p>Do-it-yourself technical setup &amp; difficult verifications</p>
               </div>
               <div class="cmp-row cmp-row-boldlabs">
                 <div class="cmp-badge-boldlabs">&#10003; Boldlabs Clinic System</div>
-                <p><strong>We set it up with you.</strong> You share basic clinic details, we do the rest</p>
+                <p><strong>Done-for-you in 48 hours</strong> &middot; We handle everything</p>
               </div>
             </div>
           </div>
@@ -3698,11 +3842,11 @@
             <div class="cmp-card-comparison">
               <div class="cmp-row cmp-row-generic">
                 <div class="cmp-badge-tool">&#10005; Generic WhatsApp software</div>
-                <p>Often requires a separate software subscription, or an expensive higher tier</p>
+                <p>Requires an expensive higher plan or separate CRM tool</p>
               </div>
               <div class="cmp-row cmp-row-boldlabs">
                 <div class="cmp-badge-boldlabs">&#10003; Boldlabs Clinic System</div>
-                <p><strong>A dedicated clinic patient dashboard is included</strong></p>
+                <p><strong>Live multi-staff clinic dashboard included</strong></p>
               </div>
             </div>
           </div>
@@ -3715,11 +3859,11 @@
             <div class="cmp-card-comparison">
               <div class="cmp-row cmp-row-generic">
                 <div class="cmp-badge-tool">&#10005; Generic WhatsApp software</div>
-                <p>Slow email support tickets, with dedicated help only on expensive enterprise plans</p>
+                <p>Slow email tickets with generic automated replies</p>
               </div>
               <div class="cmp-row cmp-row-boldlabs">
                 <div class="cmp-badge-boldlabs">&#10003; Boldlabs Clinic System</div>
-                <p><strong>Direct help from the team that built it</strong></p>
+                <p><strong>Direct WhatsApp support</strong> from the founding team</p>
               </div>
             </div>
           </div>
@@ -3728,7 +3872,9 @@
 
         <!-- Context Callout Box -->
         <div class="comparison-context-box">
-          <div class="cmp-context-icon">&#128161;</div>
+          <div class="cmp-context-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
+          </div>
           <div class="cmp-context-text">
             <strong>For context:</strong> Generic WhatsApp software costs roughly <strong>&#8377;1,000 to &#8377;5,000 a month</strong> just for basic software access, and leaves you to build the clinic messages, calendar connections, and reminders yourself.
           </div>
@@ -3753,32 +3899,38 @@
           </h2>
 
           <p class="final-cta-subtext">
-            While your staff attend to walk-in patients or sleep at midnight, prospective patients are texting on WhatsApp right now. In just 48 hours, Boldlabs turns every incoming message and missed phone call into a confirmed doctor appointment.
+            In just 48 hours, Boldlabs turns every incoming message and missed phone call into a confirmed doctor appointment with zero receptionist delays.
           </p>
 
           <!-- 3 Value Pillars -->
           <div class="final-cta-pillars">
             <div class="cta-pillar-item">
-              <span class="cta-pillar-icon">⚡</span>
+              <span class="cta-pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </span>
               <div>
                 <strong>3-Second Replies 24/7</strong>
-                <p>Answers fees, doctor timings &amp; location even at 11:30 PM on Sunday.</p>
+                <p>Answers fees, timings &amp; location even at midnight.</p>
               </div>
             </div>
 
             <div class="cta-pillar-item">
-              <span class="cta-pillar-icon">📞</span>
+              <span class="cta-pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </span>
               <div>
                 <strong>100% Missed-Call Recovery</strong>
-                <p>Auto-fires an apology WhatsApp with booking buttons within 5 seconds.</p>
+                <p>Auto-texts booking options within 5 seconds.</p>
               </div>
             </div>
 
             <div class="cta-pillar-item">
-              <span class="cta-pillar-icon">💰</span>
+              <span class="cta-pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 6v2"></path><path d="M12 16v2"></path></svg>
+              </span>
               <div>
                 <strong>Guaranteed Positive ROI</strong>
-                <p>Just 1 recovered appointment pays your entire &#8377;2,499/mo fee.</p>
+                <p>Just 1 recovered booking covers your monthly fee.</p>
               </div>
             </div>
           </div>
@@ -4024,48 +4176,70 @@
 
       <!-- Modal Form State -->
       <div id="modal-form-state">
-        <div style="margin-bottom: 8px;">
-          <span class="pricing-badge-top" style="font-size: 0.65rem; padding: 3px 8px;">LIVE WHATSAPP DEMO</span>
-        </div>
-
-        <h3 id="modal-qual-title" class="modal-heading" style="font-size: 1.15rem; margin: 0 0 4px 0;">Test The AI Receptionist On WhatsApp</h3>
-        <p class="modal-subtext" style="font-size: 0.76rem; margin-bottom: 12px;">See how the AI answers patient queries and confirms slots on your phone in real time.</p>
-
-        <form id="modal-qual-form">
-          <div class="qual-input-group">
-            <label for="modal-clinic-name">Clinic Name &amp; City *</label>
-            <input type="text" id="modal-clinic-name" placeholder="e.g. City Dental Care, Chennai" class="qual-input" autocomplete="organization" required>
-            <div class="qual-error-text" id="modal-clinic-error">Please enter your clinic name and city</div>
-          </div>
-
-          <div class="qual-input-group">
-            <label for="modal-whatsapp-phone">Doctor / Clinic WhatsApp Number *</label>
-            <div class="phone-input-container" id="modal-phone-container">
-              <span class="phone-prefix-tag">🇮🇳 +91</span>
-              <input type="tel" id="modal-whatsapp-phone" placeholder="98765 43210" class="phone-input-clean" autocomplete="tel" maxlength="15" required>
+        <div class="modal-desktop-split">
+          
+          <!-- Left Column: Fast 2-Field Form -->
+          <div class="modal-form-col">
+            <div style="margin-bottom: 8px;">
+              <span class="pricing-badge-top" style="font-size: 0.65rem; padding: 3px 8px;">LIVE WHATSAPP DEMO</span>
             </div>
-            <div class="qual-error-text" id="modal-phone-error">Please enter a valid 10-digit WhatsApp number</div>
-              <div class="privacy-micro-seal">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                <span>100% Data Confidentiality: Used solely to send your interactive demo. Zero sales spam or unsolicited phone calls.</span>
+
+            <h3 id="modal-qual-title" class="modal-heading" style="font-size: 1.15rem; margin: 0 0 4px 0;">Test The AI Receptionist On WhatsApp</h3>
+            <p class="modal-subtext" style="font-size: 0.76rem; margin-bottom: 12px;">See how the AI answers patient queries and confirms slots on your phone in real time.</p>
+
+            <form id="modal-qual-form">
+              <div class="qual-input-group">
+                <label for="modal-clinic-name">Clinic Name &amp; City *</label>
+                <input type="text" id="modal-clinic-name" placeholder="e.g. City Dental Care, Chennai" class="qual-input" autocomplete="organization" required>
+                <div class="qual-error-text" id="modal-clinic-error">Please enter your clinic name and city</div>
               </div>
+
+              <div class="qual-input-group">
+                <label for="modal-whatsapp-phone">Doctor / Clinic WhatsApp Number *</label>
+                <div class="phone-input-container" id="modal-phone-container">
+                  <span class="phone-prefix-tag">🇮🇳 +91</span>
+                  <input type="tel" id="modal-whatsapp-phone" placeholder="98765 43210" class="phone-input-clean" autocomplete="tel" maxlength="15" required>
+                </div>
+                <div class="qual-error-text" id="modal-phone-error">Please enter a valid 10-digit WhatsApp number</div>
+                <div class="privacy-micro-seal">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>100% Data Confidentiality: Used solely to send your interactive demo. Zero sales spam or unsolicited phone calls.</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 10px;">
+                Try It On Your Own Number &#8594;
+              </button>
+              <p style="margin: 6px 0 0 0; font-size: 0.68rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens in WhatsApp &middot; Zero spam &middot; Instant reply</p>
+            </form>
           </div>
 
-          <button type="submit" class="btn-pricing-cta" id="modal-submit-btn" style="margin-top: 10px;">
-            Try It On Your Own Number &#8594;
-          </button>
-          <p style="margin: 6px 0 0 0; font-size: 0.68rem; color: #64748B; font-family: var(--font-mono); text-align: center;">Opens in WhatsApp &middot; Zero spam &middot; Instant reply</p>
-        </form>
+          <!-- Right Column: Instant Phone QR Code (Desktop Only) -->
+          <div class="modal-qr-col">
+            <span class="modal-qr-badge">OR SCAN WITH PHONE</span>
+            <div class="modal-qr-frame">
+              <img src="assets/whatsapp-demo-qr.svg" alt="Scan QR code to test Clinic WhatsApp AI" width="136" height="136" loading="lazy">
+            </div>
+            <div class="modal-qr-info">
+              <strong>Point Camera to Test</strong>
+              <p>Opens directly on your mobile WhatsApp with an interactive clinic test bot.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <!-- Modal Transition State -->
       <div id="modal-transition-state" style="display: none; text-align: center; padding: 8px 2px;">
         <div style="width: 48px; height: 48px; background: #DCFCE7; border: 2px solid #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;" class="pulse-ring">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         </div>
         <div style="font-size: 1.15rem; font-weight: 800; color: #0F172A; margin-bottom: 4px;">Opening WhatsApp...</div>
         <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; text-align: left;">
-          <div style="font-weight: 800; font-size: 0.84rem; color: #92400E;">👉 Step 2 of 2: Tap "SEND" in WhatsApp!</div>
+          <div style="font-weight: 800; font-size: 0.84rem; color: #92400E;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2.5" style="display:inline-block; vertical-align:middle; margin-right:3px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            Step 2 of 2: Tap "SEND" in WhatsApp!
+          </div>
           <p style="font-size: 0.76rem; color: #78350F; margin: 3px 0 0 0; line-height: 1.4;">Inquiry is pre-filled. Just tap <strong>Send</strong> in WhatsApp so the AI replies live in 3 seconds.</p>
         </div>
         <a id="modal-wa-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-pricing-cta">
