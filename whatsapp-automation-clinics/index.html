@@ -273,8 +273,8 @@
 
     /* Hero Section */
     .hero-wrapper {
-      padding-top: 76px;
-      padding-bottom: 28px;
+      padding-top: 106px;
+      padding-bottom: 42px;
       background: radial-gradient(circle at top right, #F0FDF4 0%, #FFFFFF 65%);
     }
 
@@ -282,7 +282,7 @@
       display: grid;
       grid-template-columns: 1fr 350px;
       gap: 36px;
-      max-width: 1000px;
+      max-width: 1060px;
       margin: 0 auto;
       align-items: center;
     }
@@ -305,13 +305,14 @@
     }
 
     .hero-headline {
-      font-size: clamp(2.1rem, 2.7vw, 2.45rem);
+      font-size: clamp(2.2rem, 2.8vw, 2.6rem);
       font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.16;
+      letter-spacing: -0.035em;
+      line-height: 1.14;
       color: #0F172A;
       margin: 0 0 14px 0;
       max-width: 100%;
+      -webkit-text-stroke: 0.35px currentColor;
     }
 
     .hero-headline-accent {
@@ -540,12 +541,13 @@
     }
 
     .section-heading {
-      font-size: clamp(1.75rem, 3vw, 2.3rem);
+      font-size: clamp(1.85rem, 3.2vw, 2.45rem);
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.035em;
       line-height: 1.2;
       color: #0F172A;
       margin: 0 0 10px 0;
+      -webkit-text-stroke: 0.35px currentColor;
     }
 
     .section-subheading {
@@ -1862,12 +1864,13 @@
     }
 
     .final-cta-heading {
-      font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.035em;
       line-height: 1.15;
       color: #FFFFFF;
       margin: 0 0 16px 0;
+      -webkit-text-stroke: 0.35px currentColor;
     }
 
     .cta-accent-text {
@@ -2252,10 +2255,10 @@
 
     /* Hero Institutional Trust Bar */
     .hero-trust-bar {
-      margin-top: 32px;
+      margin-top: 36px;
       margin-left: auto;
       margin-right: auto;
-      max-width: 1000px;
+      max-width: 1060px;
       padding: 14px 20px;
       background: #F8FAFC;
       border: 1.5px solid #E2E8F0;
@@ -2391,6 +2394,10 @@
     }
 
     @media (max-width: 991px) and (min-width: 769px) {
+      .hero-wrapper {
+        padding-top: 96px;
+        padding-bottom: 34px;
+      }
       .hero-grid {
         grid-template-columns: 1fr 310px;
         gap: 24px;
@@ -2417,8 +2424,8 @@
         width: calc(100% - 20px);
       }
       .hero-wrapper {
-        padding-top: 68px;
-        padding-bottom: 20px;
+        padding-top: 76px;
+        padding-bottom: 24px;
       }
       .hero-grid {
         grid-template-columns: 1fr;
@@ -2430,9 +2437,11 @@
         margin-bottom: 8px;
       }
       .hero-headline {
-        font-size: 1.85rem;
+        font-size: 2.05rem;
         line-height: 1.18;
-        margin-bottom: 10px;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
+        -webkit-text-stroke: 0.3px currentColor;
       }
       .hero-description {
         font-size: 0.9rem;
@@ -2481,8 +2490,11 @@
         margin-bottom: 16px;
       }
       .section-heading {
-        font-size: 1.42rem;
+        font-size: 1.48rem;
+        font-weight: 800;
         line-height: 1.22;
+        letter-spacing: -0.03em;
+        -webkit-text-stroke: 0.3px currentColor;
       }
       .section-subheading {
         font-size: 0.86rem;
@@ -2917,9 +2929,12 @@
         padding: 26px 0 65px 0;
       }
       .final-cta-heading {
-        font-size: 1.45rem;
+        font-size: 1.55rem;
+        font-weight: 800;
         line-height: 1.2;
+        letter-spacing: -0.03em;
         margin-bottom: 10px;
+        -webkit-text-stroke: 0.3px currentColor;
       }
       .final-cta-subtext {
         font-size: 0.82rem;
