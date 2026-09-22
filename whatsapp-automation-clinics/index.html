@@ -861,46 +861,6 @@
       text-align: left;
     }
 
-    /* Specialty Coverage Grid */
-    .specialty-grid-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 20px;
-      margin-bottom: 24px;
-    }
-
-    .specialty-card-mini {
-      background: #FFFFFF;
-      border: 1.5px solid #E2E8F0;
-      border-radius: 10px;
-      padding: 14px;
-      box-sizing: border-box;
-      transition: transform 0.15s ease, border-color 0.15s ease;
-    }
-
-    .specialty-card-mini:hover {
-      border-color: #059669;
-      transform: translateY(-2px);
-    }
-
-    .specialty-icon-title {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.88rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 6px;
-    }
-
-    .specialty-card-mini p {
-      font-size: 0.74rem;
-      color: #475569;
-      line-height: 1.4;
-      margin: 0;
-    }
-
     /* Scannable Growth Bullet List */
     .growth-bullet-list {
       display: flex;
@@ -930,34 +890,6 @@
     }
 
     @media (max-width: 768px) {
-      .specialty-grid-row {
-        display: flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        gap: 8px;
-        margin-top: 12px;
-        margin-bottom: 14px;
-        padding-bottom: 4px;
-        scrollbar-width: none;
-      }
-      .specialty-grid-row::-webkit-scrollbar {
-        display: none;
-      }
-      .specialty-card-mini {
-        flex: 0 0 215px;
-        scroll-snap-align: start;
-        padding: 10px 12px;
-        border-radius: 8px;
-      }
-      .specialty-icon-title {
-        font-size: 0.78rem;
-        margin-bottom: 3px;
-      }
-      .specialty-card-mini p {
-        font-size: 0.69rem;
-        line-height: 1.35;
-      }
       .growth-bullet-item {
         font-size: 0.76rem;
         line-height: 1.35;
@@ -3324,41 +3256,6 @@
           <p class="section-subheading">
             Most chatbots only answer basic questions and let patients leave. Boldlabs actively guides patients to choose a convenient time, follows up if they get distracted, and keeps your doctor calendar full.
           </p>
-        </div>
-
-        <!-- Multi-Specialty Practice Coverage -->
-        <div class="specialty-grid-row">
-          <div class="specialty-card-mini">
-            <div class="specialty-icon-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><path d="M12 2a4 4 0 0 0-4 4v12a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path></svg>
-              <span>Dental Practices</span>
-            </div>
-            <p>Answers root canal &amp; cleaning fees, reserves evening slots after work hours, and texts pre-treatment instructions.</p>
-          </div>
-
-          <div class="specialty-card-mini">
-            <div class="specialty-icon-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-              <span>Dermatology &amp; Skin</span>
-            </div>
-            <p>Quotes consultation fees, handles aesthetic package inquiries, and shares Google Maps location pins automatically.</p>
-          </div>
-
-          <div class="specialty-card-mini">
-            <div class="specialty-icon-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-              <span>Physiotherapy &amp; Ortho</span>
-            </div>
-            <p>Books multi-session therapy packages, schedules home visits, and keeps chairs full with automated reminders.</p>
-          </div>
-
-          <div class="specialty-card-mini">
-            <div class="specialty-icon-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-              <span>General OPD &amp; Pediatrics</span>
-            </div>
-            <p>Provides current doctor consultation hours, token wait estimates, and routine pediatric vaccination schedules.</p>
-          </div>
         </div>
 
         <div class="growth-grid">
