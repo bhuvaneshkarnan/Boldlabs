@@ -273,15 +273,17 @@
 
     /* Hero Section */
     .hero-wrapper {
-      padding-top: 84px;
-      padding-bottom: 34px;
+      padding-top: 76px;
+      padding-bottom: 28px;
       background: radial-gradient(circle at top right, #F0FDF4 0%, #FFFFFF 65%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
+      grid-template-columns: 1fr 350px;
       gap: 36px;
+      max-width: 1000px;
+      margin: 0 auto;
       align-items: center;
     }
 
@@ -303,12 +305,13 @@
     }
 
     .hero-headline {
-      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-size: clamp(2.1rem, 2.7vw, 2.45rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.15;
+      line-height: 1.16;
       color: #0F172A;
       margin: 0 0 14px 0;
+      max-width: 100%;
     }
 
     .hero-headline-accent {
@@ -321,7 +324,7 @@
       line-height: 1.5;
       color: #475569;
       margin-bottom: 18px;
-      max-width: 520px;
+      max-width: 580px;
     }
 
     .hero-cta-group {
@@ -334,8 +337,9 @@
     .hero-outcomes-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px 12px;
+      gap: 8px 16px;
       margin-bottom: 14px;
+      max-width: 580px;
     }
 
     .outcome-item {
@@ -410,7 +414,8 @@
       border-radius: 30px;
       box-shadow: 8px 12px 0px #0F172A;
       padding: 12px;
-      max-width: 320px;
+      width: 100%;
+      max-width: 350px;
       margin: 0 auto;
       box-sizing: border-box;
     }
@@ -877,6 +882,8 @@
       margin-bottom: 14px;
       line-height: 1.35;
       text-align: left;
+      max-width: 580px;
+      box-sizing: border-box;
     }
 
     /* Scannable Growth Bullet List */
@@ -2245,7 +2252,10 @@
 
     /* Hero Institutional Trust Bar */
     .hero-trust-bar {
-      margin-top: 36px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px;
       padding: 14px 20px;
       background: #F8FAFC;
       border: 1.5px solid #E2E8F0;
@@ -2254,6 +2264,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       align-items: center;
+      box-sizing: border-box;
     }
 
     .trust-bar-item {
@@ -2377,6 +2388,17 @@
 
     .privacy-micro-seal svg {
       flex-shrink: 0;
+    }
+
+    @media (max-width: 991px) and (min-width: 769px) {
+      .hero-grid {
+        grid-template-columns: 1fr 310px;
+        gap: 24px;
+        max-width: 740px;
+      }
+      .phone-mockup-card {
+        max-width: 310px;
+      }
     }
 
     /* ============================================================
