@@ -153,6 +153,12 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1041283338810010');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_name: 'Clinic WhatsApp Automation',
+      content_category: 'Healthcare Software',
+      value: 2499.00,
+      currency: 'INR'
+    });
   </script>
   <noscript>
     <img height="1" width="1" style="display:none" 
@@ -4525,6 +4531,9 @@
 
         // 3. Meta Pixel Lead event
         if (typeof window.fbq === 'function') {
+          try {
+            window.fbq('set', 'userData', { ph: '+91' + cleanPhone });
+          } catch(e) {}
           window.fbq('track', 'Lead', {
             content_name: 'Clinic Demo Request',
             clinic_name: clinicName,
