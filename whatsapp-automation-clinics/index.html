@@ -713,6 +713,204 @@
       color: #64748B;
     }
 
+    /* Video Review Showcase */
+    .video-review-box {
+      background: #0B1120;
+      border: 1.5px solid #1E293B;
+      border-radius: var(--radius-md);
+      padding: 18px;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+
+    .video-review-header {
+      margin-bottom: 12px;
+    }
+
+    .video-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .video-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      color: #4ADE80;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+    }
+
+    .video-duration-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #1E293B;
+      border: 1px solid #334155;
+      color: #F8FAFC;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 9999px;
+    }
+
+    .video-review-headline {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #F8FAFC;
+      line-height: 1.3;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .video-review-guidance {
+      font-size: 0.82rem;
+      color: #94A3B8;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .video-embed-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      border: 1px solid #1E293B;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .video-facade-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .video-embed-wrapper:hover .video-facade-img {
+      transform: scale(1.02);
+      filter: brightness(1.05);
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(11, 17, 32, 0.35);
+      z-index: 2;
+      transition: background 0.25s ease;
+    }
+
+    .video-embed-wrapper:hover .video-play-overlay {
+      background: rgba(11, 17, 32, 0.2);
+    }
+
+    .video-play-btn-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #FF0000;
+      box-shadow: 0 4px 24px rgba(255, 0, 0, 0.5), 0 0 0 4px rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .video-embed-wrapper:hover .video-play-btn-circle {
+      transform: scale(1.08);
+      box-shadow: 0 6px 30px rgba(255, 0, 0, 0.7), 0 0 0 6px rgba(255, 255, 255, 0.35);
+    }
+
+    .video-play-hint {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      letter-spacing: 0.02em;
+    }
+
+    .video-embed-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .video-appreciation-bar {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .appreciation-icon-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #22C55E;
+    }
+
+    .appreciation-text-box {
+      flex: 1;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: #CBD5E1;
+    }
+
+    .appreciation-title {
+      display: block;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-bottom: 2px;
+      font-size: 0.84rem;
+    }
+
     /* Verified Clinic Deployment Showcase */
     .clinic-deployment-box {
       background: #0B1120;
@@ -2602,13 +2800,40 @@
         flex-shrink: 0;
       }
       .video-review-box {
-        padding: 10px;
-        margin-bottom: 10px;
+        padding: 12px;
+        margin-bottom: 12px;
         border-radius: 10px;
       }
-      .video-play-btn {
-        width: 44px;
-        height: 44px;
+      .video-review-headline {
+        font-size: 0.98rem;
+        line-height: 1.35;
+      }
+      .video-review-guidance {
+        font-size: 0.76rem;
+        line-height: 1.45;
+      }
+      .video-play-btn-circle {
+        width: 52px;
+        height: 52px;
+      }
+      .video-play-hint {
+        font-size: 0.7rem;
+        padding: 4px 11px;
+      }
+      .video-appreciation-bar {
+        padding: 10px;
+        gap: 9px;
+      }
+      .appreciation-icon-box {
+        width: 26px;
+        height: 26px;
+      }
+      .appreciation-text-box {
+        font-size: 0.73rem;
+        line-height: 1.4;
+      }
+      .appreciation-title {
+        font-size: 0.78rem;
       }
       .quote-body {
         font-size: 0.82rem;
@@ -3195,7 +3420,7 @@
           <span class="section-eyebrow">Real Clinic Proof</span>
           <h2 class="section-heading">Active With Indian Doctors</h2>
           <p class="section-subheading">
-            See how Dr. Sameer at Mind Body Recovery added 20+ monthly appointments with WhatsApp AI.
+            Watch Dr. Sameer's 8 minute client video review and see how Mind Body Recovery added 20+ monthly appointments with WhatsApp AI.
           </p>
         </div>
 
@@ -3226,6 +3451,65 @@
                 +20 Bookings / Mo
               </span>
               <span class="metric-caption">via WhatsApp AI</span>
+            </div>
+          </div>
+
+          <!-- Video Review Showcase: Dr. Sameer 8-Minute Clinic Walkthrough -->
+          <div class="video-review-box" id="dr-sameer-video-review">
+            <div class="video-review-header">
+              <div class="video-badge-row">
+                <div class="video-badge-pill">
+                  <span class="status-dot-pulse"></span>
+                  <span>VERIFIED CLIENT VIDEO REVIEW</span>
+                </div>
+                <div class="video-duration-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Close To 8 Mins</span>
+                </div>
+              </div>
+              <h3 class="video-review-headline">Watch Dr. Sameer Share His Real Clinic Experience</h3>
+              <p class="video-review-guidance">
+                Please take the time to watch this full review. It plays right here on this page without leaving the website so you can see how his clinic automated patient bookings and saved front desk time.
+              </p>
+            </div>
+
+            <!-- Video Player: Plays Directly In Page (No external redirect) -->
+            <div class="video-embed-wrapper" id="dr-sameer-video-player" onclick="playDoctorVideo(this)" onkeydown="if(event.key==='Enter'||event.key===' '){playDoctorVideo(this);event.preventDefault();}" role="button" tabindex="0" aria-label="Play Dr. Sameer Client Review Video">
+              <picture>
+                <source srcset="https://i.ytimg.com/vi/_SAj8Nluxm0/maxresdefault.jpg" type="image/jpeg">
+                <img src="https://i.ytimg.com/vi/_SAj8Nluxm0/hqdefault.jpg" alt="Dr. Sameer Client Review and Clinic Automation Case Study" class="video-facade-img" loading="lazy" decoding="async" width="1280" height="720">
+              </picture>
+              <div class="video-play-overlay">
+                <div class="video-play-btn-circle">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                  </svg>
+                </div>
+                <span class="video-play-hint">Watch 8 Min Video Review</span>
+              </div>
+              <noscript>
+                <iframe 
+                  src="https://www.youtube.com/embed/_SAj8Nluxm0?rel=0&amp;modestbranding=1&amp;playsinline=1" 
+                  title="Dr. Sameer Client Review and Clinic Automation Case Study" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen 
+                  class="video-embed-iframe">
+                </iframe>
+              </noscript>
+            </div>
+
+            <!-- Doctor Appreciation Note -->
+            <div class="video-appreciation-bar">
+              <div class="appreciation-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <div class="appreciation-text-box">
+                <span class="appreciation-title">Heartfelt thanks to Dr. Sameer</span>
+                A warm thank you to Dr. Sameer and the team at Mind Body Recovery for taking time out of their busy practice to record this honest 8 minute review and share their clinic workflow.
+              </div>
             </div>
           </div>
 
@@ -3274,7 +3558,7 @@
                     <span class="dep-impact-check">&#10003;</span>
                     <div>
                       <strong>Automated Booking:</strong>
-                      <span>Patients pick slots directly without front-desk phone tag.</span>
+                      <span>Patients pick slots directly without front desk phone tag.</span>
                     </div>
                   </div>
                   <div class="dep-impact-item">
@@ -3291,7 +3575,7 @@
 
           <!-- Doctor Statement (Concise, single clear takeaway) -->
           <p class="quote-body">
-            &ldquo;Before automating WhatsApp, inquiries during busy clinic hours or after-hours sat unread for hours. With Boldlabs, every inquiry is answered in 3 seconds, consultation slots are confirmed automatically, and reminders keep our chairs full.&rdquo;
+            &ldquo;Before automating WhatsApp, inquiries during busy clinic hours or late evenings sat unread for hours. With Boldlabs, every inquiry is answered in 3 seconds, consultation slots are confirmed automatically, and reminders keep our chairs full.&rdquo;
           </p>
 
           <!-- 3-Chip Outcome Row -->
@@ -3313,7 +3597,7 @@
           <!-- Footer Row with Specialty Badges & CTA -->
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
             <span style="font-size: 0.72rem; color: #475569; font-family: var(--font-mono);">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Dental, Physiotherapy, Derma &amp; Multi-Specialty
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Dental, Physiotherapy, Derma &amp; Multi Specialty
             </span>
             <a href="#qual-modal" class="pill-btn trigger-qual-modal" data-cta-location="Testimonial CTA" style="font-size: 0.74rem; padding: 6px 12px;">
               Try the AI Receptionist Live &#8594;
@@ -4604,6 +4888,17 @@
           });
         }
       }
+
+      window.playDoctorVideo = function(container) {
+        if (!container) return;
+        container.innerHTML = '<iframe src="https://www.youtube.com/embed/_SAj8Nluxm0?autoplay=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="Dr. Sameer Client Review and Clinic Automation Case Study" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-embed-iframe"></iframe>';
+        container.removeAttribute('onclick');
+        container.removeAttribute('onkeydown');
+        container.removeAttribute('role');
+        container.removeAttribute('tabindex');
+        container.removeAttribute('aria-label');
+        container.style.cursor = 'default';
+      };
     });
   </script>
 
