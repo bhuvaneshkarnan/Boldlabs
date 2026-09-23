@@ -4529,10 +4529,10 @@
           console.warn("Background alert webhook failed:", err);
         }
 
-        // 3. Meta Pixel Lead event
+        // 3. Meta Pixel Lead event with Manual Advanced Matching (EMQ boost)
         if (typeof window.fbq === 'function') {
           try {
-            window.fbq('set', 'userData', { ph: '+91' + cleanPhone });
+            window.fbq('init', '1041283338810010', { ph: '+91' + cleanPhone });
           } catch(e) {}
           window.fbq('track', 'Lead', {
             content_name: 'Clinic Demo Request',
@@ -4551,6 +4551,14 @@
           window.fbq('trackCustom', 'demo_form_submit', { clinic_name: clinicName });
           window.fbq('trackCustom', 'qualified_clinic_lead', { clinic_name: clinicName });
         }
+
+        // Direct Beacon Fail-Safe with keepalive: guarantees delivery even during page transitions
+        try {
+          const metaLeadBeacon = "https://www.facebook.com/tr/?id=1041283338810010&ev=Lead&cd[value]=2499.00&cd[currency]=INR&cd[content_name]=Clinic+Demo+Request&ud[ph]=%2B91" + cleanPhone + "&noscript=1";
+          const metaRegBeacon = "https://www.facebook.com/tr/?id=1041283338810010&ev=CompleteRegistration&cd[value]=2499.00&cd[currency]=INR&cd[content_name]=Clinic+WhatsApp+Qualifying+Form&ud[ph]=%2B91" + cleanPhone + "&noscript=1";
+          fetch(metaLeadBeacon, { method: "GET", mode: "no-cors", keepalive: true });
+          fetch(metaRegBeacon, { method: "GET", mode: "no-cors", keepalive: true });
+        } catch(be) {}
 
         // 4. GA4 Lead event
         if (typeof window.gtag === 'function') {
@@ -4606,7 +4614,7 @@
           if (modalTransitionState) modalTransitionState.style.display = 'block';
           if (modalWaRedirectBtn) modalWaRedirectBtn.href = waUrl;
 
-          setTimeout(() => { window.location.href = waUrl; }, 420);
+          setTimeout(() => { window.location.href = waUrl; }, 1200);
         });
 
         if (modalClinicInput) {
@@ -4668,7 +4676,7 @@
           if (pricingTransitionState) pricingTransitionState.style.display = 'block';
           if (pricingWaRedirectBtn) pricingWaRedirectBtn.href = waUrl;
 
-          setTimeout(() => { window.location.href = waUrl; }, 420);
+          setTimeout(() => { window.location.href = waUrl; }, 1200);
         });
 
         if (pricingClinicInput) {
