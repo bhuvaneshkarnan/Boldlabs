@@ -491,6 +491,14 @@
       border-radius: 50%;
       background: #25D366;
       display: inline-block;
+      box-shadow: 0 0 0 rgba(37, 211, 102, 0.5);
+      animation: pulseGreenDot 2s infinite;
+    }
+
+    @keyframes pulseGreenDot {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
     .wa-body {
@@ -498,6 +506,9 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      min-height: 355px;
+      box-sizing: border-box;
+      position: relative;
     }
 
     .wa-msg {
@@ -507,6 +518,61 @@
       font-size: 0.76rem;
       line-height: 1.38;
       box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    /* Live WhatsApp Chat Animation Styles */
+    .wa-chat-animated .wa-msg {
+      display: none;
+      opacity: 0;
+      transform: translateY(8px) scale(0.97);
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .wa-chat-animated .wa-msg.msg-visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .wa-typing-bubble {
+      background: #DCF8C6;
+      align-self: flex-end;
+      border-radius: 10px;
+      border-bottom-right-radius: 2px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+      animation: waFadeIn 0.2s ease forwards;
+    }
+
+    .typing-dot {
+      width: 5px;
+      height: 5px;
+      background: #059669;
+      border-radius: 50%;
+      animation: waBounce 1.2s infinite ease-in-out;
+    }
+
+    .typing-dot:nth-child(1) { animation-delay: 0s; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes waBounce {
+      0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.35;
+      }
+      30% {
+        transform: translateY(-4px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes waFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .wa-msg-patient {
@@ -4820,6 +4886,113 @@
             navBarEl.style.transform = 'translateX(-50%)';
           }
         }, { passive: true });
+      }
+
+      // Live WhatsApp Chat Simulator Animation
+      const waBody = document.querySelector('.phone-screen .wa-body');
+      if (waBody) {
+        const msgs = waBody.querySelectorAll('.wa-msg');
+        if (msgs.length >= 4) {
+          waBody.classList.add('wa-chat-animated');
+
+          // Create typing bubble
+          const typingEl = document.createElement('div');
+          typingEl.className = 'wa-typing-bubble';
+          typingEl.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+          typingEl.style.display = 'none';
+          waBody.appendChild(typingEl);
+
+          let animTimer = null;
+          let isHovered = false;
+          let timeoutIds = [];
+          const phoneCard = document.querySelector('.phone-mockup-card');
+
+          if (phoneCard) {
+            phoneCard.addEventListener('mouseenter', () => { isHovered = true; });
+            phoneCard.addEventListener('mouseleave', () => { isHovered = false; });
+          }
+
+          function clearChatTimeouts() {
+            timeoutIds.forEach(id => clearTimeout(id));
+            timeoutIds = [];
+            if (animTimer) clearTimeout(animTimer);
+          }
+
+          function queueStep(fn, delay) {
+            const id = setTimeout(fn, delay);
+            timeoutIds.push(id);
+          }
+
+          function playChatAnimation() {
+            clearChatTimeouts();
+
+            // Reset: hide all messages & typing
+            msgs.forEach(m => m.classList.remove('msg-visible'));
+            typingEl.style.display = 'none';
+
+            // Step 1: Patient message 1 at 400ms
+            queueStep(() => {
+              msgs[0].classList.add('msg-visible');
+            }, 400);
+
+            // Step 2: AI typing indicator at 1600ms
+            queueStep(() => {
+              typingEl.style.display = 'inline-flex';
+              waBody.insertBefore(typingEl, msgs[1]);
+            }, 1600);
+
+            // Step 3: AI message 1 at 2800ms
+            queueStep(() => {
+              typingEl.style.display = 'none';
+              msgs[1].classList.add('msg-visible');
+            }, 2800);
+
+            // Step 4: Patient message 2 at 4500ms
+            queueStep(() => {
+              msgs[2].classList.add('msg-visible');
+            }, 4500);
+
+            // Step 5: AI typing indicator at 5600ms
+            queueStep(() => {
+              typingEl.style.display = 'inline-flex';
+              waBody.insertBefore(typingEl, msgs[3]);
+            }, 5600);
+
+            // Step 6: AI message 2 at 6800ms
+            queueStep(() => {
+              typingEl.style.display = 'none';
+              msgs[3].classList.add('msg-visible');
+            }, 6800);
+
+            // Step 7: Pause to read, then restart
+            queueStep(() => {
+              function checkResume() {
+                if (!isHovered) {
+                  playChatAnimation();
+                } else {
+                  setTimeout(checkResume, 1000);
+                }
+              }
+              checkResume();
+            }, 13000);
+          }
+
+          // IntersectionObserver: trigger when in view
+          if ('IntersectionObserver' in window && phoneCard) {
+            let started = false;
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting && !started) {
+                  started = true;
+                  playChatAnimation();
+                }
+              });
+            }, { threshold: 0.15 });
+            observer.observe(phoneCard);
+          } else {
+            playChatAnimation();
+          }
+        }
       }
 
       // 3. Modal Elements
