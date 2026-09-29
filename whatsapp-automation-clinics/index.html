@@ -572,6 +572,280 @@
       margin: 0 auto;
     }
 
+    /* How It Works Section (3 Step Ad Explanation) */
+    .how-it-works-section {
+      background: #FFFFFF;
+      border-top: 1.5px solid #000000;
+      border-bottom: 1.5px solid #000000;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .step-card {
+      background: #FAFAFA;
+      border: 2px solid #000000;
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 3px 3px 0px #000000;
+      transition: transform 0.15s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .step-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      background: #E2E8F0;
+      border: 1.5px solid #000000;
+      border-radius: 6px;
+      padding: 2px 8px;
+      line-height: 1;
+    }
+
+    .step-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      border: 1px solid currentColor;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .step-tag-amber {
+      color: #B45309;
+      background: #FEF3C7;
+      border-color: #FCD34D;
+    }
+
+    .step-tag-emerald {
+      color: #047857;
+      background: #D1FAE5;
+      border-color: #6EE7B7;
+    }
+
+    .step-tag-blue {
+      color: #1D4ED8;
+      background: #DBEAFE;
+      border-color: #93C5FD;
+    }
+
+    .step-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+
+    .step-desc {
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: #475569;
+      margin: 0 0 14px 0;
+      flex-grow: 1;
+    }
+
+    .step-visual-snippet {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      line-height: 1.4;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 6px;
+      padding: 8px 10px;
+      color: #334155;
+    }
+
+    .step-visual-snippet .snippet-sender {
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .snippet-ai {
+      background: #F0FDF4;
+      border-color: #86EFAC;
+      color: #166534;
+    }
+
+    .snippet-confirmed {
+      background: #EFF6FF;
+      border-color: #93C5FD;
+      color: #1E40AF;
+    }
+
+    /* Clinic Reception Leak (Problem vs Solution) */
+    .clinic-leak-section {
+      background: #F8FAFC;
+      border-bottom: 1.5px solid #000000;
+    }
+
+    .leak-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .leak-card {
+      border: 2px solid #000000;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 4px 4px 0px #000000;
+    }
+
+    .leak-card-bad {
+      background: #FFFDFD;
+      border-color: #000000;
+    }
+
+    .leak-card-good {
+      background: #F0FDF4;
+      border-color: #000000;
+    }
+
+    .leak-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px dashed #CBD5E1;
+    }
+
+    .leak-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .leak-badge-bad {
+      background: #FEE2E2;
+      color: #991B1B;
+      border: 1px solid #FCA5A5;
+    }
+
+    .leak-badge-good {
+      background: #DCFCE7;
+      color: #065F46;
+      border: 1px solid #86EFAC;
+    }
+
+    .leak-status-bad {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #DC2626;
+    }
+
+    .leak-status-good {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #059669;
+    }
+
+    .leak-card-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin: 0 0 16px 0;
+      color: #0F172A;
+    }
+
+    .leak-bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .leak-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: #334155;
+    }
+
+    .leak-bullet-icon {
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.2;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .leak-icon-bad {
+      background: #FEE2E2;
+      color: #DC2626;
+      border: 1px solid #F87171;
+    }
+
+    .leak-icon-good {
+      background: #DCFCE7;
+      color: #059669;
+      border: 1px solid #34D399;
+    }
+
+    .leak-impact-bar {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1.5px solid;
+    }
+
+    .leak-impact-bad {
+      background: #FEF2F2;
+      color: #991B1B;
+      border-color: #F87171;
+    }
+
+    .leak-impact-good {
+      background: #ECFDF5;
+      color: #065F46;
+      border-color: #34D399;
+    }
+
     /* Proof Section */
     
     /* Proof Section (Doctor Proof Card) */
@@ -2566,6 +2840,32 @@
         font-size: 0.86rem;
         line-height: 1.45;
       }
+      .how-it-works-section {
+        padding: 32px 0;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .step-card {
+        padding: 16px 14px;
+      }
+      .step-title {
+        font-size: 1rem;
+      }
+      .clinic-leak-section {
+        padding: 32px 0;
+      }
+      .leak-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .leak-card {
+        padding: 18px 14px;
+      }
+      .leak-card-title {
+        font-size: 1.05rem;
+      }
       .proof-section-high {
         padding: 22px 0;
       }
@@ -3154,11 +3454,11 @@
             </div>
 
             <h1 class="hero-headline">
-              Turn WhatsApp Enquiries Into <span class="hero-headline-accent">Confirmed Clinic Appointments</span>
+              Turn Clinic WhatsApp Messages Into <span class="hero-headline-accent">Confirmed Appointments</span>
             </h1>
 
             <p class="hero-description">
-              Instant WhatsApp replies, automatic slot booking, and patient reminders for busy clinics 24/7.
+              Answers patient fees and doctor timings in 3 seconds. Books visits into your calendar 24 hours a day.
             </p>
 
             <div class="hero-cta-group">
@@ -3281,7 +3581,151 @@
       </div>
     </section>
 
-        <!-- Proof: Real Doctor Case Study (Ultra-Optimized & Unified) -->
+    <!-- 3 Step Instant Explanation for Ad Visitors -->
+    <section class="section-padding how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-title-box">
+          <span class="section-eyebrow">HOW IT WORKS FOR YOUR CLINIC</span>
+          <h2 class="section-heading">From WhatsApp Message To Confirmed Patient In 3 Steps</h2>
+          <p class="section-subheading">
+            Connects to your existing clinic WhatsApp with zero technical setup needed.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">01</span>
+              <span class="step-tag step-tag-amber">24 Hours Active</span>
+            </div>
+            <h3 class="step-title">Patient Messages Your Clinic WhatsApp</h3>
+            <p class="step-desc">
+              Patient texts asking for consultation fees, doctor timings, or treatment slots during busy clinic hours, late at night, or on Sundays.
+            </p>
+            <div class="step-visual-snippet">
+              <span class="snippet-sender">Patient:</span> &ldquo;Dr consultation fee evvalavu? Tomorrow 2pm slot iruka?&rdquo;
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">02</span>
+              <span class="step-tag step-tag-emerald">3 Second Reply</span>
+            </div>
+            <h3 class="step-title">AI Replies &amp; Suggests Open Slots</h3>
+            <p class="step-desc">
+              Speaks English, Tamil, and Hindi. Answers clinic questions accurately and offers 2 open consultation slots from your doctor schedule.
+            </p>
+            <div class="step-visual-snippet snippet-ai">
+              <span class="snippet-sender">AI Receptionist:</span> &ldquo;Hello! Consultation is ₹500. Dr. Sameer has open slots at 2:30 PM &amp; 4:15 PM.&rdquo;
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">03</span>
+              <span class="step-tag step-tag-blue">Auto Sync</span>
+            </div>
+            <h3 class="step-title">Appointment Confirmed In Calendar</h3>
+            <p class="step-desc">
+              Patient confirms their choice. Visit instantly appears in your doctor Google Calendar with clinic location and automatic reminder sent to patient.
+            </p>
+            <div class="step-visual-snippet snippet-confirmed">
+              <span class="snippet-sender">Confirmed:</span> Tomorrow at 2:30 PM &bull; Google Calendar updated &bull; Clinic map sent
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Clinics Lose Patients (Problem vs Solution for Cold Ad Visitors) -->
+    <section class="section-padding clinic-leak-section" id="clinic-problem">
+      <div class="container">
+        <div class="section-title-box">
+          <span class="section-eyebrow">THE CLINIC RECEPTION LEAK</span>
+          <h2 class="section-heading">Why Busy Clinics Lose 30 To 50 Patients Every Month</h2>
+          <p class="section-subheading">
+            What happens when patients message your clinic vs what happens with Boldlabs AI.
+          </p>
+        </div>
+
+        <div class="leak-grid">
+          
+          <!-- Bad: Without AI Receptionist -->
+          <div class="leak-card leak-card-bad">
+            <div class="leak-card-header">
+              <div class="leak-badge leak-badge-bad">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                WITHOUT AI RECEPTIONIST
+              </div>
+              <span class="leak-status-bad">The Daily Patient Leak</span>
+            </div>
+            <h3 class="leak-card-title">Slow Replies Send Patients To Competing Clinics</h3>
+            <div class="leak-bullet-list">
+              <div class="leak-bullet-item">
+                <span class="leak-bullet-icon leak-icon-bad">&times;</span>
+                <div>
+                  <strong>Counter Rush Delays:</strong> Receptionist is busy giving change or filing papers while WhatsApp messages sit unread.
+                </div>
+              </div>
+              <div class="leak-bullet-item">
+                <span class="leak-bullet-icon leak-icon-bad">&times;</span>
+                <div>
+                  <strong>Zero Replies After 8 PM:</strong> Patients texting at night or on Sundays wait 12+ hours for someone to reply.
+                </div>
+              </div>
+              <div class="leak-bullet-item">
+                <span class="leak-bullet-icon leak-icon-bad">&times;</span>
+                <div>
+                  <strong>Lost To Faster Clinics:</strong> 60% of patients message 2 or 3 clinics on Google. Whoever answers first gets the patient.
+                </div>
+              </div>
+            </div>
+            <div class="leak-impact-bar leak-impact-bad">
+              <span>&#9888; Cost:</span> Loses ₹15,000+ every week in consultation and treatment fees.
+            </div>
+          </div>
+
+          <!-- Good: With Boldlabs AI -->
+          <div class="leak-card leak-card-good">
+            <div class="leak-card-header">
+              <div class="leak-badge leak-badge-good">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                WITH BOLDLABS AI
+              </div>
+              <span class="leak-status-good">100% Patient Capture</span>
+            </div>
+            <h3 class="leak-card-title">Instant 3 Second Response Locks The Booking</h3>
+            <div class="leak-bullet-list">
+              <div class="leak-bullet-item">
+                <span class="leak-bullet-icon leak-icon-good">&#10003;</span>
+                <div>
+                  <strong>Immediate 3 Second Reply:</strong> Answers fees and doctor availability within seconds day and night.
+                </div>
+              </div>
+              <div class="leak-bullet-item">
+                <span class="leak-bullet-icon leak-icon-good">&#10003;</span>
+                <div>
+                  <strong>Direct Calendar Booking:</strong> Patient picks an open slot and visit is saved into doctor schedule without phone tag.
+                </div>
+              </div>
+              <div class="leak-bullet-item">
+                <span class="leak-bullet-icon leak-icon-good">&#10003;</span>
+                <div>
+                  <strong>Automated Visit Reminders:</strong> Sends clinic Google Maps link and texts 2 hours before visit to stop no shows.
+                </div>
+              </div>
+            </div>
+            <div class="leak-impact-bar leak-impact-good">
+              <span>&#10004; Result:</span> Adds 20+ confirmed clinic visits every month on autopilot.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof: Real Doctor Case Study (Ultra-Optimized & Unified) -->
     <section class="section-padding proof-section-high" id="doctor-proof">
       <div class="container">
         
@@ -3289,7 +3733,7 @@
           <span class="section-eyebrow">Real Clinic Proof</span>
           <h2 class="section-heading">Active With Indian Doctors</h2>
           <p class="section-subheading">
-            See how Dr. Sameer at Mind Body Recovery added 20+ monthly appointments with WhatsApp AI.
+            See how Dr. Sameer at Mind Body Recovery uses this exact 3 step system to add 20+ monthly appointments.
           </p>
         </div>
 
