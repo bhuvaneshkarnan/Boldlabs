@@ -1043,6 +1043,12 @@ sitemap_base = """<?xml version="1.0" encoding="UTF-8"?>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.goboldlabs.com/about</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.goboldlabs.com/web-development-madurai</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1183,6 +1189,7 @@ Boldlabs is a premier web development and web design agency based in Madurai, Ta
 
 ## Navigation & Page Index
 - [Homepage](https://www.goboldlabs.com/) - Overview of services, stats (31+ service businesses served), interactive developer card, pricing, and consultation booking.
+- [About Bhuvanesh Karnan](https://www.goboldlabs.com/about) - Founder & Lead Web Engineer biography, technical background, and booking direct access.
 - [Custom Business Websites](https://www.goboldlabs.com/business-website) - Custom React and WordPress development with local SEO and speed optimizations.
 - [High-Converting Landing Pages](https://www.goboldlabs.com/landing-page) - Single-page funnels optimized for Google/Facebook Ads.
 - [Custom E-Commerce Stores](https://www.goboldlabs.com/ecommerce-website) - Shopify and WooCommerce custom design and checkout optimization.
@@ -1213,6 +1220,7 @@ with open(indexnow_file, "w", encoding="utf-8") as f:
 # Build URL list to submit
 submit_urls = [
     "https://www.goboldlabs.com/",
+    "https://www.goboldlabs.com/about",
     "https://www.goboldlabs.com/blog",
     "https://www.goboldlabs.com/web-development-madurai",
     "https://www.goboldlabs.com/whatsapp-automation-clinics",
