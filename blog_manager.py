@@ -48,7 +48,7 @@ def build_extended_answer(post, index):
         related_html += '<h3 style="font-size: 1.1rem; text-transform: uppercase; margin-bottom: var(--space-sm);">Continue Reading</h3>'
         related_html += '<ul style="list-style-type: none; padding: 0;">'
         for rel in selected:
-            related_html += f'<li style="margin-bottom: 8px;">→ <a href="{rel["slug"]}.html" style="color: var(--color-text-dark); text-decoration: underline; font-weight: 600;">{rel["title"]}</a></li>'
+            related_html += f'<li style="margin-bottom: 8px;">→ <a href="/blog/{rel["slug"]}" style="color: var(--color-text-dark); text-decoration: underline; font-weight: 600;">{rel["title"]}</a></li>'
         related_html += '</ul></div>'
 
     return f"""
@@ -113,7 +113,7 @@ post_template = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{TITLE}} — Boldlabs Blog</title>
   <meta name="description" content="{{DESCRIPTION}}">
-  <link rel="canonical" href="https://goboldlabs.com/blog/{{SLUG}}.html">
+  <link rel="canonical" href="https://www.goboldlabs.com/blog/{{SLUG}}">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   
   <!-- Google Fonts Preconnect and Load -->
@@ -124,20 +124,20 @@ post_template = """<!DOCTYPE html>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://goboldlabs.com/blog/{{SLUG}}.html">
+  <meta property="og:url" content="https://www.goboldlabs.com/blog/{{SLUG}}">
   <meta property="og:title" content="{{TITLE}} — Boldlabs Blog">
   <meta property="og:description" content="{{DESCRIPTION}}">
-  <meta property="og:image" content="https://goboldlabs.com/og-image.png">
+  <meta property="og:image" content="https://www.goboldlabs.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://goboldlabs.com/blog/{{SLUG}}.html">
+  <meta property="twitter:url" content="https://www.goboldlabs.com/blog/{{SLUG}}">
   <meta property="twitter:title" content="{{TITLE}} — Boldlabs Blog">
   <meta property="twitter:description" content="{{DESCRIPTION}}">
-  <meta property="twitter:image" content="https://goboldlabs.com/og-image.png">
+  <meta property="twitter:image" content="https://www.goboldlabs.com/og-image.png">
 
   <!-- Blog Schema -->
   <script type="application/ld+json">
@@ -146,7 +146,7 @@ post_template = """<!DOCTYPE html>
     "@type": "BlogPosting",
     "headline": "{{TITLE}}",
     "description": "{{DESCRIPTION}}",
-    "image": "https://goboldlabs.com/shakanksh_portrait.png",
+    "image": "https://www.goboldlabs.com/bhuvanesh_profile.webp",
     "datePublished": "{{DATE}}T00:00:00Z",
     "dateModified": "{{DATE}}T00:00:00Z",
     "author": {
@@ -159,12 +159,12 @@ post_template = """<!DOCTYPE html>
       "name": "Boldlabs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://goboldlabs.com/favicon.svg"
+        "url": "https://www.goboldlabs.com/favicon.svg"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://goboldlabs.com/blog/{{SLUG}}.html"
+      "@id": "https://www.goboldlabs.com/blog/{{SLUG}}"
     }
   }
   </script>
@@ -250,9 +250,9 @@ post_template = """<!DOCTYPE html>
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="/#plans">Pricing</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="/blog/">Blog</a>
+      <a href="/blog">Blog</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="/whatsapp-automation-clinics/" class="pill-btn" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+      <a href="/whatsapp-automation-clinics" class="pill-btn" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
         <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         WHATSAPP AI
       </a>
@@ -264,7 +264,7 @@ post_template = """<!DOCTYPE html>
     <!-- Subpage Hero -->
     <section class="subpage-hero">
       <div class="container">
-        <a href="../blog.html" class="back-home">← Back to Blog</a>
+        <a href="/blog" class="back-home">← Back to Blog</a>
         <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); display: block; margin-bottom: 8px; text-transform: uppercase;">{{DATE_DISPLAY}} · {{CATEGORY}}</span>
         <h1 style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; margin-bottom: var(--space-sm); text-transform: uppercase; color: var(--color-text);">{{TITLE}}</h1>
         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 0.9rem; font-family: var(--font-mono);">
@@ -364,10 +364,10 @@ post_template = """<!DOCTYPE html>
         <div>
           <h3 class="footer-col-title">Navigation</h3>
           <ul class="footer-links">
-            <li><a href="../index.html#services">Services</a></li>
-            <li><a href="../index.html#latest-drop">Case Studies</a></li>
-            <li><a href="../index.html#timeline">Process</a></li>
-            <li><a href="../index.html#player">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#latest-drop">Case Studies</a></li>
+            <li><a href="/#timeline">Process</a></li>
+            <li><a href="/#about">About</a></li>
           </ul>
         </div>
 
@@ -375,10 +375,10 @@ post_template = """<!DOCTYPE html>
         <div>
           <h3 class="footer-col-title">Trust</h3>
           <ul class="footer-links">
-            <li><a href="../index.html#player">Wall of Love</a></li>
-            <li><a href="../blog.html">Blog</a></li>
-            <li><a href="../index.html#build-together">Contact</a></li>
-            <li><a href="../index.html#build-together">Book a Call</a></li>
+            <li><a href="/#about">Wall of Love</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/#contact">Book a Call</a></li>
           </ul>
         </div>
 
@@ -386,8 +386,8 @@ post_template = """<!DOCTYPE html>
         <div>
           <h3 class="footer-col-title">Legal</h3>
           <ul class="footer-links">
-            <li><a href="../terms.html">Terms</a></li>
-            <li><a href="../privacy.html">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
             <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
           </ul>
         </div>
@@ -588,6 +588,11 @@ for i, post in enumerate(posts):
     file_path = os.path.join(blog_dir, f"{post['slug']}.html")
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(rendered)
+    
+    post_subdir = os.path.join(blog_dir, post['slug'])
+    os.makedirs(post_subdir, exist_ok=True)
+    with open(os.path.join(post_subdir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(rendered)
         
     post_date_parsed = datetime.strptime(post["date"], "%Y-%m-%d")
     if post_date_parsed <= current_date:
@@ -622,7 +627,7 @@ blog_home_template = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boldlabs Blog — Web Design, SEO & Operations Automation Insights</title>
   <meta name="description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks (React & WordPress), local SEO, and AI automations.">
-  <link rel="canonical" href="https://goboldlabs.com/blog.html">
+  <link rel="canonical" href="https://www.goboldlabs.com/blog">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
   <!-- Google Fonts Preconnect and Load -->
@@ -633,20 +638,20 @@ blog_home_template = """<!DOCTYPE html>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://goboldlabs.com/blog.html">
+  <meta property="og:url" content="https://www.goboldlabs.com/blog">
   <meta property="og:title" content="Boldlabs Blog — Web Design, SEO & Automation Insights">
   <meta property="og:description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks, local SEO, and AI automations.">
-  <meta property="og:image" content="https://goboldlabs.com/og-image.png">
+  <meta property="og:image" content="https://www.goboldlabs.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://goboldlabs.com/blog.html">
+  <meta property="twitter:url" content="https://www.goboldlabs.com/blog">
   <meta property="twitter:title" content="Boldlabs Blog — Web Design, SEO & Automation Insights">
   <meta property="twitter:description" content="Read our latest engineering logs and strategic guides on booking-first web design, speed-optimized tech stacks, local SEO, and AI automations.">
-  <meta property="twitter:image" content="https://goboldlabs.com/og-image.png">
+  <meta property="twitter:image" content="https://www.goboldlabs.com/og-image.png">
 
   <style>
     .subpage-hero {
@@ -690,7 +695,7 @@ blog_home_template = """<!DOCTYPE html>
 
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
-    <a href="index.html#home" class="navbar-brand">Boldlabs</a>
+    <a href="/" class="navbar-brand">Boldlabs</a>
     
     <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
       <span>MENU</span>
@@ -699,19 +704,19 @@ blog_home_template = """<!DOCTYPE html>
     
     <div class="nav-links" id="navbar-links-container">
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="index.html#services">Services</a>
+      <a href="/#services">Services</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="index.html#latest-drop">Missions</a>
+      <a href="/#latest-drop">Missions</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="index.html#timeline">Timeline</a>
+      <a href="/#timeline">Timeline</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="index.html#player">Reviews</a>
+      <a href="/#about">Reviews</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="index.html#plans">Package</a>
+      <a href="/#plans">Pricing</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="blog.html">Blog</a>
+      <a href="/blog">Blog</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
-      <a href="index.html#build-together">Book Call</a>
+      <a href="/#contact">Book Call</a>
     </div>
   </nav>
 
@@ -720,7 +725,7 @@ blog_home_template = """<!DOCTYPE html>
     <!-- Subpage Hero -->
     <section class="subpage-hero">
       <div class="container">
-        <a href="index.html" class="back-home">← Back to Home</a>
+        <a href="/" class="back-home">← Back to Home</a>
         <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: var(--space-sm);">THE BLOG</h1>
         <p style="color: var(--color-text-muted); max-width: 650px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6;">
           Strategic guides, engineering logs, and insights on web design, local SEO, and operational scheduling automation.
@@ -814,10 +819,10 @@ blog_home_template = """<!DOCTYPE html>
         <div>
           <h3 class="footer-col-title">Navigation</h3>
           <ul class="footer-links">
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#latest-drop">Case Studies</a></li>
-            <li><a href="index.html#timeline">Process</a></li>
-            <li><a href="index.html#player">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#latest-drop">Case Studies</a></li>
+            <li><a href="/#timeline">Process</a></li>
+            <li><a href="/#about">About</a></li>
           </ul>
         </div>
 
@@ -825,10 +830,10 @@ blog_home_template = """<!DOCTYPE html>
         <div>
           <h3 class="footer-col-title">Trust</h3>
           <ul class="footer-links">
-            <li><a href="index.html#player">Wall of Love</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="index.html#build-together">Contact</a></li>
-            <li><a href="index.html#build-together">Book a Call</a></li>
+            <li><a href="/#about">Wall of Love</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/#contact">Book a Call</a></li>
           </ul>
         </div>
 
@@ -836,8 +841,8 @@ blog_home_template = """<!DOCTYPE html>
         <div>
           <h3 class="footer-col-title">Legal</h3>
           <ul class="footer-links">
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
             <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
           </ul>
         </div>
@@ -1006,13 +1011,13 @@ published_posts = sorted(published_posts, key=lambda x: x["date"], reverse=True)
 
 for p in published_posts:
     card = f"""          <!-- Card: {p['title']} -->
-          <div class="service-card" style="position: relative; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; cursor: pointer;" onclick="window.location.href='blog/{p['slug']}.html'">
+          <div class="service-card" style="position: relative; padding: var(--space-lg); border: var(--border-width) solid var(--color-border); background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; cursor: pointer;" onclick="window.location.href='/blog/{p['slug']}'">
             <div>
               <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); display: block; margin-bottom: var(--space-sm);">{p['date_display']} · {p['category']}</span>
               <h3 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: var(--space-sm); text-transform: uppercase; line-height: 1.2; color: var(--color-text);">{p['title']}</h3>
               <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-md);">{p['question'][:150]}...</p>
             </div>
-            <a href="blog/{p['slug']}.html" class="pill-btn pill-btn-primary" style="align-self: flex-start; padding: 8px 16px; font-size: 0.75rem; border-radius: 0; border: 1.5px solid var(--color-text-dark); text-align: center; position: relative; z-index: 2;">Read Mission</a>
+            <a href="/blog/{p['slug']}" class="pill-btn pill-btn-primary" style="align-self: flex-start; padding: 8px 16px; font-size: 0.75rem; border-radius: 0; border: 1.5px solid var(--color-text-dark); text-align: center; position: relative; z-index: 2;">Read Mission</a>
           </div>
 """
     cards_html.append(card)
@@ -1023,107 +1028,127 @@ rendered_home = rendered_home.replace("{{BLOG_CARDS}}", "\n".join(cards_html))
 
 with open(os.path.join(workspace_root, "blog.html"), "w", encoding="utf-8") as f:
     f.write(rendered_home)
-print("Regenerated blog.html with correct footer styling and clickable cards.")
+with open(os.path.join(blog_dir, "index.html"), "w", encoding="utf-8") as f:
+    f.write(rendered_home)
+print("Regenerated blog.html and blog/index.html with correct footer styling and clickable cards.")
 
 
 # 2. Regenerate sitemap.xml to include only published blog links
 sitemap_base = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://goboldlabs.com/</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.goboldlabs.com/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://goboldlabs.com/business-website.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/landing-page.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/ecommerce-website.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/monthly-care.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/ai-automations.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/whatsapp-automation-clinics.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://www.goboldlabs.com/web-development-madurai</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://goboldlabs.com/white-label-agencies.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/web-development-madurai.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/web-development-tamil-nadu.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/web-development-uk.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/web-development-canada.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/privacy.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/terms.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://goboldlabs.com/blog.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <loc>https://www.goboldlabs.com/whatsapp-automation-clinics</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/business-website</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/landing-page</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/ecommerce-website</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/monthly-care</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/ai-automations</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/white-label-agencies</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/web-development-tamil-nadu</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/web-development-bangalore</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/web-development-mumbai</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/web-development-uk</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/web-development-usa</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/web-development-canada</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/blog</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/privacy</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.goboldlabs.com/terms</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 """
 
 for p in published_posts:
     sitemap_base += f"""  <url>
-    <loc>https://goboldlabs.com/blog/{p['slug']}.html</loc>
+    <loc>https://www.goboldlabs.com/blog/{p['slug']}</loc>
     <lastmod>{p['date']}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1139,7 +1164,7 @@ print("Regenerated sitemap.xml with active scheduled URLs.")
 # 3. Regenerate llms.txt to include active posts
 llms_txt_base = """# Boldlabs
 
-> https://goboldlabs.com
+> https://www.goboldlabs.com
 
 Boldlabs is a premier web development and web design agency based in Madurai, Tamil Nadu, India, serving B2B and local service businesses globally (including India, UK, Canada, and USA). Founded and led by Bhuvanesh Karnan (Founder & Head Developer).
 
@@ -1157,23 +1182,23 @@ Boldlabs is a premier web development and web design agency based in Madurai, Ta
 - **Pricing & Model**: Month-to-month subscription plans, no setup fees, cancel anytime.
 
 ## Navigation & Page Index
-- [Homepage](https://goboldlabs.com/) - Overview of services, stats (31+ service businesses served), interactive developer card, pricing, and consultation booking.
-- [Custom Business Websites](https://goboldlabs.com/business-website.html) - Custom React and WordPress development with local SEO and speed optimizations.
-- [High-Converting Landing Pages](https://goboldlabs.com/landing-page.html) - Single-page funnels optimized for Google/Facebook Ads.
-- [Custom E-Commerce Stores](https://goboldlabs.com/ecommerce-website.html) - Shopify and WooCommerce custom design and checkout optimization.
-- [Website Maintenance & Care](https://goboldlabs.com/monthly-care.html) - Daily backups, security updates, and monthly SEO maintenance retainer.
-- [AI automations & CRM Integration](https://goboldlabs.com/ai-automations.html) - Workflow pipelines using Make, Zapier, and Python to automate lead tracking.
-- [Clinic WhatsApp Automation](https://goboldlabs.com/whatsapp-automation-clinics.html) - 24/7 AI WhatsApp receptionist for medical clinics: instant replies, AI booking flow, auto confirmations, reminders, and 5-star Google review collection.
-- [White-Label Agency Retainers](https://goboldlabs.com/white-label-agencies.html) - Figma-to-code partnership program for agencies with 24-48h turnarounds.
-- [Madurai Local Landing Page](https://goboldlabs.com/web-development-madurai.html) - Web development services customized for local businesses in Madurai, India.
-- [Tamil Nadu Regional Page](https://goboldlabs.com/web-development-tamil-nadu.html) - Regional web design and development services for Tamil Nadu, India.
-- [UK International Landing Page](https://goboldlabs.com/web-development-uk.html) - Web development services optimized for UK service providers.
-- [Canada International Landing Page](https://goboldlabs.com/web-development-canada.html) - Web design and development services optimized for B2B firms in Canada.
-- [The Blog](https://goboldlabs.com/blog.html) - Directory of insights on web design, SEO, and operations automation.
+- [Homepage](https://www.goboldlabs.com/) - Overview of services, stats (31+ service businesses served), interactive developer card, pricing, and consultation booking.
+- [Custom Business Websites](https://www.goboldlabs.com/business-website) - Custom React and WordPress development with local SEO and speed optimizations.
+- [High-Converting Landing Pages](https://www.goboldlabs.com/landing-page) - Single-page funnels optimized for Google/Facebook Ads.
+- [Custom E-Commerce Stores](https://www.goboldlabs.com/ecommerce-website) - Shopify and WooCommerce custom design and checkout optimization.
+- [Website Maintenance & Care](https://www.goboldlabs.com/monthly-care) - Daily backups, security updates, and monthly SEO maintenance retainer.
+- [AI automations & CRM Integration](https://www.goboldlabs.com/ai-automations) - Workflow pipelines using Make, Zapier, and Python to automate lead tracking.
+- [Clinic WhatsApp Automation](https://www.goboldlabs.com/whatsapp-automation-clinics) - 24/7 AI WhatsApp receptionist for medical clinics: instant replies, AI booking flow, auto confirmations, reminders, and 5-star Google review collection.
+- [White-Label Agency Retainers](https://www.goboldlabs.com/white-label-agencies) - Figma-to-code partnership program for agencies with 24-48h turnarounds.
+- [Madurai Local Landing Page](https://www.goboldlabs.com/web-development-madurai) - Web development services customized for local businesses in Madurai, India.
+- [Tamil Nadu Regional Page](https://www.goboldlabs.com/web-development-tamil-nadu) - Regional web design and development services for Tamil Nadu, India.
+- [UK International Landing Page](https://www.goboldlabs.com/web-development-uk) - Web development services optimized for UK service providers.
+- [Canada International Landing Page](https://www.goboldlabs.com/web-development-canada) - Web design and development services optimized for B2B firms in Canada.
+- [The Blog](https://www.goboldlabs.com/blog) - Directory of insights on web design, SEO, and operations automation.
 """
 
 for p in published_posts:
-    llms_txt_base += f"- [{p['title']}](https://goboldlabs.com/blog/{p['slug']}.html) - {p['question'][:120]}...\n"
+    llms_txt_base += f"- [{p['title']}](https://www.goboldlabs.com/blog/{p['slug']}) - {p['question'][:120]}...\n"
 
 with open(os.path.join(workspace_root, "llms.txt"), "w", encoding="utf-8") as f:
     f.write(llms_txt_base)
@@ -1187,27 +1212,30 @@ with open(indexnow_file, "w", encoding="utf-8") as f:
 
 # Build URL list to submit
 submit_urls = [
-    "https://goboldlabs.com/",
-    "https://goboldlabs.com/blog.html",
-    "https://goboldlabs.com/business-website.html",
-    "https://goboldlabs.com/landing-page.html",
-    "https://goboldlabs.com/ecommerce-website.html",
-    "https://goboldlabs.com/monthly-care.html",
-    "https://goboldlabs.com/ai-automations.html",
-    "https://goboldlabs.com/whatsapp-automation-clinics.html",
-    "https://goboldlabs.com/white-label-agencies.html",
-    "https://goboldlabs.com/web-development-madurai.html",
-    "https://goboldlabs.com/web-development-tamil-nadu.html",
-    "https://goboldlabs.com/web-development-uk.html",
-    "https://goboldlabs.com/web-development-canada.html"
+    "https://www.goboldlabs.com/",
+    "https://www.goboldlabs.com/blog",
+    "https://www.goboldlabs.com/web-development-madurai",
+    "https://www.goboldlabs.com/whatsapp-automation-clinics",
+    "https://www.goboldlabs.com/business-website",
+    "https://www.goboldlabs.com/landing-page",
+    "https://www.goboldlabs.com/ecommerce-website",
+    "https://www.goboldlabs.com/monthly-care",
+    "https://www.goboldlabs.com/ai-automations",
+    "https://www.goboldlabs.com/white-label-agencies",
+    "https://www.goboldlabs.com/web-development-tamil-nadu",
+    "https://www.goboldlabs.com/web-development-bangalore",
+    "https://www.goboldlabs.com/web-development-mumbai",
+    "https://www.goboldlabs.com/web-development-uk",
+    "https://www.goboldlabs.com/web-development-usa",
+    "https://www.goboldlabs.com/web-development-canada"
 ]
 for p in published_posts:
-    submit_urls.append(f"https://goboldlabs.com/blog/{p['slug']}.html")
+    submit_urls.append(f"https://www.goboldlabs.com/blog/{p['slug']}")
 
 payload = {
-    "host": "goboldlabs.com",
+    "host": "www.goboldlabs.com",
     "key": indexnow_key,
-    "keyLocation": f"https://goboldlabs.com/{indexnow_key}.txt",
+    "keyLocation": f"https://www.goboldlabs.com/{indexnow_key}.txt",
     "urlList": submit_urls
 }
 

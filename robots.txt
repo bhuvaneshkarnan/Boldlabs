@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /meadadmin.html
 
-Sitemap: https://goboldlabs.com/sitemap.xml
+Sitemap: https://www.goboldlabs.com/sitemap.xml
