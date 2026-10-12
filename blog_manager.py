@@ -388,7 +388,7 @@ post_template = """<!DOCTYPE html>
           <ul class="footer-links">
             <li><a href="/terms">Terms</a></li>
             <li><a href="/privacy">Privacy</a></li>
-            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
+            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">bhuvanesh@goboldlabs.com</span></li>
           </ul>
         </div>
       </div>
@@ -559,7 +559,7 @@ post_template = """<!DOCTYPE html>
             leadFormStatus.style.display = 'block';
           } catch (error) {
             console.error("Error capturing lead:", error);
-            alert("Error sending request. Please email directly to hello@boldlabs.studio");
+            alert("Error sending request. Please email directly to bhuvanesh@goboldlabs.com");
           }
         });
       }
@@ -843,7 +843,7 @@ blog_home_template = """<!DOCTYPE html>
           <ul class="footer-links">
             <li><a href="/terms">Terms</a></li>
             <li><a href="/privacy">Privacy</a></li>
-            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">hello@boldlabs.studio</span></li>
+            <li><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.85); display: block; margin-top: 4px;">bhuvanesh@goboldlabs.com</span></li>
           </ul>
         </div>
       </div>
@@ -995,7 +995,7 @@ blog_home_template = """<!DOCTYPE html>
             leadFormStatus.style.display = 'block';
           } catch (error) {
             console.error("Error capturing lead:", error);
-            alert("Error sending request. Please email directly to hello@boldlabs.studio");
+            alert("Error sending request. Please email directly to bhuvanesh@goboldlabs.com");
           }
         });
       }
@@ -1181,10 +1181,10 @@ Boldlabs is a premier web development and web design agency based in Madurai, Ta
 - **White-Label Retainers**: Outsourced Figma-to-Code engineering partners for design and marketing agencies.
 
 ## Key Information
-- **Founder**: Bhuvanesh Karnan (LinkedIn: https://www.linkedin.com/in/bhuvaneshkarnan/)
-- **Physical Address**: Madurai, Tamil Nadu, India (Postal Code: 625001)
+- **Founder**: Bhuvanesh Karnan (LinkedIn: https://www.linkedin.com/in/bhuvaneshkarnan/ | About: https://www.goboldlabs.com/about)
+- **Physical Address**: 3/481 Muneeswarar Nagar, Mahatma 1st Cross St, Uchaparambumedu, Madurai, Tamil Nadu 625014, India
 - **WhatsApp Contact**: +918870341570
-- **Email Contact**: hello@boldlabs.studio
+- **Email Contact**: bhuvanesh@goboldlabs.com
 - **Pricing & Model**: Month-to-month subscription plans, no setup fees, cancel anytime.
 
 ## Navigation & Page Index
