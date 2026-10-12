@@ -1,9 +1,9 @@
 name: Auto Publish Scheduled Blogs
 
 on:
-  schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
+  # Automated daily generation disabled to protect curated human-written articles
+  # schedule:
+  #   - cron: '0 0 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
