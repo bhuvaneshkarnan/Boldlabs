@@ -4236,7 +4236,7 @@
               </div>
               <p style="font-size: 0.76rem; color: #78350F; margin: 2px 0 0 0;">Inquiry prefilled. Just tap Send so the AI receptionist replies live.</p>
             </div>
-            <a id="pricing-wa-redirect-btn" href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20testing%20the%20Clinic%20WhatsApp%20AI%20receptionist%20demo." target="_blank" rel="noopener noreferrer" class="btn-pricing-cta">
+            <a id="pricing-wa-redirect-btn" href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20testing%20the%20Clinic%20WhatsApp%20AI%20receptionist%20demo." class="btn-pricing-cta">
               Tap Here If WhatsApp Didn't Open &#8594;
             </a>
           </div>
@@ -4821,7 +4821,7 @@
           </div>
           <p style="font-size: 0.76rem; color: #78350F; margin: 3px 0 0 0; line-height: 1.4;">Inquiry is prefilled. Just tap <strong>Send</strong> in WhatsApp so the AI replies live in 3 seconds.</p>
         </div>
-        <a id="modal-wa-redirect-btn" href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20testing%20the%20Clinic%20WhatsApp%20AI%20receptionist%20demo." target="_blank" rel="noopener noreferrer" class="btn-pricing-cta">
+        <a id="modal-wa-redirect-btn" href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20testing%20the%20Clinic%20WhatsApp%20AI%20receptionist%20demo." class="btn-pricing-cta">
           Tap Here If WhatsApp Didn't Open &#8594;
         </a>
         <p style="font-size: 0.68rem; color: #64748B; font-family: var(--font-mono); margin-top: 8px;">Works on iPhone, Android &amp; In App Browsers</p>
@@ -5147,8 +5147,8 @@
               whatsapp: cleanPhone,
               contactMethod: "WhatsApp",
               sourcePage: "whatsapp-automation-clinics",
-              question: "New Lead from Landing Page -> Alert for Founder Bhuvanesh: +91 8870341570",
-              alertPhone: "8870341570"
+              question: "New Lead from Clinic Landing Page",
+              alertPhone: "9514925790"
             })
           });
         } catch(err) {
@@ -5240,7 +5240,7 @@
           if (modalTransitionState) modalTransitionState.style.display = 'block';
           if (modalWaRedirectBtn) modalWaRedirectBtn.href = waUrl;
 
-          setTimeout(() => { window.location.href = waUrl; }, 1200);
+          setTimeout(() => { window.location.href = waUrl; }, 400);
         });
 
         if (modalClinicInput) {
@@ -5302,7 +5302,7 @@
           if (pricingTransitionState) pricingTransitionState.style.display = 'block';
           if (pricingWaRedirectBtn) pricingWaRedirectBtn.href = waUrl;
 
-          setTimeout(() => { window.location.href = waUrl; }, 1200);
+          setTimeout(() => { window.location.href = waUrl; }, 400);
         });
 
         if (pricingClinicInput) {

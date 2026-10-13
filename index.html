@@ -1522,6 +1522,12 @@
             <div id="lead-form-status" style="display: none; text-align: center; padding: var(--space-lg); font-family: var(--font-mono);">
               <span style="font-family: var(--font-display); font-size: 1.1rem; color: #008000; display: block; margin-bottom: 8px;">REQUEST SUBMITTED.</span>
               <p id="lead-status-msg" style="font-size: 0.8rem; color: var(--color-muted-light); line-height: 1.5;"></p>
+              <div id="lead-whatsapp-btn-wrap" style="display: none; margin-top: 14px;">
+                <a id="lead-whatsapp-btn" href="#" class="hero-cta-btn" style="background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 800; border-radius: 8px; box-shadow: 3px 3px 0px #000000; padding: 12px 24px; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-display);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  OPEN WHATSAPP CHAT NOW →
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1778,7 +1784,7 @@
           emailjs.init(emailjsConfig.publicKey);
         }
 
-        leadForm.addEventListener('submit', async (e) => {
+        leadForm.addEventListener('submit', (e) => {
           e.preventDefault();
           
           const name = document.getElementById('lead-name').value.trim();
@@ -1793,7 +1799,7 @@
           const cleanPhone = rawWhatsapp.replace(/[^0-9]/g, '');
           const cleanWhatsappNumber = `${countryCode}${cleanPhone}`;
           const leadWhatsappLink = `https://wa.me/${cleanWhatsappNumber}`;
-          const formattedWhatsapp = `'+${countryCode} ${rawWhatsapp}`;
+          const formattedWhatsapp = `+${countryCode} ${rawWhatsapp}`;
           
           const leadData = {
             name,
@@ -1810,9 +1816,8 @@
             const mockLeads = JSON.parse(localStorage.getItem('boldlabs_mock_leads') || '[]');
             mockLeads.push(leadData);
             localStorage.setItem('boldlabs_mock_leads', JSON.stringify(mockLeads));
-            console.log("Saved lead locally to localStorage.");
 
-            // Save to Google Sheets if configured
+            // Save to Google Sheets with keepalive (guaranteed background delivery even on redirect)
             if (isGoogleSheetConfigured) {
               const formData = new URLSearchParams();
               formData.append('name', name);
@@ -1822,66 +1827,45 @@
               formData.append('question', question);
               formData.append('sourcePage', 'Homepage');
               
-              try {
-                await fetch(googleSheetUrl, {
-                  method: 'POST',
-                  mode: 'no-cors',
-                  headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                  },
-                  body: formData.toString()
-                });
-                console.log("Lead successfully dispatched to Google Sheets Apps Script.");
-              } catch (err) {
-                console.error("Error dispatching to Google Sheets:", err);
-              }
+              fetch(googleSheetUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                keepalive: true,
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: formData.toString()
+              }).catch(err => console.error("Error dispatching to Google Sheets:", err));
             }
 
-            // Fire email alerts if configured
+            // Fire email alerts in background if configured
             if (typeof emailjs !== 'undefined' && isEmailjsConfigured) {
-              // Always send notification to Bhuvanesh
-              await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdNotification, {
+              emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdNotification, {
                 lead_name: name,
                 lead_email: email,
                 lead_whatsapp: formattedWhatsapp,
                 lead_contact_method: contactMethod,
                 lead_question: question,
                 lead_whatsapp_link: leadWhatsappLink
-              });
-              console.log("Notification email dispatched to admin.");
+              }).catch(err => console.error("Error sending notification:", err));
 
-              // Only send follow-up autoresponder if client prefers Email
               if (contactMethod === 'Email') {
-                await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdAutoresponder, {
+                emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdAutoresponder, {
                   to_name: name,
                   to_email: email,
                   my_whatsapp_link: `https://wa.me/${emailjsConfig.yourWhatsappNumber}`
-                });
-                console.log("Autoresponder follow-up email dispatched to lead.");
-              }
-            } else {
-              console.warn("EmailJS is not configured. Mock Emails variables logged below:");
-              console.log("Admin Notification:", {
-                lead_name: name,
-                lead_email: email,
-                lead_whatsapp: formattedWhatsapp,
-                lead_contact_method: contactMethod,
-                lead_question: question,
-                lead_whatsapp_link: leadWhatsappLink
-              });
-              if (contactMethod === 'Email') {
-                console.log("Lead Autoresponder:", {
-                  to_name: name,
-                  to_email: email,
-                  my_whatsapp_link: `https://wa.me/${emailjsConfig.yourWhatsappNumber}`
-                });
+                }).catch(err => console.error("Error sending autoresponder:", err));
               }
             }
             
             const statusMsg = document.getElementById('lead-status-msg');
+            const leadWhatsappBtn = document.getElementById('lead-whatsapp-btn');
+            const leadWhatsappBtnWrap = document.getElementById('lead-whatsapp-btn-wrap');
+            
+            leadForm.style.display = 'none';
+            leadFormStatus.style.display = 'block';
             
             if (contactMethod === 'WhatsApp') {
-              // Construct the WhatsApp URL with pre-filled lead details
               const whatsappText = `Hi Boldlabs, I would like to request a discovery call.
 
 *Name*: ${name}
@@ -1891,28 +1875,36 @@
 
               const whatsappUrl = `https://wa.me/${emailjsConfig.yourWhatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
               
-              // Open WhatsApp directly (original behavior)
-              window.open(whatsappUrl, '_blank');
-              
-              if (statusMsg) {
-                statusMsg.textContent = "Thank you! We've opened a new window to chat on WhatsApp. Please send the pre-filled message to connect with us instantly.";
+              if (leadWhatsappBtn) {
+                leadWhatsappBtn.href = whatsappUrl;
               }
+              if (leadWhatsappBtnWrap) {
+                leadWhatsappBtnWrap.style.display = 'block';
+              }
+              if (statusMsg) {
+                statusMsg.textContent = "Connecting to WhatsApp... Tap the button below if chat does not open automatically.";
+              }
+              
+              // Direct navigation (never blocked by browser popup blockers)
+              setTimeout(() => {
+                window.location.href = whatsappUrl;
+              }, 300);
             } else {
-              // Email follow-up route
+              if (leadWhatsappBtnWrap) {
+                leadWhatsappBtnWrap.style.display = 'none';
+              }
               if (statusMsg) {
                 statusMsg.textContent = `Thank you! Your request has been sent, and a confirmation email has been dispatched to ${email}. Bhuvanesh will review your request and get back to you shortly.`;
               }
             }
-            
-            // Show success status
-            leadForm.style.display = 'none';
-            leadFormStatus.style.display = 'block';
           } catch (error) {
-            console.error("Error capturing lead or sending email:", error);
+            console.error("Error capturing lead:", error);
             alert("Error sending request. Please email directly to bhuvanesh@goboldlabs.com");
           }
         });
       }
+
+
 
       // Mobile Navbar Toggle Logic
       const menuToggleBtn = document.getElementById('menu-toggle-btn');
