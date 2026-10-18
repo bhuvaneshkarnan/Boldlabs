@@ -202,116 +202,251 @@
       box-shadow: 6px 6px 0px #000000 !important;
     }
 
-    /* STORYTELLING TIMELINE (Generous Breathing Room & Visual Cards) */
-    .story-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 800px;
+    /* REALISTIC WHATSAPP CHAT EXPERIENCE (High Contrast, Effortless Scan) */
+    .wa-chat-window {
+      max-width: 820px;
       margin: 0 auto;
-    }
-
-    .story-card {
-      background: var(--color-bg-card);
+      background: #0B141B;
       border: 1px solid var(--color-border);
-      border-radius: 10px;
-      padding: 24px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
       text-align: left;
-      position: relative;
-      transition: border-color var(--transition-normal);
     }
 
-    .story-card:hover {
-      border-color: #404040;
-    }
-
-    .story-header {
+    .wa-chat-header {
+      background: #111B21;
+      border-bottom: 1px solid #1F2C34;
+      padding: 14px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-      gap: 8px;
+      gap: 12px;
     }
 
-    .story-step-badge {
+    .wa-chat-contact {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wa-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #202C33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+      color: #8696A0;
+    }
+
+    .wa-status-dot {
+      position: absolute;
+      bottom: 1px;
+      right: 1px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--color-wa);
+      border: 2px solid #111B21;
+    }
+
+    .wa-contact-name {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #E9EDEF;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wa-verified-icon {
+      color: var(--color-wa);
+      display: inline-flex;
+    }
+
+    .wa-contact-status {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
+      color: #8696A0;
+      margin-top: 2px;
+    }
+
+    .wa-header-live-badge {
+      font-family: var(--font-mono);
+      font-size: 0.70rem;
       font-weight: 700;
       color: var(--color-wa);
       background: rgba(37, 211, 102, 0.1);
       border: 1px solid rgba(37, 211, 102, 0.25);
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 4px;
-      text-transform: uppercase;
-    }
-
-    .story-time-tag {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--color-text-muted);
-    }
-
-    .story-title {
-      font-family: var(--font-display) !important;
-      font-size: 1.25rem !important;
-      font-weight: 800 !important;
-      text-transform: uppercase !important;
-      color: #FFFFFF !important;
-      margin-bottom: 8px !important;
-      line-height: 1.25 !important;
-    }
-
-    .story-narrative {
-      font-size: 0.92rem;
-      color: #CBD5E1;
-      line-height: 1.55;
-      margin-bottom: 14px;
-    }
-
-    /* Story WhatsApp Chat Visual Inside Timeline */
-    .story-chat-box {
-      background: #06080c;
-      border: 1px solid #1a202c;
-      border-radius: 8px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-
-    .chat-row-patient {
-      align-self: flex-start;
-      background: #181c24;
-      color: #F1F5F9;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 8px;
-      border-bottom-left-radius: 2px;
-      padding: 8px 12px;
-      font-size: 0.82rem;
-      max-width: 90%;
-    }
-
-    .chat-row-ai {
-      align-self: flex-end;
-      background: #0d281a;
-      color: #ECFDF5;
-      border: 1px solid rgba(37, 211, 102, 0.25);
-      border-radius: 8px;
-      border-bottom-right-radius: 2px;
-      padding: 8px 12px;
-      font-size: 0.82rem;
-      max-width: 90%;
-    }
-
-    .story-takeaway {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: var(--color-wa);
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .wa-chat-body {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: #0B141B;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+      background-size: 20px 20px;
+    }
+
+    .wa-date-divider {
+      text-align: center;
+      margin: 8px 0;
+      position: relative;
+    }
+
+    .wa-date-divider span {
+      background: #182229;
+      color: #8696A0;
+      font-family: var(--font-mono);
+      font-size: 0.70rem;
+      padding: 4px 12px;
+      border-radius: 6px;
+      border: 1px solid #222E35;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .wa-msg-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 82%;
+    }
+
+    .wa-msg-wrapper.patient-side {
+      align-self: flex-start;
+      align-items: flex-start;
+    }
+
+    .wa-msg-wrapper.ai-side {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+
+    .wa-msg-context-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tag-night {
+      color: #CBD5E1;
+      background: #182229;
+      border: 1px solid #222E35;
+    }
+
+    .tag-ai-instant {
+      color: var(--color-wa);
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+
+    .tag-calendar {
+      color: #38BDF8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .tag-reminder {
+      color: #FBBF24;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .wa-bubble-box {
+      border-radius: 10px;
+      padding: 10px 14px 8px 14px;
+      font-size: 0.90rem;
+      line-height: 1.45;
+      position: relative;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .wa-bubble-box.patient {
+      background: #202C33;
+      color: #E9EDEF;
+      border-bottom-left-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .wa-bubble-box.ai {
+      background: #005C4B;
+      color: #E9EDEF;
+      border-bottom-right-radius: 2px;
+      border: 1px solid rgba(37, 211, 102, 0.2);
+    }
+
+    .wa-bubble-box.ai-highlight {
+      background: #064E3B;
+      border: 1.5px solid var(--color-wa);
+      box-shadow: 0 0 16px rgba(37, 211, 102, 0.15);
+    }
+
+    .wa-bubble-text {
+      margin: 0 0 4px 0;
+      color: inherit;
+    }
+
+    .wa-bubble-meta {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #8696A0;
+      line-height: 1;
+    }
+
+    .wa-double-tick {
+      color: #53BDEB;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .wa-impact-grid {
+      background: #111B21;
+      border-top: 1px solid #1F2C34;
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      text-align: center;
+    }
+
+    .wa-impact-col strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-wa);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .wa-impact-col span {
+      font-family: var(--font-mono);
+      font-size: 0.70rem;
+      color: #8696A0;
+      display: block;
     }
 
     /* THE 4 DOCTOR SAFEGUARDS (Breathing Room Grid) */
@@ -836,16 +971,36 @@
         height: 48px !important;
       }
 
-      .story-card {
-        padding: 18px 16px;
+      .wa-chat-window {
+        border-radius: 10px;
       }
 
-      .story-title {
-        font-size: 1.1rem !important;
+      .wa-chat-header {
+        padding: 12px 14px;
       }
 
-      .story-narrative {
+      .wa-chat-body {
+        padding: 16px 12px;
+        gap: 14px;
+      }
+
+      .wa-msg-wrapper {
+        max-width: 94%;
+      }
+
+      .wa-bubble-box {
         font-size: 0.86rem;
+        padding: 9px 12px 7px 12px;
+      }
+
+      .wa-impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .wa-header-live-badge {
+        display: none;
       }
 
       .safeguard-box {
@@ -966,88 +1121,119 @@
           <span class="section-subtitle" style="font-family: var(--font-mono);">How a single message turns into a booked patient while your front desk sleeps.</span>
         </div>
 
-        <div class="story-timeline">
+        <!-- Realistic WhatsApp Conversation Simulator -->
+        <div class="wa-chat-window">
           
-          <!-- Scene 1 -->
-          <div class="story-card">
-            <div class="story-header">
-              <span class="story-step-badge">ACT 01 &middot; THE ENQUIRY</span>
-              <span class="story-time-tag">9:42 PM &middot; Night Enquiry</span>
-            </div>
-            <h3 class="story-title">A Worried Parent Messages Your Clinic</h3>
-            <p class="story-narrative">
-              Your front desk is closed. Staff is home. In most clinics, this message sits unread until 10:00 AM the next day, and the parent books a competitor nearby.
-            </p>
-            <div class="story-chat-box">
-              <div class="chat-row-patient">
-                Hi doctor, consultation fee evvalavu? Any slot tomorrow afternoon?
+          <!-- WhatsApp Top Bar -->
+          <div class="wa-chat-header">
+            <div class="wa-chat-contact">
+              <div class="wa-avatar">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span class="wa-status-dot"></span>
+              </div>
+              <div>
+                <div class="wa-contact-name">
+                  Mind Body Recovery Clinic
+                  <span class="wa-verified-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-wa)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                </div>
+                <div class="wa-contact-status">Official Business Account &middot; Replies in 3 seconds</div>
               </div>
             </div>
-            <div class="story-takeaway">
-              ⚡ Without AI: Lost patient. With Boldlabs: Instant response begins.
+            <div class="wa-header-live-badge">
+              <svg width="8" height="8" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#10B981"><animate attributeName="r" from="3" to="5" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" from="1" to="0.3" dur="1.5s" repeatCount="indefinite"/></circle></svg>
+              60 SECOND WALKTHROUGH
             </div>
           </div>
 
-          <!-- Scene 2 -->
-          <div class="story-card">
-            <div class="story-header">
-              <span class="story-step-badge">ACT 02 &middot; THE INSTANT RESPONSE</span>
-              <span class="story-time-tag">9:42 PM &middot; 3 Seconds Later</span>
+          <!-- Chat Stream -->
+          <div class="wa-chat-body">
+            
+            <!-- Timeline 1: 9:42 PM (Night Enquiry) -->
+            <div class="wa-date-divider">
+              <span>TODAY &middot; 9:42 PM &middot; FRONT DESK CLOSED</span>
             </div>
-            <h3 class="story-title">Polite, Bilingual &amp; Accurate</h3>
-            <p class="story-narrative">
-              Within 3 seconds, your AI receptionist greets the patient in natural language, quotes the exact consultation fee, checks doctor availability, and offers open slots.
-            </p>
-            <div class="story-chat-box">
-              <div class="chat-row-ai">
-                Hello! 👋 Consultation is ₹500. Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would 2:30 PM suit you?
+
+            <div class="wa-msg-wrapper patient-side">
+              <span class="wa-msg-context-tag tag-night">🌙 Patient Night Enquiry</span>
+              <div class="wa-bubble-box patient">
+                <p class="wa-bubble-text">Hi doctor, consultation fee evvalavu? Any slot tomorrow afternoon?</p>
+                <div class="wa-bubble-meta">
+                  <span>9:42 PM</span>
+                </div>
               </div>
             </div>
-            <div class="story-takeaway">
-              ⚡ Speaks English, Tamil &amp; Hindi naturally. Zero wait time.
+
+            <!-- Timeline 2: 9:42 PM (3 Seconds Later) -->
+            <div class="wa-msg-wrapper ai-side">
+              <span class="wa-msg-context-tag tag-ai-instant">⚡ 3 Seconds Later &middot; Bilingual AI Receptionist</span>
+              <div class="wa-bubble-box ai">
+                <p class="wa-bubble-text">Hello! 👋 Consultation is ₹500. Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would 2:30 PM suit you?</p>
+                <div class="wa-bubble-meta">
+                  <span>9:42 PM</span>
+                  <span class="wa-double-tick">✓✓</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Timeline 3: 9:43 PM (Booking Locked) -->
+            <div class="wa-msg-wrapper patient-side">
+              <span class="wa-msg-context-tag tag-night">⏱️ 1 Minute Later</span>
+              <div class="wa-bubble-box patient">
+                <p class="wa-bubble-text">2:30 PM works for me!</p>
+                <div class="wa-bubble-meta">
+                  <span>9:43 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wa-msg-wrapper ai-side">
+              <span class="wa-msg-context-tag tag-calendar">📅 Synced To Doctor Google Calendar</span>
+              <div class="wa-bubble-box ai ai-highlight">
+                <p class="wa-bubble-text">✅ <strong>APPOINTMENT CONFIRMED</strong> for Tomorrow at 2:30 PM!<br>📍 Location map &amp; Google Calendar invite locked on doctor schedule.</p>
+                <div class="wa-bubble-meta">
+                  <span>9:43 PM</span>
+                  <span class="wa-double-tick">✓✓</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline 4: Next Day 12:30 PM (Automated Reminder) -->
+            <div class="wa-date-divider">
+              <span>NEXT DAY &middot; 12:30 PM &middot; 2 HOURS PRIOR</span>
+            </div>
+
+            <div class="wa-msg-wrapper ai-side">
+              <span class="wa-msg-context-tag tag-reminder">🔔 Automated WhatsApp Reminder &middot; Cuts Missed Visits by 60%</span>
+              <div class="wa-bubble-box ai">
+                <p class="wa-bubble-text">👋 Friendly reminder from Dr. Sameer: Your consultation is in 2 hours at 2:30 PM. See you soon!</p>
+                <div class="wa-bubble-meta">
+                  <span>12:30 PM</span>
+                  <span class="wa-double-tick">✓✓</span>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Scene 3 -->
-          <div class="story-card">
-            <div class="story-header">
-              <span class="story-step-badge">ACT 03 &middot; THE BOOKING LOCKED</span>
-              <span class="story-time-tag">9:43 PM &middot; 1 Minute Later</span>
+          <!-- Bottom Impact Outcomes -->
+          <div class="wa-impact-grid">
+            <div class="wa-impact-col">
+              <strong>3 Seconds</strong>
+              <span>Response Speed</span>
             </div>
-            <h3 class="story-title">Syncs Directly to Doctor Google Calendar</h3>
-            <p class="story-narrative">
-              The patient picks their slot. The appointment instantly drops onto your Google Calendar. The patient receives clinic location directions on WhatsApp.
-            </p>
-            <div class="story-chat-box">
-              <div class="chat-row-patient">
-                2:30 PM works for me!
-              </div>
-              <div class="chat-row-ai">
-                ✅ <strong>APPOINTMENT CONFIRMED</strong> for Tomorrow at 2:30 PM! 📍 Location map &amp; Google Calendar invite sent.
-              </div>
+            <div class="wa-impact-col">
+              <strong>3 Languages</strong>
+              <span>English, Tamil &amp; Hindi</span>
             </div>
-            <div class="story-takeaway">
-              ⚡ Front desk did zero work. The patient is secured on your schedule.
+            <div class="wa-impact-col">
+              <strong>Zero Staff Work</strong>
+              <span>Auto Calendar Lock</span>
             </div>
-          </div>
-
-          <!-- Scene 4 -->
-          <div class="story-card">
-            <div class="story-header">
-              <span class="story-step-badge">ACT 04 &middot; THE VISIT CONFIRMED</span>
-              <span class="story-time-tag">Next Day &middot; 12:30 PM</span>
-            </div>
-            <h3 class="story-title">Automated Reminders Cut Missed Visits</h3>
-            <p class="story-narrative">
-              Patients forget appointments. Boldlabs sends automated WhatsApp reminders 24h and 2h prior to the visit, reducing missed visits by 60%.
-            </p>
-            <div class="story-chat-box">
-              <div class="chat-row-ai">
-                👋 Friendly reminder from Dr. Sameer: Your consultation is in 2 hours at 2:30 PM. See you soon!
-              </div>
-            </div>
-            <div class="story-takeaway">
-              ⚡ 60% fewer missed visits. Your clinic revenue is protected.
+            <div class="wa-impact-col">
+              <strong>60% Fewer</strong>
+              <span>Missed Appointments</span>
             </div>
           </div>
 
