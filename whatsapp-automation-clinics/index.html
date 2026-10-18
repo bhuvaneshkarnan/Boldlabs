@@ -1093,7 +1093,7 @@
       gap: 12px;
     }
 
-    /* RESPONSIVE BREAKPOINTS (Mobile-First Optimization) */
+    /* RESPONSIVE BREAKPOINTS (Mobile-First 2-Column Optimization) */
     @media (max-width: 900px) {
       .nav-links a.nav-link {
         display: none;
@@ -1104,9 +1104,13 @@
         font-size: 0.78rem;
       }
 
+      .hero-section {
+        padding: 44px 0 32px;
+      }
+
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 32px;
         text-align: center;
       }
 
@@ -1128,34 +1132,102 @@
         justify-content: center;
       }
 
+      .section {
+        padding: 48px 0;
+      }
+
+      .section-header {
+        margin: 0 auto 32px;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+      }
+
+      /* 2-COLUMN OPTIMIZATION ON MOBILE & TABLET */
       .steps-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .step-card {
+        padding: 20px 16px;
+      }
+
+      .step-card:last-child {
+        grid-column: span 2;
       }
 
       .bento-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .bento-card {
+        padding: 22px 18px;
+      }
+
+      .guardrails-wrapper {
+        padding: 28px 20px;
       }
 
       .guardrails-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
       .proof-card {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .video-container {
+        height: auto;
+        aspect-ratio: 16 / 9;
       }
 
       .proof-content {
-        padding: 0 24px 24px;
+        padding: 0 20px 20px;
+      }
+
+      .proof-metrics-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        text-align: center;
+      }
+
+      .pricing-features-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 16px;
+        max-width: 100%;
       }
 
       .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+      }
+
+      .footer-grid > div:first-child {
+        grid-column: 1 / -1;
       }
     }
 
     @media (max-width: 640px) {
+      .hero-section {
+        padding: 32px 0 24px;
+      }
+
       .hero-headline {
-        font-size: 2.2rem;
+        font-size: 1.95rem;
+        line-height: 1.15;
+      }
+
+      .hero-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
       }
 
       .btn-primary, .btn-secondary {
@@ -1163,20 +1235,224 @@
         height: 48px !important;
       }
 
-      .form-row {
-        grid-template-columns: 1fr;
+      .hero-trust-strip {
+        gap: 8px 12px;
+        font-size: 0.72rem;
+      }
+
+      .phone-card {
+        padding: 14px 12px;
+      }
+
+      .chat-body {
+        gap: 8px;
+      }
+
+      .chat-bubble {
+        padding: 9px 12px;
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+      }
+
+      .section {
+        padding: 38px 0;
+      }
+
+      .section-header {
+        margin: 0 auto 22px;
+      }
+
+      .section-title {
+        font-size: 1.55rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.85rem;
+      }
+
+      /* 2-COLUMN LAYOUT FOR STEPS ON PHONES */
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .step-card {
+        padding: 14px 12px;
+      }
+
+      .step-number {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+      }
+
+      .step-heading {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      .step-desc {
+        font-size: 0.74rem;
+        line-height: 1.35;
+      }
+
+      .step-card:last-child {
+        grid-column: span 2;
+      }
+
+      /* 2-COLUMN LAYOUT FOR BENTO OUTCOMES ON PHONES */
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .bento-card {
+        padding: 14px 12px;
+      }
+
+      .bento-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 10px;
+      }
+
+      .bento-icon svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      .bento-heading {
+        font-size: 0.88rem;
+        line-height: 1.25;
+        margin-bottom: 5px;
+      }
+
+      .bento-desc {
+        font-size: 0.74rem;
+        line-height: 1.35;
+      }
+
+      /* 2-COLUMN LAYOUT FOR GUARDRAILS ON PHONES */
+      .guardrails-wrapper {
+        padding: 20px 14px;
       }
 
       .guardrails-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 18px;
       }
 
+      .guardrail-item {
+        padding: 10px 8px;
+      }
+
+      .guardrail-title {
+        font-size: 0.82rem;
+        margin-bottom: 4px;
+      }
+
+      .guardrail-desc {
+        font-size: 0.72rem;
+        line-height: 1.35;
+      }
+
+      /* PROOF SECTION */
+      .proof-card {
+        border-radius: var(--radius-md);
+      }
+
+      .proof-content {
+        padding: 0 16px 18px;
+      }
+
+      .proof-quote {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .doctor-meta {
+        margin-bottom: 14px;
+      }
+
+      .proof-metrics-row {
+        gap: 6px;
+        padding-top: 14px;
+      }
+
+      .metric-box strong {
+        font-size: 1.25rem;
+      }
+
+      .metric-box span {
+        font-size: 0.68rem;
+      }
+
+      /* 2-COLUMN LAYOUT FOR PRICING FEATURES ON PHONES */
       .pricing-card-wrap {
-        padding: 28px 20px;
+        padding: 22px 14px;
       }
 
       .pricing-amount {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
+      }
+
+      .pricing-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 18px;
+      }
+
+      .pricing-features-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 10px;
+        margin-bottom: 20px;
+      }
+
+      .pricing-features-list li {
+        font-size: 0.75rem;
+        gap: 6px;
+        align-items: flex-start;
+      }
+
+      .pricing-features-list li svg {
+        width: 14px;
+        height: 14px;
+        margin-top: 2px;
+      }
+
+      /* 2-COLUMN LAYOUT FOR FORM INPUTS ON PHONES */
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .input-field {
+        height: 44px;
+        font-size: 0.82rem;
+        padding: 0 10px;
+      }
+
+      .lead-form-box {
+        padding: 16px 12px;
+      }
+
+      /* FAQ ON PHONES */
+      .faq-question-btn {
+        padding: 13px 16px;
+        font-size: 0.9rem;
+      }
+
+      .faq-answer {
+        padding: 0 16px 14px;
+        font-size: 0.82rem;
+      }
+
+      /* FOOTER */
+      .footer {
+        padding: 34px 0 20px;
       }
     }
   </style>
@@ -1508,27 +1784,27 @@
           <ul class="pricing-features-list">
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>24/7 AI Receptionist</strong> answering fees, timings &amp; services</span>
+              <span><strong>24/7 AI Receptionist</strong> fees &amp; timings</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Two Way Google Calendar Sync</strong> with slot locking</span>
+              <span><strong>Two Way Calendar Sync</strong> slot locking</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Automated Patient Reminders</strong> 24h &amp; 2h before visit</span>
+              <span><strong>Patient Reminders</strong> 24h &amp; 2h prior</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Missed Call to WhatsApp</strong> automated text recovery</span>
+              <span><strong>Missed Call Recovery</strong> via WhatsApp</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>English, Tamil &amp; Hindi</strong> natural language support</span>
+              <span><strong>English, Tamil &amp; Hindi</strong> natural chat</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Live Clinic Lead Sheet</strong> with live real time sync</span>
+              <span><strong>Live Lead Sheet</strong> real time sync</span>
             </li>
           </ul>
 
@@ -1537,12 +1813,12 @@
             <form id="clinic-qual-form">
               <div class="form-row">
                 <div>
-                  <input type="text" id="clinic-name-input" class="input-field" placeholder="Clinic or Doctor Name" required>
-                  <div id="clinic-name-err" class="input-error">Please enter your clinic name</div>
+                  <input type="text" id="clinic-name-input" class="input-field" placeholder="Clinic Name" required>
+                  <div id="clinic-name-err" class="input-error">Please enter clinic name</div>
                 </div>
                 <div>
                   <input type="tel" id="clinic-phone-input" class="input-field" placeholder="WhatsApp Number" required>
-                  <div id="clinic-phone-err" class="input-error">Please enter a valid 10 digit number</div>
+                  <div id="clinic-phone-err" class="input-error">Enter 10 digit number</div>
                 </div>
               </div>
 
