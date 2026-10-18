@@ -463,6 +463,131 @@
       font-family: var(--font-mono);
     }
 
+    /* LIVE CLINIC CRM & STAFF DASHBOARD */
+    .crm-browser-frame {
+      max-width: 900px;
+      margin: 0 auto 28px;
+      background: #06080d;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .crm-top-bar {
+      background: #0d111a;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border);
+      gap: 12px;
+    }
+
+    .crm-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot-red { background: #EF4444; }
+    .dot-yellow { background: #F59E0B; }
+    .dot-green { background: #10B981; }
+
+    .crm-url-bar {
+      background: #06080d;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 440px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .crm-live-badge {
+      color: #10B981;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .crm-img-element {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .crm-highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .crm-highlight-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      transition: border-color var(--transition-normal);
+    }
+
+    .crm-highlight-card:hover {
+      border-color: #404040;
+    }
+
+    .crm-highlight-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid rgba(37, 211, 102, 0.25);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .crm-highlight-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .crm-highlight-text {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
     /* PRICING & DIRECT FORM */
     .pricing-card-wrap {
       max-width: 620px;
@@ -680,6 +805,15 @@
       .pricing-card-wrap {
         padding: 24px 16px;
       }
+
+      .crm-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .crm-url-bar {
+        display: none;
+      }
     }
 
     @media (max-width: 640px) {
@@ -751,6 +885,10 @@
         padding: 0 16px 14px;
         font-size: 0.82rem;
       }
+
+      .crm-highlight-card {
+        padding: 16px 14px;
+      }
     }
   </style>
 </head>
@@ -774,6 +912,8 @@
       <a href="#safety">Safety</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="#proof">Proof</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#crm">CRM</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
       <a href="#pricing">Pricing</a>
       <span class="navbar-divider" aria-hidden="true">|</span>
@@ -1002,7 +1142,71 @@
       </div>
     </section>
 
-    <!-- SECTION 4: TRANSPARENT PRICING & DIRECT FORM -->
+    <!-- SECTION 4: LIVE CLINIC CRM (Real Practice Dashboard) -->
+    <section id="crm" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">LIVE CLINIC CRM.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">Real practice dashboard. Included with every clinic setup.</span>
+        </div>
+
+        <!-- Live CRM Browser Frame Screenshot -->
+        <div class="crm-browser-frame">
+          <div class="crm-top-bar">
+            <div class="crm-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="crm-url-bar">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>clinic.boldlabs.studio/drsameer/dashboard</span>
+            </div>
+            <span class="crm-live-badge">
+              <svg width="8" height="8" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#10B981"><animate attributeName="r" from="3" to="5" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" from="1" to="0.3" dur="1.5s" repeatCount="indefinite"/></circle></svg>
+              LIVE CLINIC CRM
+            </span>
+          </div>
+
+          <picture>
+            <source media="(max-width: 640px)" srcset="/whatsapp-automation-clinics/assets/crm_dashboard_mobile.webp" type="image/webp">
+            <source media="(max-width: 640px)" srcset="/whatsapp-automation-clinics/assets/crm_dashboard_mobile.png">
+            <source srcset="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.webp" type="image/webp">
+            <img src="/whatsapp-automation-clinics/assets/crm_dashboard_desktop.png" alt="Boldlabs Clinic CRM Live Dashboard for Mind Body Recovery showing attended revenue, appointments, and leads" class="crm-img-element" loading="lazy" decoding="async" width="1440" height="900">
+          </picture>
+        </div>
+
+        <!-- 3 Key Highlights Under CRM -->
+        <div class="crm-highlights-grid">
+          <div class="crm-highlight-card">
+            <div class="crm-highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-wa)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="crm-highlight-title">Attended Revenue &amp; Funnel</h3>
+            <p class="crm-highlight-text">Track booked visits, attended consultations, and total recovered clinic revenue in real time.</p>
+          </div>
+
+          <div class="crm-highlight-card">
+            <div class="crm-highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-wa)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="crm-highlight-title">Full WhatsApp History</h3>
+            <p class="crm-highlight-text">Read patient conversation logs, review AI replies, and let your reception team step in anytime.</p>
+          </div>
+
+          <div class="crm-highlight-card">
+            <div class="crm-highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-wa)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="crm-highlight-title">Instant Google Sheets Sync</h3>
+            <p class="crm-highlight-text">Every lead, phone number, and appointment date updates live to your private Google Sheet automatically.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: TRANSPARENT PRICING & DIRECT FORM -->
     <section id="pricing" class="section">
       <div class="container">
         <div class="section-header">
@@ -1085,7 +1289,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: FAQS -->
+    <!-- SECTION 6: FAQS -->
     <section id="faq" class="section">
       <div class="container">
         <div class="section-header">
