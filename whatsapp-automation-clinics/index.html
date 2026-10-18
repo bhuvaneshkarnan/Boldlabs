@@ -965,16 +965,238 @@
       margin: 0;
     }
 
-    /* PRICING & DIRECT FORM */
-    .pricing-card-wrap {
-      max-width: 620px;
+    /* PRICING & REVENUE CALCULATOR GRID */
+    .pricing-grid-container {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+      max-width: 1140px;
       margin: 0 auto;
+    }
+
+    .pricing-card-wrap {
+      width: 100%;
       background: var(--color-bg-card);
       border: 1.5px solid var(--color-wa);
       border-radius: 12px;
-      padding: 36px 30px;
+      padding: 32px 26px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--color-wa-glow);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* REVENUE & ROI CALCULATOR CARD */
+    .roi-calculator-card {
+      background: var(--color-bg-card);
+      border: 1.5px solid var(--color-border);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      text-align: left;
+    }
+
+    .roi-badge {
+      display: inline-block;
+      background: rgba(37, 211, 102, 0.12);
+      color: var(--color-wa);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .roi-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .roi-subtitle {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      font-family: var(--font-mono);
+      margin-bottom: 22px;
+    }
+
+    .calc-control-group {
+      margin-bottom: 18px;
+    }
+
+    .calc-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .calc-label {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #E2E8F0;
+    }
+
+    .calc-value-display {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--color-wa);
+    }
+
+    .calc-slider-wrap {
+      margin-bottom: 8px;
+    }
+
+    .calc-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      background: #1e293b;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--color-wa);
+      border: 2px solid #000000;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+      transition: transform 0.15s ease;
+    }
+
+    .calc-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    .calc-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--color-wa);
+      border: 2px solid #000000;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+    }
+
+    .calc-presets {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .calc-preset-btn {
+      background: #090d15;
+      border: 1px solid #1e293b;
+      color: #94A3B8;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .calc-preset-btn:hover {
+      border-color: #334155;
+      color: #FFFFFF;
+    }
+
+    .calc-preset-btn.active {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: var(--color-wa);
+      color: var(--color-wa);
+    }
+
+    /* RESULTS GRID */
+    .calc-results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0 16px 0;
+    }
+
+    .calc-result-box {
+      background: #06090e;
+      border: 1px solid #1a2332;
+      border-radius: 8px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+
+    .calc-result-box.highlight {
+      border-color: var(--color-wa);
+      background: rgba(37, 211, 102, 0.05);
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.1);
+    }
+
+    .calc-res-value {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .calc-result-box.highlight .calc-res-value {
+      color: var(--color-wa);
+    }
+
+    .calc-res-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #94A3B8;
+      line-height: 1.3;
+    }
+
+    .calc-summary-banner {
+      background: rgba(37, 211, 102, 0.08);
+      border: 1px solid rgba(37, 211, 102, 0.25);
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: #ECFDF5;
+      line-height: 1.45;
+    }
+
+    .calc-summary-banner strong {
+      color: var(--color-wa);
+    }
+
+    .calc-trust-note {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #64748B;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* MOBILE BOTTOM STICKY CTA BAR */
+    .mobile-sticky-cta-bar {
+      display: none;
     }
 
     .clinic-plan-badge {
@@ -1256,6 +1478,11 @@
         padding: 0 16px 20px;
       }
 
+      .pricing-grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
       .pricing-card-wrap {
         padding: 24px 16px;
       }
@@ -1362,6 +1589,83 @@
 
       .crm-highlight-card {
         padding: 16px 14px;
+      }
+
+      .roi-calculator-card {
+        padding: 22px 16px;
+      }
+
+      .calc-results-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .calc-result-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 14px;
+        text-align: left;
+      }
+
+      .calc-res-value {
+        margin-bottom: 0;
+        font-size: 1.15rem;
+        order: 2;
+      }
+
+      .calc-res-label {
+        order: 1;
+        font-size: 0.74rem;
+      }
+
+      body {
+        padding-bottom: 74px;
+      }
+
+      .sticky-wa-float {
+        display: none !important;
+      }
+
+      .mobile-sticky-cta-bar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        background: rgba(6, 8, 13, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1.5px solid #1E293B;
+        padding: 10px 16px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .mobile-sticky-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        height: 48px !important;
+        background: var(--color-wa);
+        color: #000000;
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 0.92rem;
+        letter-spacing: 0.02em;
+        border: 1.5px solid #000000;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+        transition: transform 0.15s ease, background-color 0.15s ease;
+      }
+
+      .mobile-sticky-btn:active {
+        transform: scale(0.98);
+        background: #20BA5A;
       }
     }
   </style>
@@ -1795,89 +2099,160 @@
       </div>
     </section>
 
-    <!-- SECTION 5: TRANSPARENT PRICING & DIRECT FORM -->
+    <!-- SECTION 5: CLINIC REVENUE CALCULATOR & PRICING -->
     <section id="pricing" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">PRICING.</h2>
-          <span class="section-subtitle" style="font-family: var(--font-mono);">One clear plan. Zero hidden fees. Month to month flexibility.</span>
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">PRACTICE REVENUE &amp; PRICING.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">See how 2 to 4 recovered appointments fully fund your monthly investment.</span>
         </div>
 
-        <div class="pricing-card-wrap">
-          <div class="pricing-roi-banner">
-            <span>💡 <strong>1 Recovered Appointment</strong> (~₹500 to ₹1,500) covers your monthly investment.</span>
-          </div>
+        <div class="pricing-grid-container">
+          <!-- Column 1: Interactive Clinic Revenue & ROI Calculator -->
+          <div class="roi-calculator-card">
+            <div>
+              <span class="roi-badge">CLINIC ROI CALCULATOR</span>
+              <h3 class="roi-title">How Much Revenue Can Your Clinic Recover?</h3>
+              <p class="roi-subtitle">Select your consultation fee and average monthly patient inquiries:</p>
 
-          <span class="clinic-plan-badge">CLINIC FOUNDING PLAN</span>
-
-          <div class="pricing-amount">
-            ₹2,499<span class="pricing-period"> / month</span>
-          </div>
-          <p class="pricing-subtitle">Billed month to month &middot; Zero setup fee &middot; Cancel anytime</p>
-
-          <ul class="pricing-features-list">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>24/7 AI Receptionist</strong> fees &amp; timings</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Two Way Calendar Sync</strong> slot locking</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Patient Reminders</strong> 24h &amp; 2h prior</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Missed Call Recovery</strong> via WhatsApp</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>English, Tamil &amp; Hindi</strong> natural chat</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Live Clinic CRM</strong> real time dashboard</span>
-            </li>
-          </ul>
-
-          <!-- Direct Lead Form -->
-          <div class="lead-form-box">
-            <form id="clinic-qual-form">
-              <div class="form-row">
-                <div>
-                  <input type="text" id="clinic-name-input" class="input-field" placeholder="Clinic Name" required>
-                  <div id="clinic-name-err" class="input-error">Please enter clinic name</div>
+              <!-- Control 1: Fee -->
+              <div class="calc-control-group">
+                <div class="calc-label-row">
+                  <span class="calc-label">Average Consultation Fee</span>
+                  <span class="calc-value-display" id="fee-display">₹500</span>
                 </div>
-                <div>
-                  <input type="tel" id="clinic-phone-input" class="input-field" placeholder="WhatsApp Number" required>
-                  <div id="clinic-phone-err" class="input-error">Enter 10 digit number</div>
+                <div class="calc-slider-wrap">
+                  <input type="range" id="fee-slider" class="calc-slider" min="300" max="1500" step="50" value="500" aria-label="Average Consultation Fee">
+                </div>
+                <div class="calc-presets">
+                  <button type="button" class="calc-preset-btn calc-fee-preset" data-val="400" onclick="setFee(400)">₹400</button>
+                  <button type="button" class="calc-preset-btn calc-fee-preset active" data-val="500" onclick="setFee(500)">₹500</button>
+                  <button type="button" class="calc-preset-btn calc-fee-preset" data-val="800" onclick="setFee(800)">₹800</button>
+                  <button type="button" class="calc-preset-btn calc-fee-preset" data-val="1200" onclick="setFee(1200)">₹1,200</button>
                 </div>
               </div>
 
-              <button type="submit" class="cta-wa-primary" style="width: 100%;">
-                CONNECT ON WHATSAPP &amp; TEST DEMO →
-              </button>
-            </form>
+              <!-- Control 2: Inquiries -->
+              <div class="calc-control-group">
+                <div class="calc-label-row">
+                  <span class="calc-label">Monthly WhatsApp Inquiries</span>
+                  <span class="calc-value-display" id="inquiries-display">35 Inquiries</span>
+                </div>
+                <div class="calc-slider-wrap">
+                  <input type="range" id="inquiries-slider" class="calc-slider" min="15" max="100" step="5" value="35" aria-label="Monthly WhatsApp Inquiries">
+                </div>
+                <div class="calc-presets">
+                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="20" onclick="setInquiries(20)">20</button>
+                  <button type="button" class="calc-preset-btn calc-inq-preset active" data-val="35" onclick="setInquiries(35)">35</button>
+                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="50" onclick="setInquiries(50)">50</button>
+                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="80" onclick="setInquiries(80)">80</button>
+                </div>
+              </div>
 
-            <div id="form-redirect-state" style="display: none; padding: 18px 0; text-align: center;">
-              <div style="font-size: 1.5rem; margin-bottom: 6px;">✅</div>
-              <div style="color: var(--color-wa); font-weight: 700; font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 6px;">Opening WhatsApp Chat...</div>
-              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">Connecting directly with Bhuvanesh Karnan</p>
-              <a id="fallback-wa-redirect-btn" href="#" class="cta-wa-primary" style="height: 48px !important; font-size: 0.88rem; width: 100%;">
-                TAP HERE IF WHATSAPP DOES NOT OPEN →
-              </a>
+              <!-- Live Calculated Results -->
+              <div class="calc-results-grid">
+                <div class="calc-result-box">
+                  <div class="calc-res-value" id="calc-appointments-val">+12 Visits</div>
+                  <div class="calc-res-label">Recovered Appointments</div>
+                </div>
+                <div class="calc-result-box">
+                  <div class="calc-res-value" id="calc-gross-val">+₹6,000</div>
+                  <div class="calc-res-label">Gross Revenue Captured</div>
+                </div>
+                <div class="calc-result-box highlight">
+                  <div class="calc-res-value" id="calc-net-val">+₹3,501 / mo</div>
+                  <div class="calc-res-label">Net Clinic Profit</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-summary-banner">
+                <div style="font-size: 1.3rem; flex-shrink: 0;">💡</div>
+                <div>
+                  <strong>Recovers 100% cost in just <span id="calc-breakeven-text">5 Visits</span>:</strong>
+                  At your fee, only <span id="calc-breakeven-dyn">5</span> patients cover your entire monthly bill. Every appointment after is pure profit.
+                </div>
+              </div>
+              <div class="calc-trust-note">
+                ✓ Zero technical work &middot; Live in 48 hours &middot; Cancel anytime
+              </div>
             </div>
           </div>
 
-          <div style="font-size: 0.82rem; color: var(--color-text-muted); font-family: var(--font-mono);">
-            Prefer to call? <a href="tel:+918870341570" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">Direct Call to Founder Bhuvanesh: +91 88703 41570</a>
-          </div>
+          <!-- Column 2: Transparent Pricing Card -->
+          <div class="pricing-card-wrap">
+            <span class="clinic-plan-badge">CLINIC FOUNDING PLAN</span>
 
-          <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 14px; font-family: var(--font-mono);">
-            🛡️ 14 Day Risk Free Trial &middot; If it does not capture appointments in 14 days, receive a full refund.
-          </p>
+            <div class="pricing-amount">
+              ₹2,499<span class="pricing-period"> / month</span>
+            </div>
+            <p class="pricing-subtitle">Billed month to month &middot; Zero setup fee &middot; Cancel anytime</p>
+
+            <ul class="pricing-features-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>24/7 AI Receptionist</strong> fees &amp; timings</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Two Way Calendar Sync</strong> slot locking</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Patient Reminders</strong> 24h &amp; 2h prior</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Missed Call Recovery</strong> via WhatsApp</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>English, Tamil &amp; Hindi</strong> natural chat</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Live Clinic CRM</strong> real time dashboard</span>
+              </li>
+            </ul>
+
+            <!-- Direct Lead Form -->
+            <div class="lead-form-box">
+              <form id="clinic-qual-form">
+                <div class="form-row">
+                  <div>
+                    <input type="text" id="clinic-name-input" class="input-field" placeholder="Clinic Name" required>
+                    <div id="clinic-name-err" class="input-error">Please enter clinic name</div>
+                  </div>
+                  <div>
+                    <input type="tel" id="clinic-phone-input" class="input-field" placeholder="WhatsApp Number" required>
+                    <div id="clinic-phone-err" class="input-error">Enter 10 digit number</div>
+                  </div>
+                </div>
+
+                <button type="submit" class="cta-wa-primary" style="width: 100%;">
+                  CONNECT ON WHATSAPP &amp; TEST DEMO →
+                </button>
+              </form>
+
+              <div id="form-redirect-state" style="display: none; padding: 18px 0; text-align: center;">
+                <div style="font-size: 1.5rem; margin-bottom: 6px;">✅</div>
+                <div style="color: var(--color-wa); font-weight: 700; font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 6px;">Opening WhatsApp Chat...</div>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">Connecting directly with Bhuvanesh Karnan</p>
+                <a id="fallback-wa-redirect-btn" href="#" class="cta-wa-primary" style="height: 48px !important; font-size: 0.88rem; width: 100%;">
+                  TAP HERE IF WHATSAPP DOES NOT OPEN →
+                </a>
+              </div>
+            </div>
+
+            <div style="font-size: 0.82rem; color: var(--color-text-muted); font-family: var(--font-mono);">
+              Prefer to call? <a href="tel:+918870341570" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">Direct Call to Founder Bhuvanesh: +91 88703 41570</a>
+            </div>
+
+            <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 14px; font-family: var(--font-mono);">
+              🛡️ 14 Day Risk Free Trial &middot; If it does not capture appointments in 14 days, receive a full refund.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -2074,13 +2449,21 @@
     </div>
   </footer>
 
-  <!-- Sticky Floating WhatsApp AI Demo Button (Identical to Home Page) -->
+  <!-- Sticky Floating WhatsApp AI Demo Button (Desktop / Larger Screens) -->
   <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." target="_blank" rel="noopener noreferrer" class="sticky-wa-float" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: #25D366; color: #000000; border: 1.5px solid #000000; border-radius: 8px; padding: 10px 16px; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: transform 0.2s ease;">
     <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
     TEST WHATSAPP DEMO
   </a>
 
-  <!-- JavaScript: Navbar Toggle, FAQ Toggle, Video Player & Form Webhook -->
+  <!-- Mobile Dedicated Bottom Sticky CTA Bar (Strictly Mobile < 768px) -->
+  <div class="mobile-sticky-cta-bar">
+    <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." class="mobile-sticky-btn">
+      <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>TEST LIVE ON WHATSAPP →</span>
+    </a>
+  </div>
+
+  <!-- JavaScript: Navbar Toggle, FAQ Toggle, Video Player, ROI Calc & Form Webhook -->
   <script>
     // FAQ Toggle
     function toggleFaq(btn) {
@@ -2098,6 +2481,78 @@
       container.innerHTML = '<iframe src="https://www.youtube.com/embed/_SAj8Nluxm0?autoplay=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="Dr. Sameer Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-embed-iframe"></iframe>';
       container.onclick = null;
       container.style.cursor = 'default';
+    }
+
+    // Clinic ROI Calculator Logic
+    function updateClinicRoi() {
+      const feeInput = document.getElementById('fee-slider');
+      const inquiriesInput = document.getElementById('inquiries-slider');
+      const feeDisplay = document.getElementById('fee-display');
+      const inquiriesDisplay = document.getElementById('inquiries-display');
+      
+      const appointmentsVal = document.getElementById('calc-appointments-val');
+      const grossVal = document.getElementById('calc-gross-val');
+      const netVal = document.getElementById('calc-net-val');
+      const breakevenText = document.getElementById('calc-breakeven-text');
+      
+      if (!feeInput || !inquiriesInput) return;
+      
+      const fee = parseInt(feeInput.value, 10) || 500;
+      const inquiries = parseInt(inquiriesInput.value, 10) || 35;
+      
+      if (feeDisplay) feeDisplay.textContent = '₹' + fee.toLocaleString('en-IN');
+      if (inquiriesDisplay) inquiriesDisplay.textContent = inquiries + ' Inquiries';
+      
+      // Clinical Math: 22% missed calls recovered + 12% no-shows saved (min 2)
+      const recoveredInquiries = Math.round(inquiries * 0.22);
+      const noShowsSaved = Math.max(2, Math.round(inquiries * 0.12));
+      const totalAppointments = recoveredInquiries + noShowsSaved;
+      
+      const grossRevenue = totalAppointments * fee;
+      const boldlabsPrice = 2499;
+      const netProfit = grossRevenue - boldlabsPrice;
+      const breakevenVisits = Math.max(1, Math.ceil(boldlabsPrice / fee));
+      
+      if (appointmentsVal) appointmentsVal.textContent = '+' + totalAppointments + ' Visits';
+      if (grossVal) grossVal.textContent = '+₹' + grossRevenue.toLocaleString('en-IN');
+      
+      if (netVal) {
+        if (netProfit >= 0) {
+          netVal.textContent = '+₹' + netProfit.toLocaleString('en-IN') + ' / mo';
+        } else {
+          netVal.textContent = '₹' + netProfit.toLocaleString('en-IN') + ' / mo';
+        }
+      }
+      
+      if (breakevenText) {
+        breakevenText.textContent = breakevenVisits + ' Visits';
+      }
+      const breakevenDyn = document.getElementById('calc-breakeven-dyn');
+      if (breakevenDyn) {
+        breakevenDyn.textContent = breakevenVisits;
+      }
+    }
+
+    function setFee(val) {
+      const slider = document.getElementById('fee-slider');
+      if (slider) {
+        slider.value = val;
+        document.querySelectorAll('.calc-fee-preset').forEach(btn => {
+          btn.classList.toggle('active', parseInt(btn.dataset.val, 10) === val);
+        });
+        updateClinicRoi();
+      }
+    }
+
+    function setInquiries(val) {
+      const slider = document.getElementById('inquiries-slider');
+      if (slider) {
+        slider.value = val;
+        document.querySelectorAll('.calc-inq-preset').forEach(btn => {
+          btn.classList.toggle('active', parseInt(btn.dataset.val, 10) === val);
+        });
+        updateClinicRoi();
+      }
     }
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -2128,6 +2583,27 @@
             navbarEl.classList.remove('nav-open');
           });
         });
+      }
+
+      // Initialize ROI Calculator Sliders
+      const feeSlider = document.getElementById('fee-slider');
+      const inqSlider = document.getElementById('inquiries-slider');
+      if (feeSlider && inqSlider) {
+        feeSlider.addEventListener('input', function() {
+          const val = parseInt(this.value, 10);
+          document.querySelectorAll('.calc-fee-preset').forEach(btn => {
+            btn.classList.toggle('active', parseInt(btn.dataset.val, 10) === val);
+          });
+          updateClinicRoi();
+        });
+        inqSlider.addEventListener('input', function() {
+          const val = parseInt(this.value, 10);
+          document.querySelectorAll('.calc-inq-preset').forEach(btn => {
+            btn.classList.toggle('active', parseInt(btn.dataset.val, 10) === val);
+          });
+          updateClinicRoi();
+        });
+        updateClinicRoi();
       }
 
       // Form Handling
