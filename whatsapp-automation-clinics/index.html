@@ -2136,31 +2136,31 @@
               <div class="calc-control-group">
                 <div class="calc-label-row">
                   <span class="calc-label">Monthly WhatsApp Inquiries</span>
-                  <span class="calc-value-display" id="inquiries-display">35 Inquiries</span>
+                  <span class="calc-value-display" id="inquiries-display">50 Inquiries</span>
                 </div>
                 <div class="calc-slider-wrap">
-                  <input type="range" id="inquiries-slider" class="calc-slider" min="15" max="100" step="5" value="35" aria-label="Monthly WhatsApp Inquiries">
+                  <input type="range" id="inquiries-slider" class="calc-slider" min="25" max="150" step="5" value="50" aria-label="Monthly WhatsApp Inquiries">
                 </div>
                 <div class="calc-presets">
-                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="20" onclick="setInquiries(20)">20</button>
-                  <button type="button" class="calc-preset-btn calc-inq-preset active" data-val="35" onclick="setInquiries(35)">35</button>
-                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="50" onclick="setInquiries(50)">50</button>
+                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="30" onclick="setInquiries(30)">30</button>
+                  <button type="button" class="calc-preset-btn calc-inq-preset active" data-val="50" onclick="setInquiries(50)">50</button>
                   <button type="button" class="calc-preset-btn calc-inq-preset" data-val="80" onclick="setInquiries(80)">80</button>
+                  <button type="button" class="calc-preset-btn calc-inq-preset" data-val="120" onclick="setInquiries(120)">120</button>
                 </div>
               </div>
 
               <!-- Live Calculated Results -->
               <div class="calc-results-grid">
                 <div class="calc-result-box">
-                  <div class="calc-res-value" id="calc-appointments-val">+12 Visits</div>
+                  <div class="calc-res-value" id="calc-appointments-val">+20 Visits</div>
                   <div class="calc-res-label">Recovered Appointments</div>
                 </div>
                 <div class="calc-result-box">
-                  <div class="calc-res-value" id="calc-gross-val">+₹6,000</div>
+                  <div class="calc-res-value" id="calc-gross-val">+₹10,000</div>
                   <div class="calc-res-label">Gross Revenue Captured</div>
                 </div>
                 <div class="calc-result-box highlight">
-                  <div class="calc-res-value" id="calc-net-val">+₹3,501 / mo</div>
+                  <div class="calc-res-value" id="calc-net-val">+₹7,501 / mo</div>
                   <div class="calc-res-label">Net Clinic Profit</div>
                 </div>
               </div>
@@ -2498,14 +2498,16 @@
       if (!feeInput || !inquiriesInput) return;
       
       const fee = parseInt(feeInput.value, 10) || 500;
-      const inquiries = parseInt(inquiriesInput.value, 10) || 35;
+      const inquiries = parseInt(inquiriesInput.value, 10) || 50;
       
       if (feeDisplay) feeDisplay.textContent = '₹' + fee.toLocaleString('en-IN');
       if (inquiriesDisplay) inquiriesDisplay.textContent = inquiries + ' Inquiries';
       
-      // Clinical Math: 22% missed calls recovered + 12% no-shows saved (min 2)
-      const recoveredInquiries = Math.round(inquiries * 0.22);
-      const noShowsSaved = Math.max(2, Math.round(inquiries * 0.12));
+      // Clinical Math:
+      // 1. Instant 24/7 night & peak inquiry recovery: ~28%
+      // 2. Prevented missed visits via 24h & 2h reminders: ~12%
+      const recoveredInquiries = Math.round(inquiries * 0.28);
+      const noShowsSaved = Math.max(3, Math.round(inquiries * 0.12));
       const totalAppointments = recoveredInquiries + noShowsSaved;
       
       const grossRevenue = totalAppointments * fee;
@@ -2517,8 +2519,10 @@
       if (grossVal) grossVal.textContent = '+₹' + grossRevenue.toLocaleString('en-IN');
       
       if (netVal) {
-        if (netProfit >= 0) {
+        if (netProfit > 100) {
           netVal.textContent = '+₹' + netProfit.toLocaleString('en-IN') + ' / mo';
+        } else if (netProfit >= 0) {
+          netVal.textContent = '100% Cost Recovered';
         } else {
           netVal.textContent = '₹' + netProfit.toLocaleString('en-IN') + ' / mo';
         }
