@@ -449,52 +449,231 @@
       display: block;
     }
 
-    /* THE 4 DOCTOR SAFEGUARDS (Breathing Room Grid) */
-    .safeguards-container {
+    /* SECTION 2: CLINICAL SAFETY MATRIX (Demonstrative Security Console) */
+    .safety-matrix-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 18px;
       max-width: 900px;
       margin: 0 auto;
-    }
-
-    .safeguard-box {
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-left: 3px solid var(--color-wa);
-      border-radius: 8px;
-      padding: 22px;
       text-align: left;
     }
 
-    .safeguard-title {
-      font-family: var(--font-display) !important;
-      font-size: 1.05rem !important;
-      font-weight: 800 !important;
-      text-transform: uppercase !important;
-      color: #FFFFFF !important;
-      margin-bottom: 6px !important;
+    .safety-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color var(--transition-normal);
     }
 
-    .safeguard-text {
-      font-size: 0.86rem;
+    .safety-card:hover {
+      border-color: #404040;
+    }
+
+    .safety-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .safety-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
       color: var(--color-text-muted);
-      line-height: 1.5;
+      letter-spacing: 0.5px;
     }
 
-    /* REAL PROOF SECTION */
+    .safety-status-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .safety-status-tag.red {
+      color: #EF4444;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .safety-status-tag.green {
+      color: var(--color-wa);
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+
+    .safety-status-tag.blue {
+      color: #38BDF8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .safety-status-tag.purple {
+      color: #A855F7;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .safety-title {
+      font-family: var(--font-display) !important;
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin: 0 !important;
+    }
+
+    .safety-simulation-box {
+      background: #06080d;
+      border: 1px solid #1a2230;
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.82rem;
+    }
+
+    .sim-patient-row {
+      color: #CBD5E1;
+      display: flex;
+      gap: 6px;
+      line-height: 1.4;
+    }
+
+    .sim-label {
+      font-family: var(--font-mono);
+      font-size: 0.70rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .sim-ai-row {
+      display: flex;
+      gap: 6px;
+      line-height: 1.4;
+    }
+
+    .sim-ai-row.firewall {
+      color: #FCA5A5;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+
+    .sim-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sim-toggle-btn {
+      font-family: var(--font-mono);
+      font-size: 0.70rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+    }
+
+    .sim-toggle-btn.active {
+      color: var(--color-wa);
+      background: rgba(37, 211, 102, 0.15);
+      border-color: var(--color-wa);
+    }
+
+    .sim-toggle-btn.takeover {
+      color: #94A3B8;
+      background: #0B111A;
+    }
+
+    .sim-toggle-arrow {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    .sim-partner-row, .sim-phone-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta-icon-badge, .phone-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .meta-icon-badge {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38BDF8;
+    }
+
+    .phone-icon-badge {
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      color: #A855F7;
+    }
+
+    .sim-meta-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: #FFFFFF;
+      font-size: 0.86rem;
+    }
+
+    .sim-meta-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    .safety-outcome-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--color-wa);
+      line-height: 1.4;
+    }
+
+    /* SECTION 3: VERIFIED PRACTICE AUDIT DOSSIER */
     .proof-card {
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.15fr 0.85fr;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
       text-align: left;
       max-width: 900px;
       margin: 0 auto;
+    }
+
+    .proof-video-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .video-container {
@@ -510,7 +689,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.85;
+      opacity: 0.88;
       transition: transform 0.3s ease;
     }
 
@@ -544,42 +723,105 @@
       border: 0;
     }
 
-    .proof-content {
-      padding: 24px 28px 24px 0;
-    }
-
-    .proof-quote {
-      font-size: 1.05rem;
-      color: #FFFFFF;
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .doctor-meta {
+    .video-caption-bar {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      padding: 0 14px 10px 14px;
+    }
+
+    .video-live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #EF4444;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .proof-content {
+      padding: 24px 28px 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .proof-dossier-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .proof-badge-verified {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-wa);
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .proof-location-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+    }
+
+    .doctor-profile-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .doctor-avatar-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #182229;
+      border: 1.5px solid var(--color-wa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--color-wa);
     }
 
     .doctor-name {
       font-family: var(--font-display);
       font-weight: 700;
       color: #FFFFFF;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
     }
 
     .doctor-clinic {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--color-text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .proof-quote-box {
+      font-size: 0.96rem;
+      color: #FFFFFF;
+      line-height: 1.55;
+      padding-left: 12px;
+      border-left: 2px solid var(--color-wa);
+      font-style: italic;
     }
 
     .proof-metrics-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 10px;
       border-top: 1px solid var(--color-border);
-      padding-top: 16px;
+      padding-top: 14px;
       text-align: center;
     }
 
@@ -902,6 +1144,83 @@
       transform: rotate(45deg);
     }
 
+    .faq-sim-box {
+      background: #06080d;
+      border: 1px solid #1a2230;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.82rem;
+    }
+
+    .faq-sim-row {
+      display: flex;
+      gap: 6px;
+      line-height: 1.4;
+    }
+
+    .faq-sim-row.ai {
+      color: #A7F3D0;
+    }
+
+    .faq-sim-row.patient {
+      color: #CBD5E1;
+    }
+
+    .faq-sim-row.alert {
+      color: #FCA5A5;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+
+    .faq-sim-row.timeline {
+      color: #38BDF8;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+    }
+
+    .faq-sim-takeaway {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--color-wa);
+      margin-top: 6px;
+      display: block;
+    }
+
+    .pricing-roi-banner {
+      background: rgba(37, 211, 102, 0.08);
+      border: 1px solid rgba(37, 211, 102, 0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.80rem;
+      color: #ECFDF5;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .crm-stat-chip {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--color-wa);
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid rgba(37, 211, 102, 0.25);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 6px;
+    }
+
     /* RESPONSIVE: NATURAL STORY FLOW (NO CRIMPING) */
     @media (max-width: 900px) {
       body {
@@ -923,7 +1242,7 @@
         gap: 6px;
       }
 
-      .safeguards-container {
+      .safety-matrix-grid {
         grid-template-columns: 1fr;
         gap: 12px;
       }
@@ -1003,7 +1322,7 @@
         display: none;
       }
 
-      .safeguard-box {
+      .safety-card {
         padding: 16px 14px;
       }
 
@@ -1241,7 +1560,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: CLINICAL SAFETY (The 4 Fears Answered) -->
+    <!-- SECTION 2: CLINICAL SAFETY (Doctor Safeguard Matrix) -->
     <section id="safety" class="section">
       <div class="container">
         <div class="section-header">
@@ -1249,39 +1568,103 @@
           <span class="section-subtitle" style="font-family: var(--font-mono);">Engineered specifically for doctors. Zero clinical risk.</span>
         </div>
 
-        <div class="safeguards-container">
-          <div class="safeguard-box">
-            <h3 class="safeguard-title">Zero Medical Advice</h3>
-            <p class="safeguard-text">
-              Strictly programmed for front desk logistics only. It answers fees, hours, directions, and bookings. If a patient asks for prescriptions or medical diagnosis, it routes immediately to your clinic staff.
-            </p>
+        <div class="safety-matrix-grid">
+          
+          <!-- Safeguard 1: Medical Advice Firewall -->
+          <div class="safety-card">
+            <div class="safety-card-header">
+              <span class="safety-badge">SAFEGUARD 01</span>
+              <span class="safety-status-tag red">🛑 FIREWALL LOCKED</span>
+            </div>
+            <h3 class="safety-title">Zero Medical Advice</h3>
+            <div class="safety-simulation-box">
+              <div class="sim-patient-row">
+                <span class="sim-label">Patient:</span>
+                <span>Doctor, what medicine for viral fever?</span>
+              </div>
+              <div class="sim-ai-row firewall">
+                <span class="sim-label">AI Guardrail:</span>
+                <span>🛑 Only a doctor can prescribe medication. Please visit our clinic in person or call emergency staff.</span>
+              </div>
+            </div>
+            <div class="safety-outcome-tag">
+              ✓ Strictly answers fees, timings &amp; bookings only.
+            </div>
           </div>
 
-          <div class="safeguard-box">
-            <h3 class="safeguard-title">Keep Your Existing Number</h3>
-            <p class="safeguard-text">
-              Zero new SIM cards or confusing new numbers. We connect safely to your current clinic phone or landline within 48 hours.
-            </p>
+          <!-- Safeguard 2: 1-Click Staff Takeover -->
+          <div class="safety-card">
+            <div class="safety-card-header">
+              <span class="safety-badge">SAFEGUARD 02</span>
+              <span class="safety-status-tag green">🟢 LIVE INTERVENTION</span>
+            </div>
+            <h3 class="safety-title">1 Click Staff Takeover</h3>
+            <div class="safety-simulation-box">
+              <div class="sim-toggle-row">
+                <span class="sim-toggle-btn active">🤖 AI HANDLING</span>
+                <span class="sim-toggle-arrow">⇄</span>
+                <span class="sim-toggle-btn takeover">👤 STAFF TAKEOVER</span>
+              </div>
+              <div class="sim-ai-row takeover-note">
+                <span>Reception team sees every chat live on phone or desktop and can jump in anytime.</span>
+              </div>
+            </div>
+            <div class="safety-outcome-tag">
+              ✓ Staff can pause the AI receptionist with 1 tap.
+            </div>
           </div>
 
-          <div class="safeguard-box">
-            <h3 class="safeguard-title">Official Meta Cloud API</h3>
-            <p class="safeguard-text">
-              100% compliant with WhatsApp Business standards. Built on official Meta infrastructure, so your account has zero risk of bans.
-            </p>
+          <!-- Safeguard 3: Meta Official Cloud API -->
+          <div class="safety-card">
+            <div class="safety-card-header">
+              <span class="safety-badge">SAFEGUARD 03</span>
+              <span class="safety-status-tag blue">🔒 OFFICIAL CLOUD API</span>
+            </div>
+            <h3 class="safety-title">Official Meta Infrastructure</h3>
+            <div class="safety-simulation-box">
+              <div class="sim-partner-row">
+                <div class="meta-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div class="sim-meta-title">Official WhatsApp Business Cloud API</div>
+                  <div class="sim-meta-sub">Direct Meta server connection &middot; 99.9% uptime</div>
+                </div>
+              </div>
+            </div>
+            <div class="safety-outcome-tag">
+              ✓ 100% compliant with WhatsApp standards. Zero ban risk.
+            </div>
           </div>
 
-          <div class="safeguard-box">
-            <h3 class="safeguard-title">1 Click Staff Takeover</h3>
-            <p class="safeguard-text">
-              Your receptionist sees every message live on desktop or mobile. Any staff member can pause the AI and reply directly with one click.
-            </p>
+          <!-- Safeguard 4: Keep Existing Number -->
+          <div class="safety-card">
+            <div class="safety-card-header">
+              <span class="safety-badge">SAFEGUARD 04</span>
+              <span class="safety-status-tag purple">📞 EXISTING NUMBER</span>
+            </div>
+            <h3 class="safety-title">Keep Your Current Phone</h3>
+            <div class="safety-simulation-box">
+              <div class="sim-phone-row">
+                <div class="phone-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="sim-meta-title">Existing Clinic Landline or Mobile</div>
+                  <div class="sim-meta-sub">Connects safely in 48 hours without changing SIM</div>
+                </div>
+              </div>
+            </div>
+            <div class="safety-outcome-tag">
+              ✓ Keeps all your Google Maps and signboard numbers.
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: DOCTOR CASE STUDY -->
+    <!-- SECTION 3: DOCTOR CASE STUDY (Verified Practice Audit) -->
     <section id="proof" class="section">
       <div class="container">
         <div class="section-header">
@@ -1290,25 +1673,42 @@
         </div>
 
         <div class="proof-card">
-          <div class="video-container" onclick="playDoctorVideo(this)" role="button" tabindex="0" aria-label="Play Dr Sameer Case Study Video">
-            <img src="/assets/dr-sameer.webp" alt="Dr. Sameer Pediatrician Case Study" class="video-thumbnail-img" width="600" height="340" loading="lazy">
-            <div class="video-play-btn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="#000000"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          <!-- Video Column -->
+          <div class="proof-video-col">
+            <div class="video-container" onclick="playDoctorVideo(this)" role="button" tabindex="0" aria-label="Play Dr Sameer Case Study Video">
+              <img src="/assets/dr-sameer.webp" alt="Dr. Sameer Pediatrician Case Study" class="video-thumbnail-img" width="600" height="340" loading="lazy">
+              <div class="video-play-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#000000"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="video-caption-bar">
+              <span class="video-live-dot"></span>
+              <span>1 Min Case Study &middot; Dr. Sameer, Consultant Pediatrician</span>
             </div>
           </div>
 
+          <!-- Dossier Column -->
           <div class="proof-content">
-            <p class="proof-quote">
-              &ldquo;Patients used to message at 9 PM or on Sunday morning and we replied hours later. Now every single enquiry receives doctor fees and open slots in 3 seconds. It has added over 35 patient appointments every month.&rdquo;
-            </p>
+            <div class="proof-dossier-header">
+              <span class="proof-badge-verified">✓ VERIFIED CLINIC OUTCOME</span>
+              <span class="proof-location-tag">📍 Mind Body Recovery Clinic</span>
+            </div>
 
-            <div class="doctor-meta">
+            <div class="doctor-profile-row">
+              <div class="doctor-avatar-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
               <div>
                 <div class="doctor-name">Dr. Sameer</div>
-                <div class="doctor-clinic">Consultant Pediatrician &middot; Mind Body Recovery Clinic</div>
+                <div class="doctor-clinic">Consultant Pediatrician &middot; Mind Body Recovery</div>
               </div>
             </div>
 
+            <div class="proof-quote-box">
+              &ldquo;Patients used to message at 9 PM or on Sunday morning and we replied hours later. Now every single enquiry receives doctor fees and open slots in 3 seconds. It has added over 35 patient appointments every month.&rdquo;
+            </div>
+
+            <!-- Real Practice Outcomes -->
             <div class="proof-metrics-row">
               <div class="metric-box">
                 <strong>+38</strong>
@@ -1362,22 +1762,24 @@
           </picture>
         </div>
 
-        <!-- 3 Key Highlights Under CRM -->
+        <!-- 3 Practice Terminal Modules Under CRM -->
         <div class="crm-highlights-grid">
           <div class="crm-highlight-card">
             <div class="crm-highlight-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-wa)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
-            <h3 class="crm-highlight-title">Attended Revenue &amp; Funnel</h3>
+            <h3 class="crm-highlight-title">Attended Revenue Funnel</h3>
             <p class="crm-highlight-text">Track booked visits, attended consultations, and total recovered clinic revenue in real time.</p>
+            <span class="crm-stat-chip">₹51,700 Captured &middot; 83% Attended</span>
           </div>
 
           <div class="crm-highlight-card">
             <div class="crm-highlight-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-wa)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             </div>
-            <h3 class="crm-highlight-title">Full WhatsApp History</h3>
+            <h3 class="crm-highlight-title">Live Receptionist Inbox</h3>
             <p class="crm-highlight-text">Read patient conversation logs, review AI replies, and let your reception team step in anytime.</p>
+            <span class="crm-stat-chip">209 Leads Tracked &middot; 1 Tap Takeover</span>
           </div>
 
           <div class="crm-highlight-card">
@@ -1386,6 +1788,7 @@
             </div>
             <h3 class="crm-highlight-title">Live Patient Records &amp; CRM</h3>
             <p class="crm-highlight-text">Every patient lead, phone number, and appointment status is tracked directly inside your dedicated clinic CRM dashboard.</p>
+            <span class="crm-stat-chip">Zero Spreadsheet Mess &middot; Cloud Secured</span>
           </div>
         </div>
 
@@ -1401,6 +1804,10 @@
         </div>
 
         <div class="pricing-card-wrap">
+          <div class="pricing-roi-banner">
+            <span>💡 <strong>1 Recovered Appointment</strong> (~₹500 to ₹1,500) covers your monthly investment.</span>
+          </div>
+
           <span class="clinic-plan-badge">CLINIC FOUNDING PLAN</span>
 
           <div class="pricing-amount">
@@ -1484,43 +1891,82 @@
         </div>
 
         <div class="faq-container">
+          <!-- FAQ 1: Languages -->
           <div class="faq-item">
             <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
               <span>Can patients message in Tamil, Tanglish, or Hindi?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              Yes. The AI effortlessly comprehends conversational vernacular text and replies in the patient preferred language. For example, queries like <em>&ldquo;Dr eppo irupaanga?&rdquo;</em> or <em>&ldquo;Fees kitna hai?&rdquo;</em> are answered accurately.
+              Yes. The AI effortlessly comprehends natural conversational vernacular text and replies in the patient preferred language.
+              <div class="faq-sim-box">
+                <div class="faq-sim-row patient">
+                  <span class="sim-label">Patient:</span>
+                  <span>Dr eppo irupaanga? Fee evvalavu?</span>
+                </div>
+                <div class="faq-sim-row ai">
+                  <span class="sim-label">AI:</span>
+                  <span>Dr. Sameer nalaiku 2:30 PM irukaanga. Consultation fee ₹500. Shall I lock 2:30 PM for you?</span>
+                </div>
+              </div>
+              <span class="faq-sim-takeaway">✓ Speaks English, Tamil &amp; Hindi naturally. Zero language barrier.</span>
             </div>
           </div>
 
+          <!-- FAQ 2: Staff Replacement -->
           <div class="faq-item">
             <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
               <span>Does this replace our clinic reception staff?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              No. It assists your front desk by handling repetitive fee questions, night messages, and missed calls so staff can focus on welcoming in clinic patients and collecting billing.
+              No. It protects and assists your front desk by filtering repetitive fee inquiries, answering night messages, and capturing missed calls.
+              <div class="faq-sim-box">
+                <div class="faq-sim-row ai">
+                  <span>🤖 <strong>AI Receptionist:</strong> Handles 9 PM texts, consultation fees, Google directions &amp; auto reminders.</span>
+                </div>
+                <div class="faq-sim-row patient">
+                  <span>👤 <strong>Clinic Receptionist:</strong> Focuses on in clinic patients, doctor consultations &amp; fee collection.</span>
+                </div>
+              </div>
+              <span class="faq-sim-takeaway">✓ Front desk is never disturbed outside clinic working hours.</span>
             </div>
           </div>
 
+          <!-- FAQ 3: Medical Emergencies -->
           <div class="faq-item">
             <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
               <span>What if a patient asks a medical or emergency question?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              The AI recognizes medical symptoms and informs the patient that only a doctor can provide medical advice, immediately directing them to visit in person or calling your clinic emergency line.
+              The AI strictly adheres to clinical guardrails and never prescribes medicine or diagnoses symptoms.
+              <div class="faq-sim-box">
+                <div class="faq-sim-row alert">
+                  <span>🚨 <strong>Clinical Guardrail Triggered:</strong> Medical question detected &rarr; System routes patient immediately to clinic emergency telephone.</span>
+                </div>
+              </div>
+              <span class="faq-sim-takeaway">✓ 100% compliant. Zero medical advice given by AI.</span>
             </div>
           </div>
 
+          <!-- FAQ 4: Setup Timeline -->
           <div class="faq-item">
             <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
               <span>How fast does setup take?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              Complete done for you setup takes 48 hours. Boldlabs configures your clinic hours, fees, doctor availability, and Google Calendar sync. You do zero technical work.
+              Complete done for you setup takes 48 hours. Boldlabs handles all technical configuration.
+              <div class="faq-sim-box">
+                <div class="faq-sim-row timeline">
+                  <span>⏱️ <strong>Hour 0 to 24:</strong> We configure fees, clinic hours, doctor slots &amp; calendar sync.</span>
+                </div>
+                <div class="faq-sim-row timeline">
+                  <span>🚀 <strong>Hour 24 to 48:</strong> Connected safely to your existing clinic number and live tested.</span>
+                </div>
+              </div>
+              <span class="faq-sim-takeaway">✓ You do zero technical work. Ready in 48 hours.</span>
             </div>
           </div>
         </div>
