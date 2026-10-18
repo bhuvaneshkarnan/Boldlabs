@@ -27,10 +27,11 @@
   <meta property="twitter:description" content="Turn clinic WhatsApp enquiries into confirmed patient bookings 24/7. Instant replies, automated calendar booking, and zero missed patients.">
   <meta property="twitter:image" content="https://www.goboldlabs.com/og-image.png">
 
-  <!-- Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <!-- Google Fonts: Space Grotesk & JetBrains Mono (Identical to Home Page) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 
   <!-- JSON-LD Structured Data: SoftwareApplication & FAQPage -->
   <script type="application/ld+json">
@@ -69,7 +70,7 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Can we use our clinic's existing phone number, or do we need a new SIM card?",
+            "name": "Can we use our clinic existing phone number, or do we need a new SIM card?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Use your existing mobile or landline number with zero SIM changes. We connect your number safely within 48 hours."
@@ -93,7 +94,7 @@
           },
           {
             "@type": "Question",
-            "name": "Does this sync with our doctor's Google Calendar and send Google review requests?",
+            "name": "Does this sync with our doctor Google Calendar and send Google review requests?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Confirmed appointments automatically appear in your Google Calendar with instant WhatsApp notifications sent to both the patient and doctor."
@@ -136,599 +137,289 @@
   <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1041283338810010&ev=PageView&noscript=1"/></noscript>
 
   <style>
-    /* CSS RESET & MODERN TOKENS */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* Home Page Design System Extensions for Clinic Landing Page */
     :root {
-      --bg-dark: #07090E;
-      --bg-card: #0E131F;
-      --bg-card-hover: #141C2E;
-      --border-card: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(37, 211, 102, 0.4);
       --color-wa: #25D366;
       --color-wa-glow: rgba(37, 211, 102, 0.25);
-      --color-wa-dark: #128C7E;
-      --text-white: #FFFFFF;
-      --text-body: #CBD5E1;
-      --text-muted: #94A3B8;
-      --font-display: 'Space Grotesk', -apple-system, sans-serif;
-      --font-body: 'Inter', -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --radius-full: 9999px;
-      --container-width: 1140px;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      background-color: var(--bg-dark);
-      color: var(--text-body);
-      font-family: var(--font-body);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
     }
 
     body {
-      background-color: var(--bg-dark);
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-
-    /* Ambient Subtle Glow */
-    .bg-ambient-glow {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 1200px;
-      height: 600px;
-      background: radial-gradient(ellipse at 50% 10%, rgba(37, 211, 102, 0.12) 0%, rgba(7, 9, 14, 0) 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--container-width);
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* NAVIGATION */
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(7, 9, 14, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-card);
-      padding: 16px 0;
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand-logo {
+      background-color: var(--color-bg);
+      color: var(--color-text);
       font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.25rem;
-      color: var(--text-white);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      padding-top: 100px;
     }
 
-    .brand-tag {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      background: rgba(37, 211, 102, 0.15);
-      color: var(--color-wa);
-      padding: 2px 8px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(37, 211, 102, 0.3);
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav-link {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--text-white);
-    }
-
-    .nav-cta-btn {
-      background: var(--color-wa);
-      color: #000000;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.84rem;
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nav-cta-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px var(--color-wa-glow);
-    }
-
-    /* BUTTON SYSTEM (Enforcing Primary 52px / 48px rule) */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+    /* Primary CTA Button System: 52px Desktop / 48px Mobile Rule */
+    .cta-wa-primary {
+      background: var(--color-wa) !important;
+      color: #000000 !important;
+      border: 1.5px solid #000000 !important;
+      font-weight: 700 !important;
+      border-radius: 8px !important;
+      box-shadow: 4px 4px 0px #000000 !important;
+      font-size: 0.88rem !important;
+      padding: 0 24px !important;
+      font-family: var(--font-display) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      text-decoration: none !important;
       height: 52px !important;
-      padding: 0 28px;
-      background: var(--color-wa);
-      color: #000000;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 20px var(--color-wa-glow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box !important;
+      cursor: pointer !important;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal) !important;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    .cta-wa-primary:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 6px 6px 0px #000000 !important;
     }
 
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+    .cta-secondary-white {
+      background: #FFFFFF !important;
+      color: #000000 !important;
+      border: 1.5px solid #000000 !important;
+      font-weight: 700 !important;
+      border-radius: 8px !important;
+      box-shadow: 4px 4px 0px #000000 !important;
+      font-size: 0.88rem !important;
+      padding: 0 24px !important;
+      font-family: var(--font-display) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      text-decoration: none !important;
       height: 52px !important;
-      padding: 0 24px;
-      background: transparent;
-      color: var(--text-white);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.92rem;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      border: 1.5px solid rgba(255, 255, 255, 0.2);
-      transition: background 0.2s ease, border-color 0.2s ease;
+      box-sizing: border-box !important;
+      cursor: pointer !important;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal) !important;
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.4);
+    .cta-secondary-white:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 6px 6px 0px #000000 !important;
     }
 
-    /* HERO SECTION */
-    .hero-section {
-      padding: 56px 0 40px;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .eyebrow-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(37, 211, 102, 0.1);
-      border: 1px solid rgba(37, 211, 102, 0.3);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: var(--color-wa);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--color-wa);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--color-wa);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.2); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    .hero-headline {
-      font-family: var(--font-display);
-      font-size: 3rem;
-      font-weight: 800;
-      line-height: 1.12;
-      color: var(--text-white);
-      letter-spacing: -0.02em;
-      margin-bottom: 18px;
-    }
-
-    .text-highlight {
-      color: var(--color-wa);
-    }
-
-    .hero-subtitle {
-      font-size: 1.12rem;
-      color: var(--text-body);
-      line-height: 1.6;
-      max-width: 540px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .hero-trust-strip {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 18px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .trust-check {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .trust-check svg {
-      color: var(--color-wa);
-      flex-shrink: 0;
-    }
-
-    /* PHONE PREVIEW CARD */
-    .phone-card {
-      background: #0B0F19;
-      border: 1.5px solid var(--border-card);
-      border-radius: 28px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(37, 211, 102, 0.08);
+    /* Simulation Phone Card */
+    .sim-phone-wrap {
+      max-width: 460px;
+      margin: 32px auto 0;
+      background: #0c0c0c;
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
       overflow: hidden;
-      max-width: 380px;
-      margin: 0 auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      text-align: left;
     }
 
-    .phone-top-bar {
-      background: #111827;
+    .sim-top-bar {
+      background: #141414;
       padding: 12px 16px;
       display: flex;
       align-items: center;
       gap: 12px;
-      border-bottom: 1px solid var(--border-card);
+      border-bottom: 1px solid var(--color-border);
     }
 
-    .clinic-avatar {
+    .sim-avatar {
       width: 36px;
       height: 36px;
+      background: var(--color-wa);
+      color: #000000;
       border-radius: 50%;
-      background: rgba(37, 211, 102, 0.2);
-      border: 1.5px solid var(--color-wa);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--color-wa);
       font-family: var(--font-display);
       font-weight: 800;
       font-size: 0.85rem;
+      flex-shrink: 0;
     }
 
-    .clinic-info-name {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
+    .sim-name {
+      font-size: 0.92rem;
       font-weight: 700;
-      color: var(--text-white);
+      color: #FFFFFF;
+      line-height: 1.2;
     }
 
-    .clinic-info-status {
+    .sim-status {
       font-size: 0.72rem;
       color: var(--color-wa);
+      font-family: var(--font-mono);
       display: flex;
       align-items: center;
-      gap: 4px;
-      font-family: var(--font-mono);
+      gap: 6px;
     }
 
-    .chat-body {
-      padding: 20px 16px;
+    .sim-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--color-wa);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .sim-chat-body {
+      padding: 18px 14px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      background: radial-gradient(circle at center, rgba(14, 19, 31, 0.6) 0%, rgba(7, 9, 14, 0.95) 100%);
+      gap: 10px;
+      background: #080808;
     }
 
-    .chat-bubble {
+    .sim-bubble {
       max-width: 86%;
       padding: 10px 14px;
-      border-radius: 12px;
+      border-radius: 10px;
       font-size: 0.84rem;
       line-height: 1.45;
       position: relative;
     }
 
-    .bubble-patient {
+    .sim-bubble-patient {
+      background: #181c24;
+      color: #E2E8F0;
       align-self: flex-start;
-      background: #1E293B;
-      color: #F1F5F9;
       border-bottom-left-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .bubble-ai {
+    .sim-bubble-ai {
+      background: #0e2a1b;
+      color: #E8F5E9;
       align-self: flex-end;
-      background: #064E3B;
-      color: #ECFDF5;
       border-bottom-right-radius: 2px;
-      border: 1px solid rgba(37, 211, 102, 0.3);
+      border: 1px solid rgba(37, 211, 102, 0.25);
     }
 
-    .bubble-time {
+    .sim-time {
       font-size: 0.65rem;
-      color: rgba(255, 255, 255, 0.5);
+      color: #64748B;
+      font-family: var(--font-mono);
       text-align: right;
       margin-top: 4px;
-      font-family: var(--font-mono);
     }
 
-    .ticks {
-      color: #38BDF8;
-      margin-left: 3px;
-    }
-
-    .chat-badge-confirmed {
+    .sim-badge-locked {
       display: inline-block;
-      background: rgba(37, 211, 102, 0.2);
-      color: #6EE7B7;
+      background: var(--color-wa);
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 800;
       padding: 2px 6px;
       border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.74rem;
-      margin-bottom: 2px;
-    }
-
-    /* SECTION BASICS */
-    .section {
-      padding: 72px 0;
-      position: relative;
-    }
-
-    .section-border-top {
-      border-top: 1px solid var(--border-card);
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 48px;
-    }
-
-    .section-label {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: var(--color-wa);
-      letter-spacing: 0.1em;
+      margin-bottom: 4px;
       text-transform: uppercase;
-      display: block;
-      margin-bottom: 10px;
     }
 
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--text-white);
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* 3 STEP FLOW */
+    /* 3 Step Cards Layout */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
     }
 
-    .step-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-md);
-      padding: 32px 24px;
-      position: relative;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .step-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--border-accent);
-    }
-
-    .step-number {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--color-wa);
-      background: rgba(37, 211, 102, 0.1);
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      border: 1px solid rgba(37, 211, 102, 0.3);
-    }
-
-    .step-heading {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-white);
-      margin-bottom: 10px;
-    }
-
-    .step-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    /* BENTO OUTCOMES GRID */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .bento-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-md);
-      padding: 32px;
+    .custom-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 24px;
+      transition: transform var(--transition-normal), border-color var(--transition-normal);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: border-color 0.2s ease;
+      justify-content: flex-start;
+      text-align: left;
     }
 
-    .bento-card:hover {
-      border-color: var(--border-accent);
+    .custom-card:hover {
+      transform: translateY(-4px);
+      border-color: #404040;
     }
 
-    .bento-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(37, 211, 102, 0.12);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .card-step-num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       color: var(--color-wa);
-      margin-bottom: 18px;
-    }
-
-    .bento-heading {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--text-white);
       margin-bottom: 8px;
     }
 
-    .bento-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+    .card-heading {
+      font-family: var(--font-display) !important;
+      font-size: 1.1rem !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      color: #FFFFFF !important;
+      margin-bottom: 8px !important;
     }
 
-    /* DOCTOR GUARDRAILS SECTION (NO DOUBTS) */
-    .guardrails-wrapper {
-      background: linear-gradient(180deg, #0A0E18 0%, #0E1424 100%);
-      border: 1px solid rgba(37, 211, 102, 0.25);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-    }
-
-    .guardrails-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .guardrail-item {
-      padding: 16px;
-      border-left: 2px solid var(--color-wa);
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-
-    .guardrail-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-white);
-      margin-bottom: 6px;
-    }
-
-    .guardrail-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
       line-height: 1.5;
     }
 
-    /* REAL PROOF VIDEO CARD */
+    /* Bento Outcomes Grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+
+    .bento-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(37, 211, 102, 0.12);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-wa);
+      margin-bottom: 14px;
+      border: 1px solid rgba(37, 211, 102, 0.2);
+    }
+
+    /* Guardrails Grid */
+    .guardrails-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+
+    .guardrail-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-left: 3px solid var(--color-wa);
+      border-radius: 6px;
+      padding: 18px 16px;
+      text-align: left;
+    }
+
+    /* Proof Section Card */
     .proof-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
       overflow: hidden;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       align-items: center;
-      gap: 32px;
+      gap: 28px;
+      text-align: left;
     }
 
     .video-container {
       position: relative;
       width: 100%;
-      height: 320px;
+      aspect-ratio: 16 / 9;
       background: #000000;
       cursor: pointer;
       overflow: hidden;
@@ -751,14 +442,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 64px;
-      height: 64px;
+      width: 58px;
+      height: 58px;
       background: var(--color-wa);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 30px var(--color-wa-glow);
+      box-shadow: 0 0 25px var(--color-wa-glow);
       transition: transform 0.2s ease;
     }
 
@@ -773,153 +464,157 @@
     }
 
     .proof-content {
-      padding: 32px 32px 32px 0;
+      padding: 24px 28px 24px 0;
     }
 
     .proof-quote {
-      font-size: 1.1rem;
-      color: var(--text-white);
+      font-size: 1.05rem;
+      color: #FFFFFF;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .doctor-meta {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .doctor-name {
       font-family: var(--font-display);
       font-weight: 700;
-      color: var(--text-white);
+      color: #FFFFFF;
       font-size: 0.95rem;
     }
 
     .doctor-clinic {
       font-size: 0.8rem;
-      color: var(--text-muted);
+      color: var(--color-text-muted);
     }
 
     .proof-metrics-row {
-      display: flex;
-      gap: 24px;
-      border-top: 1px solid var(--border-card);
-      padding-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid var(--color-border);
+      padding-top: 16px;
+      text-align: center;
     }
 
     .metric-box strong {
       display: block;
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       color: var(--color-wa);
       line-height: 1;
       margin-bottom: 4px;
     }
 
     .metric-box span {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
       font-family: var(--font-mono);
     }
 
-    /* TRANSPARENT PRICING SECTION */
+    /* Pricing Section */
     .pricing-card-wrap {
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
-      background: var(--bg-card);
-      border: 1.5px solid var(--border-accent);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--color-wa-glow);
+      background: var(--color-bg-card);
+      border: 1.5px solid var(--color-wa);
+      border-radius: 12px;
+      padding: 36px 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--color-wa-glow);
       text-align: center;
     }
 
-    .pricing-badge {
+    .clinic-plan-badge {
       display: inline-block;
       background: rgba(37, 211, 102, 0.15);
       color: var(--color-wa);
       border: 1px solid rgba(37, 211, 102, 0.3);
-      padding: 4px 14px;
-      border-radius: var(--radius-full);
+      padding: 4px 12px;
+      border-radius: 4px;
       font-family: var(--font-mono);
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .pricing-amount {
       font-family: var(--font-display);
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       font-weight: 800;
-      color: var(--text-white);
+      color: #FFFFFF;
       line-height: 1;
       margin-bottom: 8px;
     }
 
     .pricing-period {
-      font-size: 1rem;
-      color: var(--text-muted);
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
       font-weight: 400;
     }
 
     .pricing-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 28px;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+      font-family: var(--font-mono);
     }
 
     .pricing-features-list {
       list-style: none;
       text-align: left;
-      margin: 0 auto 32px;
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      margin: 0 auto 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
     }
 
     .pricing-features-list li {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.92rem;
-      color: var(--text-white);
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: #FFFFFF;
     }
 
     .pricing-features-list li svg {
       color: var(--color-wa);
       flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    /* DIRECT QUALIFYING FORM */
+    /* Direct Qualifying Form */
     .lead-form-box {
-      background: #090D16;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      margin-bottom: 20px;
+      background: #06080d;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 18px;
+      text-align: left;
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
     .input-field {
       width: 100%;
-      height: 48px;
-      background: #0E131F;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-sm);
-      padding: 0 14px;
-      color: var(--text-white);
-      font-family: var(--font-body);
-      font-size: 0.9rem;
+      height: 46px;
+      background: #0d111a;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0 12px;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 0.88rem;
       outline: none;
       transition: border-color 0.2s ease;
     }
@@ -936,37 +631,30 @@
       color: #EF4444;
       font-size: 0.72rem;
       font-family: var(--font-mono);
-      text-align: left;
       margin-top: 4px;
       display: none;
     }
 
-    .guarantee-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 14px;
-      font-family: var(--font-mono);
-    }
-
-    /* FAQ ACCORDION */
+    /* FAQ Section */
     .faq-container {
       max-width: 720px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
+      text-align: left;
     }
 
     .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-md);
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
       overflow: hidden;
       transition: border-color 0.2s ease;
     }
 
     .faq-item:hover {
-      border-color: var(--border-strong);
+      border-color: #404040;
     }
 
     .faq-question-btn {
@@ -974,16 +662,16 @@
       text-align: left;
       background: none;
       border: none;
-      padding: 20px 24px;
-      color: var(--text-white);
+      padding: 18px 20px;
+      color: #FFFFFF;
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
 
     .faq-icon {
@@ -994,10 +682,10 @@
     }
 
     .faq-answer {
-      padding: 0 24px 20px;
-      color: var(--text-body);
-      font-size: 0.92rem;
-      line-height: 1.6;
+      padding: 0 20px 18px;
+      color: #CBD5E1;
+      font-size: 0.88rem;
+      line-height: 1.55;
       display: none;
     }
 
@@ -1009,421 +697,149 @@
       transform: rotate(45deg);
     }
 
-    /* FOOTER */
-    .footer {
-      background: #030407;
-      border-top: 1px solid var(--border-card);
-      padding: 48px 0 24px;
-      font-size: 0.84rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr 1fr;
-      gap: 32px;
-      margin-bottom: 32px;
-    }
-
-    .footer-brand-title {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--text-white);
-      margin-bottom: 8px;
-    }
-
-    .footer-desc {
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 14px;
-      font-size: 0.82rem;
-    }
-
-    .footer-nap {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: #CBD5E1;
-      line-height: 1.6;
-      border-left: 2px solid var(--color-wa);
-      padding-left: 10px;
-    }
-
-    .footer-nap a {
-      color: var(--color-wa);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .footer-col-title {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
-      color: var(--text-white);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover {
-      color: var(--text-white);
-    }
-
-    .footer-bottom-bar {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      font-family: var(--font-mono);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* RESPONSIVE BREAKPOINTS (Mobile-First 2-Column Optimization) */
+    /* RESPONSIVE: MOBILE 2-COLUMN LAYOUT SYSTEM */
     @media (max-width: 900px) {
-      .nav-links a.nav-link {
-        display: none;
+      body {
+        padding-top: 80px;
       }
 
-      .nav-cta-btn {
-        padding: 8px 14px;
-        font-size: 0.78rem;
-      }
-
-      .hero-section {
-        padding: 44px 0 32px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        text-align: center;
-      }
-
-      .eyebrow-pill {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-subtitle {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .hero-trust-strip {
-        justify-content: center;
+      .hero {
+        padding: 24px 0 36px;
       }
 
       .section {
-        padding: 48px 0;
+        padding: 44px 0;
       }
 
       .section-header {
-        margin: 0 auto 32px;
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
       }
 
-      .section-title {
-        font-size: 1.85rem;
-      }
-
-      /* 2-COLUMN OPTIMIZATION ON MOBILE & TABLET */
+      /* 2 COLUMNS ON TABLET / MOBILE FOR STEPS */
       .steps-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 14px;
+        gap: 12px;
       }
 
-      .step-card {
-        padding: 20px 16px;
-      }
-
-      .step-card:last-child {
+      .custom-card:last-child {
         grid-column: span 2;
       }
 
+      /* 2 COLUMNS FOR BENTO */
       .bento-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-
-      .bento-card {
-        padding: 22px 18px;
-      }
-
-      .guardrails-wrapper {
-        padding: 28px 20px;
-      }
-
-      .guardrails-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
       }
 
-      .proof-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
+      /* 2 COLUMNS FOR GUARDRAILS */
+      .guardrails-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
 
-      .video-container {
-        height: auto;
-        aspect-ratio: 16 / 9;
+      /* PROOF STACK */
+      .proof-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
 
       .proof-content {
-        padding: 0 20px 20px;
+        padding: 0 16px 20px;
       }
 
-      .proof-metrics-row {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        text-align: center;
+      /* PRICING */
+      .pricing-card-wrap {
+        padding: 24px 16px;
       }
 
       .pricing-features-list {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 12px 16px;
-        max-width: 100%;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px 16px;
-      }
-
-      .footer-grid > div:first-child {
-        grid-column: 1 / -1;
+        gap: 8px 10px;
       }
     }
 
     @media (max-width: 640px) {
-      .hero-section {
-        padding: 32px 0 24px;
+      .container {
+        padding: 0 14px;
       }
 
-      .hero-headline {
+      .hero-title {
         font-size: 1.95rem;
         line-height: 1.15;
       }
 
       .hero-subtitle {
         font-size: 0.92rem;
-        line-height: 1.5;
         margin-bottom: 20px;
       }
 
-      .btn-primary, .btn-secondary {
-        width: 100%;
+      .cta-wa-primary, .cta-secondary-white {
+        width: 100% !important;
         height: 48px !important;
       }
 
-      .hero-trust-strip {
-        gap: 8px 12px;
-        font-size: 0.72rem;
-      }
-
-      .phone-card {
-        padding: 14px 12px;
-      }
-
-      .chat-body {
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
         gap: 8px;
       }
 
-      .chat-bubble {
-        padding: 9px 12px;
-        font-size: 0.8rem;
-        margin-bottom: 4px;
-      }
-
-      .section {
-        padding: 38px 0;
-      }
-
-      .section-header {
-        margin: 0 auto 22px;
-      }
-
-      .section-title {
-        font-size: 1.55rem;
-      }
-
-      .section-subtitle {
-        font-size: 0.85rem;
-      }
-
-      /* 2-COLUMN LAYOUT FOR STEPS ON PHONES */
-      .steps-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .step-card {
+      .custom-card {
         padding: 14px 12px;
       }
 
-      .step-number {
-        width: 26px;
-        height: 26px;
-        font-size: 0.7rem;
-        margin-bottom: 8px;
-      }
-
-      .step-heading {
-        font-size: 0.9rem;
+      .card-step-num {
+        font-size: 0.75rem;
         margin-bottom: 4px;
       }
 
-      .step-desc {
+      .card-heading {
+        font-size: 0.88rem !important;
+        margin-bottom: 4px !important;
+      }
+
+      .card-desc {
         font-size: 0.74rem;
         line-height: 1.35;
       }
 
-      .step-card:last-child {
-        grid-column: span 2;
-      }
-
-      /* 2-COLUMN LAYOUT FOR BENTO OUTCOMES ON PHONES */
       .bento-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .bento-card {
-        padding: 14px 12px;
+        gap: 8px;
       }
 
       .bento-icon {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 10px;
-      }
-
-      .bento-icon svg {
-        width: 17px;
-        height: 17px;
-      }
-
-      .bento-heading {
-        font-size: 0.88rem;
-        line-height: 1.25;
-        margin-bottom: 5px;
-      }
-
-      .bento-desc {
-        font-size: 0.74rem;
-        line-height: 1.35;
-      }
-
-      /* 2-COLUMN LAYOUT FOR GUARDRAILS ON PHONES */
-      .guardrails-wrapper {
-        padding: 20px 14px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
       }
 
       .guardrails-grid {
         grid-template-columns: 1fr 1fr;
         gap: 8px;
-        margin-top: 18px;
       }
 
-      .guardrail-item {
+      .guardrail-card {
         padding: 10px 8px;
-      }
-
-      .guardrail-title {
-        font-size: 0.82rem;
-        margin-bottom: 4px;
-      }
-
-      .guardrail-desc {
-        font-size: 0.72rem;
-        line-height: 1.35;
-      }
-
-      /* PROOF SECTION */
-      .proof-card {
-        border-radius: var(--radius-md);
-      }
-
-      .proof-content {
-        padding: 0 16px 18px;
-      }
-
-      .proof-quote {
-        font-size: 0.88rem;
-        line-height: 1.5;
-        margin-bottom: 12px;
-      }
-
-      .doctor-meta {
-        margin-bottom: 14px;
-      }
-
-      .proof-metrics-row {
-        gap: 6px;
-        padding-top: 14px;
-      }
-
-      .metric-box strong {
-        font-size: 1.25rem;
-      }
-
-      .metric-box span {
-        font-size: 0.68rem;
-      }
-
-      /* 2-COLUMN LAYOUT FOR PRICING FEATURES ON PHONES */
-      .pricing-card-wrap {
-        padding: 22px 14px;
       }
 
       .pricing-amount {
         font-size: 2.6rem;
       }
 
-      .pricing-subtitle {
-        font-size: 0.8rem;
+      .pricing-features-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 8px;
         margin-bottom: 18px;
       }
 
-      .pricing-features-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px 10px;
-        margin-bottom: 20px;
-      }
-
       .pricing-features-list li {
-        font-size: 0.75rem;
+        font-size: 0.74rem;
         gap: 6px;
-        align-items: flex-start;
       }
 
-      .pricing-features-list li svg {
-        width: 14px;
-        height: 14px;
-        margin-top: 2px;
-      }
-
-      /* 2-COLUMN LAYOUT FOR FORM INPUTS ON PHONES */
       .form-row {
         grid-template-columns: 1fr 1fr;
         gap: 8px;
@@ -1431,139 +847,121 @@
 
       .input-field {
         height: 44px;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         padding: 0 10px;
       }
 
       .lead-form-box {
-        padding: 16px 12px;
+        padding: 14px 10px;
       }
 
-      /* FAQ ON PHONES */
       .faq-question-btn {
-        padding: 13px 16px;
-        font-size: 0.9rem;
+        padding: 13px 14px;
+        font-size: 0.88rem;
       }
 
       .faq-answer {
-        padding: 0 16px 14px;
-        font-size: 0.82rem;
-      }
-
-      /* FOOTER */
-      .footer {
-        padding: 34px 0 20px;
+        padding: 0 14px 12px;
+        font-size: 0.8rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-ambient-glow" aria-hidden="true"></div>
-
-  <!-- NAVIGATION -->
-  <header class="site-nav">
-    <div class="container nav-inner">
-      <a href="/" class="brand-logo">
-        BOLDLABS
-        <span class="brand-tag">CLINICS</span>
+  <!-- Floating Navigation Bar (Identical to Home Page) -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <a href="/" class="navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="/logo-transparent.png" alt="Boldlabs" style="height: 36px; width: auto; display: block;" />
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
+      <span>MENU</span>
+      <span class="menu-icon">☰</span>
+    </button>
+    
+    <div class="nav-links" id="navbar-links-container">
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#how-it-works">How It Works</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#outcomes">Outcomes</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#proof">Proof</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#pricing">Pricing</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="#faq">FAQ</a>
+      <span class="navbar-divider" aria-hidden="true">|</span>
+      <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." target="_blank" rel="noopener noreferrer" class="pill-btn" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 8px; background: #25D366; color: #000000; border: 1.5px solid #000000; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
+        <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        TEST DEMO
       </a>
-
-      <div class="nav-links">
-        <a href="#how-it-works" class="nav-link">How It Works</a>
-        <a href="#outcomes" class="nav-link">Outcomes</a>
-        <a href="#proof" class="nav-link">Proof</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          TEST DEMO
-        </a>
-      </div>
     </div>
-  </header>
+  </nav>
 
-  <main>
+  <!-- Main Content -->
+  <main id="main-content">
 
-    <!-- SECTION 1: HERO (Clear Outcome, Zero Essay, High Converting) -->
-    <section class="hero-section">
-      <div class="container hero-grid">
-        
-        <div>
-          <div class="eyebrow-pill">
-            <span class="pulse-dot"></span>
-            24/7 WhatsApp AI Receptionist for Clinics
-          </div>
+    <!-- Hero Section (Same Design & Layout as Home Page) -->
+    <section id="home" class="hero">
+      <div class="container">
+        <span class="section-subtitle" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: var(--space-xs);">
+          BOLDLABS &middot; 24/7 WHATSAPP AI RECEPTIONIST FOR CLINICS
+        </span>
+        <h1 class="hero-title" style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">
+          NEVER LOSE ANOTHER PATIENT ON <span style="color: #25D366;">WHATSAPP</span>.
+        </h1>
+        <p class="hero-subtitle" style="color: var(--color-text-muted); font-size: 1.05rem; max-width: 680px; margin: 0 auto var(--space-lg); line-height: 1.5;">
+          Answers consultation fees, doctor timings, and locks appointments directly into your Google Calendar in 3 seconds. Day and night.
+        </p>
 
-          <h1 class="hero-headline">
-            Never Lose Another Patient on <span class="text-highlight">WhatsApp</span>.
-          </h1>
-
-          <p class="hero-subtitle">
-            Answers consultation fees, doctor timings, and locks appointments directly into your Google Calendar in 3 seconds. Day and night.
-          </p>
-
-          <div class="hero-actions">
-            <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." target="_blank" rel="noopener noreferrer" class="btn-primary" id="hero-wa-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              TEST LIVE ON WHATSAPP →
-            </a>
-            <a href="#pricing" class="btn-secondary">
-              SEE PRICING &amp; SETUP →
-            </a>
-          </div>
-
-          <div class="hero-trust-strip">
-            <span class="trust-check">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Official Meta Cloud API
-            </span>
-            <span class="trust-check">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Keep Existing Number
-            </span>
-            <span class="trust-check">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              48 Hour Live Setup
-            </span>
-          </div>
+        <div class="hero-cta-wrapper" style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: var(--space-md);">
+          <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." target="_blank" rel="noopener noreferrer" class="cta-wa-primary" id="hero-wa-btn">
+            <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            TEST LIVE ON WHATSAPP →
+          </a>
+          <a href="#pricing" class="cta-secondary-white">
+            SEE PRICING &amp; SETUP →
+          </a>
         </div>
 
-        <!-- Sleek Interactive WhatsApp Simulation Card -->
-        <div>
-          <div class="phone-card">
-            <div class="phone-top-bar">
-              <div class="clinic-avatar">BK</div>
-              <div>
-                <div class="clinic-info-name">Care Clinic Receptionist</div>
-                <div class="clinic-info-status">
-                  <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
-                  Replies in 3s · 24 Hours Active
-                </div>
+        <p style="font-size: 0.75rem; color: var(--color-text-muted); font-family: var(--font-mono); margin-bottom: var(--space-lg);">
+          ✓ Official Meta Cloud API &nbsp;&bull;&nbsp; ✓ Keep Existing Number &nbsp;&bull;&nbsp; ✓ 48 Hour Live Setup
+        </p>
+
+        <!-- Compact Interactive WhatsApp Simulation Card -->
+        <div class="sim-phone-wrap">
+          <div class="sim-top-bar">
+            <div class="sim-avatar">BK</div>
+            <div>
+              <div class="sim-name">Care Clinic Receptionist</div>
+              <div class="sim-status">
+                <span class="sim-dot"></span>
+                Replies in 3s &middot; 24 Hours Active
               </div>
             </div>
+          </div>
 
-            <div class="chat-body">
-              <div class="chat-bubble bubble-patient">
-                Hi doctor, consultation fee evvalavu? Any slot tomorrow afternoon?
-                <div class="bubble-time">10:42 AM <span class="ticks">✓✓</span></div>
-              </div>
+          <div class="sim-chat-body">
+            <div class="sim-bubble sim-bubble-patient">
+              Hi doctor, consultation fee evvalavu? Any slot tomorrow afternoon?
+              <div class="sim-time">10:42 AM ✓✓</div>
+            </div>
 
-              <div class="chat-bubble bubble-ai">
-                Hello! 👋 Consultation is ₹500. Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would 2:30 PM suit you?
-                <div class="bubble-time">10:42 AM <span class="ticks">✓✓</span></div>
-              </div>
+            <div class="sim-bubble sim-bubble-ai">
+              Hello! 👋 Consultation is ₹500. Dr. Sameer has open slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would 2:30 PM suit you?
+              <div class="sim-time">10:42 AM ✓✓</div>
+            </div>
 
-              <div class="chat-bubble bubble-patient">
-                2:30 PM works for me!
-                <div class="bubble-time">10:43 AM <span class="ticks">✓✓</span></div>
-              </div>
+            <div class="sim-bubble sim-bubble-patient">
+              2:30 PM works for me!
+              <div class="sim-time">10:43 AM ✓✓</div>
+            </div>
 
-              <div class="chat-bubble bubble-ai">
-                <span class="chat-badge-confirmed">APPOINTMENT CONFIRMED</span><br>
-                Booked for <strong>Tomorrow at 2:30 PM</strong>! 📍 Location &amp; Google Calendar invite sent. We will text a reminder 2 hours before your visit.
-                <div class="bubble-time">10:43 AM <span class="ticks">✓✓</span></div>
-              </div>
+            <div class="sim-bubble sim-bubble-ai">
+              <span class="sim-badge-locked">APPOINTMENT CONFIRMED</span><br>
+              Booked for <strong>Tomorrow at 2:30 PM</strong>! 📍 Location &amp; Google Calendar invite sent. We will text a reminder 2 hours before your visit.
+              <div class="sim-time">10:43 AM ✓✓</div>
             </div>
           </div>
         </div>
@@ -1571,38 +969,36 @@
       </div>
     </section>
 
-    <!-- SECTION 2: 3 STEP WORKFLOW (Instant Understanding) -->
-    <section class="section section-border-top" id="how-it-works">
+    <!-- SECTION 2: HOW IT WORKS (Same Layout as Home Page) -->
+    <section id="how-it-works" class="section">
       <div class="container">
-        
         <div class="section-header">
-          <span class="section-label">HOW IT WORKS</span>
-          <h2 class="section-title">From Patient Message to Confirmed Visit in 3 Steps</h2>
-          <p class="section-subtitle">Zero complicated software for your clinic staff. Operates entirely inside WhatsApp.</p>
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">HOW IT WORKS.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">From patient message to confirmed visit in 3 steps.</span>
         </div>
 
         <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h3 class="step-heading">Patient Messages Your WhatsApp</h3>
-            <p class="step-desc">
-              Patient reaches out inquiring about doctor availability, consultation fees, or directions.
+          <div class="custom-card">
+            <span class="card-step-num">01</span>
+            <h3 class="card-heading">Patient Messages</h3>
+            <p class="card-desc">
+              Patient reaches out inquiring about doctor availability, consultation fees, or directions on WhatsApp.
             </p>
           </div>
 
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h3 class="step-heading">AI Replies in 3 Seconds</h3>
-            <p class="step-desc">
-              Instantly answers fee details in English, Tamil, or Hindi, checks doctor schedule, and suggests open slots.
+          <div class="custom-card">
+            <span class="card-step-num">02</span>
+            <h3 class="card-heading">AI Replies in 3s</h3>
+            <p class="card-desc">
+              Instantly answers in Tamil or English, checks doctor schedule, and suggests open consultation slots.
             </p>
           </div>
 
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h3 class="step-heading">Locked in Google Calendar</h3>
-            <p class="step-desc">
-              The booking appears directly on your doctor calendar. Automated reminders fire 24h and 2h prior to cut missed visits.
+          <div class="custom-card">
+            <span class="card-step-num">03</span>
+            <h3 class="card-heading">Calendar Confirmed</h3>
+            <p class="card-desc">
+              Appears directly on your doctor calendar with automated WhatsApp reminders 24h and 2h prior to cut missed visits.
             </p>
           </div>
         </div>
@@ -1610,120 +1006,101 @@
       </div>
     </section>
 
-    <!-- SECTION 3: 4 CORE OUTCOMES (Bento Grid) -->
-    <section class="section section-border-top" id="outcomes">
+    <!-- SECTION 3: CLINIC OUTCOMES (Bento Grid) -->
+    <section id="outcomes" class="section">
       <div class="container">
-
         <div class="section-header">
-          <span class="section-label">CLINIC OUTCOMES</span>
-          <h2 class="section-title">Everything Built to Grow Your Patient Volume</h2>
-          <p class="section-subtitle">Replaces lost phone calls and delayed responses with instant automated conversions.</p>
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">CLINIC OUTCOMES.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">Everything built to grow your patient volume.</span>
         </div>
 
         <div class="bento-grid">
-          <div class="bento-card">
-            <div>
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              </div>
-              <h3 class="bento-heading">Instant 3 Second Response 24/7</h3>
-              <p class="bento-desc">
-                Patients who wait more than 5 minutes for a reply message another clinic. Your AI receptionist responds in 3 seconds, day and night, including Sundays.
-              </p>
+          <div class="custom-card">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
-          </div>
-
-          <div class="bento-card">
-            <div>
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-              </div>
-              <h3 class="bento-heading">Calendar Booking &amp; Timed Reminders</h3>
-              <p class="bento-desc">
-                Syncs directly with Google Calendar so staff never double book. Automated WhatsApp reminders 24h and 2h before consultation cut patient missed visits by 60%.
-              </p>
-            </div>
-          </div>
-
-          <div class="bento-card">
-            <div>
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <h3 class="bento-heading">Fluent English, Tamil &amp; Hindi</h3>
-              <p class="bento-desc">
-                Patients type naturally in Tanglish or Hinglish like <em>&ldquo;Dr eppo irupaanga?&rdquo;</em> or <em>&ldquo;Tomorrow evening appointment chahiye&rdquo;</em>. The AI understands intent instantly.
-              </p>
-            </div>
-          </div>
-
-          <div class="bento-card">
-            <div>
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </div>
-              <h3 class="bento-heading">Missed Call WhatsApp Recovery</h3>
-              <p class="bento-desc">
-                When your front desk line is busy or staff is attending a patient, callers automatically receive a WhatsApp booking message within 5 seconds to recover the booking.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 4: DOCTOR GUARDRAILS (ZERO DOUBTS) -->
-    <section class="section section-border-top">
-      <div class="container">
-        
-        <div class="guardrails-wrapper">
-          <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            <span class="section-label">CLINICAL SAFETY</span>
-            <h2 class="section-title" style="font-size: 1.85rem;">Engineered for Doctor Trust. Zero Clinical Risk.</h2>
-            <p class="section-subtitle" style="font-size: 0.92rem;">
-              The AI handles front desk logistics only. Your doctors handle patient medicine.
+            <h3 class="card-heading">Instant 3s Response 24/7</h3>
+            <p class="card-desc">
+              Patients who wait more than 5 minutes for a reply message another clinic. Your AI receptionist responds in 3 seconds, day and night, including Sundays.
             </p>
           </div>
 
-          <div class="guardrails-grid">
-            <div class="guardrail-item">
-              <h4 class="guardrail-title">Zero Medical Advice</h4>
-              <p class="guardrail-desc">Strictly programmed to never diagnose or prescribe. Clinical queries are routed to doctor staff.</p>
+          <div class="custom-card">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             </div>
+            <h3 class="card-heading">Calendar Sync &amp; Reminders</h3>
+            <p class="card-desc">
+              Syncs directly with Google Calendar so staff never double book. Automated WhatsApp reminders 24h and 2h before consultation cut patient missed visits by 60%.
+            </p>
+          </div>
 
-            <div class="guardrail-item">
-              <h4 class="guardrail-title">Keep Existing Number</h4>
-              <p class="guardrail-desc">Connects safely to your current clinic phone or landline. Zero new SIM cards required.</p>
+          <div class="custom-card">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             </div>
+            <h3 class="card-heading">Fluent English, Tamil &amp; Hindi</h3>
+            <p class="card-desc">
+              Patients type naturally in Tanglish or Hinglish like <em>&ldquo;Dr eppo irupaanga?&rdquo;</em> or <em>&ldquo;Tomorrow evening appointment chahiye&rdquo;</em>. Intent is understood instantly.
+            </p>
+          </div>
 
-            <div class="guardrail-item">
-              <h4 class="guardrail-title">Official Meta Cloud API</h4>
-              <p class="guardrail-desc">100% compliant with WhatsApp Business standards. Zero risk of account suspension.</p>
+          <div class="custom-card">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
-
-            <div class="guardrail-item">
-              <h4 class="guardrail-title">1 Click Staff Takeover</h4>
-              <p class="guardrail-desc">Receptionist can view chats live and intervene at any moment with a single click.</p>
-            </div>
+            <h3 class="card-heading">Missed Call WhatsApp Recovery</h3>
+            <p class="card-desc">
+              When your front desk line is busy or staff is attending a patient, callers automatically receive a WhatsApp booking message within 5 seconds to recover the visit.
+            </p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION 5: REAL DOCTOR PROOF (Dr. Sameer Video Case Study) -->
-    <section class="section section-border-top" id="proof">
+    <!-- SECTION 4: CLINICAL SAFETY (Doctor Guardrails) -->
+    <section class="section">
       <div class="container">
-
         <div class="section-header">
-          <span class="section-label">DOCTOR CASE STUDY</span>
-          <h2 class="section-title">Active with Indian Healthcare Practices</h2>
-          <p class="section-subtitle">Real results from live clinics using the Boldlabs WhatsApp automation.</p>
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">CLINICAL SAFETY.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">Engineered for doctor trust. Zero clinical risk.</span>
+        </div>
+
+        <div class="guardrails-grid">
+          <div class="guardrail-card">
+            <h4 class="card-heading" style="font-size: 0.95rem !important;">Zero Medical Advice</h4>
+            <p class="card-desc">Strictly programmed to never diagnose or prescribe. Clinical queries are routed to doctor staff.</p>
+          </div>
+
+          <div class="guardrail-card">
+            <h4 class="card-heading" style="font-size: 0.95rem !important;">Keep Existing Number</h4>
+            <p class="card-desc">Connects safely to your current clinic phone or landline. Zero new SIM cards required.</p>
+          </div>
+
+          <div class="guardrail-card">
+            <h4 class="card-heading" style="font-size: 0.95rem !important;">Official Meta Cloud API</h4>
+            <p class="card-desc">100% compliant with WhatsApp Business standards. Zero risk of account suspension.</p>
+          </div>
+
+          <div class="guardrail-card">
+            <h4 class="card-heading" style="font-size: 0.95rem !important;">1 Click Staff Takeover</h4>
+            <p class="card-desc">Receptionist can view chats live and intervene at any moment with a single click.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: DOCTOR PROOF (Dr. Sameer Video Case Study) -->
+    <section id="proof" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">DOCTOR PROOF.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">Active with Indian healthcare practices.</span>
         </div>
 
         <div class="proof-card">
-          <!-- Video Container with Lazy Load & One-Click Play -->
           <div class="video-container" onclick="playDoctorVideo(this)" role="button" tabindex="0" aria-label="Play Dr Sameer Case Study Video">
             <img src="/assets/dr-sameer.webp" alt="Dr. Sameer Pediatrician Case Study" class="video-thumbnail-img" width="600" height="340" loading="lazy">
             <div class="video-play-btn">
@@ -1763,18 +1140,16 @@
       </div>
     </section>
 
-    <!-- SECTION 6: TRANSPARENT PRICING & DIRECT QUALIFYING FORM -->
-    <section class="section section-border-top" id="pricing">
+    <!-- SECTION 6: PRICING & DIRECT FORM -->
+    <section id="pricing" class="section">
       <div class="container">
-
         <div class="section-header">
-          <span class="section-label">TRANSPARENT PRICING</span>
-          <h2 class="section-title">One Clear Plan. Zero Hidden Fees.</h2>
-          <p class="section-subtitle">Done for you setup within 48 hours. Month to month flexibility.</p>
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">PRICING.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">One clear plan. Zero hidden fees. Month to month flexibility.</span>
         </div>
 
         <div class="pricing-card-wrap">
-          <span class="pricing-badge">CLINIC FOUNDING PLAN</span>
+          <span class="clinic-plan-badge">CLINIC FOUNDING PLAN</span>
 
           <div class="pricing-amount">
             ₹2,499<span class="pricing-period"> / month</span>
@@ -1783,32 +1158,32 @@
 
           <ul class="pricing-features-list">
             <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>24/7 AI Receptionist</strong> fees &amp; timings</span>
             </li>
             <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>Two Way Calendar Sync</strong> slot locking</span>
             </li>
             <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>Patient Reminders</strong> 24h &amp; 2h prior</span>
             </li>
             <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>Missed Call Recovery</strong> via WhatsApp</span>
             </li>
             <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>English, Tamil &amp; Hindi</strong> natural chat</span>
             </li>
             <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span><strong>Live Lead Sheet</strong> real time sync</span>
             </li>
           </ul>
 
-          <!-- Clean Direct Qualifying Form -->
+          <!-- Direct Lead Form -->
           <div class="lead-form-box">
             <form id="clinic-qual-form">
               <div class="form-row">
@@ -1822,7 +1197,7 @@
                 </div>
               </div>
 
-              <button type="submit" class="btn-primary" style="width: 100%;">
+              <button type="submit" class="cta-wa-primary" style="width: 100%;">
                 CONNECT ON WHATSAPP &amp; TEST DEMO →
               </button>
             </form>
@@ -1830,18 +1205,18 @@
             <div id="form-redirect-state" style="display: none; padding: 18px 0; text-align: center;">
               <div style="font-size: 1.5rem; margin-bottom: 6px;">✅</div>
               <div style="color: var(--color-wa); font-weight: 700; font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 6px;">Opening WhatsApp Chat...</div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Connecting directly with Bhuvanesh Karnan</p>
-              <a id="fallback-wa-redirect-btn" href="#" class="btn-primary" style="height: 48px !important; font-size: 0.88rem; width: 100%;">
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">Connecting directly with Bhuvanesh Karnan</p>
+              <a id="fallback-wa-redirect-btn" href="#" class="cta-wa-primary" style="height: 48px !important; font-size: 0.88rem; width: 100%;">
                 TAP HERE IF WHATSAPP DOES NOT OPEN →
               </a>
             </div>
           </div>
 
-          <div style="font-size: 0.82rem; color: var(--text-muted);">
-            Prefer to call? <a href="tel:+918870341570" style="color: var(--text-white); font-weight: 700; text-decoration: underline;">Direct Call to Founder Bhuvanesh: +91 88703 41570</a>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted); font-family: var(--font-mono);">
+            Prefer to call? <a href="tel:+918870341570" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">Direct Call to Founder Bhuvanesh: +91 88703 41570</a>
           </div>
 
-          <p class="guarantee-note">
+          <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 14px; font-family: var(--font-mono);">
             🛡️ 14 Day Risk Free Trial &middot; If it does not capture appointments in 14 days, receive a full refund.
           </p>
         </div>
@@ -1849,14 +1224,12 @@
       </div>
     </section>
 
-    <!-- SECTION 7: 4 ESSENTIAL DOCTOR FAQS -->
-    <section class="section section-border-top" id="faq">
+    <!-- SECTION 7: FAQS -->
+    <section id="faq" class="section">
       <div class="container">
-
         <div class="section-header">
-          <span class="section-label">CLEAR ANSWERS</span>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Straightforward details on setup, languages, and front desk integration.</p>
+          <h2 style="font-family: var(--font-display); font-weight: 800; text-transform: uppercase;">FAQ.</h2>
+          <span class="section-subtitle" style="font-family: var(--font-mono);">Straightforward details on setup, languages, and front desk integration.</span>
         </div>
 
         <div class="faq-container">
@@ -1866,7 +1239,7 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              Yes. The AI effortlessly comprehends conversational vernacular text and replies in the patient's preferred language. For example, queries like <em>&ldquo;Dr eppo irupaanga?&rdquo;</em> or <em>&ldquo;Fees kitna hai?&rdquo;</em> are answered accurately.
+              Yes. The AI effortlessly comprehends conversational vernacular text and replies in the patient preferred language. For example, queries like <em>&ldquo;Dr eppo irupaanga?&rdquo;</em> or <em>&ldquo;Fees kitna hai?&rdquo;</em> are answered accurately.
             </div>
           </div>
 
@@ -1906,56 +1279,112 @@
 
   </main>
 
-  <!-- MINIMAL FOOTER -->
-  <footer class="footer">
+  <!-- Main Footer (Identical to Home Page) -->
+  <footer class="main-footer" style="background: #000000; border-top: 2px solid #1E293B; padding-top: var(--space-2xl);">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-title">BOLDLABS</div>
-          <p class="footer-desc">
-            Booking first websites and 24/7 AI WhatsApp receptionists for healthcare clinics and service practices.
+      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl);">
+        
+        <!-- Column 1: Brand & NAP -->
+        <div class="footer-brand-col">
+          <div class="footer-logo" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">BOLDLABS</div>
+          <p class="footer-tagline" style="font-size: 0.82rem; color: #94A3B8; line-height: 1.5; margin-bottom: var(--space-md);">
+            Booking first websites &amp; 24/7 AI WhatsApp receptionists for healthcare clinics and service practices.
           </p>
-          <div class="footer-nap">
+
+          <!-- Verified Local NAP Address -->
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #CBD5E1; line-height: 1.6; border-left: 2px solid #25D366; padding-left: 10px;">
             <strong style="color: #FFFFFF;">Boldlabs</strong><br>
             3/481 Muneeswarar Nagar, Mahatma 1st Cross St,<br>
-            Uchaparambumedu, Madurai 625014, Tamil Nadu, India.<br>
-            <a href="tel:+918870341570">📞 Direct Call: +91 88703 41570</a><br>
-            <a href="https://wa.me/919514925790" target="_blank" rel="noopener">💬 WhatsApp: +91 95149 25790</a>
+            Uchaparambumedu, Madurai 625014,<br>
+            Tamil Nadu, India.<br>
+            <a href="tel:+918870341570" style="color: #25D366; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 4px;">📞 Direct Call: +91 88703 41570</a><br>
+            <a href="https://wa.me/919514925790" target="_blank" rel="noopener" style="color: #25D366; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 2px;">💬 WhatsApp: +91 95149 25790</a>
           </div>
         </div>
 
+        <!-- Column 2: Navigation -->
         <div>
-          <h4 class="footer-col-title">Navigation</h4>
-          <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Founder</a></li>
-            <li><a href="/blog">Engineering Blog</a></li>
-            <li><a href="#pricing">Pricing Retainers</a></li>
-            <li><a href="/web-development-madurai">Madurai Agency Hub</a></li>
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Navigation</h3>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
+            <li><a href="/" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+            <li><a href="/about" style="color: #25D366; text-decoration: none; font-weight: 700;">About Bhuvanesh Karnan</a></li>
+            <li><a href="/blog" style="color: #94A3B8; text-decoration: none;">Engineering Blog</a></li>
+            <li><a href="#pricing" style="color: #94A3B8; text-decoration: none;">Pricing Retainers</a></li>
+            <li><a href="/web-development-madurai" style="color: #25D366; text-decoration: none; font-weight: 700;">Web Development in Madurai &#8594;</a></li>
           </ul>
         </div>
 
+        <!-- Column 3: Solutions & Services -->
         <div>
-          <h4 class="footer-col-title">Direct Founder Access</h4>
-          <ul class="footer-links">
-            <li><a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I'm%20interested%20in%20testing%20the%20Clinic%20WhatsApp%20AI%20receptionist%20demo." target="_blank" rel="noopener" style="color: var(--color-wa); font-weight: 700;">WhatsApp Founder Directly →</a></li>
-            <li><a href="tel:+918870341570">Direct Call: +91 88703 41570</a></li>
-            <li><a href="mailto:bhuvanesh@goboldlabs.com">bhuvanesh@goboldlabs.com</a></li>
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Solutions</h3>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
+            <li><a href="/business-website" style="color: #94A3B8; text-decoration: none;">Custom Business Websites</a></li>
+            <li><a href="/landing-page" style="color: #94A3B8; text-decoration: none;">High Converting Landing Pages</a></li>
+            <li><a href="/ecommerce-website" style="color: #94A3B8; text-decoration: none;">E Commerce Store Development</a></li>
+            <li><a href="/whatsapp-automation-clinics" style="color: #25D366; text-decoration: none; font-weight: 700;">WhatsApp AI for Clinics &#8594;</a></li>
+            <li><a href="/ai-automations" style="color: #94A3B8; text-decoration: none;">AI Workflow Automations</a></li>
+            <li><a href="/monthly-care" style="color: #94A3B8; text-decoration: none;">Website Care Retainers</a></li>
           </ul>
         </div>
+
+        <!-- Column 4: Regional Hubs -->
+        <div>
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Locations</h3>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
+            <li><a href="/web-development-madurai" style="color: #25D366; text-decoration: none; font-weight: 700;">Web Development in Madurai &#8594;</a></li>
+            <li><a href="/web-development-tamil-nadu" style="color: #94A3B8; text-decoration: none;">Tamil Nadu Web Design</a></li>
+            <li><a href="/web-development-bangalore" style="color: #94A3B8; text-decoration: none;">Bangalore Web Development</a></li>
+            <li><a href="/web-development-uk" style="color: #94A3B8; text-decoration: none;">UK Web Development</a></li>
+            <li><a href="/web-development-usa" style="color: #94A3B8; text-decoration: none;">USA Web Development</a></li>
+            <li><a href="/web-development-canada" style="color: #94A3B8; text-decoration: none;">Canada Web Development</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Connect -->
+        <div>
+          <h3 class="footer-col-title" style="font-family: var(--font-display); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: 12px;">Connect</h3>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem; font-family: var(--font-mono);">
+            <a href="https://www.linkedin.com/in/bhuvaneshkarnan/" target="_blank" rel="noopener" style="color: #94A3B8; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn Profile
+            </a>
+            <a href="https://www.instagram.com/goboldlabs" target="_blank" rel="noopener" style="color: #94A3B8; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram @goboldlabs
+            </a>
+            <a href="https://www.facebook.com/goboldlabs" target="_blank" rel="noopener" style="color: #94A3B8; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Facebook @goboldlabs
+            </a>
+            <a href="mailto:bhuvanesh@goboldlabs.com" style="color: #94A3B8; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 4px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              bhuvanesh@goboldlabs.com
+            </a>
+          </div>
+        </div>
+
       </div>
+    </div>
 
-      <div class="footer-bottom-bar">
+    <!-- Bottom Bar -->
+    <div class="footer-bottom" style="background: #000000; border-top: 1px solid #1E293B; padding: var(--space-lg) 0 65px 0; width: 100%; font-family: var(--font-mono); font-size: 0.75rem; color: #64748B;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <span>© 2026 Boldlabs &middot; Bhuvanesh Karnan. All rights reserved.</span>
         <div style="display: flex; gap: 16px;">
-          <a href="/terms" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a>
-          <a href="/privacy" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+          <a href="/terms" style="color: #64748B; text-decoration: none;">Terms of Service</a>
+          <a href="/privacy" style="color: #64748B; text-decoration: none;">Privacy Policy</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- LIGHTWEIGHT JAVASCRIPT: Lead Logging, Pixel Dispatch & Smooth UX -->
+  <!-- Sticky Floating WhatsApp AI Demo Button (Identical to Home Page) -->
+  <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20Clinic%20WhatsApp%20AI%20demo." target="_blank" rel="noopener noreferrer" class="sticky-wa-float" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: #25D366; color: #000000; border: 1.5px solid #000000; border-radius: 8px; padding: 10px 16px; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: transform 0.2s ease;">
+    <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    TEST WHATSAPP DEMO
+  </a>
+
+  <!-- JavaScript: Navbar Toggle, FAQ Toggle, Video Player & Form Webhook -->
   <script>
     // FAQ Toggle
     function toggleFaq(btn) {
@@ -1976,6 +1405,36 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Navbar Toggle Logic (Home Page Pattern)
+      const menuToggleBtn = document.getElementById('menu-toggle-btn');
+      const navbarLinksContainer = document.getElementById('navbar-links-container');
+      const navbarEl = document.querySelector('.navbar');
+
+      if (menuToggleBtn && navbarLinksContainer) {
+        menuToggleBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+          menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+          navbarEl.classList.toggle('nav-open');
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!navbarEl.contains(e.target)) {
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            navbarEl.classList.remove('nav-open');
+          }
+        });
+
+        const navLinks = navbarLinksContainer.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            navbarEl.classList.remove('nav-open');
+          });
+        });
+      }
+
+      // Form Handling
       const form = document.getElementById('clinic-qual-form');
       const clinicInput = document.getElementById('clinic-name-input');
       const phoneInput = document.getElementById('clinic-phone-input');
@@ -2024,54 +1483,51 @@
               body: new URLSearchParams({
                 name: clinicVal,
                 whatsapp: cleanPhone,
-                contactMethod: "WhatsApp",
-                sourcePage: "whatsapp-automation-clinics",
-                question: "New Lead from Redesigned Clinic Landing Page",
-                alertPhone: "9514925790"
+                clinicName: clinicVal,
+                alertPhone: "9514925790",
+                source: "Clinic Landing Page Redesign",
+                page: window.location.pathname,
+                timestamp: new Date().toISOString()
               })
-            }).catch(function(err) { console.error('Sheet error:', err); });
-          } catch(err) {}
-
-          // 2. Meta Pixel & GA4 Tracking
-          if (typeof window.fbq === 'function') {
-            try {
-              window.fbq('init', '1041283338810010', { ph: '+91' + cleanPhone });
-            } catch(e) {}
-            window.fbq('track', 'Lead', {
-              content_name: 'Clinic Demo Request',
-              clinic_name: clinicVal,
-              phone: cleanPhone,
-              currency: 'INR',
-              value: 2499.00
-            });
-            window.fbq('trackCustom', 'qualified_clinic_lead', { clinic_name: clinicVal });
+            }).catch(function(err){ console.error('Webhook error:', err); });
+          } catch(err) {
+            console.error('Fetch error:', err);
           }
 
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', 'generate_lead', {
-              clinic_name: clinicVal,
-              phone: cleanPhone,
-              value: 2499,
+          // 2. Meta Pixel Qualified Lead Dispatch
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', {
+              content_name: clinicVal,
+              content_category: 'Clinic WhatsApp Automation',
+              value: 2499.00,
               currency: 'INR'
             });
+            fbq('trackCustom', 'qualified_clinic_lead', {
+              clinic_name: clinicVal,
+              phone: cleanPhone
+            });
           }
 
-          // 3. WhatsApp Redirect Construction
-          const msg = encodeURIComponent("Hi Bhuvanesh, I am from " + clinicVal + " (" + cleanPhone + "). Please share the Clinic WhatsApp AI demo for our practice.");
-          const waUrl = "https://wa.me/919514925790?text=" + msg;
+          // 3. Construct WhatsApp URL
+          const waMessage = encodeURIComponent(
+            `Hi Bhuvanesh, I want to set up the WhatsApp AI receptionist demo for my clinic.\n\nClinic: ${clinicVal}\nPhone: ${cleanPhone}`
+          );
+          const targetWaUrl = `https://wa.me/919514925790?text=${waMessage}`;
 
-          form.style.display = 'none';
+          if (fallbackBtn) {
+            fallbackBtn.href = targetWaUrl;
+          }
+
+          if (form) form.style.display = 'none';
           if (redirectState) redirectState.style.display = 'block';
-          if (fallbackBtn) fallbackBtn.href = waUrl;
 
-          // 4. Smooth window location transition
+          // Immediate redirect with slight tick for pixel dispatch
           setTimeout(function() {
-            window.location.href = waUrl;
+            window.location.href = targetWaUrl;
           }, 350);
         });
       }
     });
   </script>
-
 </body>
 </html>
