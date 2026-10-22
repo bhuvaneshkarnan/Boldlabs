@@ -1162,10 +1162,10 @@
        FOOTER
        ========================================================================== */
     footer {
-      background: #FFFFFF;
-      border-top: 1px solid var(--color-border-card);
-      padding: 56px 0 32px;
-      color: var(--color-text-body);
+      background: #FFFFFF !important;
+      border-top: 1.5px solid var(--color-border-card) !important;
+      padding: 56px 0 0 !important;
+      color: var(--color-text-body) !important;
     }
 
     .footer-grid {
@@ -1179,14 +1179,14 @@
       font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 800;
-      color: var(--color-text-main);
+      color: var(--color-text-main) !important;
       margin: 0 0 10px 0;
       letter-spacing: -0.02em;
     }
 
     .footer-col-brand p {
       font-size: 0.88rem;
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
       line-height: 1.5;
       margin: 0 0 16px 0;
     }
@@ -1206,20 +1206,20 @@
     .footer-contact-links a {
       display: block;
       font-size: 0.82rem;
-      color: var(--color-emerald-dark);
+      color: var(--color-emerald-dark) !important;
       font-weight: 700;
       text-decoration: none;
       margin-bottom: 6px;
     }
 
     .footer-col-title {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
-      font-weight: 800;
-      color: var(--color-text-main);
-      text-transform: uppercase;
-      margin: 0 0 16px 0;
-      letter-spacing: 0.04em;
+      font-family: var(--font-display) !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      color: var(--color-text-main) !important;
+      text-transform: uppercase !important;
+      margin: 0 0 16px 0 !important;
+      letter-spacing: 0.04em !important;
     }
 
     .footer-col-links {
@@ -1233,26 +1233,31 @@
 
     .footer-col-links a {
       font-size: 0.85rem;
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
     .footer-col-links a:hover {
-      color: var(--color-emerald);
+      color: var(--color-emerald) !important;
     }
 
     .footer-bottom {
-      border-top: 1px solid var(--color-border-card);
-      padding-top: 24px;
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: var(--color-text-light);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      border-top: 1px solid var(--color-border-card) !important;
+      background-color: #F8FAFC !important;
+      padding: 22px 0 !important;
+      font-family: var(--font-mono) !important;
+      font-size: 0.78rem !important;
+      color: var(--color-text-muted) !important;
+      width: 100% !important;
+    }
+
+    .footer-bottom .container {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
     }
 
     .footer-legal-links {
@@ -1260,13 +1265,14 @@
       gap: 16px;
     }
 
-    .footer-legal-links a {
-      color: var(--color-text-light);
-      text-decoration: none;
+    .footer-legal-links a, .footer-bottom a {
+      color: var(--color-text-muted) !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease;
     }
 
-    .footer-legal-links a:hover {
-      color: var(--color-emerald);
+    .footer-legal-links a:hover, .footer-bottom a:hover {
+      color: var(--color-emerald) !important;
     }
 
     /* ==========================================================================
@@ -2713,8 +2719,11 @@
         </div>
 
       </div>
+    </div>
 
-      <div class="footer-bottom">
+    <!-- Full Width White Theme Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
         <div>&copy; 2026 Boldlabs &middot; Bhuvanesh Karnan. All rights reserved.</div>
         <div class="footer-legal-links">
           <a href="/terms">Terms of Service</a>
