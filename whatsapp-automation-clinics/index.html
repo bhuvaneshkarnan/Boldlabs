@@ -1566,6 +1566,12 @@
     /* ==========================================================================
        RESPONSIVE & MOBILE SCREEN OPTIMIZATIONS (<= 768px and <= 480px)
        ========================================================================== */
+    @media (min-width: 901px) {
+      .nav-toggle {
+        display: none !important;
+      }
+    }
+
     @media (max-width: 900px) {
       .navbar {
         width: calc(100% - 32px) !important;
@@ -1584,19 +1590,20 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: #FFFFFF;
-        border: 1.5px solid #E2E8F0;
-        border-top: none;
-        border-radius: 0 0 16px 16px;
+        background: #FFFFFF !important;
+        border: 1.5px solid #E2E8F0 !important;
+        border-top: none !important;
+        border-radius: 0 0 16px 16px !important;
         flex-direction: column;
-        padding: 16px;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+        padding: 16px !important;
+        box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16) !important;
         gap: 10px;
         align-items: stretch;
+        z-index: 1000 !important;
       }
 
       .navbar.nav-open .nav-links {
-        display: flex;
+        display: flex !important;
       }
 
       .nav-toggle {
@@ -1878,11 +1885,7 @@
   <!-- Floating Navigation Bar -->
   <nav class="navbar" aria-label="Main Navigation">
     <a href="/" class="navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
-        <rect width="24" height="24" rx="6" fill="#059669"/>
-        <path d="M7 17V7h4.5a3.5 3.5 0 0 1 0 7H7" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: #0F172A; letter-spacing: -0.02em;">BOLDLABS</span>
+      <img src="/logo-transparent.png" onerror="this.onerror=null; this.src='../logo-transparent.png';" alt="Boldlabs" style="height: 36px; width: auto; display: block;" />
     </a>
     
     <div class="nav-links" id="navbar-links-container">
@@ -1892,7 +1895,6 @@
       <a href="#pricing">Pricing Plans</a>
       <a href="#features">Feature Matrix</a>
       <a href="#faq">FAQs</a>
-      <a href="https://crm.goboldlabs.com" target="_blank" rel="noopener" class="nav-btn-login">Client Login</a>
       <button type="button" class="nav-btn-trial open-trial-modal-btn" data-plan="Standard Plan (₹2,499/mo)">Start Free Trial</button>
     </div>
 
