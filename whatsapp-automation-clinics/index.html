@@ -82,7 +82,7 @@
             "name": "How does the 3 Day Free Trial work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You get 100% unrestricted access to your WhatsApp AI Receptionist and Web CRM for 3 days. No credit card required. We set up your doctor consultation fees, clinic timings, and appointment calendar in 15 minutes."
+              "text": "You get 100% unrestricted access to your WhatsApp AI Receptionist and Web CRM for 3 days. No credit card required. We configure your full clinic details, consultation fees, doctor schedules, and appointment calendar in 15 minutes."
             }
           },
           {
@@ -420,9 +420,9 @@
     .hero-main-title {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
-      line-height: 1.15;
-      letter-spacing: -0.038em;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.18;
+      letter-spacing: -0.012em;
       color: #FFFFFF;
       max-width: 960px;
       margin: 0 auto 20px;
@@ -805,11 +805,18 @@
     .thesis-headline {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(2.4rem, 5.2vw, 4.2rem);
-      line-height: 1.15;
-      letter-spacing: -0.038em;
-      max-width: 900px;
+      font-size: clamp(1.85rem, 3.4vw, 2.85rem);
+      line-height: 1.25;
+      letter-spacing: -0.012em;
+      max-width: 1100px;
       margin: 0 auto 20px;
+    }
+
+    @media (min-width: 820px) {
+      .thesis-line-solid,
+      .thesis-line-muted {
+        white-space: nowrap;
+      }
     }
 
     .thesis-line-solid {
@@ -829,6 +836,60 @@
       margin: 0 auto;
       line-height: 1.6;
       letter-spacing: -0.01em;
+    }
+
+
+    /* Hera-Style 3 Metric Cards */
+    .thesis-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 40px auto 0;
+      text-align: left;
+    }
+
+    .thesis-metric-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s ease;
+    }
+
+    .thesis-metric-card:hover {
+      border-color: #94A3B8;
+    }
+
+    .thesis-metric-icon {
+      font-size: 1.3rem;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .thesis-metric-num {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .thesis-metric-desc {
+      font-size: 0.88rem;
+      color: var(--color-muted-text);
+      line-height: 1.5;
+      letter-spacing: -0.005em;
+    }
+
+    @media (max-width: 768px) {
+      .thesis-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
     }
 
     /* ==========================================================================
@@ -879,9 +940,9 @@
     .feature-heading {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
       color: var(--color-dark-ink);
       margin-bottom: 14px;
     }
@@ -1055,7 +1116,7 @@
       font-family: var(--font-display);
       font-size: 1.6rem;
       font-weight: 400;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.01em;
       color: var(--color-dark-ink);
       line-height: 1.3;
       margin-bottom: 18px;
@@ -1119,9 +1180,9 @@
     .nocturnal-title {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.18;
-      letter-spacing: -0.035em;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
       margin-bottom: 12px;
     }
 
@@ -1338,30 +1399,95 @@
       margin-bottom: 16px;
     }
 
-    .nocturnal-stats-strip {
+    /* Authentic Client CRM Preview & Verified Numbers */
+    .client-crm-preview-box {
+      margin: 24px 0 20px;
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .client-crm-preview-header {
+      background: #0B1124;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .client-crm-img-wrap {
+      width: 100%;
+      overflow: hidden;
+      background: #080D1F;
+    }
+
+    .client-crm-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .client-crm-caption {
+      padding: 12px 18px;
+      background: rgba(11, 17, 36, 0.95);
+      font-size: 0.85rem;
+      color: #94A3B8;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .client-crm-caption strong {
+      color: #FFFFFF;
+    }
+
+    .nocturnal-stats-strip-4col {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
       background: rgba(15, 23, 42, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 12px;
+      border-radius: 12px;
+      padding: 16px 14px;
+      margin: 20px 0 20px;
       text-align: center;
-      margin-bottom: 16px;
+    }
+
+    .nocturnal-stat-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .nocturnal-stat-num {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.15rem;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.35rem;
       color: #FFFFFF;
-      display: block;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .stat-green-text {
+      color: #34D399 !important;
     }
 
     .nocturnal-stat-label {
       font-family: var(--font-mono);
       font-size: 0.68rem;
       color: #94A3B8;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .nocturnal-stats-strip-4col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
     }
 
     .nocturnal-footer-cta {
@@ -1386,10 +1512,10 @@
     .pricing-headline {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.18;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.2;
       color: var(--color-dark-ink);
-      letter-spacing: -0.035em;
+      letter-spacing: -0.012em;
       margin-bottom: 12px;
     }
 
@@ -1611,9 +1737,9 @@
     .matrix-headline {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
+      font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
       color: var(--color-dark-ink);
       text-align: center;
       margin-bottom: 36px;
@@ -1665,11 +1791,11 @@
     .faq-headline {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.18;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.2;
       color: var(--color-dark-ink);
       text-align: center;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.012em;
       margin-bottom: 40px;
     }
 
@@ -1743,9 +1869,9 @@
     .footer-signoff-title {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(2.4rem, 6vw, 4.6rem);
-      letter-spacing: -0.038em;
-      line-height: 1.15;
+      font-size: clamp(2.3rem, 5.5vw, 4.2rem);
+      letter-spacing: -0.012em;
+      line-height: 1.18;
       margin-bottom: 14px;
       color: #FFFFFF;
     }
@@ -2038,7 +2164,7 @@
         </h1>
 
         <p class="hero-description">
-          Answers consultation fees, doctor timings, and locks appointments into Google Calendar in 3 seconds. Day and night.
+          Answers every patient question with your exact clinic details, fees, timings, treatments, and locks appointments into Google Calendar in 3 seconds. Day and night.
         </p>
 
         <div class="hero-btn-row">
@@ -2170,6 +2296,25 @@
         <p class="thesis-subtitle">
           Traditional clinics lose up to 35% of prospective patients when WhatsApp inquiries sit unread during busy consultations or late evenings. Boldlabs answers every inquiry in 3 seconds.
         </p>
+
+        <!-- Hera-style 3 Metric Cards (matching reference) -->
+        <div class="thesis-cards-grid">
+          <div class="thesis-metric-card">
+            <span class="thesis-metric-icon">⚡</span>
+            <div class="thesis-metric-num" style="color: var(--color-brand-blue);">3 Seconds</div>
+            <p class="thesis-metric-desc">Average reply speed for every prospective patient WhatsApp message.</p>
+          </div>
+          <div class="thesis-metric-card">
+            <span class="thesis-metric-icon">🕒</span>
+            <div class="thesis-metric-num" style="color: #EA580C;">24/7 Active</div>
+            <p class="thesis-metric-desc">Answers inquiries nights, weekends, and during busy clinic consultations.</p>
+          </div>
+          <div class="thesis-metric-card">
+            <span class="thesis-metric-icon">📈</span>
+            <div class="thesis-metric-num" style="color: #7C3AED;">+20 Bookings</div>
+            <p class="thesis-metric-desc">Average monthly confirmed appointment increase per clinic practice.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2181,9 +2326,9 @@
         <div class="feature-block-row">
           <div class="feature-content-col">
             <span class="feature-badge-pill pill-blue">✦ AI Receptionist</span>
-            <h3 class="feature-heading">24/7 Consultation Fee &amp; Timing Replies.</h3>
+            <h3 class="feature-heading">Instant Replies for Every Single Clinic Detail. 24/7.</h3>
             <p class="feature-body-text">
-              Patients inquiring at 10 PM or on Sunday morning receive doctor consultation charges, operating hours, clinic address, and available consultation slots in 3 seconds. Zero waiting.
+              Patients inquiring at 10 PM or on Sunday morning receive instant, accurate answers for every single inquiry: consultation fees, doctor schedules, treatments offered, clinic address, directions, preparation instructions, and custom practice details within 3 seconds. Day and night.
             </p>
             <div class="feature-doctor-quote">
               <p class="feature-quote-text">
@@ -2260,20 +2405,16 @@
             </div>
           </div>
           <div class="feature-card-col">
-            <div class="pastel-card-container card-grad-peach">
-              <div class="inner-software-widget">
-                <div class="widget-head-row">
-                  <span class="widget-title">📋 Kanban Patient Pipeline</span>
-                  <span class="widget-meta">Instant search</span>
+            <div class="pastel-card-container card-grad-peach" style="padding: 18px;">
+              <div style="background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); width: 100%;">
+                <div style="background: #F8FAFC; border-bottom: 1px solid #E2E8F0; padding: 8px 14px; display: flex; align-items: center; justify-content: space-between;">
+                  <span style="font-family: var(--font-sans); font-size: 0.76rem; font-weight: 600; color: #0F172A;">Clinic Web CRM &middot; Mind Body Recovery</span>
+                  <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #059669; font-weight: 700;">● Live Verified</span>
                 </div>
-                <div style="display: flex; gap: 6px; margin-bottom: 8px;">
-                  <span style="background: #EEF2FF; color: #3730A3; font-size: 0.68rem; font-weight: 700; padding: 3px 6px; border-radius: 4px;">Inquiry</span>
-                  <span style="background: #FEF3C7; color: #92400E; font-size: 0.68rem; font-weight: 700; padding: 3px 6px; border-radius: 4px;">Scheduled</span>
-                  <span style="background: #DCFCE7; color: #166534; font-size: 0.68rem; font-weight: 700; padding: 3px 6px; border-radius: 4px;">Completed</span>
-                </div>
-                <div style="font-size: 0.76rem; color: #475569;">
-                  Search by patient name or number in 1s
-                </div>
+                <picture>
+                  <source srcset="/assets/crm-screenshot.webp" type="image/webp">
+                  <img src="/assets/crm-screenshot.png" onerror="this.onerror=null; this.src='../assets/crm-screenshot.png';" alt="Boldlabs Clinic Web CRM" style="width: 100%; height: auto; display: block;">
+                </picture>
               </div>
             </div>
           </div>
@@ -2419,19 +2560,40 @@
             </div>
           </div>
 
-          <!-- 3 Stats Strip -->
-          <div class="nocturnal-stats-strip">
-            <div>
-              <span class="nocturnal-stat-num">3 Sec</span>
-              <span class="nocturnal-stat-label">Reply Speed</span>
+          <!-- Verified Mind Body Recovery CRM Dashboard & Numbers -->
+          <div class="client-crm-preview-box">
+            <div class="client-crm-preview-header">
+              <span class="video-pill-tag">VERIFIED LIVE CLINIC CRM DASHBOARD &middot; MIND BODY RECOVERY</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #34D399;">● Oct 2026 Live Workspace</span>
             </div>
-            <div>
-              <span class="nocturnal-stat-num">24/7</span>
-              <span class="nocturnal-stat-label">Enquiries Captured</span>
+            <div class="client-crm-img-wrap">
+              <picture>
+                <source srcset="/assets/crm-screenshot.webp" type="image/webp">
+                <img src="/assets/crm-screenshot.png" onerror="this.onerror=null; this.src='../assets/crm-screenshot.png';" alt="Mind Body Recovery Live Clinic CRM Dashboard" class="client-crm-img" loading="lazy">
+              </picture>
             </div>
-            <div>
-              <span class="nocturnal-stat-num">Timed</span>
-              <span class="nocturnal-stat-label">24h &amp; 2h Reminders</span>
+            <div class="client-crm-caption">
+              <span>Actual verified clinic data from <strong>Dr. Sameer</strong>: <strong>₹1,60,383 realized revenue</strong>, <strong>215 booked appointments</strong>, and <strong>674 inquiries captured</strong> with zero customer leakage.</span>
+            </div>
+          </div>
+
+          <!-- 4 Verified Client Numbers From CRM Screenshot -->
+          <div class="nocturnal-stats-strip-4col">
+            <div class="nocturnal-stat-box">
+              <span class="nocturnal-stat-num stat-green-text">₹1,60,383</span>
+              <span class="nocturnal-stat-label">Oct 2026 Realized Inflow</span>
+            </div>
+            <div class="nocturnal-stat-box">
+              <span class="nocturnal-stat-num">215</span>
+              <span class="nocturnal-stat-label">Confirmed Appointments</span>
+            </div>
+            <div class="nocturnal-stat-box">
+              <span class="nocturnal-stat-num">674</span>
+              <span class="nocturnal-stat-label">Total Inquiries Captured</span>
+            </div>
+            <div class="nocturnal-stat-box">
+              <span class="nocturnal-stat-num stat-green-text">0</span>
+              <span class="nocturnal-stat-label">Patient Leakage (All Attended)</span>
             </div>
           </div>
 
@@ -2477,7 +2639,7 @@
               <ul class="plan-features-list">
                 <li class="plan-feature-item">
                   <span class="check-icon">✓</span>
-                  <span><strong>24/7 WhatsApp AI Receptionist:</strong> Instant consultation fee &amp; clinic timing answers.</span>
+                  <span><strong>24/7 WhatsApp AI Receptionist:</strong> Instant answers for all clinic details, fees, and doctor timings.</span>
                 </li>
                 <li class="plan-feature-item">
                   <span class="check-icon">✓</span>
@@ -2676,7 +2838,7 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              You get 100% full access to your WhatsApp AI Receptionist and Web CRM for 3 days. There is zero credit card required and zero obligation. We configure your doctor fees, clinic timings, and appointment calendar in 15 minutes.
+              You get 100% full access to your WhatsApp AI Receptionist and Web CRM for 3 days. There is zero credit card required and zero obligation. We configure your full clinic details, consultation fees, doctor schedules, and appointment calendar in 15 minutes.
             </div>
           </div>
 
