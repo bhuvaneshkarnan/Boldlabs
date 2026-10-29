@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css" onerror="this.onerror=null; this.href='../style.css';">
+
 
   <!-- JSON-LD Structured Data: SoftwareApplication & FAQPage -->
   <script type="application/ld+json">
@@ -155,6 +155,27 @@
 
   <style>
     /* ==========================================================================
+       HERA OFFICIAL FONTS: VC HENRIETTA & SAANS
+       ========================================================================== */
+    @font-face {
+      font-family: 'VC Henrietta';
+      src: url('/assets/fonts/VCHenrietta-Medium.woff2') format('woff2'),
+           url('../assets/fonts/VCHenrietta-Medium.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Saans';
+      src: url('/assets/fonts/Saans-Variable.woff2') format('woff2'),
+           url('../assets/fonts/Saans-Variable.woff2') format('woff2');
+      font-weight: 300 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ==========================================================================
        HERA-INSPIRED CLEAN DESIGN SYSTEM: BOLDLABS CLINIC CRM
        ========================================================================== */
     :root {
@@ -178,14 +199,14 @@
       --color-border-card: #E2E8F0;
       --color-border-light: #F1F5F9;
 
-      /* Pastel Container Gradients (Hera Style) */
-      --grad-lavender: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 50%, #FCE7F3 100%);
-      --grad-cyan: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 50%, #7DD3FC 100%);
-      --grad-peach: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FECDD3 100%);
-      --grad-mint: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%);
+      /* Exact Hera Pastel Gradients */
+      --grad-lavender: linear-gradient(135deg, #ECF5FF 0%, #EAE4FF 50%, #FFBFD8 100%);
+      --grad-cyan: linear-gradient(135deg, #C9F2FF 0%, #A3E5FF 50%, #57A5FF 100%);
+      --grad-peach: linear-gradient(135deg, #FFF8D6 0%, #FFDFB5 50%, #FFA49C 100%);
+      --grad-mint: linear-gradient(135deg, #E6FCF5 0%, #D3F9D8 50%, #B2F2BB 100%);
 
-      --font-display: 'Plus Jakarta Sans', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'VC Henrietta', Georgia, serif;
+      --font-sans: 'Saans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
 
       --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
@@ -271,11 +292,11 @@
 
     .nav-links a {
       color: var(--color-dark-ink);
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 700;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 500;
       text-decoration: none;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
       transition: color 0.15s ease;
     }
 
@@ -286,10 +307,10 @@
     .nav-btn-trial {
       background: var(--color-dark-ink);
       color: #FFFFFF !important;
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 8px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 9px 20px;
       border-radius: 9999px;
       border: none;
       cursor: pointer;
@@ -386,18 +407,18 @@
       backdrop-filter: blur(8px);
       padding: 6px 16px;
       border-radius: 9999px;
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 700;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
       color: #FFFFFF;
       margin-bottom: 24px;
-      letter-spacing: 0.02em;
+      letter-spacing: -0.01em;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
 
     .hero-main-title {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(2.4rem, 5.5vw, 4.4rem);
       line-height: 1.1;
       letter-spacing: -0.035em;
@@ -415,12 +436,12 @@
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.35);
       backdrop-filter: blur(8px);
-      font-weight: 800;
+      font-weight: 500;
     }
 
     .hero-description {
       font-size: clamp(1rem, 2vw, 1.25rem);
-      font-weight: 500;
+      font-weight: 400;
       color: rgba(255, 255, 255, 0.94);
       max-width: 720px;
       margin: 0 auto 32px;
@@ -439,10 +460,10 @@
     .btn-hero-primary {
       background: #FFFFFF;
       color: var(--color-brand-blue-dark);
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 14px 28px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.96rem;
+      padding: 13px 26px;
       border-radius: 9999px;
       border: none;
       cursor: pointer;
@@ -452,6 +473,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      letter-spacing: -0.01em;
     }
 
     .btn-hero-primary:hover {
@@ -465,10 +487,10 @@
       color: #FFFFFF;
       border: 1.5px solid rgba(255, 255, 255, 0.45);
       backdrop-filter: blur(8px);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.96rem;
-      padding: 13px 26px;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.94rem;
+      padding: 13px 24px;
       border-radius: 9999px;
       cursor: pointer;
       text-decoration: none;
@@ -476,6 +498,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      letter-spacing: -0.01em;
     }
 
     .btn-hero-secondary:hover {
@@ -777,7 +800,7 @@
 
     .thesis-headline {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(2rem, 4.5vw, 3.6rem);
       line-height: 1.15;
       letter-spacing: -0.03em;
@@ -850,7 +873,7 @@
 
     .feature-heading {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(1.8rem, 3.2vw, 2.4rem);
       line-height: 1.2;
       letter-spacing: -0.025em;
@@ -927,7 +950,7 @@
     }
 
     .widget-title {
-      font-family: var(--font-display);
+      font-family: var(--font-sans);
       font-size: 0.86rem;
       font-weight: 800;
       color: var(--color-dark-ink);
@@ -1087,7 +1110,7 @@
 
     .nocturnal-title {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.2;
       letter-spacing: -0.025em;
@@ -1352,7 +1375,7 @@
 
     .pricing-headline {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(2rem, 4vw, 3.2rem);
       color: var(--color-dark-ink);
       letter-spacing: -0.03em;
@@ -1406,20 +1429,21 @@
       right: 24px;
       background: var(--color-brand-blue);
       color: #FFFFFF;
-      font-family: var(--font-display);
+      font-family: var(--font-sans);
       font-size: 0.72rem;
-      font-weight: 800;
+      font-weight: 700;
       padding: 4px 12px;
       border-radius: 9999px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
     }
 
     .plan-name-label {
-      font-family: var(--font-display);
-      font-weight: 800;
+      font-family: var(--font-sans);
+      font-weight: 700;
       font-size: 1.3rem;
       color: var(--color-dark-ink);
       margin-bottom: 6px;
+      letter-spacing: -0.015em;
     }
 
     .plan-tagline {
@@ -1436,17 +1460,17 @@
     }
 
     .price-currency {
-      font-family: var(--font-display);
+      font-family: var(--font-sans);
       font-size: 1.3rem;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--color-dark-ink);
       vertical-align: top;
     }
 
     .price-figure {
-      font-family: var(--font-display);
+      font-family: var(--font-sans);
       font-size: 2.8rem;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--color-dark-ink);
       line-height: 1;
       letter-spacing: -0.03em;
@@ -1501,14 +1525,15 @@
       text-align: center;
       padding: 13px 20px;
       border-radius: 12px;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.94rem;
       cursor: pointer;
       text-decoration: none;
       transition: all 0.2s ease;
       display: block;
       border: none;
+      letter-spacing: -0.01em;
     }
 
     .btn-plan-standard {
@@ -1558,7 +1583,7 @@
 
     .matrix-headline {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: 1.8rem;
       color: var(--color-dark-ink);
       text-align: center;
@@ -1610,7 +1635,7 @@
 
     .faq-headline {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(2rem, 4vw, 3rem);
       color: var(--color-dark-ink);
       text-align: center;
@@ -1635,15 +1660,16 @@
       background: none;
       border: none;
       text-align: left;
-      font-family: var(--font-display);
+      font-family: var(--font-sans);
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--color-dark-ink);
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
       gap: 16px;
+      letter-spacing: -0.01em;
     }
 
     .faq-icon {
@@ -1686,7 +1712,7 @@
 
     .footer-signoff-title {
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 400;
       font-size: clamp(2.4rem, 6vw, 4.8rem);
       letter-spacing: -0.035em;
       line-height: 1.1;
@@ -1725,11 +1751,12 @@
 
     .footer-links-grid a {
       color: #94A3B8;
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 500;
       text-decoration: none;
       transition: color 0.15s ease;
+      letter-spacing: -0.01em;
     }
 
     .footer-links-grid a:hover {
@@ -1783,13 +1810,14 @@
       height: 48px;
       background: var(--color-emerald);
       color: #FFFFFF;
-      font-family: var(--font-display);
-      font-weight: 800;
+      font-family: var(--font-sans);
+      font-weight: 600;
       font-size: 0.95rem;
       border-radius: 9999px;
       border: none;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+      letter-spacing: -0.01em;
     }
 
     @media (max-width: 768px) {
@@ -1883,11 +1911,12 @@
 
     .form-label {
       display: block;
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 700;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
       color: var(--color-dark-ink);
       margin-bottom: 6px;
+      letter-spacing: -0.01em;
     }
 
     .form-input {
@@ -1915,12 +1944,13 @@
       color: #FFFFFF;
       border: none;
       border-radius: 10px;
-      font-family: var(--font-display);
-      font-weight: 800;
+      font-family: var(--font-sans);
+      font-weight: 600;
       font-size: 0.96rem;
       cursor: pointer;
       transition: all 0.2s ease;
       box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+      letter-spacing: -0.01em;
     }
 
     .form-btn-submit:hover {
