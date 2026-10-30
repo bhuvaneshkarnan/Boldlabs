@@ -511,6 +511,12 @@
       box-shadow: none;
     }
 
+        .hero-trust-bullets span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .hero-trust-bullets {
       font-family: var(--font-mono);
       font-size: 0.76rem;
@@ -858,6 +864,46 @@
       flex-direction: column;
       gap: 8px;
       transition: border-color 0.2s ease;
+    }
+
+    
+    .doctor-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .thesis-metric-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    .thesis-metric-icon-wrap.icon-blue {
+      background: rgba(37, 99, 235, 0.09);
+      color: #2563EB;
+    }
+    .thesis-metric-icon-wrap.icon-orange {
+      background: rgba(234, 88, 12, 0.09);
+      color: #EA580C;
+    }
+    .thesis-metric-icon-wrap.icon-purple {
+      background: rgba(124, 58, 237, 0.09);
+      color: #7C3AED;
     }
 
     .thesis-metric-card:hover {
@@ -2145,7 +2191,7 @@
 
     <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false" id="menu-toggle-btn">
       <span>MENU</span>
-      <span>☰</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </nav>
 
@@ -2154,9 +2200,7 @@
     <section id="hero" class="hero-sky-section">
       <div class="container">
         
-        <div class="hero-pill-badge">
-          <span>⚡ The #1 WhatsApp AI Receptionist &amp; Clinic CRM in India</span>
-        </div>
+
 
         <h1 class="hero-main-title">
           Stop Losing Patients.<br>
@@ -2169,17 +2213,26 @@
 
         <div class="hero-btn-row">
           <button type="button" class="btn-hero-primary open-trial-modal-btn" data-plan="Full WhatsApp System (₹1,499 + GST/mo)">
-            🚀 Start 3 Day Free Trial
+            Start 3 Day Free Trial
           </button>
           <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20live%20WhatsApp%20clinic%20bot." target="_blank" rel="noopener noreferrer" class="btn-hero-secondary">
-            💬 Test Live WhatsApp Bot
+            Test Live WhatsApp Bot
           </a>
         </div>
 
         <div class="hero-trust-bullets">
-          <span>🔒 No credit card required</span>
-          <span>⚡ 15 minute setup</span>
-          <span>📱 Official Meta Cloud API</span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            No credit card required
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            15 minute setup
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Official Meta Cloud API
+          </span>
         </div>
 
         <!-- Floating Elevated Software UI Mockup Card -->
@@ -2191,7 +2244,10 @@
               <span class="traffic-dot dot-green"></span>
             </div>
             <div class="mockup-header-title">
-              <span>🏥 Care Clinic Receptionist</span>
+              <span style="display:inline-flex; align-items:center; gap:6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Care Clinic AI Receptionist
+              </span>
             </div>
             <div class="mockup-header-status">
               <span>● Active 24/7 (3s response)</span>
@@ -2205,23 +2261,23 @@
               
               <div class="mockup-bubble bubble-patient">
                 Hi doctor, what is the consultation fee? Any open slot tomorrow afternoon?
-                <div class="bubble-time">10:42 AM ✓✓</div>
+                <div class="bubble-time">10:42 AM <svg width="15" height="11" viewBox="0 0 16 11" fill="none" style="vertical-align: middle; margin-left: 2px;" aria-label="Read"><path d="M1 6L4.5 9.5L11.5 2M5 6L8.5 9.5L15.5 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               </div>
 
               <div class="mockup-bubble bubble-ai">
                 Hello! Consultation is ₹500. We have open appointment slots tomorrow at <strong>2:30 PM</strong> and <strong>4:15 PM</strong>. Would 2:30 PM suit you?
-                <div class="bubble-time">10:42 AM ✓✓</div>
+                <div class="bubble-time">10:42 AM <svg width="15" height="11" viewBox="0 0 16 11" fill="none" style="vertical-align: middle; margin-left: 2px;" aria-label="Read"><path d="M1 6L4.5 9.5L11.5 2M5 6L8.5 9.5L15.5 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               </div>
 
               <div class="mockup-bubble bubble-patient">
                 2:30 PM works great!
-                <div class="bubble-time">10:43 AM ✓✓</div>
+                <div class="bubble-time">10:43 AM <svg width="15" height="11" viewBox="0 0 16 11" fill="none" style="vertical-align: middle; margin-left: 2px;" aria-label="Read"><path d="M1 6L4.5 9.5L11.5 2M5 6L8.5 9.5L15.5 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               </div>
 
               <div class="mockup-bubble bubble-ai">
                 <span class="confirmed-pill-tag">APPOINTMENT CONFIRMED</span><br>
-                Booked for <strong>Tomorrow at 2:30 PM</strong>. 📍 Location &amp; Google Calendar invite sent. We will text a reminder 2 hours prior to your visit.
-                <div class="bubble-time">10:43 AM ✓✓</div>
+                Booked for <strong>Tomorrow at 2:30 PM</strong>. Location and Google Calendar invite sent. We will text a reminder 2 hours prior to your visit.
+                <div class="bubble-time">10:43 AM <svg width="15" height="11" viewBox="0 0 16 11" fill="none" style="vertical-align: middle; margin-left: 2px;" aria-label="Read"><path d="M1 6L4.5 9.5L11.5 2M5 6L8.5 9.5L15.5 2" stroke="#53BDEB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               </div>
             </div>
 
@@ -2235,18 +2291,30 @@
                   <span class="crm-status-tag">Confirmed Visit</span>
                 </div>
                 <div class="crm-detail-row">
-                  <span>📅 Tomorrow &middot; 2:30 PM</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Tomorrow &middot; 2:30 PM
+                  </span>
                 </div>
                 <div class="crm-detail-row">
-                  <span>📱 +91 98401 23456</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +91 98401 23456
+                  </span>
                 </div>
                 <div class="crm-detail-row">
-                  <span>🩺 General Consultation (₹500)</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                    General Consultation (₹500)
+                  </span>
                 </div>
               </div>
 
               <div class="crm-sync-banner">
-                <span>⚡ Auto synced with Doctor Google Calendar</span>
+                <span style="display:inline-flex; align-items:center; gap:6px;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  Auto synced with Doctor Google Calendar
+                </span>
               </div>
 
               <div class="crm-mini-card">
@@ -2255,10 +2323,16 @@
                   <span class="crm-status-tag">Scheduled</span>
                 </div>
                 <div class="crm-detail-row">
-                  <span>🔔 24 Hour Reminder: Tomorrow 10:00 AM</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    24 Hour Reminder: Tomorrow 10:00 AM
+                  </span>
                 </div>
                 <div class="crm-detail-row">
-                  <span>🔔 2 Hour Reminder: Tomorrow 12:30 PM</span>
+                  <span style="display:inline-flex; align-items:center; gap:6px;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    2 Hour Reminder: Tomorrow 12:30 PM
+                  </span>
                 </div>
               </div>
             </div>
@@ -2276,12 +2350,30 @@
       <div class="container">
         <div class="logo-strip-caption">Trusted by Healthcare Practitioners Across India</div>
         <div class="clinic-badges-row">
-          <span class="clinic-badge-item">🦷 DENTAL SURGERY CLINICS</span>
-          <span class="clinic-badge-item">🏃 PHYSIOTHERAPY &amp; REHAB</span>
-          <span class="clinic-badge-item">🌿 AYURVEDA HOSPITALS</span>
-          <span class="clinic-badge-item">✨ DERMATOLOGY CENTERS</span>
-          <span class="clinic-badge-item">👶 PEDIATRIC PRACTICES</span>
-          <span class="clinic-badge-item">🔬 DIAGNOSTIC NETWORKS</span>
+          <span class="clinic-badge-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8 2 6 5 6 9c0 3 1.5 6.5 2 9 .5 2.5 1.5 2 2.5 0 .8-1.5 1-4 1.5-4s.7 2.5 1.5 4c1 2 2 2.5 2.5 0 .5-2.5 2-6 2-9 0-4-2-7-6-7z"/></svg>
+            DENTAL SURGERY CLINICS
+          </span>
+          <span class="clinic-badge-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            PHYSIOTHERAPY &amp; REHAB
+          </span>
+          <span class="clinic-badge-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13C4 7 11 2 11 2s7 5 7 11a7 7 0 0 1-7 7z"/><path d="M11 20V10"/></svg>
+            AYURVEDA HOSPITALS
+          </span>
+          <span class="clinic-badge-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            DERMATOLOGY CENTERS
+          </span>
+          <span class="clinic-badge-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            PEDIATRIC PRACTICES
+          </span>
+          <span class="clinic-badge-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.69 19.46A2 2 0 0 0 6.42 22h11.16a2 2 0 0 0 1.73-2.54L14 9.31V2"/></svg>
+            DIAGNOSTIC NETWORKS
+          </span>
         </div>
       </div>
     </section>
@@ -2300,17 +2392,32 @@
         <!-- Hera-style 3 Metric Cards (matching reference) -->
         <div class="thesis-cards-grid">
           <div class="thesis-metric-card">
-            <span class="thesis-metric-icon">⚡</span>
+            <div class="thesis-metric-icon-wrap icon-blue" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
             <div class="thesis-metric-num" style="color: var(--color-brand-blue);">3 Seconds</div>
             <p class="thesis-metric-desc">Average reply speed for every prospective patient WhatsApp message.</p>
           </div>
           <div class="thesis-metric-card">
-            <span class="thesis-metric-icon">🕒</span>
+            <div class="thesis-metric-icon-wrap icon-orange" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
             <div class="thesis-metric-num" style="color: #EA580C;">24/7 Active</div>
             <p class="thesis-metric-desc">Answers inquiries nights, weekends, and during busy clinic consultations.</p>
           </div>
           <div class="thesis-metric-card">
-            <span class="thesis-metric-icon">📈</span>
+            <div class="thesis-metric-icon-wrap icon-purple" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
             <div class="thesis-metric-num" style="color: #7C3AED;">+20 Bookings</div>
             <p class="thesis-metric-desc">Average monthly confirmed appointment increase per clinic practice.</p>
           </div>
@@ -2325,7 +2432,10 @@
         <!-- Feature 1: AI Instant Receptionist (Lavender) -->
         <div class="feature-block-row">
           <div class="feature-content-col">
-            <span class="feature-badge-pill pill-blue">✦ AI Receptionist</span>
+            <span class="feature-badge-pill pill-blue"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;" aria-hidden="true">
+              <path d="M14 2C14 5 15.5 6.5 18 7C15.5 7.5 14 9 14 12C14 9 12.5 7.5 10 7C12.5 6.5 14 5 14 2Z" fill="#93C5FD"/>
+              <path d="M6 7C6 10 7.5 11.5 10 12C7.5 12.5 6 14 6 17C6 14 4.5 12.5 2 12C4.5 11.5 6 10 6 7Z" fill="#2563EB"/>
+            </svg> AI Receptionist</span>
             <h3 class="feature-heading">Instant Replies for Every Single Clinic Detail. 24/7.</h3>
             <p class="feature-body-text">
               Patients inquiring at 10 PM or on Sunday morning receive instant, accurate answers for every single inquiry: consultation fees, doctor schedules, treatments offered, clinic address, directions, preparation instructions, and custom practice details within 3 seconds. Day and night.
@@ -2341,14 +2451,14 @@
             <div class="pastel-card-container card-grad-lavender">
               <div class="inner-software-widget">
                 <div class="widget-head-row">
-                  <span class="widget-title">⚡ Instant WhatsApp Response</span>
+                  <span class="widget-title">Instant WhatsApp Response</span>
                   <span class="widget-meta">3s reply</span>
                 </div>
                 <div class="mockup-bubble bubble-ai" style="width: 100%; margin-bottom: 8px;">
                   Hello! Consultation fee is ₹500. Open slots today: <strong>4:00 PM</strong> and <strong>5:30 PM</strong>.
                 </div>
                 <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #059669; font-weight: 700;">
-                  ✓ Meta Verified Cloud API
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-1px; margin-right:3px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Meta Verified Cloud API
                 </div>
               </div>
             </div>
@@ -2358,7 +2468,12 @@
         <!-- Feature 2: Google Calendar Direct Sync (Cyan) -->
         <div class="feature-block-row reverse-row">
           <div class="feature-content-col">
-            <span class="feature-badge-pill pill-cyan">⚡ Calendar Automation</span>
+            <span class="feature-badge-pill pill-cyan"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg> Calendar Automation</span>
             <h3 class="feature-heading">2 Way Google Calendar Slot Booking.</h3>
             <p class="feature-body-text">
               Patients pick their preferred consultation time directly in WhatsApp. The moment they confirm, it locks straight into your Google Calendar, preventing double bookings and front desk phone tag.
@@ -2374,7 +2489,7 @@
             <div class="pastel-card-container card-grad-cyan">
               <div class="inner-software-widget">
                 <div class="widget-head-row">
-                  <span class="widget-title">📅 Google Calendar Sync</span>
+                  <span class="widget-title">Google Calendar Sync</span>
                   <span class="widget-meta">Live</span>
                 </div>
                 <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 8px; padding: 10px; margin-bottom: 8px;">
@@ -2382,7 +2497,7 @@
                   <span style="font-size: 0.76rem; color: #15803D;">Tomorrow &middot; 2:30 PM to 3:00 PM</span>
                 </div>
                 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #0369A1;">
-                  ✓ Real time slot locking
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0369A1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-1px; margin-right:3px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Real time slot locking
                 </div>
               </div>
             </div>
@@ -2392,7 +2507,11 @@
         <!-- Feature 3: Smart Web CRM vs Paper Notes (Warm Peach) -->
         <div class="feature-block-row">
           <div class="feature-content-col">
-            <span class="feature-badge-pill pill-amber">📋 Clinic Web CRM</span>
+            <span class="feature-badge-pill pill-amber"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18"/>
+              <path d="M9 21V9"/>
+            </svg> Clinic Web CRM</span>
             <h3 class="feature-heading">1 Second Patient Lookup Beats Paper Registers.</h3>
             <p class="feature-body-text">
               Say goodbye to digging through dusty paper registers. Search by patient name or phone number in 1 second to view all past appointments, treatment notes, and consultation history on any device.
@@ -2423,7 +2542,10 @@
         <!-- Feature 4: Automated Reminders & Google Reviews (Mint Emerald) -->
         <div class="feature-block-row reverse-row">
           <div class="feature-content-col">
-            <span class="feature-badge-pill pill-emerald">🔔 Reminders &amp; Reviews</span>
+            <span class="feature-badge-pill pill-emerald"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;" aria-hidden="true">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg> Reminders &amp; Reviews</span>
             <h3 class="feature-heading">Cut Missed Appointments by 60%.</h3>
             <p class="feature-body-text">
               Automated reminders sent 24 hours and 2 hours before appointments with quick tap confirmation buttons keep your chairs full. Post visit follow ups collect 5 star Google reviews on complete autopilot.
@@ -2439,17 +2561,23 @@
             <div class="pastel-card-container card-grad-mint">
               <div class="inner-software-widget">
                 <div class="widget-head-row">
-                  <span class="widget-title">⭐ 5 Star Google Reviews</span>
+                  <span class="widget-title">5 Star Google Reviews</span>
                   <span class="widget-meta">Autopilot</span>
                 </div>
                 <div style="background: #F0FDF4; border: 1px solid #A7F3D0; border-radius: 8px; padding: 10px; margin-bottom: 8px;">
-                  <span style="color: #F59E0B; font-size: 0.84rem;">★★★★★</span>
+                  <div style="display: flex; gap: 3px; align-items: center;" aria-label="5 out of 5 stars">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
                   <p style="font-size: 0.74rem; color: #166534; margin-top: 2px;">
                     How was your consultation today? Tap below to share a review on Google!
                   </p>
                 </div>
                 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #047857;">
-                  ✓ Automated 24h &amp; 2h WhatsApp reminders
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-1px; margin-right:3px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Automated 24h &amp; 2h WhatsApp reminders
                 </div>
               </div>
             </div>
@@ -2490,8 +2618,12 @@
     <section id="doctor-proof" class="nocturnal-proof-section">
       <div class="container">
         
-        <div class="hero-pill-badge" style="background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.25);">
-          <span>⚡ Verified Doctor Case Study</span>
+        <div class="doctor-badge-pill">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;" aria-hidden="true">
+            <path d="M14 2C14 5 15.5 6.5 18 7C15.5 7.5 14 9 14 12C14 9 12.5 7.5 10 7C12.5 6.5 14 5 14 2Z" fill="#93C5FD"/>
+            <path d="M6 7C6 10 7.5 11.5 10 12C7.5 12.5 6 14 6 17C6 14 4.5 12.5 2 12C4.5 11.5 6 10 6 7Z" fill="#60A5FA"/>
+          </svg>
+          <span>Verified Doctor Case Study</span>
         </div>
 
         <h2 class="nocturnal-title">Active With Indian Doctors.</h2>
@@ -2552,7 +2684,11 @@
             </div>
 
             <div class="video-appreciation-bar">
-              <div style="font-size: 1.1rem; color: #34D399;">❤️</div>
+              <div style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: rgba(52, 211, 153, 0.15); color: #34D399; flex-shrink: 0;" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
               <div>
                 <strong style="color: #FFFFFF; display: block; margin-bottom: 2px;">Heartfelt thanks to Dr. Sameer</strong>
                 A warm thank you to Dr. Sameer and the team at Mind Body Recovery for taking time out of their busy practice to record this honest 8 minute review and share their clinic workflow.
@@ -2638,31 +2774,31 @@
 
               <ul class="plan-features-list">
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>24/7 WhatsApp AI Receptionist:</strong> Instant answers for all clinic details, fees, and doctor timings.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Unlimited WhatsApp Chats:</strong> Zero per chat limits or conversation caps.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Dedicated Web CRM:</strong> Visual Kanban pipeline for all patient inquiries.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>2 Way Google Calendar Sync:</strong> Automatic appointment confirmation.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Timed WhatsApp Reminders:</strong> Automated 24h and 2h patient alerts.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Google Reviews on Autopilot:</strong> Automatic 5 star review collection.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Official Meta Cloud API:</strong> Guaranteed 100% compliance.</span>
                 </li>
               </ul>
@@ -2692,31 +2828,31 @@
 
               <ul class="plan-features-list">
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Everything in Full WhatsApp System</strong> included.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Instagram DM AI Receptionist:</strong> Turn Instagram profile visits into booked visits.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Story &amp; Comment Lead Capture:</strong> Auto reply to post comments and story mentions.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Unified Omnichannel CRM Inbox:</strong> Manage WhatsApp and Instagram in one screen.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Unlimited Chats Across Both Channels:</strong> No extra per message billing.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>Priority Multi Doctor Calendar Routing:</strong> Direct patient routing to specific doctor schedules.</span>
                 </li>
                 <li class="plan-feature-item">
-                  <span class="check-icon">✓</span>
+                  <span class="check-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
                   <span><strong>VIP Onboarding &amp; Setup:</strong> 1 on 1 assisted configuration by engineering team.</span>
                 </li>
               </ul>
@@ -2732,7 +2868,7 @@
         </div>
 
         <p class="pricing-reassurance">
-          🔒 All plans include a 3 Day Free Trial &middot; Zero credit card required &middot; 15 minute setup on your existing number
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: -2px; margin-right: 5px;" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>All plans include a 3 Day Free Trial &middot; Zero credit card required &middot; 15 minute setup on your existing number
         </p>
 
       </div>
@@ -2755,8 +2891,8 @@
             <tbody>
               <tr>
                 <td><strong>WhatsApp AI Receptionist (24/7)</strong></td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
               </tr>
               <tr>
                 <td><strong>Monthly Inbound Chats</strong></td>
@@ -2765,38 +2901,38 @@
               </tr>
               <tr>
                 <td><strong>Instagram Direct Message AI Automation</strong></td>
-                <td style="text-align: center; color: #94A3B8;">✕</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓ Included</td>
+                <td style="text-align: center; color: #94A3B8;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Not included"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+                <td style="text-align: center; color: var(--color-emerald); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg> Included</td>
               </tr>
               <tr>
                 <td><strong>Instagram Story &amp; Comment Auto Capture</strong></td>
-                <td style="text-align: center; color: #94A3B8;">✕</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓ Included</td>
+                <td style="text-align: center; color: #94A3B8;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Not included"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+                <td style="text-align: center; color: var(--color-emerald); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg> Included</td>
               </tr>
               <tr>
                 <td><strong>Unified Web CRM Dashboard</strong></td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓ (WhatsApp)</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓ (Unified Omnichannel)</td>
+                <td style="text-align: center; color: var(--color-emerald); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg> (WhatsApp)</td>
+                <td style="text-align: center; color: var(--color-emerald); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg> (Unified Omnichannel)</td>
               </tr>
               <tr>
                 <td><strong>2 Way Google Calendar Booking</strong></td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
               </tr>
               <tr>
                 <td><strong>Automated Reminders (24h &amp; 2h Prior)</strong></td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
               </tr>
               <tr>
                 <td><strong>5 Star Google Reviews Collection</strong></td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓</td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td style="text-align: center; color: var(--color-emerald);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg></td>
               </tr>
               <tr>
                 <td><strong>Multi Doctor Routing</strong></td>
                 <td style="text-align: center; color: #94A3B8;">Single Doctor</td>
-                <td style="text-align: center; color: var(--color-emerald); font-weight: 800;">✓ Multi Doctor</td>
+                <td style="text-align: center; color: var(--color-emerald); font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;" aria-label="Included"><polyline points="20 6 9 17 4 12"/></svg> Multi Doctor</td>
               </tr>
               <tr>
                 <td><strong>Onboarding &amp; Setup Support</strong></td>
@@ -2898,10 +3034,10 @@
 
         <div class="footer-cta-row">
           <button type="button" class="btn-hero-primary open-trial-modal-btn" data-plan="Full WhatsApp System (₹1,499 + GST/mo)" >
-            🚀 Start 3 Day Free Trial
+            Start 3 Day Free Trial
           </button>
           <a href="https://wa.me/919514925790?text=Hi%20Bhuvanesh%2C%20I%20want%20to%20test%20the%20live%20WhatsApp%20clinic%20bot." target="_blank" rel="noopener noreferrer" class="btn-hero-secondary">
-            💬 Message Founder on WhatsApp
+            Message Founder on WhatsApp
           </a>
         </div>
 
@@ -2933,7 +3069,7 @@
   <!-- Mobile Bottom Sticky CTA -->
   <div class="mobile-bottom-sticky">
     <button type="button" class="btn-mobile-sticky open-trial-modal-btn" data-plan="Full WhatsApp System (₹1,499 + GST/mo)">
-      <span>💬 Start 3 Day Free Trial &rarr;</span>
+      <span>Start 3 Day Free Trial &rarr;</span>
     </button>
   </div>
 
@@ -2964,7 +3100,7 @@
         </button>
 
         <p class="form-micro-copy">
-          🔒 100% Privacy &middot; Instant redirect to WhatsApp demo &middot; 15 min setup
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: -1px; margin-right: 4px;" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>100% Privacy &middot; Instant redirect to WhatsApp demo &middot; 15 min setup
         </p>
       </form>
     </div>
