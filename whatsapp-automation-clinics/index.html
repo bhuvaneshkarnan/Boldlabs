@@ -2169,6 +2169,391 @@
       text-align: center;
       margin-top: 10px;
     }
+
+    /* ==========================================================================
+       HERA MOBILE SCREEN & RESPONSIVE PERFECTION OPTIMIZATIONS
+       ========================================================================== */
+    @media (max-width: 768px) {
+      /* 1. Global Container & Spacing */
+      .container {
+        padding: 0 16px !important;
+      }
+      section {
+        padding: 50px 0 !important;
+      }
+
+      /* 2. Responsive Typography Scaling */
+      .hero-main-title {
+        font-size: clamp(1.95rem, 7.5vw, 2.75rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 16px !important;
+      }
+      .hero-description {
+        font-size: 0.94rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 22px !important;
+      }
+      .thesis-section {
+        padding: 50px 0 44px !important;
+      }
+      .thesis-headline {
+        font-size: clamp(1.45rem, 5.5vw, 2.1rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 14px !important;
+      }
+      .thesis-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+      }
+      .feature-heading {
+        font-size: clamp(1.35rem, 5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 12px !important;
+      }
+      .feature-body-text {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+      }
+      .nocturnal-title {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .pricing-headline {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .matrix-headline {
+        font-size: clamp(1.45rem, 5.5vw, 2rem) !important;
+        margin-bottom: 20px !important;
+      }
+      .faq-headline {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .footer-signoff-title {
+        font-size: clamp(1.95rem, 7.5vw, 2.8rem) !important;
+        line-height: 1.18 !important;
+      }
+
+      /* 3. Hero CTA Buttons & Trust Bullets */
+      .hero-btn-row {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 20px !important;
+        gap: 10px !important;
+      }
+      .btn-hero-primary,
+      .btn-hero-secondary {
+        width: 100% !important;
+        height: 48px !important;
+        justify-content: center !important;
+        padding: 0 20px !important;
+        font-size: 0.94rem !important;
+      }
+      .hero-trust-bullets {
+        gap: 10px 14px !important;
+        font-size: 0.74rem !important;
+        margin-bottom: 32px !important;
+      }
+
+      /* 4. Hero Software Mockup Frame */
+      .hero-mockup-frame {
+        border-radius: 18px !important;
+      }
+      .mockup-app-header {
+        padding: 10px 14px !important;
+      }
+      .mockup-header-title {
+        font-size: 0.78rem !important;
+      }
+      .mockup-header-status {
+        font-size: 0.72rem !important;
+      }
+      .mockup-chat-pane,
+      .mockup-crm-pane {
+        padding: 14px 12px !important;
+        gap: 10px !important;
+      }
+      .mockup-bubble {
+        padding: 10px 12px !important;
+        font-size: 0.8rem !important;
+        max-width: 95% !important;
+      }
+      .crm-mini-card {
+        padding: 12px 10px !important;
+      }
+      .crm-sync-banner {
+        padding: 8px 10px !important;
+        font-size: 0.72rem !important;
+      }
+
+      /* 5. Clinic Trust Badges & Thesis Cards */
+      .clinic-badges-row {
+        gap: 10px 14px !important;
+      }
+      .clinic-badge-item {
+        font-size: 0.75rem !important;
+        gap: 6px !important;
+      }
+      .clinic-badge-item svg {
+        width: 12px !important;
+        height: 12px !important;
+      }
+      .thesis-cards-grid {
+        gap: 12px !important;
+        margin-top: 28px !important;
+      }
+      .thesis-metric-card {
+        padding: 18px 16px !important;
+        border-radius: 14px !important;
+        gap: 4px !important;
+      }
+      .thesis-metric-icon-wrap {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 8px !important;
+        margin-bottom: 4px !important;
+      }
+      .thesis-metric-num {
+        font-size: 1.65rem !important;
+      }
+      .thesis-metric-desc {
+        font-size: 0.84rem !important;
+        line-height: 1.45 !important;
+      }
+
+      /* 6. Feature Blocks & Pastel Cards */
+      .feature-block-row {
+        gap: 22px !important;
+        margin-bottom: 38px !important;
+      }
+      .pastel-card-container {
+        padding: 16px 10px !important;
+        min-height: auto !important;
+        border-radius: 18px !important;
+      }
+      .inner-software-widget {
+        padding: 16px 12px !important;
+        border-radius: 14px !important;
+      }
+      .feature-doctor-quote {
+        margin-top: 14px !important;
+        padding: 12px 14px !important;
+      }
+
+      /* 7. Stacked Philosophy Card */
+      .philosophy-section {
+        padding: 50px 0 !important;
+      }
+      .stacked-main-card {
+        padding: 26px 18px !important;
+        border-radius: 18px !important;
+      }
+      .card-underlay-1 {
+        left: 6px !important;
+        right: 6px !important;
+        transform: rotate(-0.5deg) !important;
+        border-radius: 18px !important;
+      }
+      .card-underlay-2 {
+        left: 3px !important;
+        right: 3px !important;
+        transform: rotate(0.4deg) !important;
+        border-radius: 18px !important;
+      }
+      .philosophy-body {
+        font-size: 0.88rem !important;
+        line-height: 1.65 !important;
+      }
+      .philosophy-signoff {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+      }
+      .philosophy-signoff button {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        height: 44px !important;
+      }
+
+      /* 8. Doctor Proof Section */
+      .nocturnal-proof-section {
+        padding: 54px 0 !important;
+      }
+      .nocturnal-card-box {
+        padding: 18px 14px !important;
+        border-radius: 16px !important;
+      }
+      .nocturnal-clinic-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      .nocturnal-metric-badge {
+        width: 100% !important;
+        text-align: left !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 12px !important;
+      }
+      .video-play-btn-circle {
+        width: 56px !important;
+        height: 56px !important;
+      }
+      .video-play-btn-circle svg {
+        width: 22px !important;
+        height: 22px !important;
+      }
+      .nocturnal-stats-strip-4col {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 12px 10px !important;
+        margin: 16px 0 !important;
+      }
+      .nocturnal-stat-box {
+        padding: 10px 6px !important;
+      }
+      .nocturnal-stat-num {
+        font-size: 1.25rem !important;
+        white-space: nowrap !important;
+      }
+      .nocturnal-stat-label {
+        font-size: 0.72rem !important;
+      }
+
+      /* 9. Pricing Cards */
+      .pricing-section {
+        padding: 52px 0 !important;
+      }
+      .pricing-card {
+        padding: 26px 18px !important;
+        border-radius: 18px !important;
+      }
+      .popular-top-badge {
+        top: -12px !important;
+        right: 16px !important;
+        font-size: 0.68rem !important;
+        padding: 3px 10px !important;
+      }
+      .price-figure {
+        font-size: 2.3rem !important;
+      }
+      .btn-plan-cta {
+        height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      /* 10. Sticky Comparison Matrix (Mobile UX Upgrade) */
+      .matrix-section {
+        padding: 52px 0 !important;
+      }
+      .matrix-mobile-hint {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-family: var(--font-mono);
+        font-size: 0.74rem;
+        color: var(--color-brand-blue);
+        font-weight: 600;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .matrix-table-wrap {
+        border-radius: 14px !important;
+        -webkit-overflow-scrolling: touch !important;
+        position: relative !important;
+        border: 1px solid var(--color-border) !important;
+      }
+      .matrix-table {
+        min-width: 520px !important;
+      }
+      .matrix-table th:first-child,
+      .matrix-table td:first-child {
+        position: sticky !important;
+        left: 0 !important;
+        background: #FFFFFF !important;
+        z-index: 2 !important;
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05) !important;
+      }
+      .matrix-table th:first-child {
+        background: #F8FAFC !important;
+        z-index: 3 !important;
+      }
+      .matrix-table th,
+      .matrix-table td {
+        padding: 12px 14px !important;
+        font-size: 0.82rem !important;
+      }
+
+      /* 11. FAQ Accordion */
+      .faq-section {
+        padding: 52px 0 !important;
+      }
+      .faq-question {
+        padding: 16px 0 !important;
+        font-size: 0.96rem !important;
+        min-height: 48px !important;
+      }
+      .faq-answer {
+        font-size: 0.88rem !important;
+        padding-bottom: 18px !important;
+      }
+
+      /* 12. Footer Section */
+      .footer-hera {
+        padding: 56px 0 32px !important;
+      }
+      .footer-cta-row {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 36px !important;
+        gap: 10px !important;
+      }
+      .footer-links-grid {
+        gap: 14px 18px !important;
+        font-size: 0.84rem !important;
+      }
+
+      /* 13. Form Input & Modal (iOS Zoom Prevention) */
+      .form-input {
+        font-size: 16px !important; /* Strictly prevents iOS Safari auto-zoom */
+        height: 48px !important;
+      }
+      .modal-card {
+        padding: 24px 18px !important;
+        border-radius: 18px !important;
+        max-height: calc(100vh - 32px) !important;
+        overflow-y: auto !important;
+      }
+      .modal-close-btn {
+        width: 44px !important;
+        height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        top: 6px !important;
+        right: 6px !important;
+      }
+      .form-btn-submit {
+        height: 48px !important;
+      }
+
+      /* Hide sticky mobile bottom bar when modal is open */
+      body.modal-open-lock .mobile-bottom-sticky {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .matrix-mobile-hint {
+        display: none !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2879,6 +3264,11 @@
       <div class="container">
         <h2 class="matrix-headline">Detailed Plan Comparison</h2>
 
+        <div class="matrix-mobile-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          <span>Swipe horizontally to compare all features &rarr;</span>
+        </div>
+
         <div class="matrix-table-wrap">
           <table class="matrix-table">
             <thead>
@@ -3173,6 +3563,7 @@
         }
         if (modalBackdrop) {
           modalBackdrop.classList.add('modal-open');
+          document.body.classList.add('modal-open-lock');
           if (doctorNameInput) doctorNameInput.focus();
         }
         // Track Pixel CTA click
@@ -3184,6 +3575,7 @@
       function closeModal() {
         if (modalBackdrop) {
           modalBackdrop.classList.remove('modal-open');
+          document.body.classList.remove('modal-open-lock');
         }
       }
 
