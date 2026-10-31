@@ -1,415 +1,2653 @@
 /* ==========================================================================
-   BOLDLABS STUDIO UNIFIED DESIGN SYSTEM
-   Extracted from Flagship WhatsApp Automation & Clinic CRM Architecture
-   Aesthetics: Clean, Light, Elegant, High-Legibility, Zero-Shadow
+   BOLDLABS STUDIO UNIFIED HERA DESIGN SYSTEM
+   Single Source of Truth: Core Tokens, Typography, Components & Responsive Grid
    ========================================================================== */
 
-/* --- 1. Font Definitions --- */
-@font-face {
-  font-family: 'VC Henrietta';
-  src: url('/assets/fonts/VCHenrietta-Medium.woff2') format('woff2'),
-       url('../assets/fonts/VCHenrietta-Medium.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* ==========================================================================
+       HERA OFFICIAL FONTS: VC HENRIETTA & SAANS
+       ========================================================================== */
+    @font-face {
+      font-family: 'VC Henrietta';
+      src: url('/assets/fonts/VCHenrietta-Medium.woff2') format('woff2'),
+           url('../assets/fonts/VCHenrietta-Medium.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-@font-face {
-  font-family: 'Saans';
-  src: url('/assets/fonts/Saans-Variable.woff2') format('woff2'),
-       url('../assets/fonts/Saans-Variable.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: normal;
-  font-display: swap;
-}
+    @font-face {
+      font-family: 'Saans';
+      src: url('/assets/fonts/Saans-Variable.woff2') format('woff2'),
+           url('../assets/fonts/Saans-Variable.woff2') format('woff2');
+      font-weight: 300 800;
+      font-style: normal;
+      font-display: swap;
+    }
 
-/* --- 2. Design Tokens (Three-Layer Architecture) --- */
-:root {
-  /* Primitive Colors */
-  --primitive-blue-600: #0055FE;
-  --primitive-blue-700: #0040C7;
-  --primitive-blue-50:  #EBF4FF;
-  --primitive-blue-100: #DBEAFE;
-  --primitive-blue-300: #93C5FD;
-  
-  --primitive-slate-900: #0F172A;
-  --primitive-slate-800: #1E293B;
-  --primitive-slate-700: #334155;
-  --primitive-slate-500: #64748B;
-  --primitive-slate-400: #94A3B8;
-  --primitive-slate-200: #E2E8F0;
-  --primitive-slate-100: #F1F5F9;
-  --primitive-slate-50:  #F8FAFC;
-  --primitive-white:     #FFFFFF;
+    /* ==========================================================================
+       HERA-INSPIRED CLEAN DESIGN SYSTEM: BOLDLABS CLINIC CRM
+       ========================================================================== */
+    :root {
+      --color-brand-blue: #0055FE;
+      --color-brand-blue-dark: #0040C7;
+      --color-sky-light: #EBF4FF;
+      --color-sky-mid: #93C5FD;
+      --color-emerald: #059669;
+      --color-emerald-dark: #047857;
+      --color-emerald-light: #ECFDF5;
+      --color-emerald-border: #A7F3D0;
+      
+      --color-dark-ink: #0F172A;
+      --color-body-text: #334155;
+      --color-muted-text: #64748B;
+      --color-light-text: #94A3B8;
+      
+      --color-bg-page: #FFFFFF;
+      --color-bg-subtle: #F8FAFC;
+      --color-border: #E2E8F0;
+      --color-border-card: #E2E8F0;
+      --color-border-light: #F1F5F9;
 
-  --primitive-emerald-600: #059669;
-  --primitive-emerald-700: #047857;
-  --primitive-emerald-50:  #ECFDF5;
-  --primitive-emerald-200: #A7F3D0;
+      /* Exact Hera Pastel Gradients */
+      --grad-lavender: linear-gradient(135deg, #ECF5FF 0%, #EAE4FF 50%, #FFBFD8 100%);
+      --grad-cyan: linear-gradient(135deg, #C9F2FF 0%, #A3E5FF 50%, #57A5FF 100%);
+      --grad-peach: linear-gradient(135deg, #FFF8D6 0%, #FFDFB5 50%, #FFA49C 100%);
+      --grad-mint: linear-gradient(135deg, #E6FCF5 0%, #D3F9D8 50%, #B2F2BB 100%);
 
-  /* Semantic Color Tokens */
-  --color-bg-page:       var(--primitive-white);
-  --color-bg-subtle:     var(--primitive-slate-50);
-  --color-bg-card:       var(--primitive-white);
-  --color-bg-alt:        var(--primitive-slate-100);
+      --font-display: 'VC Henrietta', Georgia, serif;
+      --font-sans: 'Saans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
 
-  --color-text-primary:   var(--primitive-slate-900);
-  --color-text-body:      var(--primitive-slate-700);
-  --color-text-muted:     var(--primitive-slate-500);
-  --color-text-light:     var(--primitive-slate-400);
+      --shadow-sm: none;
+      --shadow-md: none;
+      --shadow-lg: none;
+      --shadow-hero: none;
+      --shadow-nocturnal: none;
+    }
 
-  --color-border:         var(--primitive-slate-200);
-  --color-border-card:    var(--primitive-slate-200);
-  --color-border-subtle:  rgba(0, 0, 0, 0.08);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  --color-brand-blue:       var(--primitive-blue-600);
-  --color-brand-blue-hover: var(--primitive-blue-700);
-  --color-sky-light:        var(--primitive-blue-50);
-  --color-sky-mid:          var(--primitive-blue-300);
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
-  --color-emerald:          var(--primitive-emerald-600);
-  --color-emerald-dark:     var(--primitive-emerald-700);
-  --color-emerald-light:    var(--primitive-emerald-50);
-  --color-emerald-border:   var(--primitive-emerald-200);
+    body {
+      background-color: var(--color-bg-page);
+      color: var(--color-body-text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-  /* Gradients */
-  --grad-hero-sky: linear-gradient(180deg, #0052FF 0%, #1A68FF 30%, #4B8EFF 60%, #87B7FF 80%, #DCEBFF 92%, #FFFFFF 100%);
-  --grad-lavender: linear-gradient(135deg, #ECF5FF 0%, #EAE4FF 50%, #FFBFD8 100%);
-  --grad-cyan:     linear-gradient(135deg, #C9F2FF 0%, #A3E5FF 50%, #57A5FF 100%);
-  --grad-peach:    linear-gradient(135deg, #FFF8D6 0%, #FFDFB5 50%, #FFA49C 100%);
-  --grad-mint:     linear-gradient(135deg, #E6FCF5 0%, #D3F9D8 50%, #B2F2BB 100%);
+    section[id] {
+      scroll-margin-top: 90px;
+    }
 
-  /* Typography */
-  --font-display: 'VC Henrietta', Georgia, serif;
-  --font-sans:    'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+    }
 
-  /* Radii */
-  --radius-full: 9999px;
-  --radius-pill: 9999px;
-  --radius-xl:   22px;
-  --radius-lg:   18px;
-  --radius-md:   12px;
-  --radius-sm:   8px;
+    /* ==========================================================================
+       HERA FLOATING FROSTED NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 48px);
+      max-width: 1040px;
+      height: 60px;
+      padding: 8px 18px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: none;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+      transition: all 0.25s ease;
+    }
 
-  /* Zero Shadow Standard */
-  --shadow-none: none;
-  --shadow-sm:   none;
-  --shadow-md:   none;
-  --shadow-lg:   none;
-  --shadow-hero: none;
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
 
-  /* Spacing Grid */
-  --space-2xs: 4px;
-  --space-xs:  8px;
-  --space-sm:  16px;
-  --space-md:  24px;
-  --space-lg:  32px;
-  --space-xl:  48px;
-  --space-2xl: 64px;
-  --space-3xl: 96px;
+    .nav-logo-img {
+      height: 34px;
+      width: auto;
+      display: block;
+    }
 
-  /* Global Transition */
-  --transition-fast: all 0.15s ease;
-  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
 
-/* --- 3. Base Document Styling --- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    .nav-links a {
+      color: var(--color-dark-ink);
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: color 0.15s ease;
+    }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  background-color: var(--color-bg-page);
-  color: var(--color-text-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    .nav-links a:hover {
+      color: var(--color-brand-blue);
+    }
 
-body {
-  font-family: var(--font-sans);
-  color: var(--color-text-body);
-  background-color: var(--color-bg-page);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+    .nav-btn-trial {
+      background: var(--color-dark-ink);
+      color: #FFFFFF !important;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: none;
+      white-space: nowrap;
+    }
 
-/* Strict Zero Shadow Rule Across Entire System */
-*, *::before, *::after {
-  box-shadow: none !important;
-}
+    .nav-btn-trial:hover {
+      background: var(--color-brand-blue);
+      transform: none;
+      box-shadow: none;
+    }
 
-/* Global Link Behavior */
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: var(--transition-fast);
-}
+    @media (min-width: 901px) {
+      .nav-toggle {
+        display: none !important;
+      }
+    }
 
-/* Global Container */
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-}
+    @media (max-width: 900px) {
+      .navbar {
+        width: calc(100% - 32px);
+        padding: 8px 14px;
+      }
 
-/* --- 4. Typography System --- */
-h1, h2, h3, h4, h5, h6,
-.display-title,
-.hero-title,
-.section-headline,
-.card-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  color: var(--color-text-primary);
-  line-height: 1.2;
-  letter-spacing: -0.005em;
-}
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFFFFF !important;
+        border: 1px solid var(--color-border);
+        border-radius: 18px;
+        flex-direction: column;
+        padding: 18px;
+        margin-top: 8px;
+        box-shadow: none;
+        gap: 12px;
+        align-items: stretch;
+        z-index: 1000;
+      }
 
-h1, .hero-title {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  line-height: 1.16;
-  letter-spacing: -0.008em;
-  margin-bottom: 20px;
-}
+      .navbar.nav-open .nav-links {
+        display: flex;
+      }
 
-h2, .section-headline {
-  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
-  line-height: 1.22;
-  margin-bottom: 16px;
-}
+      .nav-links a {
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
 
-h3, .card-title {
-  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
-  line-height: 1.25;
-}
+      .nav-links a:hover {
+        background: var(--color-sky-light);
+      }
 
-p, .body-text {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--color-text-body);
-}
+      .nav-toggle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        color: var(--color-dark-ink);
+        font-family: var(--font-mono);
+        font-size: 0.76rem;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 6px 10px;
+      }
+    }
 
-.text-muted {
-  color: var(--color-text-muted);
-}
+    /* ==========================================================================
+       HERA CELESTIAL SKY HERO SECTION
+       ========================================================================== */
+    .hero-sky-section {
+      position: relative;
+      background: linear-gradient(180deg, #0052FF 0%, #1A68FF 30%, #4B8EFF 60%, #87B7FF 80%, #DCEBFF 92%, #FFFFFF 100%);
+      padding-top: 130px;
+      padding-bottom: 80px;
+      text-align: center;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
 
-.text-mono {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-}
+    .hero-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+      box-shadow: none;
+    }
 
-/* --- 5. Clean Pill Buttons --- */
-.btn-pill,
-.hero-cta-btn,
-.pill-btn,
-.btn-primary,
-button.btn-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 26px;
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  border-radius: var(--radius-pill);
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: var(--transition-fast);
-  box-shadow: none !important;
-}
+    .hero-main-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.18;
+      letter-spacing: -0.012em;
+      color: #FFFFFF;
+      max-width: 960px;
+      margin: 0 auto 20px;
+      text-shadow: none;
+    }
 
-/* Primary Blue Pill */
-.btn-pill-primary,
-.btn-primary {
-  background: var(--color-brand-blue) !important;
-  color: #FFFFFF !important;
-  border-color: var(--color-brand-blue) !important;
-}
+    .hero-main-title .hero-rotating-word {
+      display: inline-block;
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(8px);
+      font-weight: 500;
+    }
 
-.btn-pill-primary:hover,
-.btn-primary:hover {
-  background: var(--color-brand-blue-hover) !important;
-  border-color: var(--color-brand-blue-hover) !important;
-  transform: none;
-}
+    .hero-description {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.94);
+      max-width: 720px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
 
-/* Clean White Pill */
-.btn-pill-white {
-  background: #FFFFFF !important;
-  color: var(--color-text-primary) !important;
-  border: 1px solid var(--color-border) !important;
-}
+    .hero-btn-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
 
-.btn-pill-white:hover {
-  background: var(--color-bg-subtle) !important;
-  color: var(--color-brand-blue) !important;
-  border-color: var(--color-brand-blue) !important;
-}
+    .btn-hero-primary {
+      background: #FFFFFF;
+      color: var(--color-dark-ink);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: none;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: -0.01em;
+    }
 
-/* Secondary Outlined / Translucent Pill */
-.btn-pill-secondary,
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.16) !important;
-  color: #FFFFFF !important;
-  border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  backdrop-filter: blur(8px);
-}
+    .btn-hero-primary:hover {
+      background: #F8FAFC;
+      color: var(--color-brand-blue);
+      transform: none;
+      box-shadow: none;
+    }
 
-.btn-pill-secondary:hover,
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.28) !important;
-  border-color: rgba(255, 255, 255, 0.6) !important;
-}
+    .btn-hero-secondary {
+      background: rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 13px 26px;
+      border-radius: 9999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: -0.01em;
+      box-shadow: none;
+    }
 
-/* Clean Emerald Pill */
-.btn-pill-emerald {
-  background: var(--color-emerald) !important;
-  color: #FFFFFF !important;
-  border-color: var(--color-emerald) !important;
-}
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.24);
+      border-color: rgba(255, 255, 255, 0.6);
+      transform: none;
+      box-shadow: none;
+    }
 
-.btn-pill-emerald:hover {
-  background: var(--color-emerald-dark) !important;
-  border-color: var(--color-emerald-dark) !important;
-}
+        .hero-trust-bullets span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-/* --- 6. Floating Frosted Navbar --- */
-.navbar {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 48px);
-  max-width: 1040px;
-  height: 60px;
-  padding: 8px 18px;
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--color-border-subtle) !important;
-  border-radius: var(--radius-pill) !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: none !important;
-  z-index: 1000;
-  transition: var(--transition-smooth);
-}
+    .hero-trust-bullets {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: rgba(255, 255, 255, 0.88);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 46px;
+    }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
+    /* Floating Elevated Software UI Card */
+    .hero-mockup-frame {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 22px;
+      box-shadow: none;
+      overflow: hidden;
+      text-align: left;
+      color: var(--color-dark-ink);
+      position: relative;
+      z-index: 10;
+    }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
+    .mockup-app-header {
+      background: #F8FAFC;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.nav-links a {
-  color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: -0.01em;
-  transition: color 0.15s ease;
-}
+    .mockup-traffic-lights {
+      display: flex;
+      gap: 6px;
+    }
 
-.nav-links a:hover {
-  color: var(--color-brand-blue);
-}
+    .traffic-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
 
-.navbar-divider {
-  color: var(--color-border);
-  opacity: 0.6;
-}
+    .dot-red { background: #FF5F56; }
+    .dot-yellow { background: #FFBD2E; }
+    .dot-green { background: #27C93F; }
 
-/* --- 7. Cards & Surface Elevation --- */
-.card,
-.feature-card,
-.service-card,
-.plan-card,
-.contrast-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: 32px;
-  box-shadow: none !important;
-  transition: var(--transition-fast);
-}
+    .mockup-header-title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-.card:hover,
-.feature-card:hover,
-.service-card:hover {
-  border-color: var(--color-brand-blue);
-}
+    .mockup-header-status {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #065F46;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      padding: 3px 8px;
+      border-radius: 9999px;
+    }
 
-/* --- 8. Badges & Tags --- */
-.badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 14px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 500;
-  border: 1px solid var(--color-border);
-  background: var(--color-bg-subtle);
-  color: var(--color-text-primary);
-}
+    .mockup-body-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      background: #FFFFFF;
+    }
 
-.badge-pill-blue {
-  background: var(--color-sky-light);
-  color: var(--color-brand-blue);
-  border-color: var(--color-sky-mid);
-}
+    /* Left pane: Live WhatsApp Conversation */
+    .mockup-chat-pane {
+      background: #F0F4F8;
+      padding: 20px;
+      border-right: 1px solid #E2E8F0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-.badge-pill-emerald {
-  background: var(--color-emerald-light);
-  color: var(--color-emerald);
-  border-color: var(--color-emerald-border);
-}
+    .chat-pill-header {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
 
-/* --- 9. Clean Tables --- */
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: #FFFFFF;
-}
+    .mockup-bubble {
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      max-width: 90%;
+      position: relative;
+    }
 
-th, td {
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--color-border);
-  text-align: left;
-}
+    .bubble-patient {
+      align-self: flex-start;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1px solid #E2E8F0;
+      border-bottom-left-radius: 2px;
+    }
 
-th {
-  background: var(--color-bg-subtle);
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--color-text-primary);
-}
+    .bubble-ai {
+      align-self: flex-end;
+      background: #DCF8C6;
+      color: #0F172A;
+      border: 1px solid #C4E8A9;
+      border-bottom-right-radius: 2px;
+    }
 
-tr:last-child td {
-  border-bottom: none;
-}
+    .bubble-time {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: #64748B;
+      margin-top: 4px;
+      text-align: right;
+    }
+
+    .confirmed-pill-tag {
+      display: inline-block;
+      background: #059669;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    /* Right pane: Smart Clinic Web CRM */
+    .mockup-crm-pane {
+      padding: 20px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .crm-mini-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .crm-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .crm-patient-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #0F172A;
+    }
+
+    .crm-status-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #15803D;
+      background: #F0FDF4;
+      border: 1px solid #86EFAC;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .crm-detail-row {
+      font-size: 0.78rem;
+      color: #475569;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .crm-sync-banner {
+      background: #EEF2FF;
+      border: 1px solid #C7D2FE;
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      color: #3730A3;
+      font-family: var(--font-mono);
+    }
+
+    /* Cloud Silhouette Layer (Hera Style) */
+    .hero-clouds-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 120px;
+      background-image: url('/assets/cloud-divider.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    @media (max-width: 768px) {
+      .hero-sky-section {
+        padding-top: 135px;
+        padding-bottom: 60px;
+      }
+      .mockup-body-grid {
+        grid-template-columns: 1fr;
+      }
+      .mockup-chat-pane {
+        border-right: none;
+        border-bottom: 1px solid #E2E8F0;
+      }
+    }
+
+    /* ==========================================================================
+       MONOCHROME CLINIC TRUST LOGO STRIP
+       ========================================================================== */
+    .clinic-logo-strip {
+      background: #FFFFFF;
+      padding: 36px 0 24px;
+      border-bottom: 1px solid #F1F5F9;
+      text-align: center;
+    }
+
+    .logo-strip-caption {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .clinic-badges-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .clinic-badge-item {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #64748B;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .clinic-badge-item:hover {
+      opacity: 1;
+      color: var(--color-dark-ink);
+    }
+
+    /* ==========================================================================
+       HERA TWO-TONE THESIS SECTION
+       ========================================================================== */
+    .thesis-section {
+      padding: 80px 0 60px;
+      text-align: center;
+      background: #FFFFFF;
+    }
+
+    .thesis-headline {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.85rem, 3.4vw, 2.85rem);
+      line-height: 1.25;
+      letter-spacing: -0.012em;
+      max-width: 1100px;
+      margin: 0 auto 20px;
+    }
+
+    @media (min-width: 820px) {
+      .thesis-line-solid,
+      .thesis-line-muted {
+        white-space: nowrap;
+      }
+    }
+
+    .thesis-line-solid {
+      color: #0F172A;
+      display: block;
+    }
+
+    .thesis-line-muted {
+      color: #64748B;
+      display: block;
+    }
+
+    .thesis-subtitle {
+      font-size: 1.05rem;
+      color: #64748B;
+      max-width: 660px;
+      margin: 0 auto;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+    }
+
+
+    /* Hera-Style 3 Metric Cards */
+    .thesis-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 40px auto 0;
+      text-align: left;
+    }
+
+    .thesis-metric-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s ease;
+    }
+
+    
+    .doctor-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .thesis-metric-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    .thesis-metric-icon-wrap.icon-blue {
+      background: rgba(37, 99, 235, 0.09);
+      color: #2563EB;
+    }
+    .thesis-metric-icon-wrap.icon-orange {
+      background: rgba(234, 88, 12, 0.09);
+      color: #EA580C;
+    }
+    .thesis-metric-icon-wrap.icon-purple {
+      background: rgba(124, 58, 237, 0.09);
+      color: #7C3AED;
+    }
+
+    .thesis-metric-card:hover {
+      border-color: #94A3B8;
+    }
+
+    .thesis-metric-icon {
+      font-size: 1.3rem;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .thesis-metric-num {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .thesis-metric-desc {
+      font-size: 0.88rem;
+      color: var(--color-muted-text);
+      line-height: 1.5;
+      letter-spacing: -0.005em;
+    }
+
+    @media (max-width: 768px) {
+      .thesis-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+    }
+
+    /* ==========================================================================
+       HERA ALTERNATING 2-COLUMN PASTEL FEATURE CARDS
+       ========================================================================== */
+    .features-section {
+      padding: 40px 0 80px;
+      background: #FFFFFF;
+    }
+
+    .feature-block-row {
+      display: grid;
+      grid-template-columns: 1fr 1.08fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+
+    .feature-block-row.reverse-row {
+      grid-template-columns: 1.08fr 1fr;
+    }
+
+    .feature-block-row.reverse-row .feature-content-col {
+      order: 2;
+    }
+
+    .feature-block-row.reverse-row .feature-card-col {
+      order: 1;
+    }
+
+    .feature-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .pill-blue { background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; }
+    .pill-cyan { background: #E0F2FE; color: #0369A1; border: 1px solid #7DD3FC; }
+    .pill-amber { background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D; }
+    .pill-emerald { background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
+
+    .feature-heading {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      color: var(--color-dark-ink);
+      margin-bottom: 14px;
+    }
+
+    .feature-body-text {
+      font-size: 0.98rem;
+      color: #475569;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+
+    .feature-doctor-quote {
+      background: #F8FAFC;
+      border-left: 3px solid var(--color-brand-blue);
+      padding: 12px 16px;
+      border-radius: 0 10px 10px 0;
+      margin-top: 10px;
+    }
+
+    .feature-quote-text {
+      font-size: 0.86rem;
+      color: var(--color-body-text);
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    .feature-quote-author {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+    }
+
+    /* Pastel Preview Cards */
+    .pastel-card-container {
+      border-radius: 24px;
+      padding: 32px;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: none;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-grad-lavender { background: var(--grad-lavender); border: 1.5px solid #E0E7FF; }
+    .card-grad-cyan { background: var(--grad-cyan); border: 1.5px solid #BAE6FD; }
+    .card-grad-peach { background: var(--grad-peach); border: 1.5px solid #FDE68A; }
+    .card-grad-mint { background: var(--grad-mint); border: 1.5px solid #A7F3D0; }
+
+    /* Inner UI Components */
+    .inner-software-widget {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: none;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .widget-head-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .widget-title {
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: var(--color-dark-ink);
+    }
+
+    .widget-meta {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #64748B;
+    }
+
+    @media (max-width: 900px) {
+      .feature-block-row,
+      .feature-block-row.reverse-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 48px;
+      }
+      .feature-block-row.reverse-row .feature-content-col {
+        order: 1;
+      }
+      .feature-block-row.reverse-row .feature-card-col {
+        order: 2;
+      }
+    }
+
+    /* ==========================================================================
+       HERA STACKED PHILOSOPHY CARD
+       ========================================================================== */
+    .philosophy-section {
+      padding: 60px 0 80px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .stacked-card-wrapper {
+      position: relative;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .card-underlay-1 {
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      right: 12px;
+      height: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 22px;
+      opacity: 0.6;
+      transform: rotate(-1deg);
+      z-index: 1;
+    }
+
+    .card-underlay-2 {
+      position: absolute;
+      top: -5px;
+      left: 6px;
+      right: 6px;
+      height: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 22px;
+      opacity: 0.8;
+      transform: rotate(0.6deg);
+      z-index: 2;
+    }
+
+    .stacked-main-card {
+      position: relative;
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border);
+      border-radius: 22px;
+      padding: 44px 36px;
+      box-shadow: none;
+      z-index: 3;
+      text-align: left;
+    }
+
+    .philosophy-badge {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--color-brand-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .philosophy-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--color-dark-ink);
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+
+    .philosophy-body {
+      font-size: 0.98rem;
+      color: var(--color-body-text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .philosophy-signoff {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #F1F5F9;
+      padding-top: 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .signoff-author {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.96rem;
+      color: var(--color-dark-ink);
+    }
+
+    .signoff-role {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--color-muted-text);
+      display: block;
+    }
+
+    /* ==========================================================================
+       HERA NOCTURNAL BLUE VIDEO PROOF SECTION (#doctor-proof)
+       ========================================================================== */
+    .nocturnal-proof-section {
+      position: relative;
+      background: linear-gradient(180deg, #03081A 0%, #071233 45%, #0B1C4D 80%, #061138 100%);
+      color: #FFFFFF;
+      padding: 80px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .nocturnal-proof-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 85, 254, 0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .nocturnal-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+      margin-bottom: 12px;
+    }
+
+    .nocturnal-subtitle {
+      font-size: 1.05rem;
+      color: #94A3B8;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .nocturnal-card-box {
+      max-width: 840px;
+      margin: 0 auto;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 22px;
+      padding: 28px;
+      backdrop-filter: blur(16px);
+      box-shadow: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: left;
+    }
+
+    .nocturnal-clinic-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nocturnal-brand-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nocturnal-logo-frame {
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nocturnal-logo-img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+
+    .nocturnal-doctor-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nocturnal-verified-pill {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #34D399;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .nocturnal-clinic-meta {
+      font-size: 0.74rem;
+      color: #94A3B8;
+      margin-top: 2px;
+    }
+
+    .nocturnal-metric-badge {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 8px;
+      padding: 6px 14px;
+      text-align: right;
+    }
+
+    .nocturnal-metric-number {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.96rem;
+      color: #34D399;
+      display: block;
+    }
+
+    .nocturnal-metric-sub {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: #A7F3D0;
+    }
+
+    /* Video Player Box */
+    .video-showcase-box {
+      margin-bottom: 18px;
+    }
+
+    .video-subhead-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .video-pill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #60A5FA;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 3px 9px;
+      border-radius: 9999px;
+    }
+
+    .video-embed-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+
+    .video-facade-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .video-embed-wrapper:hover .video-facade-img {
+      transform: scale(1.02);
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 2;
+    }
+
+    .video-play-btn-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #FF0000;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      transition: transform 0.2s ease;
+    }
+
+    .video-embed-wrapper:hover .video-play-btn-circle {
+      transform: scale(1.08);
+    }
+
+    .video-play-hint {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .video-appreciation-bar {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.82rem;
+      color: #CBD5E1;
+      margin-bottom: 16px;
+    }
+
+    /* Authentic Client CRM Preview & Verified Numbers */
+    .client-crm-preview-box {
+      margin: 24px 0 20px;
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .client-crm-preview-header {
+      background: #0B1124;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .client-crm-img-wrap {
+      width: 100%;
+      overflow: hidden;
+      background: #080D1F;
+    }
+
+    .client-crm-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .client-crm-caption {
+      padding: 12px 18px;
+      background: rgba(11, 17, 36, 0.95);
+      font-size: 0.85rem;
+      color: #94A3B8;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .client-crm-caption strong {
+      color: #FFFFFF;
+    }
+
+    .nocturnal-stats-strip-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px 14px;
+      margin: 20px 0 20px;
+      text-align: center;
+    }
+
+    .nocturnal-stat-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nocturnal-stat-num {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .stat-green-text {
+      color: #34D399 !important;
+    }
+
+    .nocturnal-stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #94A3B8;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .nocturnal-stats-strip-4col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+    }
+
+    .nocturnal-footer-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       HERA CLEAN 2-PLAN PRICING SECTION (1499 & 2999 + GST)
+       ========================================================================== */
+    .pricing-section {
+      padding: 80px 0;
+      background: #FFFFFF;
+      text-align: center;
+    }
+
+    .pricing-headline {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.2;
+      color: var(--color-dark-ink);
+      letter-spacing: -0.012em;
+      margin-bottom: 12px;
+    }
+
+    .pricing-sub {
+      font-size: 1.05rem;
+      color: #64748B;
+      letter-spacing: -0.01em;
+      max-width: 620px;
+      margin: 0 auto 48px;
+    }
+
+    .pricing-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 22px;
+      padding: 36px 30px;
+      text-align: left;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+
+    .pricing-card:hover {
+      border-color: #94A3B8;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .pricing-card.popular-card {
+      border: 1.5px solid var(--color-brand-blue);
+      box-shadow: none;
+    }
+
+    .pricing-card.popular-card:hover {
+      border-color: var(--color-brand-blue);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .popular-top-badge {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      background: var(--color-brand-blue);
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+    }
+
+    .plan-name-label {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--color-dark-ink);
+      margin-bottom: 6px;
+      letter-spacing: -0.015em;
+    }
+
+    .plan-tagline {
+      font-size: 0.86rem;
+      color: var(--color-muted-text);
+      margin-bottom: 20px;
+      min-height: 42px;
+    }
+
+    .plan-price-box {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .price-currency {
+      font-family: var(--font-sans);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      vertical-align: top;
+    }
+
+    .price-figure {
+      font-family: var(--font-sans);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .price-period {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--color-muted-text);
+    }
+
+    .price-gst-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #0369A1;
+      background: #E0F2FE;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+
+    .plan-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .plan-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.86rem;
+      color: var(--color-body-text);
+      line-height: 1.45;
+    }
+
+    .check-icon {
+      color: var(--color-emerald);
+      font-weight: 800;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .btn-plan-cta {
+      width: 100%;
+      text-align: center;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.94rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: block;
+      border: none;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-plan-standard {
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 9999px;
+      font-weight: 500;
+      box-shadow: none;
+    }
+
+    .btn-plan-standard:hover {
+      background: #F8FAFC;
+      border-color: var(--color-brand-blue);
+      color: var(--color-brand-blue);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-plan-popular {
+      background: var(--color-brand-blue);
+      color: #FFFFFF;
+      border-radius: 9999px;
+      border: none;
+      font-weight: 500;
+      box-shadow: none;
+    }
+
+    .btn-plan-popular:hover {
+      background: var(--color-brand-blue-dark);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .pricing-reassurance {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--color-muted-text);
+    }
+
+    @media (max-width: 768px) {
+      .pricing-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+      }
+    }
+
+    /* ==========================================================================
+       HERA MINIMALIST FEATURE MATRIX
+       ========================================================================== */
+    .matrix-section {
+      padding: 60px 0 80px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .matrix-headline {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      color: var(--color-dark-ink);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .matrix-table-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      overflow-x: auto;
+      box-shadow: none;
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    .matrix-table th,
+    .matrix-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .matrix-table th {
+      background: #F8FAFC;
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: var(--color-dark-ink);
+      font-size: 0.84rem;
+    }
+
+    .matrix-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ==========================================================================
+       HERA HAIRLINE FAQ ACCORDION
+       ========================================================================== */
+    .faq-section {
+      padding: 80px 0;
+      background: #FFFFFF;
+    }
+
+    .faq-headline {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.2;
+      color: var(--color-dark-ink);
+      text-align: center;
+      letter-spacing: -0.012em;
+      margin-bottom: 40px;
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 22px 0;
+      background: none;
+      border: none;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-dark-ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      gap: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .faq-icon {
+      font-family: var(--font-mono);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #94A3B8;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-bottom: 22px;
+      font-size: 0.94rem;
+      color: var(--color-muted-text);
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+      color: var(--color-brand-blue);
+    }
+
+    /* ==========================================================================
+       HERA GRAND NOCTURNAL FOOTER
+       ========================================================================== */
+    .footer-sky-section {
+      position: relative;
+      background: linear-gradient(180deg, #050B20 0%, #030612 100%);
+      color: #FFFFFF;
+      padding: 100px 0 130px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .footer-signoff-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.3rem, 5.5vw, 4.2rem);
+      letter-spacing: -0.012em;
+      line-height: 1.18;
+      margin-bottom: 14px;
+      color: #FFFFFF;
+    }
+
+    .footer-signoff-sub {
+      font-size: 1.05rem;
+      color: #94A3B8;
+      letter-spacing: -0.01em;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    .footer-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand-mark {
+      margin-bottom: 24px;
+    }
+
+    .footer-links-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .footer-links-grid a {
+      color: #94A3B8;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.15s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-links-grid a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-legal-copy {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #64748B;
+    }
+
+    .footer-clouds-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 90px;
+      background-image: url('/assets/cloud-divider.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      pointer-events: none;
+      opacity: 0.15;
+    }
+
+    /* ==========================================================================
+       MOBILE BOTTOM STICKY BAR
+       ========================================================================== */
+    .mobile-bottom-sticky {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--color-border);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+      z-index: 999;
+      box-shadow: none;
+    }
+
+    .btn-mobile-sticky {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 48px;
+      background: var(--color-brand-blue);
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: none;
+      letter-spacing: -0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-bottom-sticky {
+        display: block;
+      }
+      body {
+        padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+      }
+    }
+
+    /* ==========================================================================
+       2-FIELD INTERACTIVE LEAD MODAL
+       ========================================================================== */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.modal-open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #FFFFFF;
+      border-radius: 22px;
+      max-width: 460px;
+      width: 100%;
+      padding: 32px 28px;
+      box-shadow: none;
+      border: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: #94A3B8;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--color-dark-ink);
+    }
+
+    .modal-header-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-brand-blue);
+      background: var(--color-sky-light);
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-dark-ink);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .modal-sub {
+      font-size: 0.86rem;
+      color: var(--color-muted-text);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-dark-ink);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .form-input {
+      width: 100%;
+      height: 46px;
+      padding: 10px 14px;
+      border: 1.5px solid var(--color-border);
+      border-radius: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: var(--color-dark-ink);
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--color-brand-blue);
+      box-shadow: none;
+    }
+
+    .form-btn-submit {
+      width: 100%;
+      height: 48px;
+      background: var(--color-brand-blue);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.96rem;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      box-shadow: none;
+      letter-spacing: -0.01em;
+    }
+
+    .form-btn-submit:hover {
+      background: var(--color-brand-blue-dark);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .form-micro-copy {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #94A3B8;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* ==========================================================================
+       HERA MOBILE SCREEN & RESPONSIVE PERFECTION OPTIMIZATIONS
+       ========================================================================== */
+    @media (max-width: 768px) {
+      /* 1. Global Container & Specific Section Spacings */
+      .container {
+        padding: 0 16px !important;
+      }
+      .hero-sky-section {
+        padding-top: 135px !important;
+        padding-bottom: 60px !important;
+      }
+      .clinic-logo-strip {
+        padding: 26px 0 !important;
+      }
+      .features-section {
+        padding: 50px 0 !important;
+      }
+
+      /* 2. Responsive Typography Scaling */
+      .hero-main-title {
+        font-size: clamp(1.95rem, 7.5vw, 2.75rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 16px !important;
+      }
+      .hero-description {
+        font-size: 0.94rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 22px !important;
+      }
+      .thesis-section {
+        padding: 50px 0 44px !important;
+      }
+      .thesis-headline {
+        font-size: clamp(1.45rem, 5.5vw, 2.1rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 14px !important;
+      }
+      .thesis-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+      }
+      .feature-heading {
+        font-size: clamp(1.35rem, 5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 12px !important;
+      }
+      .feature-body-text {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+      }
+      .nocturnal-title {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .pricing-headline {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .matrix-headline {
+        font-size: clamp(1.45rem, 5.5vw, 2rem) !important;
+        margin-bottom: 20px !important;
+      }
+      .faq-headline {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .footer-signoff-title {
+        font-size: clamp(1.95rem, 7.5vw, 2.8rem) !important;
+        line-height: 1.18 !important;
+      }
+
+      /* 3. Hero CTA Buttons & Trust Bullets */
+      .hero-btn-row {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 20px !important;
+        gap: 10px !important;
+      }
+      .btn-hero-primary,
+      .btn-hero-secondary {
+        width: 100% !important;
+        height: 48px !important;
+        justify-content: center !important;
+        padding: 0 20px !important;
+        font-size: 0.94rem !important;
+      }
+      .hero-trust-bullets {
+        gap: 10px 14px !important;
+        font-size: 0.74rem !important;
+        margin-bottom: 32px !important;
+      }
+
+      /* 4. Hero Software Mockup Frame */
+      .hero-mockup-frame {
+        border-radius: 18px !important;
+      }
+      .mockup-app-header {
+        padding: 10px 14px !important;
+      }
+      .mockup-header-title {
+        font-size: 0.78rem !important;
+      }
+      .mockup-header-status {
+        font-size: 0.72rem !important;
+      }
+      .mockup-chat-pane,
+      .mockup-crm-pane {
+        padding: 14px 12px !important;
+        gap: 10px !important;
+      }
+      .mockup-bubble {
+        padding: 10px 12px !important;
+        font-size: 0.8rem !important;
+        max-width: 95% !important;
+      }
+      .crm-mini-card {
+        padding: 12px 10px !important;
+      }
+      .crm-sync-banner {
+        padding: 8px 10px !important;
+        font-size: 0.72rem !important;
+      }
+
+      /* 5. Clinic Trust Badges & Thesis Cards */
+      .clinic-badges-row {
+        gap: 10px 14px !important;
+      }
+      .clinic-badge-item {
+        font-size: 0.75rem !important;
+        gap: 6px !important;
+      }
+      .clinic-badge-item svg {
+        width: 12px !important;
+        height: 12px !important;
+      }
+      .thesis-cards-grid {
+        gap: 12px !important;
+        margin-top: 28px !important;
+      }
+      .thesis-metric-card {
+        padding: 18px 16px !important;
+        border-radius: 14px !important;
+        gap: 4px !important;
+      }
+      .thesis-metric-icon-wrap {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 8px !important;
+        margin-bottom: 4px !important;
+      }
+      .thesis-metric-num {
+        font-size: 1.65rem !important;
+      }
+      .thesis-metric-desc {
+        font-size: 0.84rem !important;
+        line-height: 1.45 !important;
+      }
+
+      /* 6. Feature Blocks & Pastel Cards */
+      .feature-block-row {
+        gap: 22px !important;
+        margin-bottom: 38px !important;
+      }
+      .pastel-card-container {
+        padding: 16px 10px !important;
+        min-height: auto !important;
+        border-radius: 18px !important;
+      }
+      .inner-software-widget {
+        padding: 16px 12px !important;
+        border-radius: 14px !important;
+      }
+      .feature-doctor-quote {
+        margin-top: 14px !important;
+        padding: 12px 14px !important;
+      }
+
+      /* 7. Stacked Philosophy Card */
+      .philosophy-section {
+        padding: 50px 0 !important;
+      }
+      .stacked-main-card {
+        padding: 26px 18px !important;
+        border-radius: 18px !important;
+      }
+      .card-underlay-1 {
+        left: 6px !important;
+        right: 6px !important;
+        transform: rotate(-0.5deg) !important;
+        border-radius: 18px !important;
+      }
+      .card-underlay-2 {
+        left: 3px !important;
+        right: 3px !important;
+        transform: rotate(0.4deg) !important;
+        border-radius: 18px !important;
+      }
+      .philosophy-body {
+        font-size: 0.88rem !important;
+        line-height: 1.65 !important;
+      }
+      .philosophy-signoff {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+      }
+      .philosophy-signoff button {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        height: 44px !important;
+      }
+
+      /* 8. Doctor Proof Section */
+      .nocturnal-proof-section {
+        padding: 54px 0 !important;
+      }
+      .nocturnal-card-box {
+        padding: 18px 14px !important;
+        border-radius: 16px !important;
+      }
+      .nocturnal-clinic-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      .nocturnal-metric-badge {
+        width: 100% !important;
+        text-align: left !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 12px !important;
+      }
+      .video-play-btn-circle {
+        width: 56px !important;
+        height: 56px !important;
+      }
+      .video-play-btn-circle svg {
+        width: 22px !important;
+        height: 22px !important;
+      }
+      .nocturnal-stats-strip-4col {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 12px 10px !important;
+        margin: 16px 0 !important;
+      }
+      .nocturnal-stat-box {
+        padding: 10px 6px !important;
+      }
+      .nocturnal-stat-num {
+        font-size: 1.25rem !important;
+        white-space: nowrap !important;
+      }
+      .nocturnal-stat-label {
+        font-size: 0.72rem !important;
+      }
+
+      /* 9. Pricing Cards */
+      .pricing-section {
+        padding: 52px 0 !important;
+      }
+      .pricing-card {
+        padding: 26px 18px !important;
+        border-radius: 18px !important;
+      }
+      .popular-top-badge {
+        top: -12px !important;
+        right: 16px !important;
+        font-size: 0.68rem !important;
+        padding: 3px 10px !important;
+      }
+      .price-figure {
+        font-size: 2.3rem !important;
+      }
+      .btn-plan-cta {
+        height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      /* 10. Sticky Comparison Matrix (Mobile UX Upgrade) */
+      .matrix-section {
+        padding: 52px 0 !important;
+      }
+      .matrix-mobile-hint {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-family: var(--font-mono);
+        font-size: 0.74rem;
+        color: var(--color-brand-blue);
+        font-weight: 600;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .matrix-table-wrap {
+        border-radius: 14px !important;
+        -webkit-overflow-scrolling: touch !important;
+        position: relative !important;
+        border: 1px solid var(--color-border) !important;
+      }
+      .matrix-table {
+        min-width: 520px !important;
+      }
+      .matrix-table th:first-child,
+      .matrix-table td:first-child {
+        position: sticky !important;
+        left: 0 !important;
+        background: #FFFFFF !important;
+        z-index: 2 !important;
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05) !important;
+      }
+      .matrix-table th:first-child {
+        background: #F8FAFC !important;
+        z-index: 3 !important;
+      }
+      .matrix-table th,
+      .matrix-table td {
+        padding: 12px 14px !important;
+        font-size: 0.82rem !important;
+      }
+
+      /* 11. FAQ Accordion */
+      .faq-section {
+        padding: 52px 0 !important;
+      }
+      .faq-question {
+        padding: 16px 0 !important;
+        font-size: 0.96rem !important;
+        min-height: 48px !important;
+      }
+      .faq-answer {
+        font-size: 0.88rem !important;
+        padding-bottom: 18px !important;
+      }
+
+      /* 12. Footer Section */
+      .footer-hera {
+        padding: 56px 0 32px !important;
+      }
+      .footer-cta-row {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 36px !important;
+        gap: 10px !important;
+      }
+      .footer-links-grid {
+        gap: 14px 18px !important;
+        font-size: 0.84rem !important;
+      }
+
+      /* 13. Form Input & Modal (iOS Zoom Prevention) */
+      .form-input {
+        font-size: 16px !important; /* Strictly prevents iOS Safari auto-zoom */
+        height: 48px !important;
+      }
+      .modal-card {
+        padding: 24px 18px !important;
+        border-radius: 18px !important;
+        max-height: calc(100vh - 32px) !important;
+        overflow-y: auto !important;
+      }
+      .modal-close-btn {
+        width: 44px !important;
+        height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        top: 6px !important;
+        right: 6px !important;
+      }
+      .form-btn-submit {
+        height: 48px !important;
+      }
+
+      /* Hide sticky mobile bottom bar when modal is open */
+      body.modal-open-lock .mobile-bottom-sticky {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .matrix-mobile-hint {
+        display: none !important;
+      }
+    }
+
+
+    /* Meta Tech Partner Trust Badge */
+    .meta-partner-badge-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .meta-partner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      box-shadow: none;
+      transition: all 0.2s ease;
+    }
+
+    .meta-partner-badge:hover {
+      border-color: #0064E0;
+      background: #F0F7FF;
+    }
+
+    .meta-partner-title {
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      letter-spacing: -0.01em;
+    }
+
+    .meta-partner-divider {
+      color: #CBD5E1;
+      font-weight: 400;
+    }
+
+    .meta-partner-desc {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: #059669;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .meta-partner-badge {
+        padding: 6px 14px;
+        gap: 8px;
+      }
+      .meta-partner-title {
+        font-size: 0.78rem;
+      }
+      .meta-partner-desc {
+        font-size: 0.7rem;
+      }
+    }
+
+
+    /* ==========================================================================
+       HERA COMPETITOR CONTRAST SECTION (BOLDLABS VS INTERAKT & AISENSY)
+       ========================================================================== */
+    .contrast-section {
+      padding: 80px 0;
+      background: #F8FAFC;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .contrast-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-brand-blue);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .contrast-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+      color: var(--color-dark-ink);
+      max-width: 900px;
+      margin: 0 auto 16px;
+    }
+
+    .contrast-subtitle {
+      font-size: clamp(0.96rem, 1.8vw, 1.12rem);
+      color: var(--color-muted-text);
+      max-width: 760px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    .contrast-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contrast-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contrast-card:hover {
+      border-color: #94A3B8;
+    }
+
+    .contrast-card-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contrast-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contrast-icon-wrap.icon-blue {
+      background: rgba(37, 99, 235, 0.08);
+      color: #2563EB;
+    }
+    .contrast-icon-wrap.icon-orange {
+      background: rgba(234, 88, 12, 0.08);
+      color: #EA580C;
+    }
+    .contrast-icon-wrap.icon-purple {
+      background: rgba(124, 58, 237, 0.08);
+      color: #7C3AED;
+    }
+    .contrast-icon-wrap.icon-emerald {
+      background: rgba(5, 150, 105, 0.08);
+      color: #059669;
+    }
+
+    .contrast-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .contrast-comparison-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contrast-box-competitor {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.84rem;
+      color: #64748B;
+      line-height: 1.5;
+    }
+
+    .contrast-tag-competitor {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .contrast-box-boldlabs {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      color: #14532D;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .contrast-tag-boldlabs {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .contrast-section {
+        padding: 50px 0 !important;
+      }
+      .contrast-title {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .contrast-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 32px !important;
+      }
+      .contrast-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .contrast-card {
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+      }
+    }
