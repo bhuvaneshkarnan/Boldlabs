@@ -60,11 +60,42 @@
           }
         ],
         "provider": {
-          "@type": "LocalBusiness",
+          "@type": "Organization",
           "name": "Boldlabs Studio",
           "telephone": "+918870341570",
-          "url": "https://www.goboldlabs.com"
-        }
+          "url": "https://www.goboldlabs.com",
+          "founder": {
+            "@type": "Person",
+            "name": "Bhuvanesh Karnan"
+          },
+          "knowsAbout": [
+            "WhatsApp Automation for Clinics",
+            "Clinic CRM Software",
+            "Doctor Appointment Booking Automation",
+            "Official Meta Tech Partner"
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "14",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Dr. Sameer"
+            },
+            "reviewBody": "Before automating WhatsApp, inquiries during busy clinic hours or late evenings sat unread for hours. With Boldlabs, every inquiry is answered in 3 seconds, consultation slots are confirmed automatically, and reminders keep our chairs full.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            }
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -115,6 +146,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No hidden surprises. Customer initiated conversations fall within the Meta free service tier. As an Official Meta Tech Partner, we connect directly to the official Meta Cloud API for guaranteed 100% compliance, zero number ban risk, and uninterrupted clinic operations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why choose Boldlabs over generic tools like Interakt, AISensy, or Wati?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generic tools like Interakt and AISensy are DIY software builders where doctors must spend 20 hours designing flowcharts and configuring webhooks. Boldlabs is a dedicated automation agency: we configure your clinic details, doctor consultation fees, and appointment calendar in 15 minutes, with an integrated Clinic Web CRM and zero per conversation markup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Boldlabs prevent doctor WhatsApp numbers from getting banned?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As an Official Meta Tech Partner, Boldlabs connects directly to the official Meta Cloud API infrastructure, ensuring 100% compliance with WhatsApp Business policies and zero number ban risk."
             }
           }
         ]
@@ -2620,6 +2667,189 @@
       }
     }
 
+
+    /* ==========================================================================
+       HERA COMPETITOR CONTRAST SECTION (BOLDLABS VS INTERAKT & AISENSY)
+       ========================================================================== */
+    .contrast-section {
+      padding: 80px 0;
+      background: #F8FAFC;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .contrast-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-brand-blue);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .contrast-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+      color: var(--color-dark-ink);
+      max-width: 900px;
+      margin: 0 auto 16px;
+    }
+
+    .contrast-subtitle {
+      font-size: clamp(0.96rem, 1.8vw, 1.12rem);
+      color: var(--color-muted-text);
+      max-width: 760px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    .contrast-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contrast-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contrast-card:hover {
+      border-color: #94A3B8;
+    }
+
+    .contrast-card-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contrast-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contrast-icon-wrap.icon-blue {
+      background: rgba(37, 99, 235, 0.08);
+      color: #2563EB;
+    }
+    .contrast-icon-wrap.icon-orange {
+      background: rgba(234, 88, 12, 0.08);
+      color: #EA580C;
+    }
+    .contrast-icon-wrap.icon-purple {
+      background: rgba(124, 58, 237, 0.08);
+      color: #7C3AED;
+    }
+    .contrast-icon-wrap.icon-emerald {
+      background: rgba(5, 150, 105, 0.08);
+      color: #059669;
+    }
+
+    .contrast-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .contrast-comparison-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contrast-box-competitor {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.84rem;
+      color: #64748B;
+      line-height: 1.5;
+    }
+
+    .contrast-tag-competitor {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .contrast-box-boldlabs {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      color: #14532D;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .contrast-tag-boldlabs {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .contrast-section {
+        padding: 50px 0 !important;
+      }
+      .contrast-title {
+        font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+      }
+      .contrast-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 32px !important;
+      }
+      .contrast-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .contrast-card {
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -3207,6 +3437,111 @@
       </div>
     </section>
 
+
+    <!-- SECTION: WHY DOCTORS CHOOSE BOLDLABS OVER GENERIC DIY TOOLS (INTERAKT & AISENSY) -->
+    <section id="why-boldlabs" class="contrast-section">
+      <div class="container">
+        
+        <div class="contrast-badge-pill">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;" aria-hidden="true">
+            <path d="M14 2C14 5 15.5 6.5 18 7C15.5 7.5 14 9 14 12C14 9 12.5 7.5 10 7C12.5 6.5 14 5 14 2Z" fill="#93C5FD"/>
+            <path d="M6 7C6 10 7.5 11.5 10 12C7.5 12.5 6 14 6 17C6 14 4.5 12.5 2 12C4.5 11.5 6 10 6 7Z" fill="#2563EB"/>
+          </svg>
+          <span>Engineered Exclusively for Healthcare</span>
+        </div>
+
+        <h2 class="contrast-title">Built for Clinics. Not Ecommerce Carts or Flowcharts.</h2>
+        <p class="contrast-subtitle">
+          Generic SaaS tools like Interakt and AISensy expect doctors to spend 20 hours building chatbot flowcharts. Boldlabs is a specialized healthcare automation agency: we configure your practice in 15 minutes.
+        </p>
+
+        <div class="contrast-grid">
+          
+          <!-- Card 1: Agency vs DIY -->
+          <div class="contrast-card">
+            <div class="contrast-card-head">
+              <span class="contrast-icon-wrap icon-blue" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <h3 class="contrast-card-title">Engineering Agency vs. DIY Flowcharts</h3>
+            </div>
+            <div class="contrast-comparison-box">
+              <div class="contrast-box-competitor">
+                <span class="contrast-tag-competitor">Generic DIY Tools (Interakt &amp; AISensy)</span>
+                You must spend weekends building drag and drop flowchart trees, writing prompts, and configuring webhooks yourself.
+              </div>
+              <div class="contrast-box-boldlabs">
+                <span class="contrast-tag-boldlabs">Boldlabs Agency Advantage</span>
+                15 minute white glove setup. Our engineering team trains your AI on your exact doctors, fees, treatments, timings, and directions.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Dedicated Clinic CRM vs Flat Lists -->
+          <div class="contrast-card">
+            <div class="contrast-card-head">
+              <span class="contrast-icon-wrap icon-orange" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </span>
+              <h3 class="contrast-card-title">Dedicated Clinic CRM vs. Flat Contact Lists</h3>
+            </div>
+            <div class="contrast-comparison-box">
+              <div class="contrast-box-competitor">
+                <span class="contrast-tag-competitor">Generic DIY Tools (Interakt &amp; AISensy)</span>
+                Only provide basic contact lists or ecommerce cart tracking with zero appointment pipeline or consultation notes.
+              </div>
+              <div class="contrast-box-boldlabs">
+                <span class="contrast-tag-boldlabs">Boldlabs Agency Advantage</span>
+                Dedicated Clinic Web CRM with 1 second patient lookup, visual Kanban booking stages, and doctor consultation notes on any device.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: 2 Way Calendar Slot Locking -->
+          <div class="contrast-card">
+            <div class="contrast-card-head">
+              <span class="contrast-icon-wrap icon-purple" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              <h3 class="contrast-card-title">2 Way Google Calendar Slot Locking</h3>
+            </div>
+            <div class="contrast-comparison-box">
+              <div class="contrast-box-competitor">
+                <span class="contrast-tag-competitor">Generic DIY Tools (Interakt &amp; AISensy)</span>
+                Send static links that patients drop out of, leaving your reception staff to play phone tag confirming appointments.
+              </div>
+              <div class="contrast-box-boldlabs">
+                <span class="contrast-tag-boldlabs">Boldlabs Agency Advantage</span>
+                2 way Google Calendar slot locking directly inside WhatsApp conversation prevents double bookings in real time.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Flat Pricing vs Conversation Tax -->
+          <div class="contrast-card">
+            <div class="contrast-card-head">
+              <span class="contrast-icon-wrap icon-emerald" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </span>
+              <h3 class="contrast-card-title">Flat Predictable Pricing vs. Conversation Tax</h3>
+            </div>
+            <div class="contrast-comparison-box">
+              <div class="contrast-box-competitor">
+                <span class="contrast-tag-competitor">Generic DIY Tools (Interakt &amp; AISensy)</span>
+                Platform subscriptions plus per conversation markups, contact tier penalties, and broadcast charges as inquiries grow.
+              </div>
+              <div class="contrast-box-boldlabs">
+                <span class="contrast-tag-boldlabs">Boldlabs Agency Advantage</span>
+                Flat ₹1,499 per month with unlimited inbound patient chats, zero per message penalty, and official Meta Cloud API infrastructure.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
     <!-- SECTION 7: CLEAN 2-PLAN PRICING SECTION (1499 & 2999 + GST) -->
     <section id="pricing" class="pricing-section">
       <div class="container">
@@ -3484,6 +3819,16 @@
             </button>
             <div class="faq-answer">
               No hidden surprises. Customer initiated conversations fall within the Meta free service tier. As an Official Meta Tech Partner, we connect directly to the official Meta Cloud API for guaranteed 100% compliance, zero number ban risk, and uninterrupted clinic operations.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Why choose Boldlabs over generic tools like Interakt, AISensy, or Wati?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Generic tools are DIY software builders where you have to spend 20 hours building flowcharts, writing prompts, and troubleshooting webhooks. Boldlabs is an engineering agency: our team configures your entire clinic details, doctor fees, and appointment schedule in 15 minutes. We also provide a dedicated Clinic Web CRM and flat pricing with zero per message markups.
             </div>
           </div>
 
