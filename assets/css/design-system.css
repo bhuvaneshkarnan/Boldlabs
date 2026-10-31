@@ -1,0 +1,415 @@
+/* ==========================================================================
+   BOLDLABS STUDIO UNIFIED DESIGN SYSTEM
+   Extracted from Flagship WhatsApp Automation & Clinic CRM Architecture
+   Aesthetics: Clean, Light, Elegant, High-Legibility, Zero-Shadow
+   ========================================================================== */
+
+/* --- 1. Font Definitions --- */
+@font-face {
+  font-family: 'VC Henrietta';
+  src: url('/assets/fonts/VCHenrietta-Medium.woff2') format('woff2'),
+       url('../assets/fonts/VCHenrietta-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saans';
+  src: url('/assets/fonts/Saans-Variable.woff2') format('woff2'),
+       url('../assets/fonts/Saans-Variable.woff2') format('woff2');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- 2. Design Tokens (Three-Layer Architecture) --- */
+:root {
+  /* Primitive Colors */
+  --primitive-blue-600: #0055FE;
+  --primitive-blue-700: #0040C7;
+  --primitive-blue-50:  #EBF4FF;
+  --primitive-blue-100: #DBEAFE;
+  --primitive-blue-300: #93C5FD;
+  
+  --primitive-slate-900: #0F172A;
+  --primitive-slate-800: #1E293B;
+  --primitive-slate-700: #334155;
+  --primitive-slate-500: #64748B;
+  --primitive-slate-400: #94A3B8;
+  --primitive-slate-200: #E2E8F0;
+  --primitive-slate-100: #F1F5F9;
+  --primitive-slate-50:  #F8FAFC;
+  --primitive-white:     #FFFFFF;
+
+  --primitive-emerald-600: #059669;
+  --primitive-emerald-700: #047857;
+  --primitive-emerald-50:  #ECFDF5;
+  --primitive-emerald-200: #A7F3D0;
+
+  /* Semantic Color Tokens */
+  --color-bg-page:       var(--primitive-white);
+  --color-bg-subtle:     var(--primitive-slate-50);
+  --color-bg-card:       var(--primitive-white);
+  --color-bg-alt:        var(--primitive-slate-100);
+
+  --color-text-primary:   var(--primitive-slate-900);
+  --color-text-body:      var(--primitive-slate-700);
+  --color-text-muted:     var(--primitive-slate-500);
+  --color-text-light:     var(--primitive-slate-400);
+
+  --color-border:         var(--primitive-slate-200);
+  --color-border-card:    var(--primitive-slate-200);
+  --color-border-subtle:  rgba(0, 0, 0, 0.08);
+
+  --color-brand-blue:       var(--primitive-blue-600);
+  --color-brand-blue-hover: var(--primitive-blue-700);
+  --color-sky-light:        var(--primitive-blue-50);
+  --color-sky-mid:          var(--primitive-blue-300);
+
+  --color-emerald:          var(--primitive-emerald-600);
+  --color-emerald-dark:     var(--primitive-emerald-700);
+  --color-emerald-light:    var(--primitive-emerald-50);
+  --color-emerald-border:   var(--primitive-emerald-200);
+
+  /* Gradients */
+  --grad-hero-sky: linear-gradient(180deg, #0052FF 0%, #1A68FF 30%, #4B8EFF 60%, #87B7FF 80%, #DCEBFF 92%, #FFFFFF 100%);
+  --grad-lavender: linear-gradient(135deg, #ECF5FF 0%, #EAE4FF 50%, #FFBFD8 100%);
+  --grad-cyan:     linear-gradient(135deg, #C9F2FF 0%, #A3E5FF 50%, #57A5FF 100%);
+  --grad-peach:    linear-gradient(135deg, #FFF8D6 0%, #FFDFB5 50%, #FFA49C 100%);
+  --grad-mint:     linear-gradient(135deg, #E6FCF5 0%, #D3F9D8 50%, #B2F2BB 100%);
+
+  /* Typography */
+  --font-display: 'VC Henrietta', Georgia, serif;
+  --font-sans:    'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Radii */
+  --radius-full: 9999px;
+  --radius-pill: 9999px;
+  --radius-xl:   22px;
+  --radius-lg:   18px;
+  --radius-md:   12px;
+  --radius-sm:   8px;
+
+  /* Zero Shadow Standard */
+  --shadow-none: none;
+  --shadow-sm:   none;
+  --shadow-md:   none;
+  --shadow-lg:   none;
+  --shadow-hero: none;
+
+  /* Spacing Grid */
+  --space-2xs: 4px;
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  32px;
+  --space-xl:  48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Global Transition */
+  --transition-fast: all 0.15s ease;
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- 3. Base Document Styling --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-page);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Strict Zero Shadow Rule Across Entire System */
+*, *::before, *::after {
+  box-shadow: none !important;
+}
+
+/* Global Link Behavior */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* Global Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+/* --- 4. Typography System --- */
+h1, h2, h3, h4, h5, h6,
+.display-title,
+.hero-title,
+.section-headline,
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+
+h1, .hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.16;
+  letter-spacing: -0.008em;
+  margin-bottom: 20px;
+}
+
+h2, .section-headline {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  line-height: 1.22;
+  margin-bottom: 16px;
+}
+
+h3, .card-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+  line-height: 1.25;
+}
+
+p, .body-text {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* --- 5. Clean Pill Buttons --- */
+.btn-pill,
+.hero-cta-btn,
+.pill-btn,
+.btn-primary,
+button.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+  box-shadow: none !important;
+}
+
+/* Primary Blue Pill */
+.btn-pill-primary,
+.btn-primary {
+  background: var(--color-brand-blue) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-brand-blue) !important;
+}
+
+.btn-pill-primary:hover,
+.btn-primary:hover {
+  background: var(--color-brand-blue-hover) !important;
+  border-color: var(--color-brand-blue-hover) !important;
+  transform: none;
+}
+
+/* Clean White Pill */
+.btn-pill-white {
+  background: #FFFFFF !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+.btn-pill-white:hover {
+  background: var(--color-bg-subtle) !important;
+  color: var(--color-brand-blue) !important;
+  border-color: var(--color-brand-blue) !important;
+}
+
+/* Secondary Outlined / Translucent Pill */
+.btn-pill-secondary,
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(8px);
+}
+
+.btn-pill-secondary:hover,
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Clean Emerald Pill */
+.btn-pill-emerald {
+  background: var(--color-emerald) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-emerald) !important;
+}
+
+.btn-pill-emerald:hover {
+  background: var(--color-emerald-dark) !important;
+  border-color: var(--color-emerald-dark) !important;
+}
+
+/* --- 6. Floating Frosted Navbar --- */
+.navbar {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1040px;
+  height: 60px;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-subtle) !important;
+  border-radius: var(--radius-pill) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: none !important;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-brand-blue);
+}
+
+.navbar-divider {
+  color: var(--color-border);
+  opacity: 0.6;
+}
+
+/* --- 7. Cards & Surface Elevation --- */
+.card,
+.feature-card,
+.service-card,
+.plan-card,
+.contrast-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: none !important;
+  transition: var(--transition-fast);
+}
+
+.card:hover,
+.feature-card:hover,
+.service-card:hover {
+  border-color: var(--color-brand-blue);
+}
+
+/* --- 8. Badges & Tags --- */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-primary);
+}
+
+.badge-pill-blue {
+  background: var(--color-sky-light);
+  color: var(--color-brand-blue);
+  border-color: var(--color-sky-mid);
+}
+
+.badge-pill-emerald {
+  background: var(--color-emerald-light);
+  color: var(--color-emerald);
+  border-color: var(--color-emerald-border);
+}
+
+/* --- 9. Clean Tables --- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+th, td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background: var(--color-bg-subtle);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WhatsApp CRM & AI Receptionist - Landing Page Blueprint & 3-Tier Pricing</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.42;
+    font-size: 9.5pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    page-break-after: always;
+    position: relative;
+    box-sizing: border-box;
+    height: 275mm;
+    max-height: 275mm;
+    overflow: hidden;
+    padding-bottom: 15px;
+  }
+
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  .header-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 800;
+    font-size: 16pt;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+  }
+
+  .brand-logo span.accent {
+    color: #059669;
+  }
+
+  .badge-doc {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  h1 {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.3px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
+  h3 {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  p {
+    margin-bottom: 6px;
+    color: #334155;
+    font-size: 9pt;
+  }
+
+  .subtitle {
+    font-size: 9.5pt;
+    color: #64748b;
+    margin-bottom: 10px;
+  }
+
+  .callout {
+    background: #f8fafc;
+    border-left: 4px solid #059669;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin: 8px 0;
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+
+  .callout strong {
+    color: #0f172a;
+  }
+
+  .callout-amber {
+    border-left-color: #d97706;
+    background: #fffbeb;
+  }
+
+  /* Pricing Cards Grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px 0 14px 0;
+  }
+
+  .pricing-card {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .pricing-card.featured {
+    border: 2px solid #059669;
+    background: #f0fdf4;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.08);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -9px;
+    right: 12px;
+    background: #059669;
+    color: white;
+    font-size: 7pt;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .plan-name {
+    font-size: 12pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1px;
+  }
+
+  .plan-tagline {
+    font-size: 8pt;
+    color: #64748b;
+    margin-bottom: 6px;
+    line-height: 1.3;
+    min-height: 22px;
+  }
+
+  .plan-price {
+    font-size: 16pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1px;
+  }
+
+  .plan-price span.period {
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: #64748b;
+  }
+
+  .plan-annual {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #059669;
+    margin-bottom: 8px;
+  }
+
+  .plan-access {
+    background: #f1f5f9;
+    padding: 5px 6px;
+    border-radius: 5px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .plan-features {
+    list-style: none;
+    font-size: 8pt;
+    color: #334155;
+    margin-bottom: 12px;
+    flex-grow: 1;
+  }
+
+  .plan-features li {
+    margin-bottom: 5px;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.3;
+  }
+
+  .plan-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: 800;
+  }
+
+  .plan-features li.excluded {
+    color: #94a3b8;
+    text-decoration: line-through;
+  }
+
+  .plan-features li.excluded::before {
+    content: "✕";
+    color: #cbd5e1;
+  }
+
+  .plan-cta {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 8pt;
+    text-decoration: none;
+    display: block;
+  }
+
+  .pricing-card.featured .plan-cta {
+    background: #059669;
+  }
+
+  /* Comparison Matrix */
+  table.matrix {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 8pt;
+  }
+
+  table.matrix th, table.matrix td {
+    border: 1px solid #cbd5e1;
+    padding: 5px 8px;
+    text-align: left;
+  }
+
+  table.matrix th {
+    background: #f8fafc;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  table.matrix th.highlight {
+    background: #ecfdf5;
+    color: #047857;
+  }
+
+  table.matrix td.cat-header {
+    background: #f1f5f9;
+    font-weight: 800;
+    color: #334155;
+    text-transform: uppercase;
+    font-size: 7pt;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+  }
+
+  .check {
+    color: #059669;
+    font-weight: 800;
+    font-size: 10pt;
+    text-align: center;
+  }
+
+  .cross {
+    color: #cbd5e1;
+    font-size: 9pt;
+    text-align: center;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  /* Copy Swipe Boxes */
+  .copy-box {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 6px 0;
+  }
+
+  .copy-box-title {
+    font-size: 7.5pt;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  .copy-box-text {
+    font-size: 9.5pt;
+    color: #0f172a;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .copy-box-sub {
+    font-size: 8pt;
+    color: #475569;
+    margin-top: 3px;
+    line-height: 1.3;
+  }
+
+  /* Grid Layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 8px 0;
+  }
+
+  .card-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #ffffff;
+  }
+
+  .card-item strong {
+    font-size: 9pt;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .card-item p {
+    font-size: 8pt;
+    color: #475569;
+    margin-bottom: 0;
+    line-height: 1.3;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 7pt;
+    font-weight: 700;
+  }
+
+  .badge-starter { background: #e0f2fe; color: #0369a1; }
+  .badge-standard { background: #dcfce7; color: #15803d; }
+  .badge-pro { background: #fef3c7; color: #b45309; }
+
+  .footer-note {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    color: #94a3b8;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 5px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1: EXECUTIVE OVERVIEW & HERO ARCHITECTURE ================= -->
+<div class="page">
+  <div class="header-brand">
+    <div class="brand-logo">
+      <span>Boldlabs</span><span class="accent">AI</span>
+      <span style="font-weight: 400; color: #94a3b8; font-size: 12pt;">| WhatsApp CRM Platform</span>
+    </div>
+    <div class="badge-doc">Official Landing Page Blueprint</div>
+  </div>
+
+  <h1>High-Converting Landing Page Blueprint & 3-Tier Pricing Model</h1>
+  <p class="subtitle">Complete copywriting, section architecture, pricing cards, and feature comparison matrix to build your website.</p>
+
+  <div class="callout">
+    <strong>Strategic Value Proposition:</strong> "Turn Missed WhatsApp Inquiries Into Confirmed, Paid Appointments 24/7 on Autopilot."<br>
+    Tailored specifically for <strong>Clinics, Doctors, Salons, Wellness Spas, Diagnostic Labs & Appointment-driven Practices</strong>.
+  </div>
+
+  <h2>1. Header & Navigation Architecture</h2>
+  <div class="card-item">
+    <div class="grid-2" style="margin: 0;">
+      <div>
+        <strong>Navigation Menu Links:</strong>
+        <p>• Features & Tour &nbsp; • How It Works &nbsp; • Pricing Plans &nbsp; • Live Demo &nbsp; • FAQs</p>
+      </div>
+      <div>
+        <strong>Header Action Buttons:</strong>
+        <p>• Secondary: <em>"Client Login"</em> (links to <code>crm.goboldlabs.com</code>)<br>
+        • Primary CTA: <em>"Start Free Trial / Book Live Demo"</em> (high-contrast button)</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>2. Hero Section (Above-the-Fold Copy Swipe)</h2>
+  
+  <div class="copy-box">
+    <div class="copy-box-title">Pre-Headline Badge</div>
+    <div class="copy-box-text" style="color: #059669;">⚡ The #1 WhatsApp AI Receptionist & Clinic CRM in India</div>
+  </div>
+
+  <div class="copy-box">
+    <div class="copy-box-title">Primary H1 Headline (The Hook)</div>
+    <div class="copy-box-text" style="font-size: 11pt;">Stop Losing Patients to Delayed Replies.<br>Automate Inquiries, Appointments & Reminders on WhatsApp.</div>
+    <div class="copy-box-sub">Never miss an inquiry while consulting or asleep. Give your patients instant 24/7 replies, eliminate no-shows with automated WhatsApp reminders, and build a 5-star Google reputation on complete autopilot.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="copy-box" style="margin: 0;">
+      <div class="copy-box-title">Primary CTA Button</div>
+      <div class="copy-box-text" style="font-size: 10pt;">🚀 Start 7-Day Free Trial</div>
+      <div class="copy-box-sub">No credit card required • 15-minute WhatsApp setup</div>
+    </div>
+    <div class="copy-box" style="margin: 0;">
+      <div class="copy-box-title">Secondary CTA Button</div>
+      <div class="copy-box-text" style="font-size: 10pt;">💬 Test Live WhatsApp Bot</div>
+      <div class="copy-box-sub">Experience the 3-second instant reply on your own phone</div>
+    </div>
+  </div>
+
+  <h2>3. Trust & Social Proof Stats</h2>
+  <div class="grid-2" style="grid-template-columns: repeat(4, 1fr); text-align: center; margin-top: 6px;">
+    <div class="card-item">
+      <strong style="font-size: 13pt; color: #059669;">&lt; 3 Sec</strong>
+      <p style="font-size: 7pt;">Instant AI Response</p>
+    </div>
+    <div class="card-item">
+      <strong style="font-size: 13pt; color: #059669;">-70%</strong>
+      <p style="font-size: 7pt;">Drop in No-Shows</p>
+    </div>
+    <div class="card-item">
+      <strong style="font-size: 13pt; color: #059669;">15,000+</strong>
+      <p style="font-size: 7pt;">Bookings Handled</p>
+    </div>
+    <div class="card-item">
+      <strong style="font-size: 13pt; color: #059669;">100%</strong>
+      <p style="font-size: 7pt;">Meta API Compliant</p>
+    </div>
+  </div>
+
+  <h2>4. Problem vs. Solution Framework</h2>
+  <div class="grid-2">
+    <div class="card-item" style="border-left: 3px solid #ef4444; background: #fffbfb;">
+      <strong style="color: #b91c1c;">The Problem (Manual Chaos):</strong>
+      <p>❌ Front desk missed 8 calls while busy with walk-in patients.<br>
+      ❌ Prospective patients message 3 competitors when you don't reply in 5 mins.<br>
+      ❌ 30% of scheduled appointments don't show up due to forgotten dates.<br>
+      ❌ Zero follow-ups for Google reviews or repeat check-ups.</p>
+    </div>
+    <div class="card-item" style="border-left: 3px solid #059669; background: #f0fdf4;">
+      <strong style="color: #047857;">The Solution (With Boldlabs):</strong>
+      <p>✅ 24/7 instant WhatsApp responses to inquiries in 3 seconds.<br>
+      ✅ Automated booking requests collected with name, date & concern.<br>
+      ✅ Automated 24h & 2h WhatsApp reminders with 1-click confirmation.<br>
+      ✅ Automated post-appointment 5-star Google review collection.</p>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <span>Boldlabs AI • WhatsApp Automation & Smart CRM Platform</span>
+    <span>Page 1 of 4</span>
+  </div>
+</div>
+
+
+<!-- ================= PAGE 2: THE 3-TIER PRICING SECTION ================= -->
+<div class="page">
+  <div class="header-brand">
+    <div class="brand-logo">
+      <span>Boldlabs</span><span class="accent">AI</span>
+      <span style="font-weight: 400; color: #94a3b8; font-size: 12pt;">| 3-Tier Pricing Model</span>
+    </div>
+    <div class="badge-doc">Ready-to-Deploy Pricing</div>
+  </div>
+
+  <h1>Simple, Transparent Pricing Plans</h1>
+  <p class="subtitle">Designed for every stage of your practice — from solo practitioners to multi-branch clinical networks.</p>
+
+  <div class="pricing-grid">
+    
+    <!-- STARTER PLAN -->
+    <div class="pricing-card">
+      <div>
+        <span class="badge badge-starter">ESSENTIAL AUTOMATION</span>
+        <div class="plan-name" style="margin-top: 5px;">Starter</div>
+        <div class="plan-tagline">"The 24/7 AI Receptionist" — Zero software friction, 100% on WhatsApp.</div>
+        <div class="plan-price">₹999 <span class="period">/ mo</span></div>
+        <div class="plan-annual">₹9,999 / year (Save 17%)</div>
+        <div class="plan-access">Access: WhatsApp Alerts to Owner<br>(No web login needed)</div>
+        
+        <ul class="plan-features">
+          <li><strong>24/7 Instant AI Reply</strong> (&lt; 3s)</li>
+          <li><strong>Smart FAQs Answered</strong> (Pricing, services, timings, map)</li>
+          <li><strong>Booking Requests</strong> (Patient name, phone, slot & concern)</li>
+          <li><strong>WhatsApp Owner Alerts</strong> (Doctor gets pinged on personal WhatsApp)</li>
+          <li><strong>1 WhatsApp Number</strong> connected</li>
+          <li>Up to 1,000 inbound chats / mo</li>
+          <li>Zero Meta conversation charges</li>
+          <li class="excluded">Web CRM Portal Login</li>
+          <li class="excluded">Automated Reminders (24h/2h)</li>
+          <li class="excluded">Google Review Collector</li>
+          <li class="excluded">Instagram Automation</li>
+        </ul>
+      </div>
+      <a href="#starter" class="plan-cta">Get Started Starter</a>
+    </div>
+
+    <!-- STANDARD PLAN -->
+    <div class="pricing-card featured">
+      <div class="featured-badge">⭐ MOST POPULAR</div>
+      <div>
+        <span class="badge badge-standard">COMPLETE CLINIC SUITE</span>
+        <div class="plan-name" style="margin-top: 5px;">Standard</div>
+        <div class="plan-tagline">"Clinic Automation & CRM" — Eliminate no-shows & 10x reviews.</div>
+        <div class="plan-price">₹2,499 <span class="period">/ mo</span></div>
+        <div class="plan-annual">₹24,999 / year (Save 17%)</div>
+        <div class="plan-access" style="background: #ecfdf5; color: #047857;">Access: Full Dedicated Web CRM<br>(Owner + Receptionist logins)</div>
+        
+        <ul class="plan-features">
+          <li><strong>Everything in Starter, PLUS:</strong></li>
+          <li><strong>Dedicated Web CRM Portal</strong> (<code>yourclinic.goboldlabs.com</code>)</li>
+          <li><strong>Kanban Patient Pipeline</strong> (New → Confirmed → Attended)</li>
+          <li><strong>Automated WhatsApp Reminders</strong> (24h & 2h before slot)</li>
+          <li><strong>Automated Google Review Engine</strong> (Dispatched after visit)</li>
+          <li><strong>Invoicing & PDF Billing</strong> via WhatsApp</li>
+          <li><strong>Calendar & Slot Scheduling</strong></li>
+          <li><strong>2 Staff User Logins</strong> (Reception + Doctor)</li>
+          <li>Up to 3,000 chats / mo</li>
+          <li class="excluded">Instagram DM Automation</li>
+          <li class="excluded">Multi-Branch Routing</li>
+        </ul>
+      </div>
+      <a href="#standard" class="plan-cta">Start 7-Day Free Trial</a>
+    </div>
+
+    <!-- PRO PLAN -->
+    <div class="pricing-card">
+      <div>
+        <span class="badge badge-pro">SCALE & ADS ENGINE</span>
+        <div class="plan-name" style="margin-top: 5px;">Pro</div>
+        <div class="plan-tagline">"Ads & Scale Engine" — Omnichannel growth & multi-branch power.</div>
+        <div class="plan-price">₹4,999 <span class="period">/ mo</span></div>
+        <div class="plan-annual">₹49,999 / year (Save 17%)</div>
+        <div class="plan-access">Access: Enterprise Multi-Seat CRM<br>(Branch routing + Staff roles)</div>
+        
+        <ul class="plan-features">
+          <li><strong>Everything in Standard, PLUS:</strong></li>
+          <li><strong>Instagram DM Automation</strong> (Auto-reply to leads & reels)</li>
+          <li><strong>Click-to-WhatsApp Ad Engine</strong> (Instant qualification of FB/IG leads)</li>
+          <li><strong>Multi-Branch Routing</strong> (Manage 2+ clinics/branches)</li>
+          <li><strong>Unlimited Staff Accounts</strong> with role permissions</li>
+          <li><strong>Custom Domain Setup</strong> (<code>crm.yourclinic.com</code>)</li>
+          <li>Up to 10,000 chats / mo</li>
+          <li>Priority 1-on-1 VIP WhatsApp Support</li>
+          <li>Dedicated Account Manager</li>
+        </ul>
+      </div>
+      <a href="#pro" class="plan-cta">Upgrade to Pro</a>
+    </div>
+
+  </div>
+
+  <h2>Strategic Access Architecture (Why This Converts Higher)</h2>
+  <div class="callout callout-amber">
+    <strong>Key Selling Advantage of the 3-Tier Split:</strong>
+    <ul style="margin-left: 16px; margin-top: 3px; font-size: 8.5pt;">
+      <li><strong>Starter (₹999): Zero Onboarding Friction.</strong> Doctors and solo clinic owners often resist learning another web software. Starter gives them the 24/7 AI bot and forwards clean booking requests straight to their WhatsApp. High sign-up volume, 95% gross margin.</li>
+      <li><strong>Standard (₹2,499): The High-Value Retention Sweet Spot.</strong> Once clinics want to reduce no-shows and organize walk-ins, they unlock the Web CRM, interactive Kanban, 24h/2h reminders, and automated Google Reviews.</li>
+      <li><strong>Pro (₹4,999+): For Businesses Spending on Marketing.</strong> Anyone running Meta ads or managing multiple branches needs instant ad qualification and Instagram DM automation.</li>
+    </ul>
+  </div>
+
+  <div class="footer-note">
+    <span>Boldlabs AI • WhatsApp Automation & Smart CRM Platform</span>
+    <span>Page 2 of 4</span>
+  </div>
+</div>
+
+
+<!-- ================= PAGE 3: DETAILED FEATURE COMPARISON MATRIX ================= -->
+<div class="page">
+  <div class="header-brand">
+    <div class="brand-logo">
+      <span>Boldlabs</span><span class="accent">AI</span>
+      <span style="font-weight: 400; color: #94a3b8; font-size: 12pt;">| Feature Comparison</span>
+    </div>
+    <div class="badge-doc">Detailed Matrix</div>
+  </div>
+
+  <h1>Feature Comparison Matrix</h1>
+  <p class="subtitle">Complete functional breakdown across all 3 tiers for your landing page comparison table.</p>
+
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th style="width: 40%;">Core Capabilities & Modules</th>
+        <th style="width: 20%;" class="center">Starter (₹999/mo)</th>
+        <th style="width: 20%;" class="center highlight">Standard (₹2,499/mo)</th>
+        <th style="width: 20%;" class="center">Pro (₹4,999+/mo)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cat-header" colspan="4">1. Access & Dashboard Interface</td>
+      </tr>
+      <tr>
+        <td>Platform Interface</td>
+        <td class="center">WhatsApp Alerts Only</td>
+        <td class="center" style="font-weight: 700; color: #059669;">Dedicated Web CRM</td>
+        <td class="center" style="font-weight: 700; color: #0f172a;">Multi-Seat Enterprise CRM</td>
+      </tr>
+      <tr>
+        <td>Web Login Credentials Provided</td>
+        <td class="cross">✕ (Not Needed)</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Staff / Receptionist User Seats</td>
+        <td class="center">Owner Phone</td>
+        <td class="center">2 User Seats</td>
+        <td class="center">Unlimited Seats</td>
+      </tr>
+      <tr>
+        <td>Custom Subdomain / Branding</td>
+        <td class="center">Standard Bot</td>
+        <td class="center">yourclinic.goboldlabs.com</td>
+        <td class="center">crm.yourdomain.com</td>
+      </tr>
+
+      <tr>
+        <td class="cat-header" colspan="4">2. AI Conversations & Receptionist</td>
+      </tr>
+      <tr>
+        <td>24/7 Instant AI WhatsApp Reply (&lt; 3s)</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Clinic FAQs, Doctor Bios & Pricing Bot</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Instant WhatsApp Alert to Owner on Booking Request</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Monthly Included WhatsApp Conversations</td>
+        <td class="center">1,000 / mo</td>
+        <td class="center">3,000 / mo</td>
+        <td class="center">10,000+ / mo</td>
+      </tr>
+      <tr>
+        <td>Human Takeover & Live Chat in Web App</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+
+      <tr>
+        <td class="cat-header" colspan="4">3. Booking Management & Retention</td>
+      </tr>
+      <tr>
+        <td>Kanban Lead & Patient Pipeline</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Interactive Appointment Calendar</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Automated WhatsApp Reminders (24h & 2h before)</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Patient 1-Click WhatsApp Confirm / Cancel Buttons</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Automated Post-Visit 5-Star Google Review Engine</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Patient Billing & WhatsApp PDF Invoicing</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+
+      <tr>
+        <td class="cat-header" colspan="4">4. Growth, Ads & Multi-Branch</td>
+      </tr>
+      <tr>
+        <td>Instagram DM & Reel Comment Automation</td>
+        <td class="cross">✕</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Click-to-WhatsApp Meta Ads Lead Qualification</td>
+        <td class="cross">✕</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Multi-Branch / Multi-Doctor Routing</td>
+        <td class="cross">✕</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Dedicated Account Manager & VIP Support</td>
+        <td class="cross">✕</td>
+        <td class="cross">✕</td>
+        <td class="check">✓</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>ROI Justification (For Sales Pitch & Landing Page)</h2>
+  <div class="grid-2">
+    <div class="card-item">
+      <strong>For Starter (₹999 / mo):</strong>
+      <p>If the AI Receptionist saves just <strong>ONE single lost appointment</strong> during lunchtime or after 8 PM, the plan pays for itself 2x to 5x over in week one.</p>
+    </div>
+    <div class="card-item">
+      <strong>For Standard (₹2,499 / mo):</strong>
+      <p>A clinic with 200 monthly appointments losing 20% to no-shows loses ₹40,000+. Cutting no-shows by 70% recovers <strong>₹28,000+ in revenue every month.</strong></p>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <span>Boldlabs AI • WhatsApp Automation & Smart CRM Platform</span>
+    <span>Page 3 of 4</span>
+  </div>
+</div>
+
+
+<!-- ================= PAGE 4: HIGH-CONVERTING FAQS & ONBOARDING ================= -->
+<div class="page">
+  <div class="header-brand">
+    <div class="brand-logo">
+      <span>Boldlabs</span><span class="accent">AI</span>
+      <span style="font-weight: 400; color: #94a3b8; font-size: 12pt;">| Conversion FAQs</span>
+    </div>
+    <div class="badge-doc">Website FAQ Swipe</div>
+  </div>
+
+  <h1>Frequently Asked Questions (Landing Page FAQ Section)</h1>
+  <p class="subtitle">Answer every prospect hesitation upfront to maximize landing page conversions.</p>
+
+  <div style="margin-bottom: 8px;">
+    <h3>Q1: Can I use my existing clinic phone number?</h3>
+    <p><strong>Yes.</strong> You can connect your existing WhatsApp Business number. If you prefer to keep your personal WhatsApp separate, you can activate a new dedicated SIM card or virtual number for your clinic in under 15 minutes.</p>
+  </div>
+
+  <div style="margin-bottom: 8px;">
+    <h3>Q2: Why doesn't the Starter Plan (₹999) come with CRM login credentials?</h3>
+    <p><strong>By design!</strong> Many doctors and solo clinic owners don't have time to sit in front of a computer or remember software passwords. Starter is built for extreme convenience: the AI answers your WhatsApp inquiries 24/7, and instantly sends structured booking alerts directly to your personal WhatsApp. You get 100% of the automation with 0% software headache.</p>
+  </div>
+
+  <div style="margin-bottom: 8px;">
+    <h3>Q3: What if a patient asks a medical or complex question the AI doesn't know?</h3>
+    <p>Our AI is trained with strict safety boundaries. It answers business FAQs (timings, doctors, procedures, pricing, directions) flawlessly. For clinical diagnosis or custom inquiries, it politely states that the doctor/staff will follow up, and instantly sends you an alert with the patient's chat history so you can step in seamlessly.</p>
+  </div>
+
+  <div style="margin-bottom: 8px;">
+    <h3>Q4: How do the WhatsApp Appointment Reminders work in the Standard Plan?</h3>
+    <p>When an appointment is scheduled in your Web CRM, the system automatically schedules two WhatsApp reminders: one 24 hours prior and one 2 hours prior. The patient receives an interactive WhatsApp message with quick-tap <strong>[Confirm Appointment]</strong> and <strong>[Reschedule]</strong> buttons. Your CRM pipeline updates status instantly in real time.</p>
+  </div>
+
+  <div style="margin-bottom: 8px;">
+    <h3>Q5: Are there any hidden WhatsApp or Meta API charges?</h3>
+    <p><strong>No hidden surprises.</strong> For the Starter Plan, customer-initiated conversations fall within Meta's free service window. For Standard and Pro plans, outbound utility templates (reminders and review prompts) adhere to Meta's official Indian business rates (~₹0.15 to ₹0.35 per delivered utility message). We connect directly to the official Meta Cloud API for guaranteed 100% compliance.</p>
+  </div>
+
+  <div style="margin-bottom: 8px;">
+    <h3>Q6: Can I upgrade from Starter to Standard later?</h3>
+    <p><strong>Yes, seamlessly!</strong> Start with the ₹999 plan. When you're ready to add receptionist logins, Kanban pipeline tracking, and automated reminders, you can upgrade with 1-click inside your billing panel without changing your phone number or bot settings.</p>
+  </div>
+
+  <h2>5. Final Call-to-Action (Footer Banner Copy)</h2>
+  <div class="copy-box" style="background: #0f172a; color: white; border: none; padding: 12px 14px; border-radius: 8px; margin-top: 6px;">
+    <div style="font-size: 13pt; font-weight: 800; color: #ffffff; margin-bottom: 3px;">Ready to Automate Your Practice on WhatsApp?</div>
+    <div style="font-size: 8.5pt; color: #94a3b8; margin-bottom: 10px;">Join doctors, wellness centers, and clinics putting inquiries, bookings, and reviews on autopilot.</div>
+    <div style="display: flex; gap: 10px;">
+      <span style="background: #059669; color: white; font-weight: 700; padding: 5px 12px; border-radius: 5px; font-size: 8pt;">Start Your 7-Day Free Trial →</span>
+      <span style="background: #1e293b; color: white; border: 1px solid #334155; font-weight: 600; padding: 5px 12px; border-radius: 5px; font-size: 8pt;">Book a 15-Minute Live Demo</span>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <span>Boldlabs AI • WhatsApp Automation & Smart CRM Platform</span>
+    <span>Page 4 of 4</span>
+  </div>
+</div>
+
+</body>
+</html>
