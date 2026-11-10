@@ -892,14 +892,119 @@
     }
 
 
-    /* Hera-Style 3 Metric Cards */
+    /* Hera-Style 4 Metric Cards in 1 Single Row */
     .thesis-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 960px;
-      margin: 40px auto 0;
-      text-align: left;
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 16px !important;
+      max-width: 1200px !important;
+      margin: 40px auto 0 !important;
+      text-align: left !important;
+    }
+
+    @media (max-width: 992px) {
+      .thesis-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        max-width: 600px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .thesis-cards-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 380px !important;
+      }
+    }
+
+    /* ==========================================================================
+       HERA 3-STEP "HOW IT WORKS" SECTION FOR CLINICS
+       ========================================================================== */
+    .how-it-works-section {
+      padding: 72px 0 80px !important;
+      background: #FFFFFF !important;
+      border-top: 1px solid #E2E8F0 !important;
+      border-bottom: 1px solid #E2E8F0 !important;
+    }
+
+    .steps-header-box {
+      text-align: center !important;
+      max-width: 720px !important;
+      margin: 0 auto 44px !important;
+    }
+
+    .steps-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 24px !important;
+    }
+
+    .step-card {
+      background: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+      border-radius: 20px !important;
+      padding: 32px 28px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+      position: relative !important;
+      min-height: 280px !important;
+      box-sizing: border-box !important;
+    }
+
+    .step-card:hover {
+      border-color: #0052FF !important;
+      background: #FFFFFF !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 25px rgba(0, 82, 255, 0.06) !important;
+    }
+
+    .step-pill-tag {
+      font-family: var(--font-mono) !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      padding: 5px 12px !important;
+      border-radius: 9999px !important;
+      display: inline-block !important;
+      margin-bottom: 16px !important;
+      width: fit-content !important;
+    }
+
+    .step-title {
+      font-family: var(--font-display) !important;
+      font-size: 1.25rem !important;
+      font-weight: 700 !important;
+      color: #0F172A !important;
+      margin-bottom: 10px !important;
+      line-height: 1.3 !important;
+    }
+
+    .step-desc {
+      font-family: var(--font-sans) !important;
+      font-size: 0.9rem !important;
+      color: #64748B !important;
+      line-height: 1.6 !important;
+      margin: 0 0 18px !important;
+      flex-grow: 1 !important;
+    }
+
+    .step-trust-footer {
+      font-family: var(--font-mono) !important;
+      font-size: 0.72rem !important;
+      color: #059669 !important;
+      font-weight: 600 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      border-top: 1px solid #E2E8F0 !important;
+      padding-top: 14px !important;
+    }
+
+    @media (max-width: 900px) {
+      .steps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+      }
     }
 
     .thesis-metric-card {
@@ -3080,47 +3185,96 @@
           67% of patient leads book with the clinic that replies first. When inquiries arrive after hours or during busy OPD consultations, Boldlabs replies in 3 seconds, answers questions, and confirms appointments 24/7.
         </p>
 
-        <!-- 4 Clinically Proven ROI & Social Proof Stats (Section 5 Blueprint) -->
+        <!-- 4 Clinically Proven ROI & Social Proof Stats (In 1 Row) -->
         <div class="thesis-cards-grid">
+          
+          <!-- Card 1: 3-Second WhatsApp Reply -->
           <div class="thesis-metric-card">
-            <div class="thesis-metric-icon-wrap icon-blue" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-              </svg>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+              <div class="thesis-metric-icon-wrap icon-blue" aria-hidden="true" style="margin-bottom: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #2563EB; font-weight: 700; text-transform: uppercase; background: #EFF6FF; padding: 2px 8px; border-radius: 6px;">REPLY SPEED</span>
             </div>
-            <div class="thesis-metric-num" style="color: var(--color-brand-blue);">&lt; 3 Seconds</div>
-            <p class="thesis-metric-desc">Zero patient wait time. Instant answers 24 hours a day, 365 days a year.</p>
+            <div class="thesis-metric-num" style="color: var(--color-brand-blue); font-size: 1.55rem; line-height: 1.2;">
+              &lt; 3 Seconds
+            </div>
+            <strong style="font-family: var(--font-sans); font-size: 0.88rem; color: #0F172A; display: block; margin-top: 2px;">
+              WhatsApp Reply Speed
+            </strong>
+            <p class="thesis-metric-desc" style="font-size: 0.8rem; margin-top: 4px; line-height: 1.45;">
+              Zero patient waiting. Instant 24/7 answers to fees, timings, and directions.
+            </p>
           </div>
+
+          <!-- Card 2: 0% Double Bookings -->
           <div class="thesis-metric-card">
-            <div class="thesis-metric-icon-wrap icon-orange" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+              <div class="thesis-metric-icon-wrap icon-orange" aria-hidden="true" style="margin-bottom: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #EA580C; font-weight: 700; text-transform: uppercase; background: #FFF7ED; padding: 2px 8px; border-radius: 6px;">ACCURACY</span>
             </div>
-            <div class="thesis-metric-num" style="color: #EA580C;">0% Overlaps</div>
-            <p class="thesis-metric-desc">Mathematical slot locking with live Google Calendar prevents double bookings.</p>
+            <div class="thesis-metric-num" style="color: #EA580C; font-size: 1.55rem; line-height: 1.2;">
+              0% Mistakes
+            </div>
+            <strong style="font-family: var(--font-sans); font-size: 0.88rem; color: #0F172A; display: block; margin-top: 2px;">
+              Zero Double Bookings
+            </strong>
+            <p class="thesis-metric-desc" style="font-size: 0.8rem; margin-top: 4px; line-height: 1.45;">
+              Live Google Calendar slot locking eliminates scheduling overlaps.
+            </p>
           </div>
+
+          <!-- Card 3: 60% Fewer No-Shows -->
           <div class="thesis-metric-card">
-            <div class="thesis-metric-icon-wrap icon-purple" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-              </svg>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+              <div class="thesis-metric-icon-wrap icon-purple" aria-hidden="true" style="margin-bottom: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #7C3AED; font-weight: 700; text-transform: uppercase; background: #F5F3FF; padding: 2px 8px; border-radius: 6px;">ATTENDANCE</span>
             </div>
-            <div class="thesis-metric-num" style="color: #7C3AED;">60% Less No-Shows</div>
-            <p class="thesis-metric-desc">Automated 24h &amp; 2h WhatsApp reminders ensure patients turn up on time.</p>
+            <div class="thesis-metric-num" style="color: #7C3AED; font-size: 1.55rem; line-height: 1.2;">
+              60% Fewer
+            </div>
+            <strong style="font-family: var(--font-sans); font-size: 0.88rem; color: #0F172A; display: block; margin-top: 2px;">
+              Missed Patient Visits
+            </strong>
+            <p class="thesis-metric-desc" style="font-size: 0.8rem; margin-top: 4px; line-height: 1.45;">
+              Automated 24h &amp; 2h WhatsApp reminders keep your clinic chairs full.
+            </p>
           </div>
+
+          <!-- Card 4: 78% Staff Workload Saved -->
           <div class="thesis-metric-card">
-            <div class="thesis-metric-icon-wrap" style="background: #ECFDF5; color: #059669;" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <path d="M3 9h18"/>
-                <path d="M9 21V9"/>
-              </svg>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+              <div class="thesis-metric-icon-wrap" style="background: #ECFDF5; color: #059669; margin-bottom: 0;" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18"/>
+                  <path d="M9 21V9"/>
+                </svg>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #059669; font-weight: 700; text-transform: uppercase; background: #ECFDF5; padding: 2px 8px; border-radius: 6px;">EFFICIENCY</span>
             </div>
-            <div class="thesis-metric-num" style="color: #059669;">78% Workload Saved</div>
-            <p class="thesis-metric-desc">Automates repetitive fee checks, directions, and scheduling questions.</p>
+            <div class="thesis-metric-num" style="color: #059669; font-size: 1.55rem; line-height: 1.2;">
+              78% Saved
+            </div>
+            <strong style="font-family: var(--font-sans); font-size: 0.88rem; color: #0F172A; display: block; margin-top: 2px;">
+              Front Desk Workload
+            </strong>
+            <p class="thesis-metric-desc" style="font-size: 0.8rem; margin-top: 4px; line-height: 1.45;">
+              Automates repetitive fee queries so receptionists focus on clinic visitors.
+            </p>
           </div>
+
         </div>
       </div>
     </section>
