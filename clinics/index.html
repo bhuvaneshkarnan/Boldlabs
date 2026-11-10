@@ -1149,6 +1149,28 @@
       }
     }
 
+    .features-header-box {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .features-main-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      font-weight: 700;
+      color: var(--color-dark-ink);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+      margin: 0 auto 14px;
+      max-width: 860px;
+    }
+    .features-main-subtitle {
+      font-size: 1rem;
+      color: var(--color-muted-text);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
     /* ==========================================================================
        HERA ALTERNATING 2-COLUMN PASTEL FEATURE CARDS
        ========================================================================== */
@@ -2538,7 +2560,7 @@
       
       /* --- 1. GLOBAL ROOT, BODY & CONTAINERS --- */
       body {
-        padding-bottom: 60px !important; /* Prevents sticky bar from obscuring footer content */
+        padding-bottom: 60px !important;
       }
       .container {
         padding: 0 16px !important;
@@ -2546,69 +2568,73 @@
         box-sizing: border-box !important;
       }
 
-      /* Unified Section Paddings (Eliminates vertical scroll bloat) */
+      /* Unified Section Paddings */
       .hero-sky-section {
-        padding-top: 72px !important;
-        padding-bottom: 24px !important;
+        padding-top: 68px !important;
+        padding-bottom: 32px !important;
       }
       .clinic-logo-strip {
         padding: 14px 0 !important;
       }
       .thesis-section {
-        padding: 34px 0 28px !important;
+        padding: 38px 0 30px !important;
       }
       .how-it-works-section {
-        padding: 34px 0 28px !important;
+        padding: 38px 0 30px !important;
       }
       .features-section {
-        padding: 32px 0 28px !important;
+        padding: 38px 0 32px !important;
       }
       .philosophy-section {
-        padding: 30px 0 !important;
-      }
-      .nocturnal-proof-section {
-        padding: 34px 0 !important;
-      }
-      .contrast-section {
-        padding: 34px 0 !important;
-      }
-      .pricing-section {
-        padding: 34px 0 !important;
-      }
-      .matrix-section {
-        padding: 30px 0 !important;
-      }
-      .faq-section {
         padding: 32px 0 !important;
       }
+      .nocturnal-proof-section {
+        padding: 38px 0 !important;
+      }
+      .contrast-section {
+        padding: 38px 0 !important;
+      }
+      .pricing-section {
+        padding: 38px 0 !important;
+      }
+      .matrix-section {
+        padding: 32px 0 !important;
+      }
+      .faq-section {
+        padding: 36px 0 !important;
+      }
       .footer-sky-section {
-        padding: 36px 0 24px !important;
+        padding: 40px 0 28px !important;
       }
 
       /* Clouds Divider Heights on Mobile */
       .hero-clouds-bottom,
       .footer-clouds-bottom {
-        height: 36px !important;
+        height: 32px !important;
       }
 
-      /* --- 2. STRICT UNIFIED TYPOGRAPHY HIERARCHY --- */
+      /* --- 2. COMMANDING TYPOGRAPHY HIERARCHY (SOLVES SMALL HEADINGS) --- */
       
-      /* Hero H1 Headline */
+      /* HERO H1 HEADLINE: Prominent, Authoritative, Bold */
       .hero-main-title {
         font-family: var(--font-display) !important;
-        font-size: 26px !important;
-        font-weight: 700 !important;
-        line-height: 1.22 !important;
-        letter-spacing: -0.025em !important;
+        font-size: 32px !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.03em !important;
         text-align: center !important;
         margin-top: 0 !important;
         margin-bottom: 12px !important;
         color: #FFFFFF !important;
       }
+      .hero-rotating-word {
+        font-size: 32px !important;
+      }
 
-      /* All Section H2 Headlines */
+      /* ALL SECTION H2 HEADLINES: Strictly Dominant & Clearly Main Headings */
       .thesis-headline,
       .steps-header-box h2,
+      .features-main-title,
       .nocturnal-title,
       .contrast-title,
       .pricing-headline,
@@ -2616,16 +2642,61 @@
       .faq-headline,
       .footer-signoff-title {
         font-family: var(--font-display) !important;
-        font-size: 20px !important;
-        font-weight: 700 !important;
-        line-height: 1.25 !important;
-        letter-spacing: -0.02em !important;
+        font-size: 25px !important;
+        font-weight: 800 !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.025em !important;
         text-align: center !important;
         margin-top: 0 !important;
         margin-bottom: 8px !important;
+        color: #0F172A !important;
+      }
+      .nocturnal-title,
+      .footer-signoff-title {
+        color: #FFFFFF !important;
       }
 
-      /* Card & Feature Headings H3 */
+      /* ALL SECTION SUBTITLES: Clean, Subordinate, Centered */
+      .thesis-subtitle,
+      .steps-header-box p,
+      .features-main-subtitle,
+      .nocturnal-subtitle,
+      .contrast-subtitle,
+      .pricing-sub,
+      .footer-signoff-sub {
+        font-family: var(--font-sans) !important;
+        font-size: 13.5px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        color: #64748B !important;
+        text-align: center !important;
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 18px !important;
+      }
+      .nocturnal-subtitle {
+        color: #94A3B8 !important;
+      }
+      .footer-signoff-sub {
+        color: rgba(255, 255, 255, 0.88) !important;
+      }
+
+      /* Hero Subtitle: High contrast white on blue sky */
+      .hero-description {
+        font-family: var(--font-sans) !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        color: rgba(255, 255, 255, 0.94) !important;
+        text-align: center !important;
+        max-width: 320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 16px !important;
+      }
+
+      /* CARD SUB-HEADINGS (H3): Clearly Smaller than H2 (16px vs 25px) */
       .feature-heading,
       .step-title,
       .contrast-card-title,
@@ -2637,9 +2708,10 @@
         line-height: 1.3 !important;
         letter-spacing: -0.01em !important;
         margin-bottom: 6px !important;
+        color: #0F172A !important;
       }
 
-      /* Category Pills / Badges / Tags (Unified JetBrains Mono 11px uppercase) */
+      /* CATEGORY PILLS & BADGES: JetBrains Mono 11px uppercase */
       .hero-pill-badge,
       .doctor-badge-pill,
       .contrast-badge-pill,
@@ -2660,60 +2732,16 @@
         text-align: center !important;
       }
 
-      /* Section Subtitles (Unified 14px, 400 wt, centered) */
-      .thesis-subtitle,
-      .steps-header-box p,
-      .nocturnal-subtitle,
-      .contrast-subtitle,
-      .pricing-sub,
-      .footer-signoff-sub {
-        font-family: var(--font-sans) !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-        line-height: 1.5 !important;
-        color: #64748B !important;
-        text-align: center !important;
-        max-width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-bottom: 18px !important;
+      /* CARD METRIC NUMBERS: Subordinate to H2 (17px vs 25px) */
+      .thesis-metric-num {
+        font-family: var(--font-display) !important;
+        font-size: 17px !important;
+        font-weight: 700 !important;
+        line-height: 1.15 !important;
       }
-
-      /* Hero Subtitle specifically needs crisp white contrast against blue sky */
-      .hero-description {
-        font-family: var(--font-sans) !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-        line-height: 1.5 !important;
-        color: rgba(255, 255, 255, 0.92) !important;
-        text-align: center !important;
-        max-width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-bottom: 18px !important;
-      }
-
-      /* Body Copy & Descriptions (Unified 13px, 400 wt, 1.55 line-height) */
-      .feature-body-text,
-      .step-desc,
-      .philosophy-body,
-      .contrast-box-competitor,
-      .contrast-box-boldlabs,
-      .plan-feature-item span,
-      .plan-tagline,
-      .faq-answer {
-        font-family: var(--font-sans) !important;
-        font-size: 13px !important;
-        font-weight: 400 !important;
-        line-height: 1.55 !important;
-        color: #334155 !important;
-      }
-
-      /* Big Numbers / Key Metrics (Unified 20px - 22px, 700 wt) */
-      .thesis-metric-num,
       .nocturnal-stat-num {
         font-family: var(--font-display) !important;
-        font-size: 20px !important;
+        font-size: 18px !important;
         font-weight: 700 !important;
         line-height: 1.15 !important;
       }
@@ -2723,7 +2751,23 @@
         line-height: 1.0 !important;
       }
 
-      /* Micro Copy / Meta Labels (Unified 11px Mono) */
+      /* BODY TEXT / CARD DESCRIPTIONS */
+      .feature-body-text,
+      .step-desc,
+      .philosophy-body,
+      .contrast-box-competitor,
+      .contrast-box-boldlabs,
+      .plan-feature-item span,
+      .plan-tagline,
+      .faq-answer {
+        font-family: var(--font-sans) !important;
+        font-size: 12.5px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        color: #334155 !important;
+      }
+
+      /* MICRO TEXT & META LABELS */
       .thesis-metric-desc,
       .step-trust-footer,
       .contrast-tag-competitor,
@@ -2732,11 +2776,11 @@
       .nocturnal-stat-label,
       .hero-trust-bullets span {
         font-family: var(--font-mono) !important;
-        font-size: 11px !important;
+        font-size: 10.5px !important;
         line-height: 1.4 !important;
       }
 
-      /* CTA Buttons (Unified 14px, 600 wt, 44px height) */
+      /* CTA BUTTONS */
       .btn-hero-primary,
       .btn-hero-secondary,
       .btn-plan-cta,
@@ -2751,14 +2795,14 @@
         justify-content: center !important;
       }
 
-      /* --- 3. SECTION SPECIFIC COMPACTING --- */
+      /* --- 3. SECTION COMPONENT REFINEMENTS --- */
 
-      /* HERO SECTION */
+      /* HERO SECTION (Uncollapsed & Balanced) */
       .hero-btn-row {
         flex-direction: column !important;
         width: 100% !important;
-        max-width: 290px !important;
-        margin: 0 auto 14px !important;
+        max-width: 280px !important;
+        margin: 0 auto 12px !important;
         gap: 8px !important;
       }
       .hero-btn-row button,
@@ -2771,43 +2815,45 @@
         justify-content: center !important;
       }
       .hero-mockup-frame {
-        border-radius: 14px !important;
+        border-radius: 16px !important;
         max-width: 100% !important;
+        background: #FFFFFF !important;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+        overflow: hidden !important;
       }
       .mockup-app-header {
-        padding: 6px 10px !important;
+        padding: 8px 12px !important;
+        background: #FFFFFF !important;
       }
       .mockup-body-grid {
         grid-template-columns: 1fr !important;
         gap: 0 !important;
       }
       .mockup-chat-pane {
-        padding: 10px 8px !important;
-        gap: 6px !important;
+        padding: 12px 10px !important;
+        gap: 8px !important;
+        background: #F0F4F8 !important;
       }
       .mockup-bubble {
-        padding: 6px 10px !important;
+        padding: 8px 10px !important;
         font-size: 12px !important;
         line-height: 1.4 !important;
         max-width: 95% !important;
       }
-      .desktop-chat-only {
+      .desktop-text-only {
         display: none !important;
       }
-      .mobile-chat-only {
-        display: block !important;
+      .mobile-text-only {
+        display: inline !important;
+      }
+      .mobile-only-tag {
+        display: inline-block !important;
+      }
+      .mockup-chat-pane .mockup-bubble:nth-child(n+4) {
+        display: none !important;
       }
       .mockup-crm-pane {
         display: none !important;
-      }
-
-      /* LOGO MARQUEE */
-      .clinic-logo-strip p {
-        font-size: 11px !important;
-        margin-bottom: 8px !important;
-      }
-      .marquee-track {
-        gap: 24px !important;
       }
 
       /* THESIS SECTION (2x2 Grid) */
@@ -2824,12 +2870,12 @@
         gap: 3px !important;
       }
       .thesis-metric-icon-wrap {
-        width: 28px !important;
-        height: 28px !important;
+        width: 26px !important;
+        height: 26px !important;
         border-radius: 6px !important;
       }
       .thesis-metric-card strong {
-        font-size: 12px !important;
+        font-size: 11.5px !important;
       }
 
       /* HOW IT WORKS (3 Steps) */
@@ -2848,7 +2894,10 @@
         box-shadow: none !important;
       }
 
-      /* FEATURES SECTION (Compact & Hide Duplicate Quotes) */
+      /* FEATURES SECTION */
+      .features-header-box {
+        margin-bottom: 20px !important;
+      }
       .feature-block-row {
         display: flex !important;
         flex-direction: column !important;
@@ -2856,7 +2905,7 @@
         margin-bottom: 20px !important;
       }
       .feature-doctor-quote {
-        display: none !important; /* Prevents duplicating doctor proof section below */
+        display: none !important;
       }
       .pastel-card-container {
         padding: 10px 10px !important;
@@ -2904,7 +2953,7 @@
         padding: 10px 12px !important;
       }
       .client-crm-preview-box {
-        display: none !important; /* Eliminates duplicate CRM preview on mobile */
+        display: none !important;
       }
       .nocturnal-stats-strip-4col {
         display: grid !important;
@@ -2934,8 +2983,8 @@
         gap: 10px !important;
       }
       .contrast-icon-wrap {
-        width: 32px !important;
-        height: 32px !important;
+        width: 30px !important;
+        height: 30px !important;
         border-radius: 8px !important;
       }
       .contrast-comparison-box {
@@ -2947,7 +2996,7 @@
       .contrast-box-boldlabs {
         padding: 8px 10px !important;
         border-radius: 8px !important;
-        font-size: 12.5px !important;
+        font-size: 12px !important;
         line-height: 1.45 !important;
       }
 
@@ -2968,7 +3017,7 @@
         margin-bottom: 16px !important;
       }
       .plan-feature-item {
-        font-size: 13px !important;
+        font-size: 12.5px !important;
         line-height: 1.45 !important;
         gap: 8px !important;
       }
@@ -2980,17 +3029,17 @@
       .matrix-table th,
       .matrix-table td {
         padding: 8px 8px !important;
-        font-size: 11.5px !important;
+        font-size: 11px !important;
       }
 
       /* FAQ ACCORDION */
       .faq-question {
         padding: 12px 0 !important;
-        font-size: 14px !important;
+        font-size: 13.5px !important;
         font-weight: 600 !important;
       }
       .faq-answer {
-        font-size: 13px !important;
+        font-size: 12.5px !important;
         line-height: 1.5 !important;
         padding-bottom: 12px !important;
       }
@@ -2999,7 +3048,7 @@
       .footer-cta-row {
         flex-direction: column !important;
         width: 100% !important;
-        max-width: 290px !important;
+        max-width: 280px !important;
         margin: 0 auto 20px !important;
         gap: 8px !important;
       }
@@ -3008,7 +3057,7 @@
         width: 100% !important;
       }
 
-      /* FORM INPUT & MODAL (Prevents iOS Safari auto-zoom) */
+      /* FORM INPUT & MODAL */
       .form-input {
         font-size: 16px !important;
         height: 44px !important;
@@ -3019,20 +3068,7 @@
         max-height: calc(100vh - 24px) !important;
       }
 
-      .mobile-only-tag {
-        display: inline-block !important;
-      }
-      .mobile-text-only {
-        display: inline !important;
-      }
-      .desktop-text-only {
-        display: none !important;
-      }
-      .mockup-chat-pane .mockup-bubble:nth-child(n+4) {
-        display: none !important; /* Hides bubbles 3 & 4 on mobile */
-      }
-
-      /* STICKY BOTTOM BAR */
+      /* STICKY BOTTOM BAR (Smooth Scroll-Triggered) */
       .mobile-bottom-sticky {
         display: flex !important;
         position: fixed !important;
@@ -3048,6 +3084,15 @@
         justify-content: center !important;
         padding: 0 16px !important;
         z-index: 990 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transform: translateY(100%) !important;
+        transition: opacity 0.25s ease, transform 0.25s ease !important;
+      }
+      .mobile-bottom-sticky.visible {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
       }
       .mobile-bottom-sticky button {
         width: 100% !important;
@@ -3072,7 +3117,6 @@
     }
 
     @media (min-width: 769px) {
-      .mobile-chat-only,
       .mobile-bottom-sticky,
       .matrix-mobile-hint {
         display: none !important;
@@ -3534,6 +3578,21 @@
     <!-- SECTION 4: HERA ALTERNATING PASTEL FEATURE CARDS -->
     <section id="features" class="features-section">
       <div class="container">
+        
+        <!-- Features Main Section Header -->
+        <div class="features-header-box">
+          <div class="feature-badge-pill pill-blue">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;" aria-hidden="true">
+              <path d="M14 2C14 5 15.5 6.5 18 7C15.5 7.5 14 9 14 12C14 9 12.5 7.5 10 7C12.5 6.5 14 5 14 2Z" fill="#93C5FD"/>
+              <path d="M6 7C6 10 7.5 11.5 10 12C7.5 12.5 6 14 6 17C6 14 4.5 12.5 2 12C4.5 11.5 6 10 6 7Z" fill="#2563EB"/>
+            </svg>
+            <span>Clinic Capabilities</span>
+          </div>
+          <h2 class="features-main-title">Everything Your Front Desk Needs. Automated 24/7.</h2>
+          <p class="features-main-subtitle">
+            From patient booking inquiries to calendar slot locking, timely reminders, and 5 star Google reviews.
+          </p>
+        </div>
         
         <!-- Feature 1: AI Instant Receptionist (Lavender) -->
         <div class="feature-block-row">
@@ -4455,6 +4514,23 @@
         });
       }
     });
+  </script>
+<script>
+    // Show sticky mobile bar only after scrolling past the hero
+    (function() {
+      const stickyBar = document.querySelector('.mobile-bottom-sticky');
+      if (stickyBar) {
+        const onScroll = function() {
+          if (window.scrollY > 340) {
+            stickyBar.classList.add('visible');
+          } else {
+            stickyBar.classList.remove('visible');
+          }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+    })();
   </script>
 </body>
 </html>
