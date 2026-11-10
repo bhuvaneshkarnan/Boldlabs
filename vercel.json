@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/clinics",
+      "source": "/whatsapp-automation-clinics",
       "destination": "/clinics",
       "permanent": true
     },
