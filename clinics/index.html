@@ -464,6 +464,22 @@
       box-shadow: none;
     }
 
+    .hero-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 7px 18px;
+      border-radius: 9999px;
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
     .hero-main-title {
       font-family: var(--font-display);
       font-weight: 400;
@@ -2558,7 +2574,23 @@
        ========================================================================== */
     @media (max-width: 768px) {
       
-      /* --- 1. GLOBAL ROOT, BODY & CONTAINERS --- */
+      /* --- 1. NAVBAR PERFECTION (ELIMINATES OVERLAP WITH HERO BADGE) --- */
+      .navbar {
+        top: 8px !important;
+        height: 48px !important;
+        width: calc(100% - 24px) !important;
+        padding: 4px 14px !important;
+      }
+      .nav-logo-img {
+        height: 24px !important;
+      }
+      .nav-toggle {
+        height: 32px !important;
+        padding: 3px 9px !important;
+        font-size: 11px !important;
+      }
+
+      /* --- 2. GLOBAL BODY & SECTION PADDINGS --- */
       body {
         padding-bottom: 60px !important;
       }
@@ -2568,10 +2600,10 @@
         box-sizing: border-box !important;
       }
 
-      /* Unified Section Paddings */
+      /* Hero Section Padding (80px top gives 24px clean sky below the 48px navbar) */
       .hero-sky-section {
-        padding-top: 68px !important;
-        padding-bottom: 32px !important;
+        padding-top: 78px !important;
+        padding-bottom: 24px !important;
       }
       .clinic-logo-strip {
         padding: 14px 0 !important;
@@ -2610,28 +2642,152 @@
       /* Clouds Divider Heights on Mobile */
       .hero-clouds-bottom,
       .footer-clouds-bottom {
-        height: 32px !important;
+        height: 28px !important;
       }
 
-      /* --- 2. COMMANDING TYPOGRAPHY HIERARCHY (SOLVES SMALL HEADINGS) --- */
+      /* --- 3. HERO SECTION REFINEMENTS (COMPACT, BOLD, UNCOLLAPSED) --- */
       
-      /* HERO H1 HEADLINE: Prominent, Authoritative, Bold */
+      /* Hero Badge: Sleek single-line, no overlap */
+      .desktop-badge-text {
+        display: none !important;
+      }
+      .mobile-badge-text {
+        display: inline !important;
+      }
+      .hero-pill-badge {
+        font-family: var(--font-mono) !important;
+        font-size: 10.5px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.03em !important;
+        text-transform: uppercase !important;
+        padding: 4px 12px !important;
+        margin-bottom: 8px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        background: rgba(255, 255, 255, 0.18) !important;
+        border: 1px solid rgba(255, 255, 255, 0.35) !important;
+        border-radius: 9999px !important;
+        color: #FFFFFF !important;
+        box-shadow: none !important;
+      }
+
+      /* Hero H1 Headline: Punchy, authoritative, fits 2 lines */
       .hero-main-title {
         font-family: var(--font-display) !important;
-        font-size: 32px !important;
+        font-size: 29px !important;
         font-weight: 800 !important;
         line-height: 1.15 !important;
-        letter-spacing: -0.03em !important;
+        letter-spacing: -0.025em !important;
         text-align: center !important;
         margin-top: 0 !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 8px !important;
         color: #FFFFFF !important;
       }
       .hero-rotating-word {
-        font-size: 32px !important;
+        font-size: 29px !important;
       }
 
-      /* ALL SECTION H2 HEADLINES: Strictly Dominant & Clearly Main Headings */
+      /* Hero Subtitle: Clean 2-line version on mobile */
+      .desktop-desc-text {
+        display: none !important;
+      }
+      .mobile-desc-text {
+        display: block !important;
+        font-family: var(--font-sans) !important;
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        line-height: 1.45 !important;
+        color: rgba(255, 255, 255, 0.94) !important;
+        text-align: center !important;
+        max-width: 320px !important;
+        margin: 0 auto 12px auto !important;
+      }
+
+      /* Hero Buttons & Trust Bullets */
+      .hero-btn-row {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto 8px auto !important;
+        gap: 6px !important;
+      }
+      .btn-hero-primary {
+        height: 42px !important;
+        font-size: 13.5px !important;
+        font-weight: 600 !important;
+        border-radius: 9999px !important;
+        width: 100% !important;
+      }
+      .btn-hero-secondary {
+        height: 36px !important;
+        font-size: 12.5px !important;
+        font-weight: 500 !important;
+        border-radius: 9999px !important;
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.12) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      }
+      .hero-trust-bullets {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 4px 10px !important;
+        margin-bottom: 14px !important;
+      }
+      .hero-trust-bullets span {
+        font-family: var(--font-mono) !important;
+        font-size: 10px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+
+      /* Hero Mockup Frame: Clean, elevated, completely uncollapsed */
+      .hero-mockup-frame {
+        border-radius: 16px !important;
+        max-width: 100% !important;
+        background: #FFFFFF !important;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12) !important;
+        overflow: hidden !important;
+        margin-top: 6px !important;
+      }
+      .mockup-app-header {
+        padding: 6px 10px !important;
+        background: #FFFFFF !important;
+      }
+      .mockup-body-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+      }
+      .mockup-chat-pane {
+        padding: 10px 8px !important;
+        gap: 6px !important;
+        background: #F0F4F8 !important;
+      }
+      .mockup-bubble {
+        padding: 6px 9px !important;
+        font-size: 11.5px !important;
+        line-height: 1.4 !important;
+        max-width: 95% !important;
+      }
+      .desktop-text-only {
+        display: none !important;
+      }
+      .mobile-text-only {
+        display: inline !important;
+      }
+      .mobile-only-tag {
+        display: inline-block !important;
+      }
+      .mockup-chat-pane .mockup-bubble:nth-child(n+4) {
+        display: none !important;
+      }
+      .mockup-crm-pane {
+        display: none !important;
+      }
+
+      /* --- 4. SECTION MAIN HEADINGS (H2) & TYPOGRAPHY --- */
+      
+      /* All Section H2 Headlines: Strictly Dominant (25px / 800 wt) */
       .thesis-headline,
       .steps-header-box h2,
       .features-main-title,
@@ -2656,7 +2812,7 @@
         color: #FFFFFF !important;
       }
 
-      /* ALL SECTION SUBTITLES: Clean, Subordinate, Centered */
+      /* All Section Subtitles */
       .thesis-subtitle,
       .steps-header-box p,
       .features-main-subtitle,
@@ -2682,21 +2838,7 @@
         color: rgba(255, 255, 255, 0.88) !important;
       }
 
-      /* Hero Subtitle: High contrast white on blue sky */
-      .hero-description {
-        font-family: var(--font-sans) !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-        line-height: 1.5 !important;
-        color: rgba(255, 255, 255, 0.94) !important;
-        text-align: center !important;
-        max-width: 320px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-bottom: 16px !important;
-      }
-
-      /* CARD SUB-HEADINGS (H3): Clearly Smaller than H2 (16px vs 25px) */
+      /* Card Sub-Headings (H3): Clearly Smaller (16px vs 25px) */
       .feature-heading,
       .step-title,
       .contrast-card-title,
@@ -2711,8 +2853,7 @@
         color: #0F172A !important;
       }
 
-      /* CATEGORY PILLS & BADGES: JetBrains Mono 11px uppercase */
-      .hero-pill-badge,
+      /* Category Pills & Badges */
       .doctor-badge-pill,
       .contrast-badge-pill,
       .step-pill-tag,
@@ -2732,7 +2873,7 @@
         text-align: center !important;
       }
 
-      /* CARD METRIC NUMBERS: Subordinate to H2 (17px vs 25px) */
+      /* Card Metric Numbers: Subordinate to H2 (17px vs 25px) */
       .thesis-metric-num {
         font-family: var(--font-display) !important;
         font-size: 17px !important;
@@ -2751,7 +2892,7 @@
         line-height: 1.0 !important;
       }
 
-      /* BODY TEXT / CARD DESCRIPTIONS */
+      /* Body Text / Descriptions */
       .feature-body-text,
       .step-desc,
       .philosophy-body,
@@ -2767,22 +2908,19 @@
         color: #334155 !important;
       }
 
-      /* MICRO TEXT & META LABELS */
+      /* Micro Labels */
       .thesis-metric-desc,
       .step-trust-footer,
       .contrast-tag-competitor,
       .contrast-tag-boldlabs,
       .widget-meta,
-      .nocturnal-stat-label,
-      .hero-trust-bullets span {
+      .nocturnal-stat-label {
         font-family: var(--font-mono) !important;
         font-size: 10.5px !important;
         line-height: 1.4 !important;
       }
 
-      /* CTA BUTTONS */
-      .btn-hero-primary,
-      .btn-hero-secondary,
+      /* Buttons */
       .btn-plan-cta,
       .footer-cta-row button,
       .footer-cta-row a {
@@ -2795,68 +2933,9 @@
         justify-content: center !important;
       }
 
-      /* --- 3. SECTION COMPONENT REFINEMENTS --- */
+      /* --- 5. OTHER SECTIONS MOBILE COMPONENT REFINEMENTS --- */
 
-      /* HERO SECTION (Uncollapsed & Balanced) */
-      .hero-btn-row {
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 280px !important;
-        margin: 0 auto 12px !important;
-        gap: 8px !important;
-      }
-      .hero-btn-row button,
-      .hero-btn-row a {
-        width: 100% !important;
-      }
-      .hero-trust-bullets {
-        gap: 6px 12px !important;
-        margin-bottom: 16px !important;
-        justify-content: center !important;
-      }
-      .hero-mockup-frame {
-        border-radius: 16px !important;
-        max-width: 100% !important;
-        background: #FFFFFF !important;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
-        overflow: hidden !important;
-      }
-      .mockup-app-header {
-        padding: 8px 12px !important;
-        background: #FFFFFF !important;
-      }
-      .mockup-body-grid {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-      }
-      .mockup-chat-pane {
-        padding: 12px 10px !important;
-        gap: 8px !important;
-        background: #F0F4F8 !important;
-      }
-      .mockup-bubble {
-        padding: 8px 10px !important;
-        font-size: 12px !important;
-        line-height: 1.4 !important;
-        max-width: 95% !important;
-      }
-      .desktop-text-only {
-        display: none !important;
-      }
-      .mobile-text-only {
-        display: inline !important;
-      }
-      .mobile-only-tag {
-        display: inline-block !important;
-      }
-      .mockup-chat-pane .mockup-bubble:nth-child(n+4) {
-        display: none !important;
-      }
-      .mockup-crm-pane {
-        display: none !important;
-      }
-
-      /* THESIS SECTION (2x2 Grid) */
+      /* Thesis Section (2x2 Grid) */
       .thesis-cards-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
@@ -2878,7 +2957,7 @@
         font-size: 11.5px !important;
       }
 
-      /* HOW IT WORKS (3 Steps) */
+      /* How It Works (3 Steps) */
       .steps-header-box {
         margin-bottom: 16px !important;
       }
@@ -2894,7 +2973,7 @@
         box-shadow: none !important;
       }
 
-      /* FEATURES SECTION */
+      /* Features Section */
       .features-header-box {
         margin-bottom: 20px !important;
       }
@@ -2917,7 +2996,7 @@
         border-radius: 10px !important;
       }
 
-      /* PHILOSOPHY SECTION */
+      /* Philosophy Section */
       .stacked-main-card {
         padding: 18px 14px !important;
         border-radius: 14px !important;
@@ -2927,7 +3006,7 @@
         height: 44px !important;
       }
 
-      /* DOCTOR PROOF SECTION */
+      /* Doctor Proof Section */
       .nocturnal-card-box {
         padding: 14px 12px !important;
         border-radius: 14px !important;
@@ -2966,7 +3045,7 @@
         padding: 6px 4px !important;
       }
 
-      /* WHY BOLDLABS (Contrast Cards) */
+      /* Why Boldlabs */
       .contrast-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -3000,7 +3079,7 @@
         line-height: 1.45 !important;
       }
 
-      /* PRICING SECTION */
+      /* Pricing Section */
       .pricing-cards-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -3022,7 +3101,7 @@
         gap: 8px !important;
       }
 
-      /* COMPARISON MATRIX */
+      /* Comparison Matrix */
       .matrix-table {
         min-width: 440px !important;
       }
@@ -3032,7 +3111,7 @@
         font-size: 11px !important;
       }
 
-      /* FAQ ACCORDION */
+      /* FAQ Accordion */
       .faq-question {
         padding: 12px 0 !important;
         font-size: 13.5px !important;
@@ -3044,7 +3123,7 @@
         padding-bottom: 12px !important;
       }
 
-      /* FOOTER SECTION */
+      /* Footer Section */
       .footer-cta-row {
         flex-direction: column !important;
         width: 100% !important;
@@ -3057,7 +3136,7 @@
         width: 100% !important;
       }
 
-      /* FORM INPUT & MODAL */
+      /* Form Input & Modal */
       .form-input {
         font-size: 16px !important;
         height: 44px !important;
@@ -3068,7 +3147,7 @@
         max-height: calc(100vh - 24px) !important;
       }
 
-      /* STICKY BOTTOM BAR (Smooth Scroll-Triggered) */
+      /* Sticky Bottom Bar */
       .mobile-bottom-sticky {
         display: flex !important;
         position: fixed !important;
@@ -3153,9 +3232,10 @@
     <!-- SECTION 1: HERA CELESTIAL SKY HERO -->
     <section id="hero" class="hero-sky-section">
       <div class="container">
-        <div class="hero-pill-badge" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 7px 18px; border-radius: 9999px; color: #FFFFFF; font-size: 0.82rem; font-weight: 500; margin-bottom: 20px;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          <span>The #1 WhatsApp AI Receptionist &amp; Clinic CRM in India</span>
+        <div class="hero-pill-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span class="desktop-badge-text">The #1 WhatsApp AI Receptionist &amp; Clinic CRM in India</span>
+          <span class="mobile-badge-text" style="display: none;">#1 WhatsApp AI Receptionist for Clinics</span>
         </div>
 
         <h1 class="hero-main-title">
@@ -3163,8 +3243,11 @@
           <span class="hero-rotating-word">Automate 24/7</span> on WhatsApp.
         </h1>
 
-        <p class="hero-description">
+        <p class="hero-description desktop-desc-text">
           The 24/7 AI receptionist that chats in English, Tamil, Tanglish &amp; Hindi, checks live doctor schedules, negotiates open slots, answers FAQs, and books appointments into Google Calendar in 3 seconds.
+        </p>
+        <p class="hero-description mobile-desc-text" style="display: none;">
+          Chats in Indian languages, checks live doctor schedules, and confirms appointments in Google Calendar in 3 seconds.
         </p>
 
         <div class="hero-btn-row">
