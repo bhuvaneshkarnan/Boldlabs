@@ -525,7 +525,7 @@
       background: #FFFFFF;
       color: var(--color-dark-ink);
       font-family: var(--font-sans);
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
       padding: 13px 28px;
       border-radius: 9999px;
@@ -536,6 +536,9 @@
       transition: all 0.15s ease;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
       gap: 8px;
       letter-spacing: -0.01em;
     }
@@ -553,7 +556,7 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(8px);
       font-family: var(--font-sans);
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
       padding: 13px 26px;
       border-radius: 9999px;
@@ -562,6 +565,9 @@
       transition: all 0.15s ease;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
       gap: 8px;
       letter-spacing: -0.01em;
       box-shadow: none;
@@ -2574,7 +2580,7 @@
        ========================================================================== */
     @media (max-width: 768px) {
       
-      /* --- 1. NAVBAR PERFECTION (ELIMINATES OVERLAP WITH HERO BADGE) --- */
+      /* --- 1. NAVBAR PERFECTION --- */
       .navbar {
         top: 8px !important;
         height: 48px !important;
@@ -2600,7 +2606,6 @@
         box-sizing: border-box !important;
       }
 
-      /* Hero Section Padding (80px top gives 24px clean sky below the 48px navbar) */
       .hero-sky-section {
         padding-top: 78px !important;
         padding-bottom: 24px !important;
@@ -2639,15 +2644,97 @@
         padding: 40px 0 28px !important;
       }
 
-      /* Clouds Divider Heights on Mobile */
       .hero-clouds-bottom,
       .footer-clouds-bottom {
         height: 28px !important;
       }
 
-      /* --- 3. HERO SECTION REFINEMENTS (COMPACT, BOLD, UNCOLLAPSED) --- */
+      /* --- 3. MASTER BUTTON ALIGNMENT ENGINE (SOLVES MOBILE BUTTON MISALIGNMENT) --- */
       
-      /* Hero Badge: Sleek single-line, no overlap */
+      /* Global button centering & box-sizing normalization */
+      .btn-hero-primary,
+      .btn-hero-secondary,
+      .btn-plan-cta,
+      .btn-mobile-sticky,
+      .form-btn-submit,
+      .philosophy-signoff button,
+      .nocturnal-footer-cta button,
+      .footer-cta-row button,
+      .footer-cta-row a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        border-radius: 9999px !important;
+        font-family: var(--font-sans) !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.01em !important;
+        text-decoration: none !important;
+        line-height: 1 !important;
+      }
+
+      /* Hero Button Row: Symmetrical, perfectly centered, identical heights */
+      .hero-btn-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        margin: 0 auto 10px auto !important;
+        gap: 8px !important;
+        box-sizing: border-box !important;
+      }
+      .btn-hero-primary {
+        height: 44px !important;
+        width: 100% !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        border: none !important;
+        padding: 0 20px !important;
+        margin: 0 !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+      }
+      .btn-hero-secondary {
+        height: 44px !important;
+        width: 100% !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        background: rgba(255, 255, 255, 0.14) !important;
+        color: #FFFFFF !important;
+        border: 1px solid rgba(255, 255, 255, 0.35) !important;
+        padding: 0 20px !important;
+        margin: 0 !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+      }
+
+      /* Hero Trust Bullets: Centered, clean wrapping, zero edge-clipping */
+      .hero-trust-bullets {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        margin: 8px auto 14px auto !important;
+        max-width: 320px !important;
+        text-align: center !important;
+      }
+      .hero-trust-bullets span {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        font-family: var(--font-mono) !important;
+        font-size: 10.5px !important;
+        color: rgba(255, 255, 255, 0.92) !important;
+        white-space: nowrap !important;
+      }
+
+      /* Hero Badge */
       .desktop-badge-text {
         display: none !important;
       }
@@ -2672,7 +2759,7 @@
         box-shadow: none !important;
       }
 
-      /* Hero H1 Headline: Punchy, authoritative, fits 2 lines */
+      /* Hero H1 Headline */
       .hero-main-title {
         font-family: var(--font-display) !important;
         font-size: 29px !important;
@@ -2688,7 +2775,7 @@
         font-size: 29px !important;
       }
 
-      /* Hero Subtitle: Clean 2-line version on mobile */
+      /* Hero Subtitle */
       .desktop-desc-text {
         display: none !important;
       }
@@ -2704,44 +2791,7 @@
         margin: 0 auto 12px auto !important;
       }
 
-      /* Hero Buttons & Trust Bullets */
-      .hero-btn-row {
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 280px !important;
-        margin: 0 auto 8px auto !important;
-        gap: 6px !important;
-      }
-      .btn-hero-primary {
-        height: 42px !important;
-        font-size: 13.5px !important;
-        font-weight: 600 !important;
-        border-radius: 9999px !important;
-        width: 100% !important;
-      }
-      .btn-hero-secondary {
-        height: 36px !important;
-        font-size: 12.5px !important;
-        font-weight: 500 !important;
-        border-radius: 9999px !important;
-        width: 100% !important;
-        background: rgba(255, 255, 255, 0.12) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
-      }
-      .hero-trust-bullets {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 4px 10px !important;
-        margin-bottom: 14px !important;
-      }
-      .hero-trust-bullets span {
-        font-family: var(--font-mono) !important;
-        font-size: 10px !important;
-        color: rgba(255, 255, 255, 0.9) !important;
-      }
-
-      /* Hero Mockup Frame: Clean, elevated, completely uncollapsed */
+      /* Hero Mockup Frame */
       .hero-mockup-frame {
         border-radius: 16px !important;
         max-width: 100% !important;
@@ -2786,8 +2836,6 @@
       }
 
       /* --- 4. SECTION MAIN HEADINGS (H2) & TYPOGRAPHY --- */
-      
-      /* All Section H2 Headlines: Strictly Dominant (25px / 800 wt) */
       .thesis-headline,
       .steps-header-box h2,
       .features-main-title,
@@ -2812,7 +2860,6 @@
         color: #FFFFFF !important;
       }
 
-      /* All Section Subtitles */
       .thesis-subtitle,
       .steps-header-box p,
       .features-main-subtitle,
@@ -2838,7 +2885,6 @@
         color: rgba(255, 255, 255, 0.88) !important;
       }
 
-      /* Card Sub-Headings (H3): Clearly Smaller (16px vs 25px) */
       .feature-heading,
       .step-title,
       .contrast-card-title,
@@ -2853,7 +2899,6 @@
         color: #0F172A !important;
       }
 
-      /* Category Pills & Badges */
       .doctor-badge-pill,
       .contrast-badge-pill,
       .step-pill-tag,
@@ -2873,7 +2918,6 @@
         text-align: center !important;
       }
 
-      /* Card Metric Numbers: Subordinate to H2 (17px vs 25px) */
       .thesis-metric-num {
         font-family: var(--font-display) !important;
         font-size: 17px !important;
@@ -2892,7 +2936,6 @@
         line-height: 1.0 !important;
       }
 
-      /* Body Text / Descriptions */
       .feature-body-text,
       .step-desc,
       .philosophy-body,
@@ -2908,7 +2951,6 @@
         color: #334155 !important;
       }
 
-      /* Micro Labels */
       .thesis-metric-desc,
       .step-trust-footer,
       .contrast-tag-competitor,
@@ -2920,22 +2962,102 @@
         line-height: 1.4 !important;
       }
 
-      /* Buttons */
-      .btn-plan-cta,
+      /* --- 5. COMPONENT SPECIFIC BUTTONS & LAYOUTS --- */
+
+      /* Pricing Button */
+      .btn-plan-cta {
+        height: 44px !important;
+        font-size: 14px !important;
+        padding: 0 20px !important;
+        width: 100% !important;
+      }
+
+      /* Philosophy Button */
+      .philosophy-signoff button {
+        width: 100% !important;
+        height: 44px !important;
+        font-size: 14px !important;
+        padding: 0 20px !important;
+      }
+
+      /* Doctor Proof Button */
+      .nocturnal-footer-cta button {
+        width: 100% !important;
+        height: 44px !important;
+        font-size: 14px !important;
+        padding: 0 20px !important;
+        margin-top: 10px !important;
+      }
+
+      /* Footer Buttons */
+      .footer-cta-row {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        margin: 0 auto 20px !important;
+        gap: 8px !important;
+      }
       .footer-cta-row button,
       .footer-cta-row a {
+        width: 100% !important;
         height: 44px !important;
+        font-size: 14px !important;
+        padding: 0 20px !important;
+      }
+
+      /* Sticky Bottom Bar */
+      .mobile-bottom-sticky {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 52px !important;
+        background: rgba(255, 255, 255, 0.96) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border-top: 1px solid #E2E8F0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 16px !important;
+        z-index: 990 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transform: translateY(100%) !important;
+        transition: opacity 0.25s ease, transform 0.25s ease !important;
+      }
+      .mobile-bottom-sticky.visible {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+      }
+      .mobile-bottom-sticky button {
+        width: 100% !important;
+        max-width: 340px !important;
+        height: 40px !important;
+        background: #0055FF !important;
+        color: #FFFFFF !important;
         font-size: 14px !important;
         font-weight: 600 !important;
         border-radius: 9999px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        border: none !important;
+        padding: 0 20px !important;
+        box-shadow: 0 4px 12px rgba(0, 85, 255, 0.25) !important;
+        cursor: pointer !important;
+      }
+      body.modal-open-lock .mobile-bottom-sticky {
+        display: none !important;
       }
 
-      /* --- 5. OTHER SECTIONS MOBILE COMPONENT REFINEMENTS --- */
+      /* Modal Form Button */
+      .form-btn-submit {
+        height: 46px !important;
+        font-size: 14px !important;
+        padding: 0 20px !important;
+        width: 100% !important;
+      }
 
-      /* Thesis Section (2x2 Grid) */
+      /* Thesis Section */
       .thesis-cards-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
@@ -2957,7 +3079,7 @@
         font-size: 11.5px !important;
       }
 
-      /* How It Works (3 Steps) */
+      /* How It Works */
       .steps-header-box {
         margin-bottom: 16px !important;
       }
@@ -3000,10 +3122,6 @@
       .stacked-main-card {
         padding: 18px 14px !important;
         border-radius: 14px !important;
-      }
-      .philosophy-signoff button {
-        width: 100% !important;
-        height: 44px !important;
       }
 
       /* Doctor Proof Section */
@@ -3123,19 +3241,6 @@
         padding-bottom: 12px !important;
       }
 
-      /* Footer Section */
-      .footer-cta-row {
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 280px !important;
-        margin: 0 auto 20px !important;
-        gap: 8px !important;
-      }
-      .footer-cta-row button,
-      .footer-cta-row a {
-        width: 100% !important;
-      }
-
       /* Form Input & Modal */
       .form-input {
         font-size: 16px !important;
@@ -3145,53 +3250,6 @@
         padding: 20px 16px !important;
         border-radius: 16px !important;
         max-height: calc(100vh - 24px) !important;
-      }
-
-      /* Sticky Bottom Bar */
-      .mobile-bottom-sticky {
-        display: flex !important;
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        height: 52px !important;
-        background: rgba(255, 255, 255, 0.96) !important;
-        backdrop-filter: blur(12px) !important;
-        -webkit-backdrop-filter: blur(12px) !important;
-        border-top: 1px solid #E2E8F0 !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 16px !important;
-        z-index: 990 !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        transform: translateY(100%) !important;
-        transition: opacity 0.25s ease, transform 0.25s ease !important;
-      }
-      .mobile-bottom-sticky.visible {
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        transform: translateY(0) !important;
-      }
-      .mobile-bottom-sticky button {
-        width: 100% !important;
-        max-width: 340px !important;
-        height: 38px !important;
-        background: #0055FF !important;
-        color: #FFFFFF !important;
-        font-family: var(--font-sans) !important;
-        font-size: 13.5px !important;
-        font-weight: 600 !important;
-        border-radius: 9999px !important;
-        border: none !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: 0 4px 12px rgba(0, 85, 255, 0.25) !important;
-        cursor: pointer !important;
-      }
-      body.modal-open-lock .mobile-bottom-sticky {
-        display: none !important;
       }
     }
 
