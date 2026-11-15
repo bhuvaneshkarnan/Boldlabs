@@ -11,10 +11,31 @@
       "source": "/clinic",
       "destination": "/clinics",
       "permanent": true
+    },
+    {
+      "source": "/blog/why-is-my-mobile-site-slow",
+      "destination": "/blog/why-slow-websites-kill-madurai-businesses",
+      "permanent": true
+    },
+    {
+      "source": "/blog/webp-vs-png-for-speed",
+      "destination": "/blog/custom-code-vs-wordpress-speed-breakdown",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-fix-cumulative-layout-shift",
+      "destination": "/blog/dominating-google-maps-local-seo-playbook",
+      "permanent": true
     }
   ],
   "rewrites": [
     { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/blog/", "destination": "/blog/index.html" }
+    { "source": "/blog/", "destination": "/blog/index.html" },
+    { "source": "/blog/why-slow-websites-kill-madurai-businesses", "destination": "/blog/why-slow-websites-kill-madurai-businesses/index.html" },
+    { "source": "/blog/whatsapp-ai-receptionist-for-clinics", "destination": "/blog/whatsapp-ai-receptionist-for-clinics/index.html" },
+    { "source": "/blog/custom-code-vs-wordpress-speed-breakdown", "destination": "/blog/custom-code-vs-wordpress-speed-breakdown/index.html" },
+    { "source": "/blog/dominating-google-maps-local-seo-playbook", "destination": "/blog/dominating-google-maps-local-seo-playbook/index.html" },
+    { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" },
+    { "source": "/blog/:slug/", "destination": "/blog/:slug/index.html" }
   ]
 }
