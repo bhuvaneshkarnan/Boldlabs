@@ -202,14 +202,14 @@ body, button, input, select, textarea {
 
 h1, h2, h3, h4, h5, h6,
 .font-display, .hero-title, .section-header h2, .subpage-hero h1,
-.footer-logo, .footer-col-title, .navbar-brand,
+.navbar-brand,
 .plan-name, .service-title, .dashboard-title, .sidebar-title,
 .timeline-stage-title, .build-title, .faq-question {
   font-family: var(--font-display) !important;
   font-weight: 400 !important;
   text-transform: none !important;
   letter-spacing: -0.005em !important;
-  color: #0F172A !important;
+  color: #0F172A;
 }
 
 .navbar a, .nav-links a, .nav-toggle {
@@ -1801,7 +1801,7 @@ h3 {
 
 .solution-card:hover .service-icon {
   transform: scale(1.15) rotate(-5deg);
-  color: #ffffff;
+  color: #0055FE !important;
 }
 
 @media (max-width: 1024px) {
@@ -1854,7 +1854,7 @@ h3 {
 
 .service-card:hover .service-icon {
   transform: scale(1.15) rotate(5deg);
-  color: #ffffff;
+  color: #0055FE !important;
 }
 
 .service-icon {
@@ -3016,4 +3016,80 @@ h3 {
   .chat-bubble {
     max-width: 92% !important;
   }
+}
+
+/* ==========================================================================
+   High-Contrast Visual Fixes for Dark Sections & Footer
+   ========================================================================== */
+
+/* About Section Headings & Text Contrast on Dark Background */
+.about-section h2,
+.about-section .section-header h2,
+.about-section .about-founder-name,
+.about-section .about-trust-heading,
+.about-section .about-trust-title {
+  color: #FFFFFF !important;
+}
+
+.about-section .section-subtitle,
+.about-section .about-founder-title {
+  color: #25D366 !important;
+}
+
+.about-section .about-quote,
+.about-section .about-trust-desc {
+  color: #CBD5E1 !important;
+}
+
+.about-section .about-badge {
+  color: #94A3B8 !important;
+  background: #0F172A !important;
+  border-color: #334155 !important;
+}
+
+/* Footer Contrast on Black Background */
+.main-footer .footer-logo,
+footer .footer-logo,
+.footer-logo {
+  color: #FFFFFF !important;
+}
+
+.main-footer .footer-col-title,
+footer .footer-col-title,
+.footer-col-title {
+  color: #F8FAFC !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+.main-footer .footer-tagline,
+.main-footer .footer-links a,
+footer .footer-tagline,
+footer .footer-links a,
+.footer-links a {
+  color: #94A3B8 !important;
+}
+
+.main-footer .footer-links a:hover,
+footer .footer-links a:hover,
+.footer-links a:hover {
+  color: #25D366 !important;
+}
+
+.main-footer .footer-bottom,
+footer .footer-bottom {
+  color: #64748B !important;
+  border-top-color: #1E293B !important;
+}
+
+/* Ensure solution-card icons stay visible */
+.solution-card .service-icon svg,
+.service-card .service-icon svg {
+  stroke: currentColor;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.solution-card:hover .service-icon svg,
+.service-card:hover .service-icon svg {
+  stroke: #0055FE !important;
 }
