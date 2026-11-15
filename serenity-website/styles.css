@@ -15,6 +15,7 @@
 
   /* Radiant Uplifting Gold */
   --color-gold: #c5a059;
+  --color-gold-text: #85611A;
   --color-gold-light: #dfc282;
   --color-gold-pale: #faefd6;
   --color-gold-glow: rgba(197, 160, 89, 0.28);
@@ -294,7 +295,7 @@ button, input, select, textarea {
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   font-weight: 600;
 }
 
@@ -591,6 +592,7 @@ button, input, select, textarea {
 /* Hero Section */
 .hero-section {
   position: relative;
+  background-color: #12241B;
   min-height: 92vh;
   display: flex;
   align-items: center;
@@ -892,7 +894,7 @@ button, input, select, textarea {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   margin-bottom: 12px;
 }
 
@@ -1110,7 +1112,7 @@ button, input, select, textarea {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   font-weight: 600;
 }﻿/* ==========================================================================
    OFFERINGS & INTERACTIVE EXPERIENCE SECTIONS
@@ -1276,7 +1278,7 @@ button, input, select, textarea {
 .btn-card-link {
   background: none;
   border: none;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -1561,7 +1563,7 @@ button, input, select, textarea {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
 }
 
 .cal-day {
@@ -1758,7 +1760,7 @@ button, input, select, textarea {
 .btn-read-article {
   background: none;
   border: none;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -2004,8 +2006,9 @@ input:checked + .slider:before {
 }
 
 .tier-features li.inactive {
-  color: var(--color-stone);
-  opacity: 0.6;
+  color: var(--color-muted);
+  opacity: 0.85;
+  text-decoration: line-through;
 }
 
 .icon-check {

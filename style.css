@@ -1223,7 +1223,8 @@ h3 {
 
 /* --- Premium Footer --- */
 .main-footer {
-  background: linear-gradient(180deg, #050B20 0%, #030612 100%) !important;
+  background-color: #050B20 !important;
+  background-image: linear-gradient(180deg, #050B20 0%, #030612 100%) !important;
   color: #CBD5E1 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: var(--space-2xl) 0 var(--space-xl);
@@ -3093,3 +3094,41 @@ footer .footer-bottom {
 .service-card:hover .service-icon svg {
   stroke: #0055FE !important;
 }
+
+/* ==========================================================================
+   GLOBAL SUBPAGE CARD & TYPOGRAPHY VISIBILITY SAFEGUARDS
+   ========================================================================== */
+
+/* Global footer solid background fallback */
+.main-footer,
+footer {
+  background-color: #050B20 !important;
+  background-image: linear-gradient(180deg, #050B20 0%, #030612 100%) !important;
+}
+
+/* Safeguard card headings & body text on light backgrounds across all pages */
+.service-card-item h3,
+.city-feature-item h3,
+.process-step-item h3,
+.advantage-card h3,
+.feature-box h3,
+.solution-card h3,
+.pillar-card h3 {
+  color: #0F172A !important;
+}
+
+.service-card-item p,
+.city-feature-item p,
+.process-step-item p,
+.advantage-card p,
+.feature-box p {
+  color: #475569 !important;
+}
+
+/* High-contrast subtitles for all light sections */
+body:not(.dark-mode) .section:not(.about-section):not(.dark-section) .section-subtitle,
+.light-section .section-subtitle {
+  color: #0055FE !important;
+  font-weight: 700 !important;
+}
+
