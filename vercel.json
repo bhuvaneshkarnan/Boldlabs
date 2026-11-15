@@ -35,6 +35,11 @@
     { "source": "/blog/whatsapp-ai-receptionist-for-clinics", "destination": "/blog/whatsapp-ai-receptionist-for-clinics/index.html" },
     { "source": "/blog/custom-code-vs-wordpress-speed-breakdown", "destination": "/blog/custom-code-vs-wordpress-speed-breakdown/index.html" },
     { "source": "/blog/dominating-google-maps-local-seo-playbook", "destination": "/blog/dominating-google-maps-local-seo-playbook/index.html" },
+    { "source": "/blog/wati-alternative-for-clinics", "destination": "/blog/wati-alternative-for-clinics/index.html" },
+    { "source": "/blog/aisensy-vs-wati-vs-gallabox-comparison", "destination": "/blog/aisensy-vs-wati-vs-gallabox-comparison/index.html" },
+    { "source": "/blog/gallabox-alternative-for-service-businesses", "destination": "/blog/gallabox-alternative-for-service-businesses/index.html" },
+    { "source": "/wati-alternative-clinics", "destination": "/wati-alternative-clinics/index.html" },
+    { "source": "/gallabox-alternative-clinics", "destination": "/gallabox-alternative-clinics/index.html" },
     { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" },
     { "source": "/blog/:slug/", "destination": "/blog/:slug/index.html" }
   ]
